@@ -28,7 +28,17 @@
 }{%
 \end{center}
 }
-
+\newenvironment{Bws}
+{\par\noindent\normalfont\par\nopagebreak%
+  \begin{mdframed}[
+     linewidth=2pt,
+     linecolor=pink,
+     bottomline=false,topline=false,rightline=false,
+     innerrightmargin=0pt,innertopmargin=0pt,innerbottommargin=0pt,
+     innerleftmargin=1em,% Distanz zwischen vertikaler Strich & Inhalt
+     skipabove=.5\baselineskip
+   ]}
+  {\end{mdframed}}
 
 
 \newcommand{\R}{\mathbb{R}}
