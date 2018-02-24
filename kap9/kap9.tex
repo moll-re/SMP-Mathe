@@ -1,0 +1,51 @@
+\chapter{Matrizen}
+
+	\section{Lineare Gleichungssysteme und Gauß-Algorythmus}
+
+Lineare Gleichungssysteme lassen sich aufwendig mit Einsetzungsverfahren oder Additionsverfahren l"osen, Carl Friedrich Gauß hat ein ''Algorythmus'' erfunden, mit dem sich ohne Taschenrechner leicht und relativ schnell l"osen l"asst.\\
+Am Besten wird dieser mit einem Beispiel Erl"autert:\\
+\\
+$\Rightarrow$ $\left\{ \begin{array}{rccl}
+4x+3y+z&=&13& (1)\\
+2x-5y+3z& =& 1 &(2)\\
+7x-y-2z&=&-1&(3)\\
+\end{array}\right.$ \qquad \{ $1\cdot (1) -2\cdot (2)$ \}  und \{ $7\cdot (1) -4\cdot (3)$ \}  \qquad \qquad $D=\R^3$\\
+\\
+\\
+Hier versucht man in Zeile (2) und (3) die erste Variabel zu eliminieren\\
+\\
+$\Leftrightarrow$ $\left\{ \begin{array}{rcl}
+4x+3y+z&=&13\\
+0x +13y -5z&=& 11\\
+0x +25y +15z&=& 95\\
+\end{array}\right.$ \qquad \{ $25\cdot(2) -13\cdot(3)$ \}  \\
+\\
+\\
+Jetzt versucht man die zweite Variabel in der dritten Gleichung zu eliminieren\\
+\\
+$\Leftrightarrow$ $\left\{ \begin{array}{rcl}
+4x+3y+z&=&13\\
+0x +13y -5z&=& 11\\
+0x+0y-320z&=&-960 $\qquad$ \Leftrightarrow z=3 \\
+\end{array}\right.$\\
+\\
+\\
+Jetzt wird eingesetzt\\
+\\
+$\Leftrightarrow$ $\left\{ \begin{array}{rcl}
+4x+3y+z&=&13\\
+0x+13y-5\cdot3&=&11 $\qquad$ \Leftrightarrow y=2\\
+0x+0y+z&=&3\\
+\end{array}\right.$\\
+\\
+\\
+$\Leftrightarrow$ $\left\{ \begin{array}{rcl}
+x+0y+0z&=&1\\
+0x+y+0z&=&2\\
+0x+0y+z&=&3\\
+\end{array}\right.$\\
+\\
+\\
+$\mathbb{L}=\{(1|2|3) \}$ Die Lösungsmenge wird als n-Tupel alphabetisch sortiert.
+
+	\section{LGS mit dem Taschenrechner l"osen}
