@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.2.23)  24 FEB 2018 20:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.2.23)  24 FEB 2018 22:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1156,8 +1156,9 @@ File: switch.def 2018/01/04 3.16 Babel switching mechanism
 )
 Package babel Info: Making " an active character on input line 125.
 ))) (./main.aux
-(./title.aux) (./kap1.aux) (./kap2.aux) (./kap3.aux) (./kap4.aux) (./kap5.aux)
-(./kap6.aux) (./kap7.aux) (./kap8.aux) (./kap9.aux) (./kap10.aux))
+(./title.aux) (./kap1/kap1.aux) (./kap2/kap2.aux) (./kap3/kap3.aux)
+(./kap4/kap4.aux) (./kap5/kap5.aux) (./kap6/kap6.aux) (./kap7/kap7.aux)
+(./kap8/kap8.aux) (./kap8/kap8.aux) (./kap9/kap9.aux) (./kap10/kap10.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
@@ -1252,9 +1253,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2]
-\openout2 = `kap1.aux'.
+\openout2 = `kap1/kap1.aux'.
 
- (./kap1.tex
+ (./kap1/kap1.tex
 Kapitel 1.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 3--56
@@ -1265,9 +1266,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--56
 
 
 ]
-\openout2 = `kap2.aux'.
+\openout2 = `kap2/kap2.aux'.
 
- (./kap2.tex
+ (./kap2/kap2.tex
 Kapitel 2.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 4--57
@@ -1279,9 +1280,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--57
 
 
 ]
-\openout2 = `kap3.aux'.
+\openout2 = `kap3/kap3.aux'.
 
- (./kap3.tex
+ (./kap3/kap3.tex
 Kapitel 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
@@ -1393,8 +1394,8 @@ s-converted-to.pdf BundelFunktionenscharen.eps>
 (epstopdf)             \includegraphics on input line 122.
 Package epstopdf Info: Output file is already uptodate.
 
-./kap3.tex:122: Package pdftex.def Error: File `BundelFunktionenscharen-eps-con
-verted-to.pdf' not found: using draft setting.
+./kap3/kap3.tex:122: Package pdftex.def Error: File `BundelFunktionenscharen-ep
+s-converted-to.pdf' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
@@ -1410,29 +1411,79 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 122.
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )) [7]
-\openout2 = `kap4.aux'.
+\openout2 = `kap4/kap4.aux'.
 
- (./kap4.tex
+ (./kap4/kap4.tex
 Kapitel 4.
-./kap4.tex:58: Undefined control sequence.
-\y ->-\fra 
-           c{\sqrt {2}}{2}
-l.58 ...de[fill=white] {$\left(\xtext,\y\right)$};
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--21
+
+ []
+
+
+./kap4/kap4.tex:22: Package inputenc Error: Unicode char ▸ (U+25B8)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
                                                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+l.22 ▸
+         cos(a - b) = cos(a)cos(b) + sin(a)sin(b), \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./kap4/kap4.tex:23: Package inputenc Error: Unicode char ▸ (U+25B8)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 ▸
+         sin(a - b) = sin(a)cos(b) - cos(a)sin(b),\\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./kap4/kap4.tex:24: Package inputenc Error: Unicode char ▸ (U+25B8)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 ▸
+         cos(a + b) = cos(a)cos(b) - sin(a)sin(b), \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./kap4/kap4.tex:25: Package inputenc Error: Unicode char ▸ (U+25B8)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 ▸
+         sin(a + b) = sin(a)cos(b) + cos(a)sin(b).
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 ) [8
 
 
 
 ]
-\openout2 = `kap5.aux'.
+\openout2 = `kap5/kap5.aux'.
 
- (./kap5.tex
+ (./kap5/kap5.tex
 Kapitel 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 2--3
@@ -1449,12 +1500,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--60
 
 
 ]
-\openout2 = `kap6.aux'.
+\openout2 = `kap6/kap6.aux'.
 
- (./kap6.tex
+ (./kap6/kap6.tex
 Kapitel 6.
 
-./kap6.tex:9: Package inputenc Error: Unicode char ± (U+B1)
+./kap6/kap6.tex:9: Package inputenc Error: Unicode char ± (U+B1)
 (inputenc)                not set up for use with LaTeX.
 
 See the inputenc package documentation for explanation.
@@ -1468,7 +1519,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./kap6.tex:12: Package inputenc Error: Unicode char ± (U+B1)
+./kap6/kap6.tex:12: Package inputenc Error: Unicode char ± (U+B1)
 (inputenc)                not set up for use with LaTeX.
 
 See the inputenc package documentation for explanation.
@@ -1482,7 +1533,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./kap6.tex:18: Package inputenc Error: Unicode char ± (U+B1)
+./kap6/kap6.tex:18: Package inputenc Error: Unicode char ± (U+B1)
 (inputenc)                not set up for use with LaTeX.
 
 See the inputenc package documentation for explanation.
@@ -1496,7 +1547,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./kap6.tex:19: Package inputenc Error: Unicode char ± (U+B1)
+./kap6/kap6.tex:19: Package inputenc Error: Unicode char ± (U+B1)
 (inputenc)                not set up for use with LaTeX.
 
 See the inputenc package documentation for explanation.
@@ -1510,7 +1561,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./kap6.tex:20: Package inputenc Error: Unicode char ± (U+B1)
+./kap6/kap6.tex:20: Package inputenc Error: Unicode char ± (U+B1)
 (inputenc)                not set up for use with LaTeX.
 
 See the inputenc package documentation for explanation.
@@ -1588,7 +1639,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--50
  []
 
 
-./kap6.tex:51: LaTeX Error: File `komplexezahlen1' not found.
+./kap6/kap6.tex:51: LaTeX Error: File `komplexezahlen1' not found.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1608,7 +1659,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--60
  []
 
 
-./kap6.tex:69: LaTeX Error: File `komplexezahlen2' not found.
+./kap6/kap6.tex:69: LaTeX Error: File `komplexezahlen2' not found.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1623,7 +1674,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./kap6.tex:83: LaTeX Error: File `komplexezahlen3' not found.
+./kap6/kap6.tex:83: LaTeX Error: File `komplexezahlen3' not found.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1643,7 +1694,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--86
  []
 
 
-./kap6.tex:91: LaTeX Error: File `komplexezahlen4' not found.
+./kap6/kap6.tex:91: LaTeX Error: File `komplexezahlen4' not found.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1708,9 +1759,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--148
  []
 
 ) [12]
-\openout2 = `kap7.aux'.
+\openout2 = `kap7/kap7.aux'.
 
- (./kap7.tex
+ (./kap7/kap7.tex
 Kapitel 7.
 
 Underfull \hbox (badness 10000) in paragraph at lines 2--3
@@ -1727,9 +1778,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--62
 
 
 ]
-\openout2 = `kap8.aux'.
+\openout2 = `kap8/kap8.aux'.
 
- (./kap8.tex
+ (./kap8/kap8.tex
 Kapitel 8.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 2--63
@@ -1741,136 +1792,151 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--63
 
 
 ]
-\openout2 = `kap9.aux'.
+\openout2 = `kap8/kap8.aux'.
 
- (./kap9.tex
+ (./kap8/kap8.tex
 Kapitel 9.
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--50
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--50
+)
+Underfull \hbox (badness 10000) in paragraph at lines 2--64
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--50
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--50
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--50
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--50
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--50
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--50
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--50
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--50
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--50
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--50
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--50
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--50
-
- []
-
-) [15
+[15
 
 
 
-] [16]
-\openout2 = `kap10.aux'.
+]
+\openout2 = `kap9/kap9.aux'.
 
- (./kap10.tex
+ (./kap9/kap9.tex
 Kapitel 10.
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--50
+
+ []
+
+) [16
+
+
+
+] [17]
+\openout2 = `kap10/kap10.aux'.
+
+ (./kap10/kap10.tex
+Kapitel 11.
 
 Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 6--65
+Underfull \hbox (badness 10000) in paragraph at lines 6--66
 
  []
 
-[17
+[18
 
 
 
-] (./main.aux (./title.aux) (./kap1.aux) (./kap2.aux) (./kap3.aux)
-(./kap4.aux) (./kap5.aux) (./kap6.aux) (./kap7.aux) (./kap8.aux) (./kap9.aux)
-(./kap10.aux)) ) 
+] (./main.aux (./title.aux) (./kap1/kap1.aux) (./kap2/kap2.aux)
+(./kap3/kap3.aux) (./kap4/kap4.aux) (./kap5/kap5.aux) (./kap6/kap6.aux)
+(./kap7/kap7.aux) (./kap8/kap8.aux) (./kap8/kap8.aux) (./kap9/kap9.aux)
+(./kap10/kap10.aux)) ) 
 Here is how much of TeX's memory you used:
- 25020 strings out of 494869
- 497256 string characters out of 6178364
- 544125 words of memory out of 5000000
- 27892 multiletter control sequences out of 15000+600000
+ 25086 strings out of 494869
+ 498968 string characters out of 6178364
+ 534127 words of memory out of 5000000
+ 27942 multiletter control sequences out of 15000+600000
  545094 words of font info for 54 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 54i,11n,73p,10410b,652s stack positions out of 5000i,500n,10000p,200000b,80000s
- </root/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt
-1095.600pk> </root/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.
-600pk> </root/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk
-> </root/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk> </r
-oot/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </root/.
-texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </root/.texli
-ve2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </root/.texlive201
-7/texmf-var/fonts/pk/ljfour/jknappen/ec/ecxc2488.600pk> </root/.texlive2017/tex
-mf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (18 pages, 219683 bytes).
+ 54i,11n,73p,10410b,589s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </root/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/e
+c/ectt1095.600pk> </root/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecb
+x1200.600pk> </root/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440
+.600pk> </root/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2074.600p
+k> </root/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </
+root/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </root/
+.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </root/.texl
+ive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecxc2488.600pk> </root/.texlive20
+17/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (19 pages, 216198 bytes).
 PDF statistics:
- 464 PDF objects out of 1000 (max. 8388607)
- 110 compressed objects within 2 object streams
+ 469 PDF objects out of 1000 (max. 8388607)
+ 113 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -33,9 +33,10 @@
 \contentsline {subsection}{\numberline {6.2.3}Umrechnung zwischen den Darstellungen}{12}
 \contentsline {chapter}{\numberline {7}Statistik und Wahrscheinlichkeit}{13}
 \contentsline {section}{\numberline {7.1}g}{13}
-\contentsline {chapter}{\numberline {8}Arithmetik}{14}
-\contentsline {chapter}{\numberline {9}Matrizen}{15}
-\contentsline {section}{\numberline {9.1}Lineare Gleichungssysteme und Gau\IeC {\ss }-Algorythmus}{15}
-\contentsline {section}{\numberline {9.2}LGS mit dem Taschenrechner l"osen}{16}
-\contentsline {chapter}{\numberline {10}Algorythmik}{17}
-\contentsline {section}{\numberline {10.1}g}{17}
+\contentsline {chapter}{\numberline {9}Arithmetik}{15}
+\contentsline {chapter}{\numberline {9}Arithmetik}{15}
+\contentsline {chapter}{\numberline {10}Matrizen}{16}
+\contentsline {section}{\numberline {10.1}Lineare Gleichungssysteme und Gau\IeC {\ss }-Algorythmus}{16}
+\contentsline {section}{\numberline {10.2}LGS mit dem Taschenrechner l"osen}{17}
+\contentsline {chapter}{\numberline {11}Algorythmik}{18}
+\contentsline {section}{\numberline {11.1}g}{18}

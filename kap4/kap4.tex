@@ -1,66 +1,25 @@
 \chapter{Trigonometrie}
 
-		\begin{tikzpicture}[scale=5.3,cap=round,>=latex]
-		        % draw the coordinates
-		        \draw[->] (-1.5cm,0cm) -- (1.5cm,0cm) node[right,fill=white] {$x$};
-		        \draw[->] (0cm,-1.5cm) -- (0cm,1.5cm) node[above,fill=white] {$y$};
-
-		        % draw the unit circle
-		        \draw[thick] (0cm,0cm) circle(1cm);
-
-		        \foreach \x in {0,30,...,360} {
-		                % lines from center to point
-		                \draw[gray] (0cm,0cm) -- (\x:1cm);
-		                % dots at each point
-		                \filldraw[black] (\x:1cm) circle(0.4pt);
-		                % draw each angle in degrees
-		                \draw (\x:0.6cm) node[fill=white] {$\x^\circ$};
-		        }
-
-		        % draw each angle in radians
-		        \foreach \x/\xtext in {
-		            30/\frac{\pi}{6},
-		            45/\frac{\pi}{4},
-		            60/\frac{\pi}{3},
-		            90/\frac{\pi}{2},
-		            120/\frac{2\pi}{3},
-		            135/\frac{3\pi}{4},
-		            150/\frac{5\pi}{6},
-		            180/\pi,
-		            210/\frac{7\pi}{6},
-		            225/\frac{5\pi}{4},
-		            240/\frac{4\pi}{3},
-		            270/\frac{3\pi}{2},
-		            300/\frac{5\pi}{3},
-		            315/\frac{7\pi}{4},
-		            330/\frac{11\pi}{6},
-		            360/2\pi}
-		                \draw (\x:0.85cm) node[fill=white] {$\xtext$};
-
-		        \foreach \x/\xtext/\y in {
-		            % the coordinates for the first quadrant
-		            30/\frac{\sqrt{3}}{2}/\frac{1}{2},
-		            45/\frac{\sqrt{2}}{2}/\frac{\sqrt{2}}{2},
-		            60/\frac{1}{2}/\frac{\sqrt{3}}{2},
-		            % the coordinates for the second quadrant
-		            150/-\frac{\sqrt{3}}{2}/\frac{1}{2},
-		            135/-\frac{\sqrt{2}}{2}/\frac{\sqrt{2}}{2},
-		            120/-\frac{1}{2}/\frac{\sqrt{3}}{2},
-		            % the coordinates for the third quadrant
-		            210/-\frac{\sqrt{3}}{2}/-\frac{1}{2},
-		            225/-\frac{\sqrt{2}}{2}/-\frac{\sqrt{2}}{2},
-		            240/-\frac{1}{2}/-\frac{\sqrt{3}}{2},
-		            % the coordinates for the fourth quadrant
-		            330/\frac{\sqrt{3}}{2}/-\frac{1}{2},
-		            315/\frac{\sqrt{2}}{2}/-\fra
-								c{\sqrt{2}}{2},
-		            300/\frac{1}{2}/-\frac{\sqrt{3}}{2}}
-		                \draw (\x:1.25cm) node[fill=white] {$\left(\xtext,\y\right)$};
-
-		        % draw the horizontal and vertical coordinates
-		        % the placement is better this way
-		        \draw (-1.25cm,0cm) node[above=1pt] {$(-1,0)$}
-		              (1.25cm,0cm)  node[above=1pt] {$(1,0)$}
-		              (0cm,-1.25cm) node[fill=white] {$(0,-1)$}
-		              (0cm,1.25cm)  node[fill=white] {$(0,1)$};
-		    \end{tikzpicture}
+\begin{tikzpicture}[scale=3]
+\filldraw[fill=green!20,draw=green!50!black] (0,0) -- (3mm,0mm) arc (0:30:3mm) -- cycle;
+\draw[->] (-1.25,0) -- (1.25,0) coordinate (x axis);
+\draw[->] (0,-1.25) -- (0,1.25) coordinate (y axis);
+\draw (0,0) circle (1cm);
+\draw[very thick,red] (30:1cm) -- node[left,fill=white] {$\sin \alpha$} (30:1cm |- x axis);
+\draw[very thick,blue] (30:1cm |- x axis) -- node[below=2pt,fill=white] {$\cos \alpha$} (0,0);
+\draw (0,0) -- (30:1cm);
+\foreach \x/\xtext in {-1, -0.5/-\frac{1}{2}, 1}
+\draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north,fill=white] {$\xtext$};
+\foreach \y/\ytext in {-1, -0.5/-\frac{1}{2}, 0.5/\frac{1}{2}, 1}
+\draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east,fill=white] {$\ytext$};
+\end{tikzpicture}
+\begin{Bws}
+  Die trigonometrischen Funktionen sind definiert, dass gelte:\\
+  sin(x)=a/hyp.\\
+  cos(x)=b/hyp.\\
+  tan(x)=a/b\\
+\end{Bws}
+▸ cos(a - b) = cos(a)cos(b) + sin(a)sin(b), \\
+▸ sin(a - b) = sin(a)cos(b) - cos(a)sin(b),\\
+▸ cos(a + b) = cos(a)cos(b) - sin(a)sin(b), \\
+▸ sin(a + b) = sin(a)cos(b) + cos(a)sin(b).
