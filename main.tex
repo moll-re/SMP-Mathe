@@ -1,0 +1,49 @@
+\documentclass[11pt]{report}
+
+
+\usepackage{amsmath}		%Matheschreibweise
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2cm]{geometry}	%Seitenrand
+\usepackage{fancyhdr}	%Titelblatt
+\usepackage{graphicx}	%Bilder einfügen
+\usepackage{tcolorbox}	%dicke Box
+\usepackage{tikz}
+\usepackage{mdframed}	%Box			%\begin{mdframed} 		und			%\end{mdframed}
+\usepackage{epstopdf}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{Skript Mathematik}
+\fancyhead[R]{SMP}
+\fancyfoot[C]{\thepage}
+
+\parindent 0ex
+
+\newenvironment{Bemerkung}{%
+\begin{center}
+}{%
+\end{center}
+}
+
+
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+
+
+
+
+
+\begin{document}
+\include{kap1}
+\include{kap2}
+%und so weiter
+
+
+
+\end{document}
