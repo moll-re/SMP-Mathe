@@ -3,3 +3,4 @@ main.*
 title.*
 *.toc
 *.log
+*.gz
