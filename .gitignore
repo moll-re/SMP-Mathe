@@ -1,3 +1,5 @@
 *.aux
 main.*
 title.*
+*.toc
+*.log
