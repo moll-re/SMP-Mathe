@@ -1,4 +1,4 @@
-\babel@toc {ngerman}{}
+\select@language {ngerman}
 \contentsline {chapter}{\numberline {1}Folgen}{3}
 \contentsline {chapter}{\numberline {2}Reihen}{4}
 \contentsline {section}{\numberline {2.1}g}{4}
