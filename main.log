@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.27)  26 FEB 2018 13:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.27)  26 FEB 2018 17:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1561,56 +1561,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
+<kap6/komplexezahlen1.jpg, id=63, 467.7475pt x 327.2225pt>
+File: kap6/komplexezahlen1.jpg Graphic file (type jpg)
 
-./kap6/kap6.tex:51: LaTeX Error: File `komplexezahlen1' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.51 \includegraphics[width=3in]{komplexezahlen1}
-                                                 
-? 
+<use kap6/komplexezahlen1.jpg>
+Package pdftex.def Info: kap6/komplexezahlen1.jpg used on input line 51.
+(pdftex.def)             Requested size: 216.81pt x 151.67755pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
+<kap6/komplexezahlen2.jpg, id=64, 768.8725pt x 582.175pt>
+File: kap6/komplexezahlen2.jpg Graphic file (type jpg)
 
-./kap6/kap6.tex:69: LaTeX Error: File `komplexezahlen2' not found.
+<use kap6/komplexezahlen2.jpg>
+Package pdftex.def Info: kap6/komplexezahlen2.jpg used on input line 69.
+(pdftex.def)             Requested size: 216.81pt x 164.1627pt.
+ [12 <./kap6/komplexezahlen1.jpg> <./kap6/komplexezahlen2.jpg>] <kap6/komplexez
+ahlen3.jpg, id=69, 409.53pt x 357.335pt>
+File: kap6/komplexezahlen3.jpg Graphic file (type jpg)
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.69 \includegraphics[width=3in]{komplexezahlen2}
-                                                 
-? 
-
-./kap6/kap6.tex:83: LaTeX Error: File `komplexezahlen3' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.83 \includegraphics[width=3in]{komplexezahlen3}
-                                                 
-? 
+<use kap6/komplexezahlen3.jpg>
+Package pdftex.def Info: kap6/komplexezahlen3.jpg used on input line 83.
+(pdftex.def)             Requested size: 216.81pt x 189.17944pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
+<kap6/komplexezahlen4.jpg, id=70, 441.65pt x 375.4025pt>
+File: kap6/komplexezahlen4.jpg Graphic file (type jpg)
 
-./kap6/kap6.tex:91: LaTeX Error: File `komplexezahlen4' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.91 \includegraphics[width=3in]{komplexezahlen4}
-                                                 
-? 
+<use kap6/komplexezahlen4.jpg>
+Package pdftex.def Info: kap6/komplexezahlen4.jpg used on input line 91.
+(pdftex.def)             Requested size: 216.81pt x 184.28679pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
@@ -1626,12 +1611,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--116
 
  []
 
-[12]
+
 Underfull \hbox (badness 10000) in paragraph at lines 121--123
 
  []
 
-
+[13 <./kap6/komplexezahlen3.jpg> <./kap6/komplexezahlen4.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
@@ -1661,7 +1646,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
-) [13]
+) [14]
 \openout2 = `kap7/kap7.aux'.
 
  (./kap7/kap7.tex
@@ -1676,7 +1661,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--63
 
  []
 
-[14
+[15
 
 
 
@@ -1690,7 +1675,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--64
 
  []
 
-[15
+[16
 
 
 
@@ -1704,7 +1689,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--65
 
  []
 
-[16
+[17
 
 
 
@@ -1783,11 +1768,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--50
 
  []
 
-) [17
+) [18
 
 
 
-] [18]
+] [19]
 \openout2 = `kap10/kap10.aux'.
 
  (./kap10/kap10.tex
@@ -1802,7 +1787,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--67
 
  []
 
-[19
+[20
 
 
 
@@ -1811,10 +1796,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--67
 (./kap7/kap7.aux) (./kap8/kap8.aux) (./kap8/kap8.aux) (./kap9/kap9.aux)
 (./kap10/kap10.aux)) ) 
 Here is how much of TeX's memory you used:
- 24213 strings out of 492995
- 478902 string characters out of 6132704
+ 24219 strings out of 492995
+ 479332 string characters out of 6132704
  514722 words of memory out of 5000000
- 27295 multiletter control sequences out of 15000+600000
+ 27311 multiletter control sequences out of 15000+600000
  18462 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,11n,73p,10414b,587s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1839,10 +1824,10 @@ sr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr
 ocal/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/loc
 al/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local
 /texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfxc2488.pfb>
-Output written on main.pdf (20 pages, 287945 bytes).
+Output written on main.pdf (21 pages, 363221 bytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
- 110 compressed objects within 2 object streams
+ 161 PDF objects out of 1000 (max. 8388607)
+ 112 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -4,3 +4,5 @@ title.*
 *.toc
 *.log
 *.gz
+*.DS_Store
+

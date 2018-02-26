@@ -33,14 +33,14 @@
 \contentsline {section}{\numberline {6.1}Einf"uhrung}{11}
 \contentsline {section}{\numberline {6.2}Darstellung komplexer Zahlen}{12}
 \contentsline {subsection}{\numberline {6.2.1}Kartesische Darstellung}{12}
-\contentsline {subsection}{\numberline {6.2.2}Polarkoordinatendarstellung}{12}
-\contentsline {subsection}{\numberline {6.2.3}Umrechnung zwischen den Darstellungen}{13}
-\contentsline {chapter}{\numberline {7}Statistik und Wahrscheinlichkeit}{14}
-\contentsline {section}{\numberline {7.1}g}{14}
-\contentsline {chapter}{\numberline {9}Arithmetik}{16}
-\contentsline {chapter}{\numberline {9}Arithmetik}{16}
-\contentsline {chapter}{\numberline {10}Matrizen}{17}
-\contentsline {section}{\numberline {10.1}Lineare Gleichungssysteme und Gau\IeC {\ss }-Algorythmus}{17}
-\contentsline {section}{\numberline {10.2}LGS mit dem Taschenrechner l"osen}{18}
-\contentsline {chapter}{\numberline {11}Algorythmik}{19}
-\contentsline {section}{\numberline {11.1}g}{19}
+\contentsline {subsection}{\numberline {6.2.2}Polarkoordinatendarstellung}{13}
+\contentsline {subsection}{\numberline {6.2.3}Umrechnung zwischen den Darstellungen}{14}
+\contentsline {chapter}{\numberline {7}Statistik und Wahrscheinlichkeit}{15}
+\contentsline {section}{\numberline {7.1}g}{15}
+\contentsline {chapter}{\numberline {9}Arithmetik}{17}
+\contentsline {chapter}{\numberline {9}Arithmetik}{17}
+\contentsline {chapter}{\numberline {10}Matrizen}{18}
+\contentsline {section}{\numberline {10.1}Lineare Gleichungssysteme und Gau\IeC {\ss }-Algorythmus}{18}
+\contentsline {section}{\numberline {10.2}LGS mit dem Taschenrechner l"osen}{19}
+\contentsline {chapter}{\numberline {11}Algorythmik}{20}
+\contentsline {section}{\numberline {11.1}g}{20}
