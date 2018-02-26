@@ -36,7 +36,7 @@
 \contentsline {subsection}{\numberline {6.2.2}Polarkoordinatendarstellung}{13}
 \contentsline {subsection}{\numberline {6.2.3}Umrechnung zwischen den Darstellungen}{14}
 \contentsline {chapter}{\numberline {7}Statistik und Wahrscheinlichkeit}{15}
-\contentsline {section}{\numberline {7.1}g}{15}
+\contentsline {section}{\numberline {7.1}Hypothesentests}{15}
 \contentsline {chapter}{\numberline {9}Arithmetik}{17}
 \contentsline {chapter}{\numberline {9}Arithmetik}{17}
 \contentsline {chapter}{\numberline {10}Matrizen}{18}

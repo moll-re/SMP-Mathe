@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.27)  26 FEB 2018 17:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.27)  26 FEB 2018 18:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1114,18 +1114,18 @@ aux)
 (./kap8/kap8.aux) (./kap8/kap8.aux) (./kap9/kap9.aux) (./kap10/kap10.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1220,7 +1220,7 @@ Kapitel 1.
  (./kap2/kap2.tex
 Kapitel 2.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 4--58
+Underfull \hbox (badness 10000) in paragraph at lines 4--56
 
  []
 
@@ -1429,7 +1429,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--3
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 6--61
+Underfull \hbox (badness 10000) in paragraph at lines 6--59
 
  []
 
@@ -1656,8 +1656,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
  []
 
+
+./kap7/kap7.tex:6: Package inputenc Error: Unicode char äta (U+D9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 Nur ein Test zur GH Kompabilität a
+                                      uf OSX Ger"aten\\
+? 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 6--63
+Underfull \hbox (badness 10000) in paragraph at lines 6--61
 
  []
 
@@ -1671,7 +1682,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--63
  (./kap8/kap8.tex
 Kapitel 8.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 2--64
+Underfull \hbox (badness 10000) in paragraph at lines 2--62
 
  []
 
@@ -1685,7 +1696,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--64
  (./kap8/kap8.tex
 Kapitel 9.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 2--65
+Underfull \hbox (badness 10000) in paragraph at lines 2--63
 
  []
 
@@ -1783,7 +1794,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--3
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 6--67
+Underfull \hbox (badness 10000) in paragraph at lines 6--65
 
  []
 
@@ -1796,10 +1807,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--67
 (./kap7/kap7.aux) (./kap8/kap8.aux) (./kap8/kap8.aux) (./kap9/kap9.aux)
 (./kap10/kap10.aux)) ) 
 Here is how much of TeX's memory you used:
- 24219 strings out of 492995
- 479332 string characters out of 6132704
+ 24220 strings out of 492995
+ 479338 string characters out of 6132704
  514722 words of memory out of 5000000
- 27311 multiletter control sequences out of 15000+600000
+ 27312 multiletter control sequences out of 15000+600000
  18462 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,11n,73p,10414b,587s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1824,7 +1835,7 @@ sr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr
 ocal/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/loc
 al/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local
 /texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfxc2488.pfb>
-Output written on main.pdf (21 pages, 363221 bytes).
+Output written on main.pdf (21 pages, 363461 bytes).
 PDF statistics:
  161 PDF objects out of 1000 (max. 8388607)
  112 compressed objects within 2 object streams
