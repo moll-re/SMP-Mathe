@@ -1,6 +1,4 @@
 *.aux
-main.*
-title.*
 *.toc
 *.log
 *.gz
