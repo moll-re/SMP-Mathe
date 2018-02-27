@@ -2,27 +2,50 @@
 \section{Kurze Wiederholung}
 \begin{Bws}
 Im Kreis mit Radius 1 gelte:\\
-\cos(\alpha)= x_{_M}\\
-\sin(\alpha)= y_{_M}
-\end{Bws}
-%Punkt M einzeichnen!
-\begin{tikzpicture}[scale=2.5]
-\filldraw[fill=green!20,draw=green!50!black] (0,0) -- (3mm,0mm) arc (0:30:3mm) -- cycle;
-\draw[->] (-1.25,0) -- (1.25,0) coordinate (x axis);
-\draw[->] (0,-1.25) -- (0,1.25) coordinate (y axis);
-\draw (0,0) circle (1cm);
-\draw[very thick,red] (30:1cm) -- node[left,fill=white] {$\sin \alpha$} (30:1cm |- x axis);
-\draw[very thick,blue] (30:1cm |- x axis) -- node[below=2pt,fill=white] {$\cos\alpha$} (0,0);
-\draw (0,0) -- (30:1cm);
-\foreach \x/\xtext in {-1, 1}
-\draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north,fill=white] {$\xtext$};
-\foreach \y/\ytext in {-1, 1}
-\draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east,fill=white] {$\ytext$};
+$cos(\alpha)= x_{_M}$\\
+$sin(\alpha)= y_{_M}$\\
+$tan(\alpha)=\dfrac {sin(\alpha)} {cos(\alpha)}$
+\end{Bws}\\
+
+\definecolor{qqwuqq}{rgb}{0,0.39,0}
+\definecolor{ttzzqq}{rgb}{0.2,0.6,0}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{ttttff}{rgb}{0.2,0.2,1}
+\definecolor{uququq}{rgb}{0.25,0.25,0.25}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=2.0833333333333335cm,y=2.0833333333333335cm]
+\draw[->,color=black] (-1.2,0) -- (1.2,0);
+\foreach \x in {-1,1}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0,-1.2) -- (0,1.2);
+\foreach \y in {-1,1}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-1.2,-1.2) rectangle (1.2,1.2);
+\draw [shift={(0,0)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (0:0.21) arc (0:57.13:0.21) -- cycle;
+\draw [line width=0.4pt] (0,0) circle (2.08cm);
+\draw (0,0)-- (0.54,0.84);
+\draw [line width=1.6pt,color=ttttff] (0,0.84)-- (0.54,0.84);
+\draw [line width=1.6pt,color=ffqqqq] (0.54,0.84)-- (0.54,0);
+\draw [line width=1.6pt,color=ttzzqq] (1,-1.2) -- (1,1.2);
+\begin{scriptsize}
+\fill [color=uququq] (0,0) circle (1.5pt);
+\draw[color=uququq] (-0.11,-0.11) node {$O$};
+\fill [color=black] (0.54,0.84) circle (1.5pt);
+\draw[color=black] (0.61,0.92) node {$M$};
+\fill [color=uququq] (0,0.84) circle (1.5pt);
+\draw[color=uququq] (0.03,0.94) node {$A$};
+\fill [color=uququq] (0.54,0) circle (1.5pt);
+\draw[color=uququq] (0.7,0.04) node {$B$};
+\draw[color=ttttff] (0.3,0.77) node {cos(α)};
+\draw[color=ffqqqq] (0.74,0.42) node {sin(α)};
+\draw[color=ttzzqq] (0.85,0.95) node {tan(α)};
+\draw[color=qqwuqq] (0.16,0.07) node {$\alpha$};
+\end{scriptsize}
 \end{tikzpicture}
-\\
+\\\\\\
 Es ergeben sich folgende (wissenswerte) Werte:
 
-
+TAAABELLLE
 
 
 \section{Polarkoordinaten}
@@ -36,10 +59,29 @@ $sin(a + b) = sin(a)cos(b) + cos(a)sin(b)$
 \end{Bws}
 
 \section{Allgemeine Sinus- und Kosinussätze}
-Dreieck malen! \\
+
 Diese Sätze gelten in einem beliebigen Dreieck:
 \begin{Bws}
 $\dfrac {a} {sin(\alpha)}=\dfrac {b} {sin(\beta)}=\dfrac {c} {sin(\gamma)}$\\\\
 $c²=a²+b²-2abcos(\gamma)$
-\end{Bws}
+\end{Bws}\\\\
+Winkelnamen!!\\
+\definecolor{qqwuqq}{rgb}{0,0.39,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.510204081632653cm,y=0.64516129032258cm]
+\clip(-1.3,-5.52) rectangle (10.46,3.78);
+\draw [shift={(4.22,1.92)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (-134.14:1.5) arc (-134.14:-47.61:1.5) -- cycle;
+\draw [shift={(-0.38,-2.82)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (1.04:1.5) arc (1.04:45.86:1.5) -- cycle;
+\draw [shift={(8.4,-2.66)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (132.39:1.5) arc (132.39:181.04:1.5) -- cycle;
+\draw (4.22,1.92)-- (8.4,-2.66);
+\draw (4.22,1.92)-- (-0.38,-2.82);
+\draw (8.4,-2.66)-- (-0.38,-2.82);
+\begin{scriptsize}
+\draw[color=black] (6.12,-0.44) node {$a$};
+\draw[color=black] (1.76,-0.08) node {$b$};
+\draw[color=black] (4.06,-2.28) node {$c$};
+\draw[color=qqwuqq] (4.68,1.32) node {γ};
+\draw[color=qqwuqq] (0.84,-2.5) node {α};
+\draw[color=qqwuqq] (7.66,-2.12) node {β};
+\end{scriptsize}
+\end{tikzpicture}\\
 Man bemerkt, dass sich die bekannten Relationen ergeben, wenn man für einen der Winkel den Wert $\dfrac{\pi}{2}$ nimmt.

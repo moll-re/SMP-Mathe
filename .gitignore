@@ -5,4 +5,5 @@ title.*
 *.log
 *.gz
 *.DS_Store
-
+*.blg
+*.bbg
