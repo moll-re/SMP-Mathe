@@ -44,28 +44,33 @@ $\tan(\alpha)=\dfrac {sin(\alpha)} {cos(\alpha)}$
 \end{tikzpicture}
 \\\\\\
 Es ergeben sich folgende (wissenswerte) Werte:
+\\
+\begin{tabular*}{\linewidth}[b]{*{9}{|c @{\extracolsep\fill}}|}
+\hline  &0$^\circ$& 30$^\circ$ & 45$^\circ$ & 60$^\circ$ & 90$^\circ$ & 180$^\circ$ & 270$^\circ$ & 360$^\circ$
+\\ & 0 & $\dfrac{\pi}{6}$ & $\dfrac{\pi}{4}$ & $\dfrac{\pi}{3}$ & $\dfrac{\pi}{2}$ & \pi & $\dfrac{3\pi}{2}$ & 2\pi\\
+\hline $\sin(\alpha)$ & 0 & $\dfrac{1}{2}$ &$\dfrac{1}{\sqrt{2}}$ & $\dfrac{\sqrt{3}}{2}$& 1 & 0 & -1 & 0\\
+\hline $\cos(\alpha)$ & 1 & $\dfrac{\sqrt{3}}{2}$ &$\dfrac{1}{\sqrt{2}}$ & $\dfrac{1}{2}$& 0 & -1 & 0 & 1\\
+\hline $\tan(\alpha)$ & 0 & $\dfrac{{1}}{\sqrt{3}}$ &1  & $\sqrt{3}$ & X & 0 & X & 0\\
+ \hline
+\end{tabular*}
 
-TAAABELLLE
 
-
-\section{Polarkoordinaten}
-adf
-\section{Addtions- und Versopplungssätze}
+\section{Addtions- und Verdopplungssätze}
 \begin{Bws}
-$\cos(a - b) = \cos(a)\cos(b) + \sin(a) \sin(b)$\\
+$\cos(a - b) = \cos(a)\cos(b) + \sin(a)\sin(b)$\\
 $\sin(a - b) = \sin(a)\cos(b) - \cos(a)\sin(b)$\\
 $\cos(a + b) = \cos(a)\cos(b) - \sin(a)\sin(b)$\\
 $\sin(a + b) = \sin(a)\cos(b) + \cos(a)\sin(b)$
 \end{Bws}
-
+\\
+Hieraus ergeben sich einige weitere Relationen, wie z.B. $\sin(2a)$. Diese lassen sich jedoch schnell und leicht herleiten.
 \section{Allgemeine Sinus- und Kosinussätze}
 
-Diese Sätze gelten in einem beliebigen Dreieck:
+In einem beliebigen Dreieck gelten abgewandelte Formen der aus der 8. Klasse bekannten Sätze:
 \begin{Bws}
 $\dfrac {a} {sin(\alpha)}=\dfrac {b} {sin(\beta)}=\dfrac {c} {sin(\gamma)}$\\\\
 $c²=a²+b²-2abcos(\gamma)$
-\end{Bws}\\\\
-Winkelnamen!!\\
+\end{Bws}\\
 \definecolor{qqwuqq}{rgb}{0,0.39,0}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.510204081632653cm,y=0.64516129032258cm]
 \clip(-1.3,-5.52) rectangle (10.46,3.78);
@@ -79,9 +84,19 @@ Winkelnamen!!\\
 \draw[color=black] (6.12,-0.44) node {$a$};
 \draw[color=black] (1.76,-0.08) node {$b$};
 \draw[color=black] (4.06,-2.28) node {$c$};
-\draw[color=qqwuqq] (4.68,1.32) node {γ};
-\draw[color=qqwuqq] (0.84,-2.5) node {α};
-\draw[color=qqwuqq] (7.66,-2.12) node {β};
+\draw[color=qqwuqq] (4.4,1.05) node {$\gamma$};
+\draw[color=qqwuqq] (0.7,-2.45) node {$\alpha$};
+\draw[color=qqwuqq] (7.5,-2.2) node {$\beta$};
 \end{scriptsize}
 \end{tikzpicture}\\
-Man bemerkt, dass sich die bekannten Relationen ergeben, wenn man für einen der Winkel den Wert $\dfrac{\pi}{2}$ nimmt.
+Man bemerkt, dass sich die bekannten Relationen ergeben, wenn einer der Winkel den Wert $\dfrac{\pi}{2}$ annimmt.
+\section{Sinusfunktionen}
+Zur Vollständigen Funktionsdiskussion einer Sinus-Funktion sind einige Besonderheiten zu beachten:\\
+\begin{enumerate}
+\item Amplitude und Periodizität\\
+Formel
+\item Symmetrieeigenschaften
+\item Die Null-, Extrem- und Wendestellen sind in Form einer Menge anzugeben. (Es sei denn, die Aufgabenvorschrift fordert explizit auf eine Begrenzung auf ein angegebenes Intervall auf)\\
+Bsp: Die Nullstellen der Funktion $f(x)=\sin(x)$ lassen sich dartstellen als: $x \in \{k\pi|k \in \N^+_- \}$
+\\ In umgebung einfärben + Z?
+\end{enumerate}
