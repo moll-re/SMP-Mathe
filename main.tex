@@ -22,22 +22,7 @@
 
 \parindent 0ex
 
-\newenvironment{Bemerkung}{%
-\begin{center}
-}{%
-\end{center}
-}
-\newenvironment{Bws}
-{\par\noindent\normalfont\par\nopagebreak%
-  \begin{mdframed}[
-     linewidth=3pt,
-     linecolor=pink,
-     bottomline=false,topline=false,rightline=false,
-     innerrightmargin=0pt,innertopmargin=0pt,innerbottommargin=0pt,
-     innerleftmargin=1em,% Distanz zwischen vertikaler Strich & Inhalt
-     skipabove=.5\baselineskip
-   ]}
-  {\end{mdframed}}
+
 
 
 
@@ -48,32 +33,14 @@
 \newcommand{\Z}{\mathbb{Z}}
 
 
-\makeatletter
-\def\thickhrulefill{\leavevmode \leaders \hrule height 1.2ex \hfill \kern \z@}
-\def\@makechapterhead#1{
-  \vspace*{10\p@}%
-  {\parindent \z@ \centering \reset@font
-        \thickhrulefill\quad
-        \huge\scshape\bfseries\textit{\@chapapp{}  \thechapter}\normalsize
-        \quad \thickhrulefill
-        \par\nobreak
-        \vspace*{10\p@}%
-        \interlinepenalty\@M
-        \hrule
-        \vspace*{10\p@}%
-        \Huge \bfseries #1 \par\nobreak
-        \par
-        \vspace*{10\p@}%
-        \hrule
-        \vskip 50\p@
-  }}
+\include{style}
 
 
 \begin{document}
 \include{title}
 \tableofcontents
 
-\input{kap1/kap1}
+\include{kap1/kap1}
 \include{kap2/kap2}
 \include{kap3/kap3}
 \include{kap4/kap4}
