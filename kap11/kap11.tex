@@ -1,0 +1,494 @@
+\chapter{Integrale}
+\section{Integralrechnung}
+\subsection{Stammfunktionen}
+Eine Funktion $F$ heißt Stammfunktion der Funktion $f$, wenn $F'(x)=f(x)$
+gilt.
+
+Ist $F$ irgendeine Stammfunktion von $f$, dann ist auch $F(x)+C$ (mit
+konstantem $C$) eine Stammfunktion, denn beim Ableiten fällt ja $C$ als
+konstanter Summand weg. Jede Funktion hat also unendlich viele
+Stammfunktionen, die sich aber nur um einen konstanten Summanden
+unterscheiden.
+
+\subsection{Begriff des Integrals}
+
+\begin{figure}[htbp]\centering
+  \includegraphics{math3.eps}
+  \caption{Integral und Flächeninhalt}
+  \label{fig:6}
+\end{figure}
+
+In Abb.~\ref{fig:6} soll die Fläche zwischen der x-Achse und der Funktion
+$y=f(x)$ zwischen $x=a$ und $x=b$ berechnet werden.
+
+Um eine Näherung für diese Fläche zu bekommen, teilt man sie in Streifen auf
+(in der Abb.~\ref{fig:6} sind es 6 Streifen) und nimmt die Summe der
+Flächeninhalte der Rechtecke als Näherung für die Fläche. Wenn man die Zahl
+der Streifen so erhöht, dass die Breite jedes Streifens gegen Null geht, dann
+bekommt man als Grenzwert die gesuchte Fläche. In Abb.~\ref{fig:6} ist die
+Näherung:
+\[
+A_6=y_1(x_1-x_0)+y_2(x_2-x_1)+y_3(x_3-x_2)
++y_4(x_4-x_3)+y_5(x_5-x_4)+y_6(x_6-x_5)
+\]
+Beachtet man, dass $y_k=f(x_k)$ ist und schreibt man $\Delta x_1=x_1-x_0$,
+$\Delta x_2=x_2-x_1$ usw., dann bekommt man für $n$ Streifen:
+\[
+A_n=f(x_1)\Delta x_1+f(x_2)\Delta x_2+\cdots+f(x_n)\Delta x_n=
+\sum_{k=1}^n f(x_k)\Delta x_k
+\]
+
+Der Grenzwert dieser $A_n$ ist nun die gesuchte Fläche:
+\begin{equation}
+  \label{eq:33}
+  \int_a^b \dD y=
+  \int_a^b f(x)\dD x=\lim_{n\to\infty}\sum_{k=1}^n f(x_k)\Delta x_k
+\end{equation}
+Beim Grenzübergang ist nur zu beachten, dass mit Erhöhung der Streifenzahl $n$
+auch alle Breiten $\Delta x_k$ gegen Null gehen, also
+$\lim_{n\to\infty}\max\Delta x_k=0$ gilt.
+
+Schaut man sich die Abb.~\ref{fig:6} an, dann stellt man fest, dass statt
+$f(x_k)$ als Seite der Rechtecke auch Rechtecke verwendet werden könnten,
+deren Seite irgendein $f(u_k)$ ist, wobei $x_{k-1}\le u_k\le x_k$ ist.
+
+Grenzwerte der Art von Gl.~\eqref{eq:33} heißen \emph{Integrale}. Funktionen,
+für die dieser Grenzwert für jede Art der Unterteilungsfolge und jede Wahl der
+$f(u_k)$ existiert und immer denselben Wert ergibt, heißen \emph{integrierbar}.
+
+Als Physiker sagt man, durch Integration werden Elemente der Form  $\dD
+y=f(x)\dD x$
+aufaddiert.
+
+\subsection[Der Hauptsatz]{Der Hauptsatz der Differential- und
+  Integralrechnung}
+Die Bestimmung der Grenzwerte in Gleichung~\eqref{eq:33} ist eine mühselige
+Angelegenheit. Aber alles wendet sich zum Guten, denn Integrale können mittels
+Stammfunktionen bestimmt werden.
+
+Um dies klar zu machen betrachten wir irgendeine Stammfunktion $F$ der
+Randfunktion $f$. Nach der Grundformel~\eqref{eq:34} ist dann
+\[
+\dD F(x)=F'(x)\dD x=f(x)\dD x\Rpf
+\Delta F(x_k)\approx f(x_k)\Delta x_k\Rpf
+F(x_k)-F(x_{k-1})\approx f(x_k)\Delta x_k
+\]
+Die Näherung ist umso besser je kleiner $\Delta x_k$ ist.
+
+Wendet man diese Beziehung auf die Näherungssumme $A_n$ an, dann bekommt man:
+\[
+A_n\approx(F(x_1)-F(x_0))+(F(x_2)-F(x_1))+\cdots (F(x_n)-F(x_{n-1})
+\]
+In dieser Gleichung heben sich alle Summanden bis auf $F(x_0)$ und $F(x_n)$
+heraus, also ist, weil $x_0=a$ und $x_n=b$ ist, $A_n\approx F(b)-F(a)$.
+
+Diese Näherung wird umso besser, je kleiner die $\Delta x$ werden, also hat
+man für den Grenzwert:
+\begin{merkbox}
+\begin{equation}
+  \label{eq:35}
+  \int_a^b f(x)\dD x
+  =\lim_{n\to\infty}\sum_{k=1}^n f(x_k)\Delta x_k = F(b) - F(a)
+  =\left[F(x)\right]_a^b
+\end{equation}
+\end{merkbox}
+Dies ist der \textbf{Hauptsatz der Differential- und Integralrechnung}. Mit
+ihm wird das Problem der Integration auf das Auf"|finden einer Stammfunktion
+zurückgeführt. Als Mathematiker müsste man noch anfügen, dass diese Beziehung
+nicht immer gilt, sondern nur unter gewissen Voraussetzungen.
+
+Der Hauptsatz ist sicher dann richtig, wenn die Funktion $f$ stetig ist.
+In diesem Fall kann man auch so formulieren:
+\[
+I_a(x)=\int_a^x f(\xi)\dD \xi \qquad\Rpf\qquad I_a'(x)=f(x)
+\]
+Die Funktion $I_a$ nennt man hier die Integralfunktion. Man kann sie sich
+vorstellen als die Funktion die jeder Stelle $x$ die Fläche zwischen $a$ und
+$x$ zuordnet. Unter den obigen Voraussetzungen ist also die Ableitung der
+Integralfunktion gleich der Randfunktion. Ist die Randfunktion $f$ nicht im
+ganzen Intervall stetig, sondern nur ">stückweise stetig"<, dann ist zwar die
+Integralfunktion immer noch stetig, aber in den Trennpunkten der
+Stetigkeitsbereiche nicht mehr notwendig differenzierbar.
+
+Häufig kommen auch sogenannte \emph{unbestimmte Integrale} vor. Ein
+unbestimmtes Integral ist einfach eine Stammfunktion. Man schreibt dann
+\[
+\int f(x)\dD x= F(x)+C
+\]
+und nennt $C$ die \emph{Integrationskonstante}.
+
+Eine Stammfunktion zu finden, ist allerdings häufig auch nicht sehr einfach.
+Für viele aus elementaren Funktionen zusammengesetzte Funktionen bekommt man
+leider Stammfunktionen, die nicht mehr elementar dargestellt werden können. Das gilt
+schon für so einfach aussehende Integrale wie
+\[
+\int \frac{\sin x}{x}\dD x
+\]
+
+Da $\sin x /x$ in ihrem Definitionsbereich stetig ist, muss sie nach dem
+Hauptsatz eine Stammfunktion haben. Sie lässt sich allerdings nicht mehr durch
+elementare Funktionen ausdrücken, sondern gibt eine ">neue"< sogenannte
+">höhere"< Funktion, die man Integralsinus nennt. Ihre Funktionswerte kann man
+mit Tabellen oder mit Computerprogrammen bestimmen. Zunächst mag man meinen,
+dies sei etwas besonderes, aber auch die Werte eines Logarithmus oder eines
+Sinus kann man nur mit dem Taschenrechner berechnen oder aus einer
+Funktionentafel entnehmen.
+
+\subsection{Integrationsregeln}
+
+Da Integration die Umkehrung des Ableitens ist (">Aufleiten"<) übertragen sich
+die Ableitungsregeln auf das Integrieren:
+\begin{itemize}
+\item Konstante Faktoren bleiben stehen.
+\item Summen werden summandenweise aufgeleitet.
+\item $\D\int_a^b=\int_a^c+\int_c^b$
+\item $\D \int_a^b=-\int_b^a$
+\item Es gibt \emph{keine direkte} Umkehrung der Produkt-, Quotienten und
+  Kettenregel, sondern hier muss man kompliziertere Verfahren verwenden.
+\end{itemize}
+
+Wichtige Integrale sind:
+\begin{align}
+  \label{eq:36}
+  \int x^n\dD x&=\frac{x^{n+1}}{n+1}\\
+  \int\sin x\dD x&= -\cos x\label{eq:37}\\
+  \int\cos x\dD x&= \sin x\label{eq:38}\\
+  \int\frac{\dD x}{\cos^2x}&= \tan x\label{eq:39}\\
+  \int\frac{1}{x}\dD x&= \ln|x|\label{eq:40}\\
+  \int\frac{\dD x}{1+x^2}&= \arctan x\label{eq:41}
+\end{align}
+
+In Formelsammlungen stehen viele Integrale, es gibt auch Integraltafeln, die
+hunderte von Integralen fertig angeben. CAS-Programme können alle sehr gut
+integrieren.
+
+Aus der Formel~\eqref{eq:35} erkennt man, dass das Integral negativ wird, wenn
+im betrachteten Intervall $f(x)<0$ ist. Dann verläuft die Kurve unterhalb der
+x-Achse, und man muss als Fläche den Betrag nehmen. Integrale sind aber nicht
+nur Flächen, mit ihnen kann man Volumina, Energien, Ladungen und und und
+\ldots ausrechnen, und bei vielen dieser Größen sind negative Werte durchaus
+sinnvoll!
+
+\subsubsection{Produktintegration}
+Nach der Produktregel ist $(uv)'=u'v+uv'$. Integriert man nun beide Seiten,
+und beachtet, dass nach dem Hauptsatz $\int (uv)'\dD x=uv$ ist, dann bekommt
+man die Formel für die Produktintegration, die auch \emph{partielle
+  Integration} genannt wird.
+\begin{equation}
+  \label{eq:42}
+  \int u'v\dD x= uv - \int uv'\dD x
+\end{equation}
+
+Mit dieser Regel kann man \zB Integrale folgender Form lösen:
+\[
+\int x\sin x\dD x
+\]
+Setzt man hier $u'=\sin x$, $v=x$, dann ist $u=-\cos x$ und $v'=1$. Setzt man
+diese Werte in die Produktintegrations-Formel ein, dann folgt:
+\begin{align*}
+\int x\sin x\dD x&= (-\cos x)x-\int (-\cos x)\cdot1\dD x\\
+&=-x\cos x+\int\cos x\dD x= -x\cos x+\sin x
+\end{align*}
+
+Ein anderes schönes Beispiel ist die Stammfunktion von $\ln x$. Dazu fasst man
+$\ln x$ als $1\cdot\ln x$ auf und wählt $u'=1$, $v=\ln x$, also $u=x$ und
+$v'=1/x$ und erhält:
+\[
+\int\ln x\dD x=x\ln x-\int x\cdot\frac{1}{x}\dD x=
+x\ln x-\int 1\dD x=x\ln x -x
+\]
+
+\subsubsection{Substitutionsmethode}
+Es soll die Stammfunktion von $x(1-x^2)^9$ bestimmt werden. Hier wäre zum
+Ableiten die Kettenregel und die Produktregel nötig, beides gibt es aber in
+reiner Form beim Integrieren nicht. Man kann aber häufig durch geschickte
+Substitution das Integral auf eine Form bringen, für die dann eine
+Stammfunktion angegeben werden kann. Der wesentliche Punkt dabei ist, dass
+nicht nur $x$ sondern auch $\dD x$ der Substitution unterworfen werden muss.
+
+In diesem Beispiel setzen wir $u=1-x^2$. Dann ist $\dD u=u'(x)\dD x=-2x\dD x$.
+Somit ist $\dD x=-\dD u/2x$. Nun geht's los:
+\[
+\int x(1-x^2)^9\dD x=\int x u^9 \frac{-1}{2x}\dD u
+=-\frac{1}{2}\int u^9\dD u=-\frac{1}{20}u^{10}=-\frac{1}{20}(1-x^2)^{10}
+\]
+
+Hätten wir hier die Stammfunktion nicht benötigt, sondern nur den Wert eines
+bestimmten Integrals, dann hätte man sich die Rücksetzung sparen können, indem
+man die Grenzen auf die neue Variable umschreibt:
+\[
+\int_{x=0}^1 x(1-x^2)^9\dD x=-\frac{1}{2}\int_{u=1}^0u^9\dD u
+=-\frac{1}{20}\left[u^{10}\right]_1^0=-\frac{1}{20}(0-1)=\frac{1}{20}
+\]
+
+In diesem Beispiel haben wir einen Teilausdruck des Integrals gleich $u$
+gesetzt. Im folgenden Beispiel machen wir es anders herum und setzen $x$
+gleich einer Funktion von $u$. Es soll die Fläche einer Ellipse berechnet
+werden. Für den oberen Ellipsenbogen gilt die Gleichung (Auflösen der
+Mittelpunktsform~\eqref{eq:7} nach $y$):
+\[
+y=\frac{b}{a}\sqrt{a^2-x^2}
+\]
+Die Fläche unter dem oberen Ellipsenbogen ist die halbe Ellipsenfläche und
+berechnet sich so:
+\[
+A=\int\limits_{x=-a}^a \frac{b}{a}\sqrt{a^2-x^2}\,\dD x=
+\int\limits_{u=-\frac{\pi}{2}}^{\frac{\pi}{2}}
+\frac{b}{a}\sqrt{a^2-a^2\sin^2u}\,a\cos u\,\dD u=
+\int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}}ab\cos^2u\,\dD u
+\]
+Dabei hat man $x=a\sin u$ gesetzt, dann wird $\dD x=a\cos u \dD u$. Nun muss
+man nur noch die Stammfunktion von $\cos^2u$ ermitteln. Dazu kann man etwa die
+Beziehung $\cos2u=2\cos^2u-1$ heranziehen, also
+$\cos^2u=\frac{1}{2}(1+\cos2u)$. Diese hat die Stammfunktion
+$\frac{1}{2}(u+\sin u\cos u)$. Damit bekommt man für die Fläche:
+\[
+A=\frac{ab}{2}\left[u+\sin u\cos u\right]_{-\frac{\pi}{2}}^{+\frac{\pi}{2}}=
+\frac{ab}{2}[(\frac{\pi}{2}+0)-(-\frac{\pi}{2}+0)]=\frac{1}{2}\pi a b
+\]
+Die gesamte Fläche der Ellipse ist doppelt so groß, also $\pi a b$.
+
+\subsubsection{Partialbruchzerlegung}
+Die Partialbruchzerlegung ist ein allgemeines Verfahren zur Integration
+gebrochen rationaler Funktionen. Es sei gegeben:
+\begin{equation}
+  \label{eq:68}
+  f(x)=\frac{P(x)}{Q(x)}
+  =\frac{a_0+a_1x+\dots+a_nx^n}{b_0+b_1x+\dots+b_mx^m}
+\end{equation}
+Im Falle $m\le n$ führt man zuerst eine Polynomdivision aus, dann bekommt man
+eine ganzrationale Funktion und eine gebrochen rationale mit $m>n$, so dass
+wir uns für das Weitere auf den Fall $m>n$ beschränken können.
+
+Das Nennerpolynom kann im Komplexen vollständig in Linearfaktoren zerlegt
+werden, im Reellen bleiben ggf. quadratische Faktoren übrig, die keine reellen
+Nullstellen mehr haben. Seien nun $x_k$ die Nullstellen von $Q(x)$ mit der
+Vielfachheit $\nu_k$ dann kann man $Q(x)$ stets auf die folgende Form bringen:
+\begin{equation}
+  \label{eq:69}
+  Q(x)=b_m(x-x_1)^{\nu_1}(x-x_2)^{\nu_2}\dots(x-x_k)^{\nu_k}
+  (x^2+\alpha_1x+\beta_1)^{\mu_1}\dots(x^2+\alpha_rx+\beta_r)^{\mu_r}
+\end{equation}
+Die gebrochen rationale Funktion $f(x)$ lässt sich nun als Summe von
+Partialbrüchen schreiben. Dabei gilt:
+\begin{enumerate}
+\item Jeder Linearfaktor $(x-x_k)$ der Vielfachheit $\nu_k$ trägt zur
+  Zerlegung die folgenden Summanden bei:
+  \[
+  \frac{A_1}{(x-x_k)}+\frac{A_2}{(x-x_k)^2}+\dots
+  +\frac{A_{\nu_k}}{(x-x_k)^{\nu_k}}
+  \]
+\item Jeder quadratische Faktor mit der Vielfachheit $\mu_k$ trägt die
+  folgenden Summanden bei:
+  \[
+  \frac{C_1x+D_1}{(x^2+\alpha x+\beta)}+
+  \frac{C_2x+D_2}{(x^2+\alpha x+\beta)^2}+\dots+
+  \frac{C_{\mu_k}x+D_{\mu_k}}{(x^2+\alpha x+\beta)^{\mu_k}}
+  \]
+\end{enumerate}
+
+\noindent Die Linearfaktoren lassen sich sofort integrieren, bei den
+quadratischen geht man so vor:
+\[
+(x^2+\alpha x+\beta)=\bigl(x+\tfrac{\alpha}{2}\bigr)^2+\delta^2
+=(\delta y)^2+\delta^2=\delta^2(y^2+1)
+\]
+Hier hat man quadratisch ergänzt und $\delta\cdot y=x+\frac{\alpha}{2}$
+substituiert. Mit dieser Substitution ist
+\[
+x=\delta y-\frac{\alpha}{2}\qquad y=\frac{x+\frac{\alpha}{2}}{\delta}\qquad
+\dD x=\delta\dD y
+\]
+Nun wird das Integral zu:
+\begin{align*}
+  \int\frac{Cx+D}{(x^2+\alpha x+\beta)^\mu}\dD x
+  &=\frac{1}{\delta^{2\mu-1}}
+  \int\frac{C\delta y+D-\frac12C\alpha}{(y^2+1)^\mu}\dD y\\
+  &=\frac{C}{\delta^{2\mu-2}}\int\frac{y\dD y}{(y^2+1)^\mu}
+  +\frac{D-\frac12C\alpha}{\delta^{2\mu-1}}\int\frac{\dD y}{(y^2+1)^\mu}
+\end{align*}
+Für das erste der beiden verbleibenden Integrale bekommt man dann
+\begin{equation}
+  \label{eq:70}
+  \int\frac{y\dD y}{(y^2+1)^\mu}=\frac12\int\frac{\dD u}{u^\mu}=
+  \begin{cases}
+    \dfrac{u^{1-\mu}}{2(1-\mu)}=&\text{für~}\mu=2, 3, \dots\\
+    \frac{1}{2}\ln|u|& \text{für~} \mu=1
+  \end{cases}
+\end{equation}
+Hier hat man $u=y^2+1$ gesetzt. Nun muss noch das zweite bestimmt werden.
+\[
+J_\mu=\int\frac{\dD y}{(y^2+1)^\mu}
+\]
+Für $\mu=1$ ist es bekannt, $J_1=\arctan y$.
+
+Wir werden eine Rekursionsformel für die $J_\mu$ herleiten. Wir beginnen mit
+der Beziehung
+\[
+J_{\mu+1}=\int\frac{(y^2+1)-y^2}{(y^2+1)^{\mu+1}}\dD y
+=J_\mu-\int\frac{y^2}{(y^2+1)^{\mu+1}}\dD y
+\]
+Nun denken wir uns den zweiten Integranden als $y\cdot$Rest geschrieben und
+integrieren partiell:
+\[
+\int y\cdot\frac{y\dD y}{(y^2+1)^{\mu+1}}=
+\frac{-y}{2\mu(y^2+1)^\mu}+\frac{1}{2\mu}\int\frac{\dD y}{(y^2+1)^\mu}=
+\frac{-y}{2\mu(y^2+1)^\mu}+\frac{1}{2\mu}\,J_\mu
+\]
+Setzt man das oben ein, so bekommt man die Rekursionsformel:
+\begin{equation}
+  \label{eq:71}
+  J_{\mu+1}=\left(1-\frac{1}{2\mu}\right)J_\mu+\frac{y}{2\mu(y^2+1)^\mu}
+\end{equation}
+Insbesondere ist dann (rechne das nach!)
+\begin{align*}
+  J_1&=\arctan y\\
+  J_2&=\frac{1}{2}\arctan y+\frac{y}{2(y^2+1)}\\
+  J_3&=\frac38\left(\arctan y+\frac{y}{y^2+1}\right)+\frac{y}{4(y^2+1)^2}\\
+  J_4&=\frac{5}{16}\left(\arctan y+\frac{y}{y^2+1}\right)+
+       \frac{5}{24}\cdot\frac{y}{(y^2+1)^2}+\frac{y}{6(y^2+1)^3}
+\end{align*}
+
+\subsection{Beispiele zur Integration}
+\NA Man bestimme die Fläche unter der Parabel $y=2x^2$ im Bereich $1\le x\le
+4$.
+\[
+\int_1^4 2x^2\dD x=\left[\frac{2}{3}x^3\right]_1^4=\frac{2}{3}(64-1)=42
+\]
+
+\NA Bestimme die Formel für das Volumen einer Pyramide der Höhe $h$ und der
+Grundfläche $G$.
+
+Man stellt sich die Pyramide aus dünnen Schichten der Dicke $\dD x$ parallel
+zur Grundfläche aufgebaut vor. Die x-Achse legt man durch die Spitze der
+Pyramide, so dass die Höhe auf die x-Achse zu liegen kommt. Da die Flächen der
+Schichten dann durch zentrische Streckung aus der Grundfläche entstehen, hat
+eine Schicht im Abstand $x$ von der Spitze die Fläche $A(x)$, für die nach dem
+Strahlensatz gilt:
+\[
+\frac{x^2}{h^2}=\frac{A(x)}{G}\quad\Rpf\quad A(x)=\frac{G}{h^2} x^2
+\]
+Das Volumen einer Schicht ist dann $\dD V=A(x)\dD x$. Das Volumen der Pyramide
+ist die Summe der Volumina aller Schichten, diese Summe bekommt man durch
+Integration:
+\[
+V=\int_0^h \dD V=\int_0^h \frac{G}{h^2}x^2\dD x
+=\frac{G}{h^2}\cdot\frac{1}{3}\left[x^3\right]_0^h=
+\frac{G}{3h^2}(h^3-0)=\frac{1}{3}Gh
+\]
+
+\NA Bestimme die Energie, die notwendig ist, um einen Körper der Masse $m$ im
+Schwerefeld der Masse $M$ vom Abstand $R$ ins Unendliche zu bringen.
+
+Um den Körper das Stückchen $\dD r$ vom Zentralkörper zu entfernen, braucht
+man die Arbeit $\dD W=F\dD r$, wobei $F$ die Gravitationskraft ist. Die gesamte
+notwendige Arbeit ist dann:
+\[
+W=\int_R^{\infty}\dD W=\int_R^{\infty}G\frac{Mm}{r^2}\dD r=
+GMm\left[-\frac{1}{r}\right]_R^{\infty}=GMm(0-(-\frac{1}{R}))=\frac{GMm}{R}
+\]
+
+Dies war ein Beispiel eines sogenannten \emph{uneigentlichen Integrals}, bei
+solchen liegen entweder die Grenzen im Unendlichen, oder die Funktion selbst
+wird an einer Stelle unendlich.
+
+\NA Bestimme $ \D\int_{-\infty}^{\infty}\E^{-x^2}\dD x$
+
+Diese Aufgabe habe ich eingefügt, weil das ein wichtiges Integral ist. Seine
+Berechnung ist aber nicht ganz einfach, man muss einen ">Umweg"< machen.
+Zuerst schreiben wir:
+\[
+\int_{-\infty}^{\infty}\E^{-x^2}\dD x=
+\sqrt{\left(\int_{-\infty}^{\infty}\E^{-x^2}\dD x\right)
+  \left(\int_{-\infty}^{\infty}\E^{-y^2}\dD y\right)}=
+\sqrt{\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}
+    \E^{-(x^2+y^2)}\dD x\dD y}
+\]
+Führt man nun Polarkoordinaten ein, also $x=r\cos\phi; y=r\sin\phi$, dann ist
+das Flächenelement $r\dD\phi\dD r$ und $x^2+y^2=r^2$. Das letzte Integral wird
+dadurch
+\[
+\int_0^{2\pi}\dD\phi\int_0^{\infty}r\E^{-r^2}\dD r
+=2\pi\left[-\tfrac12\E^{-r^2}\right]_0^{\infty}=\pi \qRpf
+\int_{-\infty}^{\infty}\E^{-x^2}\dD x=\sqrt{\pi}
+\]
+
+Mit Substitution kann man nun noch beweisen:
+\[
+\int_{-\infty}^{\infty}\E^{-a x^2}\dD x=\sqrt{\frac{\pi}{a}}
+\]
+Dazu setzt man $u^2=ax^2\Rpf\dD u=\sqrt{a}\dD x$. Dies kann nur gehen, wenn
+$a>0$ ist. Man kann zeigen, dass die Formel sogar für komplexe $a$ stimmt,
+sofern $\Re a>0$ ist.
+
+\paragraph{Anmerkung:} $\E^{-x^2}$ hat keine elementare Stammfunktion, es gibt
+aber eine Reihe von höheren Funktionen, die mit diesem Integral verwandt sind.
+Zunächst ist dabei die aus der Wahrscheinlichkeitsrechnung bekannte
+Normalverteilung (\caps{Gau"s}-Verteilung) zu erwähnen, die durch
+\[
+\Phi(x)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^x\E^{-\frac{1}{2}t^2}\dD t
+\qqbox{mit}\Phi(\infty)=1
+\]
+definiert ist. Daneben gibt es die \caps{Gau"s}sche Fehlerfunktion
+\[
+\textrm{erf}\,(x)=\frac{2}{\sqrt{\pi}}\int_0^x\E^{-t^2}\dD t\qqbox{wobei}
+\Phi(x)=\frac{1}{2}\biggl(1+\textrm{erf}\,\Bigl(\frac{x}{\sqrt{2}}\Bigr)\biggr)
+\]
+
+\NA Bestimme das Integral durch Partialbruchzerlegung.
+Es sei gegeben:
+\[
+f(x)=\frac{x+2}{(x^2-1)(x^2+1)^2}=\frac{A}{x-1}+\frac{B}{x+1}+
+\frac{Cx+D}{(x^2+1)^2}+\frac{Ex+F}{x^2+1}
+\]
+Nun müssen die Koeffizienten $A,\dots,F$ bestimmt werden. Dazu multipliziert
+man zuerst mit dem Hauptnenner durch:
+\[
+x+2=A(x+1)(x^2+1)^2+B(x-1)(x^2+1)^2+(Cx+D)(x^2-1)+(Ex+F)(x^4-1)
+\]
+Zunächst kann man nun für $x$ spezielle Werte einsetzen, so dass möglichst
+viele Ausdrücke Null werden:
+\begin{align*}
+  x=1: &&& 3=8A \qRpf A=\tfrac{3}{8}\\
+  x=-1:&&& 1=-8B \qRpf B=-\tfrac{1}{8}\\
+  x=0: &&& 2=\tfrac38+\tfrac18-D-F
+\end{align*}
+Hätte man nur einfache Vielfachheiten, so könnte man auf diese Weise alle
+Koeffizienten bestimmen. Hier ist das leider nicht der Fall, so dass wir zur
+">Ochsentour"< greifen müssen. Dazu wird die rechte Seite ausmultipliziert und
+dann ein Koeffizientenvergleich gemacht:
+\begin{gather*}
+  x+2=(A-B-D-F)+(A+B-C-E)x+(2A-2B+D)x^2\\
+  \phantom{x}+(2A+2B+C)x^3+(A-B+F)x^4+(A+B+E)x^5
+\end{gather*}
+Der Koeffizientenvergleich liefert nun ein Gleichungssystem (wobei wir unsere
+schon bekannten Werte für $A$ und $B$ gleich einsetzen)
+\begin{align*}
+  2&=\tfrac{3}{8}+\tfrac{1}{8}-D-F\\
+  1&=\tfrac{3}{8}-\tfrac{1}{8}-C-E\\
+  0&=\tfrac{3}{4}+\tfrac{1}{4}+D\qRpf D=-1\\
+  0&=\tfrac{3}{4}-\tfrac{1}{4}+C\qRpf C=-\tfrac{1}{2}\\
+  0&=\tfrac{3}{8}+\tfrac{1}{8}+F\qRpf F=-\tfrac{1}{2}\\
+  0&=\tfrac{3}{8}-\tfrac{1}{8}+E\qRpf E=-\tfrac{1}{4}
+\end{align*}
+Setzt man die sich aus den letzten vier Gleichungen ergebenden Werte nun in die
+beiden ersten ein, so sind diese erfüllt. Wir sind fertig und haben das
+Ergebnis
+\[
+f(x)=\frac{\frac38}{(x-1)}-\frac{\frac18}{x+1}-\frac{\frac12x+1}{(x^2+1)^2}
+-\frac{\frac14x+\frac12}{x^2+1}
+\]
+Nach den Gleichungen~\eqref{eq:70} und \eqref{eq:71} ergibt sich so:
+\begin{gather*}
+\int f(x)\dD x=\frac{3}{8}\ln|x-1|-\frac18\ln|x+1|+\frac14\cdot\frac{1}{x^2+1}\\
+\phantom{x}-\frac12\arctan x-\frac{x}{2(x^2+1)}-\frac{1}{8}\ln|x^2+1|
+-\frac12\arctan x
+\end{gather*}
+
+Der Koeffizientenvergleich ist deshalb so leicht gegangen, weil wir schon
+einige Werte mit der Einsetze-Methode ermittelt hatten. Man hätte statt des
+Koeffizientenvergleichs auch weitere Gleichungen erzeugen können, indem man
+einfach weitere Zahlen einsetzt. Wenn irgend möglich, sollte man versuchen mit
+der Einsetze-Methode zum Ziel zu kommen. Am aller einfachsten ist es
+allerdings, Mathematica anzuwerfen, dann hat man das Integral in
+Sekundenbruchteilen. 
