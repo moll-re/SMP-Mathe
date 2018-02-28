@@ -40,12 +40,33 @@
   {\end{mdframed}}
 
 
+
+%Zahlenmengen:
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
 
 
-
+\makeatletter
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1.2ex \hfill \kern \z@}
+\def\@makechapterhead#1{
+  \vspace*{10\p@}%
+  {\parindent \z@ \centering \reset@font
+        \thickhrulefill\quad
+        \huge\scshape\bfseries\textit{\@chapapp{}  \thechapter}\normalsize
+        \quad \thickhrulefill
+        \par\nobreak
+        \vspace*{10\p@}%
+        \interlinepenalty\@M
+        \hrule
+        \vspace*{10\p@}%
+        \Huge \bfseries #1 \par\nobreak
+        \par
+        \vspace*{10\p@}%
+        \hrule
+        \vskip 50\p@
+  }}
 
 
 \begin{document}
@@ -63,7 +84,5 @@
 \include{kap9/kap9}
 \include{kap10/kap10}
 %und so weiter
-
-
 
 \end{document}
