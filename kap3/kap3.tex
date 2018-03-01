@@ -4,9 +4,25 @@ Die \textbf{Analysis} (griechisch  anÃ¡lysis, deutsch "`Aufl"osung"') ist ein Te
 
 \section{Stetigkeit}
 
+Eine Funktion ist stetig an der Stelle $x_{0}$, wenn:
+\begin{enumerate}
+\item $x_{0}\in D$
+\item $\lim\limits_{x \rightarrow x_{0}} {f(x)}$ existiert 
+\item $\lim\limits_{x \rightarrow x_{0}^{\pm}} {f(x)}=f(x_{0})$\\
+\end{enumerate}
+Stetigkeit ist eine lokale Eigenschaft. Die Funktion $f$ heißt dann stetig, wenn sie an jeder Stelle ihrer Definitionsmenge stetig ist.
+
+\begin{Bemerkung}
+Ist $f$ stetig und $I\subset \R$ ein reelles Intevall, dann ist $f(I)$ ebenfalls ein Intervall. Ist $f$ zudem streng monoton, so ist die Umkehrfunktion $f^{-1}$ ebenfalls stetig.
+\end{Bemerkung}
+
+\subsubsection{Stetige Fortsetzungen}
+
+beim Vereinfachen von gebrochenrationalen Funktionen ist Vorsicht geboten, denn eine hebbare Definitionslücke ''aufzuheben" ver"andert den Definitionsbereich der Funktion. Die daraus resultierende Funktion wird \textbf{stetige Fortsetzung} genannt.
+
 \section{Differenzierbarkeit}
 
-Eine Funktion ist Differenzierbar an der Stelle $x_{0} \in D$, wenn der beitseitige Grenzwert des Differenzenquotienten f"ur $h\rightarrow 0$ existiert. Anschaulich soll Die Funktion links und rechts des $x_{0}$ die selbe Ableitung haben. \\ 
+Eine Funktion ist differenzierbar an der Stelle $x_{0} \in D$, wenn der beitseitige Grenzwert des Differenzenquotienten f"ur $h\rightarrow 0$ existiert. Anschaulich soll Die Funktion links und rechts des $x_{0}$ die selbe Ableitung haben. \\ 
 \\
 $\lim\limits_{h \rightarrow 0^{+}} {\dfrac{f(x_{0}+h)-f(x_{0})}{h}} = \lim\limits_{h \rightarrow 0^{-}} {\dfrac{f(x_{0}+h)-f(x_{0})}{h}} =f'(x_{0})$\\
 \\
@@ -14,6 +30,10 @@ Dieser Grenzwert ist die \textbf{Ableitung} von $f$ an der Stelle $x_{0}$.\\
 Die Funktion heißt differenzierbar, wenn sie $\forall x \in D$ differenzierbar ist.\\
 \\
 Die Funktion $f(x)=|x|$ ist nicht differenzierbar, da bei der Stelle $x_{0}=0$ der linksseitige Grenzwert des differenzenquotienten ($\lim\limits_{h \rightarrow 0^{-}}{f'(x_{0})=-1$}) nicht mit dem rechtsseitigen Grenzwert (1) übereinstimmt.\\
+
+\subsection{Zusammenhang zwischen Stetigkeit und Differenzierbarkeit}
+
+Ist eine Funktion $f$ an der Stelle $x_{0}$ differenzierbar, so ist sie an dieser Stelle auch stetig.Die Umkehrung gilt erst einmal nicht, aber es gibt eine verneinende Aussage: Ist $f$ an der Stelle $x_{0}$ nicht stetig, so ist sie hier auch nicht differenzierbar.\\
 
 \section{Ableitungsregeln}
 
@@ -86,7 +106,7 @@ $N_{x_{0}}(x)=\frac{1}{f'(x_{0})}\cdot (x-x_{0})+f(x_{0})$\\
 
 \subsection{Definitionsbereich}
 
-Am Anfang muss der Definitionsbereich angegeben werden, um eventuelle Divisionen durch null zu vermeiden. \\
+Am Anfang muss der Definitionsbereich angegeben werden, um eventuelle Divisionen durch null zu vermeiden. Man achte dabei auch auf hebbare Definitionsl"ucken (siehe ''Stetigkeit'') \\
 
 
 \subsection{Achsenschnittpunkte}
@@ -118,7 +138,7 @@ $f(x_{0}+h)-y_{0}=-f(x_{0}-h)+y_{0}$
 
 \begin{Bemerkung}
 Beispiel\\
-\end{Bemerkung}
+\\
 $f(x)=\frac{x}{x-1}$\\
 \\
 Aus dem Schnittpunkt der Asymptoten kann man vermuten, dass $f(x)$ achsensymmetrisch zum Punkt $P(1|1)$ ist.\\
@@ -128,12 +148,12 @@ $\left. \begin{array}{rcl}
 \\
 \Rightarrow -f(x_{0}-h)+y_{0}=-[\frac{1-h}{1-h-1}+1]=\frac{1}{h}\\
 \end{array}\right\} \frac{1}{h}=\frac{1}{h}$ Die Funktion $f$ ist zu $P$ symmetrisch.\\
-
+\end{Bemerkung}
 
 
 \subsection{Grenzwerte}
 
-
+\subsection{Asymptoten}
 
 \subsection{Monotonie}
 
