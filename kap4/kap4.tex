@@ -12,11 +12,11 @@ $\tan(\alpha)=\dfrac {sin(\alpha)} {cos(\alpha)}$
 \definecolor{ffqqqq}{rgb}{1,0,0}
 \definecolor{ttttff}{rgb}{0.2,0.2,1}
 \definecolor{uququq}{rgb}{0.25,0.25,0.25}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=2.0833333333333335cm,y=2.0833333333333335cm]
-\draw[->,color=black] (-1.2,0) -- (1.2,0);
+\begin{tikzpicture}[line join=round,x=2.0833333333333335cm,y=2.0833333333333335cm]
+\draw[->,color=black] (-1.2,0) -- (1.2,0) node[below]{$x$};
 \foreach \x in {-1,1}
 \draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
-\draw[->,color=black] (0,-1.2) -- (0,1.2);
+\draw[->,color=black] (0,-1.2) -- (0,1.2) node[left]{$y$};
 \foreach \y in {-1,1}
 \draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
 \draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
@@ -36,10 +36,10 @@ $\tan(\alpha)=\dfrac {sin(\alpha)} {cos(\alpha)}$
 \draw[color=uququq] (0.03,0.94) node {$A$};
 \fill [color=uququq] (0.54,0) circle (1.5pt);
 \draw[color=uququq] (0.7,0.04) node {$B$};
-\draw[color=ttttff] (0.3,0.77) node {cos(α)};
-\draw[color=ffqqqq] (0.74,0.42) node {sin(α)};
-\draw[color=ttzzqq] (0.85,0.95) node {tan(α)};
-\draw[color=qqwuqq] (0.16,0.07) node {$\alpha$};
+\draw[color=ttttff] (0.3,0.74) node {cos(α)};
+\draw[color=ffqqqq] (0.74,0.4) node {sin(α)};
+\draw[color=ttzzqq] (0.82,1.1) node {tan(α)};
+\draw[color=qqwuqq] (0.12,0.07) node {$\alpha$};
 \end{scriptsize}
 \end{tikzpicture}
 \\\\\\
@@ -94,19 +94,18 @@ Man bemerkt, dass sich die bekannten Relationen ergeben, wenn einer der Winkel d
 Zur Vollständigen Funktionsdiskussion einer Sinus-Funktion sind einige Besonderheiten zu beachten:
 \begin{enumerate}
 \item Amplitude und Periodizität\\
-Eine Funktion der Form $f(x)=a\cdot\sin(b(x-c))+d$ hat:\begin{enumerate}
+Eine Funktion der Form $f(x)=a\cdot\sin(b(x-c))+d$ hat:\begin{itemize}
 \item die Periode $P = \dfrac{2\pi}{|b|}$
 \item die Amplitude $A = |a|$
 \item die Verschiebung entlang der $x$-Achse um $d$ und entlang der $y$-Achse um $c$
-\end{enumerate}
+\end{itemize}
 \item Symmetrieeigenschaften\\
 Hier sollte zumindest bekannt sein, dass $f(x)=\sin(x)$ punktsymmetrisch zum Origo ist, und dass $f(x)=\cos(x)$ Achsensymmetrisch zur $y$-Achse ist.
 \item Die Null-, Extrem- und Wendestellen sind in Form einer Menge anzugeben. (Es sei denn, die Aufgabenvorschrift fordert explizit auf eine Begrenzung auf ein angegebenes Intervall auf)\\
 Bsp: Die Nullstellen der Funktion $f(x)=\sin(x)$ lassen sich dartstellen als: $x \in \{k\pi|k \in \Z\}$
 \\ In umgebung einfärben
 \item Bei der Teilung durch eine Sinusfunktion können Definitionslücken an dessen Nullstellen entstehen. Auch diese können in der bereits gezeigten Form angegeben werden.
-\end{enumerate}
-\section{Polarkoordinaten}
+\end{enumerate}section{Polarkoordinaten}
 In der Kursstufe beschränken wir uns auf die Benutzung von Polarkoordinaten für Punkte in der Ebene (2D).
 \begin{Bws}
 Polarkoordinaten sind eine Form der eindeutigen Punktangaben, doch anstatt wie kartesische Koordinaten 2 Entfernungen $x$ und $y$ zu verwenden, haben sie die Form $(r|\varphi)$. $r$ ist hierbei die Entfernung zum Origo und $\varphi$ ein orientierter Winkel (in $rad$).
@@ -114,14 +113,12 @@ Polarkoordinaten sind eine Form der eindeutigen Punktangaben, doch anstatt wie k
 \definecolor{zzzzzz}{rgb}{0.6,0.6,0.6}
 \definecolor{ffqqqq}{rgb}{1,0,0}
 \definecolor{qqzzqq}{rgb}{0,0.6,0}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\begin{tikzpicture}[line cap=round,line join=round,x=1.0cm,y=1.0cm]
 \draw[->,color=black] (-0.2,0) -- (2.64,0);
 \foreach \x in {,1,2}
 \draw[shift={(\x,0)},color=black] (0pt,-2pt);
 \draw[color=black] (2.47,0.04) node [anchor=south west] { x};
 \draw[->,color=black] (0,-0.29) -- (0,2.63);
-\foreach \y in {,1,2}
-\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
 \draw[color=black] (0.05,2.43) node [anchor=west] { y};
 \clip(-0.2,-0.29) rectangle (2.64,2.63);
 \draw [shift={(0,0)},color=ffqqqq,fill=ffqqqq,fill opacity=0.1] (0,0) -- (0:0.41) arc (0:46.48:0.41) -- cycle;
