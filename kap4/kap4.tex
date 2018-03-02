@@ -1,147 +1,151 @@
 \chapter{Trigonometrie}
 \section{Kurze Wiederholung}
-\begin{Bws}
-Im Kreis mit Radius 1 gelte:\\
-$\cos(\alpha)= x_{_M}$\\
-$\sin(\alpha)= y_{_M}$\\
-$\tan(\alpha)=\dfrac {sin(\alpha)} {cos(\alpha)}$
-\end{Bws}\\
-
+\begin{Definition}
+  Im Kreis mit Radius 1 gelte:\\
+  $\cos(\alpha)= x_{_M}$\\
+  $\sin(\alpha)= y_{_M}$\\
+  $\tan(\alpha)=\dfrac {sin(\alpha)} {cos(\alpha)}$
+\end{Definition}\\
 \definecolor{qqwuqq}{rgb}{0,0.39,0}
 \definecolor{ttzzqq}{rgb}{0.2,0.6,0}
 \definecolor{ffqqqq}{rgb}{1,0,0}
 \definecolor{ttttff}{rgb}{0.2,0.2,1}
 \definecolor{uququq}{rgb}{0.25,0.25,0.25}
 \begin{tikzpicture}[line join=round,x=2.0833333333333335cm,y=2.0833333333333335cm]
-\draw[->,color=black] (-1.2,0) -- (1.2,0) node[below]{$x$};
-\foreach \x in {-1,1}
-\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
-\draw[->,color=black] (0,-1.2) -- (0,1.2) node[left]{$y$};
-\foreach \y in {-1,1}
-\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
-\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
-\clip(-1.2,-1.2) rectangle (1.2,1.2);
-\draw [shift={(0,0)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (0:0.21) arc (0:57.13:0.21) -- cycle;
-\draw [line width=0.4pt] (0,0) circle (2.08cm);
-\draw (0,0)-- (0.54,0.84);
-\draw [line width=1.6pt,color=ttttff] (0,0.84)-- (0.54,0.84);
-\draw [line width=1.6pt,color=ffqqqq] (0.54,0.84)-- (0.54,0);
-\draw [line width=1.6pt,color=ttzzqq] (1,-1.2) -- (1,1.2);
-\begin{scriptsize}
-\fill [color=uququq] (0,0) circle (1.5pt);
-\draw[color=uququq] (-0.11,-0.11) node {$O$};
-\fill [color=black] (0.54,0.84) circle (1.5pt);
-\draw[color=black] (0.61,0.92) node {$M$};
-\fill [color=uququq] (0,0.84) circle (1.5pt);
-\draw[color=uququq] (0.03,0.94) node {$A$};
-\fill [color=uququq] (0.54,0) circle (1.5pt);
-\draw[color=uququq] (0.7,0.04) node {$B$};
-\draw[color=ttttff] (0.3,0.74) node {cos(α)};
-\draw[color=ffqqqq] (0.74,0.4) node {sin(α)};
-\draw[color=ttzzqq] (0.82,1.1) node {tan(α)};
-\draw[color=qqwuqq] (0.12,0.07) node {$\alpha$};
-\end{scriptsize}
+  \draw[->,color=black] (-1.2,0) -- (1.2,0) node[below]{$x$};
+  \foreach \x in {-1,1}
+  \draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+  \draw[->,color=black] (0,-1.2) -- (0,1.2) node[left]{$y$};
+  \foreach \y in {-1,1}
+  \draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+  \draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+  \clip(-1.2,-1.2) rectangle (1.2,1.2);
+  \draw [shift={(0,0)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (0:0.21) arc (0:57.13:0.21) -- cycle;
+  \draw [line width=0.4pt] (0,0) circle (2.08cm);
+  \draw (0,0)-- (0.54,0.84);
+  \draw [line width=1.6pt,color=ttttff] (0,0.84)-- (0.54,0.84);
+  \draw [line width=1.6pt,color=ffqqqq] (0.54,0.84)-- (0.54,0);
+  \draw [line width=1.6pt,color=ttzzqq] (1,-1.2) -- (1,1.2);
+  \begin{scriptsize}
+    \fill [color=uququq] (0,0) circle (1.5pt);
+    \draw[color=uququq] (-0.11,-0.11) node {$O$};
+    \fill [color=black] (0.54,0.84) circle (1.5pt);
+    \draw[color=black] (0.61,0.92) node {$M$};
+    \fill [color=uququq] (0,0.84) circle (1.5pt);
+    \draw[color=uququq] (0.03,0.94) node {$A$};
+    \fill [color=uququq] (0.54,0) circle (1.5pt);
+    \draw[color=uququq] (0.7,0.04) node {$B$};
+    \draw[color=ttttff] (0.3,0.74) node {cos(α)};
+    \draw[color=ffqqqq] (0.74,0.4) node {sin(α)};
+    \draw[color=ttzzqq] (0.82,1.1) node {tan(α)};
+    \draw[color=qqwuqq] (0.12,0.07) node {$\alpha$};
+  \end{scriptsize}
 \end{tikzpicture}
 \\\\\\
 Es ergeben sich folgende (wissenswerte) Werte:
 \\
-\begin{tabular*}{\linewidth}[b]{*{9}{|c @{\extracolsep\fill}}|}
-\hline  &0$^\circ$& 30$^\circ$ & 45$^\circ$ & 60$^\circ$ & 90$^\circ$ & 180$^\circ$ & 270$^\circ$ & 360$^\circ$
-\\ & 0 & $\dfrac{\pi}{6}$ & $\dfrac{\pi}{4}$ & $\dfrac{\pi}{3}$ & $\dfrac{\pi}{2}$ & \pi & $\dfrac{3\pi}{2}$ & 2\pi\\
-\hline $\sin(\alpha)$ & 0 & $\dfrac{1}{2}$ &$\dfrac{1}{\sqrt{2}}$ & $\dfrac{\sqrt{3}}{2}$& 1 & 0 & -1 & 0\\
-\hline $\cos(\alpha)$ & 1 & $\dfrac{\sqrt{3}}{2}$ &$\dfrac{1}{\sqrt{2}}$ & $\dfrac{1}{2}$& 0 & -1 & 0 & 1\\
-\hline $\tan(\alpha)$ & 0 & $\dfrac{{1}}{\sqrt{3}}$ &1  & $\sqrt{3}$ & X & 0 & X & 0\\
- \hline
-\end{tabular*}
-
-
+\begin{center}
+  \begin{tabu}to 0.9\textwidth {|X[c]|X[c]|X[c]|X[c]|X[c]|X[c]|X[c]|X[c]|X[c]|}
+    \hline
+    & 0$^\circ$ & 30$^\circ$ & 45$^\circ$ & 60$^\circ$ & 90$^\circ$ & 180$^\circ$ & 270$^\circ$ & 360$^\circ$\\
+    & 0 & $\dfrac{\pi}{6}$ & $\dfrac{\pi}{4}$ & $\dfrac{\pi}{3}$ & $\dfrac{\pi}{2}$ & \pi & $\dfrac{3\pi}{2}$ & 2\pi\\
+    \hline
+    $\sin(\alpha)$ & 0 & $\dfrac{1}{2}$ & $\dfrac{1}{\sqrt{2}}$ & $\dfrac{\sqrt{3}}{2}$ & 1 & 0 & -1 & 0\\
+    \hline
+    $\cos(\alpha)$ & 1 & $\dfrac{\sqrt{3}}{2}$ & $\dfrac{1}{\sqrt{2}}$ & $\dfrac{1}{2}$ & 0 & -1 & 0 & 1\\
+    \hline
+    $\tan(\alpha)$ & 0 & $\dfrac{{1}}{\sqrt{3}}$ & 1  & $\sqrt{3}$ & X & 0 & X & 0\\
+    \hline
+  \end{tabu}
+\end{center}
 \section{Addtions- und Verdopplungssätze}
-\begin{Bws}
-$\cos(a - b) = \cos(a)\cos(b) + \sin(a)\sin(b)$\\
-$\sin(a - b) = \sin(a)\cos(b) - \cos(a)\sin(b)$\\
-$\cos(a + b) = \cos(a)\cos(b) - \sin(a)\sin(b)$\\
-$\sin(a + b) = \sin(a)\cos(b) + \cos(a)\sin(b)$
-\end{Bws}
+\begin{Theorem}
+  $\cos(a - b) = \cos(a)\cos(b) + \sin(a)\sin(b)$\\
+  $\sin(a - b) = \sin(a)\cos(b) - \cos(a)\sin(b)$\\
+  $\cos(a + b) = \cos(a)\cos(b) - \sin(a)\sin(b)$\\
+  $\sin(a + b) = \sin(a)\cos(b) + \cos(a)\sin(b)$
+\end{Theorem}
 \\
 Hieraus ergeben sich einige weitere Relationen, wie z.B. $\sin(2a)$. Diese lassen sich jedoch schnell und leicht herleiten.
 \section{Allgemeine Sinus- und Kosinussätze}
-
 In einem beliebigen Dreieck gelten abgewandelte Formen der aus der 8. Klasse bekannten Sätze:
-\begin{Bws}
-$\dfrac {a} {sin(\alpha)}=\dfrac {b} {sin(\beta)}=\dfrac {c} {sin(\gamma)}$\\\\
-$c²=a²+b²-2abcos(\gamma)$
-\end{Bws}
+\begin{Theorem}
+  $\dfrac {a} {sin(\alpha)}=\dfrac {b} {sin(\beta)}=\dfrac {c} {sin(\gamma)}$\\\\
+  $c²=a²+b²-2abcos(\gamma)$
+\end{Theorem}
 \definecolor{qqwuqq}{rgb}{0,0.39,0}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.53cm,y=0.64cm]
-\clip(-0.4,-4.3) rectangle (9,3);
-\draw [shift={(4.22,1.92)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (-134.14:1.5) arc (-134.14:-47.61:1.5) -- cycle;
-\draw [shift={(-0.38,-2.82)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (1.04:1.5) arc (1.04:45.86:1.5) -- cycle;
-\draw [shift={(8.4,-2.66)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (132.39:1.5) arc (132.39:181.04:1.5) -- cycle;
-\draw (4.22,1.92)-- (8.4,-2.66);
-\draw (4.22,1.92)-- (-0.38,-2.82);
-\draw (8.4,-2.66)-- (-0.38,-2.82);
-\begin{scriptsize}
-\draw[color=black] (6.7,-0.44) node {$a$};
-\draw[color=black] (1.76,-0.08) node {$b$};
-\draw[color=black] (4.06,-2.28) node {$c$};
-\draw[color=qqwuqq] (4.4,1.05) node {$\gamma$};
-\draw[color=qqwuqq] (0.7,-2.45) node {$\alpha$};
-\draw[color=qqwuqq] (7.5,-2.2) node {$\beta$};
-\end{scriptsize}
+  \clip(-0.4,-4.3) rectangle (9,3);
+  \draw [shift={(4.22,1.92)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (-134.14:1.5) arc (-134.14:-47.61:1.5) -- cycle;
+  \draw [shift={(-0.38,-2.82)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (1.04:1.5) arc (1.04:45.86:1.5) -- cycle;
+  \draw [shift={(8.4,-2.66)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (132.39:1.5) arc (132.39:181.04:1.5) -- cycle;
+  \draw (4.22,1.92)-- (8.4,-2.66);
+  \draw (4.22,1.92)-- (-0.38,-2.82);
+  \draw (8.4,-2.66)-- (-0.38,-2.82);
+  \begin{scriptsize}
+    \draw[color=black] (6.7,-0.44) node {$a$};
+    \draw[color=black] (1.76,-0.08) node {$b$};
+    \draw[color=black] (4.06,-2.28) node {$c$};
+    \draw[color=qqwuqq] (4.4,1.05) node {$\gamma$};
+    \draw[color=qqwuqq] (0.7,-2.45) node {$\alpha$};
+    \draw[color=qqwuqq] (7.5,-2.2) node {$\beta$};
+  \end{scriptsize}
 \end{tikzpicture}\\
 Man bemerkt, dass sich die bekannten Relationen ergeben, wenn einer der Winkel den Wert $\dfrac{\pi}{2}$ annimmt.
 \section{Sinusfunktionen}
 Zur Vollständigen Funktionsdiskussion einer Sinus-Funktion sind einige Besonderheiten zu beachten:
 \begin{enumerate}
-\item Amplitude und Periodizität\\
-Eine Funktion der Form $f(x)=a\cdot\sin(b(x-c))+d$ hat:\begin{itemize}
-\item die Periode $P = \dfrac{2\pi}{|b|}$
-\item die Amplitude $A = |a|$
-\item die Verschiebung entlang der $x$-Achse um $d$ und entlang der $y$-Achse um $c$
-\end{itemize}
-\item Symmetrieeigenschaften\\
-Hier sollte zumindest bekannt sein, dass $f(x)=\sin(x)$ punktsymmetrisch zum Origo ist, und dass $f(x)=\cos(x)$ Achsensymmetrisch zur $y$-Achse ist.
-\item Die Null-, Extrem- und Wendestellen sind in Form einer Menge anzugeben. (Es sei denn, die Aufgabenvorschrift fordert explizit auf eine Begrenzung auf ein angegebenes Intervall auf)\\
-Bsp: Die Nullstellen der Funktion $f(x)=\sin(x)$ lassen sich dartstellen als: $x \in \{k\pi|k \in \Z\}$
-\\ In umgebung einfärben
-\item Bei der Teilung durch eine Sinusfunktion können Definitionslücken an dessen Nullstellen entstehen. Auch diese können in der bereits gezeigten Form angegeben werden.
-\end{enumerate}section{Polarkoordinaten}
+  \item Amplitude und Periodizität\\
+  Eine Funktion der Form $f(x)=a\cdot\sin(b(x-c))+d$ hat:
+  \begin{itemize}
+    \item die Periode $P = \dfrac{2\pi}{|b|}$
+    \item die Amplitude $A = |a|$
+    \item die Verschiebung entlang der $x$-Achse um $d$ und entlang der $y$-Achse um $c$
+    \end{itemize}
+  \item Symmetrieeigenschaften\\
+  Hier sollte zumindest bekannt sein, dass $f(x)=\sin(x)$ punktsymmetrisch zum Origo ist, und dass $f(x)=\cos(x)$ Achsensymmetrisch zur $y$-Achse ist.
+  \item Die Null-, Extrem- und Wendestellen sind in Form einer Menge anzugeben. (Es sei denn, die Aufgabenvorschrift fordert explizit auf eine Begrenzung auf ein angegebenes Intervall auf)\\
+  Bsp: Die Nullstellen der Funktion $f(x)=\sin(x)$ lassen sich dartstellen als: $x \in \{k\pi|k \in \Z\}$
+  \\ In umgebung einfärben
+  \item Bei der Teilung durch eine Sinusfunktion können Definitionslücken an dessen Nullstellen entstehen. Auch diese können in der bereits gezeigten Form angegeben werden.
+  \end{enumerate}
+\section{Polarkoordinaten}
 In der Kursstufe beschränken wir uns auf die Benutzung von Polarkoordinaten für Punkte in der Ebene (2D).
-\begin{Bws}
-Polarkoordinaten sind eine Form der eindeutigen Punktangaben, doch anstatt wie kartesische Koordinaten 2 Entfernungen $x$ und $y$ zu verwenden, haben sie die Form $(r|\varphi)$. $r$ ist hierbei die Entfernung zum Origo und $\varphi$ ein orientierter Winkel (in $rad$).
-\end{Bws}
+\begin{Definition}
+  Polarkoordinaten sind eine Form der eindeutigen Punktangaben, doch anstatt wie kartesische Koordinaten 2 Entfernungen $x$ und $y$ zu verwenden, haben sie die Form $(r|\varphi)$. $r$ ist hierbei die Entfernung zum Origo und $\varphi$ ein orientierter Winkel (in $rad$).
+\end{Definition}
 \definecolor{zzzzzz}{rgb}{0.6,0.6,0.6}
 \definecolor{ffqqqq}{rgb}{1,0,0}
 \definecolor{qqzzqq}{rgb}{0,0.6,0}
 \begin{tikzpicture}[line cap=round,line join=round,x=1.0cm,y=1.0cm]
-\draw[->,color=black] (-0.2,0) -- (2.64,0);
-\foreach \x in {,1,2}
-\draw[shift={(\x,0)},color=black] (0pt,-2pt);
-\draw[color=black] (2.47,0.04) node [anchor=south west] { x};
-\draw[->,color=black] (0,-0.29) -- (0,2.63);
-\draw[color=black] (0.05,2.43) node [anchor=west] { y};
-\clip(-0.2,-0.29) rectangle (2.64,2.63);
-\draw [shift={(0,0)},color=ffqqqq,fill=ffqqqq,fill opacity=0.1] (0,0) -- (0:0.41) arc (0:46.48:0.41) -- cycle;
-\draw [color=qqzzqq] (0,0)-- (2.05,2.16);
-\draw [color=zzzzzz] (0,2.16)-- (2.05,2.16);
-\draw [color=zzzzzz] (2.05,2.16)-- (2.05,0);
-\begin{scriptsize}
-\fill [color=black] (2.05,2.16) circle (1.5pt);
-\draw[color=black] (2.12,2.29) node {$P$};
-\draw[color=qqzzqq] (1.16,1.04) node {r};
-\draw[color=ffqqqq] (0.31,0.17) node {$\phi$};
-\draw[color=zzzzzz] (0.96,2.02) node {y};
-\draw[color=zzzzzz] (1.9,1.03) node {x};
-\end{scriptsize}
-\end{tikzpicture}\\Pfeil?
+  \draw[->,color=black] (-0.2,0) -- (2.64,0);
+  \foreach \x in {,1,2}
+  \draw[shift={(\x,0)},color=black] (0pt,-2pt);
+  \draw[color=black] (2.47,0.04) node [anchor=south west] { x};
+  \draw[->,color=black] (0,-0.29) -- (0,2.63);
+  \draw[color=black] (0.05,2.43) node [anchor=west] { y};
+  \clip(-0.2,-0.29) rectangle (2.64,2.63);
+  \draw [shift={(0,0)},color=ffqqqq,fill=ffqqqq,fill opacity=0.1] (0,0) -- (0:0.41) arc (0:46.48:0.4) -- cycle;
+  \draw [color=qqzzqq] (0,0)-- (2.05,2.16);
+  \draw [color=zzzzzz] (0,2.16)-- (2.05,2.16);
+  \draw [color=zzzzzz] (2.05,2.16)-- (2.05,0);
+  \begin{scriptsize}
+    \fill [color=black] (2.05,2.16) circle (1.5pt);
+    \draw[color=black] (2.12,2.29) node {$P$};
+    \draw[color=qqzzqq] (1.16,1.04) node {r};
+    \draw[color=ffqqqq] (0.5,0.17) node {$\varphi$};
+    \draw[color=zzzzzz] (0.96,2.02) node {y};
+    \draw[color=zzzzzz] (1.9,1.03) node {x};
+  \end{scriptsize}
+\end{tikzpicture}
 \subsection{Umrechnung}
 \subsubsection{Kartesisch $\rightarrow$ Polar}
 \begin{itemize}
-\item  $r=\sqrt{x^2+y^2}$
-\item $\varphi = \tan(\dfrac{y}{x})$
+  \item  $r=\sqrt{x^2+y^2}$
+  \item $\varphi = \tan(\dfrac{y}{x})$
 \end{itemize}
 \subsubsection{Polar $\rightarrow$ Kartesisch}
 \begin{itemize}
-\item $x = r\cdot\cos(\varphi)$
-\item  $y=r\cdot\sin(\varphi)$
+  \item $x = r\cdot\cos(\varphi)$
+  \item  $y=r\cdot\sin(\varphi)$
 \end{itemize}
