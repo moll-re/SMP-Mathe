@@ -1,32 +1,31 @@
 \documentclass[11pt]{report}
 
-\usepackage{amsmath}		%Matheschreibweise
-\usepackage{amssymb}
+\usepackage{amsmath}		                        %Matheschreibweise
+\usepackage{amssymb}                            %&Symbole
 \usepackage{amsfonts}
 \usepackage[T1]{fontenc}
-\usepackage[margin=2cm]{geometry}	%Seitenrand
-\usepackage{fancyhdr}	%Titelblatt
-\usepackage{graphicx}	%Bilder einfügen
-\usepackage{tcolorbox}	%dicke Box
-\usepackage{tikz}
-\usepackage{mdframed}	%Box			%\begin{mdframed} 		und			%\end{mdframed}
+\usepackage[margin=2cm]{geometry}	              %Seitenrand
+\usepackage{fancyhdr}	                          %Titelblatt
+\usepackage{graphicx}	                          %Bilder einfügen
+\usepackage{tcolorbox}	                        %dicke Box
+\usepackage{tikz}                               %Grafiken zeichnen
+\usepackage{mdframed}	                          %Box			%\begin{mdframed} 		und			%\end{mdframed}
 \usepackage{epstopdf}
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
+\usepackage{tabu}                               %Bessere Tabellen
+
 \pagestyle{fancy}
 \fancyhead{}
 \fancyfoot{}
 \fancyhead[L]{\nouppercase{\leftmark}}
 \fancyhead[R]{Skript SMP}
 \fancyfoot[C]{\thepage}
-
 \parindent 0ex
+\nonstopmode                                    %Fehler bei Kompilierung werden ignoriert (weniger umständlich)
 
 
-\nonstopmode
-
-
-%Zahlenmengen:
+%Zahlenmengen-darstellung:
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\N}{\mathbb{N}}
