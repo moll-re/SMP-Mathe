@@ -1,21 +1,3 @@
-\newenvironment{Bemerkung}{\par\vspace{10pt}\small % Vertical white space above the remark and smaller font size
-\begin{list}{}{
-\leftmargin=35pt % Indentation on the left
-\rightmargin=25pt}\item\ignorespaces % Indentation on the right
-\makebox[-2.5pt]{\begin{tikzpicture}[overlay]
-\node[draw=ocre!60,line width=1pt,circle,fill=ocre!25,font=\sffamily\bfseries,inner sep=2pt,outer sep=0pt] at (-15pt,0pt){\textcolor{ocre}{ \textbackslash \textbackslash}};\end{tikzpicture}} % Orange R in a circle
-\advance\baselineskip -1pt}{\end{list}\vskip5pt} % Tighter line spacing and white space after remark
-\newenvironment{Bws}
-{\par\noindent\normalfont\par\nopagebreak%
-  \begin{mdframed}[
-     linewidth=3pt,
-     linecolor=pink,
-     bottomline=false,topline=false,rightline=false,
-     innerrightmargin=0pt,innertopmargin=0pt,innerbottommargin=0pt,
-     innerleftmargin=1em,% Distanz zwischen vertikaler Strich & Inhalt
-     skipabove=.5\baselineskip
-   ]}
-  {\end{mdframed}}
 %Kapitel-Titelblatt
 \makeatletter
 \def\thickhrulefill{\leavevmode \leaders \hrule height 1.2ex \hfill \kern \z@}
@@ -36,8 +18,46 @@
         \hrule
         \vskip 50\p@
   }}
+
+
+%Bemerkung:
+\newenvironment{Bemerkung}{\par\vspace{10pt}\small % Vertical white space above the remark and smaller font size
+\begin{list}{}{
+\leftmargin=35pt % Indentation on the left
+\rightmargin=25pt}\item\ignorespaces % Indentation on the right
+\makebox[-2.5pt]{\begin{tikzpicture}[overlay]
+\node[draw=ocre!60,line width=1pt,circle,fill=ocre!25,font=\sffamily\bfseries,inner sep=2pt,outer sep=0pt] at (-15pt,0pt){\textcolor{ocre}{ \textbackslash \textbackslash}};\end{tikzpicture}} % Orange R in a circle
+\advance\baselineskip -1pt}{\end{list}\vskip5pt} % Tighter line spacing and white space after remark
+
+
+%Beweis:
+\newenvironment{Beweis}
+  {\begin{tcolorbox}[colback=grey!5!white,colframe=grey!75!black,opacityframe=0.5, opacitybacktitle=0.5,sharpish corners,boxrule=0pt,frame hidden,title=Beweis]}
+  {\end{tcolorbox}}
+
+
+%Definition:
+\newenvironment{Definition}
+  {\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black,sharpish corners,boxrule=0pt,frame hidden,title=Definition \thesubsection]}
+  {\end{tcolorbox}}}
+
+
+%Theorem:
+\newenvironment{Theorem}
+  {\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,sharpish corners,boxrule=0pt,frame hidden,title=Theorem]}
+  {\end{tcolorbox}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Es fehlen:
-%Definitionen (rot?)
-%Kommentare,Bemerkungen (bleich?)
+%Beispiele
 %Fancy titles?
+%\newenvironment{Beweis}
+%{\par\noindent\normalfont\par\nopagebreak%
+%  \begin{mdframed}[
+%     linewidth=3pt,
+%     linecolor=pink,
+%     bottomline=false,topline=false,rightline=false,
+%     innerrightmargin=0pt,innertopmargin=0pt,innerbottommargin=0pt,
+%     innerleftmargin=1em,% Distanz zwischen vertikaler Strich & Inhalt
+%     skipabove=.5\baselineskip
+%   ]}
+%{\end{mdframed}}

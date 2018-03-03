@@ -10,7 +10,7 @@ Eine Funktion ist stetig an der Stelle $x_{0}$, wenn:
 \item $\lim\limits_{x \rightarrow x_{0}} {f(x)}$ existiert 
 \item $\lim\limits_{x \rightarrow x_{0}^{\pm}} {f(x)}=f(x_{0})$\\
 \end{enumerate}
-Stetigkeit ist eine lokale Eigenschaft. Die Funktion $f$ heißt dann stetig, wenn sie an jeder Stelle ihrer Definitionsmenge stetig ist.
+Stetigkeit ist eine lokale Eigenschaft. Die Funktion $f$ heiï¿½t dann stetig, wenn sie an jeder Stelle ihrer Definitionsmenge stetig ist.
 
 \begin{Bemerkung}
 Ist $f$ stetig und $I\subset \R$ ein reelles Intevall, dann ist $f(I)$ ebenfalls ein Intervall. Ist $f$ zudem streng monoton, so ist die Umkehrfunktion $f^{-1}$ ebenfalls stetig.
@@ -18,7 +18,7 @@ Ist $f$ stetig und $I\subset \R$ ein reelles Intevall, dann ist $f(I)$ ebenfalls
 
 \subsubsection{Stetige Fortsetzungen}
 
-beim Vereinfachen von gebrochenrationalen Funktionen ist Vorsicht geboten, denn eine hebbare Definitionslücke ''aufzuheben" ver"andert den Definitionsbereich der Funktion. Die daraus resultierende Funktion wird \textbf{stetige Fortsetzung} genannt.
+beim Vereinfachen von gebrochenrationalen Funktionen ist Vorsicht geboten, denn eine hebbare Definitionslï¿½cke ''aufzuheben" ver"andert den Definitionsbereich der Funktion. Die daraus resultierende Funktion wird \textbf{stetige Fortsetzung} genannt.
 
 \section{Differenzierbarkeit}
 
@@ -27,13 +27,14 @@ Eine Funktion ist differenzierbar an der Stelle $x_{0} \in D$, wenn der beitseit
 $\lim\limits_{h \rightarrow 0^{+}} {\dfrac{f(x_{0}+h)-f(x_{0})}{h}} = \lim\limits_{h \rightarrow 0^{-}} {\dfrac{f(x_{0}+h)-f(x_{0})}{h}} =f'(x_{0})$\\
 \\
 Dieser Grenzwert ist die \textbf{Ableitung} von $f$ an der Stelle $x_{0}$.\\
-Die Funktion heißt differenzierbar, wenn sie $\forall x \in D$ differenzierbar ist.\\
+Die Funktion heiï¿½t differenzierbar, wenn sie $\forall x \in D$ differenzierbar ist.\\
 \\
-Die Funktion $f(x)=|x|$ ist nicht differenzierbar, da bei der Stelle $x_{0}=0$ der linksseitige Grenzwert des differenzenquotienten ($\lim\limits_{h \rightarrow 0^{-}}{f'(x_{0})=-1$}) nicht mit dem rechtsseitigen Grenzwert (1) übereinstimmt.\\
+Die Funktion $f(x)=|x|$ ist nicht differenzierbar, da bei der Stelle $x_{0}=0$ der linksseitige Grenzwert des differenzenquotienten ($\lim\limits_{h \rightarrow 0^{-}}{f'(x_{0})=-1$}) nicht mit dem rechtsseitigen Grenzwert (1) ï¿½bereinstimmt.\\
 
 \subsection{Zusammenhang zwischen Stetigkeit und Differenzierbarkeit}
 
-Ist eine Funktion $f$ an der Stelle $x_{0}$ differenzierbar, so ist sie an dieser Stelle auch stetig.Die Umkehrung gilt erst einmal nicht, aber es gibt eine verneinende Aussage: Ist $f$ an der Stelle $x_{0}$ nicht stetig, so ist sie hier auch nicht differenzierbar.\\
+Ist eine Funktion $f$ an der Stelle $x_{0}$ differenzierbar, so ist sie an dieser Stelle auch stetig.
+Die Umkehrung gilt erst einmal nicht, aber es gibt eine verneinende Aussage: Ist $f$ an der Stelle $x_{0}$ nicht stetig, so ist sie hier auch nicht differenzierbar.\\
 
 \section{Ableitungsregeln}
 
@@ -46,7 +47,7 @@ Sind die Funktionen $u$ und $v$ an der Stelle $x_{0}$ $\in$ $D$ differenzierbar,
 \\
 $f'(x0) = u'(x_{0})v(x_{0})+u(x_{0})v'(x_{0})$\\
 
-\begin{Bws}
+\begin{Beweis}
 $
 \begin{array}{rcl}
 \lim\limits_{h \rightarrow 0} {\dfrac{f(x_{0}+h)-f(x_{0})}{h}} & = & \lim\limits_{h \rightarrow 0} {\dfrac{u(x_{0})v({x_{0}+h)-u(x_{0})v(x_{0})}}{h}}\\
@@ -57,7 +58,7 @@ $
 &=& u'(x_{0})v(x_{0}) - u(x_{0})v'(x_{0}) 
 \end{array}
 $
-\end{Bws}
+\end{Beweis}
 
 \subsection{Quotientenregel}
 
@@ -65,7 +66,7 @@ Sind die Funktionen $u$ und $v$ an der Stelle $x_{0}$ $\in$ $D$ differenzierbar,
 \\
 $f'(x_{0})=\frac{u'(x_{0})\cdot v(x_{0})-u(x_{0})\cdot v'(x_{0})}{v^2(x_{0})}$\\
 
-\begin{Bws}
+\begin{Beweis}
 $
 \begin{array}{rcl}
 \lim\limits_{h \rightarrow 0} {\dfrac{f(x_{0}+h)-f(x_{0})}{h}}&=& \lim\limits_{h \rightarrow 0} { \dfrac{ \dfrac{u(x_{0}+h)} {v(x_{0}+h)}- \dfrac{u(x_{0})}  {v(x_{0})}}  {h}}\\
@@ -79,7 +80,7 @@ $
 &=& { \dfrac{u'(x_{0})v(x_{0})-u(x_{0})v'(x_{0})} {(v(x_{0}))^2}    }\\
 \end{array}
 $
-\end{Bws}
+\end{Beweis}
 
 \subsection{Kettenregel}
 
@@ -153,7 +154,26 @@ $\left. \begin{array}{rcl}
 
 \subsection{Grenzwerte}
 
+
+
 \subsection{Asymptoten}
+
+Eine Asymptote ist eine Gerade oder Kurve, die sich dem Graphen einer Funktion immer weiter ann"ahert. Dabei unterscheidet man verschiedene Fälle:\\
+\begin{enumerate}
+\item \textbf{Senkrechte Asymptote}: Hat $f$ an der stelle $x_{0}$ eine Polstelle, und gilt:\\
+$\lim\limits_{x \rightarrow x_{0^{+}}} f(x) = \pm \infty$\\
+dann ist die Gerade $x=x_{0}$ eine senkrechte Asymptote von $f$.\\
+\item \textbf{Waagerechte Asymptote}: Konvergiert $f$ f"ur $x\rightarrow \infty$ gegen eine reelle Zahl $g\in \R$, das heißt $\lim\limits_{x \rightarrow x_{0^{+}}}{f(x)}=g$.\\
+Die Gerde $y=g$ ist die \textbf{waagerechte} Asymptote von $f$. Das Gleiche gilt f"ur $\lim\limits_{x \rightarrow -\infty}$.\\
+Bei gebrochenrationalen Funktionen ist dies der Fall, wenn der Z"ahlergrad kleiner (dann ist $g=0$) oder gleich dem Nennergrad $m$ ist.\\
+\item \textbf{Schr"age Asymptote}: Sie ist eine Gerade ($g:\R \rightarrow \R$), der sich $f$ mit $|x|\rightarrow \infty$ beliebig ann"ahert:\\
+$\lim\limits_{x \rightarrow \infty}}{[f(x)-g(x)]}=0$ oder $\lim\limits_{x \rightarrow -\infty}}{[f(x)-g(x)]}=0$\\
+Bei einer gebrochenrationalen Funktion ist der ''Fehlergrad''???(wie nennt man das??), das heißt der Abstand von $g$ zu $f$ durch den Rest der Polynomdivision von Z"ahler mit Nenner gegeben.\\
+\item \textbf{Asymptotische Kurven} Indem man in der Definition der schr"agen Asymptote auch Polynome zul"asst, erh"alt man N"aherungskuven, die die gleiche Limesbedingung erf"ullen muss:\\
+$\lim\limits_{x \rightarrow \infty}}{[f(x)-P(x)]}=0$ oder $\lim\limits_{x \rightarrow -\infty}}{[f(x)-P(x)]}=0$\\
+Diese begegnen einen bei gebrochenrationalen Funktion mit $n>m+1.\\
+\end{enumerate}
+
 
 \subsection{Monotonie}
 
