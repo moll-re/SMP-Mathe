@@ -1,30 +1,31 @@
 \documentclass[11pt]{report}
 
-\usepackage{amsmath}		%Matheschreibweise
-\usepackage{amssymb}
+\usepackage{amsmath}		                        %Matheschreibweise
+\usepackage{amssymb}                            %&Symbole
 \usepackage{amsfonts}
 \usepackage[T1]{fontenc}
-\usepackage[margin=2cm]{geometry}	%Seitenrand
-\usepackage{fancyhdr}	%Titelblatt
-\usepackage{graphicx}	%Bilder einfügen
-\usepackage{tcolorbox}	%dicke Box
-\usepackage{tikz}
-\usepackage{mdframed}	%Box			%\begin{mdframed} 		und			%\end{mdframed}
+\usepackage[margin=2cm]{geometry}	              %Seitenrand
+\usepackage{fancyhdr}	                          %Titelblatt
+\usepackage{graphicx}	                          %Bilder einfügen
+\usepackage{tcolorbox}	                        %dicke Box
+\usepackage{tikz}                               %Grafiken zeichnen
+\usepackage{mdframed}	                          %Box			%\begin{mdframed} 		und			%\end{mdframed}
 \usepackage{epstopdf}
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
-\usepackage{tabu}
-\nonstopmode
+\usepackage{tabu}                               %Bessere Tabellen
+
 \pagestyle{fancy}
 \fancyhead{}
 \fancyfoot{}
 \fancyhead[L]{\nouppercase{\leftmark}}
 \fancyhead[R]{Skript SMP}
 \fancyfoot[C]{\thepage}
-
 \parindent 0ex
+\nonstopmode                                    %Fehler bei Kompilierung werden ignoriert (weniger umständlich)
 
-%Zahlenmengen:
+
+%Zahlenmengen-darstellung:
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\N}{\mathbb{N}}
@@ -35,23 +36,21 @@
 
 
 \begin{document}
-  \include{title}
-  \tableofcontents
+\include{title}
+\tableofcontents
 
-  \include{kap1/kap1}
-  \include{kap2/kap2}
-  \include{kap3/kap3}
-  \include{kap4/kap4}
-  \include{kap5/kap5}
-  \include{kap6/kap6}
-  \include{kap7/kap7}
-  \include{kap8/kap8}
-  \include{kap9/kap9}
-  \include{kap10/kap10}
-  \include{kap11/kap11}
-  \include{kap12/kap12}
-  \include{kap13/kap13}
+\include{kap1/kap1}
+\include{kap2/kap2}
+\include{kap3/kap3}
+\include{kap4/kap4}
+\include{kap5/kap5}
+\include{kap6/kap6}
+\include{kap7/kap7}
+\include{kap8/kap8}
+\include{kap9/kap9}
+\include{kap10/kap10}
+\include{kap11/kap11}
 
-  % und so weiter
+%und so weiter
 
 \end{document}
