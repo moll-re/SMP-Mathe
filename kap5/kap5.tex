@@ -59,18 +59,26 @@
             \paragraph{} Anhand dieser Graphik lässt sich die Berechnung der Norm eines Vektors $\vec{v}\in\R^3$ verdeutlichen. Für diesen glit: $\text{|}\vec{v}\text{|}=\sqrt{v_1^{2}+v_2^{2}+v_3^{2}}$.
             \paragraph{} Ein Vektor, dessen Norm 1 beträgt wird als normiert oder Einheitsvektor bezeichnet. Für jeden Vektor $\vec{v}\in\R^{3}$ existiert ein Einheitsvektor $\vec{v^{*}}$ , der folgendermaßen definiert wird: $\vec{v^{*}}=\frac{1}{\text{|}\vec{v}\text{|}}*\vec{v}$.
 
-\section{Lineare Abhängigkeit}
+\section{Linearkombination}
 
-    \subsection{Kollinearität und Komplanarität}
-
+    \paragraph{} Vektoren lassen sich allgemein mit der additiven Verknüpfung des Vektorraumes verknüpfen. Diese Verknüpfung zwischen zwei beliebigen Vektoren $\vec{v}$ und $\vec{u}$ erfolgt, wie auch schon im Teil Verbindungsvektor gezeigt wird, wie folgt: $\vec{v}+\vec{u}=\left(\begin{array}{c}{v_1+u_1 \\ v_2+u_2 \\ ... \\ v_n+u_n}\end{array}\right)$.
+    \\
+    \begin{Definition}
+       Eine Familie von Vektoren $\vec{a_1},\vec{a_2},...,\vec{a_n}\in V$ wird als linear abhängig bezeichnet, wenn die Gleichung: \\$r_1\cdot\vec{a_1}+r_2\cdot\vec{a_2}+...+r_n\cdot\vec{a_n}=\vec{0};r_i\in\R$ nicht nur die triviale Lösung $r_1=r_2=...=r_n=0$ besitzt. Existiert nur diese Lösung, ist die Familie linear unabhägig.
+    \end{Definition}
+    \paragraph{} Anders gesagt, ist eine Familie von Vektoren linear abhängig, wenn sich einzelne Vektoren dieser Familie als Linearkombination von einer beliebigen Anzahl anderer Vektoren der Familie darstellen lassen.
+    \begin{Bemerkung}
+      Eine linear abhängige Familie \textbf{aus genau zwei} Vektoren wird als kollinear bezeichnet.
+      \\
+      Eine linear abhängige Familie \textbf{aus genau drei} Vektoren, als komplanar.
+    \end{Bemerkung}
 \section{Basen und Erzeugendensystem}
-
+    \paragraph{} Eine endliche Anzahl von Vektoren $\vec{a_1},\vec{a_2},...,\vec{a_n}\in V$ heißt Erzeugendensystem, wenn sich \texbf{jeder} Vektor $\vec{v}\in V$ als Linearkombination dieser Vektoren schreiben lässt. Um ein Erzeugendensystem zu bilden benötigt man mindestens die Anzahl Vektoren, die der Anzahl von Dimensionen von $\vec{v}$ entspricht. Wenn man \textbf{genau} diese Anzahl besitzt, spricht man von einer Basis.
     \subsection{Besondere Basen}
-
         \subsubsection{Orthogonalbasis}
-
+        \paragraph{} Sind die Vektoren der Basis paarweise orthogonal zueinander, so spricht man von einer \textbf{Orthogonalbasis}.
         \subsubsection{Orthonormalbasis}
-
+        \paragraph{} Sind die Vektoren zusätzlich zu dieser Bedingung normiert, wird sie als \textbf{Orthonormalbasis} bezeichnet. Die einfachste und meist benutzte Basis des $\R^3$ besteht aus den drei Vektoren $\vec{e_1}=\left(\begin{array}{c}{1\\0\\0}\end{array}\right),\vec{e_2}=\left(\begin{array}{c}{0\\1\\0}\end{array}\right),\vec{e_3}=\left(\begin{array}{c}{0\\0\\1}\end{array}\right)$. Sie wird als \textbf{Standardbasis} des $\R^3$ bezeichnet.
     \subsection{Basistransformation}
 
 \section{Winkel zwischen Vektoren}\subsection{Orientierte Winkel}
