@@ -11,23 +11,19 @@ $(a_{n})_{n\in\N}$ bezeichnet die Folge, wobei $a:\N\rightarrow\R$\\
 	\subsection{Explizite Darstellung}
 
 Wenn ein beliebiges Glied der Folge direkt berechenbar ist, ist ihre Darstellung explizit.
-\begin{Bemerkung}
-Beispiele
+\begin{Beispiel}
 \begin{enumerate}
 \item  $a_{n}=3^n \Rightarrow a_{4}=3^4=91$
 \item Die Folge der $n-ten$ positiven, ungeraden Zahl:\\
 $a_{n}=1+2\cdot(n-1) \Rightarrow$ Die 8. positive, ungerade Zahl ist $ a_{8}=1+2\cdot(8-1)=15$
-
-\end{Bemerkung}
+\end{Beispiel}
 
 
 	\subsection{Rekursive Darstellung}
 
-Wenn für die Berechnung des $n-ten$ Gliedes einer Folge das $(n-1)-te$ Glied benötigt wird, ist ihre Darstellung rekursiv.\\
-In diesen Fällen braucht man immer ein Startglied, oft $a_{0}$ oder $ a_{1}$.
-\begin{Bemerkung}
-Beispiele
-
+Wenn für die Berechnung des $n-ten$ Gliedes einer Folge das $(n-1)-te$ Glied benötigt wird, ist ihre Darstellung rekursiv.
+In diesen Fällen braucht man immer ein Startglied, oft $a_{0}$ oder $ a_{1}$.\\
+\begin{Beispiel}
 \begin{enumerate}
 \item  $a_{n}=3\cdot a_{n-1}+2;a_{0}=5\\
 \indent$a_{1}=3\cdot a_{1-1}+2=3\cdot a_{0}+2=3\cdot5+2=17$\\
@@ -35,9 +31,9 @@ Beispiele
 \indent$a_{3}=3\cdot a_{3-1}+2=3\cdot a_{2}+2=3\cdot53+2=159$\\
 \indent und so weiter...
 \item Die Folge der $n-ten$ positiven, ungeraden Zahl:\\
-$a_{n}=a_{n-1}+2;a_{1}=1
+$a_{n}=a_{n-1}+2;a_{1}=1$
 
-\end{Bemerkung}
+\end{Beispiel}
 
 \begin{Bemerkung}
 Bemerkung\\
@@ -61,7 +57,7 @@ Dieses Verfahren kann aber ausschließlich bei rekusiven Folgen angewendet werde
 
 	\subsection{Arithmetische Folgen}
 
-Eine Folge wird arithmetisch genannt, wenn die Differenz zweier aufeinander folgender Glieder konstant ist.
+Eine Folge wird arithmetisch genannt, wenn die Differenz zweier aufeinander folgender Glieder konstant ist.\\
 
 \begin{enumerate}
 \item Rekursive Darstellung:\\
@@ -69,7 +65,7 @@ Eine Folge wird arithmetisch genannt, wenn die Differenz zweier aufeinander folg
 \item Explizite Darstellung:\\
 \indent Mit Startglied $a_{0}$: $a_{n}=a_{0}+n\cdot d$\\
 \indent Mit Startglied $a_{1}$: $a_{n}=a_{1}+(n-1)\cdot d$\\
-\indent Mit Startglied $a_{x}$: $a_{n}=a_{x}+(n-x)\cdot d$
+\indent Mit Startglied $a_{x}$: $a_{n}=a_{x}+(n-x)\cdot d$\\
 \end{enumerate}
 
 \begin{Bemerkung}
@@ -77,14 +73,13 @@ Bemerkung\\
 Letzteres gilt auch für beliebige Folgeglieder, also ist $a_{n}=a_{p}+(n-p)\cdot d;n,p\in\N$
 \end{Bemerkung}
 
-\begin{Bemerkung}
-Beispiel\\
-$a_{n}=a_{n-1}+3;a_{0}=0\Leftrightarrow a_{n}=0+n\cdot3
-\end{Bemerkung}
+\begin{Beispiel}
+$a_{n}=a_{n-1}+3;a_{0}=0\Leftrightarrow a_{n}=0+n\cdot3$
+\end{Beispiel}
 
 	\subsection{Geometrische Folgen}
 
-Eine Folge wird geometrisch genannt, wenn der Quotient zweier aufeinander folgender Glieder konstant ist.
+Eine Folge wird geometrisch genannt, wenn der Quotient zweier aufeinander folgender Glieder konstant ist.\\
 
 \begin{enumerate}
 \item Rekursive Darstellung:\\
@@ -92,7 +87,7 @@ Eine Folge wird geometrisch genannt, wenn der Quotient zweier aufeinander folgen
 \item Explizite Darstellung:\\
 \indent Mit Startglied $a_{0}$: $a_{n}=a_{0}\cdot q^n$\\
 \indent Mit Startglied $a_{1}$: $a_{n}=a_{1}\cdot q^{n-1}$\\
-\indent Mit Startglied $a_{x}$: $a_{n}=a_{x}\cdot q^{n-x}$
+\indent Mit Startglied $a_{x}$: $a_{n}=a_{x}\cdot q^{n-x}$\\
 \end{enumerate}
 
 \begin{Bemerkung}
@@ -100,10 +95,9 @@ Bemerkung\\
 Letzteres gilt auch für beliebige Folgeglieder, also ist $a_{n}=a_{p}\cdot q^{n-p};n,p\in\N$
 \end{Bemerkung}
 
-\begin{Bemerkung}
-Beispiel\\
-$a_{n}=a_{n-1}\cdot3;a_{0}=2\Leftrightarrow a_{n}=2\cdot3^n
-\end{Bemerkung}
+\begin{Beispiel}
+$a_{n}=a_{n-1}\cdot3;a_{0}=2\Leftrightarrow a_{n}=2\cdot3^n$
+\end{Beispiel}
 
 		\section{Klassifizierung von Folgen}
 
