@@ -124,7 +124,20 @@
         \end{Beispiel}
 
 
-\section{Winkel zwischen Vektoren}\subsection{Orientierte Winkel}
+\section{Winkel zwischen Vektoren}
+    \subsection{Orientierte Winkel}
+
+        \begin{minipage}{0.5\textwidth}\paragraph{} Wenn man in der Mathematik mit Winkeln arbeitet, werden sie immer im positiv mathematischen Sinn angegeben. Dies bedeutet, dass man von einem Vektor oder Schenkel, der an den Winkel grenzt, ausgeht und über Rotation um den Schnittpunkt \glqq gegen den Uhrzeigersinn \grqq zum anderen gelangt, bis beide übereinanderliegen (wenn man davon ausgeht, dass sich beide schneiden). So ergibt sich $\alpha = \angle ABC = \angle ac = (\vv{BA},\vv{BC}) = \frac{\pi}{3}$
+        \end{minipage}
+        \begin{minipage}{0.5\textwidth}\paragraph{} \begin{tikzpicture}
+                                            \draw (0,0) node[left] {$B$} (6,-2) node[right] {$A$} (6,4) node[above right] {$C$};
+                                            \draw[->] (0,0) -- (6,-2) node[pos=0.5,sloped,below] {$a$};
+                                            \draw[->] (0,0) -- (6,4) node[pos=0.5,sloped,above] {$c$};
+                                            %\tkzMarkAngle[size=1.0](A,B,C);
+                                            %\tkzLabelAngle[pos=0.5](A,B,C){$\alpha$};
+                                       \end{tikzpicture}
+        \end{minipage}
+
 
 \section{Geraden}
 \section{Ebenen}
