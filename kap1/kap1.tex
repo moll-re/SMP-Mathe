@@ -1,8 +1,10 @@
 \chapter{Folgen}
 
+\begin{Definition}
 Eine Funktion , bei der nur natürlichen Zahlen eine reelle Zahl zugeordnet wird, nennt man Folge.\\
 Folgen können auch nur für Teilbereiche von $\N$ definiert sein.\\
-$(a_{n})_{n\in\N}$ bezeichnet die Folge, wobei $a:\N\rightarrow\R$\\
+$(a_{n})_{n\in\N}$ bezeichnet die Folge, wobei $a:\N\rightarrow\R$
+\end{Definition}
 
 
 		\section{Verschiedene Darstellungen}
@@ -10,7 +12,10 @@ $(a_{n})_{n\in\N}$ bezeichnet die Folge, wobei $a:\N\rightarrow\R$\\
 
 	\subsection{Explizite Darstellung}
 
+\begin{Definition}
 Wenn ein beliebiges Glied der Folge direkt berechenbar ist, ist ihre Darstellung explizit.
+\end{Definition}
+
 \begin{Beispiel}
 \begin{enumerate}
 \item  $a_{n}=3^n \Rightarrow a_{4}=3^4=91$
@@ -21,8 +26,11 @@ $a_{n}=1+2\cdot(n-1) \Rightarrow$ Die 8. positive, ungerade Zahl ist $ a_{8}=1+2
 
 	\subsection{Rekursive Darstellung}
 
+\begin{Definition}
 Wenn für die Berechnung des $n-ten$ Gliedes einer Folge das $(n-1)-te$ Glied benötigt wird, ist ihre Darstellung rekursiv.
 In diesen Fällen braucht man immer ein Startglied, oft $a_{0}$ oder $ a_{1}$.\\
+\end{Definition}
+
 \begin{Beispiel}
 \begin{enumerate}
 \item  $a_{n}=3\cdot a_{n-1}+2;a_{0}=5\\
@@ -32,7 +40,6 @@ In diesen Fällen braucht man immer ein Startglied, oft $a_{0}$ oder $ a_{1}$.\\
 \indent und so weiter...
 \item Die Folge der $n-ten$ positiven, ungeraden Zahl:\\
 $a_{n}=a_{n-1}+2;a_{1}=1$
-
 \end{Beispiel}
 
 \begin{Bemerkung}
@@ -57,7 +64,9 @@ Dieses Verfahren kann aber ausschließlich bei rekusiven Folgen angewendet werde
 
 	\subsection{Arithmetische Folgen}
 
-Eine Folge wird arithmetisch genannt, wenn die Differenz zweier aufeinander folgender Glieder konstant ist.\\
+\begin{Definition}
+Eine Folge wird arithmetisch genannt, wenn die Differenz zweier aufeinander folgender Glieder konstant ist.
+\end{Definition}
 
 \begin{enumerate}
 \item Rekursive Darstellung:\\
@@ -79,7 +88,9 @@ $a_{n}=a_{n-1}+3;a_{0}=0\Leftrightarrow a_{n}=0+n\cdot3$
 
 	\subsection{Geometrische Folgen}
 
-Eine Folge wird geometrisch genannt, wenn der Quotient zweier aufeinander folgender Glieder konstant ist.\\
+\begin{Definition}
+Eine Folge wird geometrisch genannt, wenn der Quotient zweier aufeinander folgender Glieder konstant ist.
+\end{Definition}
 
 \begin{enumerate}
 \item Rekursive Darstellung:\\
@@ -111,6 +122,8 @@ $a_{n}=a_{n-1}\cdot3;a_{0}=2\Leftrightarrow a_{n}=2\cdot3^n$
 \subsubsection{Definition}
 \subsubsection{Epsilon-n0-Definition}
 \subsubsection{Grenzwertsätze}
+
+\usetikzlibrary{arrows}\pagestyle{empty}\begin{document}\definecolor{sexdts}{rgb}{0.1803921568627451,0.49019607843137253,0.19607843137254902}\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]\draw [color=cqcqcq,, xstep=1cm,ystep=1cm] (-4.360599654045747,-5.0632135306553865) grid (10.553872765712082,5.546050355564091);\draw[->,color=black] (-4.360599654045747,0) -- (10.553872765712082,0);\foreach \x in {-4,-3,-2,-1,1,2,3,4,5,6,7,8,9,10}\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};\draw[->,color=black] (0,-5.0632135306553865) -- (0,5.546050355564091);\foreach \y in {-5,-4,-3,-2,-1,1,2,3,4,5}\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};\clip(-4.360599654045747,-5.0632135306553865) rectangle (10.553872765712082,5.546050355564091);\draw[line width=2pt,color=sexdts,smooth,samples=100,domain=-4.360599654045747:10.553872765712082] plot(\x,{(\x)^(2)});\end{tikzpicture}\end{document}
 
 
 		\section{Vollständige Induktion}
