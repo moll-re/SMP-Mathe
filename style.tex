@@ -21,13 +21,13 @@
 
 
 %Bemerkung:
-\newenvironment{Bemerkung}{\par\vspace{10pt}\small % Vertical white space above the remark and smaller font size
-\begin{list}{}{
-\leftmargin=35pt % Indentation on the left
-\rightmargin=25pt}\item\ignorespaces % Indentation on the right
-\makebox[-2.5pt]{\begin{tikzpicture}[overlay]
-\node[draw=ocre!60,line width=1pt,circle,fill=ocre!25,font=\sffamily\bfseries,inner sep=2pt,outer sep=0pt] at (-15pt,0pt){\textcolor{ocre}{ \textbackslash \textbackslash}};\end{tikzpicture}} % Orange R in a circle
-\advance\baselineskip -1pt}{\end{list}\vskip5pt} % Tighter line spacing and white space after remark
+%\newenvironment{Bemerkung}{\par\vspace{10pt}\small % Vertical white space above the remark and smaller font size
+%\begin{list}{}{
+%\leftmargin=35pt % Indentation on the left
+%\rightmargin=25pt}\item\ignorespaces % Indentation on the right
+%\makebox[-2.5pt]{\begin{tikzpicture}[overlay]
+%\node[draw=ocre!60,line width=1pt,circle,fill=ocre!25,font=\sffamily\bfseries,inner sep=2pt,outer sep=0pt] at (-15pt,0pt){\textcolor{ocre}{ \textbackslash \textbackslash}};\end{tikzpicture}} % Orange R in a circle
+%\advance\baselineskip -1pt}{\end{list}\vskip5pt} % Tighter line spacing and white space after remark
 
 
 %Beweis:
@@ -71,3 +71,15 @@
 %     skipabove=.5\baselineskip
 %   ]}
 %{\end{mdframed}}
+
+\newenvironment{Bemerkung}
+  {\par\noindent\normalfont\par\nopagebreak%
+  \begin{mdframed}[
+     linewidth=2pt,
+     linecolor=yellow,
+     bottomline=false,topline=false,rightline=false,
+     innerrightmargin=0pt,innertopmargin=0pt,innerbottommargin=0pt,
+     innerleftmargin=1em,% Distanz zwischen vertikaler Strich & Inhalt
+     skipabove=.5\baselineskip
+   ]\underline{Bemerkung:}\\}
+{\end{mdframed}}
