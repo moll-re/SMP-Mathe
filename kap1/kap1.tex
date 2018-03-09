@@ -51,10 +51,9 @@ Für manche Folgen sind beide Darstellungen möglich, wobei die explizite Darste
 \subsubsection{Web-Diagramme}
 Hier handelt es sich um eine graphisches Verfahren, das dazu dient, das Verhalten einer Folge, deren Darstellung rekursiv ist, zu untersuchen.\\
 Dazu muss man der rekursiven Folgenvorschrift eine Funktion $f(a_{n-1})=a_{n}$ zuordnen, sodass - grob gesagt - " die Funktion das Gleiche mit x macht, dass die Folge macht, um von $a_{n}$ auf $a_{n+1}$ zu kommen. Zusätzlich zeichnet man in ein kartesisches Koordinatensystem die Hauptdiagonale ein (entspricht dem Graphen von $f(x)=x$).\\
-Dann trägt man das erste Folgeglied auf der Abzissenachse ein und verbindet ihn mit der entsprechenden Funktion anhand eines vertikalen
+Dann trägt man das erste Folgeglied auf die Abzissenachse ein und verbindet ihn mit der entsprechenden Funktion anhand eines vertikalen\\
 
 \begin{Bemerkung}
-Bemerkung\\
 Dieses Verfahren kann aber ausschließlich bei rekusiven Folgen angewendet werden, bei denen keine zusätzliche Abhängigkeit von $n$ vorliegt (Beispiel: $a_{n}=3\cdot a_{n-1}+3+4\cdot n$) oder die Rekursivitätsebene den 1. Grad überschreitet, was bedeutet, dass $a_{n}$ nicht nur in Abhängigkeit von $a_{n-1}$ beschrieben wird, sondern zusätzlich von mindestens $a_{n-2}$ (Beispiel: die Fibonacci-Folge).\\
 \end{Bemerkung}
 
@@ -67,19 +66,17 @@ Dieses Verfahren kann aber ausschließlich bei rekusiven Folgen angewendet werde
 
 \begin{Definition}
 Eine Folge wird arithmetisch genannt, wenn die Differenz zweier aufeinander folgender Glieder konstant ist.
-\end{Definition}
-
 \begin{enumerate}
 \item Rekursive Darstellung:\\
 \indent $a_{n}=a_{n-1}+d$
 \item Explizite Darstellung:\\
 \indent Mit Startglied $a_{0}$: $a_{n}=a_{0}+n\cdot d$\\
 \indent Mit Startglied $a_{1}$: $a_{n}=a_{1}+(n-1)\cdot d$\\
-\indent Mit Startglied $a_{x}$: $a_{n}=a_{x}+(n-x)\cdot d$\\
+\indent Mit Startglied $a_{x}$: $a_{n}=a_{x}+(n-x)\cdot d$
 \end{enumerate}
+\end{Definition}
 
 \begin{Bemerkung}
-Bemerkung\\
 Letzteres gilt auch für beliebige Folgeglieder, also ist $a_{n}=a_{p}+(n-p)\cdot d;n,p\in\N$
 \end{Bemerkung}
 
@@ -91,8 +88,6 @@ $a_{n}=a_{n-1}+3;a_{0}=0\Leftrightarrow a_{n}=0+n\cdot3$
 
 \begin{Definition}
 Eine Folge wird geometrisch genannt, wenn der Quotient zweier aufeinander folgender Glieder konstant ist.
-\end{Definition}
-
 \begin{enumerate}
 \item Rekursive Darstellung:\\
 \indent $a_{n}=a_{n-1}\cdot q$
@@ -101,9 +96,9 @@ Eine Folge wird geometrisch genannt, wenn der Quotient zweier aufeinander folgen
 \indent Mit Startglied $a_{1}$: $a_{n}=a_{1}\cdot q^{n-1}$\\
 \indent Mit Startglied $a_{x}$: $a_{n}=a_{x}\cdot q^{n-x}$\\
 \end{enumerate}
+\end{Definition}
 
 \begin{Bemerkung}
-Bemerkung\\
 Letzteres gilt auch für beliebige Folgeglieder, also ist $a_{n}=a_{p}\cdot q^{n-p};n,p\in\N$
 \end{Bemerkung}
 
