@@ -20,19 +20,9 @@
   }}
 
 
-%Bemerkung:
-%\newenvironment{Bemerkung}{\par\vspace{10pt}\small % Vertical white space above the remark and smaller font size
-%\begin{list}{}{
-%\leftmargin=35pt % Indentation on the left
-%\rightmargin=25pt}\item\ignorespaces % Indentation on the right
-%\makebox[-2.5pt]{\begin{tikzpicture}[overlay]
-%\node[draw=ocre!60,line width=1pt,circle,fill=ocre!25,font=\sffamily\bfseries,inner sep=2pt,outer sep=0pt] at (-15pt,0pt){\textcolor{ocre}{ \textbackslash \textbackslash}};\end{tikzpicture}} % Orange R in a circle
-%\advance\baselineskip -1pt}{\end{list}\vskip5pt} % Tighter line spacing and white space after remark
-
-
 %Beweis:
 \newenvironment{Beweis}
-  {\begin{tcolorbox}[colback=grey!5!white,colframe=grey!75!black,opacityframe=0.5, opacitybacktitle=0.5,sharpish corners,boxrule=0pt,frame hidden,title=Beweis]}
+  {\begin{tcolorbox}[colback=grey!5!white,colframe=grey!75!black,opacityframe=0.5, opacitybacktitle=0.5,sharpish corners,boxrule=0pt,frame hidden,title=Beweis,breakable,break at=23cm,pad at break=1mm,]}
   {\end{tcolorbox}}
 
 
@@ -47,6 +37,7 @@
   {\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,sharpish corners,boxrule=0pt,frame hidden,title=Theorem]}
   {\end{tcolorbox}}
 
+%Beispiel
 \newenvironment{Beispiel}
   {\par\noindent\normalfont\par\nopagebreak%
   \begin{mdframed}[
@@ -58,20 +49,9 @@
      skipabove=.5\baselineskip
    ]\underline{Beispiel:}\\}
 {\end{mdframed}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%ALT:
-%\newenvironment{Beweis}
-%{\par\noindent\normalfont\par\nopagebreak%
-%  \begin{mdframed}[
-%     linewidth=3pt,
-%     linecolor=pink,
-%     bottomline=false,topline=false,rightline=false,
-%     innerrightmargin=0pt,innertopmargin=0pt,innerbottommargin=0pt,
-%     innerleftmargin=1em,% Distanz zwischen vertikaler Strich & Inhalt
-%     skipabove=.5\baselineskip
-%   ]}
-%{\end{mdframed}}
 
+
+%Bemerkung
 \newenvironment{Bemerkung}
   {\par\noindent\normalfont\par\nopagebreak%
   \begin{mdframed}[
@@ -83,3 +63,40 @@
      skipabove=.5\baselineskip
    ]\underline{Bemerkung:}\\}
 {\end{mdframed}}
+
+
+%GTR-Tipp
+\newenvironment{GTR-Tipp}
+  {\par\noindent\normalfont\par\nopagebreak%
+  \begin{mdframed}[
+     linewidth=2pt,
+     linecolor=grey,
+     bottomline=false,topline=false,rightline=false,
+     innerrightmargin=0pt,innertopmargin=0pt,innerbottommargin=0pt,
+     innerleftmargin=1em,% Distanz zwischen vertikaler Strich & Inhalt
+     skipabove=.5\baselineskip
+   ]\underline{GTR-Tipp:}\\}
+{\end{mdframed}}
+
+
+%Codebox, aufrufbar mit \begin{lstlisting}[typ_der_Sprache]
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{
+  backgroundcolor = \color{lightgray},
+  frame=tb,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=false,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
