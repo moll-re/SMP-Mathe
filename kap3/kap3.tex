@@ -18,9 +18,23 @@ Stetigkeit ist eine lokale Eigenschaft. Die Funktion $f$ hei�t dann stetig, we
 Ist $f$ stetig und $I\subset \R$ ein reelles Intevall, dann ist $f(I)$ ebenfalls ein Intervall. Ist $f$ zudem streng monoton, so ist die Umkehrfunktion $f^{-1}$ ebenfalls stetig.
 \end{Bemerkung}
 
+\begin{Bemerkung}
+Stetige Funktionen haben sehr angenehme Eigenschaften, die intuitiv mit der ''Definition'' des Stiftes, welcher beim Zeichnen des Funktionsgraphen nicht angehoben wird, im Zusammenhang stehen.\\
+\\
+So sagt der \textbf{Zwischenwertsatz} aus, dass eine reelle, im Intervall $[a;b]$ stetige Funktion $f$ jeden Wert zwischen $f(a)$ und $f(b)$ ainnimmt.\\
+Haben $a$ und $b$ zudem verschiedene Vorzeichen, so verspricht der Zwischenwertsatz mindestens eine Nullstelle von $f$ in diesem abgeschlossenen Intervall. Dieser Sonderfall ist als \textbf{Nullstellensatz} von Bolzano bekannt.
+\end{Bemerkung}
+
+\begin{Definition}
+Zwischenwertsatz:\\
+Ist $f:[a;b]\Rightarrow$ eine stetige reelle Funktion die auf einem Intervall definiert ist, dann existiert zu \textbf{jedem} $s \in [f(a);f(b)]$ bzw. $[f(b);f(a)]$ (vom Vorzeichen der Funktionswerte abh"angig) \textbf{ein} $c \in [a;b] $ mit $f(c)=s$
+\end{Definition}
+
 \subsubsection{Stetige Fortsetzungen}
 
 beim Vereinfachen von gebrochenrationalen Funktionen ist Vorsicht geboten, denn eine hebbare Definitionsl�cke ''aufzuheben" ver"andert den Definitionsbereich der Funktion. Die daraus resultierende Funktion wird \textbf{stetige Fortsetzung} genannt.
+
+
 
 \section{Differenzierbarkeit}
 
@@ -33,12 +47,14 @@ Dieser Grenzwert ist die \textbf{Ableitung} von $f$ an der Stelle $x_{0}$.\\
 Die Funktion hei�t differenzierbar, wenn sie $\forall x \in D$ differenzierbar ist.\\
 \end{Definition}
 \\
-Die Funktion $f(x)=|x|$ ist nicht differenzierbar, da bei der Stelle $x_{0}=0$ der linksseitige Grenzwert des differenzenquotienten ($\lim\limits_{h \rightarrow 0^{-}}{f'(x_{0})=-1}$) nicht mit dem rechtsseitigen Grenzwert (1) �bereinstimmt.\\
+Die Funktion $f(x)=|x|$ ist nicht differenzierbar, da bei der Stelle $x_{0}=0$ der linksseitige Grenzwert des Differenzenquotienten ($\lim\limits_{h \rightarrow 0^{-}}{f'(x_{0})=-1}$) nicht mit dem rechtsseitigen Grenzwert (1) �bereinstimmt.\\
 
 \subsection{Zusammenhang zwischen Stetigkeit und Differenzierbarkeit}
 
 Ist eine Funktion $f$ an der Stelle $x_{0}$ differenzierbar, so ist sie an dieser Stelle auch stetig.
 Die Umkehrung gilt erst einmal nicht, aber es gibt eine verneinende Aussage: Ist $f$ an der Stelle $x_{0}$ nicht stetig, so ist sie hier auch nicht differenzierbar.\\
+
+Ist eine Funktion differenzierbar und ist ihre Ableitung zus"atzlich stetig, dann wird sie \textbf{Stetig differenzierbar} genannt. 
 
 \section{Ableitungsregeln}
 
@@ -142,8 +158,7 @@ Symmetrie zu einem Punkt liegt vor, wenn f"ur den Punkt $P(x_{0}|y_{0})$ gilt:\\
 \\
 $f(x_{0}+h)-y_{0}=-f(x_{0}-h)+y_{0}$
 \end{Definition}
-\begin{Bemerkung}
-Beispiel\\
+\begin{Beispiel}
 \\
 $f(x)=\frac{x}{x-1}$\\
 \\
@@ -154,12 +169,19 @@ $\left. \begin{array}{rcl}
 \\
 \Rightarrow -f(x_{0}-h)+y_{0}=-[\frac{1-h}{1-h-1}+1]=\frac{1}{h}\\
 \end{array}\right\} \frac{1}{h}=\frac{1}{h}$ Die Funktion $f$ ist zu $P$ symmetrisch.\\
-\end{Bemerkung}
+\end{Beispiel}
 
 
 \subsection{Grenzwerte}
 
-
+\begin{Definition}
+Das Symbol $\lim\limits_{x \rightarrow x_{0}}f(x)$ mit $x_{0} \in \overline{\R}$ ($\pm \infty$ eingeschlossen) bezeichnet den Limes der reellen Funktion $f:D\rightarrow \R$ f"ur den Grenz"ubergang von $x$ gegen eine Stelle $x_{0}$, wobei $x_{0}$ nicht umbedingt in der Definitionsmenge von $f$ enthalten sein muss.\\
+\\
+Eine Zahl $g \in \overline{\R}$ ist der Grenzwert einer Funktion $f:D\rightarrow \R$ f"ur $x\rightarrow x_{0}$, falls f"ur jede Folge $(a_{n})_{n\in \N}$ mit Folgegliedern aus $D$ und Grenzwert $x_{0}$ die Folge $(f(a_{n}))_{n\in \N}$ den Grenzwert $g$ hat.
+\begin{center}
+$\lim\limits_{x \rightarrow x_{0}}f(x) = g $\quad $\Leftrightarrow$ \quad $\forall (a_{n})_{n\in \N}$ mit $\lim\limits_{n \rightarrow \infty}a_{n}=x_{0} : \lim\limits_{n \rightarrow \infty}f(a_{n})=g$
+\end{center}
+\end{Definition}
 
 \subsection{Asymptoten}
 
@@ -167,16 +189,16 @@ Eine Asymptote ist eine Gerade oder Kurve, die sich dem Graphen einer Funktion i
 \begin{Definition}
 \begin{enumerate}
 \item \textbf{Senkrechte Asymptote}: Hat $f$ an der stelle $x_{0}$ eine Polstelle, und gilt:\\
-$\lim\limits_{x \rightarrow x_{0^{+}}} f(x) = \pm \infty$\\
+\indent \qquad $\lim\limits_{x \rightarrow x_{0^{+}}} f(x) = \pm \infty$\\
 dann ist die Gerade $x=x_{0}$ eine senkrechte Asymptote von $f$.\\
-\item \textbf{Waagerechte Asymptote}: Konvergiert $f$ f"ur $x\rightarrow \infty$ gegen eine reelle Zahl $g\in \R$, das hei�t $\lim\limits_{x \rightarrow x_{0^{+}}}{f(x)}=g$.\\
+\item \textbf{Waagerechte Asymptote}: Konvergiert $f$ f"ur $x\rightarrow \infty$ gegen eine reelle Zahl $g\in \R$, das hei�t $\indent \qquad\lim\limits_{x \rightarrow x_{0^{+}}}{f(x)}=g$.\\
 Die Gerde $y=g$ ist die \textbf{waagerechte} Asymptote von $f$. Das Gleiche gilt f"ur $\lim\limits_{x \rightarrow -\infty}$.\\
 Bei gebrochenrationalen Funktionen ist dies der Fall, wenn der Z"ahlergrad kleiner (dann ist $g=0$) oder gleich dem Nennergrad $m$ ist.\\
 \item \textbf{Schr"age Asymptote}: Sie ist eine Gerade ($g:\R \rightarrow \R$), der sich $f$ mit $|x|\rightarrow \infty$ beliebig ann"ahert:\\
-$\lim\limits_{x \rightarrow \infty}{[f(x)-g(x)]}=0$ oder $\lim\limits_{x \rightarrow -\infty}{[f(x)-g(x)]}=0$\\
+\indent \qquad$\lim\limits_{x \rightarrow \infty}{[f(x)-g(x)]}=0$ oder $\lim\limits_{x \rightarrow -\infty}{[f(x)-g(x)]}=0$\\
 Bei einer gebrochenrationalen Funktion ist der ''Fehlergrad''???(wie nennt man das??), das hei�t der Abstand von $g$ zu $f$ durch den Rest der Polynomdivision von Z"ahler mit Nenner gegeben.\\
 \item \textbf{Asymptotische Kurven} Indem man in der Definition der schr"agen Asymptote auch Polynome zul"asst, erh"alt man N"aherungskuven, die die gleiche Limesbedingung erf"ullen muss:\\
-$\lim\limits_{x \rightarrow \infty}{[f(x)-P(x)]}=0$ oder $\lim\limits_{x \rightarrow -\infty}{[f(x)-P(x)]}=0$\\
+\indent \qquad$\lim\limits_{x \rightarrow \infty}{[f(x)-P(x)]}=0$ oder $\lim\limits_{x \rightarrow -\infty}{[f(x)-P(x)]}=0$\\
 Diese begegnen einen bei gebrochenrationalen Funktion mit $n>m+1$.\\
 \end{enumerate}
 \end{Definition}
