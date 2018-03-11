@@ -7,7 +7,7 @@ Man hat also:
 \begin{enumerate}
 \item Mit Startglied $a_{0}$: $s_{n}=\sum\limits_{i=0}^{n-1}a_{i}$
 \item Mit Startglied $a_{1}$: $s_{n}=\sum\limits_{i=1}^{n}a_{i}$
-\item Mit Startglied $a_{x}$: $s_{n}=\sum\limits_{i=x}^{n+x-1}a_{i}$
+\item Mit Startglied $a_{x}$: $s_{n}=\sum\limits_{i=x}^{x+n-1}a_{i}$
 \end{enumerate}
 
 \end{Definition}
@@ -18,10 +18,6 @@ Dann gilt für ein beliebiges Startglied $a_{x}$ der Folge: $s_{n}=\sum\limits_{
 \end{Bemerkung}
 
 		\section{Artithmetische Reihen}
-
-\begin{Definition}
-Wenn $s_{n}$ die Summe der ersten $n$ Folgeglieder einer arithmetischen Folge ist, heißt sie arithmetische Reihe.
-\end{Definition}
 
 	\subsection{Gauß'sche Summenformel}
 
@@ -40,8 +36,42 @@ $1+2+3+...+n=\sum\limits_{k=1}^{n}k=\frac{n(n+1)}{2}$\\\\
 So sieht man also, dass wenn man die vorher bestimmte Reihe mit sich selbst addiert (ein Mal davon "falschrum"), man $n$ Mal $n+1$ bekommt. Um dann den Wert einer einzelnen Reihe zu bekommen teilt man durch zwei.
 \end{minipage}
 
+	\subsection{Allgemein}
+
+\begin{Definition}
+Wenn $s_{n}$ die Summe der ersten $n$ Folgeglieder einer arithmetische Folge ist, heißt sie arithmetische Reihe.\\
+Sei eine arithmetische Folge $a$ mit Startglied $a_{x}$ und $s$, die entsprechende Reihe, dann gilt\\
+$s_{n}=$
+\end{Definition}
+
+\begin{Beweis}
+\end{Beweis}
+
 		\section{Geometrische Reihen}
 
 \begin{Definition}
-Wenn $s_{n}$ die Summe der ersten $n$ Folgeglieder einer geometrischen Folge ist, heißt sie geometrischen Reihe.
+Wenn $s_{n}$ die Summe der ersten $n$ Folgeglieder einer geometrischen Folge ist, heißt sie geometrischen Reihe.\\
+Sei eine geometrische Folge $a$ mit Startglied $a_{x}$ und $s$, die entsprechende Reihe, dann gilt\\
+$s_{n}=\sum\limits_{i=x}^{n+x-1}a_{i}=a_{x}\cdot \dfrac{1-q^n}{1-q}$
 \end{Definition}
+
+\begin{Beweis}
+\underline{Allgemein:}\\
+\\
+$(1-q)(1+q+q^2+q^3+...+q^n)\\
+=(1\textcolor{red}{-q)+(q}\textcolor{orange}{-q^2)+(q^2}\textcolor{green}{-q^3)+(q^3}\textcolor{brown}{-q^4)+.}.\textcolor{blue}{.+(q^n}-q^{n+1})\\
+=1+(\textcolor{red}{-q+q})+(\textcolor{orange}{-q^2+q^2})+(\textcolor{green}{-q^3+q^3})+...+(\textcolor{blue}{-q^n+q^n})-q^{n+1}\\
+=1-q^{n+1}$\\
+\\
+Man hat also $\sum\limits_{k=0}^nq^k=1+q+q^2+q^3+...+q^n=\dfrac{1-q^{n+1}}{1-q}$\\
+Entsprechend ergibt sich $\sum\limits_{k=0}^{n-1}q^k=\underbrace{1+q+q^2+q^3+...+q^{n-1}}_{n\quad Summanden}=\dfrac{1-q^n}{1-q}$\\
+\\
+Somit gilt für eine Reihe $s$, die die Partialsumme einer geometrischen Folge $a$, mit Quotient $q$ und Anfangsglied $a_{x}$, ist, folgendes:\\
+$s_{n}=\sum\limits_{i=x}^{x+n-1}a_{i}\\
+=a_{x}+a_{x+1}+a_{x+2}+...+a_{x+n-1}\\
+=a_{x}+a_{x}\cdot q+a_{x}\cdot q^{2}+...+a_{x}\cdot q^{n-1}\\
+=a_{x}\cdot(1+q+q^2+...+q^{n-1})\\
+=a_{x}\cdot \sum\limits_{k=0}^{n-1}q^k\\
+=a_{x}\cdot \dfrac{1-q^{n}}{1-q}$
+\end{Beweis}
+
