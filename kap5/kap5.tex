@@ -125,9 +125,12 @@
 
 
 \section{Winkel zwischen Vektoren}
+
+    \paragraph{} Unter einem Winkel zwischen zwei Vektoren versteht man den Winkel, der ensteht, wenn man beide Vektoren an einen \textbf{gemeinsamen Startpunkt} verschiebt (meistens O(0|0|0)).
+
     \subsection{Orientierte Winkel}
 
-        \begin{minipage}{0.5\textwidth}\paragraph{} Wenn man in der Mathematik mit Winkeln arbeitet, werden sie immer im mathematisch positiven Sinn angegeben. Dies bedeutet, dass man von einem Vektor oder Schenkel, der an den Winkel grenzt, ausgeht und über Rotation um den Schnittpunkt \glqq gegen den Uhrzeigersinn \grqq zum anderen gelangt, bis beide übereinanderliegen (wenn man davon ausgeht, dass sich beide schneiden). So ergibt sich $\alpha = \angle ABC = \angle ac = (\vv{BA},\vv{BC}) = \frac{\pi}{3}$
+        \begin{minipage}{0.5\textwidth}\paragraph{} Wenn man in der Mathematik mit Winkeln arbeitet, werden sie immer im \textbf{mathematisch positiven} Sinn angegeben. Dies bedeutet, dass man von einem Vektor oder Schenkel, der an den Winkel grenzt, ausgeht und über Rotation um den Schnittpunkt \glqq gegen den Uhrzeigersinn\grqq zum anderen gelangt, bis beide übereinanderliegen (wenn man davon ausgeht, dass sich beide schneiden). So ergibt sich $\alpha = \angle ABC = \angle ac = (\vv{BA},\vv{BC}) = \frac{\pi}{3}$
         \end{minipage}
         \begin{minipage}{0.5\textwidth}\paragraph{}
             \definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
@@ -157,7 +160,7 @@
         \end{minipage}
 
         \\
-        \begin{minipage}{0.5\textwidth}\paragraph{} Ein Winkel $\alpha$ wird zudem immer so angegeben, dass $\alpha\in I; I = [-\pi,\pi]$ gilt. Dies bedeutet, dass man nur Winkel zwischen $0°$ und $180°$ erhält, und das in beide \glqq Richtungen\grqq, als im mathematisch positiven und negativen Sinn. Diese Einschränkung kennzeichnet man mit dem Ausdruck \glqq modulo $2\pi$\grqq.
+        \begin{minipage}{0.5\textwidth}\paragraph{} Ein Winkel $\alpha$ wird zudem immer so angegeben, dass $\alpha\in I; I = [-\pi,\pi]$ gilt. Dies bedeutet, dass man nur Winkel zwischen $0°$ und $180°$ erhält, und das in beide \glqq Richtungen\grqq, als im mathematisch positiven und negativen Sinn. Diese Einschränkung kennzeichnet man mit dem Ausdruck \glqq \textbf{modulo $2\pi$}\grqq.
         \end{minipage}
         \begin{minipage}{0.5\textwidth}
             \includegraphics[width=4.7in]{kap5/Orientierte_Winkel}
@@ -165,7 +168,94 @@
 
     \subsection{Rechnungen mit Winkeln}
 
-        
+        \paragraph{} Bei Berechnungen von Winkeln zwischen Vektoren geht man genau wie in der elementaren Geometrie vor. So wird die Differenz zwischen zwei Winkeln $\theta_{1}$ und $\theta_{2}$ wie gehabt berechnet: $\Delta\theta = \theta_{1} - \theta{2}$. Jedoch benötigt man weitere Rechenregeln, um mit Winkeln rechnen zu können.
+        \\
+        \begin{Theorem}
+            \underline{Relation de Chasles}: \\
+            $(\vv{u},\vv{w})+(\vv{w},\vv{v})=(\vv{u},\vv{v});\text{ }modulo\text{ }2\pi$ \\
+            \underline{Umwandlungen}: \\
+            $(\vv{u},\vv{v})=-(\vv{v},\vv{u})$ \\
+            $(-\vv{u},-\vv{v})=(\vv{u},\vv{v})$ \\
+            $(\vv{u},\vv{v})=\pi+(-\vv{u},\vv{v})$ \\
+            Aus der ersten und letzten dieser Relationen lässt sich analog dazu bestimmen: \\
+            $(\vv{u},\vv{v})=-(\vv{v},\vv{u})=\pi-(-\vv{v},\vv{u})$
+        \end{Theorem}
+
+        \\
+        \\
+        \\
+
+        \begin{minipage}{0.3\textwidth}
+            \definecolor{qqttqq}{rgb}{0.,0.2,0.}
+            \definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+            \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+            \clip(-1.1255390990057683,-1.0518480615872037) rectangle (5.320281411260619,2.5845676602423175);
+            \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (1,0) arc (0:30:1) -- cycle;
+            \draw [line width=0.8pt,color=qqttqq,fill=qqttqq,fill opacity=0.10000000149011612] (0,0) -- (2,0) arc (0:30:2) -- cycle;
+            \draw [->,line width=0.8pt,color=qqwuqq] (1,0) arc (0:30:1);
+            \draw [->,line width=0.8pt] (0.,0.) -- (3.464101615137755,2.);
+            \draw [->,line width=0.8pt] (0.,0.) -- (4.,0.);
+            \draw [<-,line width=0.8pt,color=qqttqq] (2,0) arc (0:30:2);
+            \begin{scriptsize}
+            \draw [fill=ududff] (0,0) circle (0.8pt);
+            \draw[color=ududff] (-0.3,0.1) node {$O$};
+            \draw[color=qqwuqq] (1.7,0.5) node {$\alpha$};
+            \draw[color=black] (1.6385943541409,1.14344841797704) node {$\vv{v}$};
+            \draw[color=black] (2.0122376776899444,-0.17617052770941224) node {$\vv{u}$};
+            \draw[color=qqttqq] (0.6,0.15) node {$\beta$};
+            \end{scriptsize}
+            \end{tikzpicture}
+        \end{minipage}
+        \begin{minipage}{0.1\textwidth}
+        \text{        }
+        \end{minipage}
+        \begin{minipage}{0.6\textwidth}
+            \definecolor{qqttqq}{rgb}{0,0.2,0}
+            \definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+            \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+            \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (1,0) arc (0:30:1) -- cycle;
+            \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (-1,0) arc (180:210:1) -- cycle;
+            \draw [->,line width=0.8pt,color=qqwuqq] (1,0) arc (0:30:1);
+            \draw [->,line width=0.8pt] (0,0) -- (3.464101615137755,2);
+            \draw [->,line width=0.8pt] (0,0) -- (4,0);
+            \draw [->,line width=0.8pt] (0,0) -- (-3.464101615137755,-2);
+            \draw [->,line width=0.8pt] (0,0) -- (-4,0);
+            \draw [->,line width=0.8pt,color=qqwuqq] (-1,0) arc (180:210:1);
+            \begin{scriptsize}
+            \draw [fill=ududff] (0,0) circle (0.8pt);
+            \draw[color=ududff] (-0.3,0.1) node {$O$};
+            \draw[color=qqwuqq] (-0.6,-0.175) node {$\beta$};
+            \draw[color=black] (1.6385943541409,1.14344841797704) node {$\vv{v}$};
+            \draw[color=black] (2.0122376776899444,-0.17617052770941224) node {$\vv{u}$};
+            \draw[color=qqttqq] (0.6,0.15) node {$\beta$};
+            \end{scriptsize}
+            \end{tikzpicture}
+        \end{minipage}
+
+        \begin{minipage}{0.3\textwidth}
+            \definecolor{qqttqq}{rgb}{0.,0.2,0.}
+            \definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+            \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+            \clip(-1.1255390990057683,-1.0518480615872037) rectangle (5.320281411260619,2.5845676602423175);
+            \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (1,0) arc (0:30:1) -- cycle;
+            \draw [line width=0.8pt,color=qqttqq,fill=qqttqq,fill opacity=0.10000000149011612] (0,0) -- (2,0) arc (0:30:2) -- cycle;
+            \draw [->,line width=0.8pt,color=qqwuqq] (1,0) arc (0:30:1);
+            \draw [->,line width=0.8pt] (0.,0.) -- (3.464101615137755,2.);
+            \draw [->,line width=0.8pt] (0.,0.) -- (4.,0.);
+            \draw [<-,line width=0.8pt,color=qqttqq] (2,0) arc (0:30:2);
+            \begin{scriptsize}
+            \draw [fill=ududff] (0,0) circle (0.8pt);
+            \draw[color=ududff] (-0.3,0.1) node {$O$};
+            \draw[color=qqwuqq] (1.7,0.5) node {$\alpha$};
+            \draw[color=black] (1.6385943541409,1.14344841797704) node {$\vv{v}$};
+            \draw[color=black] (2.0122376776899444,-0.17617052770941224) node {$\vv{u}$};
+            \draw[color=qqttqq] (0.6,0.15) node {$\beta$};
+            \end{scriptsize}
+            \end{tikzpicture}
+        \end{minipage}
 
 \section{Geraden}
 \section{Ebenen}
