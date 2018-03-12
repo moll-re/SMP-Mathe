@@ -41,10 +41,27 @@ So sieht man also, dass wenn man die vorher bestimmte Reihe mit sich selbst addi
 \begin{Definition}
 Wenn $s_{n}$ die Summe der ersten $n$ Folgeglieder einer arithmetische Folge ist, heißt sie arithmetische Reihe.\\
 Sei eine arithmetische Folge $a$ mit Startglied $a_{x}$ und $s$, die entsprechende Reihe, dann gilt\\
-$s_{n}=$
+$s_{n}=\dfrac{n\cdot(a_{x}+a_{x+n-1})}{2}$
 \end{Definition}
 
+\begin{Bemerkung}
+Am häufigsten wird verwendet:
+\begin{itemize}
+\item Mit Startglied $a_{0}$ : $s_{n}=\dfrac{n\cdot(a_{0}+a_{n-1})}{2}$
+\item Mit Startglied $a_{1}$ : $s_{n}=\dfrac{n\cdot(a_{1}+a_{n})}{2}$
+\end{itemize}
+\end{Bemerkung}
+
 \begin{Beweis}
+Sei eine arithmetische Folge $a$, mit Startglied $a_{x}$ und Differenz $d$, und $s$ die entsprechende Reihe ist.\\
+$s_{n}=a_{x}+a_{x+1}+a_{x+2}+...a_{x+n-1}\\
+=a_{x}+(a_{x}+d})+(a_{x}+2d})+...+(a_{x}+(n-1)\cdot d})\\
+=n\cdot a_{x}+d+2d+...+(n-1)\cdot d\\
+=n\cdot a_{x}+(1+2+...+(n-1))\cdot d\qquad$	(Gauß)\\
+$=n\cdot a_{x}+\dfrac{(n-1)\cdot n}{2}\cdot d\\
+=n\cdot \dfrac{2a_{x}+(n-1)\cdot d}{2}\\
+=n\cdot \dfrac{a_{x}+\overbrace{a_{x}+(n-1)\cdot d}^{a_{x+n-1}}}{2}\\
+=n\cdot \dfrac{a_{x}+a_{x+n-1}}{2}$
 \end{Beweis}
 
 		\section{Geometrische Reihen}
@@ -54,6 +71,14 @@ Wenn $s_{n}$ die Summe der ersten $n$ Folgeglieder einer geometrischen Folge ist
 Sei eine geometrische Folge $a$ mit Startglied $a_{x}$ und $s$, die entsprechende Reihe, dann gilt\\
 $s_{n}=\sum\limits_{i=x}^{n+x-1}a_{i}=a_{x}\cdot \dfrac{1-q^n}{1-q}$
 \end{Definition}
+
+\begin{Bemerkung}
+Am häufigsten wird verwendet:
+\begin{itemize}
+\item Mit Startglied $a_{0}$ : $s_{n}=a_{0}\cdot \dfrac{1-q^n}{1-q}}$
+\item Mit Startglied $a_{1}$ : $s_{n}=a_{1}\cdot \dfrac{1-q^n}{1-q}}$
+\end{itemize}
+\end{Bemerkung}
 
 \begin{Beweis}
 \underline{Allgemein:}\\
