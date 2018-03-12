@@ -36,6 +36,28 @@ $1+2+3+...+n=\sum\limits_{k=1}^{n}k=\frac{n(n+1)}{2}$\\\\
 So sieht man also, dass wenn man die vorher bestimmte Reihe mit sich selbst addiert (ein Mal davon "falschrum"), man $n$ Mal $n+1$ bekommt. Um dann den Wert einer einzelnen Reihe zu bekommen teilt man durch zwei.
 \end{minipage}
 
+\begin{Bemerkung}
+Die Gauß'sche Summenformel ist ein Spezialfall der arithmetischen Reihe, ihre Glieder werden \textbf{Dreieckszahlen} genannt.
+\end{Bemerkung}
+
+\begin{Beweis}
+Um zu beweisen, dass für alle $n\in\N$\\
+$\sum\limits_{k=1}^{n}f(k)=g(n)$\\
+ gilt, reicht es aus, \\
+$g(n)-g(n-1)=f(n)$\\
+ für alle positiven $n$ und\\
+ $g(0)=0$\\
+ zu zeigen. In der Tat trifft dies hier zu: \\
+$g(n)-g(n-1)=\dfrac{n(n+1)}{2}-\dfrac{(n-1)n}{2}=\dfrac{n(n+1-n+1)}{2}=\dfrac{n\cdot 2}{2}=n=f(n)$ \\
+für alle $n$ \\
+und $g(0)=\dfrac{0\cdot 1}{2}=0$\\
+\\
+\underline{Quelle:} Wikipedia (Gaußsche Summenformel)\\
+\underline{Bemerkung:} auch ein Beweis durch vollständige Induktion ist möglich
+\end{Beweis}
+
+
+
 	\subsection{Allgemein}
 
 \begin{Definition}
@@ -45,11 +67,15 @@ $s_{n}=\dfrac{n\cdot(a_{x}+a_{x+n-1})}{2}$
 \end{Definition}
 
 \begin{Bemerkung}
-Am häufigsten wird verwendet:
+\begin{enumerate}
+\item Am häufigsten wird verwendet:
 \begin{itemize}
 \item Mit Startglied $a_{0}$ : $s_{n}=\dfrac{n\cdot(a_{0}+a_{n-1})}{2}$
 \item Mit Startglied $a_{1}$ : $s_{n}=\dfrac{n\cdot(a_{1}+a_{n})}{2}$
 \end{itemize}
+\item Alternativ kann auch folgende Darstellung verwendet werden:\\
+$s_{n}=\dfrac{n\cdot(2a_{x}+(n-1)\cdot d)}{2}$
+\end{enumerate}
 \end{Bemerkung}
 
 \begin{Beweis}
@@ -73,7 +99,7 @@ $s_{n}=\sum\limits_{i=x}^{n+x-1}a_{i}=a_{x}\cdot \dfrac{1-q^n}{1-q}$
 \end{Definition}
 
 \begin{Bemerkung}
-Am häufigsten wird verwendet:
+\item Am häufigsten wird verwendet:
 \begin{itemize}
 \item Mit Startglied $a_{0}$ : $s_{n}=a_{0}\cdot \dfrac{1-q^n}{1-q}}$
 \item Mit Startglied $a_{1}$ : $s_{n}=a_{1}\cdot \dfrac{1-q^n}{1-q}}$
