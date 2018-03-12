@@ -13,19 +13,46 @@
 	\end{enumerate}
 \end{Definition}
 \\
-Diese Eigenschaften kann man in der Mathematik genutzt werden, um Probleme zu lösen. Hierfür bedarf es einer einheitlichen Schreibweise.\\
+Diese Eigenschaften können in der Mathematik genutzt werden, um Probleme zu lösen. Hierfür bedarf es einer einheitlichen Schreibweise.\\
 Insbesondere vor dem Abitur stehen den Schülern mehrere Möglichkeiten zur Verfügung, die im Folgenden behandelt werden.
 \subsection{Pseudocode}
 \subsection{Python}
+Programmiersprache, bekannt durch ihre einfach verständliche Syntax, sie gilt als "high-level", was sie zu einer auf die (gesprochene) Sprache angepasste Sprache macht. Sie ist somit gerade für Einsteiger interessant und eignet sich dennoch für größere Projekte. Ein weiterer Vorteil ist die mitllerweile allgegenwärtige Präsenz der Sprache, mittlerweile wird sie auch für Apps und Webdeveloppement verwendet.
+\subsection{Syntax}
+Folgendes macht die Syntax Pythons aus:\\
+\begin{enumerate}
+\item gute Lesbarkeit des Quellcodes\\
+\item  englische Schlüsselwörter\\
+\item wenig syntaktische Konstruktionen
+\end{enumerate}
+\subsection{Funktionsweise}
+Python verwendet Schleifen und Verzweigungen.\\
 \begin{lstlisting}[language=Python]
-	import turtle as t
-	print("I love U")
-	print(69)
-	while True:
-		khdfslh
-
+	#Schleifen:
+	for: #(Wiederholung über Elemente einer Sequenz (Zahl, Liste, Zeit...))
+		#Inhalt der Schleife
+	while: #(Wiederholung, solange ein logischer Ausdruck wahr ist)
+		#Inhalt der Schleife
+	#Verzweigungen:
+	if: #(prüft,ob ein logischer Ausdruck wahr ist)
+		#Inhalt der Verzweigung
+	elif: #(prüft,ob ein anderer logischer Ausdruck wahr ist)
+		#Inhalt der Verzweigung
+	else: #(letzter Fall, tritt ein, wenn keine der obigen Bedingungen erfüllt wurde)
+		#Inhalt der Verzweigung
 \end{lstlisting}
-
+\subsection{Beispiel}
+Man nehme, den Algorythmus, der die Fibonacci-Sequenz bis zum $n$-ten Glied generiert:\\
+\begin{lstlisting}[language=Python]
+	a = 0
+	b = 1
+	n = 10
+	for iteration in range(n):
+		print(a)
+		a = b
+		b = a+b
+\end{lstlisting}
+KP, obs läuft
 \section{Algorithmen und mathematische Anwendungen}
 \subsection{Newton-Rhapson Verfahren}
 \subsection{Allgemeines Iterationsverfahren}
