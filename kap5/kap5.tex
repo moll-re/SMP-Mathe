@@ -57,21 +57,8 @@
                 \draw (1.7,0,1.9) node [color=red]{$\sqrt{v_1^{2}+v_2^{2}}$};
             \end{tikzpicture}
             \paragraph{} Anhand dieser Graphik lässt sich die Berechnung der Norm eines Vektors $\vv{v}\in\R^3$ verdeutlichen. Für diesen glit: $\text{|}\vv{v}\text{|}=\sqrt{v_1^{2}+v_2^{2}+v_3^{2}}$.
-            \paragraph{} Ein Vektor, dessen Norm 1 beträgt wird als normiert oder Einheitsvektor bezeichnet. Für jeden Vektor $\vv{v}\in\R^{3}$ existiert ein Einheitsvektor $\vv{v^{*}}$ , der folgendermaßen definiert wird: $\vv{v^{*}}=\frac{1}{\text{|}\vv{v}\text{|}}*\vv{v}$.
+            \paragraph{} Ein Vektor, dessen Norm 1 beträgt wird als normiert oder Einheitsvektor bezeichnet. Für jeden Vektor $\vv{v}\in\R^{3}$ existiert ein Einheitsvektor $\vv{v^{*}}$ , der folgendermaßen definiert wird: $\vv{v^{*}}=\dfrac{1}{\text{|}\vv{v}\text{|}}*\vv{v}$.
 
-\section{Linearkombination}
-
-    \paragraph{} Vektoren lassen sich allgemein mit der additiven Verknüpfung des Vektorraumes verknüpfen. Diese Verknüpfung zwischen zwei beliebigen Vektoren $\vv{v}$ und $\vv{u}$ erfolgt, wie auch schon im Teil Verbindungsvektor gezeigt wird, wie folgt: $\vv{v}+\vv{u}=\left(\begin{array}{c}{v_1+u_1 \\ v_2+u_2 \\ ... \\ v_n+u_n}\end{array}\right)$.
-    \\
-    \begin{Definition}
-       Eine Familie von Vektoren $\vv{a_1},\vv{a_2},...,\vv{a_n}\in V$ wird als linear abhängig bezeichnet, wenn die Gleichung: \\$r_1\cdot\vv{a_1}+r_2\cdot\vv{a_2}+...+r_n\cdot\vv{a_n}=\vv{0};r_i\in\R$ nicht nur die triviale Lösung $r_1=r_2=...=r_n=0$ besitzt. Existiert nur diese Lösung, ist die Familie linear unabhägig.
-    \end{Definition}
-    \paragraph{} Anders gesagt, ist eine Familie von Vektoren linear abhängig, wenn sich einzelne Vektoren dieser Familie als Linearkombination von einer beliebigen Anzahl anderer Vektoren der Familie darstellen lassen.
-    \begin{Bemerkung}
-      Eine linear abhängige Familie \textbf{aus genau zwei} Vektoren wird als kollinear bezeichnet.
-      \\
-      Eine linear abhängige Familie \textbf{aus genau drei} Vektoren, als komplanar.
-    \end{Bemerkung}
 \section{Basen und Erzeugendensystem}
     \paragraph{} Eine endliche Anzahl von Vektoren $\vv{a_1},\vv{a_2},...,\vv{a_n}\in V$ heißt Erzeugendensystem, wenn sich \texbf{jeder} Vektor $\vv{v}\in V$ als Linearkombination dieser Vektoren schreiben lässt. Um ein Erzeugendensystem zu bilden benötigt man mindestens die Anzahl Vektoren, die der Anzahl von Dimensionen von $\vv{v}$ entspricht. Wenn man \textbf{genau} diese Anzahl besitzt, spricht man von einer Basis.
     \subsection{Besondere Basen}
@@ -109,24 +96,25 @@
                              \end{vmatrix}
              \\
              \\
-             \Leftrightarrow \begin{vmatrix}t & = & 99.2 \\
+             \Leftrightarrow \begin{vmatrix}r & = & -15.2 \\
                                             s & = & -6.9 \\
-                                            r & = & 42
+                                            t & = & 42
                              \end{vmatrix}
             \\
             \\
-            \mathbb{L}=\{ 42|-6.9|99.2 \}$
+            \mathbb{L}=\{ -15.2|-6.9|42 \}$
             \\
-            Daraus lässt sich folgern: $\vv{v}=42\cdot\vv{b_1}-6.9\cdot\vv{b_2}+99.2\cdot\vv{b_3}=\left(\begin{array}{c}{42\\-6.9\\99.2}\end{array}\right)$ (in der anderen Basis).
+            Daraus lässt sich folgern: $\vv{v}=-15.2\cdot\vv{b_1}-6.9\cdot\vv{b_2}+42\cdot\vv{b_3}=\left(\begin{array}{c}{-15.2\\-6.9\\42}\end{array}\right)$ (in der anderen Basis).
             \\
-            Ich hab keinen Plan, ob meine Berechnungen stimmen, aber es ging vorerst um das Prinzip. Könnte jemand mal bitte nachrechnen?
 
         \end{Beispiel}
 
 
 \section{Winkel zwischen Vektoren}
 
-    \paragraph{} Unter einem Winkel zwischen zwei Vektoren versteht man den Winkel, der ensteht, wenn man beide Vektoren an einen \textbf{gemeinsamen Startpunkt} verschiebt (meistens O(0|0|0)).
+    \begin{Definition}
+        \paragraph{} Unter einem Winkel zwischen zwei Vektoren versteht man den Winkel, der ensteht, wenn man beide Vektoren an einen \textbf{gemeinsamen Startpunkt} verschiebt (meistens O(0|0|0)).
+    \end{Definition}
 
     \subsection{Orientierte Winkel}
 
@@ -136,7 +124,7 @@
             \definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
             \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
             \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-                \clip(-3.32,-2.22) rectangle (8.28,7.16);
+                \clip(-2.32,-3) rectangle (6.28,6.16);
                 \draw [shift={(-1.66,1.84)},line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (-22.750976342787634:1.2) arc (-22.750976342787634:35.702202191216706:1.2) -- cycle;
                 \draw [shift={(-1.66,1.84)},->,line width=0.8pt,color=qqwuqq] (-22.750976342787634:1.2) arc (-22.750976342787634:35.702202191216706:1.2);
                 \draw [->,line width=0.8pt] (-1.66,1.84)-- (3.6,5.62);
@@ -163,7 +151,7 @@
             \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
             \definecolor{qududf}{rgb}{0.3,0.3,0}
             \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-                \clip(-3.32,-2.22) rectangle (8.28,7.16);
+                \clip(-3.32,-1) rectangle (6.28,6.16);
                 \draw [shift={(-1.66,1.84)},line width=0.8pt,color=qududf,fill=qududf,fill opacity=0.10000000149011612] (0,0) -- (-22.750976342787634:1.2) arc (-22.750976342787634:35.702202191216706:1.2) -- cycle;
                 \draw [shift={(-1.66,1.84)},<-,line width=0.8pt,color=qududf] (-22.750976342787634:1.2) arc (-22.750976342787634:35.702202191216706:1.2);
                 \draw [->,line width=0.8pt] (-1.66,1.84)-- (3.6,5.62);
@@ -292,7 +280,7 @@
                 \draw [->,line width=0.8pt] (0,0) -- (-3.464101615137755,-2);
                 \begin{scriptsize}
                     \draw [fill=ududff] (0,0) circle (0.8pt);
-                    \draw (-3.5,2) node {(3)};
+                    \draw (-3.5,2) node {(4)};
                     \draw[color=ududff] (-0.25,0.25) node {$O$};
                     \draw[color=black] (1.6385943541409,1.14344841797704) node {$\vv{v}$};
                     \draw[color=black] (2.0122376776899444,-0.17617052770941224) node {$\vv{u}$};
@@ -303,9 +291,26 @@
             \end{tikzpicture}
         \end{minipage}
 
+\section{Linearkombination}
+
+    \paragraph{} Vektoren lassen sich allgemein mit der additiven Verknüpfung des Vektorraums verknüpfen. Diese Verknüpfung zwischen zwei beliebigen Vektoren $\vv{v}$ und $\vv{u}$ erfolgt, wie auch schon im Teil Verbindungsvektor gezeigt wird, wie folgt: $\vv{v}+\vv{u}=\left(\begin{array}{c}{v_1+u_1 \\ v_2+u_2 \\ ... \\ v_n+u_n}\end{array}\right)$.
+    \\
+    \begin{Definition}
+        Eine Familie von Vektoren $\vv{a_1},\vv{a_2},...,\vv{a_n}\in V$ wird als linear abhängig bezeichnet, wenn die Gleichung: \\$r_1\cdot\vv{a_1}+r_2\cdot\vv{a_2}+...+r_n\cdot\vv{a_n}=\vv{0};r_i\in\R$ nicht nur die triviale Lösung $r_1=r_2=...=r_n=0$ besitzt. Existiert nur diese Lösung, ist die Familie linear unabhägig.
+    \end{Definition}
+    \paragraph{} Anders gesagt, ist eine Familie von Vektoren linear abhängig, wenn sich einzelne Vektoren dieser Familie als Linearkombination von einer beliebigen Anzahl anderer Vektoren der Familie darstellen lassen.
+    \begin{Bemerkung}
+        Eine linear abhängige Familie \textbf{aus genau zwei} Vektoren wird als kollinear bezeichnet.
+        \\
+        Eine linear abhängige Familie \textbf{aus genau drei} Vektoren, als komplanar.
+    \end{Bemerkung}
+
+\section{Skalarprodukt}
+
+    \paragraph{} Das Skalarprodukt ist die multiplikative Verknüpfung des Vektorraums.
+
 \section{Geraden}
 \section{Ebenen}
-\section{Skalarprodukt}
 \section{Kreuzprodukt}
 \section{Spatprodukt}
 \section{Dyadisches Produkt}
