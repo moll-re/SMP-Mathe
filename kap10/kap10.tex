@@ -16,16 +16,20 @@
 Diese Eigenschaften können in der Mathematik genutzt werden, um Probleme zu lösen. Hierfür bedarf es einer einheitlichen Schreibweise.\\
 Insbesondere vor dem Abitur stehen den Schülern mehrere Möglichkeiten zur Verfügung, die im Folgenden behandelt werden.
 \subsection{Pseudocode}
+Pseudocode ist ein Programmcode, der nicht zur maschinellen Interpretation, sondern lediglich zur Veranschaulichung eines Algorithmus dient. Meistens ähnelt er höheren Programmiersprachen, gemischt mit natürlicher Sprache und mathematischer Notation.\\
+Ein Beispiel erübrigt sich.
 \subsection{Python}
-Programmiersprache, bekannt durch ihre einfach verständliche Syntax, sie gilt als "high-level", was sie zu einer auf die (gesprochene) Sprache angepasste Sprache macht. Sie ist somit gerade für Einsteiger interessant und eignet sich dennoch für größere Projekte. Ein weiterer Vorteil ist die mitllerweile allgegenwärtige Präsenz der Sprache, mittlerweile wird sie auch für Apps und Webdeveloppement verwendet.
-\subsection{Syntax}
+Programmiersprache, bekannt durch ihre einfach verständliche Syntax, sie gilt als höhere Sprache, was sie zu einer auf die (gesprochene) Sprache angepasste Sprache macht. Sie ist somit gerade für Einsteiger interessant und eignet sich dennoch für größere Projekte. Ein weiterer Vorteil ist die mitllerweile allgegenwärtige Präsenz der Sprache, mittlerweile wird sie auch für Apps und Webdeveloppement verwendet.\\
+Er ist leichter verständlich als realer Programmcode aber klarer und weniger missverständlich als eine Beschreibung in natürlicher Sprache.
+\subsubsection{Syntax}
 Folgendes macht die Syntax Pythons aus:\\
 \begin{enumerate}
-\item gute Lesbarkeit des Quellcodes\\
-\item  englische Schlüsselwörter\\
+\item gute Lesbarkeit des Quellcodes
+\item englische Schlüsselwörter
 \item wenig syntaktische Konstruktionen
 \end{enumerate}
-\subsection{Funktionsweise}
+
+\subsubsection{Funktionsweise}
 Python verwendet Schleifen und Verzweigungen.\\
 \begin{lstlisting}[language=Python]
 	#Schleifen:
@@ -33,6 +37,7 @@ Python verwendet Schleifen und Verzweigungen.\\
 		#Inhalt der Schleife
 	while: #(Wiederholung, solange ein logischer Ausdruck wahr ist)
 		#Inhalt der Schleife
+
 	#Verzweigungen:
 	if: #(prüft,ob ein logischer Ausdruck wahr ist)
 		#Inhalt der Verzweigung
@@ -41,18 +46,40 @@ Python verwendet Schleifen und Verzweigungen.\\
 	else: #(letzter Fall, tritt ein, wenn keine der obigen Bedingungen erfüllt wurde)
 		#Inhalt der Verzweigung
 \end{lstlisting}
-\subsection{Beispiel}
-Man nehme, den Algorythmus, der die Fibonacci-Sequenz bis zum $n$-ten Glied generiert:\\
+\subsubsection{Beispiel}
+Man nehme, den Algorithmus, der die Fibonacci-Sequenz bis zum $n$-ten Glied generiert:\\
 \begin{lstlisting}[language=Python]
 	a = 0
 	b = 1
 	n = 10
 	for iteration in range(n):
 		print(a)
-		a = b
-		b = a+b
+		a = a+b
+		b = a-b
 \end{lstlisting}
-KP, obs läuft
 \section{Algorithmen und mathematische Anwendungen}
 \subsection{Newton-Rhapson Verfahren}
+Das Newton-Rhapson Verfahren, auch bekannt als Newtonmethode dient der Nullstellenbestimmung komplexer Polynome und allgemein jeder differenzierbaren Funktion.\\
+Die Grundidee ist, die Nullstelle der Tangente an der Stelle $x_0$ von $f$ zu nehmen und den Vorgang mit $f($NS$_T)$ zu wiederholen.\\
+Eine mögliche Umsetung in Python wäre:\\
+\begin{lstlisting}[language=Python]
+	def fx(x):
+		return 3*x**3+5x**2+3					#beliebige Funktion (muss angegeben werden)
+
+	def f_strich(x):
+		return 9*x**2+10*x						#muss auch manuell angegeben werden
+
+	def NS_Tangente(x):
+		NS_T = x - fx(x)/f_strich(x)
+		return NS_T
+
+	Startwert=1
+	altwert = NS_Tangente(Startwert)
+	Genauigkeit = 0.00001
+	
+	while abs(altwert-NS_Tangente(altwert))>Genauigkeit:
+		altwert=NS_Tangente(altwert)
+	print(altwert)
+
+\end{lstlisting}
 \subsection{Allgemeines Iterationsverfahren}
