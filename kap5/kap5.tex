@@ -194,7 +194,6 @@
             \definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
             \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
             \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-                \clip(-1.1255390990057683,-1.0518480615872037) rectangle (5.320281411260619,2.5845676602423175);
                 \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (1,0) arc (0:30:1) -- cycle;
                 \draw [line width=0.8pt,color=qqttqq,fill=qqttqq,fill opacity=0.10000000149011612] (0,0) -- (2,0) arc (0:30:2) -- cycle;
                 \draw [->,line width=0.8pt,color=qqwuqq] (1,0) arc (0:30:1);
@@ -202,7 +201,6 @@
                 \draw [->,line width=0.8pt] (0.,0.) -- (4.,0.);
                 \draw [<-,line width=0.8pt,color=qqttqq] (2,0) arc (0:30:2);
                 \begin{scriptsize}
-                    \draw[fill=ududff] (0,0) circle (0.8pt);
                     \draw (-0.4,2) node {(1)};
                     \draw[color=ududff] (-0.3,0.1) node {$O$};
                     \draw[color=qqwuqq] (1.7,0.5) node {$\alpha$};
@@ -229,7 +227,6 @@
                 \draw [->,line width=0.8pt] (0,0) -- (-4,0);
                 \draw [->,line width=0.8pt,color=qqwuqq] (-1.5,0) arc (180:210:1.5);
                 \begin{scriptsize}
-                    \draw [fill=ududff] (0,0) circle (0.8pt);
                     \draw (-3,1.5) node {(2)};
                     \draw[color=ududff] (-0.2,0.25) node {$O$};
                     \draw[color=qqwuqq] (-1,-0.3) node {$\beta$};
@@ -255,7 +252,6 @@
                 \draw [->,line width=0.8pt] (0,0) -- (4,0);
                 \draw [->,line width=0.8pt] (0,0) -- (-4,0);
                 \begin{scriptsize}
-                    \draw [fill=ududff] (0,0) circle (0.8pt);
                     \draw (-3.5,2) node {(3)};
                     \draw[color=ududff] (-0.25,-0.2) node {$O$};
                     \draw[color=black] (1.6385943541409,1.14344841797704) node {$\vv{v}$};
@@ -279,7 +275,6 @@
                 \draw [->,line width=0.8pt] (0,0) -- (4,0);
                 \draw [->,line width=0.8pt] (0,0) -- (-3.464101615137755,-2);
                 \begin{scriptsize}
-                    \draw [fill=ududff] (0,0) circle (0.8pt);
                     \draw (-3.5,2) node {(4)};
                     \draw[color=ududff] (-0.25,0.25) node {$O$};
                     \draw[color=black] (1.6385943541409,1.14344841797704) node {$\vv{v}$};
@@ -307,7 +302,37 @@
 
 \section{Skalarprodukt}
 
-    \paragraph{} Das Skalarprodukt ist die multiplikative Verknüpfung des Vektorraums.
+    \begin{minipage}{0.5\textwidth}
+        \paragraph{} Das Skalarprodukt ist (eine ?) multiplikative Verknüpfung des Vektorraums. Ihr Ergebnis ist ein Skalar ($S\in\R$) und wird aus der Multiplikation der Beträge der Anteile von zwei beliebigen Vektoren $\vv{v}$ und $\vv{u}$ auf einer beliebigen Achse $l\in E,E=\vv{q}+r\cdot\vv{v}+s\cdot\vv{u};r,s\in\R,Q\in E$. Somit ensteht folgende Formel: $\vv{v}\odot\vv{u}=|\vv{v}|\cdot|\vv{u}|\cdot\cos(\alpha);\alpha=(\vv{v},\vv{u})$.
+    \end{minipage}
+    \begin{minipage}{0.05\textwidth}
+        \quad
+    \end{minipage}
+    \begin{minipage}{0.45\textwidth}
+        \definecolor{ffqqqq}{rgb}{1,0,0}
+        \definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+        \definecolor{qqqqtt}{rgb}{0,0,0.2}
+        \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+        \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+            \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (2,-1.5) -- (4,-1.5) arc (0:30:2) -- cycle;
+            \draw [->,line width=0.8pt,color=qqqqtt] (2,-1.5) -- (9,-1.5);
+            \draw [->,line width=0.8pt,color=qqqqtt] (2,-1.5) -- (7.19615242271,1.5);
+            \draw [line width=0.8pt,color=qqqqtt,dashed] (7.19615242271,1.5)-- (7.19615242271,-1.5);
+            \draw [->,line width=0.8pt,color=ffqqqq] (2,-1.5) -- (7.19615242271,-1.5);
+            \begin{scriptsize}
+                \draw[color=ududff] (1.8,-1.3) node {$O$};
+                \draw[color=qqqqtt] (5.5,-1.7) node {$\vv{u}$};
+                \draw[color=qqwuqq] (3.2,-1.15) node {$\alpha$};
+                \draw[color=qqqqtt] (4.59807621135,0.2) node {$\vv{v}$};
+                \draw[color=ffqqqq] (4.59807621135,-1.2) node {$\vv{v'}$};
+            \end{scriptsize}
+        \end{tikzpicture}
+    \end{minipage}
+    \\
+    \begin{Bemerkung}
+        Aus dieser Gleichung folgt: $\cos(\alpha)=\dfrac{\vv{v}\odot\vv{u}}{|\vv{v}|\cdot|\vv{u}|}$.
+    \end{Bemerkung}
+    \paragraph{} 
 
 \section{Geraden}
 \section{Ebenen}
