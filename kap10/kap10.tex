@@ -58,7 +58,10 @@ Man nehme, den Algorithmus, der die Fibonacci-Sequenz bis zum $n$-ten Glied gene
 		b = a-b
 \end{lstlisting}
 \section{Algorithmen und mathematische Anwendungen}
-\subsection{Newton-Rhapson Verfahren}
+\subsection{Iterationsverfahren}
+Unter Iteration versteht man ein Verfahren zur schrittweisen Annäherung an die Lösung einer Gleichung unter Anwendung eines sich wiederholenden Rechengangs. Das bedeutet, (wenn es möglich ist) aus einer Näherungslösung durch Anwenden eines Algorithmus zu einer besseren Näherungslösung zu kommen und die Lösung beliebig gut an die exakte Lösung heranzuführen. Man sagt dann, dass die Iteration konvergiert.\\
+Beispiele für Verfahren dieser Art werden im Folgenden behandelt.
+\subsubsection{Newton-Rhapson Verfahren}
 Das Newton-Rhapson Verfahren, auch bekannt als Newtonmethode dient der Nullstellenbestimmung komplexer Polynome und allgemein jeder differenzierbaren Funktion.\\
 Die Grundidee ist, die Nullstelle der Tangente an der Stelle $x_0$ von $f$ zu nehmen und den Vorgang mit $f($NS$_T)$ zu wiederholen.\\
 Eine mögliche Umsetung in Python wäre:\\
@@ -82,4 +85,5 @@ Eine mögliche Umsetung in Python wäre:\\
 	print(altwert)
 
 \end{lstlisting}
-\subsection{Allgemeines Iterationsverfahren}
+\subsubsection{Heron-Verfahren}
+Das
