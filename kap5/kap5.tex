@@ -5,7 +5,8 @@
     \begin{Definition}
         Ein Vektor ist Element eines Vektorraums.
     \end{Definition}\\
-    \paragraph{} Vektorräume, wir erinnern uns zurück. Verknüpfungen, inverse Elemente und die dazugehörenden Gesetze, konsequente Definitionen und mathematische Korrektheit, die guten alten Zeiten...\\
+    \paragraph{} Vektorräume, wir erinnern uns zurück. Verknüpfungen, inverse Elemente und die dazugehörenden Gesetze, konsequente Definitionen und
+    mathematische Korrektheit, die guten alten Zeiten...\\
     Tatsächlich kann ein Vektor in den meisten Fällen als Verschiebung bezeichnet werden, \textbf{nicht aber als Pfeil oder Strich!}\\
 
     \subsection{Besondere Vektoren}
@@ -24,7 +25,8 @@
 
         \subsubsection{Der Verbindungsvektor}
 
-            \paragraph{} Der Vektor $\vv{AB}$ ist der Vektor, der den Punkt $A$ auf den Punkt $B$ abbildet. Er ist definiert als:\\ $\vv{AB}=\vv{OB}-\vv{OA}$, woraus folgt, dass: \begin{center} $\vv{AB} = \left(\begin{array}{c} b_1 - a_1 \\ b_2 - a_2 \\ ... \\ b_n - a_n \end{array}\right)$. \end{center}
+            \paragraph{} Der Vektor $\vv{AB}$ ist der Vektor, der den Punkt $A$ auf den Punkt $B$ abbildet. Er ist definiert als:\\ $\vv{AB}=\vv{OB}-\vv{OA}$,
+             woraus folgt, dass: \begin{center} $\vv{AB} = \left(\begin{array}{c} b_1 - a_1 \\ b_2 - a_2 \\ ... \\ b_n - a_n \end{array}\right)$. \end{center}
 
         \subsubsection{Der Gegenvektor}
 
@@ -37,7 +39,8 @@
 
         \subsubsubsection{Norm eines Vektors}
 
-            \paragraph{} Die Norm eines Vektors ist anschaulich als seine Länge zu interpretieren. Der Betrag, wie sie ebenfalls genannt wird, eines Vektors $\vv{v}$ ist folgendermaßen definiert: $\text{|}\vv{v}\text{|} = \sqrt{\displaystyle\sum_{i=1}^{n}v_{i}^2} ; \vv{v}\in\R^n$.
+            \paragraph{} Die Norm eines Vektors ist anschaulich als seine Länge zu interpretieren. Der Betrag, wie sie ebenfalls genannt wird, eines
+             Vektors $\vv{v}$ ist folgendermaßen definiert: $\text{|}\vv{v}\text{|} = \sqrt{\displaystyle\sum_{i=1}^{n}v_{i}^2} ; \vv{v}\in\R^n$.
             \\
             \begin{tikzpicture}
                 \draw[dashed, ->] (0,0,0) -- (0,0,3);
@@ -56,26 +59,40 @@
                 \draw (6.5,0,3) node [color=blue]{$P_2 (v_1, v_2, 0)$};
                 \draw (1.7,0,1.9) node [color=red]{$\sqrt{v_1^{2}+v_2^{2}}$};
             \end{tikzpicture}
-            \paragraph{} Anhand dieser Graphik lässt sich die Berechnung der Norm eines Vektors $\vv{v}\in\R^3$ verdeutlichen. Für diesen glit: $\text{|}\vv{v}\text{|}=\sqrt{v_1^{2}+v_2^{2}+v_3^{2}}$.
-            \paragraph{} Ein Vektor, dessen Norm 1 beträgt wird als normiert oder Einheitsvektor bezeichnet. Für jeden Vektor $\vv{v}\in\R^{3}$ existiert ein Einheitsvektor $\vv{v^{*}}$ , der folgendermaßen definiert wird: $\vv{v^{*}}=\dfrac{1}{\text{|}\vv{v}\text{|}}*\vv{v}$.
+            \paragraph{} Anhand dieser Graphik lässt sich die Berechnung der Norm eines Vektors $\vv{v}\in\R^3$ verdeutlichen. Für diesen glit:
+            $\text{|}\vv{v}\text{|}=\sqrt{v_1^{2}+v_2^{2}+v_3^{2}}$.
+            \paragraph{} Ein Vektor, dessen Norm 1 beträgt wird als normiert oder Einheitsvektor bezeichnet. Für jeden Vektor $\vv{v}\in\R^{3}$ existiert
+             ein Einheitsvektor $\vv{v^{*}}$ , der folgendermaßen definiert wird: $\vv{v^{*}}=\dfrac{1}{\text{|}\vv{v}\text{|}}*\vv{v}$.
 
 \section{Basen und Erzeugendensystem}
-    \paragraph{} Eine endliche Anzahl von Vektoren $\vv{a_1},\vv{a_2},...,\vv{a_n}\in V$ heißt Erzeugendensystem, wenn sich \texbf{jeder} Vektor $\vv{v}\in V$ als Linearkombination dieser Vektoren schreiben lässt. Um ein Erzeugendensystem zu bilden benötigt man mindestens die Anzahl Vektoren, die der Anzahl von Dimensionen von $\vv{v}$ entspricht. Wenn man \textbf{genau} diese Anzahl besitzt, spricht man von einer Basis.
+    \paragraph{} Eine endliche Anzahl von Vektoren $\vv{a_1},\vv{a_2},...,\vv{a_n}\in V$ heißt Erzeugendensystem, wenn sich \texbf{jeder} Vektor $\vv{v}\in V$
+     als Linearkombination dieser Vektoren schreiben lässt. Um ein Erzeugendensystem zu bilden benötigt man mindestens die Anzahl Vektoren, die der Anzahl
+      von Dimensionen von $\vv{v}$ entspricht. Wenn man \textbf{genau} diese Anzahl besitzt, spricht man von einer Basis.
     \subsection{Besondere Basen}
         \subsubsection{Orthogonalbasis}
         \paragraph{} Sind die Vektoren der Basis paarweise orthogonal zueinander, so spricht man von einer \textbf{Orthogonalbasis}.
         \subsubsection{Orthonormalbasis}
-        \paragraph{} Sind die Vektoren zusätzlich zu dieser Bedingung normiert, wird sie als \textbf{Orthonormalbasis} bezeichnet. Die einfachste und meist benutzte Basis des $\R^3$ besteht aus den drei Vektoren $\vv{e_1}=\left(\begin{array}{c}{1\\0\\0}\end{array}\right),\vv{e_2}=\left(\begin{array}{c}{0\\1\\0}\end{array}\right),\vv{e_3}=\left(\begin{array}{c}{0\\0\\1}\end{array}\right)$. Sie wird als \textbf{Standardbasis} des $\R^3$ bezeichnet. Vektoren wie $\vv{v}=\left(\begin{array}{c}{2\\3\\8}\end{array}\right)$ lassen sich als eine Linearkombination der drei Vektoren der Standardbasis darstellen: $\vv{v}=2\cdot\vv{e_1}+3\cdot\vv{e_2}+8\cdot\vv{e_3}$.
+        \paragraph{} Sind die Vektoren zusätzlich zu dieser Bedingung normiert, wird sie als \textbf{Orthonormalbasis} bezeichnet.
+        Die einfachste und meist benutzte Basis des $\R^3$ besteht aus den drei Vektoren $\vv{e_1}=\left(\begin{array}{c}{1\\0\\0}\end{array}\right),
+        \vv{e_2}=\left(\begin{array}{c}{0\\1\\0}\end{array}\right),\vv{e_3}=\left(\begin{array}{c}{0\\0\\1}\end{array}\right)$. Sie wird als \textbf{Standardbasis}
+        des $\R^3$ bezeichnet. Vektoren wie $\vv{v}=\left(\begin{array}{c}{2\\3\\8}\end{array}\right)$ lassen sich als eine Linearkombination der drei
+         Vektoren der Standardbasis darstellen: $\vv{v}=2\cdot\vv{e_1}+3\cdot\vv{e_2}+8\cdot\vv{e_3}$.
     \subsection{Basistransformation}
 
-        \paragraph{} Bilden die Vektoren $\vv{a_1},\vv{a_2},...,\vv{a_n}$ eine Basis des $n$-dimensionalen Vektorraums $V$ und sei der Vektor $\vv{v}=\left(\begin{array}{c}{v_1\\v_2\\...\\v_n}\end{array}\right);\vv{v}\in V$. Dann gilt wie üblich: $\vv{v}=v_1\cdot\vv{a_1}+v_2\cdot\vv{a_2}+...+v_n\cdot\vv{a_n}$. Sei eine weitere Basis $\vv{b_1},\vv{b_2},...,\vv{b_n}$ des selben Vektorraumes, so besitzt der Vektor $\vv{v}$ andere Koordinaten: $\vv{v}=\left(\begin{array}{c}{v'_1\\v'_2\\...\\v'_n}\end{array}\right)$. Dabei muss gelten: $\vv{v}=v_1\cdot\vv{a_1}+v_2\cdot\vv{a_2}+...+v_n\cdot\vv{a_n}=v'_1\cdot\vv{b_1}+v'_2\cdot\vv{b_2}+...+v'_n\cdot\vv{b_n}$.
+        \paragraph{} Bilden die Vektoren $\vv{a_1},\vv{a_2},...,\vv{a_n}$ eine Basis des $n$-dimensionalen Vektorraums $V$ und sei der Vektor
+         $\vv{v}=\left(\begin{array}{c}{v_1\\v_2\\...\\v_n}\end{array}\right);\vv{v}\in V$. Dann gilt wie üblich:
+         $\vv{v}=v_1\cdot\vv{a_1}+v_2\cdot\vv{a_2}+...+v_n\cdot\vv{a_n}$. Sei eine weitere Basis $\vv{b_1},\vv{b_2},...,\vv{b_n}$ des selben Vektorraumes,
+          so besitzt der Vektor $\vv{v}$ andere Koordinaten: $\vv{v}=\left(\begin{array}{c}{v'_1\\v'_2\\...\\v'_n}\end{array}\right)$.
+          Dabei muss gelten: $\vv{v}=v_1\cdot\vv{a_1}+v_2\cdot\vv{a_2}+...+v_n\cdot\vv{a_n}=v'_1\cdot\vv{b_1}+v'_2\cdot\vv{b_2}+...+v'_n\cdot\vv{b_n}$.
 
         \begin{Bemerkung}
             Um die Koordinaten eines Vektors in einer anderen Basis als der Aktuellen zu bestimmen, löst man diese Gleichung, die sich ergibt.
         \end{Bemerkung}
 
         \begin{Beispiel}
-            Basis 1: Standardbasis des $\R^3$, Basis 2: $\vv{b_1}=\left(\begin{array}{c}{4\\9\\-1}\end{array}\right), \vv{b_2}=\left(\begin{array}{c}{-2\\-2\\8}\end{array}\right), \vv{b_3}=\left(\begin{array}{c}{1\\3\\1}\end{array}\right)$, Vektor $\vv{v}=\left(\begin{array}{c}{-5\\3\\2}\end{array}\right)$ (in der Standardbasis des $\R^3$)
+            Basis 1: Standardbasis des $\R^3$, Basis 2:
+            $\vv{b_1}=\left(\begin{array}{c}{4\\9\\-1}\end{array}\right), \vv{b_2}=\left(\begin{array}{c}{-2\\-2\\8}\end{array}\right),
+            \vv{b_3}=\left(\begin{array}{c}{1\\3\\1}\end{array}\right)$, Vektor $\vv{v}=\left(\begin{array}{c}{-5\\3\\2}\end{array}\right)$ (in der Standardbasis des $\R^3$)
             \\
             $\vv{v}=-5\cdot\vv{a_1}+3\cdot\vv{a_2}+2\cdot\vv{a_3}=r\cdot\vv{b_1}+s\cdot\vv{b_2}+t\cdot\vv{b_3}$
             $\Leftrightarrow \begin{vmatrix}4r & -2s & t & = & -5 \\
@@ -104,7 +121,8 @@
             \\
             \mathbb{L}=\{ -15.2|-6.9|42 \}$
             \\
-            Daraus lässt sich folgern: $\vv{v}=-15.2\cdot\vv{b_1}-6.9\cdot\vv{b_2}+42\cdot\vv{b_3}=\left(\begin{array}{c}{-15.2\\-6.9\\42}\end{array}\right)$ (in der anderen Basis).
+            Daraus lässt sich folgern: $\vv{v}=-15.2\cdot\vv{b_1}-6.9\cdot\vv{b_2}+42\cdot\vv{b_3}=\left(\begin{array}{c}{-15.2\\-6.9\\42}\end{array}\right)$
+             (in der anderen Basis).
             \\
 
         \end{Beispiel}
@@ -113,12 +131,17 @@
 \section{Winkel zwischen Vektoren}
 
     \begin{Definition}
-        \paragraph{} Unter einem Winkel zwischen zwei Vektoren versteht man den Winkel, der ensteht, wenn man beide Vektoren an einen \textbf{gemeinsamen Startpunkt} verschiebt (meistens O(0|0|0)).
+        \paragraph{} Unter einem Winkel zwischen zwei Vektoren versteht man den Winkel, der ensteht, wenn man beide Vektoren an einen \textbf{gemeinsamen Startpunkt} verschiebt
+        (meistens O(0|0|0)).
     \end{Definition}
 
     \subsection{Orientierte Winkel}
 
-        \begin{minipage}{0.5\textwidth}\paragraph{} Wenn man in der Mathematik mit Winkeln arbeitet, werden sie immer im \textbf{mathematisch positiven} Sinn angegeben. Dies bedeutet, dass man von einem Vektor oder Schenkel, der an den Winkel grenzt, ausgeht und über Rotation um den Schnittpunkt \glqq gegen den Uhrzeigersinn\grqq zum anderen gelangt, bis beide übereinanderliegen (wenn man davon ausgeht, dass sich beide schneiden). So ergibt sich $\alpha = \angle ABC = \angle ac = (\vv{BA},\vv{BC}) = \frac{\pi}{3}$
+        \begin{minipage}{0.5\textwidth}\paragraph{}
+             Wenn man in der Mathematik mit Winkeln arbeitet, werden sie immer im \textbf{mathematisch positiven} Sinn angegeben.
+             Dies bedeutet, dass man von einem Vektor oder Schenkel, der an den Winkel grenzt, ausgeht und über Rotation um den Schnittpunkt \glqq gegen
+             den Uhrzeigersinn\grqq zum anderen gelangt, bis beide übereinanderliegen (wenn man davon ausgeht, dass sich beide schneiden).
+             So ergibt sich $\alpha = \angle ABC = \angle ac = (\vv{BA},\vv{BC}) = \frac{\pi}{3}$
         \end{minipage}
         \begin{minipage}{0.5\textwidth}\paragraph{}
             \definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
@@ -144,7 +167,10 @@
         \end{minipage}
 
         \\
-        \begin{minipage}{0.5\textwidth}\paragraph{} Ein Winkel $\alpha$ wird zudem immer so angegeben, dass $\alpha\in I; I = [-\pi,\pi]$ gilt. Dies bedeutet, dass man nur Winkel zwischen $0°$ und $180°$ erhält, und das in beide \glqq Richtungen\grqq, als im mathematisch positiven und negativen Sinn. Diese Einschränkung kennzeichnet man mit dem Ausdruck \glqq \textbf{modulo $2\pi$}\grqq.
+        \begin{minipage}{0.5\textwidth}\paragraph{}
+            Ein Winkel $\alpha$ wird zudem immer so angegeben, dass $\alpha\in I; I = [-\pi,\pi]$ gilt.
+            Dies bedeutet, dass man nur Winkel zwischen $0°$ und $180°$ erhält, und das in beide \glqq Richtungen\grqq, als im mathematisch positiven und negativen Sinn.
+            Diese Einschränkung kennzeichnet man mit dem Ausdruck \glqq \textbf{modulo $2\pi$}\grqq.
         \end{minipage}
         \begin{minipage}{0.5\textwidth}
             \definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
@@ -172,7 +198,9 @@
 
     \subsection{Rechnungen mit Winkeln}
 
-        \paragraph{} Bei Berechnungen von Winkeln zwischen Vektoren geht man genau wie in der elementaren Geometrie vor. So wird die Differenz zwischen zwei Winkeln $\theta_{1}$ und $\theta_{2}$ wie gehabt berechnet: $\Delta\theta = \theta_{1} - \theta{2}$. Jedoch benötigt man weitere Rechenregeln, um mit Winkeln rechnen zu können.
+        \paragraph{} Bei Berechnungen von Winkeln zwischen Vektoren geht man genau wie in der elementaren Geometrie vor.
+         So wird die Differenz zwischen zwei Winkeln $\theta_{1}$ und $\theta_{2}$ wie gehabt berechnet: $\Delta\theta = \theta_{1} - \theta{2}$.
+         Jedoch benötigt man weitere Rechenregeln, um mit Winkeln rechnen zu können.
         \\
         \begin{Theorem}
             \underline{Relation de Chasles}: \\\\
@@ -288,12 +316,17 @@
 
 \section{Linearkombination}
 
-    \paragraph{} Vektoren lassen sich allgemein mit der additiven Verknüpfung des Vektorraums verknüpfen. Diese Verknüpfung zwischen zwei beliebigen Vektoren $\vv{v}$ und $\vv{u}$ erfolgt, wie auch schon im Teil Verbindungsvektor gezeigt wird, wie folgt: $\vv{v}+\vv{u}=\left(\begin{array}{c}{v_1+u_1 \\ v_2+u_2 \\ ... \\ v_n+u_n}\end{array}\right)$.
+    \paragraph{} Vektoren lassen sich allgemein mit der additiven Verknüpfung des Vektorraums verknüpfen.
+    Diese Verknüpfung zwischen zwei beliebigen Vektoren $\vv{v}$ und $\vv{u}$ erfolgt, wie auch schon im Teil Verbindungsvektor gezeigt wird, wie folgt:
+    $\vv{v}+\vv{u}=\left(\begin{array}{c}{v_1+u_1 \\ v_2+u_2 \\ ... \\ v_n+u_n}\end{array}\right)$.
     \\
     \begin{Definition}
-        Eine Familie von Vektoren $\vv{a_1},\vv{a_2},...,\vv{a_n}\in V$ wird als linear abhängig bezeichnet, wenn die Gleichung: \\$r_1\cdot\vv{a_1}+r_2\cdot\vv{a_2}+...+r_n\cdot\vv{a_n}=\vv{0};r_i\in\R$ nicht nur die triviale Lösung $r_1=r_2=...=r_n=0$ besitzt. Existiert nur diese Lösung, ist die Familie linear unabhägig.
+        Eine Familie von Vektoren $\vv{a_1},\vv{a_2},...,\vv{a_n}\in V$ wird als linear abhängig bezeichnet, wenn die Gleichung:
+         \\$r_1\cdot\vv{a_1}+r_2\cdot\vv{a_2}+...+r_n\cdot\vv{a_n}=\vv{0};r_i\in\R$ nicht nur die triviale Lösung $r_1=r_2=...=r_n=0$ besitzt.
+         Existiert nur diese Lösung, ist die Familie linear unabhägig.
     \end{Definition}
-    \paragraph{} Anders gesagt, ist eine Familie von Vektoren linear abhängig, wenn sich einzelne Vektoren dieser Familie als Linearkombination von einer beliebigen Anzahl anderer Vektoren der Familie darstellen lassen.
+    \paragraph{} Anders gesagt, ist eine Familie von Vektoren linear abhängig, wenn sich einzelne Vektoren dieser Familie als Linearkombination von
+    einer beliebigen Anzahl anderer Vektoren der Familie darstellen lassen.
     \begin{Bemerkung}
         Eine linear abhängige Familie \textbf{aus genau zwei} Vektoren wird als kollinear bezeichnet.
         \\
@@ -303,7 +336,10 @@
 \section{Skalarprodukt}
 
     \begin{minipage}{0.5\textwidth}
-        \paragraph{} Das Skalarprodukt ist (eine ?) multiplikative Verknüpfung des Vektorraums. Ihr Ergebnis ist ein Skalar ($S\in\R$) und wird aus der Multiplikation der Beträge der Anteile von zwei beliebigen Vektoren $\vv{v}$ und $\vv{u}$ auf einer beliebigen Achse $l\in E,E=\vv{q}+r\cdot\vv{v}+s\cdot\vv{u};r,s\in\R,Q\in E$. Somit ensteht folgende Formel: $\vv{v}\odot\vv{u}=|\vv{v}|\cdot|\vv{u}|\cdot\cos(\alpha);\alpha=(\vv{v},\vv{u})$.
+        \paragraph{} Das Skalarprodukt ist (eine ?) multiplikative Verknüpfung des Vektorraums. Ihr Ergebnis ist ein Skalar ($S\in\R$) und wird aus der
+        Multiplikation der Beträge der Anteile von zwei beliebigen Vektoren $\vv{v}$ und $\vv{u}$ auf einer beliebigen Achse
+        $l\in E,E=\vv{q}+r\cdot\vv{v}+s\cdot\vv{u};r,s\in\R,Q\in E$. Somit ensteht folgende Formel:
+        $\vv{v}\odot\vv{u}=|\vv{v}|\cdot|\vv{u}|\cdot\cos(\alpha);\alpha=(\vv{v},\vv{u})$.
     \end{minipage}
     \begin{minipage}{0.05\textwidth}
         \quad
@@ -332,10 +368,31 @@
     \begin{Bemerkung}
         Aus dieser Gleichung folgt: $\cos(\alpha)=\dfrac{\vv{v}\odot\vv{u}}{|\vv{v}|\cdot|\vv{u}|}$.
     \end{Bemerkung}
-    \paragraph{} 
+    \paragraph{} \textbf{Ich weiß net genau, wie ich die andere Formel einführen soll, bzw. diese section im Allgemeinen gestalten soll. Vorschläge sind willkommen.}
 
 \section{Geraden}
+
+    \paragraph{} Eine Gerade ist ein sehr bekannter Bestandteil der elementaren Geometrie. Sie wird gerne dazu verwendet, jungen Menschen die Idee
+    der Unendlichkeit zu übermitteln, oder diese zumindest einzuführen. Bezogen auf die Vektorgeometrie ist sie nichts anderes als ein unendlich langer Vektor,
+     beziehungsweise
+
+
 \section{Ebenen}
+
+\subsection{Darstellungen}
+
+Die Darstellung einer Ebene beinhaltet immer die gleichen Informationen: Ihre \textcolor{blue}{Position} im Raum und ihre \textcolor{red}{Ausrichtung}:\\
+\begin{center}
+\begin{tabular}{@{} *2l @{}}
+\emph{name} & \emph{Darstellung}   \\\midrule
+ Parameterform \qquad \qquad \qquad \qquad \qquad & $E:\vv{x}=\textcolor{blue}{\vv{p}} + t\cdot \textcolor{red}{\vv{u}} + s\cdot \textcolor{red}{\vv{v}} ; \qquad s,t \in \R $    \\ 
+ Koordinatenform \qquad \qquad \qquad \qquad \qquad & $E: \textcolor{red}{a} \cdot x_{1} + \textcolor{red}{b} \cdot x_{2} + \textcolor{red}{c} \cdot x_{3} = \textcolor{blue}{d}$ \\ 
+ Normalenform \qquad \qquad \qquad \qquad \qquad & $E:(\vv{x} - \vv{q}) \cdot \textcolor{red}{\vv{n}} = 0 $\\
+
+\end{tabular}
+\end{center}
+
+
 \section{Kreuzprodukt}
 \section{Spatprodukt}
 \section{Dyadisches Produkt}
