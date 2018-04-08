@@ -204,13 +204,17 @@
         \\
         \begin{Theorem}
             \underline{Relation de Chasles}: \\\\
-            $(\vv{u},\vv{w})+(\vv{w},\vv{v})=(\vv{u},\vv{v});\text{ }modulo\text{ }2\pi$ \\\\
-            \underline{Umformungen}: \\\\
-            $(\vv{u},\vv{v})=-(\vv{v},\vv{u})$ \\
-            $(-\vv{u},-\vv{v})=(\vv{u},\vv{v})$ \\
-            $(\vv{u},\vv{v})=\pi+(-\vv{u},\vv{v})$ \\
-            Aus der ersten und letzten dieser Relationen lässt sich analog dazu bestimmen: \\
-            $(\vv{u},\vv{v})=-(\vv{v},\vv{u})=\pi-(-\vv{v},\vv{u})$
+            $(\vv{u},\vv{w})+(\vv{w},\vv{v})=(\vv{u},\vv{v});\quad modulo\quad 2\pi$ \\\\
+            \underline{Umformungen}: \\
+            \begin{enumerate}[(1)]
+                \item $(\vv{u},\vv{v})=-(\vv{v},\vv{u})\quad$
+                \item $(-\vv{u},-\vv{v})=(\vv{u},\vv{v})\quad$
+                \item $(\vv{u},\vv{v})=\pi+(-\vv{u},\vv{v})\quad$
+            \end{enumerate}
+                Aus der ersten und letzten dieser Relationen lässt sich analog dazu bestimmen:
+            \begin{enumerate}[(4)]
+                \item $(\vv{u},\vv{v})=-(\vv{v},\vv{u})=\pi-(-\vv{v},\vv{u})\quad$
+            \end{enumerate}
         \end{Theorem}
 
         \\
@@ -337,9 +341,8 @@
 
     \begin{minipage}{0.5\textwidth}
         \paragraph{} Das Skalarprodukt ist (eine ?) multiplikative Verknüpfung des Vektorraums. Ihr Ergebnis ist ein Skalar ($S\in\R$) und wird aus der
-        Multiplikation der Beträge der Anteile von zwei beliebigen Vektoren $\vv{v}$ und $\vv{u}$ auf einer beliebigen Achse
-        $l\in E,E=\vv{q}+r\cdot\vv{v}+s\cdot\vv{u};r,s\in\R,Q\in E$. Somit ensteht folgende Formel:
-        $\vv{v}\odot\vv{u}=|\vv{v}|\cdot|\vv{u}|\cdot\cos(\alpha);\alpha=(\vv{v},\vv{u})$.
+        Multiplikation der Beträge der Anteile von zwei beliebigen Vektoren $\vv{v}$ und $\vv{u}$ auf einer der Achsen, die durch die beiden Vektoren
+        definiert werden, gebildet. Somit ensteht folgende Formel: $\vv{v}\odot\vv{u}=|\vv{v}|\cdot|\vv{u}|\cdot\cos(\alpha);\alpha=(\vv{v},\vv{u})$.
     \end{minipage}
     \begin{minipage}{0.05\textwidth}
         \quad
@@ -368,29 +371,42 @@
     \begin{Bemerkung}
         Aus dieser Gleichung folgt: $\cos(\alpha)=\dfrac{\vv{v}\odot\vv{u}}{|\vv{v}|\cdot|\vv{u}|}$.
     \end{Bemerkung}
-    \paragraph{} \textbf{Ich weiß net genau, wie ich die andere Formel einführen soll, bzw. diese section im Allgemeinen gestalten soll. Vorschläge sind willkommen.}
+    \paragraph{} \textbf{Ich weiß net genau, wie ich die andere Formel einführen soll, bzw. diese section im Allgemeinen gestalten soll.
+     Vorschläge sind willkommen.}
 
 \section{Geraden}
 
-    \paragraph{} Eine Gerade ist ein sehr bekannter Bestandteil der elementaren Geometrie. Sie wird gerne dazu verwendet, jungen Menschen die Idee
-    der Unendlichkeit zu übermitteln, oder diese zumindest einzuführen. Bezogen auf die Vektorgeometrie ist sie nichts anderes als ein unendlich langer Vektor,
-     beziehungsweise
+    \paragraph{} Eine Gerade ist ein sehr bekannter Bestandteil der elementaren Geometrie. Sie wird gerne dafür verwendet, jungen Menschen die Idee
+    der Unendlichkeit zu übermitteln, oder diese zumindest einzuführen. Bezogen auf die Vektorgeometrie ist sie nichts anderes als ein unendlich
+    langer Vektor, beziehungsweise eine Linearkombination aus unendlich vielen (identischen / kollinearen) Vektoren. Somit ergibt sich die eindeutige
+    \textbf{Parameterform} einer Geraden $g$: $g:\vv{x}=\vv{q}+s\cdot\vv{u};s\in\R$. Diese Schreibweise beschreibt die der Geraden zugehürigen
+    Punktmenge. Der Vektor $\vv{q}$ bestimmt die \textbf{Position} der Geraden im Raum und trägt folglich den Namen Stützvektor, wohingegen der Vektor
+    $\vv{u}$ die \textbf{Ausrichtung} der Geraden anzeigt und Richtungsvektor genannt wird.
 
+    \begin{center}
+        \begin{tikzpicture}
+            \draw[->,line width=0.8pt] (-5.5,0,0) -- (5.5,0,0) node[below] {$x_2$};
+            \draw[->,line width=0.8pt] (0,-5.5,0) -- (0,5.5,0) node[right] {$x_3$};
+            \draw[->,line width=0.8pt] (0,0,-8.5) -- (0,0,8.5) node[below] {$x_1$};
+            \foreach  \x in {-5,...,5}
+                \draw[line width=0.8pt] (\x,0.1) -- (\x,-0.1) node[below] {\x};
+        \end{tikzpicture}
+    \end{center}
 
 \section{Ebenen}
 
 \subsection{Darstellungen}
 
-Die Darstellung einer Ebene beinhaltet immer die gleichen Informationen: Ihre \textcolor{blue}{Position} im Raum und ihre \textcolor{red}{Ausrichtung}:\\
-\begin{center}
-\begin{tabular}{@{} *2l @{}}
-\emph{name} & \emph{Darstellung}   \\\midrule
- Parameterform \qquad \qquad \qquad \qquad \qquad & $E:\vv{x}=\textcolor{blue}{\vv{p}} + t\cdot \textcolor{red}{\vv{u}} + s\cdot \textcolor{red}{\vv{v}} ; \qquad s,t \in \R $    \\ 
- Koordinatenform \qquad \qquad \qquad \qquad \qquad & $E: \textcolor{red}{a} \cdot x_{1} + \textcolor{red}{b} \cdot x_{2} + \textcolor{red}{c} \cdot x_{3} = \textcolor{blue}{d}$ \\ 
- Normalenform \qquad \qquad \qquad \qquad \qquad & $E:(\vv{x} - \vv{q}) \cdot \textcolor{red}{\vv{n}} = 0 $\\
-
-\end{tabular}
-\end{center}
+    \paragraph{} Die Darstellung einer Ebene beinhaltet immer die gleichen Informationen: Ihre \textcolor{blue}{Position} im Raum und ihre
+    \textcolor{red}{Ausrichtung}:\\
+    \begin{center}
+        \begin{tabular}{@{} *2l @{}}
+            \emph{Name} & \emph{Darstellung}   \\\midrule
+            Parameterform \qquad \qquad \qquad \qquad \qquad & $E:\vv{x}=\textcolor{blue}{\vv{p}} + t\cdot \textcolor{red}{\vv{u}} + s\cdot \textcolor{red}{\vv{v}} ; \qquad s,t \in \R $    \\
+            Koordinatenform \qquad \qquad \qquad \qquad \qquad & $E: \textcolor{red}{a} \cdot x_{1} + \textcolor{red}{b} \cdot x_{2} + \textcolor{red}{c} \cdot x_{3} = \textcolor{blue}{d}$ \\
+            Normalenform \qquad \qquad \qquad \qquad \qquad & $E:(\vv{x} - \textcolor{blue}{\vv{q}}) \cdot \textcolor{red}{\vv{n}} = 0 $\\
+        \end{tabular}
+    \end{center}
 
 
 \section{Kreuzprodukt}
