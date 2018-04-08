@@ -33,17 +33,17 @@ Folgendes macht die Syntax Pythons aus:\\
 Python verwendet Schleifen und Verzweigungen.\\
 \begin{lstlisting}[language=Python]
 	#Schleifen:
-	for: #(Wiederholung über Elemente einer Sequenz (Zahl, Liste, Zeit...))
+	for: #(Wiederholung ueber Elemente einer Sequenz (Zahl, Liste, Zeit...))
 		#Inhalt der Schleife
 	while: #(Wiederholung, solange ein logischer Ausdruck wahr ist)
 		#Inhalt der Schleife
 
 	#Verzweigungen:
-	if: #(prüft,ob ein logischer Ausdruck wahr ist)
+	if: #(prueft,ob ein logischer Ausdruck wahr ist)
 		#Inhalt der Verzweigung
-	elif: #(prüft,ob ein anderer logischer Ausdruck wahr ist)
+	elif: #(prueft,ob ein anderer logischer Ausdruck wahr ist)
 		#Inhalt der Verzweigung
-	else: #(letzter Fall, tritt ein, wenn keine der obigen Bedingungen erfüllt wurde)
+	else: #(letzter Fall, tritt ein, wenn keine der obigen Bedingungen erfuellt wurde)
 		#Inhalt der Verzweigung
 \end{lstlisting}
 \subsubsection{Beispiel}
@@ -79,11 +79,38 @@ Eine mögliche Umsetung in Python wäre:\\
 	Startwert=1
 	altwert = NS_Tangente(Startwert)
 	Genauigkeit = 0.00001
-	
+
 	while abs(altwert-NS_Tangente(altwert))>Genauigkeit:
 		altwert=NS_Tangente(altwert)
 	print(altwert)
 
 \end{lstlisting}
 \subsubsection{Heron-Verfahren}
-Das
+Es handelt sich hierbei um eine vereinfachte Version des Newton-Rhapson Verfahrens, da es zur Berechnung einer Näherung der Quadratwurzel einer reellen Zahl $a>0$￼ dient.\\
+Man erhält das gewünschte Ergebnis durch die Berechnung der Nullstelle einer Funktion $f(x)=x^{2}-a$. Es gilt also: $f'(x)=2x$.\\
+Durch die Verwendung des Newton-Rhapson Verfahrens erhält man die Iterationsvorschrift:\\
+￼$x_{n+1}=x_{n}-\dfrac{f(x_{n})}{f'(x_{n}}$
+$\Leftrightarrow x_{n+1}=x_{n}-\dfrac{x_{n}^{2}-a}{2x_{n}}=\dfrac{x_{n}^{2}+a}{2x_{n}}=\dfrac{1}{2}(x_{n}+\dfrac{a}{x_{n}})$\\
+Als kluger, ungefähr zutreffender Startwert gilt $x_0=\dfrac{a+1}{2}$\\
+Eine mögliche Umsetung in Python wäre:\\
+
+\begin{lstlisting}[language=Python]
+	a=2															#Muss manuell angegeben werden
+	def fx(x):
+		return x**2-a
+
+	def f_strich(x):
+		return 2*x
+
+	def next_val(wert):
+		return 0.5*(wert+(a/wert))
+
+	Startwert=(a+1)/2
+	altwert = next_val(Startwert)
+	Genauigkeit = 0.00001
+
+	while abs(altwert-next_val(altwert))>Genauigkeit:
+		altwert=next_val(altwert)
+	print(altwert)
+\end{lstlisting}
+Sollte geprüft werden
