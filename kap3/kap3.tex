@@ -12,7 +12,7 @@ Eine Funktion ist stetig an der Stelle $x_{0}$, wenn:
 \item $\lim\limits_{x \rightarrow x_{0}^{\pm}} {f(x)}=f(x_{0})$\\
 \end{enumerate}
 \end{Definition}
-Stetigkeit ist eine lokale Eigenschaft. Die Funktion $f$ hei�t dann stetig, wenn sie an jeder Stelle ihrer Definitionsmenge stetig ist.
+Stetigkeit ist eine lokale Eigenschaft. Die Funktion $f$ hei"st dann stetig, wenn sie an jeder Stelle ihrer Definitionsmenge stetig ist.
 
 \begin{Bemerkung}
 Ist $f$ stetig und $I\subset \R$ ein reelles Intevall, dann ist $f(I)$ ebenfalls ein Intervall. Ist $f$ zudem streng monoton, so ist die Umkehrfunktion $f^{-1}$ ebenfalls stetig.
@@ -32,7 +32,7 @@ Ist $f:[a;b]\Rightarrow$ eine stetige reelle Funktion die auf einem Intervall de
 
 \subsubsection{Stetige Fortsetzungen}
 
-beim Vereinfachen von gebrochenrationalen Funktionen ist Vorsicht geboten, denn eine hebbare Definitionsl�cke ''aufzuheben" ver"andert den Definitionsbereich der Funktion. Die daraus resultierende Funktion wird \textbf{stetige Fortsetzung} genannt.
+beim Vereinfachen von gebrochenrationalen Funktionen ist Vorsicht geboten, denn eine hebbare Definitionsl"ucke ''aufzuheben'' ver"andert den Definitionsbereich der Funktion. Die daraus resultierende Funktion wird \textbf{stetige Fortsetzung} genannt.
 
 
 
@@ -44,10 +44,10 @@ Eine Funktion ist differenzierbar an der Stelle $x_{0} \in D$, wenn der beitseit
 $\lim\limits_{h \rightarrow 0^{+}} {\dfrac{f(x_{0}+h)-f(x_{0})}{h}} = \lim\limits_{h \rightarrow 0^{-}} {\dfrac{f(x_{0}+h)-f(x_{0})}{h}} =f'(x_{0})$\\
 \\
 Dieser Grenzwert ist die \textbf{Ableitung} von $f$ an der Stelle $x_{0}$.\\
-Die Funktion hei�t differenzierbar, wenn sie $\forall x \in D$ differenzierbar ist.\\
+Die Funktion hei"st differenzierbar, wenn sie $\forall x \in D$ differenzierbar ist.\\
 \end{Definition}
 \\
-Die Funktion $f(x)=|x|$ ist nicht differenzierbar, da bei der Stelle $x_{0}=0$ der linksseitige Grenzwert des Differenzenquotienten ($\lim\limits_{h \rightarrow 0^{-}}{f'(x_{0})=-1}$) nicht mit dem rechtsseitigen Grenzwert (1) �bereinstimmt.\\
+Die Funktion $f(x)=\mid x \mid$ ist nicht differenzierbar, da bei der Stelle $x_{0}=0$ der linksseitige Grenzwert des Differenzenquotienten ($\lim\limits_{h \rightarrow 0^{-}}{f'(x_{0})=-1}$) nicht mit dem rechtsseitigen Grenzwert (1) "ubereinstimmt.\\
 
 \subsection{Zusammenhang zwischen Stetigkeit und Differenzierbarkeit}
 
@@ -91,7 +91,7 @@ $
 \begin{array}{rcl}
 \lim\limits_{h \rightarrow 0} {\dfrac{f(x_{0}+h)-f(x_{0})}{h}}&=& \lim\limits_{h \rightarrow 0} { \dfrac{ \dfrac{u(x_{0}+h)} {v(x_{0}+h)}- \dfrac{u(x_{0})}  {v(x_{0})}}  {h}}\\
 &=&\lim\limits_{h \rightarrow 0} {\dfrac{\dfrac {u(x_{0}+h)}{v(x_{0}+h)}-\dfrac {u(x_{0})} {v(x_{0})}}   {h}}\\
-&=&\lim\limits_{h \rightarrow 0} {\dfrac {\dfrac{  u(x_{0}+h)v(x_{0})}{v(x_{0}+h)v(x_{0})}   -\dfrac{u(x_{0})v(x_{0}+h)}{v(x_{0}v(x_{0}+h))}} {h}}\\
+&=&\lim\limits_{h \rightarrow 0} {\dfrac {\dfrac{  u(x_{0}+h)v(x_{0})}{v(x_{0}+h)v(x_{0})}   -\dfrac{u(x_{0})v(x_{0}+h)}{v(x_{0})v(x_{0}+h))}} {h}}\\
 &=&\lim\limits_{h \rightarrow 0} {\dfrac     {u(x_{0}+h)v(x_{0})-u(x_{0})v(x_{0}+h)}    {v(x_{0}+h)v(x_{0})h }}\\
 &=&\lim\limits_{h \rightarrow 0} {\dfrac {u(x_{0}+h)v(x_{0}) \textcolor{red}{-u(x_{0})v(x_{0})} -u(x_{0})v(x_{0}+h) \textcolor{red}{+u(x_{0})v(x_{0})}}  {v(x_{0}+h)v(x_{0})h}   }\\
 &=&\lim\limits_{h \rightarrow 0} {\dfrac   {\dfrac{u(x_{0}+h)v(x_{0})-u(x_{0})v(x_{0})}{h}  -   \dfrac{u(x_{0})v(x_{0}+h)-u(x_{0})v(x_{0})} {h} }    {v(x_{0}+h)v(x_{0})}}\\
@@ -145,11 +145,13 @@ Es gibt zwei Arten von Achsenschnittpunkten:
 
 Durch L"osung der Gleichung $f(x)=f(-x)$ findet man heraus ob die Funktion achsensymmetrisch ist.\\
 Zudem ist die Funktion dann achsensymmetrisch, wenn nur gerade Exponenten vorhanden sind.\\
+Die Funktion nennt man \textbf{gerade}.\\
 
 \subsubsection{Symmetrie zum Origo}
 
 Durch L"osung der Gleichung $f(x)=-f(-x)$ findet man heraus ob die Funktion punktsymmetrisch ist.\\
 Zudem ist die Funktion dann punktsymmetrisch, wenn nur ungerade Exponenten vorhanden sind.\\
+Die Funktion nennt man \textbf{ungerade}.\\
 
 
 \subsubsection{Symmetrie zu einem beliebigen Punkt}
@@ -191,12 +193,12 @@ Eine Asymptote ist eine Gerade oder Kurve, die sich dem Graphen einer Funktion i
 \item \textbf{Senkrechte Asymptote}: Hat $f$ an der stelle $x_{0}$ eine Polstelle, und gilt:\\
 \indent \qquad $\lim\limits_{x \rightarrow x_{0^{+}}} f(x) = \pm \infty$\\
 dann ist die Gerade $x=x_{0}$ eine senkrechte Asymptote von $f$.\\
-\item \textbf{Waagerechte Asymptote}: Konvergiert $f$ f"ur $x\rightarrow \infty$ gegen eine reelle Zahl $g\in \R$, das hei�t $\indent \qquad\lim\limits_{x \rightarrow x_{0^{+}}}{f(x)}=g$.\\
+\item \textbf{Waagerechte Asymptote}: Konvergiert $f$ f"ur $x\rightarrow \infty$ gegen eine reelle Zahl $g\in \R$, das hei"st $\indent \qquad\lim\limits_{x \rightarrow x_{0^{+}}}{f(x)}=g$.\\
 Die Gerde $y=g$ ist die \textbf{waagerechte} Asymptote von $f$. Das Gleiche gilt f"ur $\lim\limits_{x \rightarrow -\infty}$.\\
 Bei gebrochenrationalen Funktionen ist dies der Fall, wenn der Z"ahlergrad kleiner (dann ist $g=0$) oder gleich dem Nennergrad $m$ ist.\\
 \item \textbf{Schr"age Asymptote}: Sie ist eine Gerade ($g:\R \rightarrow \R$), der sich $f$ mit $|x|\rightarrow \infty$ beliebig ann"ahert:\\
 \indent \qquad$\lim\limits_{x \rightarrow \infty}{[f(x)-g(x)]}=0$ oder $\lim\limits_{x \rightarrow -\infty}{[f(x)-g(x)]}=0$\\
-Bei einer gebrochenrationalen Funktion ist der ''Fehlergrad''???(wie nennt man das??), das hei�t der Abstand von $g$ zu $f$ durch den Rest der Polynomdivision von Z"ahler mit Nenner gegeben.\\
+Bei einer gebrochenrationalen Funktion ist der ''Fehlergrad'', das hei"st der Abstand von $g$ zu $f$ durch den Rest der Polynomdivision von Z"ahler mit Nenner gegeben.\\
 \item \textbf{Asymptotische Kurven} Indem man in der Definition der schr"agen Asymptote auch Polynome zul"asst, erh"alt man N"aherungskuven, die die gleiche Limesbedingung erf"ullen muss:\\
 \indent \qquad$\lim\limits_{x \rightarrow \infty}{[f(x)-P(x)]}=0$ oder $\lim\limits_{x \rightarrow -\infty}{[f(x)-P(x)]}=0$\\
 Diese begegnen einen bei gebrochenrationalen Funktion mit $n>m+1$.\\
@@ -205,9 +207,36 @@ Diese begegnen einen bei gebrochenrationalen Funktion mit $n>m+1$.\\
 
 \subsection{Monotonie}
 
+\begin{Definition}
+Eine stetige Funktion $f$ mit $a,b\in I \subset D_{f}$ ist :\\
+\begin{enumerate}
+\item ... auf dem Intervall $I$ monoton wachsend, wenn $\forall a < b: f(a)\leq f(b)$ 
+\item ... auf dem Intervall $I$ monoton fallend, wenn $\forall a < b: f(a) \geq f(b)$ \\
+\end{enumerate}
+Wenn die Ordnungsrelation strikt sind, dann wird die Funktion als \textbf{streng monoton} bezeichnet.\\
+Die Funktion $f$ hat eine Ableitungsfunktion $f'$. Falls $f$...
+\begin{enumerate}
+\item monoton wachsend auf $I$ ist, dann ist $f'(x)\geq0$, \quad $\forall x \in I$
+\item monoton fallend auf $I$ ist, dann ist $f'(x)\leq0$, \quad $\forall x \in I$
+\item konstant auf $I$ ist, dann ist $f'(x)=0$, \quad $\forall x \in I$
+\end{enumerate}
+Beim Aufstellen der Monotonietabelle sind Definitinsl"ucken zu beachten.\\
+\\
+Es handelt sich dabei um eine Tabelle, die die Definitionsmenge in Intervalle mit monotonen Steigungsverhalten unterteilt wird. Das Monotonieverhalten ver"andert sich an Extrem-, Wende- oder Polstellen.\\
+\end{Definition}
+\begin{Bemerkung}
+$f$ sei eine Funktion...
+\begin{description}
+\item[$\bullet$] dann ist die Zahl $S$ obere Schranke, wenn $\forall x : f(x)\leq S$. $f$ hei"st in diesem Fall nach oben beschr"ankt. Die in diesem Fall kleinstm"ogliche Zahl wird \textbf{Supremum} genannt: sup$f$
+\item[$\bullet$] dann ist die Zahl $s$ untere Schranke, wenn $\forall x : f(x) \geq s$. $f$ ist in diesem Fall nach unten beschr"ankt. Die in diesem Fall gr"o"stm"ogliche Zahl wird \textbf{Infimum} genannt: inf$f$
+\end{description}
+\end{Bemerkung}
 \subsection{Extremstellen}
 
 \subsection{Wendestellen}
+
+\subsection{Umkehrbarkeit??}
+
 
 \subsection{Beispiel}
 
@@ -226,3 +255,13 @@ Hier ist die Kurvenschar der Funktion\\ $f(x)=ax^3$. Sie verlaufen alle durch da
 \begin{minipage}[b]{0.4\linewidth}
 \includegraphics[height=12\baselineskip]{kap3/BundelFunktionenscharen.eps}
 \end{minipage}
+
+\subsection{Beispiel}
+
+\begin{tabular}{@{} *5l @{}}    \toprule
+\emph{name} & \emph{foo} &&&  \\\midrule
+Models    & A  & B  & C  & D  \\ 
+ Model $X$ & X1 & X2 & X3 & X4\\ 
+ Model $Y$ & Y1 & Y2 & Y3 & Y4\\\bottomrule
+ \hline
+\end{tabular}
