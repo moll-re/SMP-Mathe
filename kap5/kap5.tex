@@ -379,17 +379,29 @@
     \paragraph{} Eine Gerade ist ein sehr bekannter Bestandteil der elementaren Geometrie. Sie wird gerne dafür verwendet, jungen Menschen die Idee
     der Unendlichkeit zu übermitteln, oder diese zumindest einzuführen. Bezogen auf die Vektorgeometrie ist sie nichts anderes als ein unendlich
     langer Vektor, beziehungsweise eine Linearkombination aus unendlich vielen (identischen / kollinearen) Vektoren. Somit ergibt sich die eindeutige
-    \textbf{Parameterform} einer Geraden $g$: $g:\vv{x}=\vv{q}+s\cdot\vv{u};s\in\R$. Diese Schreibweise beschreibt die der Geraden zugehürigen
-    Punktmenge. Der Vektor $\vv{q}$ bestimmt die \textbf{Position} der Geraden im Raum und trägt folglich den Namen Stützvektor, wohingegen der Vektor
-    $\vv{u}$ die \textbf{Ausrichtung} der Geraden anzeigt und Richtungsvektor genannt wird.
+    \textbf{Parameterform} einer Geraden $g$: $g:\vv{x}=\textcolor{blue}{\vv{q}}+s\cdot\textcolor{red}{\vv{u}};s\in\R$. Diese Schreibweise beschreibt die der Geraden zugehörigen
+    Punktmenge. Der Vektor $\vv{q}$ bestimmt die \textcolor{blue}{Position} der Geraden im Raum und trägt folglich den Namen Stützvektor, wohingegen der Vektor
+    $\vv{u}$ die \textcolor{red}{Ausrichtung} der Geraden anzeigt und Richtungsvektor genannt wird.
 
     \begin{center}
-        \begin{tikzpicture}
-            \draw[->,line width=0.8pt] (-5.5,0,0) -- (5.5,0,0) node[below] {$x_2$};
-            \draw[->,line width=0.8pt] (0,-5.5,0) -- (0,5.5,0) node[right] {$x_3$};
-            \draw[->,line width=0.8pt] (0,0,-8.5) -- (0,0,8.5) node[below] {$x_1$};
-            \foreach  \x in {-5,...,5}
-                \draw[line width=0.8pt] (\x,0.1) -- (\x,-0.1) node[below] {\x};
+        \begin{tikzpicture}[>=triangle 45]
+            \draw [->,line width=0.8pt] (-5.5,0,0) -- (5.5,0,0) node[below] {$x_2$};
+            \draw [->,line width=0.8pt] (0,-5.5,0) -- (0,5.5,0) node[right] {$x_3$};
+            \draw [->,line width=0.8pt] (0,0,-8.5) -- (0,0,8.5) node[below] {$x_1$};
+            \foreach  \x in {-5,...,-1,1,2,...,5}
+                \draw [line width=0.8pt] (\x,0.1,0) -- (\x,-0.1,0) node[below] {\x};
+            \foreach  \x in {-5,...,-1,1,2,...,5}
+                \draw [line width=0.8pt] (-0.1,\x,0) -- (0.1,\x,0) node[right] {\x};
+            \foreach  \x in {-7,...,-1,1,2,...,7}
+                \draw [line width=0.8pt] (0,0.1,\x) -- (0,-0.1,\x) node[below] {\x};
+            \draw [line width=0.8pt] (-0.25,0.25) node {O};
+            \draw [->,line width=0.8pt,color=blue] (0,0,0) -- (3,4,4);
+            \draw [->,line width=0.8pt,color=red] (3,4,4) -- (5,2,-1);
+            \draw [,line width=0.8pt,color=red,dashed] (1,6,9) -- (3,4,4);
+            \draw [,line width=0.8pt,color=red,dashed] (5,2,-1) -- (7,0,-6);
+            \draw [line width=0.8pt,color=blue] (0.5,1.5) node {$\vv{q}$};
+            \draw [line width=0.8pt,color=red] (3.5,2.75) node {$\vv{u}$};
+            \draw [line width=0.8pt] (6,2.65) node {$g$};
         \end{tikzpicture}
     \end{center}
 
@@ -403,7 +415,7 @@
         \begin{tabular}{@{} *2l @{}}
             \emph{Name} & \emph{Darstellung}   \\\midrule
             Parameterform \qquad \qquad \qquad \qquad \qquad & $E:\vv{x}=\textcolor{blue}{\vv{p}} + t\cdot \textcolor{red}{\vv{u}} + s\cdot \textcolor{red}{\vv{v}} ; \qquad s,t \in \R $    \\
-            Koordinatenform \qquad \qquad \qquad \qquad \qquad & $E: \textcolor{red}{a} \cdot x_{1} + \textcolor{red}{b} \cdot x_{2} + \textcolor{red}{c} \cdot x_{3} = \textcolor{blue}{d}$ \\
+            Koordinatenform \qquad \qquad \qquad \qquad \qquad & $E: \textcolor{red}{a} \cdot x_{1} + \textcolor{red}{b} \cdot x_{2} + \textcolor{red}{c} \cdot x_{3} = \textcolor{blue}{d} ; \qquad d \in \R $ \\
             Normalenform \qquad \qquad \qquad \qquad \qquad & $E:(\vv{x} - \textcolor{blue}{\vv{q}}) \cdot \textcolor{red}{\vv{n}} = 0 $\\
         \end{tabular}
     \end{center}
