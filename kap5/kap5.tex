@@ -144,62 +144,59 @@
              So ergibt sich $\alpha = \angle ABC = \angle ac = (\vv{BA},\vv{BC}) = \frac{\pi}{3}$
         \end{minipage}
         \begin{minipage}{0.5\textwidth}\paragraph{}
-            \definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
-            \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+            \definecolor{qqwuqq}{rgb}{0,0.4,0}
+            \definecolor{ududff}{rgb}{0.3,0.3,1}
             \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-                \clip(-2.32,-3) rectangle (6.28,6.16);
-                \draw [shift={(-1.66,1.84)},line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (-22.750976342787634:1.2) arc (-22.750976342787634:35.702202191216706:1.2) -- cycle;
-                \draw [shift={(-1.66,1.84)},->,line width=0.8pt,color=qqwuqq] (-22.750976342787634:1.2) arc (-22.750976342787634:35.702202191216706:1.2);
-                \draw [->,line width=0.8pt] (-1.66,1.84)-- (3.6,5.62);
-                \draw [->,line width=0.8pt] (-1.66,1.84)-- (3.92,-0.5);
+                \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (1.29903810568,-0.75) arc (-30:30:1.5) -- cycle;
+                \draw [->,line width=0.8pt,color=qqwuqq] (1.29903810568,-0.75) arc (-30:30:1.5);
+                \draw [->,line width=0.8pt] (0,0) -- (5.19615242271,3);
+                \draw [->,line width=0.8pt] (0,0) -- (5.19615242271,-3);
                 \begin{scriptsize}
-                \draw [fill=ududff] (3.92,-0.5) circle (2.5pt);
-                \draw[color=ududff] (4.06,-0.13) node {$A$};
-                \draw [fill=ududff] (-1.66,1.84) circle (2.5pt);
-                \draw[color=ududff] (-1.52,2.21) node {$B$};
-                \draw [fill=ududff] (3.6,5.62) circle (2.5pt);
-                \draw[color=ududff] (3.74,5.99) node {$C$};
-                \draw[color=qqwuqq] (-0.9,1.9) node {$\alpha$};
-                \draw[color=black,sloped,above] (1.2,4) node {$c$};
-                \draw[color=black,pos=.3,below,sloped] (1.2,0.525) node {$a$};
+                \draw [fill=ududff] (5.19615242271,3) circle (1.5pt);
+                \draw[color=ududff] (5.39615242271,3.2) node {$A$};
+                \draw [fill=ududff] (0,0) circle (1.5pt);
+                \draw[color=ududff] (-0.3,0.1) node {$B$};
+                \draw [fill=ududff] (5.19615242271,-3) circle (1.5pt);
+                \draw[color=ududff] (5.39615242271,-3.2) node {$C$};
+                \draw[color=qqwuqq] (0.9,0) node {$\alpha$};
+                \draw[color=black] (2.59807621135,-1.7) node {$c$};
+                \draw[color=black] (2.59807621135,1.7) node {$a$};
                 \end{scriptsize}
             \end{tikzpicture}
         \end{minipage}
 
         \\
         \begin{minipage}{0.5\textwidth}\paragraph{}
+            \definecolor{ududff}{rgb}{0.3,0.3,1}
+            \definecolor{adadff}{rgb}{0.8,0.8,0}
+            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+                \draw [line width=0.8pt,color=adadff,fill=adadff,fill opacity=0.1] (0,0) -- (1.29903810568,-0.75) arc (-30:30:1.5) -- cycle;
+                \draw [<-,line width=0.8pt,color=adadff] (1.29903810568,-0.75) arc (-30:30:1.5);
+                \draw [->,line width=0.8pt] (0,0) -- (5.19615242271,3);
+                \draw [->,line width=0.8pt] (0,0) -- (5.19615242271,-3);
+                \begin{scriptsize}
+                \draw [fill=ududff] (5.19615242271,3) circle (1.5pt);
+                \draw[color=ududff] (5.39615242271,3.2) node {$A$};
+                \draw [fill=ududff] (0,0) circle (1.5pt);
+                \draw[color=ududff] (-0.3,0.1) node {$B$};
+                \draw [fill=ududff] (5.19615242271,-3) circle (1.5pt);
+                \draw[color=ududff] (5.39615242271,-3.2) node {$C$};
+                \draw[color=qqwuqq] (0.9,0) node {$\alpha$};
+                \draw[color=black] (2.59807621135,-1.7) node {$c$};
+                \draw[color=black] (2.59807621135,1.7) node {$a$};
+                \end{scriptsize}
+            \end{tikzpicture}
+        \end{minipage}
+        \begin{minipage}{0.5\textwidth}\paragraph{}
             Ein Winkel $\alpha$ wird zudem immer so angegeben, dass $\alpha\in I; I = [-\pi,\pi]$ gilt.
             Dies bedeutet, dass man nur Winkel zwischen $0°$ und $180°$ erhält, und das in beide \glqq Richtungen\grqq, als im mathematisch positiven und negativen Sinn.
             Diese Einschränkung kennzeichnet man mit dem Ausdruck \glqq \textbf{modulo $2\pi$}\grqq.
-        \end{minipage}
-        \begin{minipage}{0.5\textwidth}
-            \definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
-            \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
-            \definecolor{qududf}{rgb}{0.3,0.3,0}
-            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-                \clip(-3.32,-1) rectangle (6.28,6.16);
-                \draw [shift={(-1.66,1.84)},line width=0.8pt,color=qududf,fill=qududf,fill opacity=0.10000000149011612] (0,0) -- (-22.750976342787634:1.2) arc (-22.750976342787634:35.702202191216706:1.2) -- cycle;
-                \draw [shift={(-1.66,1.84)},<-,line width=0.8pt,color=qududf] (-22.750976342787634:1.2) arc (-22.750976342787634:35.702202191216706:1.2);
-                \draw [->,line width=0.8pt] (-1.66,1.84)-- (3.6,5.62);
-                \draw [->,line width=0.8pt] (-1.66,1.84)-- (3.92,-0.5);
-                \begin{scriptsize}
-                \draw [fill=ududff] (3.92,-0.5) circle (2.5pt);
-                \draw[color=ududff] (4.06,-0.13) node {$A$};
-                \draw [fill=ududff] (-1.66,1.84) circle (2.5pt);
-                \draw[color=ududff] (-1.52,2.21) node {$B$};
-                \draw [fill=ududff] (3.6,5.62) circle (2.5pt);
-                \draw[color=ududff] (3.74,5.99) node {$C$};
-                \draw[color=qqwuqq] (-0.9,1.9) node {$\alpha$};
-                \draw[color=black,sloped,above] (1.2,4) node {$c$};
-                \draw[color=black,pos=.3,below,sloped] (1.2,0.525) node {$a$};
-                \end{scriptsize}
-            \end{tikzpicture}
         \end{minipage}
 
     \subsection{Rechnungen mit Winkeln}
 
         \paragraph{} Bei Berechnungen von Winkeln zwischen Vektoren geht man genau wie in der elementaren Geometrie vor.
-         So wird die Differenz zwischen zwei Winkeln $\theta_{1}$ und $\theta_{2}$ wie gehabt berechnet: $\Delta\theta = \theta_{1} - \theta{2}$.
+         So wird die Differenz zwischen zwei Winkeln $\theta_{1}$ und $\theta_{2}$ wie gehabt berechnet: $\Delta\theta = \theta_{1} - \theta_{2}$.
          Jedoch benötigt man weitere Rechenregeln, um mit Winkeln rechnen zu können.
         \\
         \begin{Theorem}
@@ -382,8 +379,12 @@
         der Unendlichkeit zu übermitteln, oder diese zumindest einzuführen. Bezogen auf die Vektorgeometrie ist sie nichts anderes als ein unendlich
         langer Vektor, beziehungsweise eine Linearkombination aus unendlich vielen (identischen / kollinearen) Vektoren. Somit ergibt sich die eindeutige
         \textbf{Parameterform} einer Geraden $g$: $g:\vv{x}=\textcolor{blue}{\vv{q}}+s\cdot\textcolor{red}{\vv{u}};s\in\R$. Diese Schreibweise beschreibt die der Geraden zugehörigen
-        Punktmenge. Der Vektor $\vv{q}$ bestimmt die \textcolor{blue}{Position} der Geraden im Raum und trägt folglich den Namen Stützvektor, wohingegen der Vektor
-        $\vv{u}$ die \textcolor{red}{Ausrichtung} der Geraden anzeigt und Richtungsvektor genannt wird.
+        Punktmenge. Der Vektor $\vv{q}$ bestimmt die \textcolor{blue}{Position} der Geraden im Raum und trägt folglich den Namen \textbf{Stützvektor}, wohingegen der Vektor
+        $\vv{u}$ die \textcolor{red}{Ausrichtung} der Geraden anzeigt und \textbf{Richtungsvektor} genannt wird.
+        
+        \paragraph{} Die Parameterform ist die einzige mögliche Darstellungsform einer Geraden im $\R^3$, da ihr Normalvektor nicht eindeutig bestimmt
+        werden kann. Allerdings kann eine Gerade in Koordinatenform durch \textbf{die Schnittmenge zweier Ebenen} beschrieben werden.
+
 
         \begin{center}
             \begin{tikzpicture}[>=triangle 45]
@@ -408,6 +409,8 @@
         \end{center}
 
     \subsection{Lagebeziehungen zwischen Geraden}
+
+
 
     \subsection{Abstand zu einem Punkt}
 
