@@ -381,9 +381,10 @@
         \textbf{Parameterform} einer Geraden $g$: $g:\vv{x}=\textcolor{blue}{\vv{q}}+s\cdot\textcolor{red}{\vv{u}};s\in\R$. Diese Schreibweise beschreibt die der Geraden zugehörigen
         Punktmenge. Der Vektor $\vv{q}$ bestimmt die \textcolor{blue}{Position} der Geraden im Raum und trägt folglich den Namen \textbf{Stützvektor}, wohingegen der Vektor
         $\vv{u}$ die \textcolor{red}{Ausrichtung} der Geraden anzeigt und \textbf{Richtungsvektor} genannt wird.
-        
+
         \paragraph{} Die Parameterform ist die einzige mögliche Darstellungsform einer Geraden im $\R^3$, da ihr Normalvektor nicht eindeutig bestimmt
-        werden kann. Allerdings kann eine Gerade in Koordinatenform durch \textbf{die Schnittmenge zweier Ebenen} beschrieben werden.
+        werden kann. Allerdings kann eine Gerade in Koordinatenform durch \textbf{die Schnittmenge zweier Ebenen} beschrieben werden (siehe auch
+        \glqq 5.7.3 Lagebeziehungen zwischen Ebenen\grqq).
 
 
         \begin{center}
@@ -410,7 +411,44 @@
 
     \subsection{Lagebeziehungen zwischen Geraden}
 
+        \paragraph{} Es gibt bezüglich Geraden vier verschiedene Beziehungen, vorausgesetzt diese befinden sich im $\R^3$. Zwei Geraden $g$ und $h$ können...
+        \begin{enumerate}[]
+            \item \qquad 1) ...parallel...
+            \item \qquad 2) ...identisch...
+            \item \qquad 3) ...windschief...
+        \end{enumerate}
+            ...zueinander sein oder...
+        \begin{enumerate}[]
+            \item \qquad 4) ...sich schneiden
+        \end{enumerate}
 
+        \begin{center}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw [->,line width=0.8pt] (-5.5,0,0) -- (5.5,0,0) node[below] {$x_2$};
+                \draw [->,line width=0.8pt] (0,-5.5,0) -- (0,5.5,0) node[right] {$x_3$};
+                \draw [->,line width=0.8pt] (0,0,-8.5) -- (0,0,8.5) node[below] {$x_1$};
+                \foreach  \x in {-5,...,-1,1,2,...,5}
+                    \draw [line width=0.8pt] (\x,0.1,0) -- (\x,-0.1,0) node[below] {\x};
+                \foreach  \x in {-5,...,-1,1,2,...,5}
+                    \draw [line width=0.8pt] (-0.1,\x,0) -- (0.1,\x,0) node[right] {\x};
+                \foreach  \x in {-7,...,-1,1,2,...,7}
+                    \draw [line width=0.8pt] (0,0.1,\x) -- (0,-0.1,\x) node[below] {\x};
+                \draw [line width=0.8pt] (-0.25,0.25) node {O};
+                \draw [->,line width=0.8pt,color=blue] (0,0,0) -- (3,4,4);
+                \draw [->,line width=0.8pt,color=red] (3,4,4) -- (5,2,-1);
+                \draw [->,line width=0.8pt,color=blue] (0,0,0) -- (6,8,8);
+                \draw [->,line width=0.8pt,color=red] (6,8,8) -- (8,6,3);
+                \draw [,line width=0.8pt,color=red,dashed] (1,6,9) -- (3,4,4);
+                \draw [,line width=0.8pt,color=red,dashed] (5,2,-1) -- (7,0,-6);
+                \draw [,line width=0.8pt,color=red,dashed] (4,10,13) -- (6,8,8);
+                \draw [,line width=0.8pt,color=red,dashed] (8,6,3) -- (10,4,-2);
+                \draw [line width=0.8pt,color=blue] (0.5,1.5) node {$\vv{q}$};
+                \draw [line width=0.8pt,color=red] (3.5,2.75) node {$\vv{u}$};
+                \draw [line width=0.8pt,color=red] (4.5,5.25) node {$\vv{u}$};
+                \draw [line width=0.8pt] (6,2.65) node {$g$};
+                \draw [line width=0.8pt] (7.7,5.15) node {$h$};
+            \end{tikzpicture}
+        \end{center}
 
     \subsection{Abstand zu einem Punkt}
 
