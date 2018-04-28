@@ -377,14 +377,16 @@
         \paragraph{} Eine Gerade ist ein sehr bekannter Bestandteil der elementaren Geometrie. Sie wird gerne dafür verwendet, jungen Menschen die Idee
         der Unendlichkeit zu übermitteln, oder diese zumindest einzuführen. Bezogen auf die Vektorgeometrie ist sie nichts anderes als ein unendlich
         langer Vektor, beziehungsweise eine Linearkombination aus unendlich vielen (identischen / kollinearen) Vektoren. Somit ergibt sich die eindeutige
-        \textbf{Parameterform} einer Geraden $g$: $g:\vv{x}=\textcolor{blue}{\vv{q}}+s\cdot\textcolor{red}{\vv{u}};s\in\R$. Diese Schreibweise beschreibt die der Geraden zugehörigen
-        Punktmenge. Der Vektor $\vv{q}$ bestimmt die \textcolor{blue}{Position} der Geraden im Raum und trägt folglich den Namen \textbf{Stützvektor}, wohingegen der Vektor
-        $\vv{u}$ die \textcolor{red}{Ausrichtung} der Geraden anzeigt und \textbf{Richtungsvektor} genannt wird.
-
-        \paragraph{} Die Parameterform ist die einzige mögliche Darstellungsform einer Geraden im $\R^3$, da ihr Normalvektor nicht eindeutig bestimmt
-        werden kann. Allerdings kann eine Gerade in Koordinatenform durch \textbf{die Schnittmenge zweier Ebenen} beschrieben werden (siehe auch
-        \glqq 5.7.3 Lagebeziehungen zwischen Ebenen\grqq).
-
+        \textbf{Parameterform} einer Geraden $g$: $g:\vv{x}=\textcolor{blue}{\vv{q}}+s\cdot\textcolor{red}{\vv{u}};s\in\R$. Diese Schreibweise beschreibt
+        die der Geraden zugehörigen Punktmenge. Der Vektor $\vv{q}$ bestimmt die \textcolor{blue}{Position} der Geraden im Raum und trägt folglich den
+        Namen \textbf{Stützvektor}, wohingegen der Vektor $\vv{u}$ die \textcolor{red}{Ausrichtung} der Geraden anzeigt und \textbf{Richtungsvektor}
+        genannt wird.
+        \\
+        \begin{Bemerkung}
+            \paragraph{} Die Parameterform ist die einzige mögliche Darstellungsform einer Geraden im $\R^3$, da ihr Normalvektor nicht eindeutig bestimmt
+            werden kann. Im $\R^2$ jedoch ist dies möglich, ähnlich wie für Kreise. Zudem kann eine Gerade in Koordinatenform durch \textbf{die
+            Schnittmenge zweier Ebenen} beschrieben werden (siehe auch\glqq 5.7.3 Lagebeziehungen zwischen Ebenen\grqq).
+        \end{Bemerkung}
 
         \begin{center}
             \begin{tikzpicture}[>=triangle 45]
@@ -530,7 +532,7 @@
         \begin{Definition}
             \paragraph{} Der \textbf{Lotfußpunkt} $L$ einer Geraden $g:\vv{x}=\vv{q}+t\cdot\vv{u};t\in\R$ zu einem Punkt $P\notin g$
             ist definiert durch: $\vv{LP}\odot\vv{u}=0$. Er ist somit der dem Punkt $P$ am nähesten gelegenen Punkt der Gerade $g$ und wird
-            folglich hauptsächlich zur Abstandsberechnung benutzt.
+            folglich hauptsächlich zur Abstandsberechnung genutzt.
         \end{Definition}
 
         \paragraph{} Der Abstand von einer Geraden $g$ zu einem Punkt $P$ ist äquivalent zur \textbf{Norm des Verbindungsvektors $\vv{LP}$}, wobei $L$
@@ -539,6 +541,37 @@
         \\
         \\
         \underline{Orthogonalität}
+            \paragraph{} Da die Norm des Verbindungsvektors gesucht wird, gilt es nun diesen eindeutig zu bestimmen. Folgender Ablauf führt
+            zum Ziel:
+                \begin{enumerate}[1)]
+                    \item Punkt L auf der Geraden $g$ in Abhängigkeit des Faktors des Richtungsvektors bestimmen:
+                    \begin{center}
+                        $\vv{l} = \left(\begin{array}{c}{\textcolor{blue}{q_1}+t\cdot \textcolor{red}{u_1}\\\textcolor{blue}{q_2}+t\cdot \textcolor{red}{u_2}\\\textcolor{blue}{q_3}+t\cdot \textcolor{red}{u_3}}\end{array}\right)$
+                    \end{center}
+                    \item Verbindungsvektor bestimmen:
+                    \begin{center}
+                        $\vv{LP} = \left(\begin{array}{c}{p_1-(\textcolor{blue}{q_1}+t\cdot \textcolor{red}{u_1})\\p_2-(\textcolor{blue}{q_2}+t\cdot \textcolor{red}{u_2})\\p_3-(\textcolor{blue}{q_3}+t\cdot \textcolor{red}{u_3})}\end{array}\right)$
+                    \end{center}
+                    \item $\vv{LP}\odot\vv{u} = 0$ und Gleichung lösen (nach t auflösen):
+                    \begin{align*}
+                        \qquad \qquad 0 &= \textcolor{red}{u_1} \cdot (p_1 - (\textcolor{blue}{q_1} + t\cdot \textcolor{red}{u_1})) + \textcolor{red}{u_2} \cdot (p_2 - (\textcolor{blue}{q_2} + t \cdot \textcolor{red}{u_2})) + \textcolor{red}{u_3} \cdot (p_3 - (\textcolor{blue}{q_3} + t \cdot \textcolor{red}{u_3})) \\
+                        \qquad \qquad \Leftrightarrow t &= \dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}
+                    \end{align*}
+                    \item Verbindungsvektor berechnen:
+                    \begin{center}
+                        $\vv{LP} = \left(\begin{array}{c}{p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1})\\p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2})\\p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3})}\end{array}\right)$
+                    \end{center}
+                    \item Norm des Verbindungsvektors berechnen:
+                    \begin{center}
+                        \begin{equation}
+                            \begin{split}
+                                d(g,P) & =|\vv{LP}| \\
+                                       & = \left|\left(\begin{array}{c}{p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1})\\p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2})\\p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3})}\end{array}\right)\right| \\
+                                       & = \sqrt{(p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + (\textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1}))^2 +  (p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2}))^2 + (p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3}))^2}
+                            \end{split}
+                        \end{equation}
+                    \end{center}
+                \end{enumerate}
         \\
         \underline{Hilfsebene}
         \\
