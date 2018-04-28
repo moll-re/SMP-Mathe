@@ -540,7 +540,7 @@
         gebräuchlicher sind als der dritte.
         \\
         \\
-        \underline{Orthogonalität}
+        \underline{Orthogonalität}:
             \paragraph{} Da die Norm des Verbindungsvektors gesucht wird, gilt es nun diesen eindeutig zu bestimmen. Folgender Ablauf führt
             zum Ziel:
                 \begin{enumerate}[1)]
@@ -554,28 +554,26 @@
                     \end{center}
                     \item $\vv{LP}\odot\vv{u} = 0$ und Gleichung lösen (nach t auflösen):
                     \begin{align*}
-                        \qquad \qquad 0 &= \textcolor{red}{u_1} \cdot (p_1 - (\textcolor{blue}{q_1} + t\cdot \textcolor{red}{u_1})) + \textcolor{red}{u_2} \cdot (p_2 - (\textcolor{blue}{q_2} + t \cdot \textcolor{red}{u_2})) + \textcolor{red}{u_3} \cdot (p_3 - (\textcolor{blue}{q_3} + t \cdot \textcolor{red}{u_3})) \\
-                        \qquad \qquad \Leftrightarrow t &= \dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}
+                        \qquad \qquad \qquad \qquad 0 &= \textcolor{red}{u_1} \cdot (p_1 - (\textcolor{blue}{q_1} + t\cdot \textcolor{red}{u_1})) + \textcolor{red}{u_2} \cdot (p_2 - (\textcolor{blue}{q_2} + t \cdot \textcolor{red}{u_2})) + \textcolor{red}{u_3} \cdot (p_3 - (\textcolor{blue}{q_3} + t \cdot \textcolor{red}{u_3})) \\
+                             \Leftrightarrow t &= \dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}
                     \end{align*}
                     \item Verbindungsvektor berechnen:
                     \begin{center}
                         $\vv{LP} = \left(\begin{array}{c}{p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1})\\p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2})\\p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3})}\end{array}\right)$
                     \end{center}
                     \item Norm des Verbindungsvektors berechnen:
-                    \begin{center}
-                        \begin{equation}
-                            \begin{split}
-                                d(g,P) & =|\vv{LP}| \\
-                                       & = \left|\left(\begin{array}{c}{p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1})\\p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2})\\p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3})}\end{array}\right)\right| \\
-                                       & = \sqrt{(p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + (\textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1}))^2 +  (p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2}))^2 + (p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3}))^2}
-                            \end{split}
-                        \end{equation}
-                    \end{center}
+                    \begin{equation}
+                        \begin{split}
+                            \qquad \qquad \qquad d(g,P) & =|\vv{LP}| \\
+                                                 & = \left|\left(\begin{array}{c}{p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1})\\p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2})\\p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3})}\end{array}\right)\right| \\
+                                                 & = \sqrt{(p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + (\textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1}))^2 +  (p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2}))^2 + (p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3}))^2}
+                        \end{split}
+                    \end{equation}
                 \end{enumerate}
         \\
-        \underline{Hilfsebene}
+        \underline{Hilfsebene}:
         \\
-        \underline{Grenzwertberechnung}
+        \underline{Grenzwertberechnung}:
         \\
         \\
         \begin{Bemerkung}
