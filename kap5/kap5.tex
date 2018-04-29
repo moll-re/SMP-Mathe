@@ -20,6 +20,7 @@
 
             \paragraph{} Der Vektor mit Wert $\left(\begin{array}{c} 0 \\ 0 \\ ...\\0\end{array}\right)$, er hat keine und alle Richtungen zugleich.
             \begin{Bemerkung}
+                \\
                 Er ist somit das neutrale Element der Vektoraddition.
             \end{Bemerkung}
 
@@ -31,7 +32,9 @@
         \subsubsection{Der Gegenvektor}
 
             \paragraph{} Der Gegenvektor zu $\vv{AB}$ ist $\vv{BA}$, definiert als  $-\vv{AB}$.
+            \\
             \begin{Bemerkung}
+                \\
                 Er ist somit das inverse Element der Vektoraddition.
             \end{Bemerkung}
 
@@ -65,18 +68,25 @@
              ein Einheitsvektor $\vv{v^{*}}$ , der folgendermaßen definiert wird: $\vv{v^{*}}=\dfrac{1}{\text{|}\vv{v}\text{|}}*\vv{v}$.
 
 \section{Basen und Erzeugendensystem}
+
     \paragraph{} Eine endliche Anzahl von Vektoren $\vv{a_1},\vv{a_2},...,\vv{a_n}\in V$ heißt Erzeugendensystem, wenn sich \texbf{jeder} Vektor $\vv{v}\in V$
      als Linearkombination dieser Vektoren schreiben lässt. Um ein Erzeugendensystem zu bilden benötigt man mindestens die Anzahl Vektoren, die der Anzahl
       von Dimensionen von $\vv{v}$ entspricht. Wenn man \textbf{genau} diese Anzahl besitzt, spricht man von einer Basis.
+
     \subsection{Besondere Basen}
+
         \subsubsection{Orthogonalbasis}
-        \paragraph{} Sind die Vektoren der Basis paarweise orthogonal zueinander, so spricht man von einer \textbf{Orthogonalbasis}.
+
+            \paragraph{} Sind die Vektoren der Basis paarweise orthogonal zueinander, so spricht man von einer \textbf{Orthogonalbasis}.
+
         \subsubsection{Orthonormalbasis}
-        \paragraph{} Sind die Vektoren zusätzlich zu dieser Bedingung normiert, wird sie als \textbf{Orthonormalbasis} bezeichnet.
-        Die einfachste und meist benutzte Basis des $\R^3$ besteht aus den drei Vektoren $\vv{e_1}=\left(\begin{array}{c}{1\\0\\0}\end{array}\right),
-        \vv{e_2}=\left(\begin{array}{c}{0\\1\\0}\end{array}\right),\vv{e_3}=\left(\begin{array}{c}{0\\0\\1}\end{array}\right)$. Sie wird als \textbf{Standardbasis}
-        des $\R^3$ bezeichnet. Vektoren wie $\vv{v}=\left(\begin{array}{c}{2\\3\\8}\end{array}\right)$ lassen sich als eine Linearkombination der drei
-         Vektoren der Standardbasis darstellen: $\vv{v}=2\cdot\vv{e_1}+3\cdot\vv{e_2}+8\cdot\vv{e_3}$.
+
+            \paragraph{} Sind die Vektoren zusätzlich zu dieser Bedingung normiert, wird sie als \textbf{Orthonormalbasis} bezeichnet.
+            Die einfachste und meist benutzte Basis des $\R^3$ besteht aus den drei Vektoren $\vv{e_1}=\left(\begin{array}{c}{1\\0\\0}\end{array}\right),
+            \vv{e_2}=\left(\begin{array}{c}{0\\1\\0}\end{array}\right),\vv{e_3}=\left(\begin{array}{c}{0\\0\\1}\end{array}\right)$. Sie wird als \textbf{Standardbasis}
+            des $\R^3$ bezeichnet. Vektoren wie $\vv{v}=\left(\begin{array}{c}{2\\3\\8}\end{array}\right)$ lassen sich als eine Linearkombination der drei
+            Vektoren der Standardbasis darstellen: $\vv{v}=2\cdot\vv{e_1}+3\cdot\vv{e_2}+8\cdot\vv{e_3}$.
+
     \subsection{Basistransformation}
 
         \paragraph{} Bilden die Vektoren $\vv{a_1},\vv{a_2},...,\vv{a_n}$ eine Basis des $n$-dimensionalen Vektorraums $V$ und sei der Vektor
@@ -84,8 +94,9 @@
          $\vv{v}=v_1\cdot\vv{a_1}+v_2\cdot\vv{a_2}+...+v_n\cdot\vv{a_n}$. Sei eine weitere Basis $\vv{b_1},\vv{b_2},...,\vv{b_n}$ des selben Vektorraumes,
           so besitzt der Vektor $\vv{v}$ andere Koordinaten: $\vv{v}=\left(\begin{array}{c}{v'_1\\v'_2\\...\\v'_n}\end{array}\right)$.
           Dabei muss gelten: $\vv{v}=v_1\cdot\vv{a_1}+v_2\cdot\vv{a_2}+...+v_n\cdot\vv{a_n}=v'_1\cdot\vv{b_1}+v'_2\cdot\vv{b_2}+...+v'_n\cdot\vv{b_n}$.
-
+        \\
         \begin{Bemerkung}
+            \\
             Um die Koordinaten eines Vektors in einer anderen Basis als der Aktuellen zu bestimmen, löst man diese Gleichung, die sich ergibt.
         \end{Bemerkung}
 
@@ -131,8 +142,8 @@
 \section{Winkel zwischen Vektoren}
 
     \begin{Definition}
-        \paragraph{} Unter einem Winkel zwischen zwei Vektoren versteht man den Winkel, der ensteht, wenn man beide Vektoren an einen \textbf{gemeinsamen Startpunkt} verschiebt
-        (meistens O(0|0|0)).
+        \paragraph{} Unter einem Winkel zwischen zwei Vektoren versteht man den Winkel, der ensteht, wenn man beide Vektoren an einen \textbf{gemeinsamen Startpunkt}
+        verschiebt ohne dabei ihre Ausrichtung zu verändern.
     \end{Definition}
 
     \subsection{Orientierte Winkel}
@@ -146,22 +157,20 @@
         \begin{minipage}{0.5\textwidth}\paragraph{}
             \definecolor{qqwuqq}{rgb}{0,0.4,0}
             \definecolor{ududff}{rgb}{0.3,0.3,1}
-            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-                \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (1.29903810568,-0.75) arc (-30:30:1.5) -- cycle;
-                \draw [->,line width=0.8pt,color=qqwuqq] (1.29903810568,-0.75) arc (-30:30:1.5);
-                \draw [->,line width=0.8pt] (0,0) -- (5.19615242271,3);
-                \draw [->,line width=0.8pt] (0,0) -- (5.19615242271,-3);
-                \begin{scriptsize}
-                \draw [fill=ududff] (5.19615242271,3) circle (1.5pt);
-                \draw[color=ududff] (5.39615242271,3.2) node {$A$};
+            \begin{tikzpicture}[>=triangle 45]
+                \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (1.3,-0.75) arc (-30:30:1.5) -- cycle;
+                \draw [->,line width=0.8pt,color=qqwuqq] (1.3,-0.75) arc (-30:30:1.5);
+                \draw [->,line width=0.8pt] (0,0) -- (5.2,3);
+                \draw [->,line width=0.8pt] (0,0) -- (5.2,-3);
+                \draw [fill=ududff] (5.2,3) circle (1.5pt);
+                \draw[color=ududff] (5.4,3.2) node {$A$};
                 \draw [fill=ududff] (0,0) circle (1.5pt);
                 \draw[color=ududff] (-0.3,0.1) node {$B$};
-                \draw [fill=ududff] (5.19615242271,-3) circle (1.5pt);
-                \draw[color=ududff] (5.39615242271,-3.2) node {$C$};
+                \draw [fill=ududff] (5.2,-3) circle (1.5pt);
+                \draw[color=ududff] (5.4,-3.2) node {$C$};
                 \draw[color=qqwuqq] (0.9,0) node {$\alpha$};
-                \draw[color=black] (2.59807621135,-1.7) node {$c$};
-                \draw[color=black] (2.59807621135,1.7) node {$a$};
-                \end{scriptsize}
+                \draw[color=black] (2.6,-1.7) node {$c$};
+                \draw[color=black] (2.6,1.7) node {$a$};
             \end{tikzpicture}
         \end{minipage}
 
@@ -169,22 +178,20 @@
         \begin{minipage}{0.5\textwidth}\paragraph{}
             \definecolor{ududff}{rgb}{0.3,0.3,1}
             \definecolor{adadff}{rgb}{0.8,0.8,0}
-            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-                \draw [line width=0.8pt,color=adadff,fill=adadff,fill opacity=0.1] (0,0) -- (1.29903810568,-0.75) arc (-30:30:1.5) -- cycle;
-                \draw [<-,line width=0.8pt,color=adadff] (1.29903810568,-0.75) arc (-30:30:1.5);
-                \draw [->,line width=0.8pt] (0,0) -- (5.19615242271,3);
-                \draw [->,line width=0.8pt] (0,0) -- (5.19615242271,-3);
-                \begin{scriptsize}
-                \draw [fill=ududff] (5.19615242271,3) circle (1.5pt);
-                \draw[color=ududff] (5.39615242271,3.2) node {$A$};
+            \begin{tikzpicture}[>=triangle 45]
+                \draw [line width=0.8pt,color=adadff,fill=adadff,fill opacity=0.1] (0,0) -- (1.3,-0.75) arc (-30:30:1.5) -- cycle;
+                \draw [<-,line width=0.8pt,color=adadff] (1.3,-0.75) arc (-30:30:1.5);
+                \draw [->,line width=0.8pt] (0,0) -- (5.2,3);
+                \draw [->,line width=0.8pt] (0,0) -- (5.2,-3);
+                \draw [fill=ududff] (5.2,3) circle (1.5pt);
+                \draw[color=ududff] (5.4,3.2) node {$A$};
                 \draw [fill=ududff] (0,0) circle (1.5pt);
                 \draw[color=ududff] (-0.3,0.1) node {$B$};
-                \draw [fill=ududff] (5.19615242271,-3) circle (1.5pt);
-                \draw[color=ududff] (5.39615242271,-3.2) node {$C$};
+                \draw [fill=ududff] (5.2,-3) circle (1.5pt);
+                \draw[color=ududff] (5.4,-3.2) node {$C$};
                 \draw[color=qqwuqq] (0.9,0) node {$\alpha$};
-                \draw[color=black] (2.59807621135,-1.7) node {$c$};
-                \draw[color=black] (2.59807621135,1.7) node {$a$};
-                \end{scriptsize}
+                \draw[color=black] (2.6,-1.7) node {$c$};
+                \draw[color=black] (2.6,1.7) node {$a$};
             \end{tikzpicture}
         \end{minipage}
         \begin{minipage}{0.5\textwidth}\paragraph{}
@@ -219,99 +226,91 @@
         \\
 
         \begin{minipage}{0.3\textwidth}
-            \definecolor{qqttqq}{rgb}{0.,0.2,0.}
-            \definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
-            \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
-            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-                \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (1,0) arc (0:30:1) -- cycle;
-                \draw [line width=0.8pt,color=qqttqq,fill=qqttqq,fill opacity=0.10000000149011612] (0,0) -- (2,0) arc (0:30:2) -- cycle;
+            \definecolor{qqttqq}{rgb}{0,0.2,0}
+            \definecolor{qqwuqq}{rgb}{0,0.4,0}
+            \definecolor{ududff}{rgb}{0.3,0.3,1}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (1,0) arc (0:30:1) -- cycle;
+                \draw [line width=0.8pt,color=qqttqq,fill=qqttqq,fill opacity=0.1] (0,0) -- (2,0) arc (0:30:2) -- cycle;
                 \draw [->,line width=0.8pt,color=qqwuqq] (1,0) arc (0:30:1);
-                \draw [->,line width=0.8pt] (0.,0.) -- (3.464101615137755,2.);
-                \draw [->,line width=0.8pt] (0.,0.) -- (4.,0.);
+                \draw [->,line width=0.8pt] (0,0) -- (3.46,2);
+                \draw [->,line width=0.8pt] (0,0) -- (4,0);
                 \draw [<-,line width=0.8pt,color=qqttqq] (2,0) arc (0:30:2);
-                \begin{scriptsize}
-                    \draw (-0.4,2) node {(1)};
-                    \draw[color=ududff] (-0.3,0.1) node {$O$};
-                    \draw[color=qqwuqq] (1.7,0.5) node {$\alpha$};
-                    \draw[color=black] (1.6385943541409,1.14344841797704) node {$\vv{v}$};
-                    \draw[color=black] (2.0122376776899444,-0.17617052770941224) node {$\vv{u}$};
-                    \draw[color=qqttqq] (0.6,0.15) node {$\beta$};
-                \end{scriptsize}
+                \draw (-0.4,2) node {(1)};
+                \draw[color=ududff] (-0.3,0.05) node {$O$};
+                \draw[color=qqwuqq] (1.5,0.45) node {$\alpha$};
+                \draw[color=black] (1.64,1.2) node {$\vv{v}$};
+                \draw[color=black] (2,-0.25) node {$\vv{u}$};
+                \draw[color=qqttqq] (0.7,0.15) node {$\beta$};
             \end{tikzpicture}
         \end{minipage}
         \begin{minipage}{0.1\textwidth}
-        \text{        }
+
         \end{minipage}
         \begin{minipage}{0.6\textwidth}
             \definecolor{qqttqq}{rgb}{0,0.2,0}
-            \definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
-            \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
-            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-                \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (1.5,0) arc (0:30:1.5) -- cycle;
-                \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (-1.5,0) arc (180:210:1.5) -- cycle;
+            \definecolor{qqwuqq}{rgb}{0,0.4,0}
+            \definecolor{ududff}{rgb}{0.3,0.3,1}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (1.5,0) arc (0:30:1.5) -- cycle;
+                \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (-1.5,0) arc (180:210:1.5) -- cycle;
                 \draw [->,line width=0.8pt,color=qqwuqq] (1.5,0) arc (0:30:1.5);
-                \draw [->,line width=0.8pt] (0,0) -- (3.464101615137755,2);
+                \draw [->,line width=0.8pt] (0,0) -- (3.46,2);
                 \draw [->,line width=0.8pt] (0,0) -- (4,0);
-                \draw [->,line width=0.8pt] (0,0) -- (-3.464101615137755,-2);
+                \draw [->,line width=0.8pt] (0,0) -- (-3.46,-2);
                 \draw [->,line width=0.8pt] (0,0) -- (-4,0);
                 \draw [->,line width=0.8pt,color=qqwuqq] (-1.5,0) arc (180:210:1.5);
-                \begin{scriptsize}
-                    \draw (-3,1.5) node {(2)};
-                    \draw[color=ududff] (-0.2,0.25) node {$O$};
-                    \draw[color=qqwuqq] (-1,-0.3) node {$\beta$};
-                    \draw[color=black] (1.6385943541409,1.14344841797704) node {$\vv{v}$};
-                    \draw[color=black] (2.0122376776899444,-0.17617052770941224) node {$\vv{u}$};
-                    \draw[color=black] (-1.6385943541409,-1.14344841797704) node {$-\vv{v}$};
-                    \draw[color=black] (-2.0122376776899444,0.17617052770941224) node {$-\vv{u}$};
-                    \draw[color=qqttqq] (1,0.3) node {$\beta$};
-                \end{scriptsize}
+                \draw (-3,1.5) node {(2)};
+                \draw[color=ududff] (-0.1,0.25) node {$O$};
+                \draw[color=qqwuqq] (-1,-0.3) node {$\beta$};
+                \draw[color=black] (1.64,1.2) node {$\vv{v}$};
+                \draw[color=black] (2,-0.25) node {$\vv{u}$};
+                \draw[color=black] (-1.64,-1.2) node {$-\vv{v}$};
+                \draw[color=black] (-2,0.2) node {$-\vv{u}$};
+                \draw[color=qqttqq] (1,0.3) node {$\beta$};
             \end{tikzpicture}
         \end{minipage}
 
         \begin{minipage}{0.5\textwidth}
-            \definecolor{qqttqq}{rgb}{0.,0.2,0.}
-            \definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
-            \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
-            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-                \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (1.5,0) arc (0:30:1.5) -- cycle;
-                \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (0.86602540378,0.5) arc (30:180:1) -- cycle;
+            \definecolor{qqttqq}{rgb}{0,0.2,0}
+            \definecolor{qqwuqq}{rgb}{0,0.4,0}
+            \definecolor{ududff}{rgb}{0.3,0.3,1}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (1.5,0) arc (0:30:1.5) -- cycle;
+                \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (0.87,0.5) arc (30:180:1) -- cycle;
                 \draw [->,line width=0.8pt,color=qqwuqq] (1.5,0) arc (0:30:1.5);
-                \draw [<-,line width=0.8pt,color=qqwuqq] (0.86602540378,0.5) arc (30:180:1);
-                \draw [->,line width=0.8pt] (0,0) -- (3.464101615137755,2);
+                \draw [<-,line width=0.8pt,color=qqwuqq] (0.87,0.5) arc (30:180:1);
+                \draw [->,line width=0.8pt] (0,0) -- (3.46,2);
                 \draw [->,line width=0.8pt] (0,0) -- (4,0);
                 \draw [->,line width=0.8pt] (0,0) -- (-4,0);
-                \begin{scriptsize}
-                    \draw (-3.5,2) node {(3)};
-                    \draw[color=ududff] (-0.25,-0.2) node {$O$};
-                    \draw[color=black] (1.6385943541409,1.14344841797704) node {$\vv{v}$};
-                    \draw[color=black] (2.0122376776899444,-0.17617052770941224) node {$\vv{u}$};
-                    \draw[color=black] (-2.0122376776899444,0.17617052770941224) node {$-\vv{u}$};
-                    \draw[color=qqttqq] (0.8,0.25) node {$\beta$};
-                    \draw[color=qqttqq] (-0.1,0.45) node {$\alpha$};
-                \end{scriptsize}
+                \draw (-3.5,2) node {(3)};
+                \draw[color=ududff] (-0.15,-0.25) node {$O$};
+                \draw[color=black] (1.64,1.2) node {$\vv{v}$};
+                \draw[color=black] (2,-0.25) node {$\vv{u}$};
+                \draw[color=black] (-2,0.2) node {$-\vv{u}$};
+                \draw[color=qqttqq] (1,0.25) node {$\beta$};
+                \draw[color=qqttqq] (-0.1,0.45) node {$\alpha$};
             \end{tikzpicture}
         \end{minipage}
         \begin{minipage}{0.5\textwidth}
-            \definecolor{qqttqq}{rgb}{0.,0.2,0.}
-            \definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
-            \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
-            \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-                \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (1.5,0) arc (0:30:1.5) -- cycle;
-                \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (-0.86602540378,-0.5) arc (210:360:1) -- cycle;
+            \definecolor{qqttqq}{rgb}{0,0.2,0}
+            \definecolor{qqwuqq}{rgb}{0,0.4,0}
+            \definecolor{ududff}{rgb}{0.3,0.3,1}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (1.5,0) arc (0:30:1.5) -- cycle;
+                \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (-0.87,-0.5) arc (210:360:1) -- cycle;
                 \draw [->,line width=0.8pt,color=qqwuqq] (1.5,0) arc (0:30:1.5);
-                \draw [->,line width=0.8pt,color=qqwuqq] (-0.86602540378,-0.5) arc (210:360:1);
-                \draw [->,line width=0.8pt] (0,0) -- (3.464101615137755,2);
+                \draw [->,line width=0.8pt,color=qqwuqq] (-0.87,-0.5) arc (210:360:1);
+                \draw [->,line width=0.8pt] (0,0) -- (3.46,2);
                 \draw [->,line width=0.8pt] (0,0) -- (4,0);
-                \draw [->,line width=0.8pt] (0,0) -- (-3.464101615137755,-2);
-                \begin{scriptsize}
-                    \draw (-3.5,2) node {(4)};
-                    \draw[color=ududff] (-0.25,0.25) node {$O$};
-                    \draw[color=black] (1.6385943541409,1.14344841797704) node {$\vv{v}$};
-                    \draw[color=black] (2.0122376776899444,-0.17617052770941224) node {$\vv{u}$};
-                    \draw[color=black] (-1.6385943541409,-1.14344841797704) node {$-\vv{v}$};
-                    \draw[color=qqttqq] (0.8,0.25) node {$\beta$};
-                    \draw[color=qqttqq] (0.1,-0.45) node {$\alpha$};
-                \end{scriptsize}
+                \draw [->,line width=0.8pt] (0,0) -- (-3.46,-2);
+                \draw (-3.5,2) node {(4)};
+                \draw[color=ududff] (-0.2,0.2) node {$O$};
+                \draw[color=black] (1.64,1.2) node {$\vv{v}$};
+                \draw[color=black] (2,-0.25) node {$\vv{u}$};
+                \draw[color=black] (-1.64,-1.2) node {$-\vv{v}$};
+                \draw[color=qqttqq] (1,0.25) node {$\beta$};
+                \draw[color=qqttqq] (0.1,-0.45) node {$\alpha$};
             \end{tikzpicture}
         \end{minipage}
 
@@ -328,7 +327,9 @@
     \end{Definition}
     \paragraph{} Anders gesagt, ist eine Familie von Vektoren linear abhängig, wenn sich einzelne Vektoren dieser Familie als Linearkombination von
     einer beliebigen Anzahl anderer Vektoren der Familie darstellen lassen.
+    \\
     \begin{Bemerkung}
+        \\
         Eine linear abhängige Familie \textbf{aus genau zwei} Vektoren wird als kollinear bezeichnet.
         \\
         Eine linear abhängige Familie \textbf{aus genau drei} Vektoren, als komplanar.
@@ -337,7 +338,7 @@
 \section{Skalarprodukt}
 
     \begin{minipage}{0.5\textwidth}
-        \paragraph{} Das Skalarprodukt ist (eine ?) multiplikative Verknüpfung des Vektorraums. Ihr Ergebnis ist ein Skalar ($S\in\R$) und wird aus der
+        \paragraph{} Das Skalarprodukt ist eine multiplikative Verknüpfung des Vektorraums. Ihr Ergebnis ist ein Skalar ($S\in\R$) und wird aus der
         Multiplikation der Beträge der Anteile von zwei beliebigen Vektoren $\vv{v}$ und $\vv{u}$ auf einer der Achsen, die durch die beiden Vektoren
         definiert werden, gebildet. Somit ensteht folgende Formel: $\vv{v}\odot\vv{u}=|\vv{v}|\cdot|\vv{u}|\cdot\cos(\alpha);\alpha=(\vv{v},\vv{u})$.
     \end{minipage}
@@ -346,22 +347,20 @@
     \end{minipage}
     \begin{minipage}{0.45\textwidth}
         \definecolor{ffqqqq}{rgb}{1,0,0}
-        \definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+        \definecolor{qqwuqq}{rgb}{0,0.4,0}
         \definecolor{qqqqtt}{rgb}{0,0,0.2}
-        \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
-        \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+        \definecolor{ududff}{rgb}{0.3,0.3,1}
+        \begin{tikzpicture}[>=triangle 45]
             \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (2,-1.5) -- (4,-1.5) arc (0:30:2) -- cycle;
-            \draw [->,line width=0.8pt,color=qqqqtt] (2,-1.5) -- (9,-1.5);
-            \draw [->,line width=0.8pt,color=qqqqtt] (2,-1.5) -- (7.19615242271,1.5);
-            \draw [line width=0.8pt,color=qqqqtt,dashed] (7.19615242271,1.5)-- (7.19615242271,-1.5);
-            \draw [->,line width=0.8pt,color=ffqqqq] (2,-1.5) -- (7.19615242271,-1.5);
-            \begin{scriptsize}
-                \draw[color=ududff] (1.8,-1.3) node {$O$};
-                \draw[color=qqqqtt] (5.5,-1.7) node {$\vv{u}$};
-                \draw[color=qqwuqq] (3.2,-1.15) node {$\alpha$};
-                \draw[color=qqqqtt] (4.59807621135,0.2) node {$\vv{v}$};
-                \draw[color=ffqqqq] (4.59807621135,-1.2) node {$\vv{v'}$};
-            \end{scriptsize}
+            \draw [->,line width=0.8pt,color=qqqqtt] (7.2,-1.5) -- (9,-1.5);
+            \draw [->,line width=0.8pt,color=qqqqtt] (2,-1.5) -- (7.2,1.5);
+            \draw [line width=0.8pt,color=qqqqtt,dashed] (7.2,1.5)-- (7.2,-1.5);
+            \draw [->,line width=0.8pt,color=ffqqqq] (2,-1.5) -- (7.2,-1.5);
+            \draw[color=ududff] (1.8,-1.4) node {$O$};
+            \draw[color=qqqqtt] (5.5,-1.8) node {$\vv{u}$};
+            \draw[color=qqwuqq] (3.2,-1.15) node {$\alpha$};
+            \draw[color=qqqqtt] (4.6,0.25) node {$\vv{v}$};
+            \draw[color=ffqqqq] (4.6,-1.15) node {$\vv{v'}$};
         \end{tikzpicture}
     \end{minipage}
     \\
@@ -378,13 +377,16 @@
         \paragraph{} Eine Gerade ist ein sehr bekannter Bestandteil der elementaren Geometrie. Sie wird gerne dafür verwendet, jungen Menschen die Idee
         der Unendlichkeit zu übermitteln, oder diese zumindest einzuführen. Bezogen auf die Vektorgeometrie ist sie nichts anderes als ein unendlich
         langer Vektor, beziehungsweise eine Linearkombination aus unendlich vielen (identischen / kollinearen) Vektoren. Somit ergibt sich die eindeutige
-        \textbf{Parameterform} einer Geraden $g$: $g:\vv{x}=\textcolor{blue}{\vv{q}}+s\cdot\textcolor{red}{\vv{u}};s\in\R$. Diese Schreibweise beschreibt die der Geraden zugehörigen
-        Punktmenge. Der Vektor $\vv{q}$ bestimmt die \textcolor{blue}{Position} der Geraden im Raum und trägt folglich den Namen \textbf{Stützvektor}, wohingegen der Vektor
-        $\vv{u}$ die \textcolor{red}{Ausrichtung} der Geraden anzeigt und \textbf{Richtungsvektor} genannt wird.
-        
-        \paragraph{} Die Parameterform ist die einzige mögliche Darstellungsform einer Geraden im $\R^3$, da ihr Normalvektor nicht eindeutig bestimmt
-        werden kann. Allerdings kann eine Gerade in Koordinatenform durch \textbf{die Schnittmenge zweier Ebenen} beschrieben werden.
-
+        \textbf{Parameterform} einer Geraden $g$: $g:\vv{x}=\textcolor{blue}{\vv{q}}+s\cdot\textcolor{red}{\vv{u}};s\in\R$. Diese Schreibweise beschreibt
+        die der Geraden zugehörigen Punktmenge. Der Vektor $\vv{q}$ bestimmt die \textcolor{blue}{Position} der Geraden im Raum und trägt folglich den
+        Namen \textbf{Stützvektor}, wohingegen der Vektor $\vv{u}$ die \textcolor{red}{Ausrichtung} der Geraden anzeigt und \textbf{Richtungsvektor}
+        genannt wird.
+        \\
+        \begin{Bemerkung}
+            \paragraph{} Die Parameterform ist die einzige mögliche Darstellungsform einer Geraden im $\R^3$, da ihr Normalvektor nicht eindeutig bestimmt
+            werden kann. Im $\R^2$ jedoch ist dies möglich, ähnlich wie für Kreise. Zudem kann eine Gerade in Koordinatenform durch \textbf{die
+            Schnittmenge zweier Ebenen} beschrieben werden (siehe auch\glqq 5.7.3 Lagebeziehungen zwischen Ebenen\grqq).
+        \end{Bemerkung}
 
         \begin{center}
             \begin{tikzpicture}[>=triangle 45]
@@ -410,9 +412,176 @@
 
     \subsection{Lagebeziehungen zwischen Geraden}
 
+        \paragraph{} Es gibt bezüglich Geraden vier verschiedene Beziehungen, vorausgesetzt diese befinden sich im $\R^3$. Zwei Geraden $g$ und $h$ können...
+        \\
+        \\
+        \begin{left}
+            \quad 1)\text{ } ...\textbf{parallel}...
+        \end{left}
+        \begin{center}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw [line width=0.8pt] (-0.25,0.25) node {O};
+                \draw [->,line width=0.8pt,color=blue] (0,0,0) -- (3,4,4);
+                \draw [->,line width=0.8pt,color=red] (3,4,4) -- (5,2,-1);
+                \draw [->,line width=0.8pt,color=blue] (0,0,0) -- (6,8,8);
+                \draw [->,line width=0.8pt,color=red] (6,8,8) -- (8,6,3);
+                \draw [,line width=0.8pt,color=red,dashed] (1,6,9) -- (3,4,4);
+                \draw [,line width=0.8pt,color=red,dashed] (5,2,-1) -- (7,0,-6);
+                \draw [,line width=0.8pt,color=red,dashed] (4,10,13) -- (6,8,8);
+                \draw [,line width=0.8pt,color=red,dashed] (8,6,3) -- (10,4,-2);
+                \draw [line width=0.8pt,color=blue] (0.5,1.5) node {$\vv{q_1}$};
+                \draw [line width=0.8pt,color=blue] (1.85,3.8) node {$\vv{q_2}$};
+                \draw [line width=0.8pt,color=red] (3.5,2.75) node {$\vv{u_1}$};
+                \draw [line width=0.8pt,color=red] (4.7,5.25) node {$\vv{u_2}$};
+                \draw [line width=0.8pt] (6,2.65) node {$g$};
+                \draw [line width=0.8pt] (7.7,5.15) node {$h$};
+            \end{tikzpicture}
+        \end{center}
 
+        \begin{left}
+            \quad 2)\text{ } ...\textbf{identisch}...
+        \end{left}
+        \begin{center}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw [line width=0.8pt] (-0.25,0.25) node {O};
+                \draw [->,line width=0.8pt,color=blue] (0,0,0) -- (3,4,4);
+                \draw [->,line width=0.8pt,color=blue] (0,0,0) -- (6,1,-3.5);
+                \draw [->,line width=0.8pt,color=red] (3,4,4) -- (5,2,-1);
+                \draw [->,line width=0.8pt,color=red] (6,1,-3.5) -- (7,0,-6);
+                \draw [,line width=0.8pt,color=red,dashed] (1,6,9) -- (3,4,4);
+                \draw [,line width=0.8pt,color=red,dashed] (5,2,-1) -- (6,1,-3.5);
+                \draw [,line width=0.8pt,color=red,dashed] (7,0,-6) -- (8,-1,-8.5);
+                \draw [line width=0.8pt,color=blue] (0.5,1.5) node {$\vv{q_1}$};
+                \draw [line width=0.8pt,color=blue] (3,0.15,-1.75) node {$\vv{q_2}$};
+                \draw [line width=0.8pt,color=red] (3.3,2.75) node {$\vv{u_1}$};
+                \draw [line width=0.8pt,color=red] (6.3,0.7,-5.25) node {$\vv{u_2}$};
+                \draw [line width=0.8pt] (-0.3,2.8) node {$g = h$};
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{left}
+            \quad 3)\text{ } ...\textbf{windschief zueinander}...
+        \end{left}
+        \\
+        \\
+        ...sein oder...
+        \\
+        \\
+        \begin{left}
+            \quad 4)\text{ } ...\textbf{sich schneiden}
+        \end{left}
+        \begin{center}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw [line width=0.8pt] (-0.25,0.25) node {O};
+                \draw [->,line width=0.8pt,color=blue] (0,0,0) -- (3,4,4);
+                \draw [->,line width=0.8pt,color=red] (3,4,4) -- (5,2,-1);
+                \draw [->,line width=0.8pt,color=blue] (0,0,0) -- (4,0,0);
+                \draw [->,line width=0.8pt,color=red] (4,0,0) -- (4,5,0);
+                \draw [,line width=0.8pt,color=red,dashed] (1,6,9) -- (3,4,4);
+                \draw [,line width=0.8pt,color=red,dashed] (5,2,-1) -- (7,0,-6);
+                \draw [,line width=0.8pt,color=red,dashed] (4,-3,0) -- (4,0,0);
+                \draw [,line width=0.8pt,color=red,dashed] (4,5,0) -- (4,8,0);
+                \draw [line width=0.8pt,color=blue] (0.5,1.5) node {$\vv{q_1}$};
+                \draw [line width=0.8pt,color=blue] (2,0.3,0) node {$\vv{q_2}$};
+                \draw [line width=0.8pt,color=red] (3.5,2.75) node {$\vv{u_1}$};
+                \draw [line width=0.8pt,color=red] (4.3,1.8,0) node {$\vv{u_2}$};
+                \draw [line width=0.8pt] (6,2.65) node {$g$};
+                \draw [line width=0.8pt] (4.2,6,0) node {$h$};
+                \draw [line width=0.8pt,color=black,fill=black,fill opacity=0.8] (4,2.42) circle (2pt);
+                \draw [line width=0.8pt,color=black] (4.2,2.7) node {$I$};
+            \end{tikzpicture}
+        \end{center}
+        \\
+        \\
+        \paragraph{} Die Lagebeziehung zwischen zwei Geraden $g$ und $h$ lässt sich wie folgt ermitteln:
+
+        \begin{center}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw (0,0) node{$\exists t\in\R\quad\textcolor{red}{\vv{u_1}} = t\cdot\textcolor{red}{\vv{u_2}}?$};
+                \draw [line width=0.8pt,color=grey] (-5,-0.3) -- (-4,-0.3);
+                \draw [line width=0.8pt,color=grey] (-3.1,-0.3) -- (3.1,-0.3);
+                \draw [line width=0.8pt,color=grey] (4,-0.3) -- (5,-0.3);
+                \draw (-3.55,-0.3) node {$\exists t$};
+                \draw (3.55,-0.3) node {$\nexists t$};
+                \draw [->,line width=0.8pt,color=grey](-5,-0.3) -- (-5,-2) node[below]{$g\parallel h$};
+                \draw [->,line width=0.8pt,color=grey](5,-0.3) -- (5,-2) node[below]{$g\nparallel h$};
+                \draw (-5,-2.8) node{$\textcolor{blue}{Q_1}\in h \lor \textcolor{blue}{Q_2}\in g?$};
+                \draw (5,-2.8) node{$\exists r,s\in\R\quad g = h\quad\Leftrightarrow\quad\textcolor{blue}{\vv{q_1}} + s\cdot\textcolor{red}{\vv{u_1}} = \textcolor{blue}{\vv{q_2}} + r\cdot\textcolor{red}{\vv{u_2}}?$};
+                \draw [line width=0.8pt,color=grey] (-5,-3) -- (-5,-4);
+                \draw [line width=0.8pt,color=grey] (5,-3) -- (5,-4);
+                \draw [line width=0.8pt,color=grey] (-8,-4) -- (-7.6,-4);
+                \draw [line width=0.8pt,color=grey] (-6.9,-4) -- (-3.1,-4);
+                \draw [line width=0.8pt,color=grey] (-2.4,-4) -- (-2,-4);
+                \draw [line width=0.8pt,color=grey] (8,-4) -- (7.75,-4);
+                \draw [line width=0.8pt,color=grey] (6.75,-4) -- (3.25,-4);
+                \draw [line width=0.8pt,color=grey] (2.25,-4) -- (2,-4);
+                \draw (-7.25,-4) node{$\in$};
+                \draw (-2.75,-4) node{$\notin$};
+                \draw (7.25,-4) node{$\nexists r,s$};
+                \draw (2.75,-4) node{$\exists r,s$};
+                \draw [->,line width=0.8pt,color=grey] (-8,-4) -- (-8,-5) node[below]{$g\equiv h$};
+                \draw [->,line width=0.8pt,color=grey] (-2,-4) -- (-2,-5) node[below]{$g\parallel h$};
+                \draw [->,line width=0.8pt,color=grey] (2,-4) -- (2,-5) node[below]{$g\cap h \neq\varnothing$};
+                \draw [->,line width=0.8pt,color=grey] (8,-4) -- (8,-5) node[below]{$g\cap h = \varnothing$};
+
+            \end{tikzpicture}
+        \end{center}
 
     \subsection{Abstand zu einem Punkt}
+
+        \begin{Definition}
+            \paragraph{} Der \textbf{Lotfußpunkt} $L$ einer Geraden $g:\vv{x}=\vv{q}+t\cdot\vv{u};t\in\R$ zu einem Punkt $P\notin g$
+            ist definiert durch: $\vv{LP}\odot\vv{u}=0$. Er ist somit der dem Punkt $P$ am nähesten gelegenen Punkt der Gerade $g$ und wird
+            folglich hauptsächlich zur Abstandsberechnung genutzt.
+        \end{Definition}
+
+        \paragraph{} Der Abstand von einer Geraden $g$ zu einem Punkt $P$ ist äquivalent zur \textbf{Norm des Verbindungsvektors $\vv{LP}$}, wobei $L$
+        der Lotfußpunkt der Geraden $g$ zu $P$ ist. Für die Berechnung des Abstands gibt es drei verschiedene Lösungsansätze (OHG) von denen zwei
+        gebräuchlicher sind als der dritte.
+        \\
+        \\
+        \underline{Orthogonalität}:
+            \paragraph{} Da die Norm des Verbindungsvektors gesucht wird, gilt es nun diesen eindeutig zu bestimmen. Folgender Ablauf führt
+            zum Ziel:
+                \begin{enumerate}[1)]
+                    \item Punkt L auf der Geraden $g$ in Abhängigkeit des Faktors des Richtungsvektors bestimmen:
+                    \begin{center}
+                        $\vv{l} = \left(\begin{array}{c}{\textcolor{blue}{q_1}+t\cdot \textcolor{red}{u_1}\\\textcolor{blue}{q_2}+t\cdot \textcolor{red}{u_2}\\\textcolor{blue}{q_3}+t\cdot \textcolor{red}{u_3}}\end{array}\right)$
+                    \end{center}
+                    \item Verbindungsvektor bestimmen:
+                    \begin{center}
+                        $\vv{LP} = \left(\begin{array}{c}{p_1-(\textcolor{blue}{q_1}+t\cdot \textcolor{red}{u_1})\\p_2-(\textcolor{blue}{q_2}+t\cdot \textcolor{red}{u_2})\\p_3-(\textcolor{blue}{q_3}+t\cdot \textcolor{red}{u_3})}\end{array}\right)$
+                    \end{center}
+                    \item $\vv{LP}\odot\vv{u} = 0$ und Gleichung lösen (nach t auflösen):
+                    \begin{align*}
+                        \qquad \qquad \qquad \qquad 0 &= \textcolor{red}{u_1} \cdot (p_1 - (\textcolor{blue}{q_1} + t\cdot \textcolor{red}{u_1})) + \textcolor{red}{u_2} \cdot (p_2 - (\textcolor{blue}{q_2} + t \cdot \textcolor{red}{u_2})) + \textcolor{red}{u_3} \cdot (p_3 - (\textcolor{blue}{q_3} + t \cdot \textcolor{red}{u_3})) \\
+                             \Leftrightarrow t &= \dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}
+                    \end{align*}
+                    \item Verbindungsvektor berechnen:
+                    \begin{center}
+                        $\vv{LP} = \left(\begin{array}{c}{p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1})\\p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2})\\p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3})}\end{array}\right)$
+                    \end{center}
+                    \item Norm des Verbindungsvektors berechnen:
+                    \begin{equation}
+                        \begin{split}
+                            \qquad \qquad \qquad d(g,P) & =|\vv{LP}| \\
+                                                 & = \left|\left(\begin{array}{c}{p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1})\\p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2})\\p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3})}\end{array}\right)\right| \\
+                                                 & = \sqrt{(p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + (\textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1}))^2 +  (p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2}))^2 + (p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3}))^2}
+                        \end{split}
+                    \end{equation}
+                \end{enumerate}
+        \\
+        \underline{Hilfsebene}:
+        \\
+        \underline{Grenzwertberechnung}:
+        \\
+        \\
+        \begin{Bemerkung}
+            \paragraph{} Zur Abstandsberechnung gibt es eine allgemeine Formel, welche die oben aufgelisteten Vorgehensweisen überflüssig macht. Da sie
+            für das Abitur allerdings nicht zugelassen ist, wird sie hier nicht bewiesen beziehungsweise graphisch ergänzt:
+            $d(g,P) = \dfrac{|\textcolor{red}{\vv{u}}\times\vv{\textcolor{blue}{Q}P}|}{|\textcolor{red}{\vv{u}}|}$.
+        \end{Bemerkung}
+
 
 
 \section{Ebenen}
@@ -444,7 +613,9 @@
 
 
 
-
+\section{Kreise und Kugeln}
+    \subsection{Kreise}
+    \subsection{Kugeln}
 \section{Kreuzprodukt}
 \section{Spatprodukt}
 \section{Dyadisches Produkt}
