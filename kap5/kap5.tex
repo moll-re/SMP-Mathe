@@ -544,37 +544,86 @@
             \paragraph{} Da die Norm des Verbindungsvektors gesucht wird, gilt es nun diesen eindeutig zu bestimmen. Folgender Ablauf führt
             zum Ziel:
                 \begin{enumerate}[1)]
-                    \item Punkt L auf der Geraden $g$ in Abhängigkeit des Faktors des Richtungsvektors bestimmen:
+                    \item \label{a} Punkt L auf der Geraden $g$ in Abhängigkeit des Faktors des Richtungsvektors bestimmen:
                     \begin{center}
                         $\vv{l} = \left(\begin{array}{c}{\textcolor{blue}{q_1}+t\cdot \textcolor{red}{u_1}\\\textcolor{blue}{q_2}+t\cdot \textcolor{red}{u_2}\\\textcolor{blue}{q_3}+t\cdot \textcolor{red}{u_3}}\end{array}\right)$
                     \end{center}
-                    \item Verbindungsvektor bestimmen:
+                    \item \label{b} Verbindungsvektor bestimmen:
                     \begin{center}
                         $\vv{LP} = \left(\begin{array}{c}{p_1-(\textcolor{blue}{q_1}+t\cdot \textcolor{red}{u_1})\\p_2-(\textcolor{blue}{q_2}+t\cdot \textcolor{red}{u_2})\\p_3-(\textcolor{blue}{q_3}+t\cdot \textcolor{red}{u_3})}\end{array}\right)$
                     \end{center}
-                    \item $\vv{LP}\odot\vv{u} = 0$ und Gleichung lösen (nach t auflösen):
+                    \item \label{c} $\vv{LP}\odot\vv{u} = 0$ und Gleichung lösen (nach t auflösen):
                     \begin{align*}
                         \qquad \qquad \qquad \qquad 0 &= \textcolor{red}{u_1} \cdot (p_1 - (\textcolor{blue}{q_1} + t\cdot \textcolor{red}{u_1})) + \textcolor{red}{u_2} \cdot (p_2 - (\textcolor{blue}{q_2} + t \cdot \textcolor{red}{u_2})) + \textcolor{red}{u_3} \cdot (p_3 - (\textcolor{blue}{q_3} + t \cdot \textcolor{red}{u_3})) \\
                              \Leftrightarrow t &= \dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}
                     \end{align*}
-                    \item Verbindungsvektor berechnen:
+                    \item \label{d} Verbindungsvektor berechnen:
                     \begin{center}
                         $\vv{LP} = \left(\begin{array}{c}{p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1})\\p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2})\\p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3})}\end{array}\right)$
                     \end{center}
-                    \item Norm des Verbindungsvektors berechnen:
-                    \begin{equation}
-                        \begin{split}
-                            \qquad \qquad \qquad d(g,P) & =|\vv{LP}| \\
-                                                 & = \left|\left(\begin{array}{c}{p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1})\\p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2})\\p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3})}\end{array}\right)\right| \\
-                                                 & = \sqrt{(p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + (\textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1}))^2 +  (p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2}))^2 + (p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3}))^2}
-                        \end{split}
-                    \end{equation}
+                    \item \label{e} Norm des Verbindungsvektors berechnen:
+                    \begin{align*}
+                        d(g,P) & =|\vv{LP}| \\
+                               & = \left|\left(\begin{array}{c}{p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1})\\p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2})\\p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3})}\end{array}\right)\right| \\
+                               & = \sqrt{(p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + (\textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1}))^2 +  (p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2}))^2 + (p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3}))^2}
+                    \end{align*}
                 \end{enumerate}
         \\
+        \\
         \underline{Hilfsebene}:
+            \paragraph{} Diese Methode hat sich Platz zwei erkämpft:
+                \begin{enumerate}[1)]
+                    \item Hilfsebene $E$ bestimmen ($\vv{n}\equiv\textcolor{red}{\vv{u}}\quad P\in E$, da die Gerade $g$ die Ebene im rechten Winkel durchstößt und
+                    der Verbindungsvektor somit orthogonal zur Geraden ist):
+                    \begin{align*}
+                        \qquad \qquad \qquad \qquad E:\textcolor{red}{\vv{u}} \odot [\vv{x} - \vv{p}] &= 0 \\
+                                                    \Leftrightarrow \textcolor{red}{u_1}x_1 + \textcolor{red}{u_2}x_2 + \textcolor{red}{u_3}x_3 &= \textcolor{red}{u_1}p_1 + \textcolor{red}{u_2}p_2 + \textcolor{red}{u_3}p_3
+                    \end{align*}
+                    \item $g = E$ und Gleichung lösen (nach t auflösen):
+                    \begin{align*}
+                        \qquad \qquad \textcolor{red}{u_1}(\textcolor{blue}{q_1} + t \cdot \textcolor{red}{u_1}) + \textcolor{red}{u_2}(\textcolor{blue}{q_2}+t\cdot \textcolor{red}{u_2}) + \textcolor{red}{u_3}(\textcolor{blue}{q_3}+t\cdot \textcolor{red}{u_3}) &= \textcolor{red}{u_1}p_1 + \textcolor{red}{u_2}p_2 + \textcolor{red}{u_3}p_3 \\
+                        \Leftrightarrow t &= \dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}
+                    \end{align*}
+                    \item Siehe Schritt \ref{d} Orthogonalität
+                    \item Siehe Schritt \ref{e} Orthogonalität
+                \end{enumerate}
+
+        \\
         \\
         \underline{Grenzwertberechnung}:
+            \paragraph{} Zu guter Letzt wollen wir die Analysis Fanatiker befriedigen:
+                \begin{enumerate}[1)]
+                    \item Siehe Schritt \ref{a} Orthogonalität
+                    \item Siehe Schritt \ref{b} Orthogonalität
+                    \item Norm des Vektors in Abhängigkeit von t bestimmen:
+                    \begin{align*}
+                        |\vv{LP}| &= \sqrt{(p_1 - (\textcolor{blue}{q_1} + t \cdot \textcolor{red}{u_1}))^2 + (p_2 - (\textcolor{blue}{q_2} + t \cdot \textcolor{red}{u_2}))^2 + (p_3 - (\textcolor{blue}{q_3} + t\cdot \textcolor{red}{u_3}))^2} \\
+                                  &= \sqrt{(\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2)t^2 + 2((\textcolor{blue}{q_1} - p_1) \cdot \textcolor{red}{u_1} + (\textcolor{blue}{q_2} - p_2) \cdot \textcolor{red}{u_2} + (\textcolor{blue}{q_3} - p_3) \cdot \textcolor{red}{u_3})t + ((p_1 - \textcolor{blue}{q_1})^2 + (p_2 - \textcolor{blue}{q_2})^2 + (p_3 - \textcolor{blue}{q_3})^2)} \\\\
+                        & \text{Somit ergibt sich eine Funktion $f(t)$:} \\\\
+                             f(t) &= \sqrt{(\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2)t^2 + 2((\textcolor{blue}{q_1} - p_1) \cdot \textcolor{red}{u_1} + (\textcolor{blue}{q_2} - p_2) \cdot \textcolor{red}{u_2} + (\textcolor{blue}{q_3} - p_3) \cdot \textcolor{red}{u_3})t + ((p_1 - \textcolor{blue}{q_1})^2 + (p_2 - \textcolor{blue}{q_2})^2 + (p_3 - \textcolor{blue}{q_3})^2)}
+                    \end{align*}
+                    \item Tiefpunkt von $f(t)$ berechnen:
+                    \\\\
+                    $f'(t) = \dfrac{2(\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2)t + 2((\textcolor{blue}{q_1} - p_1) \cdot \textcolor{red}{u_1} + (\textcolor{blue}{q_2} - p_2) \cdot \textcolor{red}{u_2} + (\textcolor{blue}{q_3} - p_3) \cdot \textcolor{red}{u_3})}{2\sqrt{(\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2)t^2 + 2((\textcolor{blue}{q_1} - p_1) \cdot \textcolor{red}{u_1} + (\textcolor{blue}{q_2} - p_2) \cdot \textcolor{red}{u_2} + (\textcolor{blue}{q_3} - p_3) \cdot \textcolor{red}{u_3})t + ((p_1 - \textcolor{blue}{q_1})^2 + (p_2 - \textcolor{blue}{q_2})^2 + (p_3 - \textcolor{blue}{q_3})^2)}}$
+                    \\
+                    \\
+                    notwendige Bedingung TP:
+                    \begin{align*}
+                        f'(t) &= 0 \\
+                        \Leftrightarrow 0 &= 2(\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2)t + 2((\textcolor{blue}{q_1} - p_1) \cdot \textcolor{red}{u_1} + (\textcolor{blue}{q_2} - p_2) \cdot \textcolor{red}{u_2} + (\textcolor{blue}{q_3} - p_3) \cdot \textcolor{red}{u_3} \\
+                        \Leftrightarrow t &= \dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}
+                    \end{align*}
+                    \paragraph{} Die hinreichende Bedingung ist nicht zu prüfen, sie gilt (der Minimalabstand existiert immer), und die Art des Extremwerte
+                    ist ebenfalls vorbestimmt, da der Verbindungsvektor unendlich lang wird wenn man den Lotfußpunkt in beide Richtungen entlang der
+                    Geraden verschiebt.
+                    \item Siehe Schritt \ref{d} Orthogonalität
+                    \item Siehe Schritt \ref{e} Orthogonalität
+                \end{enumerate}
         \\
+        \begin{Bemerkung}
+            \paragraph{} Wie sich unschwer erkennen lässt, sind die Formeln für die Berechnung von t bei allen drei Lösungsansätzen identisch. Die Methoden
+            unterscheiden sich somit nur am Anfang voneiander.
+        \end{Bemerkung}
         \\
         \begin{Bemerkung}
             \paragraph{} Zur Abstandsberechnung gibt es eine allgemeine Formel, welche die oben aufgelisteten Vorgehensweisen überflüssig macht. Da sie
@@ -583,19 +632,20 @@
         \end{Bemerkung}
 
     \subsection{Abstand zweier Windschiefer Geraden}
-    
-\\    
-Zwei windschiefe Geraden haben einen eindeutig definierten Minimalabstand. Aus zwei Geraden\\
-\\
-\qquad $g:\vv{x}=\vv{p}+t*\vv{u}, t\in \R$ \qquad und \qquad $h:\vv{x}=\vv{q}+r*\vv{v}, r\in \R$   \\ 
-    
-    l"asst sich mit dem Kreuzprodukt ein normierter Normalenvektor $n_{0}$ zu beiden Richtungsvektoren $\vv{u}$ und $\vv{v}$ errechnen, den man mit dem Verbindungsvektor der beiden Ortsvektoren ($\vv{q}-\vv{p}$) zur Minimalabstandsberechnung der beiden Geraden skaliert:\\ 
-    
-   \qquad $d(g,h)= |n_{0} * (\vv{q}-\vv{p})| =  |\dfrac{\vv{u} \times \vv{v}}{|\vv{u} \times \vv{v}|} * (\vv{q}-\vv{p}) |
-    
-    
-    
-    
+        \\
+        Zwei windschiefe Geraden haben einen eindeutig definierten Minimalabstand. Aus zwei Geraden
+        \\
+        \\
+        \qquad $g:\vv{x}=\vv{p}+t*\vv{u}, t\in \R$ \qquad und \qquad $h:\vv{x}=\vv{q}+r*\vv{v}, r\in \R$
+        \\
+        l"asst sich mit dem Kreuzprodukt ein normierter Normalenvektor $n_{0}$ zu beiden Richtungsvektoren $\vv{u}$ und $\vv{v}$ errechnen, den man mit dem
+        Verbindungsvektor der beiden Ortsvektoren ($\vv{q}-\vv{p}$) zur Minimalabstandsberechnung der beiden Geraden skaliert:
+        \\
+        \qquad $d(g,h)= |n_{0} * (\vv{q}-\vv{p})| =  |\dfrac{\vv{u} \times \vv{v}}{|\vv{u} \times \vv{v}|} * (\vv{q}-\vv{p})|$
+
+
+
+
 
 \section{Ebenen}
 
