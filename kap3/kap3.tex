@@ -235,7 +235,68 @@ $f$ sei eine Funktion...
 
 \subsection{Wendestellen}
 
-\subsection{Umkehrbarkeit??}
+\subsection{Umkehrbarkeit}
+
+
+\\
+\\
+\begin{Definition}
+Sei $f$ eine Funktion mit $f:D_{f}\mapsto W_{f}$ mit $x\mapsto y$, dann ist die Funktion genau dann eindeutig umkehrbar, wenn es zu jedem $y \in W_{f}$ \textbf{genau ein} $x \in D_{f}$ existiert. \\ \\
+Wenn diese Funktion umkehrbar ist, dann existiert auch eine Umkehrfunktion $\overline{f}(x)$ die jedem $x \in W_{f}$ genau ein $y\in D_{f}$ zuordnet, analog zur Funktion, nur andersrum, also mit $y\mapsto x$\\
+\\Es gilt: \qquad $D_{\overline{f}} = W_{f}}$ \qquad und \qquad $W_{\overline{f}}=D_{f}$
+\end{Definition}
+
+\begin{Bemerkung}
+Es gibt viele Funktionen die nicht in ihren vollst"andigen Definitionsmengen umkehrbar sind, zum Beispiel $x^n$ mit $n$ als gerade Zahl, $\sin(x), \tan(x)$, und viele mehr.  Hier beschr"ankt man die Funktion auf ein bestimmtes Intervall, um sie umkehren zu k"onnen.\\ \\
+Die Funktion $f(x)=x^2$ mit $D_{f}=\R$ und $W_{f}=\R_{0}^{+}$ hat f"ur $y=4$ zwei Urbilder: $-2$ und $2$. Schr"ankt man die Funktion auf $D_{f}=\R_{0}^{+}$, ist sie umkehrbar und die Umkehrfunktion lautet $\overline{f}(x)=\sqrt{x}$\\
+\end{Bemerkung}\\ \\ \\
+
+\begin{minipage}[b]{0.5\linewidth}
+\begin{Bemerkung}
+Anschaulich ist eine Umkehrfunktion eine Axenspiegelung entlang der Winkelhalbierende am Ursprung, also dem Funktionsgraphen von $f(x)=x$
+\end{Bemerkung}
+\begin{Beispiel}
+Die Funktion $f(x)=x^2$ mit $D_{f} = \R_{0}^{+}$ ist umzukehren. Leichtes Spiel...\\ \\
+\begin{array}{rcccccl}
+$\Rightarrow $& $y$ &$ = $&$ x^2$\\
+$\Leftrightarrow $&$ x $&$ = $&$ \sqrt{y}$ &\quad \small { \textit{Variablen tauschen}}\\
+$\Rightarrow $&$ y $&$ = $&$ \sqrt{x}$\\
+$\Rightarrow $&$ \overline{f}(x)$&$=$&$\sqrt{x}$\\
+
+\end{array}
+\end{Beispiel}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.4\linewidth}
+\definecolor{ffvvqq}{rgb}{1.,0.3333333333333333,0.}
+\definecolor{qqttcc}{rgb}{0.,0.2,0.8}
+\definecolor{ttqqqq}{rgb}{0.2,0.,0.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+\draw [color=cqcqcq,, xstep=1.4cm,ystep=1.4cm] (-3.,-3.8) grid (7.8,5.8);
+\draw[->,color=black] (-3.,0.) -- (7.8,0.);
+\foreach \x in {-2.,2.,4.,6.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-3.8) -- (0.,5.8);
+\foreach \y in {-2.,2.,4.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-3.,-3.8) rectangle (7.8,5.8);
+\draw[line width=0.4pt,color=ttqqqq,smooth,samples=100,domain=-3.0:7.8] plot(\x,{(\x)});
+\draw[line width=2.pt,color=qqttcc,smooth,samples=100,domain=-3.0:7.8] plot(\x,{(\x)^(2.0)});
+\draw[line width=1.2pt,color=ffvvqq,smooth,samples=100,domain=2.4000001559384112E-8:7.8] plot(\x,{sqrt((\x))});
+\draw[line width=1.2pt,dash pattern=on 3pt off 3pt,color=ffvvqq,smooth,samples=100,domain=2.4000001559384112E-8:7.8] plot(\x,{0-sqrt((\x))});
+\draw (2.4867074111243883,-0.32603907695652323) node[anchor=north west] {$p \left(x \right) \, = \,-\sqrt{x}$};
+\draw (2.8429337294434633,1.8367635699807134) node[anchor=north west] {$h \left(x \right) \, = \,\sqrt{x}$};
+\draw (-2.958466311752897,1.0734214592969828) node[anchor=north west] {$g \left(x \right) \, = \,x^{2}$};
+\begin{scriptsize}
+\draw[color=ttqqqq] (-5.4774952770092105,-5.504043061094496) node {$f$};
+\draw[color=qqttcc] (-1.635339986567762,4.164957007566092) node {$g$};
+\draw[color=ffvvqq] (1.6215863523494927,1.0352543537627963) node {$h$};
+\draw[color=ffvvqq] (1.5706968783039106,-0.669543026764202) node {$p$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{minipage}
 
 
 \subsection{Beispiel}
