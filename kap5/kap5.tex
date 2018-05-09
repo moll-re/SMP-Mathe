@@ -462,6 +462,26 @@
         \begin{left}
             \quad 3)\text{ } ...\textbf{windschief zueinander}...
         \end{left}
+        \begin{center}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw [line width=0.8pt] (-0.25,0.25) node {O};
+                \draw [->,line width=0.8pt,color=blue] (0,0,0) -- (3,4,4);
+                \draw [->,line width=0.8pt,color=red] (3,4,4) -- (5,2,-1);
+                \draw [->,line width=0.8pt,color=blue] (0,0,0) -- (4,0,0);
+                \draw [->,line width=0.8pt,color=red] (4,0,0) -- (4,5,0);
+                \draw [,line width=0.8pt,color=red,dashed] (1,6,9) -- (3,4,4);
+                \draw [,line width=0.8pt,color=red,dashed] (5,2,-1) -- (7,0,-6);
+                \draw [,line width=0.8pt,color=red,dashed] (4,-3,0) -- (4,0,0);
+                \draw [,line width=0.8pt,color=red,dashed] (4,5,0) -- (4,8,0);
+                \draw [line width=0.8pt,color=blue] (0.5,1.5) node {$\vv{q_1}$};
+                \draw [line width=0.8pt,color=blue] (2,0.3,0) node {$\vv{q_2}$};
+                \draw [line width=0.8pt,color=red] (3.5,2.75) node {$\vv{u_1}$};
+                \draw [line width=0.8pt,color=red] (4.3,1.8,0) node {$\vv{u_2}$};
+                \draw [line width=0.8pt] (6,2.65) node {$g$};
+                \draw [line width=0.8pt] (4.2,6,0) node {$h$};
+                \draw [line width=0.8pt,color=black] (7.2,3.7) node {Schnittpunkt nicht vorhanden};
+            \end{tikzpicture}
+        \end{center}
         \\
         \\
         ...sein oder...
@@ -540,7 +560,7 @@
         gebräuchlicher sind als der dritte.
         \\
         \\
-        \underline{Orthogonalität}:
+        \underline{\textbf{Orthogonalität}}:
             \paragraph{} Da die Norm des Verbindungsvektors gesucht wird, gilt es nun diesen eindeutig zu bestimmen. Folgender Ablauf führt
             zum Ziel:
                 \begin{enumerate}[1)]
@@ -570,7 +590,7 @@
                 \end{enumerate}
         \\
         \\
-        \underline{Hilfsebene}:
+        \underline{\textbf{Hilfsebene}}:
             \paragraph{} Diese Methode hat sich Platz zwei erkämpft:
                 \begin{enumerate}[1)]
                     \item Hilfsebene $E$ bestimmen ($\vv{n}\equiv\textcolor{red}{\vv{u}}\quad P\in E$, da die Gerade $g$ die Ebene im rechten Winkel durchstößt und
@@ -590,7 +610,7 @@
 
         \\
         \\
-        \underline{Grenzwertberechnung}:
+        \underline{\textbf{Grenzwertberechnung}}:
             \paragraph{} Zu guter Letzt wollen wir die Analysis Fanatiker befriedigen:
                 \begin{enumerate}[1)]
                     \item Siehe Schritt \ref{a} Orthogonalität
@@ -631,19 +651,39 @@
             $d(g,P) = \dfrac{|\textcolor{red}{\vv{u}}\times\vv{\textcolor{blue}{Q}P}|}{|\textcolor{red}{\vv{u}}|}$.
         \end{Bemerkung}
 
-    \subsection{Abstand zweier Windschiefer Geraden}
-        \\
-        Zwei windschiefe Geraden haben einen eindeutig definierten Minimalabstand. Aus zwei Geraden
-        \\
-        \\
-        \qquad $g:\vv{x}=\vv{p}+t*\vv{u}, t\in \R$ \qquad und \qquad $h:\vv{x}=\vv{q}+r*\vv{v}, r\in \R$
-        \\
-        l"asst sich mit dem Kreuzprodukt ein normierter Normalenvektor $n_{0}$ zu beiden Richtungsvektoren $\vv{u}$ und $\vv{v}$ errechnen, den man mit dem
-        Verbindungsvektor der beiden Ortsvektoren ($\vv{q}-\vv{p}$) zur Minimalabstandsberechnung der beiden Geraden skaliert:
-        \\
-        \qquad $d(g,h)= |n_{0} * (\vv{q}-\vv{p})| =  |\dfrac{\vv{u} \times \vv{v}}{|\vv{u} \times \vv{v}|} * (\vv{q}-\vv{p})|$
+    \subsection{Abstand zweier Geraden}
 
-
+        \paragraph{} Zwei nicht sich schneidende oder identische Geraden haben einen \textbf{eindeutig definierten Minimalabstand}. Bei zwei parallelen
+        Geraden ist dies einfach zu visualisieren, der Abstand zweier windschiefer Geraden jedoch weniger. Im Folgenden sollen beide Fälle untersucht werden.
+        \\
+        \\
+        \underline{\textbf{Parallele Geraden}}:
+            \paragraph Der Abstand zweier paralleler Geraden $g$ und $h$ entspricht genau dem Abstand eines Punktes $P \in g \lor P\in h$ zur jeweiligen
+            gegenüberliegenden Geraden. Somit genügt es den Abstand zwischen zwischen dem Stützpunkt einer Geraden und der anderen zu berechnen.
+        \\
+        \\
+        \underline{\textbf{Windschiefe Geraden}}:
+            \paragraph{} Der minimale Abstand zweier windschiefer Geraden lässt sich mithilfe einer \textbf{Hilsebene} verbildlichen und bestimmen. Gegeben
+            seien zwei Geraden
+            $g:\vv{x} = \textcolor{blue}{\vv{p}} + r \cdot \textcolor{red}{\vv{u}}; r\in\R$ und $h:\vv{x} = \textcolor{blue}{\vv{q}} + s \cdot \textcolor{orange}{\vv{v}}; s\in \R$.
+            Daraus folgt, dass:
+            $E:\vv{x} = \textcolor{blue}{\vv{p}} + r \cdot \textcolor{red}{\vv{u}} + s \cdot \textcolor{orange}{\vv{v}} \lor E:\vv{x} = \textcolor{blue}{\vv{q}} + r \cdot \textcolor{red}{\vv{u}} + s \cdot \textcolor{orange}{\vv{v}}; s,r\in\R$. Somit ergibt sich eine
+            Ebene, welche entweder die Gerade $g$ oder $h$ enthält und parallel zur anderen ist. Der Minimalabstand ist äquivalent zum Abstand zwischen
+            einem Punkt der Geraden, die nicht in der Ebene enthalten ist, und der Ebene. Für die genaue Vorgehensweise von diesem Punkt aus empfiehlt es
+            sich sich den Teil \glqq Abstand zu einem Punkt\grqq  unter Ebenen zuzuwenden.
+        \\
+        \begin{Bemerkung}
+            \paragraph{} Zur Berechnung des Abstands zweier windschiefer Geraden gibt es zudem eine Formel, welche zugleich das
+            \textbf{Ergebnis des Skalarprodukts} veranschaulicht. Aus zwei Geraden
+            \begin{center}
+                \qquad $g:\vv{x} = \vv{p} + r \cdot \vv{u}; r\in\R$ \qquad und \qquad $h:\vv{x} = \vv{q} + s \cdot \vv{v}; s\in\R$
+            \end{center}
+            lässt sich mit dem Kreuzprodukt ein normierter Normalenvektor $n_0$ zu beiden Richtungsvektoren $\vv{u}$ und $\vv{v}$ errechnen, den man mit dem
+            Verbindungsvektor der beiden Ortsvektoren ($\vv{q}-\vv{p}$) zur Minimalabstandsberechnung der beiden Geraden skaliert:
+            \begin{center}
+                \qquad $d(g,h)= |n_0 \odot (\vv{q}-\vv{p})| =  |\dfrac{\vv{u} \times \vv{v}}{|\vv{u} \times \vv{v}|} \odot (\vv{q}-\vv{p})|$
+            \end{center}
+        \end{Bemerkung}
 
 
 
