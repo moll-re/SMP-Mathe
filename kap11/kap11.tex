@@ -1,63 +1,15 @@
 \chapter{Integrale}
 \section{Stammfunktionen}
 Eine Funktion $F$ heißt Stammfunktion der Funktion $f$, wenn $F'(x)=f(x)$
-gilt.
-
+gilt.\\
 Ist $F$ irgendeine Stammfunktion von $f$, dann ist auch $F(x)+C$ (mit
 konstantem $C$) eine Stammfunktion, denn beim Ableiten fällt ja $C$ als
 konstanter Summand weg. Jede Funktion hat also unendlich viele
 Stammfunktionen, die sich aber nur um einen konstanten Summanden
 unterscheiden.
 
-\section{Begriff des Integrals}
-
-\begin{figure}[htbp]\centering
-  \includegraphics{math3.eps}
-  \caption{Integral und Flächeninhalt}
-  \label{fig:6}
-\end{figure}
-
-In Abb.~\ref{fig:6} soll die Fläche zwischen der x-Achse und der Funktion
-$y=f(x)$ zwischen $x=a$ und $x=b$ berechnet werden.
-
-Um eine Näherung für diese Fläche zu bekommen, teilt man sie in Streifen auf
-(in der Abb.~\ref{fig:6} sind es 6 Streifen) und nimmt die Summe der
-Flächeninhalte der Rechtecke als Näherung für die Fläche. Wenn man die Zahl
-der Streifen so erhöht, dass die Breite jedes Streifens gegen Null geht, dann
-bekommt man als Grenzwert die gesuchte Fläche. In Abb.~\ref{fig:6} ist die
-Näherung:
-\[
-A_6=y_1(x_1-x_0)+y_2(x_2-x_1)+y_3(x_3-x_2)
-+y_4(x_4-x_3)+y_5(x_5-x_4)+y_6(x_6-x_5)
-\]
-Beachtet man, dass $y_k=f(x_k)$ ist und schreibt man $\Delta x_1=x_1-x_0$,
-$\Delta x_2=x_2-x_1$ usw., dann bekommt man für $n$ Streifen:
-\[
-A_n=f(x_1)\Delta x_1+f(x_2)\Delta x_2+\cdots+f(x_n)\Delta x_n=
-\sum_{k=1}^n f(x_k)\Delta x_k
-\]
-
-Der Grenzwert dieser $A_n$ ist nun die gesuchte Fläche:
-\begin{equation}
-  \label{eq:33}
-  \int_a^b \dD y=
-  \int_a^b f(x)\dD x=\lim_{n\to\infty}\sum_{k=1}^n f(x_k)\Delta x_k
-\end{equation}
-Beim Grenzübergang ist nur zu beachten, dass mit Erhöhung der Streifenzahl $n$
-auch alle Breiten $\Delta x_k$ gegen Null gehen, also
-$\lim_{n\to\infty}\max\Delta x_k=0$ gilt.
-
-Schaut man sich die Abb.~\ref{fig:6} an, dann stellt man fest, dass statt
-$f(x_k)$ als Seite der Rechtecke auch Rechtecke verwendet werden könnten,
-deren Seite irgendein $f(u_k)$ ist, wobei $x_{k-1}\le u_k\le x_k$ ist.
-
-Grenzwerte der Art von Gl.~\eqref{eq:33} heißen \emph{Integrale}. Funktionen,
-für die dieser Grenzwert für jede Art der Unterteilungsfolge und jede Wahl der
-$f(u_k)$ existiert und immer denselben Wert ergibt, heißen \emph{integrierbar}.
-
-Als Physiker sagt man, durch Integration werden Elemente der Form  $\dD
-y=f(x)\dD x$
-aufaddiert.
+\section{Bestimmte Integrale}
+Content yet to come...
 
 \section[Der Hauptsatz]{Der Hauptsatz der Differential- und
   Integralrechnung}
