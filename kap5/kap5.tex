@@ -370,6 +370,8 @@
     \paragraph{} \textbf{Ich weiß net genau, wie ich die andere Formel einführen soll, bzw. diese section im Allgemeinen gestalten soll.
      Vorschläge sind willkommen.}
 
+\section{Kreuzprodukt}
+
 \section{Geraden}
 
     \subsection{Darstellungen}
@@ -658,7 +660,7 @@
         \\
         \\
         \underline{\textbf{Parallele Geraden}}:
-            \paragraph Der Abstand zweier paralleler Geraden $g$ und $h$ entspricht genau dem Abstand eines Punktes $P \in g \lor P\in h$ zur jeweiligen
+            \paragraph{} Der Abstand zweier paralleler Geraden $g$ und $h$ entspricht genau dem Abstand eines Punktes $P \in g \lor P\in h$ zur jeweiligen
             gegenüberliegenden Geraden. Somit genügt es den Abstand zwischen zwischen dem Stützpunkt einer Geraden und der anderen zu berechnen.
         \\
         \\
@@ -670,7 +672,7 @@
             $E:\vv{x} = \textcolor{blue}{\vv{p}} + r \cdot \textcolor{red}{\vv{u}} + s \cdot \textcolor{orange}{\vv{v}} \lor E:\vv{x} = \textcolor{blue}{\vv{q}} + r \cdot \textcolor{red}{\vv{u}} + s \cdot \textcolor{orange}{\vv{v}}; s,r\in\R$. Somit ergibt sich eine
             Ebene, welche entweder die Gerade $g$ oder $h$ enthält und parallel zur anderen ist. Der Minimalabstand ist äquivalent zum Abstand zwischen
             einem Punkt der Geraden, die nicht in der Ebene enthalten ist, und der Ebene. Für die genaue Vorgehensweise von diesem Punkt aus empfiehlt es
-            sich sich den Teil \glqq Abstand zu einem Punkt\grqq  unter Ebenen zuzuwenden.
+            sich sich den Teil \glqq Abstand zu einem Punkt\grqq \text{ }unter Ebenen zuzuwenden.
         \\
         \begin{Bemerkung}
             \paragraph{} Zur Berechnung des Abstands zweier windschiefer Geraden gibt es zudem eine Formel, welche zugleich das
@@ -696,9 +698,9 @@
         \begin{center}
             \begin{tabular}{@{} *2l @{}}
                 \emph{Name} & \emph{Darstellung}   \\\midrule
-                Parameterform \qquad \qquad \qquad \qquad \qquad & $E:\vv{x}=\textcolor{blue}{\vv{p}} + t\cdot \textcolor{red}{\vv{u}} + s\cdot \textcolor{red}{\vv{v}} ; \qquad s,t \in \R $    \\
-                Koordinatenform \qquad \qquad \qquad \qquad \qquad & $E: \textcolor{red}{a} \cdot x_{1} + \textcolor{red}{b} \cdot x_{2} + \textcolor{red}{c} \cdot x_{3} = \textcolor{blue}{d} ; \qquad d \in \R $ \\
-                Normalenform \qquad \qquad \qquad \qquad \qquad & $E:(\vv{x} - \textcolor{blue}{\vv{q}}) \cdot \textcolor{red}{\vv{n}} = 0 $\\
+                Parameterform \qquad \qquad \qquad \qquad \qquad & $E:\vv{x}=\textcolor{blue}{\vv{p}} + s\cdot \textcolor{red}{\vv{u}} + t\cdot \textcolor{red}{\vv{v}} ; \qquad s,t \in \R $    \\
+                Normalenform \qquad \qquad \qquad \qquad \qquad & $E:(\vv{x} - \textcolor{blue}{\vv{q}}) \odot \textcolor{red}{\vv{n}} = 0 $\\
+                Koordinatenform \qquad \qquad \qquad \qquad \qquad & $E:\textcolor{red}{n_1} \cdot x_1 + \textcolor{red}{n_2} \cdot x_2 + \textcolor{red}{n_3} \cdot x_3 = \textcolor{purple}{d} ; \quad \textcolor{purple}{d} = \textcolor{red}{n_1} \cdot \textcolor{blue}{q_1} + \textcolor{red}{n_2} \cdot \textcolor{blue}{q_2} + \textcolor{red}{n_3} \cdot \textcolor{blue}{q_3} $ \\
             \end{tabular}
         \end{center}
 
@@ -733,13 +735,13 @@
                 \foreach \x in {-1,...,5}
                     \draw [line width=0.8pt,color=red,opacity=0.2] (-3 + 1*\x,8 - 1*\x,9.5 - 2.5*\x) -- (11 + 1*\x,1 - 1*\x,7.25 - 2.5*\x);
                 \draw [line width=0.8pt,color=blue] (0.5,1.5) node {$\vv{q}$};
-                \draw [line width=0.8pt,color=red] (3.5,2.75) node {$\vv{u_1}$};
-                \draw [line width=0.8pt,color=red] (2.3,1.35) node {$\vv{u_2}$};
+                \draw [line width=0.8pt,color=red] (3.5,2.75) node {$\vv{u}$};
+                \draw [line width=0.8pt,color=red] (2.3,1.35) node {$\vv{v}$};
                 \draw [line width=0.8pt] (6,2.65) node {$E$};
             \end{tikzpicture}
         \end{center}
 
-        \paragraph{} Die Normalenform und Parameterform sind weitaus weniger intuitiver und erfordern eine genauere Erklärung. Sie lässt sich
+        \paragraph{} Die Normalenform und Koordinatenform sind weitaus weniger intuitiv und erfordern eine genauere Erklärung. Sie lässt sich
         zudem leichter anhand einer Graphik erklären:
 
         \begin{center}
@@ -764,16 +766,64 @@
                 \draw [->,line width=0.8pt] (5,2,-1) -- (3,4,4);
                 \draw [->,line width=0.8pt,color=red] (3,4,4) -- (3.5,9.5,6);
                 \draw [line width=0.8pt,color=blue] (0.5,1.5) node {$\vv{q}$};
-                \draw [line width=0.8pt] (3.6,2.75) node {$\vv{q}-\vv{x}$};
+                \draw [line width=0.8pt] (3.6,2.75) node {$\textcolor{blue}{\vv{q}}-\vv{x}$};
                 \draw [line width=0.8pt,color=red] (1.8,5) node {$\vv{n}$};
                 \draw [line width=0.8pt] (2.7,0.75,-0.5) node {$\vv{x}$};
                 \draw [line width=0.8pt] (6,2.65) node {$E$};
             \end{tikzpicture}
         \end{center}
 
-    Spurpunkte und Geraden
+        \paragraph{} Somit ist jeder Punkt $X\in E$, wenn der Verbindingsvektor $(\textcolor{blue}{\vv{q}}-\vv{x})$ orthogonal zum Vektor
+        $\textcolor{red}{\vv{n}}$ ist. Dabei spielt die Position des sogenannten \textbf{Normalenvektors} keine Rolle, ebenso wenig wie seine
+        Norm. Allein seine Ausrichtung bestimmt die der Ebene. Um die Position im Raum genau zu bestimmen, benötigt man zudem einen Punkt
+        $\textcolor{blue}{Q}\in E$. Diese zusätzliche Information schließt alle anderen parallelen Ebenen aus, die durch einen kollinearen
+        Normalenvektor defniert sind.
 
-    Umrechnungen
+        \paragraph{} Aus der Normalenform lässt sich die Koordinatenform ableiten. Man macht häufiger Gebrauch von letzterer, da sich leichter
+        mit ihr rechnen lässt. Man bildet sie wie folgt:
+        \begin{align*}
+                                  &E:(\vv{x} - \textcolor{blue}{\vv{q}}) \odot \textcolor{red}{\vv{n}} = 0 \\
+            \Leftrightarrow \quad &E:\vv{x} \odot \textcolor{red}{\vv{n}} = \textcolor{blue}{\vv{q}} \odot \textcolor{red}{\vv{n}} \\
+            \Leftrightarrow \quad &E:\textcolor{red}{n_1} \cdot x_1 + \textcolor{red}{n_2} \cdot x_2 + \textcolor{red}{n_3} \cdot x_3 = \textcolor{purple}{d} ; \quad \textcolor{purple}{d} = \textcolor{red}{n_1} \cdot \textcolor{blue}{q_1} + \textcolor{red}{n_2} \cdot \textcolor{blue}{q_2} + \textcolor{red}{n_3} \cdot \textcolor{blue}{q_3}
+        \end{align*}
+
+        \begin{Bemerkung}
+            \paragraph{} Ebenen lassen sich auch mittels \textbf{Spurpunkten} und \textbf{Spurgeraden} lokalisieren. Spurpunkte sind die
+            der Achsen des Koordinatensystems, welche in der Ebene enthalten sind. Aus diesen lassen sich anschließend die Spurgeraden bilden
+            (durch Verbinden der Punkte). Folgende Möglichkeiten bieten sich an:
+            \begin{enumerate}[1)]
+                \item 3 Spurpunkte
+                \item 2 Spurpunkte \Rightarrow $E \parallel \vv{x_1} \lor E \parallel \vv{x_2} \lor E \parallel \vv{x_3}$
+                \item 1 Spurpunkt \Rightarrow $E \parallel E_{x_{1}x_2} \lor E \parallel E_{x_{2}x_3} \lor E \parallel E_{x_{1}x_3}$
+                \item Ausnahme des vorherigen Falls: $P \equiv O \Rightarrow \text{Ausrichtung von $E$ lässt sich nicht bestimmen}$
+                \item $inf \text{Punkte} \Rightarrow \text{Eine der Achsen des Koordinatensystems $\in E$, Ausrichtung von $E$ lässt sich nicht bestimmen}$
+                \item $inf \glqq \cdot 2 \grqq \text{Punkte} \Rightarrow E \equiv E_{x_{1}x_2} \lor E \equiv E_{x_{2}x_3} \lor E \equiv E_{x_{1}x_3}$
+            \end{enumerate}
+        \end{Bemerkung}
+
+        \paragraph{} Drei beziehungsweise zwei (falls man Normalenform und Koordinatenform als eine ansieht) verschiedene Darstellungsweisen
+        sind zwar interessant und eine nicht ganz unwichtige Überlegung, jedoch scheint das auf den ersten Blick unnütz. Im Laufe dieser section
+        wird sich der jeweilige Nutzen noch offenbaren. Dann wird einem auch deutlich, dass es manchmal von Vorteil sein kann die Formen
+        umzuformen. Die Herangehensweisen für jede Umformung unterscheiden sich nur wenig voneiander, Folgendes Diagramm stellt eine Möglichkeit
+        vor:
+        \begin{center}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw [->,line width=0.8pt] (-3.5,0.15) -- (3.5,0.15);
+                \draw [->,line width=0.8pt] (3.5,-0.15) -- (-3.5,-0.15);
+                \draw [->,line width=0.8pt] (-5.7,-0.3) -- (-1.2,-4.5);
+                \draw [->,line width=0.8pt] (-0.8,-4.5) -- (-5.3,-0.3);
+                \draw [->,line width=0.8pt] (6.7,-0.5) -- (2.2,-4.5);
+                \draw [->,line width=0.8pt] (1.8,-4.5) -- (6.3,-0.5);
+                \draw [line width=0.8pt](-5.5,0) node {$E:(\vv{x} - \textcolor{blue}{\vv{q}}) \odot \textcolor{red}{\vv{n}} = 0$};
+                \draw [line width=0.8pt](6.5,0.2) node {$E:\textcolor{red}{n_1} \cdot x_1 + \textcolor{red}{n_2} \cdot x_2 + \textcolor{red}{n_3} \cdot x_3 = \textcolor{purple}{d};$};
+                \draw [line width=0.8pt](6.5,-0.2) node {$\quad \textcolor{purple}{d} = \textcolor{red}{n_1} \cdot \textcolor{blue}{q_1} + \textcolor{red}{n_2} \cdot \textcolor{blue}{q_2} + \textcolor{red}{n_3} \cdot \textcolor{blue}{q_3}$};
+                \draw [line width=0.8pt](0.5,-5) node {$E:\vv{x}=\textcolor{blue}{\vv{p}} + s\cdot \textcolor{red}{\vv{u}} + t\cdot \textcolor{red}{\vv{v}}$};
+                % Param    E:\vv{x}=\textcolor{blue}{\vv{p}} + s\cdot \textcolor{red}{\vv{u}} + t\cdot \textcolor{red}{\vv{v}}
+                % Normal   E:(\vv{x} - \textcolor{blue}{\vv{q}}) \odot \textcolor{red}{\vv{n}} = 0
+                % Koor     E:\textcolor{red}{n_1} \cdot x_1 + \textcolor{red}{n_2} \cdot x_2 + \textcolor{red}{n_3} \cdot x_3 = \textcolor{purple}{d} ; \quad \textcolor{purple}{d} = \textcolor{red}{n_1} \cdot \textcolor{blue}{q_1} + \textcolor{red}{n_2} \cdot \textcolor{blue}{q_2} + \textcolor{red}{n_3} \cdot \textcolor{blue}{q_3}
+            \end{tikzpicture}
+        \end{center}
+
 
     \subsection{Lagebeziehungen zwischen Ebenen und Geraden}
 
@@ -788,7 +838,6 @@
 \section{Kreise und Kugeln}
     \subsection{Kreise}
     \subsection{Kugeln}
-\section{Kreuzprodukt}
 \section{Spatprodukt}
 \section{Dyadisches Produkt}
 \section{Sätze}
