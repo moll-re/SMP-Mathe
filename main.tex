@@ -6,7 +6,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[margin=2cm]{geometry}	              %Seitenrand
 \usepackage{fancyhdr}	                          %Titelblatt
-\usepackage{graphicx}	                          %Bilder einfügen
+\usepackage{graphicx}	                          %Bilder einf"ugen
 \usepackage[listings,skins,breakable]{tcolorbox}
 \usepackage{tikz,pgf}                               %Grafiken zeichnen
 \usepackage{mdframed}	                          %Box			%\begin{mdframed} 		und			%\end{mdframed}
@@ -15,13 +15,16 @@
 \usepackage[ngerman]{babel}
 \usepackage{tabu}                               %Bessere Tabellen
 \usepackage{esvect}
-\usepackage{listings}                           %für Pseudocode/Code
-\usepackage{color}                              %und dessen Einfärbung
+\usepackage{listings}                           %f"ur Pseudocode/Code
+\usepackage{color}                              %und dessen Einf"arbung
 \usepackage{booktabs}
 \usepackage{enumitem} %angepasstes enumerieren
-\usepackage{enumerate} % Zeichen der Enumerierung beliebig wählen können
+\usepackage{enumerate} % Zeichen der Enumerierung beliebig w"ahlen k"onnen
 \usepackage{hyperref}
+\usepackage[makeroom]{cancel}        % Durchgestrichene Terme mit \cancel{}
 \usetikzlibrary{arrows}
+\usepackage{tkz-tab} % f"ur Monotonietabellen??
+\usepackage{marvosym} %Symbole wie Blitze und co. ... 
 
 \pagestyle{fancy}
 \fancyhead{}
@@ -30,7 +33,7 @@
 \fancyhead[R]{Skript SMP}
 \fancyfoot[C]{\thepage}
 \parindent 0ex
-\nonstopmode                                    %Fehler bei Kompilierung werden "leise" gestellt (weniger umständlich)
+\nonstopmode                                    %Fehler bei Kompilierung werden "leise" gestellt (weniger umst"andlich)
 
 
 %Zahlenmengen-darstellung:
@@ -38,6 +41,7 @@
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
+
 
 \include{style}
 
