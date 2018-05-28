@@ -4,13 +4,13 @@
 
 \begin{Definition}
 $e = 2,71828182845904523536028747135266249775724709369995...$\\
-.\\
-$e$ ist eine irrationale, transzendente und reelle Zahl, die die Basis des natürlichen Logarithmus und der (natürlichen) Exponentialfunktion ist.\\
+\\
+$e$ ist eine irrationale, transzendente und reelle Zahl, die die Basis des (natürlichen) Logarithmus und der (natürlichen) Exponentialfunktion ist.\\
 Die Darstellung, der man am Häufigsten begegnet ist diese:
-$e=\lim\limits_{n\to \infty}(1+\dfrac{1}{n})^n
+$e=\lim\limits_{n\to \infty}(1+\dfrac{1}{n})^n$
 \end{Definition}
 Benannt nach dem bekannten Mathematiker Leonhard Euler ist diese Zahl eine der wichtigsten Konstanten der Mathematik.
-Sie ist die Basis des natürlichen Logarithmus und der (natürlichen) Exponentialfunktion. Diese (spezielle) Exponentialfunktion wird aufgrund dieser Beziehung zur Zahl $e$ häufig kurz $e$-Funktion genannt.
+Sie ist die Basis des natürlichen Logarithmus und der natürlichen Exponentialfunktion. Diese (spezielle) Exponentialfunktion wird aufgrund dieser Beziehung zur Zahl $e$ häufig kurz $e$-Funktion genannt.
 \begin{Definition}
   Eine reelle Zahl heißt (oder allgemeiner eine komplexe Zahl) transzendent,
   wenn sie nicht Nullstelle eines Polynoms mit ganzzahligen Koeffizienten ist.
@@ -31,9 +31,12 @@ $e$ ist darstellbar bzw. ergibt sich durch:
 Anhand mancher Überlegungen, denen wir jetzt nachgehen werden, lassen sich einige Eigenschaften der Eulerschen Zahl schließen.\\
 \\ Wir definieren eine Folge $(e_{n})n\in\N$ durch $e_{n}=(1+\dfrac{1}{n})^n$ und versuchen ihre Konvergenz zu beweisen.
 \begin{itemize}
-\item \dfrac{e_{n+1}{e_{n}}=\dfrac{}{}
+\item$\dfrac{e_{n+1}}{e_{n}}=\dfrac{{(1+\dfrac{1}{n+1})}^{n+1}}{{(1+\dfrac{1}{n+1})}^{n}}=(\dfrac{n(n+2)}{(n+1)^2})^n\cdot(1+\dfrac{1}{n})=(1-\dfrac{1}{(n+1)^2})^{n+1}\cdot\dfrac{n+1}{n}$
+\item Die Umformung ermöglicht uns auf den Term ${(1-\dfrac{1}{(n+1)^2}}^{n+1}$, die Ungleichung von Bernoulli anzuwenden. Diese besagt Folgendes: $(1+x)^n>1+nx$ für $n>gleich2$ und $x>-1$
 
-		\ection{Die Exponentialfunktion}
+\end{itemize}
+
+		\section{Die Exponentialfunktion}
 
 	\subsection{Eigenschaften}
 
