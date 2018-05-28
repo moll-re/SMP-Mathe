@@ -370,6 +370,8 @@
     \paragraph{} \textbf{Ich weiß net genau, wie ich die andere Formel einführen soll, bzw. diese section im Allgemeinen gestalten soll.
      Vorschläge sind willkommen.}
 
+\section{Kreuzprodukt}
+
 \section{Geraden}
 
     \subsection{Darstellungen}
@@ -462,6 +464,26 @@
         \begin{left}
             \quad 3)\text{ } ...\textbf{windschief zueinander}...
         \end{left}
+        \begin{center}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw [line width=0.8pt] (-0.25,0.25) node {O};
+                \draw [->,line width=0.8pt,color=blue] (0,0,0) -- (3,4,4);
+                \draw [->,line width=0.8pt,color=red] (3,4,4) -- (5,2,-1);
+                \draw [->,line width=0.8pt,color=blue] (0,0,0) -- (4,0,0);
+                \draw [->,line width=0.8pt,color=red] (4,0,0) -- (4,5,0);
+                \draw [,line width=0.8pt,color=red,dashed] (1,6,9) -- (3,4,4);
+                \draw [,line width=0.8pt,color=red,dashed] (5,2,-1) -- (7,0,-6);
+                \draw [,line width=0.8pt,color=red,dashed] (4,-3,0) -- (4,0,0);
+                \draw [,line width=0.8pt,color=red,dashed] (4,5,0) -- (4,8,0);
+                \draw [line width=0.8pt,color=blue] (0.5,1.5) node {$\vv{q_1}$};
+                \draw [line width=0.8pt,color=blue] (2,0.3,0) node {$\vv{q_2}$};
+                \draw [line width=0.8pt,color=red] (3.5,2.75) node {$\vv{u_1}$};
+                \draw [line width=0.8pt,color=red] (4.3,1.8,0) node {$\vv{u_2}$};
+                \draw [line width=0.8pt] (6,2.65) node {$g$};
+                \draw [line width=0.8pt] (4.2,6,0) node {$h$};
+                \draw [line width=0.8pt,color=black] (7.2,3.7) node {Schnittpunkt nicht vorhanden};
+            \end{tikzpicture}
+        \end{center}
         \\
         \\
         ...sein oder...
@@ -540,46 +562,129 @@
         gebräuchlicher sind als der dritte.
         \\
         \\
-        \underline{Orthogonalität}:
+        \underline{\textbf{Orthogonalität}}:
             \paragraph{} Da die Norm des Verbindungsvektors gesucht wird, gilt es nun diesen eindeutig zu bestimmen. Folgender Ablauf führt
             zum Ziel:
                 \begin{enumerate}[1)]
-                    \item Punkt L auf der Geraden $g$ in Abhängigkeit des Faktors des Richtungsvektors bestimmen:
+                    \item \label{a} Punkt L auf der Geraden $g$ in Abhängigkeit des Faktors des Richtungsvektors bestimmen:
                     \begin{center}
                         $\vv{l} = \left(\begin{array}{c}{\textcolor{blue}{q_1}+t\cdot \textcolor{red}{u_1}\\\textcolor{blue}{q_2}+t\cdot \textcolor{red}{u_2}\\\textcolor{blue}{q_3}+t\cdot \textcolor{red}{u_3}}\end{array}\right)$
                     \end{center}
-                    \item Verbindungsvektor bestimmen:
+                    \item \label{b} Verbindungsvektor bestimmen:
                     \begin{center}
                         $\vv{LP} = \left(\begin{array}{c}{p_1-(\textcolor{blue}{q_1}+t\cdot \textcolor{red}{u_1})\\p_2-(\textcolor{blue}{q_2}+t\cdot \textcolor{red}{u_2})\\p_3-(\textcolor{blue}{q_3}+t\cdot \textcolor{red}{u_3})}\end{array}\right)$
                     \end{center}
-                    \item $\vv{LP}\odot\vv{u} = 0$ und Gleichung lösen (nach t auflösen):
+                    \item \label{c} $\vv{LP}\odot\vv{u} = 0$ und Gleichung lösen (nach t auflösen):
                     \begin{align*}
                         \qquad \qquad \qquad \qquad 0 &= \textcolor{red}{u_1} \cdot (p_1 - (\textcolor{blue}{q_1} + t\cdot \textcolor{red}{u_1})) + \textcolor{red}{u_2} \cdot (p_2 - (\textcolor{blue}{q_2} + t \cdot \textcolor{red}{u_2})) + \textcolor{red}{u_3} \cdot (p_3 - (\textcolor{blue}{q_3} + t \cdot \textcolor{red}{u_3})) \\
                              \Leftrightarrow t &= \dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}
                     \end{align*}
-                    \item Verbindungsvektor berechnen:
+                    \item \label{d} Verbindungsvektor berechnen:
                     \begin{center}
                         $\vv{LP} = \left(\begin{array}{c}{p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1})\\p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2})\\p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3})}\end{array}\right)$
                     \end{center}
-                    \item Norm des Verbindungsvektors berechnen:
-                    \begin{equation}
-                        \begin{split}
-                            \qquad \qquad \qquad d(g,P) & =|\vv{LP}| \\
-                                                 & = \left|\left(\begin{array}{c}{p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1})\\p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2})\\p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3})}\end{array}\right)\right| \\
-                                                 & = \sqrt{(p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + (\textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1}))^2 +  (p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2}))^2 + (p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3}))^2}
-                        \end{split}
-                    \end{equation}
+                    \item \label{e} Norm des Verbindungsvektors berechnen:
+                    \begin{align*}
+                        d(g,P) & =|\vv{LP}| \\
+                               & = \left|\left(\begin{array}{c}{p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1})\\p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2})\\p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3})}\end{array}\right)\right| \\
+                               & = \sqrt{(p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + (\textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1}))^2 +  (p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2}))^2 + (p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3}))^2}
+                    \end{align*}
                 \end{enumerate}
         \\
-        \underline{Hilfsebene}:
         \\
-        \underline{Grenzwertberechnung}:
+        \underline{\textbf{Hilfsebene}}:
+            \paragraph{} Diese Methode hat sich Platz zwei erkämpft:
+                \begin{enumerate}[1)]
+                    \item Hilfsebene $E$ bestimmen ($\vv{n}\equiv\textcolor{red}{\vv{u}}\quad P\in E$, da die Gerade $g$ die Ebene im rechten Winkel durchstößt und
+                    der Verbindungsvektor somit orthogonal zur Geraden ist):
+                    \begin{align*}
+                        \qquad \qquad \qquad \qquad E:\textcolor{red}{\vv{u}} \odot [\vv{x} - \vv{p}] &= 0 \\
+                                                    \Leftrightarrow \textcolor{red}{u_1}x_1 + \textcolor{red}{u_2}x_2 + \textcolor{red}{u_3}x_3 &= \textcolor{red}{u_1}p_1 + \textcolor{red}{u_2}p_2 + \textcolor{red}{u_3}p_3
+                    \end{align*}
+                    \item $g = E$ und Gleichung lösen (nach t auflösen):
+                    \begin{align*}
+                        \qquad \qquad \textcolor{red}{u_1}(\textcolor{blue}{q_1} + t \cdot \textcolor{red}{u_1}) + \textcolor{red}{u_2}(\textcolor{blue}{q_2}+t\cdot \textcolor{red}{u_2}) + \textcolor{red}{u_3}(\textcolor{blue}{q_3}+t\cdot \textcolor{red}{u_3}) &= \textcolor{red}{u_1}p_1 + \textcolor{red}{u_2}p_2 + \textcolor{red}{u_3}p_3 \\
+                        \Leftrightarrow t &= \dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}
+                    \end{align*}
+                    \item Siehe Schritt \ref{d} Orthogonalität
+                    \item Siehe Schritt \ref{e} Orthogonalität
+                \end{enumerate}
+
         \\
+        \\
+        \underline{\textbf{Grenzwertberechnung}}:
+            \paragraph{} Zu guter Letzt wollen wir die Analysis Fanatiker befriedigen:
+                \begin{enumerate}[1)]
+                    \item Siehe Schritt \ref{a} Orthogonalität
+                    \item Siehe Schritt \ref{b} Orthogonalität
+                    \item Norm des Vektors in Abhängigkeit von t bestimmen:
+                    \begin{align*}
+                        |\vv{LP}| &= \sqrt{(p_1 - (\textcolor{blue}{q_1} + t \cdot \textcolor{red}{u_1}))^2 + (p_2 - (\textcolor{blue}{q_2} + t \cdot \textcolor{red}{u_2}))^2 + (p_3 - (\textcolor{blue}{q_3} + t\cdot \textcolor{red}{u_3}))^2} \\
+                                  &= \sqrt{(\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2)t^2 + 2((\textcolor{blue}{q_1} - p_1) \cdot \textcolor{red}{u_1} + (\textcolor{blue}{q_2} - p_2) \cdot \textcolor{red}{u_2} + (\textcolor{blue}{q_3} - p_3) \cdot \textcolor{red}{u_3})t + ((p_1 - \textcolor{blue}{q_1})^2 + (p_2 - \textcolor{blue}{q_2})^2 + (p_3 - \textcolor{blue}{q_3})^2)} \\\\
+                        & \text{Somit ergibt sich eine Funktion $f(t)$:} \\\\
+                             f(t) &= \sqrt{(\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2)t^2 + 2((\textcolor{blue}{q_1} - p_1) \cdot \textcolor{red}{u_1} + (\textcolor{blue}{q_2} - p_2) \cdot \textcolor{red}{u_2} + (\textcolor{blue}{q_3} - p_3) \cdot \textcolor{red}{u_3})t + ((p_1 - \textcolor{blue}{q_1})^2 + (p_2 - \textcolor{blue}{q_2})^2 + (p_3 - \textcolor{blue}{q_3})^2)}
+                    \end{align*}
+                    \item Tiefpunkt von $f(t)$ berechnen:
+                    \\\\
+                    $f'(t) = \dfrac{2(\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2)t + 2((\textcolor{blue}{q_1} - p_1) \cdot \textcolor{red}{u_1} + (\textcolor{blue}{q_2} - p_2) \cdot \textcolor{red}{u_2} + (\textcolor{blue}{q_3} - p_3) \cdot \textcolor{red}{u_3})}{2\sqrt{(\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2)t^2 + 2((\textcolor{blue}{q_1} - p_1) \cdot \textcolor{red}{u_1} + (\textcolor{blue}{q_2} - p_2) \cdot \textcolor{red}{u_2} + (\textcolor{blue}{q_3} - p_3) \cdot \textcolor{red}{u_3})t + ((p_1 - \textcolor{blue}{q_1})^2 + (p_2 - \textcolor{blue}{q_2})^2 + (p_3 - \textcolor{blue}{q_3})^2)}}$
+                    \\
+                    \\
+                    notwendige Bedingung TP:
+                    \begin{align*}
+                        f'(t) &= 0 \\
+                        \Leftrightarrow 0 &= 2(\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2)t + 2((\textcolor{blue}{q_1} - p_1) \cdot \textcolor{red}{u_1} + (\textcolor{blue}{q_2} - p_2) \cdot \textcolor{red}{u_2} + (\textcolor{blue}{q_3} - p_3) \cdot \textcolor{red}{u_3} \\
+                        \Leftrightarrow t &= \dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}
+                    \end{align*}
+                    \paragraph{} Die hinreichende Bedingung ist nicht zu prüfen, sie gilt (der Minimalabstand existiert immer), und die Art des Extremwerte
+                    ist ebenfalls vorbestimmt, da der Verbindungsvektor unendlich lang wird wenn man den Lotfußpunkt in beide Richtungen entlang der
+                    Geraden verschiebt.
+                    \item Siehe Schritt \ref{d} Orthogonalität
+                    \item Siehe Schritt \ref{e} Orthogonalität
+                \end{enumerate}
+        \\
+        \begin{Bemerkung}
+            \paragraph{} Wie sich unschwer erkennen lässt, sind die Formeln für die Berechnung von t bei allen drei Lösungsansätzen identisch. Die Methoden
+            unterscheiden sich somit nur am Anfang voneiander.
+        \end{Bemerkung}
         \\
         \begin{Bemerkung}
             \paragraph{} Zur Abstandsberechnung gibt es eine allgemeine Formel, welche die oben aufgelisteten Vorgehensweisen überflüssig macht. Da sie
             für das Abitur allerdings nicht zugelassen ist, wird sie hier nicht bewiesen beziehungsweise graphisch ergänzt:
             $d(g,P) = \dfrac{|\textcolor{red}{\vv{u}}\times\vv{\textcolor{blue}{Q}P}|}{|\textcolor{red}{\vv{u}}|}$.
+        \end{Bemerkung}
+
+    \subsection{Abstand zweier Geraden}
+
+        \paragraph{} Zwei nicht sich schneidende oder identische Geraden haben einen \textbf{eindeutig definierten Minimalabstand}. Bei zwei parallelen
+        Geraden ist dies einfach zu visualisieren, der Abstand zweier windschiefer Geraden jedoch weniger. Im Folgenden sollen beide Fälle untersucht werden.
+        \\
+        \\
+        \underline{\textbf{Parallele Geraden}}:
+            \paragraph{} Der Abstand zweier paralleler Geraden $g$ und $h$ entspricht genau dem Abstand eines Punktes $P \in g \lor P\in h$ zur jeweiligen
+            gegenüberliegenden Geraden. Somit genügt es den Abstand zwischen zwischen dem Stützpunkt einer Geraden und der anderen zu berechnen.
+        \\
+        \\
+        \underline{\textbf{Windschiefe Geraden}}:
+            \paragraph{} Der minimale Abstand zweier windschiefer Geraden lässt sich mithilfe einer \textbf{Hilsebene} verbildlichen und bestimmen. Gegeben
+            seien zwei Geraden
+            $g:\vv{x} = \textcolor{blue}{\vv{p}} + r \cdot \textcolor{red}{\vv{u}}; r\in\R$ und $h:\vv{x} = \textcolor{blue}{\vv{q}} + s \cdot \textcolor{orange}{\vv{v}}; s\in \R$.
+            Daraus folgt, dass:
+            $E:\vv{x} = \textcolor{blue}{\vv{p}} + r \cdot \textcolor{red}{\vv{u}} + s \cdot \textcolor{orange}{\vv{v}} \lor E:\vv{x} = \textcolor{blue}{\vv{q}} + r \cdot \textcolor{red}{\vv{u}} + s \cdot \textcolor{orange}{\vv{v}}; s,r\in\R$. Somit ergibt sich eine
+            Ebene, welche entweder die Gerade $g$ oder $h$ enthält und parallel zur anderen ist. Der Minimalabstand ist äquivalent zum Abstand zwischen
+            einem Punkt der Geraden, die nicht in der Ebene enthalten ist, und der Ebene. Für die genaue Vorgehensweise von diesem Punkt aus empfiehlt es
+            sich sich den Teil \glqq Abstand zu einem Punkt\grqq \text{ }unter Ebenen zuzuwenden.
+        \\
+        \begin{Bemerkung}
+            \paragraph{} Zur Berechnung des Abstands zweier windschiefer Geraden gibt es zudem eine Formel, welche zugleich das
+            \textbf{Ergebnis des Skalarprodukts} veranschaulicht. Aus zwei Geraden
+            \begin{center}
+                \qquad $g:\vv{x} = \vv{p} + r \cdot \vv{u}; r\in\R$ \qquad und \qquad $h:\vv{x} = \vv{q} + s \cdot \vv{v}; s\in\R$
+            \end{center}
+            lässt sich mit dem Kreuzprodukt ein normierter Normalenvektor $n_0$ zu beiden Richtungsvektoren $\vv{u}$ und $\vv{v}$ errechnen, den man mit dem
+            Verbindungsvektor der beiden Ortsvektoren ($\vv{q}-\vv{p}$) zur Minimalabstandsberechnung der beiden Geraden skaliert:
+            \begin{center}
+                \qquad $d(g,h)= |n_0 \odot (\vv{q}-\vv{p})| =  |\dfrac{\vv{u} \times \vv{v}}{|\vv{u} \times \vv{v}|} \odot (\vv{q}-\vv{p})|$
+            \end{center}
         \end{Bemerkung}
 
 
@@ -593,15 +698,132 @@
         \begin{center}
             \begin{tabular}{@{} *2l @{}}
                 \emph{Name} & \emph{Darstellung}   \\\midrule
-                Parameterform \qquad \qquad \qquad \qquad \qquad & $E:\vv{x}=\textcolor{blue}{\vv{p}} + t\cdot \textcolor{red}{\vv{u}} + s\cdot \textcolor{red}{\vv{v}} ; \qquad s,t \in \R $    \\
-                Koordinatenform \qquad \qquad \qquad \qquad \qquad & $E: \textcolor{red}{a} \cdot x_{1} + \textcolor{red}{b} \cdot x_{2} + \textcolor{red}{c} \cdot x_{3} = \textcolor{blue}{d} ; \qquad d \in \R $ \\
-                Normalenform \qquad \qquad \qquad \qquad \qquad & $E:(\vv{x} - \textcolor{blue}{\vv{q}}) \cdot \textcolor{red}{\vv{n}} = 0 $\\
+                Parameterform \qquad \qquad \qquad \qquad \qquad & $E:\vv{x}=\textcolor{blue}{\vv{p}} + s\cdot \textcolor{red}{\vv{u}} + t\cdot \textcolor{red}{\vv{v}} ; \qquad s,t \in \R $    \\
+                Normalenform \qquad \qquad \qquad \qquad \qquad & $E:(\vv{x} - \textcolor{blue}{\vv{q}}) \odot \textcolor{red}{\vv{n}} = 0 $\\
+                Koordinatenform \qquad \qquad \qquad \qquad \qquad & $E:\textcolor{red}{n_1} \cdot x_1 + \textcolor{red}{n_2} \cdot x_2 + \textcolor{red}{n_3} \cdot x_3 = \textcolor{purple}{d} ; \quad \textcolor{purple}{d} = \textcolor{red}{n_1} \cdot \textcolor{blue}{q_1} + \textcolor{red}{n_2} \cdot \textcolor{blue}{q_2} + \textcolor{red}{n_3} \cdot \textcolor{blue}{q_3} $ \\
             \end{tabular}
         \end{center}
 
-    Spurpunkte und Geraden
+        \paragraph{} Die erste bei Geraden bereits eingeführte Form ist leicht zu verstehen. An den Stützvektor setzt man anschließend einen
+        zweiten Richtungsvektor; die beiden Vektoren werden \textbf{Spannvektoren} genannt, da sie gemeinsam die Ebene aufspannen. Da man
+        sich über diese beliebig in zwei Dimensionen bewegen kann, ist jeder Punkt in einer Ebene erreichbar. Bei der Bildung der Ebene muss
+        man beachten, dass die Spannvektoren \textbf{nicht kollinear} sind. In diesem Fall erhält man wieder eine Gerade.
 
-    Umrechnungen
+        \begin{center}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw [->,line width=0.8pt] (-5.5,0,0) -- (5.5,0,0) node[below] {$x_2$};
+                \draw [->,line width=0.8pt] (0,-5.5,0) -- (0,5.5,0) node[right] {$x_3$};
+                \draw [->,line width=0.8pt] (0,0,-8.5) -- (0,0,8.5) node[below] {$x_1$};
+                \foreach  \x in {-5,...,-1,1,2,...,5}
+                    \draw [line width=0.8pt] (\x,0.1,0) -- (\x,-0.1,0) node[below] {\x};
+                \foreach  \x in {-5,...,-1,1,2,...,5}
+                    \draw [line width=0.8pt] (-0.1,\x,0) -- (0.1,\x,0) node[right] {\x};
+                \foreach  \x in {-7,...,-1,1,2,...,7}
+                    \draw [line width=0.8pt] (0,0.1,\x) -- (0,-0.1,\x) node[below] {\x};
+
+                \draw [line width=0.8pt] (-0.25,0.25) node {O};
+                \draw [->,line width=0.8pt,color=blue] (0,0,0) -- (3,4,4);
+                \draw [->,line width=0.8pt,color=red] (3,4,4) -- (5,2,-1);
+                \draw [->,line width=0.8pt,color=red] (3,4,4) -- (6,3,6);
+                \draw [,line width=0.8pt,color=red,dashed] (1,6,9) -- (3,4,4);
+                \draw [,line width=0.8pt,color=red,dashed] (5,2,-1) -- (7,0,-6);
+                \draw [,line width=0.8pt,color=red,dashed] (0,5,2) -- (3,4,4);
+                \draw [,line width=0.8pt,color=red,dashed] (6,3,6) -- (9,2,8);
+                \draw [->,line width=0.8pt,color=black,opacity=0.6] (6,3,6) -- (8,1,1);
+                \draw [->,line width=0.8pt,color=black,opacity=0.6] (5,2,-1) -- (8,1,1);
+                \draw[fill=red, opacity=0.5]  (3,4,4) -- (5,2,-1) -- (8,1,1) -- (6,3,6) -- cycle;
+                \foreach \x in {-1,...,5}
+                    \draw [line width=0.8pt,color=red,opacity=0.2] (-3 + 1*\x,8 - 1*\x,9.5 - 2.5*\x) -- (11 + 1*\x,1 - 1*\x,7.25 - 2.5*\x);
+                \draw [line width=0.8pt,color=blue] (0.5,1.5) node {$\vv{q}$};
+                \draw [line width=0.8pt,color=red] (3.5,2.75) node {$\vv{u}$};
+                \draw [line width=0.8pt,color=red] (2.3,1.35) node {$\vv{v}$};
+                \draw [line width=0.8pt] (6,2.65) node {$E$};
+            \end{tikzpicture}
+        \end{center}
+
+        \paragraph{} Die Normalenform und Koordinatenform sind weitaus weniger intuitiv und erfordern eine genauere Erklärung. Sie lässt sich
+        zudem leichter anhand einer Graphik erklären:
+
+        \begin{center}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw [->,line width=0.8pt] (-5.5,0,0) -- (5.5,0,0) node[below] {$x_2$};
+                \draw [->,line width=0.8pt] (0,-5.5,0) -- (0,5.5,0) node[right] {$x_3$};
+                \draw [->,line width=0.8pt] (0,0,-8.5) -- (0,0,8.5) node[below] {$x_1$};
+                \foreach  \x in {-5,...,-1,1,2,...,5}
+                    \draw [line width=0.8pt] (\x,0.1,0) -- (\x,-0.1,0) node[below] {\x};
+                \foreach  \x in {-5,...,-1,1,2,...,5}
+                    \draw [line width=0.8pt] (-0.1,\x,0) -- (0.1,\x,0) node[right] {\x};
+                \foreach  \x in {-7,...,-1,1,2,...,7}
+                    \draw [line width=0.8pt] (0,0.1,\x) -- (0,-0.1,\x) node[below] {\x};
+                \draw [line width=0.8pt] (-0.25,0.25) node {O};
+                \draw [->,line width=0.8pt,color=blue] (0,0,0) -- (3,4,4);
+                \draw [->,line width=0.8pt] (0,0,0) -- (5,2,-1);
+                \draw[fill=red, opacity=0.5]  (-2,7,7) -- (2,3,-3) -- (8,1,1) -- (4,5,11) -- cycle;
+                \foreach \x in {-1,...,6}
+                    \draw [line width=0.8pt,color=red,opacity=0.2] (-5 + 1*\x,9 - 1*\x,9.75 - 2.5*\x) -- (9 + 1*\x,2 - 1*\x,8 - 2.5*\x);
+                \draw [line width=0.8pt] (2,2.45) -- (2,3);
+                \draw [line width=0.8pt] (2,3) -- (1.45,3);
+                \draw [->,line width=0.8pt] (5,2,-1) -- (3,4,4);
+                \draw [->,line width=0.8pt,color=red] (3,4,4) -- (3.5,9.5,6);
+                \draw [line width=0.8pt,color=blue] (0.5,1.5) node {$\vv{q}$};
+                \draw [line width=0.8pt] (3.6,2.75) node {$\textcolor{blue}{\vv{q}}-\vv{x}$};
+                \draw [line width=0.8pt,color=red] (1.8,5) node {$\vv{n}$};
+                \draw [line width=0.8pt] (2.7,0.75,-0.5) node {$\vv{x}$};
+                \draw [line width=0.8pt] (6,2.65) node {$E$};
+            \end{tikzpicture}
+        \end{center}
+
+        \paragraph{} Somit ist jeder Punkt $X\in E$, wenn der Verbindingsvektor $(\textcolor{blue}{\vv{q}}-\vv{x})$ orthogonal zum Vektor
+        $\textcolor{red}{\vv{n}}$ ist. Dabei spielt die Position des sogenannten \textbf{Normalenvektors} keine Rolle, ebenso wenig wie seine
+        Norm. Allein seine Ausrichtung bestimmt die der Ebene. Um die Position im Raum genau zu bestimmen, benötigt man zudem einen Punkt
+        $\textcolor{blue}{Q}\in E$. Diese zusätzliche Information schließt alle anderen parallelen Ebenen aus, die durch einen kollinearen
+        Normalenvektor defniert sind.
+
+        \paragraph{} Aus der Normalenform lässt sich die Koordinatenform ableiten. Man macht häufiger Gebrauch von letzterer, da sich leichter
+        mit ihr rechnen lässt. Man bildet sie wie folgt:
+        \begin{align*}
+                                  &E:(\vv{x} - \textcolor{blue}{\vv{q}}) \odot \textcolor{red}{\vv{n}} = 0 \\
+            \Leftrightarrow \quad &E:\vv{x} \odot \textcolor{red}{\vv{n}} = \textcolor{blue}{\vv{q}} \odot \textcolor{red}{\vv{n}} \\
+            \Leftrightarrow \quad &E:\textcolor{red}{n_1} \cdot x_1 + \textcolor{red}{n_2} \cdot x_2 + \textcolor{red}{n_3} \cdot x_3 = \textcolor{purple}{d} ; \quad \textcolor{purple}{d} = \textcolor{red}{n_1} \cdot \textcolor{blue}{q_1} + \textcolor{red}{n_2} \cdot \textcolor{blue}{q_2} + \textcolor{red}{n_3} \cdot \textcolor{blue}{q_3}
+        \end{align*}
+
+        \begin{Bemerkung}
+            \paragraph{} Ebenen lassen sich auch mittels \textbf{Spurpunkten} und \textbf{Spurgeraden} lokalisieren. Spurpunkte sind die
+            der Achsen des Koordinatensystems, welche in der Ebene enthalten sind. Aus diesen lassen sich anschließend die Spurgeraden bilden
+            (durch Verbinden der Punkte). Folgende Möglichkeiten bieten sich an:
+            \begin{enumerate}[1)]
+                \item 3 Spurpunkte
+                \item 2 Spurpunkte \Rightarrow $E \parallel \vv{x_1} \lor E \parallel \vv{x_2} \lor E \parallel \vv{x_3}$
+                \item 1 Spurpunkt \Rightarrow $E \parallel E_{x_{1}x_2} \lor E \parallel E_{x_{2}x_3} \lor E \parallel E_{x_{1}x_3}$
+                \item Ausnahme des vorherigen Falls: $P \equiv O \Rightarrow \text{Ausrichtung von $E$ lässt sich nicht bestimmen}$
+                \item $inf \text{Punkte} \Rightarrow \text{Eine der Achsen des Koordinatensystems $\in E$, Ausrichtung von $E$ lässt sich nicht bestimmen}$
+                \item $inf \glqq \cdot 2 \grqq \text{Punkte} \Rightarrow E \equiv E_{x_{1}x_2} \lor E \equiv E_{x_{2}x_3} \lor E \equiv E_{x_{1}x_3}$
+            \end{enumerate}
+        \end{Bemerkung}
+
+        \paragraph{} Drei beziehungsweise zwei (falls man Normalenform und Koordinatenform als eine ansieht) verschiedene Darstellungsweisen
+        sind zwar interessant und eine nicht ganz unwichtige Überlegung, jedoch scheint das auf den ersten Blick unnütz. Im Laufe dieser section
+        wird sich der jeweilige Nutzen noch offenbaren. Dann wird einem auch deutlich, dass es manchmal von Vorteil sein kann die Formen
+        umzuformen. Die Herangehensweisen für jede Umformung unterscheiden sich nur wenig voneiander, Folgendes Diagramm stellt eine Möglichkeit
+        vor:
+        \begin{center}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw [->,line width=0.8pt] (-3.5,0.15) -- (3.5,0.15);
+                \draw [->,line width=0.8pt] (3.5,-0.15) -- (-3.5,-0.15);
+                \draw [->,line width=0.8pt] (-5.7,-0.3) -- (-1.2,-4.5);
+                \draw [->,line width=0.8pt] (-0.8,-4.5) -- (-5.3,-0.3);
+                \draw [->,line width=0.8pt] (6.7,-0.5) -- (2.2,-4.5);
+                \draw [->,line width=0.8pt] (1.8,-4.5) -- (6.3,-0.5);
+                \draw [line width=0.8pt](-5.5,0) node {$E:(\vv{x} - \textcolor{blue}{\vv{q}}) \odot \textcolor{red}{\vv{n}} = 0$};
+                \draw [line width=0.8pt](6.5,0.2) node {$E:\textcolor{red}{n_1} \cdot x_1 + \textcolor{red}{n_2} \cdot x_2 + \textcolor{red}{n_3} \cdot x_3 = \textcolor{purple}{d};$};
+                \draw [line width=0.8pt](6.5,-0.2) node {$\quad \textcolor{purple}{d} = \textcolor{red}{n_1} \cdot \textcolor{blue}{q_1} + \textcolor{red}{n_2} \cdot \textcolor{blue}{q_2} + \textcolor{red}{n_3} \cdot \textcolor{blue}{q_3}$};
+                \draw [line width=0.8pt](0.5,-5) node {$E:\vv{x}=\textcolor{blue}{\vv{p}} + s\cdot \textcolor{red}{\vv{u}} + t\cdot \textcolor{red}{\vv{v}}$};
+                % Param    E:\vv{x}=\textcolor{blue}{\vv{p}} + s\cdot \textcolor{red}{\vv{u}} + t\cdot \textcolor{red}{\vv{v}}
+                % Normal   E:(\vv{x} - \textcolor{blue}{\vv{q}}) \odot \textcolor{red}{\vv{n}} = 0
+                % Koor     E:\textcolor{red}{n_1} \cdot x_1 + \textcolor{red}{n_2} \cdot x_2 + \textcolor{red}{n_3} \cdot x_3 = \textcolor{purple}{d} ; \quad \textcolor{purple}{d} = \textcolor{red}{n_1} \cdot \textcolor{blue}{q_1} + \textcolor{red}{n_2} \cdot \textcolor{blue}{q_2} + \textcolor{red}{n_3} \cdot \textcolor{blue}{q_3}
+            \end{tikzpicture}
+        \end{center}
+
 
     \subsection{Lagebeziehungen zwischen Ebenen und Geraden}
 
@@ -616,10 +838,9 @@
 \section{Kreise und Kugeln}
     \subsection{Kreise}
     \subsection{Kugeln}
-\section{Kreuzprodukt}
 \section{Spatprodukt}
 \section{Dyadisches Produkt}
-\section{S"atze}
+\section{Sätze}
 
 \subsection{Der Satz des Apollinius}
 \begin{small}

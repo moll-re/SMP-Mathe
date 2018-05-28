@@ -1,96 +1,46 @@
 \chapter{Integrale}
-\section{Stammfunktionen}
-Eine Funktion $F$ heißt Stammfunktion der Funktion $f$, wenn $F'(x)=f(x)$
-gilt.
+\section{Einführung}
+Der Hauptunterschied zwischen einem bestimmten und einem unbestimmen Integral ist die Existenz (bestimmtes Integral) bzw. das Fehlen
+(unbestimmtes Integral) der Integrationsgrenzen.\\
+Bei einem bestimmten Integral ist die Lösung ein Flächeinhalt, also ein einfacher Zahlenwert.\\
+Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine sogenannte Stammfunktion.\\
 
-Ist $F$ irgendeine Stammfunktion von $f$, dann ist auch $F(x)+C$ (mit
-konstantem $C$) eine Stammfunktion, denn beim Ableiten fällt ja $C$ als
-konstanter Summand weg. Jede Funktion hat also unendlich viele
-Stammfunktionen, die sich aber nur um einen konstanten Summanden
-unterscheiden.
 
-\section{Begriff des Integrals}
+\section{Bestimmte Integrale}
+\begin{Definition}
+  Wenn Integralgrenzen angegeben werden, handelt es sich um ein bestimmtes Integral:\\
+  $
+  \begin{array}{rcl}
+    \int_{a}^{b} f(x)dx & = & \lim\limits_{n \rightarrow \infty} U_n = \lim\limits_{n \rightarrow \infty} s_n\\
+                         & = & \lim\limits_{n \rightarrow \infty} O_n = \lim\limits_{n \rightarrow \infty} S_n\\
+                         & = & \lim\limits_{n \rightarrow \infty} \dfrac{b-a}{n}\sum\limits_{k=1}^{n}f(\dfrac{b-a}{n}k)
+  \end{array}
+  $\\
+  $S_n$ und $O_n$ bezeichnen die Obersumme, wohingegen $s_n$ und $U_n$ die Untersumme bezeichnen.
+\end{Definition}
+\begin{Bemerkung}
+  $a$ und $b$ bezeichnen jeweils die untere und obere Grenze des zu berechnenden Integrals. Sie bezeichnen anschaulich die $x$-Werte, zwischen denen die Fläche berechnet wird.
+\end{Bemerkung}
+\begin{Bemerkung}
+  Im allgemeinen Fall muss der Integrand $f(x)$ im Intervall $[a;b]$ stetig sein, damit das Integral bestimmt ist.
+\end{Bemerkung}
 
-\begin{figure}[htbp]\centering
-  \includegraphics{math3.eps}
-  \caption{Integral und Flächeninhalt}
-  \label{fig:6}
-\end{figure}
+\section{Stammfunktionen und der Hauptsatz der Differential- und Integralrechnung}
+\begin{Definition}
+  Eine Funktion $F$ heißt Stammfunktion der Funktion $f$, wenn $F'(x)=f(x)$
+  gilt.\\
+  Ist $F$ irgendeine Stammfunktion von $f$, dann ist auch $F(x)+C$ (mit
+  konstantem $C$) eine Stammfunktion, denn beim Ableiten fällt $C$ als
+  konstanter Summand weg. Jede Funktion hat also unendlich viele
+  Stammfunktionen, die sich aber nur um einen konstanten Summanden
+  unterscheiden.
+\end{Definition}
 
-In Abb.~\ref{fig:6} soll die Fläche zwischen der x-Achse und der Funktion
-$y=f(x)$ zwischen $x=a$ und $x=b$ berechnet werden.
-
-Um eine Näherung für diese Fläche zu bekommen, teilt man sie in Streifen auf
-(in der Abb.~\ref{fig:6} sind es 6 Streifen) und nimmt die Summe der
-Flächeninhalte der Rechtecke als Näherung für die Fläche. Wenn man die Zahl
-der Streifen so erhöht, dass die Breite jedes Streifens gegen Null geht, dann
-bekommt man als Grenzwert die gesuchte Fläche. In Abb.~\ref{fig:6} ist die
-Näherung:
-\[
-A_6=y_1(x_1-x_0)+y_2(x_2-x_1)+y_3(x_3-x_2)
-+y_4(x_4-x_3)+y_5(x_5-x_4)+y_6(x_6-x_5)
-\]
-Beachtet man, dass $y_k=f(x_k)$ ist und schreibt man $\Delta x_1=x_1-x_0$,
-$\Delta x_2=x_2-x_1$ usw., dann bekommt man für $n$ Streifen:
-\[
-A_n=f(x_1)\Delta x_1+f(x_2)\Delta x_2+\cdots+f(x_n)\Delta x_n=
-\sum_{k=1}^n f(x_k)\Delta x_k
-\]
-
-Der Grenzwert dieser $A_n$ ist nun die gesuchte Fläche:
 \begin{equation}
-  \label{eq:33}
-  \int_a^b \dD y=
-  \int_a^b f(x)\dD x=\lim_{n\to\infty}\sum_{k=1}^n f(x_k)\Delta x_k
-\end{equation}
-Beim Grenzübergang ist nur zu beachten, dass mit Erhöhung der Streifenzahl $n$
-auch alle Breiten $\Delta x_k$ gegen Null gehen, also
-$\lim_{n\to\infty}\max\Delta x_k=0$ gilt.
-
-Schaut man sich die Abb.~\ref{fig:6} an, dann stellt man fest, dass statt
-$f(x_k)$ als Seite der Rechtecke auch Rechtecke verwendet werden könnten,
-deren Seite irgendein $f(u_k)$ ist, wobei $x_{k-1}\le u_k\le x_k$ ist.
-
-Grenzwerte der Art von Gl.~\eqref{eq:33} heißen \emph{Integrale}. Funktionen,
-für die dieser Grenzwert für jede Art der Unterteilungsfolge und jede Wahl der
-$f(u_k)$ existiert und immer denselben Wert ergibt, heißen \emph{integrierbar}.
-
-Als Physiker sagt man, durch Integration werden Elemente der Form  $\dD
-y=f(x)\dD x$
-aufaddiert.
-
-\section[Der Hauptsatz]{Der Hauptsatz der Differential- und
-  Integralrechnung}
-Die Bestimmung der Grenzwerte in Gleichung~\eqref{eq:33} ist eine mühselige
-Angelegenheit. Aber alles wendet sich zum Guten, denn Integrale können mittels
-Stammfunktionen bestimmt werden.
-
-Um dies klar zu machen betrachten wir irgendeine Stammfunktion $F$ der
-Randfunktion $f$. Nach der Grundformel~\eqref{eq:34} ist dann
-\[
-\dD F(x)=F'(x)\dD x=f(x)\dD x\Rpf
-\Delta F(x_k)\approx f(x_k)\Delta x_k\Rpf
-F(x_k)-F(x_{k-1})\approx f(x_k)\Delta x_k
-\]
-Die Näherung ist umso besser je kleiner $\Delta x_k$ ist.
-
-Wendet man diese Beziehung auf die Näherungssumme $A_n$ an, dann bekommt man:
-\[
-A_n\approx(F(x_1)-F(x_0))+(F(x_2)-F(x_1))+\cdots (F(x_n)-F(x_{n-1})
-\]
-In dieser Gleichung heben sich alle Summanden bis auf $F(x_0)$ und $F(x_n)$
-heraus, also ist, weil $x_0=a$ und $x_n=b$ ist, $A_n\approx F(b)-F(a)$.
-
-Diese Näherung wird umso besser, je kleiner die $\Delta x$ werden, also hat
-man für den Grenzwert:
-\begin{merkbox}
-\begin{equation}
-  \label{eq:35}
-  \int_a^b f(x)\dD x
+  \int_a^b f(x)d x
   =\lim_{n\to\infty}\sum_{k=1}^n f(x_k)\Delta x_k = F(b) - F(a)
   =\left[F(x)\right]_a^b
 \end{equation}
-\end{merkbox}
 Dies ist der \textbf{Hauptsatz der Differential- und Integralrechnung}. Mit
 ihm wird das Problem der Integration auf das Auf"|finden einer Stammfunktion
 zurückgeführt. Als Mathematiker müsste man noch anfügen, dass diese Beziehung
