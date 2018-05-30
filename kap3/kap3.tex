@@ -96,7 +96,7 @@ $
 &=&\lim\limits_{h \rightarrow 0} {\dfrac {u(x_{0}+h)v(x_{0}) \textcolor{red}{-u(x_{0})v(x_{0})} -u(x_{0})v(x_{0}+h) \textcolor{red}{+u(x_{0})v(x_{0})}}  {v(x_{0}+h)v(x_{0})h}   }\\
 &=&\lim\limits_{h \rightarrow 0} {\dfrac   {\dfrac{u(x_{0}+h)v(x_{0})-u(x_{0})v(x_{0})}{h}  -   \dfrac{u(x_{0})v(x_{0}+h)-u(x_{0})v(x_{0})} {h} }    {v(x_{0}+h)v(x_{0})}}\\
 &=&\lim\limits_{h \rightarrow 0} { \dfrac     {\dfrac{u(x_{0}+h)-u(x_{0})}{h} v(x_{0})  -   u(x_{0}) \dfrac   {v(x_{0}+h)-v(x_{0})}  {h}  }         {v(x_{0}+h)v(x_{0})}     }\\
-&=&\lim\limits_{h \rightarrow 0} { \dfrac  {\lim\limits_{h \rightarrow 0} {\dfrac{u(x_{0}+h)-u(x_{0})}{h}   }v(x_{0})  - u(x_{0}) \lim\limits_{h \rightarrow 0} { \dfrac{ v(x_{0}+h-v(x_{0})}{h}   }  }      {v(x_{0})v(x_{0})}}    \\
+&=&\lim\limits_{h \rightarrow 0} { \dfrac  {\lim\limits_{h \rightarrow 0} {\dfrac{u(x_{0}+h)-u(x_{0})}{h}   }v(x_{0})  - u(x_{0}) \lim\limits_{h \rightarrow 0} { \dfrac{ v(x_{0}+h)-v(x_{0})}{h}   }  }      {v(x_{0})v(x_{0})}}    \\
 &=& { \dfrac{u'(x_{0})v(x_{0})-u(x_{0})v'(x_{0})} {(v(x_{0}))^2}    }\\
 \end{array}
 $
@@ -467,10 +467,54 @@ Hier ist die Kurvenschar der Funktion\\ $f(x)=ax^3$. Sie verlaufen alle durch da
 
 \subsection{Beispiel}
 
-\begin{tabular}{@{} *5l @{}}    \toprule
-\emph{name} & \emph{foo} &&&  \\\midrule
-Models    & A  & B  & C  & D  \\ 
- Model $X$ & X1 & X2 & X3 & X4\\ 
- Model $Y$ & Y1 & Y2 & Y3 & Y4\\\bottomrule
- \hline
+$f_{a}(x)= \dfrac{x^2-3ax}{x+a} \qquad \qquad D_{f} = \R \backslash \{ -a \}, \qquad a \in \R^+$ \\  \\
+Sei $K_{a}$ der Graph der Funktion.\\
+ 
+ 
+\subsubsection{Bestimmen Sie die Schnittpunkte von $K_{a}$ mit den Koordinatenachsen}\\ \\
+
+$f_{a}(0)=\dfrac{0}{x+a} = 0$ \\ \\ \\
+\begin{array}{rcccl}
+$\Rightarrow f_{a}(x)=0 & \Leftrightarrow & x^2-3x & = & 0 $\\
+$&\Leftrightarrow & x(x-3a) & = & 0$ \\
+$&\Leftrightarrow & x=0 & \lor & x  =  3a $ \\
+\end{array}\\ \\ 
+
+Es ergeben sich die Punkte $P_{1}(0|0)$ und $P_{2}(3a|0)$\\\\
+
+\subsubsection{Bestimmen Sie die Asymptoten von $K_{a}$}\\ \\
+
+\begin{array}{rccccccl}
+$ \Rightarrow & (x^2 & -3ax & +0) & : & (x+a) &=& x - 4a +\dfrac{4a^2}{x+a} \\ \\
+& -(x^2 & +ax) & & & & & \\ \\
+& & -4ax & +0 & & & & \\ \\
+& & -(-4ax & -4a^2) & & & & \\ \\
+& & & 4a^2 & & & &$ \\ \\
+\end{array}\\ \\
+
+Man erh"alt die schiefe Asymptote $y=x-4a$\\\\
+
+Es liegt eine nicht hebbare Definitionsl"ucke bei $-a$ vor, daraus ergibt sich eine vertikale Asymptote $\Rightarrow x=-a$\\\\
+
+ \subsubsection{Zeigen Sie $f''_{a}(x) = \frac{8a^2}{(x+a)^3}$}\\ \\
+
+\begin{array}{rcl}
+$f'_{a}(x) &=& \dfrac{(2x-3a)(x+a) - (x^2-3ax)(1)}{(x+a)^2} $\\
+$&=& \dfrac{2x^2+2ax-3ax-3a^2-x^2-3ax}{x^2+2ax+a^2}$\\
+$&=& \dfrac{x^2+2ax-3a^2}{(x+a)^2} $ \\ \\
+$f''_{a}(x) &=& \dfrac{(\textcolor{red}{2x+2a})(x^2+2ax+a^2) - (x^2-2ax-3a^2)(2(\textcolor{red}{x+a}) ) }{(x+a)^{\textcolor{red}{4}}} $ \\
+$ &=& \dfrac{2x^2+4ax+2a^2-2x^2+4ax+6a^2}{(x+a)^3}$\\
+$&=& \dfrac{8a^2}{(x+a)^3}$
+\end{array}
+
+\subsubsection{Weisen Sie nach, dass $K_{a}$ genau einen Hochpunkt und genau einen Tiefpunkt besitzt. \\ Geben Sie die Koordinaten dieser Punkte in Abh"angigkeit von $a$ an und erstellen Sie eine Monotonietabelle der Funktionen $f_{a}$}\\ \\
+
+
+
+
+
+
+
+
+
 \end{tabular}
