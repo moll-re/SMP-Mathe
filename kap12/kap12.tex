@@ -25,7 +25,7 @@ Seien $a$ und $b$ aus $\R$, sowie $n$ und $m$ aus $\N$, dann gilt:
 \begin{minipage}{0.5\textwidth}
 \item$a^{-n}=\dfrac{1}{a^n}$
 \item$\dfrac{a^n}{a^m}=a^{n-m}$
-\item$(\dfrac{a}{b})^n=\dfrac{a^n}{b^n}$
+\item$\left(\dfrac{a}{b}\right)^n=\dfrac{a^n}{b^n}$
 \item $a^{\dfrac{1}{n}}=\sqrt[n]{a}$
 \item$a^{\dfrac{m}{n}}=\sqrt[n]{a^m}$
 \end {minipage}
@@ -38,7 +38,7 @@ $e = 2,71828182845904523536028747135266249775724709369995...$\\
 \\
 $e$ ist eine irrationale, transzendente und reelle Zahl, die die Basis des (natürlichen) Logarithmus und der (natürlichen) Exponentialfunktion ist.\\
 Die Darstellung, der man am Häufigsten begegnet ist diese:
-$e=\lim\limits_{n\to \infty}(1+\dfrac{1}{n})^n$
+$e=\lim\limits_{n\to \infty}\left(1+\dfrac{1}{n}\right)^n$
 \end{Definition}
 Benannt nach dem bekannten Mathematiker Leonhard Euler ist diese Zahl eine der wichtigsten Konstanten der Mathematik.
 Sie ist die Basis des natürlichen Logarithmus und der natürlichen Exponentialfunktion. Diese (spezielle) Exponentialfunktion wird aufgrund dieser Beziehung zur Zahl $e$ häufig kurz $e$-Funktion genannt.
@@ -53,20 +53,20 @@ Sie ist die Basis des natürlichen Logarithmus und der natürlichen Exponentialf
 $e$ ist darstellbar bzw. ergibt sich durch:
 \begin{itemize}
 \item $\sum\limits_{k=0}^{\infty}\dfrac{1}{k!}$
-\item $\lim\limits_{t\to \infty}(1+\dfrac{1}{t})^t;t\in\R$
-\item $\lim\limits_{n\to \infty}(1+\dfrac{1}{n})^n;n\in\N$
+\item $\lim\limits_{t\to \infty}\left(1+\dfrac{1}{t}\right)^t;t\in\R$
+\item $\lim\limits_{n\to \infty}\left(1+\dfrac{1}{n}\right)^n;n\in\N$
 \end{itemize}
 
 	\subsection{Herleitung zur Zahl $e$}
 
 Anhand mancher Überlegungen, denen wir jetzt nachgehen werden, lassen sich einige Eigenschaften der Eulerschen Zahl schließen.\\
-\\ Wir definieren eine Folge $(e_{n})n\in\N$ durch $e_{n}=(1+\dfrac{1}{n})^n$ und versuchen ihre Konvergenz zu beweisen.
+\\ Wir definieren eine Folge $(e_{n})n\in\N$ durch $e_{n}=\left(1+\dfrac{1}{n}\right)^n$ und versuchen ihre Konvergenz zu beweisen.
 \begin{itemize}
-\item$\dfrac{e_{n+1}}{e_{n}}=\dfrac{{(1+\dfrac{1}{n+1})}^{n+1}}{{(1+\dfrac{1}{n+1})}^{n}}=(\dfrac{n(n+2)}{(n+1)^2})^n\cdot(1+\dfrac{1}{n})=(1-\dfrac{1}{(n+1)^2})^{n+1}\cdot\dfrac{n+1}{n}$
-\item Die Umformung ermöglicht uns auf den Term ${(1-\dfrac{1}{(n+1)^2}})^{n+1}$, die Ungleichung von Bernoulli anzuwenden. Diese besagt Folgendes: $(1+x)^n>1+nx$ für $n>gleich2$ und $x>-1$\\
-$(1-\dfrac{1}{(n+1)^2})^{n+1}>1+(n+1)\cdot(-\dfrac{1}{(n+1)^2})$
+\item$\dfrac{e_{n+1}}{e_{n}}=\dfrac{{\left(1+\dfrac{1}{n+1}\right)}^{n+1}}{{\left(1+\dfrac{1}{n+1}\right)}^{n}}=\left(\dfrac{n(n+2)}{(n+1)^2}\right)^n\cdot\left(1+\dfrac{1}{n}\right)=\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}\cdot\dfrac{n+1}{n}$
+\item Die Umformung ermöglicht uns auf den Term ${\left(1-\dfrac{1}{(n+1)^2}}\right)^{n+1}$, die Ungleichung von Bernoulli anzuwenden. Diese besagt Folgendes: $(1+x)^n>1+nx$ für $n\geq2$ und $x>-1$\\
+$\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}>1+(n+1)\cdot\left(-\dfrac{1}{(n+1)^2}\right)$
 \item Dies kann man an den ersten Ausdruck anwenden:\\
-$\Rightarrow(1-\dfrac{1}{(n+1)^2})^{n+1}\cdot\dfrac{n+1}{n}>1+(n+1)\cdot(-\dfrac{1}{(n+1)^2})\cdot\dfrac{n+1}{n}=1-\dfrac{1}{n}$
+$\Rightarrow\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}\cdot\dfrac{n+1}{n}>1+(n+1)\cdot\left(-\dfrac{1}{(n+1)^2}\right)\cdot\dfrac{n+1}{n}=1-\dfrac{1}{n}$
 
 \end{itemize}
 
