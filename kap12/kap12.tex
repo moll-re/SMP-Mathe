@@ -1,5 +1,36 @@
 \chapter{Exponentialfunktionen}
 
+\begin{Definition}
+Man bezeichnet als Exponentialfunktion eine Funktion der Form $x\rightarrow a^x$ mit $a\in \R$, $a>0$ und $a\neq1$\\
+$x$ ist die Variable und wird \textit{Exponent} oder \textit{Hochzahl} genannt.\\
+$a$ nennt man \textit{Basis} oder \textit{Grundzahl}, sie ist für jede Funktion fest forgegeben.\\
+Die natürliche Exponentialfunktion wird durch die Funktionsvorschrift $f(x)=e^x$ beschrieben.
+\end{Definition}
+
+Hier Graphen für a<1\\
+a>1\\
+a=e\\
+
+
+		\section{Wiederholung: Potenzgesetze}
+Seien $a$ und $b$ aus $\R$, sowie $n$ und $m$ aus $\N$, dann gilt:
+\begin{enumerate}
+\begin{minipage}{0.5\textwidth}
+\item$a^0=1$ (für $a\neq 0$)
+\item$a^1=a$
+\item$a^n=\underbrace{a\cdot a\cdot ... \cdot a}_{n Mal}$
+\item$a^m\cdot a^n=a^{m+n}$
+\item$(a^n)^m=a^{n\cdot m}$
+\end {minipage}
+\begin{minipage}{0.5\textwidth}
+\item$a^{-n}=\dfrac{1}{a^n}$
+\item$\dfrac{a^n}{a^m}=a^{n-m}$
+\item$(\dfrac{a}{b})^n=\dfrac{a^n}{b^n}$
+\item $a^{\dfrac{1}{n}}=\sqrt[n]{a}$
+\item$a^{\dfrac{m}{n}}=\sqrt[n]{a^m}$
+\end {minipage}
+\end{enumerate}
+
 		\section{Die Eulersche Zahl ($e$)}
 
 \begin{Definition}
@@ -26,20 +57,26 @@ $e$ ist darstellbar bzw. ergibt sich durch:
 \item $\lim\limits_{n\to \infty}(1+\dfrac{1}{n})^n;n\in\N$
 \end{itemize}
 
-	\subsection{Herleitung}
+	\subsection{Herleitung zur Zahl $e$}
 
 Anhand mancher Überlegungen, denen wir jetzt nachgehen werden, lassen sich einige Eigenschaften der Eulerschen Zahl schließen.\\
 \\ Wir definieren eine Folge $(e_{n})n\in\N$ durch $e_{n}=(1+\dfrac{1}{n})^n$ und versuchen ihre Konvergenz zu beweisen.
 \begin{itemize}
 \item$\dfrac{e_{n+1}}{e_{n}}=\dfrac{{(1+\dfrac{1}{n+1})}^{n+1}}{{(1+\dfrac{1}{n+1})}^{n}}=(\dfrac{n(n+2)}{(n+1)^2})^n\cdot(1+\dfrac{1}{n})=(1-\dfrac{1}{(n+1)^2})^{n+1}\cdot\dfrac{n+1}{n}$
-\item Die Umformung ermöglicht uns auf den Term ${(1-\dfrac{1}{(n+1)^2}}^{n+1}$, die Ungleichung von Bernoulli anzuwenden. Diese besagt Folgendes: $(1+x)^n>1+nx$ für $n>gleich2$ und $x>-1$
+\item Die Umformung ermöglicht uns auf den Term ${(1-\dfrac{1}{(n+1)^2}})^{n+1}$, die Ungleichung von Bernoulli anzuwenden. Diese besagt Folgendes: $(1+x)^n>1+nx$ für $n>gleich2$ und $x>-1$\\
+$(1-\dfrac{1}{(n+1)^2})^{n+1}>1+(n+1)\cdot(-\dfrac{1}{(n+1)^2})$
+\item Dies kann man an den ersten Ausdruck anwenden:\\
+$\Rightarrow(1-\dfrac{1}{(n+1)^2})^{n+1}\cdot\dfrac{n+1}{n}>1+(n+1)\cdot(-\dfrac{1}{(n+1)^2})\cdot\dfrac{n+1}{n}=1-\dfrac{1}{n}$
 
 \end{itemize}
 
-		\section{Die Exponentialfunktion}
+		\section{Eigenschaften}
+		\section{Ableitungsregeln}
 
-	\subsection{Eigenschaften}
+\begin{enumerate}
+\item 
+\end{enumerate}
+	\subsection{Aktivität}
 
-		\section{Die Logarithmusfunktion}
+Quelle: Déclic 1ère
 
-	\subsection{Eigenschaften}
