@@ -509,12 +509,79 @@ $&=& \dfrac{8a^2}{(x+a)^3}$
 
 \subsubsection{Weisen Sie nach, dass $K_{a}$ genau einen Hochpunkt und genau einen Tiefpunkt besitzt. \\ Geben Sie die Koordinaten dieser Punkte in Abh"angigkeit von $a$ an und erstellen Sie eine Monotonietabelle der Funktionen $f_{a}$}\\ \\
 
+Notwendige Bedingung f"ur Extremstellen: $\Rightarrow f'(x)=0 \\ \\
+\Leftrightarrow x^2+2ax-3a^2 = 0 \qquad \qquad D= \R \backslash\{ -a \}  \\\\
+\Rightarrow $\Delta$ = 4a^2 +12a^2 = 16a^2 \\ \\
+\Leftrightarrow x_{1}=a \quad \lor \quad x_{2}=-3a \qquad \qquad L=\{a;-3a\}$ \\\\
+
+$\Rightarrow f(a)=\dfrac{a^2-3a^2}{2a} = -a$\\\\
+$\Rightarrow f(-3a)= \dfrac{9a^2+9a^2}{-2a} = -9a$ \\\\
+
+Es ergeben sich somit die Extremstellen $H(-3a|-9a)$ und $T(a|-a)$. Bevor man mit der Monotonietabelle beginnt, muss die Polstelle untersucht werden.\\\\
+
+\lim\limits_{x \rightarrow {-a^+}}{f_{a}} = \lim\limits_{x \rightarrow {-a^+}}{\dfrac{x^2-3ax}{x+a}} =\lim\limits_{h \rightarrow {0}}{\dfrac{(-a+h)^2 -3a(-a+h)}{(-a+h)+a}} = \lim\limits_{h \rightarrow {0}}{\dfrac{h^2-5ah+4a^2}{h}} = + \infty \\ \\
+
+\lim\limits_{x \rightarrow {-a^-}}{f_{a}} = \lim\limits_{x \rightarrow {-a^-}}{\dfrac{x^2-3ax}{x+a}} =\lim\limits_{h \rightarrow {0}}{\dfrac{(-a-h)^2 -3a(-a-h)}{(-a-h)+a}} = \lim\limits_{h \rightarrow {0}}{\dfrac{h^2+5ah+4a^2}{-h}} = - \infty $\\ \\ \\ 
+  
+Jetzt kann die Monotonietabelle erstellt werden:\\\\
+
+\begin{tikzpicture}
+\tikzset{arrow style/.style = {blue,->,> = latex',
+shorten > = 6pt,
+shorten < = 6pt}}
+\tkzTabInit{$x$ /1, $ x^2-2ax-3a $ /1.2, $(x+a)^2 $ /1.2, $f_{a}'(x)$ /1.2, $f_{a}(x)$ /3,}   {$-\infty$ ,$-3a$ , $-a$, $a$ ,$+\infty$}
+\tkzTabLine{{},+,z,-,t,-,z,+,} 
+\tkzTabLine{{},+,t,+,d,+,t,+,} 
+\tkzTabLine{{},+,z,-,d,-,z,+,}
+\tkzTabVar{ - / $-\infty$ , + / $H(-3a|-9a)$ / , -D+ / $-\infty$/$+\infty$  , - / $T(a|-a)$ , + / $+\infty$ }
+\end{tikzpicture}\\ \\
+
+\subsubsection{Zeigen Sie, dass es genau einen Punkt gibt, durch den alle Graphen $Ka$ gehen.}\\ \\
+
+Diesen Punkt haben wir schon per ''Zufall'' herausgefunden, da wir eine Nullstelle gefunden haben, die nicht von $a$ abh"angt. Wenn man diesen aber nicht gefunden hat, geht man diesen L"osungsweg:\\\\
+
+\begin{array}{rcccccl}
+$\Rightarrow & f_{1}=f_{2} & \Leftrightarrow & \dfrac{x^2-3x}{x+1} & = & \dfrac{x^2-6x}{x+2} & \qquad \qquad D=\R \backslash \{-1;-2\} \\ \\
+&&\Leftrightarrow& \dfrac{x-3}{x+1} &=& \dfrac{x-6}{x+2}&  \\\\
+&&\Leftrightarrow& -x & = & -5x &\\ \\
+&&\Leftrightarrow& x &=& 0 & \qquad \qquad L=\{ 0 \} \\
+$
+\end{array}
+
+\subsubsection{Bestimmen Sie $a\in \R^+$ so, dass der Graph $K_{a}$ durch den Punkt $P(5|\frac{5}{3})$ verl"auft}\\ \\
+
+\begin{array}{rcccccl}
+$\Rightarrow & f_{a}(5) = \dfrac{5}{3} & \Leftrightarrow & \dfrac{5^2-15a}{5+a} &=& \dfrac{5}{3} & \qquad \qquad D=\R \backslash \{-5\} \\\\
+&&\Leftrightarrow & 15-9a &=& 5+a &\\\\
+&&\Leftrightarrow & a&=&1&\qquad \qquad L=\{1\}$\\\\
+\end{array}
+
+\subsubsection{ Berechnen Sie die Schnittpunkte von $K_{1}$ mit der Geraden $j(x) =-15x -4$ }\\ \\
+
+\begin{array}{rcccl}
+$\Rightarrow  f_{1}(x) & = & \dfrac{x^2-3x}{x+1} &=& -15x-4 \quad = \quad y\\\\
+&\Leftrightarrow & x^2-3x &=& -15x^2-19x-4\\\\
+&\Leftrightarrow & 4x^2+4x+1 &=& 0\\\\
+\Delta = 0 & \Rightarrow &x &=& -\dfrac{1}{2}$\\\\ 
+\end{array}
+
+$\Rightarrow f_{1}(-\dfrac{1}{2}) = \dfrac{(\frac{1}{2})^2 -3\cdot (\frac{1}{2})}{-\frac{1}{2}+1} = \dfrac{7}{2}$ \\ \\
+
+Es existiert genau ein Schnittpunkt von $K_{1}$ mit der Geraden $j$: $P_{K_{1}j}(-\frac{1}{2}|\frac{7}{2})$ 
+
+\subsubsection{ Vom Punkt $A(0|-4)$ wird die Tangente an $K_{1}$ gelegt. Bestimmen Sie eine Gleichung der Tangente und die Koordinaten des Ber"uhrpunktes }\\ \\
+
+Sei $B(x_{0}|f_(x_{0}))$, dann lautet die Tangentengleichung:\\
+
+\begin{array}{rccl}
+$\Rightarrow & T_{x_{0}}(x) &=& f'(x_{0}) \cdot (x-x_{0}) +f(x_{0}) \\ \\
+&&=& \dfrac{x_{0}^2 +2x_{0}-3}{(x_{0}+1)^2} \cdot (x-x_{0}) + \dfrac{x_{0}^2 -3x_{0}}{x_{0}+1} \\ \\
+\end{array} 
+
+Jetzt werden die Koordinaten des Punktes $A(0|-4)$, durch den die Tangente auch noch geht, eingesetzt.
+
+\begin{array}{rccl}
+$\Rightarrow & T_{x_{0}}(0) &=&
 
 
 
-
-
-
-
-
-\end{tabular}
