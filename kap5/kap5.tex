@@ -793,11 +793,11 @@
             (durch Verbinden der Punkte). Folgende Möglichkeiten bieten sich an:
             \begin{enumerate}[1)]
                 \item 3 Spurpunkte
-                \item 2 Spurpunkte \Rightarrow $E \parallel \vv{x_1} \lor E \parallel \vv{x_2} \lor E \parallel \vv{x_3}$
-                \item 1 Spurpunkt \Rightarrow $E \parallel E_{x_{1}x_2} \lor E \parallel E_{x_{2}x_3} \lor E \parallel E_{x_{1}x_3}$
+                \item $\text{2 Spurpunkte } \Rightarrow E \parallel \vv{x_1} \lor E \parallel \vv{x_2} \lor E \parallel \vv{x_3}$
+                \item $\text{1 Spurpunkt } \Rightarrow E \parallel E_{x_{1}x_2} \lor E \parallel E_{x_{2}x_3} \lor E \parallel E_{x_{1}x_3}$
                 \item Ausnahme des vorherigen Falls: $P \equiv O \Rightarrow \text{Ausrichtung von $E$ lässt sich nicht bestimmen}$
-                \item $inf \text{Punkte} \Rightarrow \text{Eine der Achsen des Koordinatensystems $\in E$, Ausrichtung von $E$ lässt sich nicht bestimmen}$
-                \item $inf \glqq \cdot 2 \grqq \text{Punkte} \Rightarrow E \equiv E_{x_{1}x_2} \lor E \equiv E_{x_{2}x_3} \lor E \equiv E_{x_{1}x_3}$
+                \item $\infty \text{ Punkte} \Rightarrow \text{Eine der Achsen des Koordinatensystems $\in E$, Ausrichtung von $E$ lässt sich nicht bestimmen}$
+                \item $\infty \glqq \cdot 2 \grqq \text{ Punkte} \Rightarrow E \equiv E_{x_{1}x_2} \lor E \equiv E_{x_{2}x_3} \lor E \equiv E_{x_{1}x_3}$
             \end{enumerate}
         \end{Bemerkung}
 
@@ -810,22 +810,39 @@
             \begin{tikzpicture}[>=triangle 45]
                 \draw [->,line width=0.8pt] (-3.5,0.15) -- (3.5,0.15);
                 \draw [->,line width=0.8pt] (3.5,-0.15) -- (-3.5,-0.15);
-                \draw [->,line width=0.8pt] (-5.7,-0.3) -- (-1.2,-4.5);
-                \draw [->,line width=0.8pt] (-0.8,-4.5) -- (-5.3,-0.3);
+                \draw [->,line width=0.8pt] (-1.2,-4.5) -- (-5.7,-0.3);
+                \draw [->,line width=0.8pt] (-5.3,-0.3) -- (-0.8,-4.5);
                 \draw [->,line width=0.8pt] (6.7,-0.5) -- (2.2,-4.5);
                 \draw [->,line width=0.8pt] (1.8,-4.5) -- (6.3,-0.5);
+                \draw [line width=0.8pt,color=black,fill=black,fill opacity=0.3] (0,0.7) circle (10pt) node {1};
+                \draw [line width=0.8pt,color=black,fill=black,fill opacity=0.3] (0,-0.7) circle (10pt) node {2};
+                \draw [line width=0.8pt,color=black,fill=black,fill opacity=0.3] (-3.85,-2.8) circle (10pt) node {3};
+                \draw [line width=0.8pt,color=black,fill=black,fill opacity=0.3] (-2.75,-1.9) circle (10pt) node {4};
+                \draw [line width=0.8pt,color=black,fill=black,fill opacity=0.3] (4.85,-2.9) circle (10pt) node {5};
+                \draw [line width=0.8pt,color=black,fill=black,fill opacity=0.3] (3.85,-1.9) circle (10pt) node {6};
                 \draw [line width=0.8pt](-5.5,0) node {$E:(\vv{x} - \textcolor{blue}{\vv{q}}) \odot \textcolor{red}{\vv{n}} = 0$};
                 \draw [line width=0.8pt](6.5,0.2) node {$E:\textcolor{red}{n_1} \cdot x_1 + \textcolor{red}{n_2} \cdot x_2 + \textcolor{red}{n_3} \cdot x_3 = \textcolor{purple}{d};$};
                 \draw [line width=0.8pt](6.5,-0.2) node {$\quad \textcolor{purple}{d} = \textcolor{red}{n_1} \cdot \textcolor{blue}{q_1} + \textcolor{red}{n_2} \cdot \textcolor{blue}{q_2} + \textcolor{red}{n_3} \cdot \textcolor{blue}{q_3}$};
                 \draw [line width=0.8pt](0.5,-5) node {$E:\vv{x}=\textcolor{blue}{\vv{p}} + s\cdot \textcolor{red}{\vv{u}} + t\cdot \textcolor{red}{\vv{v}}$};
-                % Param    E:\vv{x}=\textcolor{blue}{\vv{p}} + s\cdot \textcolor{red}{\vv{u}} + t\cdot \textcolor{red}{\vv{v}}
-                % Normal   E:(\vv{x} - \textcolor{blue}{\vv{q}}) \odot \textcolor{red}{\vv{n}} = 0
-                % Koor     E:\textcolor{red}{n_1} \cdot x_1 + \textcolor{red}{n_2} \cdot x_2 + \textcolor{red}{n_3} \cdot x_3 = \textcolor{purple}{d} ; \quad \textcolor{purple}{d} = \textcolor{red}{n_1} \cdot \textcolor{blue}{q_1} + \textcolor{red}{n_2} \cdot \textcolor{blue}{q_2} + \textcolor{red}{n_3} \cdot \textcolor{blue}{q_3}
             \end{tikzpicture}
         \end{center}
 
+        \begin{enumerate}[1)]
+            \item Siehe oben
+            \item $\textcolor{red}{\vv{n}}$ aus den einzelnen Faktoren herausarbeiten $\land \text{ Per Punktprobe (Koordinaten
+            einsetzen)} \\ \text{einen Punkt $\textcolor{blue}{Q}$ von $E$ ermitteln}$
+            \item \label{paramtonorm} $\text{$\textcolor{red}{\vv{n}}$ mittels Kreuzprodukt ermitteln } \land \text{ Stützpunkt $\textcolor{blue}{P}$
+            als Punkt $\textcolor{blue}{Q}$ einsetzen}$
+            \item \label{normtoparam} Zwei Punkte $U,V \no \equiv \textcolor{blue}{Q}$ von $E$ ermitteln $\land \text{ $\textcolor{blue}{Q}$ als
+            Stützpunkt $P$ } \land \text{ $(\vv{u} - \textcolor{blue}{\vv{q}})$ und $(\vv{v} - \textcolor{blue}{\vv{q}})$ als} \\ \text{Spannvektoren
+            einsetzen}$
+            \item Siehe \ref{normtoparam} (gleiches Prinzip)
+            \item Siehe \ref{paramtonorm} (gleiches Prinzip) $\land \text{ Skalarprodukt \glqq ausmultiplizieren\grqq}$
+        \end{enumerate}
 
     \subsection{Lagebeziehungen zwischen Ebenen und Geraden}
+
+
 
     \subsection{Lagebeziehungen zwischen Ebenen}
 
