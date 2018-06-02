@@ -1,0 +1,269 @@
+\documentclass[10pt]{article}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+ 
+%<<<<<<<WARNING>>>>>>>
+% PGF/Tikz doesn't support the following mathematical functions:
+% cosh, acosh, sinh, asinh, tanh, atanh,
+% x^r with r not integer
+
+% Plotting will be done using GNUPLOT
+% GNUPLOT must be installed and you must allow Latex to call external
+% programs by adding the following option to your compiler
+% shell-escape    OR    enable-write18 
+% Example: pdflatex --shell-escape file.tex 
+
+\begin{document}
+\definecolor{sexdts}{rgb}{0.1803921568627451,0.49019607843137253,0.19607843137254902}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-42.84346633667421,
+xmax=40.93883447172483,
+ymin=-6.566313601140705,
+ymax=53.42385310345342,
+xtick={-40,-35,...,40},
+ytick={-5,0,...,50},]
+\clip(-42.84346633667421,-6.566313601140705) rectangle (40.93883447172483,53.42385310345342);
+\draw[line width=2pt,color=sexdts] (-42.84346633667421,0) -- (-42.84346633667421,0);
+\draw[line width=2pt,color=sexdts] (-42.84346633667421,0) -- (-42.63401058465321,0);
+\draw[line width=2pt,color=sexdts] (-42.63401058465321,0) -- (-42.42455483263221,0);
+\draw[line width=2pt,color=sexdts] (-42.42455483263221,0) -- (-42.21509908061121,0);
+\draw[line width=2pt,color=sexdts] (-42.21509908061121,0) -- (-42.00564332859021,0);
+\draw[line width=2pt,color=sexdts] (-42.00564332859021,0) -- (-41.79618757656921,0);
+\draw[line width=2pt,color=sexdts] (-41.79618757656921,0) -- (-41.58673182454821,0);
+\draw[line width=2pt,color=sexdts] (-41.58673182454821,0) -- (-41.37727607252721,0);
+\draw[line width=2pt,color=sexdts] (-41.37727607252721,0) -- (-41.16782032050621,0);
+\draw[line width=2pt,color=sexdts] (-41.16782032050621,0) -- (-40.95836456848521,0);
+\draw[line width=2pt,color=sexdts] (-40.95836456848521,0) -- (-40.74890881646421,0);
+\draw[line width=2pt,color=sexdts] (-40.74890881646421,0) -- (-40.53945306444321,0);
+\draw[line width=2pt,color=sexdts] (-40.53945306444321,0) -- (-40.32999731242221,0);
+\draw[line width=2pt,color=sexdts] (-40.32999731242221,0) -- (-40.12054156040121,0);
+\draw[line width=2pt,color=sexdts] (-40.12054156040121,0) -- (-39.91108580838021,0);
+\draw[line width=2pt,color=sexdts] (-39.91108580838021,0) -- (-39.70163005635921,0);
+\draw[line width=2pt,color=sexdts] (-39.70163005635921,0) -- (-39.49217430433821,0);
+\draw[line width=2pt,color=sexdts] (-39.49217430433821,0) -- (-39.282718552317206,0);
+\draw[line width=2pt,color=sexdts] (-39.282718552317206,0) -- (-39.073262800296206,0);
+\draw[line width=2pt,color=sexdts] (-39.073262800296206,0) -- (-38.863807048275206,0);
+\draw[line width=2pt,color=sexdts] (-38.863807048275206,0) -- (-38.654351296254205,0);
+\draw[line width=2pt,color=sexdts] (-38.654351296254205,0) -- (-38.444895544233205,0);
+\draw[line width=2pt,color=sexdts] (-38.444895544233205,0) -- (-38.235439792212205,0);
+\draw[line width=2pt,color=sexdts] (-38.235439792212205,0) -- (-38.025984040191204,0);
+\draw[line width=2pt,color=sexdts] (-38.025984040191204,0) -- (-37.816528288170204,0);
+\draw[line width=2pt,color=sexdts] (-37.816528288170204,0) -- (-37.607072536149204,0);
+\draw[line width=2pt,color=sexdts] (-37.607072536149204,0) -- (-37.3976167841282,0);
+\draw[line width=2pt,color=sexdts] (-37.3976167841282,0) -- (-37.1881610321072,0);
+\draw[line width=2pt,color=sexdts] (-37.1881610321072,0) -- (-36.9787052800862,0);
+\draw[line width=2pt,color=sexdts] (-36.9787052800862,0) -- (-36.7692495280652,0);
+\draw[line width=2pt,color=sexdts] (-36.7692495280652,0) -- (-36.5597937760442,0);
+\draw[line width=2pt,color=sexdts] (-36.5597937760442,0) -- (-36.3503380240232,0);
+\draw[line width=2pt,color=sexdts] (-36.3503380240232,0) -- (-36.1408822720022,0);
+\draw[line width=2pt,color=sexdts] (-36.1408822720022,0) -- (-35.9314265199812,0);
+\draw[line width=2pt,color=sexdts] (-35.9314265199812,0) -- (-35.7219707679602,0);
+\draw[line width=2pt,color=sexdts] (-35.7219707679602,0) -- (-35.5125150159392,0);
+\draw[line width=2pt,color=sexdts] (-35.5125150159392,0) -- (-35.3030592639182,0);
+\draw[line width=2pt,color=sexdts] (-35.3030592639182,0) -- (-35.0936035118972,0);
+\draw[line width=2pt,color=sexdts] (-35.0936035118972,0) -- (-34.8841477598762,0);
+\draw[line width=2pt,color=sexdts] (-34.8841477598762,0) -- (-34.6746920078552,0);
+\draw[line width=2pt,color=sexdts] (-34.6746920078552,0) -- (-34.4652362558342,0);
+\draw[line width=2pt,color=sexdts] (-34.4652362558342,0) -- (-34.2557805038132,0);
+\draw[line width=2pt,color=sexdts] (-34.2557805038132,0) -- (-34.0463247517922,0);
+\draw[line width=2pt,color=sexdts] (-34.0463247517922,0) -- (-33.8368689997712,0);
+\draw[line width=2pt,color=sexdts] (-33.8368689997712,0) -- (-33.6274132477502,0);
+\draw[line width=2pt,color=sexdts] (-33.6274132477502,0) -- (-33.4179574957292,0);
+\draw[line width=2pt,color=sexdts] (-33.4179574957292,0) -- (-33.2085017437082,0);
+\draw[line width=2pt,color=sexdts] (-33.2085017437082,0) -- (-32.9990459916872,0);
+\draw[line width=2pt,color=sexdts] (-32.9990459916872,0) -- (-32.7895902396662,0);
+\draw[line width=2pt,color=sexdts] (-32.7895902396662,0) -- (-32.580134487645196,0);
+\draw[line width=2pt,color=sexdts] (-32.580134487645196,0) -- (-32.370678735624196,0);
+\draw[line width=2pt,color=sexdts] (-32.370678735624196,0) -- (-32.161222983603196,0);
+\draw[line width=2pt,color=sexdts] (-32.161222983603196,0) -- (-31.9517672315822,0);
+\draw[line width=2pt,color=sexdts] (-31.9517672315822,0) -- (-31.742311479561202,0);
+\draw[line width=2pt,color=sexdts] (-31.742311479561202,0) -- (-31.532855727540205,0);
+\draw[line width=2pt,color=sexdts] (-31.532855727540205,0) -- (-31.32339997551921,0);
+\draw[line width=2pt,color=sexdts] (-31.32339997551921,0) -- (-31.113944223498212,0);
+\draw[line width=2pt,color=sexdts] (-31.113944223498212,0) -- (-30.904488471477215,0);
+\draw[line width=2pt,color=sexdts] (-30.904488471477215,0) -- (-30.69503271945622,0);
+\draw[line width=2pt,color=sexdts] (-30.69503271945622,0) -- (-30.48557696743522,0);
+\draw[line width=2pt,color=sexdts] (-30.48557696743522,0) -- (-30.276121215414225,0);
+\draw[line width=2pt,color=sexdts] (-30.276121215414225,0) -- (-30.066665463393228,0);
+\draw[line width=2pt,color=sexdts] (-30.066665463393228,0) -- (-29.85720971137223,0);
+\draw[line width=2pt,color=sexdts] (-29.85720971137223,0) -- (-29.647753959351235,0);
+\draw[line width=2pt,color=sexdts] (-29.647753959351235,0) -- (-29.438298207330238,0);
+\draw[line width=2pt,color=sexdts] (-29.438298207330238,0) -- (-29.22884245530924,0);
+\draw[line width=2pt,color=sexdts] (-29.22884245530924,0) -- (-29.019386703288244,0);
+\draw[line width=2pt,color=sexdts] (-29.019386703288244,0) -- (-28.809930951267248,0);
+\draw[line width=2pt,color=sexdts] (-28.809930951267248,0) -- (-28.60047519924625,0);
+\draw[line width=2pt,color=sexdts] (-28.60047519924625,0) -- (-28.391019447225254,0);
+\draw[line width=2pt,color=sexdts] (-28.391019447225254,0) -- (-28.181563695204257,0);
+\draw[line width=2pt,color=sexdts] (-28.181563695204257,0) -- (-27.97210794318326,0);
+\draw[line width=2pt,color=sexdts] (-27.97210794318326,0) -- (-27.762652191162264,0);
+\draw[line width=2pt,color=sexdts] (-27.762652191162264,0) -- (-27.553196439141267,0);
+\draw[line width=2pt,color=sexdts] (-27.553196439141267,0) -- (-27.34374068712027,0);
+\draw[line width=2pt,color=sexdts] (-27.34374068712027,0) -- (-27.134284935099274,0);
+\draw[line width=2pt,color=sexdts] (-27.134284935099274,0) -- (-26.924829183078277,0);
+\draw[line width=2pt,color=sexdts] (-26.924829183078277,0) -- (-26.71537343105728,0);
+\draw[line width=2pt,color=sexdts] (-26.71537343105728,0) -- (-26.505917679036283,0);
+\draw[line width=2pt,color=sexdts] (-26.505917679036283,0) -- (-26.296461927015287,0);
+\draw[line width=2pt,color=sexdts] (-26.296461927015287,0) -- (-26.08700617499429,0);
+\draw[line width=2pt,color=sexdts] (-26.08700617499429,0) -- (-25.877550422973293,0);
+\draw[line width=2pt,color=sexdts] (-25.877550422973293,0) -- (-25.668094670952296,0);
+\draw[line width=2pt,color=sexdts] (-25.668094670952296,0) -- (-25.4586389189313,0);
+\draw[line width=2pt,color=sexdts] (-25.4586389189313,0) -- (-25.249183166910303,0);
+\draw[line width=2pt,color=sexdts] (-25.249183166910303,0) -- (-25.039727414889306,0);
+\draw[line width=2pt,color=sexdts] (-25.039727414889306,0) -- (-24.83027166286831,0);
+\draw[line width=2pt,color=sexdts] (-24.83027166286831,0) -- (-24.620815910847313,0);
+\draw[line width=2pt,color=sexdts] (-24.620815910847313,0) -- (-24.411360158826316,0);
+\draw[line width=2pt,color=sexdts] (-24.411360158826316,0) -- (-24.20190440680532,0);
+\draw[line width=2pt,color=sexdts] (-24.20190440680532,0) -- (-23.992448654784322,0);
+\draw[line width=2pt,color=sexdts] (-23.992448654784322,0) -- (-23.782992902763326,0);
+\draw[line width=2pt,color=sexdts] (-23.782992902763326,0) -- (-23.57353715074233,0);
+\draw[line width=2pt,color=sexdts] (-23.57353715074233,0) -- (-23.364081398721332,0);
+\draw[line width=2pt,color=sexdts] (-23.364081398721332,0) -- (-23.154625646700335,0);
+\draw[line width=2pt,color=sexdts] (-23.154625646700335,0) -- (-22.94516989467934,0);
+\draw[line width=2pt,color=sexdts] (-22.94516989467934,0) -- (-22.735714142658342,0);
+\draw[line width=2pt,color=sexdts] (-22.735714142658342,0) -- (-22.526258390637345,0);
+\draw[line width=2pt,color=sexdts] (-22.526258390637345,0) -- (-22.31680263861635,0);
+\draw[line width=2pt,color=sexdts] (-22.31680263861635,0) -- (-22.10734688659535,0);
+\draw[line width=2pt,color=sexdts] (-22.10734688659535,0) -- (-21.897891134574355,0);
+\draw[line width=2pt,color=sexdts] (-21.897891134574355,0) -- (-21.688435382553358,0);
+\draw[line width=2pt,color=sexdts] (-21.688435382553358,0) -- (-21.47897963053236,0);
+\draw[line width=2pt,color=sexdts] (-21.47897963053236,0) -- (-21.269523878511365,0);
+\draw[line width=2pt,color=sexdts] (-21.269523878511365,0) -- (-21.060068126490368,0);
+\draw[line width=2pt,color=sexdts] (-21.060068126490368,0) -- (-20.85061237446937,0);
+\draw[line width=2pt,color=sexdts] (-20.85061237446937,0) -- (-20.641156622448374,0);
+\draw[line width=2pt,color=sexdts] (-20.641156622448374,0) -- (-20.431700870427377,0);
+\draw[line width=2pt,color=sexdts] (-20.431700870427377,0) -- (-20.22224511840638,0);
+\draw[line width=2pt,color=sexdts] (-20.22224511840638,0) -- (-20.012789366385384,0);
+\draw[line width=2pt,color=sexdts] (-20.012789366385384,0) -- (-19.803333614364387,0);
+\draw[line width=2pt,color=sexdts] (-19.803333614364387,0) -- (-19.59387786234339,0);
+\draw[line width=2pt,color=sexdts] (-19.59387786234339,0) -- (-19.384422110322394,0);
+\draw[line width=2pt,color=sexdts] (-19.384422110322394,0) -- (-19.174966358301397,0);
+\draw[line width=2pt,color=sexdts] (-19.174966358301397,0) -- (-18.9655106062804,0);
+\draw[line width=2pt,color=sexdts] (-18.9655106062804,0) -- (-18.756054854259403,0);
+\draw[line width=2pt,color=sexdts] (-18.756054854259403,0) -- (-18.546599102238407,0);
+\draw[line width=2pt,color=sexdts] (-18.546599102238407,0) -- (-18.33714335021741,0);
+\draw[line width=2pt,color=sexdts] (-18.33714335021741,0) -- (-18.127687598196413,0);
+\draw[line width=2pt,color=sexdts] (-18.127687598196413,0) -- (-17.918231846175416,0);
+\draw[line width=2pt,color=sexdts] (-17.918231846175416,0) -- (-17.70877609415442,0);
+\draw[line width=2pt,color=sexdts] (-17.70877609415442,0) -- (-17.499320342133423,0);
+\draw[line width=2pt,color=sexdts] (-17.499320342133423,0) -- (-17.289864590112426,0);
+\draw[line width=2pt,color=sexdts] (-17.289864590112426,0) -- (-17.08040883809143,0);
+\draw[line width=2pt,color=sexdts] (-17.08040883809143,0) -- (-16.870953086070433,0);
+\draw[line width=2pt,color=sexdts] (-16.870953086070433,0) -- (-16.661497334049436,0);
+\draw[line width=2pt,color=sexdts] (-16.661497334049436,0) -- (-16.45204158202844,0);
+\draw[line width=2pt,color=sexdts] (-16.45204158202844,0) -- (-16.242585830007442,0);
+\draw[line width=2pt,color=sexdts] (-16.242585830007442,0) -- (-16.033130077986446,0);
+\draw[line width=2pt,color=sexdts] (-16.033130077986446,0) -- (-15.823674325965449,0);
+\draw[line width=2pt,color=sexdts] (-15.823674325965449,0) -- (-15.614218573944452,0);
+\draw[line width=2pt,color=sexdts] (-15.614218573944452,0) -- (-15.404762821923455,0);
+\draw[line width=2pt,color=sexdts] (-15.404762821923455,0) -- (-15.195307069902459,0);
+\draw[line width=2pt,color=sexdts] (-15.195307069902459,0) -- (-14.985851317881462,0);
+\draw[line width=2pt,color=sexdts] (-14.985851317881462,0) -- (-14.776395565860465,0);
+\draw[line width=2pt,color=sexdts] (-14.776395565860465,0) -- (-14.566939813839468,0);
+\draw[line width=2pt,color=sexdts] (-14.566939813839468,0) -- (-14.357484061818472,0);
+\draw[line width=2pt,color=sexdts] (-14.357484061818472,0) -- (-14.148028309797475,0);
+\draw[line width=2pt,color=sexdts] (-14.148028309797475,0) -- (-13.938572557776478,0);
+\draw[line width=2pt,color=sexdts] (-13.938572557776478,0) -- (-13.729116805755481,0);
+\draw[line width=2pt,color=sexdts] (-13.729116805755481,0) -- (-13.519661053734485,0);
+\draw[line width=2pt,color=sexdts] (-13.519661053734485,0) -- (-13.310205301713488,0);
+\draw[line width=2pt,color=sexdts] (-13.310205301713488,0) -- (-13.100749549692491,0);
+\draw[line width=2pt,color=sexdts] (-13.100749549692491,0) -- (-12.891293797671494,0);
+\draw[line width=2pt,color=sexdts] (-12.891293797671494,0) -- (-12.681838045650498,0);
+\draw[line width=2pt,color=sexdts] (-12.681838045650498,0) -- (-12.4723822936295,0);
+\draw[line width=2pt,color=sexdts] (-12.4723822936295,0) -- (-12.262926541608504,0);
+\draw[line width=2pt,color=sexdts] (-12.262926541608504,0) -- (-12.053470789587507,0);
+\draw[line width=2pt,color=sexdts] (-12.053470789587507,0) -- (-11.84401503756651,0);
+\draw[line width=2pt,color=sexdts] (-11.84401503756651,0) -- (-11.634559285545514,0);
+\draw[line width=2pt,color=sexdts] (-11.634559285545514,0) -- (-11.425103533524517,0);
+\draw[line width=2pt,color=sexdts] (-11.425103533524517,0) -- (-11.21564778150352,0);
+\draw[line width=2pt,color=sexdts] (-11.21564778150352,0) -- (-11.006192029482524,0);
+\draw[line width=2pt,color=sexdts] (-11.006192029482524,0) -- (-10.796736277461527,0);
+\draw[line width=2pt,color=sexdts] (-10.796736277461527,0) -- (-10.58728052544053,0);
+\draw[line width=2pt,color=sexdts] (-10.58728052544053,0) -- (-10.377824773419533,0);
+\draw[line width=2pt,color=sexdts] (-10.377824773419533,0) -- (-10.168369021398536,0);
+\draw[line width=2pt,color=sexdts] (-10.168369021398536,0) -- (-9.95891326937754,0);
+\draw[line width=2pt,color=sexdts] (-9.95891326937754,0) -- (-9.749457517356543,0);
+\draw[line width=2pt,color=sexdts] (-9.749457517356543,0) -- (-9.540001765335546,0);
+\draw[line width=2pt,color=sexdts] (-9.540001765335546,0) -- (-9.33054601331455,0);
+\draw[line width=2pt,color=sexdts] (-9.33054601331455,0) -- (-9.121090261293553,0);
+\draw[line width=2pt,color=sexdts] (-9.121090261293553,0) -- (-8.911634509272556,0);
+\draw[line width=2pt,color=sexdts] (-8.911634509272556,0) -- (-8.70217875725156,0);
+\draw[line width=2pt,color=sexdts] (-8.70217875725156,0) -- (-8.492723005230562,0);
+\draw[line width=2pt,color=sexdts] (-8.492723005230562,0) -- (-8.283267253209566,0);
+\draw[line width=2pt,color=sexdts] (-8.283267253209566,0) -- (-8.073811501188569,0);
+\draw[line width=2pt,color=sexdts] (-8.073811501188569,0) -- (-7.864355749167571,0);
+\draw[line width=2pt,color=sexdts] (-7.864355749167571,0) -- (-7.654899997146574,0);
+\draw[line width=2pt,color=sexdts] (-7.654899997146574,0) -- (-7.445444245125576,0);
+\draw[line width=2pt,color=sexdts] (-7.445444245125576,0) -- (-7.235988493104578,0);
+\draw[line width=2pt,color=sexdts] (-7.235988493104578,0) -- (-7.026532741083581,0);
+\draw[line width=2pt,color=sexdts] (-7.026532741083581,0) -- (-6.817076989062583,0.0010949167028513306);
+\draw[line width=2pt,color=sexdts] (-6.817076989062583,0.0010949167028513306) -- (-6.607621237041585,0.0013500397573972035);
+\draw[line width=2pt,color=sexdts] (-6.607621237041585,0.0013500397573972035) -- (-6.398165485020588,0.0016646082225312225);
+\draw[line width=2pt,color=sexdts] (-6.398165485020588,0.0016646082225312225) -- (-6.18870973299959,0.0020524732840910744);
+\draw[line width=2pt,color=sexdts] (-6.18870973299959,0.0020524732840910744) -- (-5.9792539809785925,0.002530713548622151);
+\draw[line width=2pt,color=sexdts] (-5.9792539809785925,0.002530713548622151) -- (-5.769798228957595,0.003120387054400038);
+\draw[line width=2pt,color=sexdts] (-5.769798228957595,0.003120387054400038) -- (-5.560342476936597,0.003847458506146838);
+\draw[line width=2pt,color=sexdts] (-5.560342476936597,0.003847458506146838) -- (-5.3508867249156,0.004743942561756283);
+\draw[line width=2pt,color=sexdts] (-5.3508867249156,0.004743942561756283) -- (-5.141430972894602,0.005849313512618261);
+\draw[line width=2pt,color=sexdts] (-5.141430972894602,0.005849313512618261) -- (-4.931975220873604,0.007212243429067116);
+\draw[line width=2pt,color=sexdts] (-4.931975220873604,0.007212243429067116) -- (-4.722519468852607,0.00889274530556634);
+\draw[line width=2pt,color=sexdts] (-4.722519468852607,0.00889274530556634) -- (-4.513063716831609,0.010964815573328627);
+\draw[line width=2pt,color=sexdts] (-4.513063716831609,0.010964815573328627) -- (-4.303607964810611,0.01351969233638737);
+\draw[line width=2pt,color=sexdts] (-4.303607964810611,0.01351969233638737) -- (-4.094152212789614,0.016669872798880422);
+\draw[line width=2pt,color=sexdts] (-4.094152212789614,0.016669872798880422) -- (-3.884696460768616,0.020554066780273175);
+\draw[line width=2pt,color=sexdts] (-3.884696460768616,0.020554066780273175) -- (-3.6752407087476184,0.02534330443339094);
+\draw[line width=2pt,color=sexdts] (-3.6752407087476184,0.02534330443339094) -- (-3.465784956726621,0.03124846710238219);
+\draw[line width=2pt,color=sexdts] (-3.465784956726621,0.03124846710238219) -- (-3.256329204705623,0.03852957292191635);
+\draw[line width=2pt,color=sexdts] (-3.256329204705623,0.03852957292191635) -- (-3.0468734526846255,0.04750722602428385);
+\draw[line width=2pt,color=sexdts] (-3.0468734526846255,0.04750722602428385) -- (-2.837417700663628,0.05857673348978663);
+\draw[line width=2pt,color=sexdts] (-2.837417700663628,0.05857673348978663) -- (-2.62796194864263,0.07222551164278833);
+\draw[line width=2pt,color=sexdts] (-2.62796194864263,0.07222551164278833) -- (-2.4185061966216326,0.08905454813338302);
+\draw[line width=2pt,color=sexdts] (-2.4185061966216326,0.08905454813338302) -- (-2.209050444600635,0.10980486483037481);
+\draw[line width=2pt,color=sexdts] (-2.209050444600635,0.10980486483037481) -- (-1.9995946925796373,0.13539014674868863);
+\draw[line width=2pt,color=sexdts] (-1.9995946925796373,0.13539014674868863) -- (-1.7901389405586396,0.1669369737392615);
+\draw[line width=2pt,color=sexdts] (-1.7901389405586396,0.1669369737392615) -- (-1.580683188537642,0.20583442643689145);
+\draw[line width=2pt,color=sexdts] (-1.580683188537642,0.20583442643689145) -- (-1.3712274365166444,0.2537952507320414);
+\draw[line width=2pt,color=sexdts] (-1.3712274365166444,0.2537952507320414) -- (-1.1617716844956467,0.3129312739814609);
+\draw[line width=2pt,color=sexdts] (-1.1617716844956467,0.3129312739814609) -- (-0.9523159324746491,0.3858463937099085);
+\draw[line width=2pt,color=sexdts] (-0.9523159324746491,0.3858463937099085) -- (-0.7428601804536514,0.4757512333131705);
+\draw[line width=2pt,color=sexdts] (-0.7428601804536514,0.4757512333131705) -- (-0.5334044284326538,0.5866045133213601);
+\draw[line width=2pt,color=sexdts] (-0.5334044284326538,0.5866045133213601) -- (-0.32394867641165614,0.7232873631301289);
+\draw[line width=2pt,color=sexdts] (-0.32394867641165614,0.7232873631301289) -- (-0.11449292439065853,0.8918182485533316);
+\draw[line width=2pt,color=sexdts] (-0.11449292439065853,0.8918182485533316) -- (0.09496282763033909,1.099617978960376);
+\draw[line width=2pt,color=sexdts] (0.09496282763033909,1.099617978960376) -- (0.3044185796513367,1.3558364628828214);
+\draw[line width=2pt,color=sexdts] (0.3044185796513367,1.3558364628828214) -- (0.5138743316723343,1.67175559990443);
+\draw[line width=2pt,color=sexdts] (0.5138743316723343,1.67175559990443) -- (0.723330083693332,2.0612860491076495);
+\draw[line width=2pt,color=sexdts] (0.723330083693332,2.0612860491076495) -- (0.9327858357143296,2.5415797479540196);
+\draw[line width=2pt,color=sexdts] (0.9327858357143296,2.5415797479540196) -- (1.1422415877353271,3.1337851522385516);
+\draw[line width=2pt,color=sexdts] (1.1422415877353271,3.1337851522385516) -- (1.3516973397563248,3.863978452101071);
+\draw[line width=2pt,color=sexdts] (1.3516973397563248,3.863978452101071) -- (1.5611530917773224,4.7643117677152285);
+\draw[line width=2pt,color=sexdts] (1.5611530917773224,4.7643117677152285) -- (1.77060884379832,5.8744288823989725);
+\draw[line width=2pt,color=sexdts] (1.77060884379832,5.8744288823989725) -- (1.9800645958193177,7.243210851189177);
+\draw[line width=2pt,color=sexdts] (1.9800645958193177,7.243210851189177) -- (2.189520347840315,8.93092834811196);
+\draw[line width=2pt,color=sexdts] (2.189520347840315,8.93092834811196) -- (2.3989760998613128,11.01189552503704);
+\draw[line width=2pt,color=sexdts] (2.3989760998613128,11.01189552503704) -- (2.6084318518823104,13.577742237733451);
+\draw[line width=2pt,color=sexdts] (2.6084318518823104,13.577742237733451) -- (2.817887603903308,16.741448722899218);
+\draw[line width=2pt,color=sexdts] (2.817887603903308,16.741448722899218) -- (3.0273433559243057,20.642320382438687);
+\draw[line width=2pt,color=sexdts] (3.0273433559243057,20.642320382438687) -- (3.2367991079453033,25.452121726383808);
+\draw[line width=2pt,color=sexdts] (3.2367991079453033,25.452121726383808) -- (3.446254859966301,31.382639566324098);
+\draw[line width=2pt,color=sexdts] (3.446254859966301,31.382639566324098) -- (3.6557106119872986,38.69500848445531);
+\draw[line width=2pt,color=sexdts] (3.6557106119872986,38.69500848445531) -- (3.8651663640082963,47.71120920047739);
+\draw[line width=2pt,color=sexdts] (3.8651663640082963,47.71120920047739) -- (4.0746221160292935,58.82824613635076);
+\draw[line width=2pt,color=sexdts] (4.0746221160292935,58.82824613635076) -- (4.284077868050291,72.53562845027288);
+\draw[line width=2pt,color=sexdts] (4.284077868050291,72.53562845027288) -- (4.493533620071289,89.43692427071927);
+\draw[line width=2pt,color=sexdts] (4.493533620071289,89.43692427071927) -- (4.702989372092286,110.27633721392654);
+\draw[line width=2pt,color=sexdts] (4.702989372092286,110.27633721392654) -- (4.912445124113284,135.97147541109015);
+\draw[line width=2pt,color=sexdts] (4.912445124113284,135.97147541109015) -- (5.121900876134282,167.6537559422481);
+\draw[line width=2pt,color=sexdts] (5.121900876134282,167.6537559422481) -- (5.331356628155279,206.71822377864964);
+\draw[line width=2pt,color=sexdts] (5.331356628155279,206.71822377864964) -- (5.540812380176277,254.8849788782541);
+\draw[line width=2pt,color=sexdts] (5.540812380176277,254.8849788782541) -- (5.750268132197275,314.27491621315835);
+\end{axis}
+\end{tikzpicture}
+\end{document}
