@@ -24,7 +24,13 @@ Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine soge
 \begin{Bemerkung}
   Im allgemeinen Fall muss der Integrand $f(x)$ im Intervall $[a;b]$ stetig sein, damit das Integral bestimmt ist.
 \end{Bemerkung}
-
+\section{Flächenberechnung mittels Integralen}
+\begin{Definition}
+  Für die auf dem Intervall $[a;b]$ (also stückweise) stetige Funktion $f$ mit Nullstellen und $x_1,x_2,...,x_n$
+  mit $a \leq x_1 \leq x_2 \leq ... \leq x_n \leq b$ ist der Flächeninhalt $A$ zwischen dem Graphen von $f$ und
+  der $x_1$-Achse im Intervall $[a;b]$ gegeben durch:\\\\
+  $A= |{\int_a^{x_1} f(x)dx}|+|{\int_{x_1}^{x_2} f(x)dx}|...+|{\int_{x_{n-1}}^{x_n} f(x)dx}|+|{\int_{x_n}^b f(x)dx}|$
+\end{Definition}
 \section{Stammfunktionen und der Hauptsatz der Differential- und Integralrechnung}
 \begin{Definition}
   Eine Funktion $F$ heißt Stammfunktion der Funktion $f$, wenn $F'(x)=f(x)$
@@ -35,6 +41,17 @@ Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine soge
   Stammfunktionen, die sich aber nur um einen konstanten Summanden
   unterscheiden.
 \end{Definition}
+\\Graph+Intergal
+\begin{Beispiel}
+  $f(x)=x^2-2x^3;x\in \R$\\
+  notwendige und hinreichende Bedingung für Nullstellen:$f(x)=0$\\
+  $\Leftrightarrow x^2(x-2)&=0\\
+  \stackrel{SdN}{\Leftrightarrow}
+  \begin{array}{rcl}
+    x^2&=0\\
+    x-2&=0
+  \end{array}
+\end{Beispiel}
 
 \begin{equation}
   \int_a^b f(x)d x
