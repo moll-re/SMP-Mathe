@@ -235,6 +235,25 @@ $f$ sei eine Funktion...
 
 \subsection{Wendestellen}
 
+\begin{Bemerkung}
+Eine Hilfsformel, die den Zusammenhang zwischen den verschiedenen Ableitungen einfach darstellt ist die NEW-Regel:\\\\
+
+\begin{minipage}[b]{0.2\linewidth}
+\\
+N $=$ Nullstellen\\
+E $=$ Extremstellen\\
+W $=$ Wendestellen 
+\end{minipage}
+\hfill \vline \hfill
+\begin{minipage}[b]{0.4\linewidth}
+\begin{array}{rcccccl}
+f & \qquad \qquad& N & E & W & & \\
+f' & \qquad \qquad && N & E & W & \\
+f'' & \qquad \qquad &&& N & E & W \\
+\end{array}
+\end{minipage}
+\end{Bemerkung}
+
 \subsection{Umkehrbarkeit}
 
 
@@ -297,7 +316,8 @@ $\Rightarrow $&$ \overline{f}(x)$&$=$&$\sqrt{x}$\\
 \draw[color=ffvvqq] (1.5706968783039106,-0.669543026764202) node {$p$};
 \end{scriptsize}
 \end{tikzpicture}
-\end{minipage}
+\end{minipage}\\\\
+
 
 
 \subsection{Beispiel}
@@ -578,10 +598,25 @@ $\Rightarrow & T_{x_{0}}(x) &=& f'(x_{0}) \cdot (x-x_{0}) +f(x_{0}) \\ \\
 &&=& \dfrac{x_{0}^2 +2x_{0}-3}{(x_{0}+1)^2} \cdot (x-x_{0}) + \dfrac{x_{0}^2 -3x_{0}}{x_{0}+1} \\ \\
 \end{array} 
 
-Jetzt werden die Koordinaten des Punktes $A(0|-4)$, durch den die Tangente auch noch geht, eingesetzt.
+Jetzt werden die Koordinaten des Punktes $A(0|-4)$, durch den die Tangente auch noch geht, eingesetzt. \\
 
-\begin{array}{rccl}
-$\Rightarrow & T_{x_{0}}(0) &=&$ undsoweiter
+\begin{array}{rcccccl}
+$\Rightarrow & T_{x_{0}}(0) &=& -4 & = & \dfrac{x_{0}^2 +2x_{0}-3}{(x_{0}+1)^2} \cdot (-x_{0}) + \dfrac{x_{0}^2 -3x_{0}}{x_{0}+1} &\qquad \qquad D=\R \backslash \{ -1\}$\\\\
+$\Leftrightarrow &&& -4 (x_{0}+1)^2 &=& (x_{0}^2+2x_{0}-3)(-x_{0})+(x_{0}^2-3x_{0})(x_{0}+1) & $\\\\
+$\Leftrightarrow &&& -4x_{0}^2-8x_{0}-4 &=& -x_{0}^3-2x_{0}^2+3x_{0}+x_{0}^3+x_{0}^2-3x_{0}^2-3x_{0}& $\\\\
+$\Leftrightarrow &&& 4x_{0}^2+8x_{0}+4 &=& 4x_{0}^2&$\\\\
+$\Leftrightarrow &&& x_{0} &=& -\dfrac{1}{2}&\qquad \qquad L=\left\{-\dfrac{1}{2}\right\}$\\\\
 \end{array}
 
+Nun werden die Koordinaten des Ber"uhrpunktes mit der Urspr"unglichen Funktion $f$ durch einsetzen errechnet. \\
 
+$\Rightarrow f_{1}\left(-\dfrac{1}{2}\right) =  \dfrac{\left(-\frac{1}{2}\right)^2-3\cdot - \frac{1}{2}}{-\frac{1}{2}+1} = \dfrac{7}{2} $\\ \\
+
+$\Rightarrow B\left(-\dfrac{1}{2}| \dfrac{7}{2} \right)$\\\\
+
+Da es sich um eine Tangente handelt, muss nun die Steigung am Ber"uhrpunkt errechnet werden, um die Tangentengleichung bestimmen zu k"onnen. \\
+
+$\Rightarrow f_{1}' \left(-\dfrac{1}{2}\right) = \dfrac{\left(-\frac{1}{2}\right)^2 +2\left(-\frac{1}{2}\right) -3 }{\left(-\frac{1}{2} \right)^2}  = -15$\\\\
+
+Die Tangentengleichung lautet:\\ \\
+$t(x) = -15x-4$\qquad \qquad mit \quad $D_{t}=\R$
