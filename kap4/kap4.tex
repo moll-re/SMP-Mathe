@@ -154,91 +154,107 @@ In der Kursstufe beschränken wir uns auf die Benutzung von Polarkoordinaten fü
   \item $x = r\cdot\cos(\varphi)$
   \item  $y=r\cdot\sin(\varphi)$
 \end{itemize}
+
+
 \section{Beispiel einer Funktionsdiskussion}
 Sei die Funktion $f(x)=2\cos(x)+2\sin(x)\cos(x)$, ihr Schaubild sei K.\\
 Untersuchen Sie K im Intervall $[0;2\pi]$ auf gemeinsame Punkte mit der $x$-Achse, sowie Extrem- und Wendepunkte. Zeichnen Sie K im Intervall $[0;2\pi]$. Untersuchen Sie K auf Symmetrie.
+
 \subsection{Definitionsmenge}
   $D=\R$
+
 \subsection{Periodizität und Amplitude}
 Die Periode von $f$ ist $P=2\pi$. Die Amplitude $A$ beträgt $\dfrac{3}{2}\sqrt{3}$.
-\subsection{Nullstellen}
-\subsubsection{Notwendige und hinreichende Bedingung}
-\begin{align*}
-  f(x)&=0\\
-  \Leftrightarrow 2\cos(x)+2\sin(x)\cos(x)&=0\\
-  \Leftrightarrow 2\cos(x)(1+\sin(x))&=0\\
-  \stackrel{S.d.N}{\Rightarrow}
-  \left\{\begin{array}{rccl}
-    2\cos(x)&=&0&\\
-    1+\sin(x)&=&0&
-  \end{array}\right\\
-  \Leftrightarrow
-  \left\{ \begin{array}{rccl}
-    \cos(x)&=&0&\\
-    \sin(x)&=&-1&
-  \end{array}\right\\
-  \Leftrightarrow
-  \left\{ \begin{array}{rccl}
-    x_1&=&\dfrac{1}{2}\pi&\\\\
-    x_2&=&\dfrac{3}{2}\pi&
-  \end{array}\right\\
-  \Rightarrow \mathbb{L}=\{(\dfrac{1}{2}\pi|0);(\dfrac{3}{2}\pi|0)\}
-\end{align*}
-\subsection{Ableitungen}
+\\
+
+\begin{minipage}{0.5\textwidth}
+  \subsection{Nullstellen}
+  \subsubsection{Notwendige und hinreichende Bedingung:}
   \begin{align*}
-    f'(x)&=-2\sin(x)+2(\cos(x)\cos(x)-\sin(x)\sin(x))\\
-    &=-2\sin(x)+2(\cos^2(x)-\sin^2(x))\\
-    &=-2\sin(x)+2(1-\sin^2(x)-\sin^2(x))\\
-    &=-4\sin^2(x)-2\sin(x)+2\\
-    f''(x)&=-4(\cos(x)\sin(x)+\sin(x)\cos(x))-2\cos(x)\\
-    &=-8\sin(x)\cos(x)-2\cos(x)\\
-    f'''(x)&=-8(\cos(x)\cos(x)-\sin(x)\sin(x))+2\sin(x)\\
-    &=-8(1-\sin^2(x)-\sin^2(x))+2\sin(x)\\
-    &=16\sin^2(x)+2\sin(x)-8
-  \end{align*}\\
+    f(x)&=0\\
+    \Leftrightarrow 2\cos(x)+2\sin(x)\cos(x)&=0\\
+    \Leftrightarrow 2\cos(x)(1+\sin(x))&=0\\
+    \stackrel{S.d.N}{\Rightarrow}
+    \left\{\begin{array}{rccl}
+      2\cos(x)&=&0&\\
+      1+\sin(x)&=&0&
+    \end{array}\right\\
+    \Leftrightarrow
+    \left\{ \begin{array}{rccl}
+      \cos(x)&=&0&\\
+      \sin(x)&=&-1&
+    \end{array}\right\\
+    \Leftrightarrow
+    \left\{ \begin{array}{rccl}
+      x_1&=&\dfrac{1}{2}\pi&\\\\
+      x_2&=&\dfrac{3}{2}\pi&
+    \end{array}\right\\
+    \Rightarrow \mathbb{L}=\{(\dfrac{1}{2}\pi|0);(\dfrac{3}{2}\pi|0)\}
+  \end{align*}
+\end{minipage}
+\vline
+\begin{minipage}{0.5\textwidth}
+  \subsection{Ableitungen}
+    \begin{align*}
+      f'(x)&=-2\sin(x)+2(\cos(x)\cos(x)-\sin(x)\sin(x))\\
+      &=-2\sin(x)+2(\cos^2(x)-\sin^2(x))\\
+      &=-2\sin(x)+2(1-\sin^2(x)-\sin^2(x))\\
+      &=-4\sin^2(x)-2\sin(x)+2\\
+      f''(x)&=-4(\cos(x)\sin(x)+\sin(x)\cos(x))-2\cos(x)\\
+      &=-8\sin(x)\cos(x)-2\cos(x)\\
+      f'''(x)&=-8(\cos(x)\cos(x)-\sin(x)\sin(x))+2\sin(x)\\
+      &=-8(1-\sin^2(x)-\sin^2(x))+2\sin(x)\\
+      &=16\sin^2(x)+2\sin(x)-8
+    \end{align*}\\
+\end{minipage}
+
 \subsection{Extremstellen}
-\subsubsection{Notwendige Bedingung}
-\begin{align*}
-  f'(x)&=0\\
-  \Leftrightarrow4\sin^2(x)-2\sin(x)+2&=0\\
-  Substitution: y=\sin(x)\\
-  \Rightarrow4y^2-2y+2&=0\\
-  \stackrel{ABC-Formel}{\Rightarrow}y_{1,2}&=\dfrac{2\pm\sqrt{(-2)^2-4*(-4)*2}}{-8}\\
-  Resusbsitution:\\
-  \Rightarrow
-  \left\{\begin{array}{rccl}
-    \sin(x)&=\dfrac{2+\sqrt{20}}{-8}\\
-    \sin(x)&=\dfrac{2-\sqrt{20}}{-8}
-  \end{array}\right\\
-  \Rightarrow\mathbb{L}=\{\dfrac{1}{6}\pi;\dfrac{5}{6}\pi;\dfrac{3}{2}\pi\}
-\end{align*}
-\subsubsection{Hinreichende Bedingung}
-\begin{align*}
-  f''(x)&\neq0\\
-  \Rightarrow
-  \left\{\begin{array}{rccl}
-    f''(\dfrac{1}{6}\pi)&\stackrel{?}{=}0\\\\
-    f''(\dfrac{5}{6}\pi)&\stackrel{?}{=}0\\\\
-    f''(\dfrac{3}{2}\pi)&\stackrel{?}{=}0
-  \end{array}\right\\
-  \Leftrightarrow
-  \left\{\begin{array}{rccl}
-    8\sin(\dfrac{1}{6}\pi)\cos(\dfrac{1}{6}\pi)-2\sin(\dfrac{1}{6}\pi)&\stackrel{?}{=}0\\\\
-    8\sin(\dfrac{5}{6}\pi)\cos(\dfrac{5}{6}\pi)-2\sin(\dfrac{5}{6}\pi)&\stackrel{?}{=}0\\\\
-    8\sin(\dfrac{3}{2}\pi)\cos(\dfrac{3}{2}\pi)-2\sin(\dfrac{3}{2}\pi)&\stackrel{?}{=}0
-  \end{array}\right\\
-  \Leftrightarrow
-  \left\{\begin{array}{rccl}
-    8*\dfrac{1}{2}*\dfrac{\sqrt{3}}{2}-2*\dfrac{\sqrt{3}}{2}&\stackrel{!}{\neq}&0&,  <0 \Rightarrow HP\\
-    8*\dfrac{1}{2}*-\dfrac{\sqrt{3}}{2}-2*-\dfrac{\sqrt{3}}{2}&\stackrel{!}{\neq}&0&,  >0 \Rightarrow TP\\
-    8*(-1)(0)-2(0)&\stackrel{!}{=}&0& \Rightarrow \text{kein } EP
-  \end{array}\right\\
-\end{align*}
+\begin{minipage}{0.5\textwidth}
+  \subsubsection{Notwendige Bedingung:}
+    f'(x)&=0\\
+    \Leftrightarrow4\sin^2(x)-2\sin(x)+2&=0\\
+    Substitution: y&=\sin(x)\\
+    \Rightarrow4y^2-2y+2=0\\
+    \stackrel{ABC-Formel}{\Rightarrow}y_{1,2}=\dfrac{2\pm\sqrt{(-2)^2-4*(-4)*2}}{-8}\\
+    Resusbsitution:\\
+    \Rightarrow
+    \left\{\begin{array}{rccl}
+      \sin(x)&=\dfrac{2+\sqrt{20}}{-8}\\
+      \sin(x)&=\dfrac{2-\sqrt{20}}{-8}
+    \end{array}\right\\
+    \Rightarrow\mathbb{L}=\{\dfrac{1}{6}\pi;\dfrac{5}{6}\pi;\dfrac{3}{2}\pi\}
+\end{minipage}
+\vline
+\begin{minipage}{0.5\textwidth}
+  \subsubsection{Hinreichende Bedingung:}
+  \begin{align*}
+    f''(x)&\neq0\\
+    \Rightarrow
+    \left\{\begin{array}{rccl}
+      f''(\dfrac{1}{6}\pi)&\stackrel{?}{=}0\\\\
+      f''(\dfrac{5}{6}\pi)&\stackrel{?}{=}0\\\\
+      f''(\dfrac{3}{2}\pi)&\stackrel{?}{=}0
+    \end{array}\right\\
+    \Leftrightarrow
+    \left\{\begin{array}{rccl}
+      8\sin(\dfrac{1}{6}\pi)\cos(\dfrac{1}{6}\pi)-2\sin(\dfrac{1}{6}\pi)&\stackrel{?}{=}0\\\\
+      8\sin(\dfrac{5}{6}\pi)\cos(\dfrac{5}{6}\pi)-2\sin(\dfrac{5}{6}\pi)&\stackrel{?}{=}0\\\\
+      8\sin(\dfrac{3}{2}\pi)\cos(\dfrac{3}{2}\pi)-2\sin(\dfrac{3}{2}\pi)&\stackrel{?}{=}0
+    \end{array}\right\\
+    \Leftrightarrow
+    \left\{\begin{array}{rccl}
+      8*\dfrac{1}{2}*\dfrac{\sqrt{3}}{2}-2*\dfrac{\sqrt{3}}{2}&\stackrel{!}{\neq}&0&,  <0 \Rightarrow HP\\
+      8*\dfrac{1}{2}*-\dfrac{\sqrt{3}}{2}-2*-\dfrac{\sqrt{3}}{2}&\stackrel{!}{\neq}&0&,  >0 \Rightarrow TP\\
+      8*(-1)(0)-2(0)&\stackrel{!}{=}&0& \Rightarrow \text{kein } EP
+    \end{array}\right\\
+  \end{align*}
+\end{minipage}
+
 \subsubsection{Ergebnis}
 Auf dem Intervall $[0;2\pi]$  besitzt K den Hochpunkt H$(\dfrac{1}{6}\pi|f(\dfrac{1}{6}\pi))$ und den Tiefpunk T$(\dfrac{5}{6}\pi|f(\dfrac{5}{6}\pi))$.\\
 $\Leftrightarrow$ H$(\dfrac{1}{6}\pi|\dfrac{3}{2}\sqrt{3})$ und T$(\dfrac{5}{6}\pi|-\dfrac{3}{2}\sqrt{3})$.
 \subsection{Wendestellen}
-\subsubsection{Notwendige Bedingung}
+\subsubsection{Notwendige Bedingung:}
 \begin{align*}
   f''(x)=0\\
   \Leftrightarrow -8\sin(x)\cos(x)-2\cos(x)=0\\
@@ -250,7 +266,7 @@ $\Leftrightarrow$ H$(\dfrac{1}{6}\pi|\dfrac{3}{2}\sqrt{3})$ und T$(\dfrac{5}{6}\
   \end{array}\right\\
   \Rightarrow \mathbb{L}=\{\dfrac{1}{2}\pi;\dfrac{3}{2}\pi;\sim3,394;\sim6,031\}
 \end{align*}
-\subsubsection{Hinreichende Bedingung}
+\subsubsection{Hinreichende Bedingung:}
 
 \begin{align*}
   f'''(x)&\neq0\\

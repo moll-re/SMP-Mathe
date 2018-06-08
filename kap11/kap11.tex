@@ -24,13 +24,7 @@ Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine soge
 \begin{Bemerkung}
   Im allgemeinen Fall muss der Integrand $f(x)$ im Intervall $[a;b]$ stetig sein, damit das Integral bestimmt ist.
 \end{Bemerkung}
-\section{Flächenberechnung mittels Integralen}
-\begin{Definition}
-  Für die auf dem Intervall $[a;b]$ (also stückweise) stetige Funktion $f$ mit Nullstellen und $x_1,x_2,...,x_n$
-  mit $a \leq x_1 \leq x_2 \leq ... \leq x_n \leq b$ ist der Flächeninhalt $A$ zwischen dem Graphen von $f$ und
-  der $x_1$-Achse im Intervall $[a;b]$ gegeben durch:\\\\
-  $A= |{\int_a^{x_1} f(x)dx}|+|{\int_{x_1}^{x_2} f(x)dx}|...+|{\int_{x_{n-1}}^{x_n} f(x)dx}|+|{\int_{x_n}^b f(x)dx}|$
-\end{Definition}
+
 \section{Stammfunktionen und der Hauptsatz der Differential- und Integralrechnung}
 \begin{Definition}
   Eine Funktion $F$ heißt Stammfunktion der Funktion $f$, wenn $F'(x)=f(x)$
@@ -41,23 +35,29 @@ Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine soge
   Stammfunktionen, die sich aber nur um einen konstanten Summanden
   unterscheiden.
 \end{Definition}
-\\Graph+Intergal
-\begin{Beispiel}
-  $f(x)=x^2-2x^3;x\in \R$\\
-  notwendige und hinreichende Bedingung für Nullstellen:$f(x)=0$\\
-  $\Leftrightarrow x^2(x-2)&=0\\
-  \stackrel{SdN}{\Leftrightarrow}
-  \begin{array}{rcl}
-    x^2&=0\\
-    x-2&=0
-  \end{array}
-\end{Beispiel}
+\subsection{Sätze über Integrale}
+\begin{Theorem}
+  \begin{minipage}{0.6\textwidth}
+    $
+    \int_a^b f(x)dx &= -\int_b^a f(x)dx\\\\
+    \int_a^b (f(x)+g(x))dx &= \int_a^b f(x)dx + \int_a^b g(x)dx\\\\
+    \int_a^b r*f(x)dx &= r*\int_a^b f(x)dx\\\\
+    \int_a^b f(x)dx + \int_b^c f(x)dx &= \int_a^c f(x)dx
+    $
+  \end{minipage}
+  \begin{minipage}{0.4\textwidth}
+    Invertieren der Intergrationsgrenzen\\\\
+    Summenregel\\\\
+    Linearität\\\\
+    Abschnittweise Integration
+  \end{minipage}
 
-\begin{equation}
-  \int_a^b f(x)d x
-  =\lim_{n\to\infty}\sum_{k=1}^n f(x_k)\Delta x_k = F(b) - F(a)
-  =\left[F(x)\right]_a^b
-\end{equation}
+\end{Theorem}
+\subsubsection{Beweise}
+Beweise\\\\\\\\\\
+
+
+$\int_a^b f(x)d x = \lim_{n\to\infty}\sum_{k=1}^n f(x_k)\Delta x_k = F(b) - F(a) = \left[F(x)\right]_a^b$\\
 Dies ist der \textbf{Hauptsatz der Differential- und Integralrechnung}. Mit
 ihm wird das Problem der Integration auf das Auffinden einer Stammfunktion
 zurückgeführt. Als Mathematiker müsste man noch anfügen, dass diese Beziehung
@@ -99,6 +99,76 @@ mit Tabellen oder mit Computerprogrammen bestimmen. Zunächst mag man meinen,
 dies sei etwas besonderes, aber auch die Werte eines Logarithmus oder eines
 Sinus kann man nur mit dem Taschenrechner berechnen oder aus einer
 Funktionentafel entnehmen.
+
+
+
+
+
+
+
+
+
+\section{Flächenberechnung mittels Integralen}
+\begin{Definition}
+  Für die auf dem Intervall $[a;b]$ (also stückweise) stetige Funktion $f$ mit Nullstellen und $x_1,x_2,...,x_n$
+  mit $a \leq x_1 \leq x_2 \leq ... \leq x_n \leq b$ ist der Flächeninhalt $A$ zwischen dem Graphen von $f$ und
+  der $x_1$-Achse im Intervall $[a;b]$ gegeben durch:\\\\
+  $A= |{\int_a^{x_1} f(x)dx}|+|{\int_{x_1}^{x_2} f(x)dx}|...+|{\int_{x_{n-1}}^{x_n} f(x)dx}|+|{\int_{x_n}^b f(x)dx}|$
+\end{Definition}
+
+\\Graph+Intergal
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{qqzzqq}{rgb}{0.,0.6,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=5.0cm,y=5.0cm]
+\begin{axis}[
+x=5.0cm,y=5.0cm,
+axis lines=middle,
+xmin=-1.0261085461981427,
+xmax=0.8799969446433364,
+ymin=-0.45014188815180656,
+ymax=0.9656470777143747,
+xtick={-1.0,-0.8,...,0.8},
+ytick={-0.4,-0.2,...,0.8},]
+\clip(-1.0261085461981427,-0.45014188815180656) rectangle (0.8799969446433364,0.9656470777143747);
+\draw[line width=0.8pt,color=ffqqqq,fill=ffqqqq,fill opacity=0.10000000149011612] plot[raw gnuplot, id=func1] function{set samples 100; set xrange [-0.7:0.4]; plot 7.0*x**(3.0)+5.0*x**(2.0)-0.3} -- (0.4,0.) -- (-0.7,0.) -- cycle;
+\draw[line width=2.4pt,color=qqzzqq] plot[raw gnuplot, id=func0] function{set samples 100; set xrange [-0.9261085461981428:0.7799969446433365]; plot 7.0*x**(3.0)+5.0*x**(2.0)-0.3};
+\begin{scriptsize}
+\draw[color=qqzzqq] (-0.836110892770214,-1.1411817405388711) node {$f$};
+\draw[color=xdxdff] (-0.6828869787154327,0.05702926736952031) node {$A$};
+\draw[color=xdxdff] (0.4203252024789926,0.05702926736952031) node {$B$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\begin{Beispiel}
+  $f(x)=x^2-2x^3;x\in \R$\\
+  notwendige und hinreichende Bedingung für Nullstellen:$f(x)=0$\\
+  $\Leftrightarrow x^2(x-2)&=0\\
+  \stackrel{SdN}{\Leftrightarrow}
+  \left\{ \begin{array}{rcl}
+  x^2&=0\\
+  x-2&=0
+  \end{array}\right\\
+  \Leftrightarrow
+  \left\{ \begin{array}{rcl}
+  x_1&=0\\
+  x_2&=2
+  \end{array}\right\\
+  $\\
+  Also gilt:\\
+  $A_{-1}^{3} &= |\int_{-1}^0 x^3-2x^2 dx| + |\int_{0}^2 x^3-2x^2 dx| + |\int_{2}^3 x^3-2x^2 dx|\\
+  &= |\Big[\dfrac{1}{4}x^4-\dfrac{2}{3}x^3\Big]_{-1}^0| + |\Big[\dfrac{1}{4}x^4-\dfrac{2}{3}x^3\Big]_{0}^2| + |\Big[\dfrac{1}{4}x^4-\dfrac{2}{3}x^3\Big]_{2}^3|\\
+  &= |0-(\dfrac{1}{4}-\dfrac{2}{3})| + |4-\dfrac{8}{3}-0| + |\dfrac{81}{4}-54 - (4-\dfrac{8}{3})|\\
+  &= \dfrac {35}{6}$FE\\
+  (Also hoffentlich)
+
+\end{Beispiel}
+\begin{GTR-Tipp}
+  Mit $Y_1 = f(x)$ und $Y_2 = abs(Y_1)$ bzw. $Y_2 = |Y_1|$ (zu finden in 'MATH'>'NUM' oder über Alpha-F2) lässt sich die Fläche berechnen über 2nd-CALC mit der Option Integral.\\
+  Hierzu wählt man $Y_2$ aus und gibt $a$ und $b$ an.
+\end{GTR-Tipp}
+
+
 
 \section{Integrationsregeln}
 

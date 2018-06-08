@@ -10,3 +10,4 @@
 *.fls
 *.out
 log
+*.gnuplot
