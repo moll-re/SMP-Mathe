@@ -528,7 +528,7 @@
                 \draw [->,line width=0.8pt,color=grey](-5,-0.3) -- (-5,-2) node[below]{$g\parallel h$};
                 \draw [->,line width=0.8pt,color=grey](5,-0.3) -- (5,-2) node[below]{$g\nparallel h$};
                 \draw (-5,-2.8) node{$\textcolor{blue}{Q_1}\in h \lor \textcolor{blue}{Q_2}\in g?$};
-                \draw (5,-2.8) node{$\exists r,s\in\R\quad g = h\quad\Leftrightarrow\quad\textcolor{blue}{\vv{q_1}} + s\cdot\textcolor{red}{\vv{u_1}} = \textcolor{blue}{\vv{q_2}} + r\cdot\textcolor{red}{\vv{u_2}}?$};
+                \draw (5,-2.8) node{$\exists r,s\in\R\backslash \{ 0\} \quad g = h\quad\Leftrightarrow\quad\textcolor{blue}{\vv{q_1}} + s\cdot\textcolor{red}{\vv{u_1}} = \textcolor{blue}{\vv{q_2}} + r\cdot\textcolor{red}{\vv{u_2}}?$};
                 \draw [line width=0.8pt,color=grey] (-5,-3) -- (-5,-4);
                 \draw [line width=0.8pt,color=grey] (5,-3) -- (5,-4);
                 \draw [line width=0.8pt,color=grey] (-8,-4) -- (-7.6,-4);
@@ -543,9 +543,8 @@
                 \draw (2.75,-4) node{$\exists r,s$};
                 \draw [->,line width=0.8pt,color=grey] (-8,-4) -- (-8,-5) node[below]{$g\equiv h$};
                 \draw [->,line width=0.8pt,color=grey] (-2,-4) -- (-2,-5) node[below]{$g\parallel h$};
-                \draw [->,line width=0.8pt,color=grey] (2,-4) -- (2,-5) node[below]{$g\cap h \neq\varnothing$};
+                \draw [->,line width=0.8pt,color=grey] (2,-4) -- (2,-5) node[below]{$g\cap h = I$};
                 \draw [->,line width=0.8pt,color=grey] (8,-4) -- (8,-5) node[below]{$g\cap h = \varnothing$};
-
             \end{tikzpicture}
         \end{center}
 
@@ -731,7 +730,7 @@
                 \draw [,line width=0.8pt,color=red,dashed] (6,3,6) -- (9,2,8);
                 \draw [->,line width=0.8pt,color=black,opacity=0.6] (6,3,6) -- (8,1,1);
                 \draw [->,line width=0.8pt,color=black,opacity=0.6] (5,2,-1) -- (8,1,1);
-                \draw[fill=red, opacity=0.5]  (3,4,4) -- (5,2,-1) -- (8,1,1) -- (6,3,6) -- cycle;
+                \draw[color=red,fill=red,opacity=0.5]  (3,4,4) -- (5,2,-1) -- (8,1,1) -- (6,3,6) -- cycle;
                 \foreach \x in {-1,...,5}
                     \draw [line width=0.8pt,color=red,opacity=0.2] (-3 + 1*\x,8 - 1*\x,9.5 - 2.5*\x) -- (11 + 1*\x,1 - 1*\x,7.25 - 2.5*\x);
                 \draw [line width=0.8pt,color=blue] (0.5,1.5) node {$\vv{q}$};
@@ -758,22 +757,22 @@
                 \draw [line width=0.8pt] (-0.25,0.25) node {O};
                 \draw [->,line width=0.8pt,color=blue] (0,0,0) -- (3,4,4);
                 \draw [->,line width=0.8pt] (0,0,0) -- (5,2,-1);
-                \draw[fill=red, opacity=0.5]  (-2,7,7) -- (2,3,-3) -- (8,1,1) -- (4,5,11) -- cycle;
+                \draw[color=red,fill=red,opacity=0.5]  (-2,7,7) -- (2,3,-3) -- (8,1,1) -- (4,5,11) -- cycle;
                 \foreach \x in {-1,...,6}
                     \draw [line width=0.8pt,color=red,opacity=0.2] (-5 + 1*\x,9 - 1*\x,9.75 - 2.5*\x) -- (9 + 1*\x,2 - 1*\x,8 - 2.5*\x);
                 \draw [line width=0.8pt] (2,2.45) -- (2,3);
                 \draw [line width=0.8pt] (2,3) -- (1.45,3);
-                \draw [->,line width=0.8pt] (5,2,-1) -- (3,4,4);
+                \draw [->,line width=0.8pt] (3,4,4) -- (5,2,-1);
                 \draw [->,line width=0.8pt,color=red] (3,4,4) -- (3.5,9.5,6);
                 \draw [line width=0.8pt,color=blue] (0.5,1.5) node {$\vv{q}$};
-                \draw [line width=0.8pt] (3.6,2.75) node {$\textcolor{blue}{\vv{q}}-\vv{x}$};
+                \draw [line width=0.8pt] (3.6,2.75) node {$\vv{x}-\textcolor{blue}{\vv{q}}$};
                 \draw [line width=0.8pt,color=red] (1.8,5) node {$\vv{n}$};
                 \draw [line width=0.8pt] (2.7,0.75,-0.5) node {$\vv{x}$};
                 \draw [line width=0.8pt] (6,2.65) node {$E$};
             \end{tikzpicture}
         \end{center}
 
-        \paragraph{} Somit ist jeder Punkt $X\in E$, wenn der Verbindingsvektor $(\textcolor{blue}{\vv{q}}-\vv{x})$ orthogonal zum Vektor
+        \paragraph{} Somit ist jeder Punkt $X\in E$, wenn der Verbindingsvektor $(\vv{x}-\textcolor{blue}{\vv{q}})$ orthogonal zum Vektor
         $\textcolor{red}{\vv{n}}$ ist. Dabei spielt die Position des sogenannten \textbf{Normalenvektors} keine Rolle, ebenso wenig wie seine
         Norm. Allein seine Ausrichtung bestimmt die der Ebene. Um die Position im Raum genau zu bestimmen, benötigt man zudem einen Punkt
         $\textcolor{blue}{Q}\in E$. Diese zusätzliche Information schließt alle anderen parallelen Ebenen aus, die durch einen kollinearen
@@ -842,9 +841,211 @@
 
     \subsection{Lagebeziehungen zwischen Ebenen und Geraden}
 
+        \paragraph{} Ebenen und Geraden können im Gegensatz zu zwei Geraden nur eine von den drei folgenden Beziehungen
+        zueinander haben. Eine Ebene $E$ und eine Gerade $g$ können...
 
+        \begin{left}
+            \quad 1)\text{ } ...\textbf{parallel}...
+        \end{left}
+        \begin{center}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw[->,line width=0.8,color=blue] (1,-2,0) -- (-2,4,0);
+                \draw[line width=0.8,color=blue] (-0.3,1.2,0) node {$\vv{q}$};
+                \draw[color=red,fill=red,opacity=0.5]  (-4,0,4) -- (4,0,4) -- (4,0,-4) -- (-4,0,-4) -- cycle;
+                \draw[->,line width=0.8,color=red] (-2,4,0) -- (2,4,0);
+                \draw[line width=0.8,color=red,dashed] (-6,4,0) -- (-2,4,0);
+                \draw[line width=0.8,color=red,dashed] (2,4,0) -- (6,4,0);
+                \draw[->,line width=0.8,color=red] (1,0,0) -- (1,4,0);
+                \draw[line width=0.8,color=red] (0,4.3,0) node {$\vv{u}$};
+                \draw[line width=0.8] (4,4.25,0) node {$g$};
+                \draw[line width=0.8,color=red] (1.3,2,0) node {$\vv{n}$};
+                \draw[line width=0.8] (3.7,0,-4.6) node {$E$};
+                \draw[line width=0.8] (1.3,-1.8,0) node {$O$};
+                \draw[line width=0.8] (1,0.5,0) arc (90:180:0.5);
+                \draw[line width=0.8pt,color=black,fill=black,fill opacity=0.8] (0.8,0.2,0) circle (0.5pt);
+                \draw[line width=0.8] (0.5,4,0) arc (180:270:0.5);
+                \draw[line width=0.8pt,color=black,fill=black,fill opacity=0.8] (0.8,3.8,0) circle (0.5pt);
+            \end{tikzpicture}
+        \end{center}
+        \\
+        \\
+        ...sein oder...
+        \\
+        \\
+        \begin{left}
+            \quad 2)\text{ } ...\textbf{sich schneiden}
+        \end{left}
+        \begin{center}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw[->,line width=0.8,color=blue] (1,-2,0) -- (-1,4,0);
+                \draw[line width=0.8,color=blue] (0.2,1.2,0) node {$\vv{q}$};
+                \draw[line width=0.8,color=red,dashed] (-2,0,0) -- (-3,-4,0);
+                \draw[color=red,fill=red,opacity=0.5]  (-4,0,4) -- (4,0,4) -- (4,0,-4) -- (-4,0,-4) -- cycle;
+                \draw[->,line width=0.8,color=red] (-1,4,0) -- (-2,0,0);
+                \draw[line width=0.8,color=red,dashed] (-0.5,6,0) -- (-1,4,0);
+                \draw[->,line width=0.8,color=red] (1,0,0) -- (1,4,0);
+                \draw[line width=0.8,color=red] (-1.7,2.2,0) node {$\vv{u}$};
+                \draw[line width=0.8] (-3.2,-3.8,0) node {$g$};
+                \draw[line width=0.8,color=red] (1.3,2,0) node {$\vv{n}$};
+                \draw[line width=0.8] (3.7,0,-4.6) node {$E$};
+                \draw[line width=0.8] (1.3,-1.8,0) node {$O$};
+                \draw[line width=0.8pt,color=black,fill=black,fill opacity=0.8] (-2,0,0) circle (2pt);
+                \draw[line width=0.8] (-1.7,0,0) node {$I$};
+            \end{tikzpicture}
+        \end{center}
+        \\
+        \\
+        Zudem kann g...
+        \\
+        \\
+        \begin{left}
+            \quad 3)\text{ } ...\textbf{in E liegen}
+        \end{left}
+        \begin{center}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw[->,line width=0.8,color=blue] (1,-2,0) -- (-2,0,0);
+                \draw[line width=0.8] (0.7,-0.8,0) node {$\textcolor{blue}{\vv{q}} = \textcolor{blue}{\vv{q_1}} = \textcolor{blue}{\vv{q_2}}$};
+                \draw[color=red,fill=red,opacity=0.5]  (-4,0,4) -- (4,0,4) -- (4,0,-4) -- (-4,0,-4) -- cycle;
+                \draw[->,line width=0.8,color=red] (-2,0,0) -- (2,0,0);
+                \draw[line width=0.8,color=red,dashed] (-6,0,0) -- (-2,0,0);
+                \draw[line width=0.8,color=red,dashed] (2,0,0) -- (6,0,0);
+                \draw[->,line width=0.8,color=red] (-1,0,-1.5) -- (-1,4,-1.5);
+                \draw[line width=0.8,color=red] (0,0.3,0) node {$\vv{u}$};
+                \draw[line width=0.8] (4.5,0.25,0) node {$g$};
+                \draw[->,line width=0.8,color=red] (-2,0,0) -- (-3.5,0,3);
+                \draw[->,line width=0.8,color=red] (-2,0,0) -- (-3.5,0,-3);
+                \draw[line width=0.8,color=red] (-1.2,2,-1.5) node {$\vv{n}$};
+                \draw[line width=0.8,color=red] (-2.35,0,1.9) node {$\vv{u_1}$};
+                \draw[line width=0.8,color=red] (-2.95,0,-1,3) node {$\vv{u_2}$};
+                \draw[line width=0.8] (3.7,0,-4.6) node {$E$};
+                \draw[line width=0.8] (1.3,-1.8,0) node {$O$};
+            \end{tikzpicture}
+        \end{center}
+        \\
+        \\
+        \paragraph{} Die Lagebeziehung zwischen einer Ebene $E$ und einer Geraden $g$ lässt sich wie folgt ermitteln:
+
+        \begin{center}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw (0,0) node{$\textcolor{red}{\vv{n}} \odot \textcolor{red}{\vv{u}} = 0?$};
+                \draw [line width=0.8pt,color=grey] (-5,-0.3) -- (-4,-0.3);
+                \draw [line width=0.8pt,color=grey] (-3.1,-0.3) -- (3.1,-0.3);
+                \draw [line width=0.8pt,color=grey] (4,-0.3) -- (5,-0.3);
+                \draw (-3.55,-0.3) node {$=$};
+                \draw (3.55,-0.3) node {$\neq$};
+                \draw [->,line width=0.8pt,color=grey](-5,-0.3) -- (-5,-2) node[below]{$E\parallel g$};
+                \draw [->,line width=0.8pt,color=grey](5,-0.3) -- (5,-2) node[below]{$E\cap g = I$};
+                \draw (-5,-2.8) node{$\textcolor{blue}{Q_g}\in E \lor \textcolor{blue}{Q_E}\in g?$};
+                \draw [line width=0.8pt,color=grey] (-5,-3) -- (-5,-4);
+                \draw [line width=0.8pt,color=grey] (-8,-4) -- (-7.6,-4);
+                \draw [line width=0.8pt,color=grey] (-6.9,-4) -- (-3.1,-4);
+                \draw [line width=0.8pt,color=grey] (-2.4,-4) -- (-2,-4);
+                \draw (-7.25,-4) node{$\in$};
+                \draw (-2.75,-4) node{$\notin$};
+                \draw [->,line width=0.8pt,color=grey] (-8,-4) -- (-8,-5) node[below]{$g\in E$};
+                \draw [->,line width=0.8pt,color=grey] (-2,-4) -- (-2,-5) node[below]{$E\parallel g$};
+            \end{tikzpicture}
+        \end{center}
 
     \subsection{Lagebeziehungen zwischen Ebenen}
+
+        \paragraph{} Ebenen teilen bezüglich ihrer Lage zueinander eine Eigenschaft mit einer Ebene und einer Geraden.
+        Zwei Ebenen $E_1$ und $E_2$ können ebenfalls:
+
+        \begin{left}
+            \quad 1)\text{ } ...\textbf{parallel}...
+        \end{left}
+        \begin{center}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw[color=red,fill=red,opacity=0.5]  (-4,0,4) -- (4,0,4) -- (4,0,-4) -- (-4,0,-4) -- cycle;
+                \draw[color=orange,fill=orange,opacity=0.5]  (-4,4,4) -- (4,4,4) -- (4,4,-4) -- (-4,4,-4) -- cycle;
+                \draw[->,line width=0.8,color=red] (0,0,0) -- (0,4,0);
+                \draw[->,line width=0.8,color=orange] (0,4,0) -- (0,8,0);
+                \draw[line width=0.8,color=red] (0.3,2,0) node {$\vv{n_1}$};
+                \draw[line width=0.8,color=orange] (0.3,6,0) node {$\vv{n_2}$};
+                \draw[line width=0.8] (3.7,0,-4.6) node {$E_1$};
+                \draw[line width=0.8] (3.7,4,-4.6) node {$E_2$};
+                \draw[line width=0.8] (1.3,-1.8,0) node {$O$};
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{left}
+            \quad 2)\text{ } ...\textbf{identisch}
+        \end{left}
+        \begin{center}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw[color=red,fill=red,opacity=0.5]  (1,0,-1) -- (1,0,7) -- (-7,0,7) -- (-7,0,-1) -- cycle;
+                \draw[color=orange,fill=orange,opacity=0.5]  (-1,0,1) -- (7,0,1) -- (7,0,-7) -- (-1,0,-7) -- cycle;
+                \draw[->,line width=0.8,color=red] (-3,0,3) -- (-3,4,3);
+                \draw[->,line width=0.8,color=orange] (3,0,-3) -- (3,4,-3);
+                \draw[line width=0.8,color=red] (-3.3,2,3) node {$\vv{n_1}$};
+                \draw[line width=0.8,color=orange] (2.7,2,-3) node {$\vv{n_2}$};
+                \draw[line width=0.8] (1.5,0,6.8) node {$E_1$};
+                \draw[line width=0.8] (7.5,0,0.8) node {$E_2$};
+                \draw[line width=0.8] (1.3,-1.8,0) node {$O$};
+            \end{tikzpicture}
+        \end{center}
+        \\
+        \\
+        ...sein oder...
+        \\
+        \\
+        \begin{left}
+            \quad 3)\text{ } ...\textbf{sich schneiden}
+        \end{left}
+        \begin{center}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw[color=red,fill=red,opacity=0.5]  (-4,0,4) -- (4,0,4) -- (4,0,-4) -- (-4,0,-4) -- cycle;
+                \draw[color=orange,fill=orange,opacity=0.5]  (-4,4,0) -- (4,4,0) -- (4,-4,0) -- (-4,-4,0) -- cycle;
+                \draw[->,line width=0.8,color=red] (0,0,0) -- (0,4,0);
+                \draw[->,line width=0.8,color=orange] (0,-2.5,0) -- (0,-2.5,4);
+                \draw[line width=0.8] (-5,0,0) -- (5,0,0);
+                \draw[line width=0.8,dashed] (-9,0,0) -- (-5,0,0);
+                \draw[line width=0.8,dashed] (5,0,0) -- (9,0,0);
+                \draw[line width=0.8,color=red] (0.3,2,0) node {$\vv{n_1}$};
+                \draw[line width=0.8,color=orange] (0.3,-2.5,2) node {$\vv{n_2}$};
+                \draw[line width=0.8] (3.7,0,-4.6) node {$E_1$};
+                \draw[line width=0.8] (3.9,4.3,0) node {$E_2$};
+                \draw[line width=0.8] (7,0.25,0) node {$g$};
+                \draw[line width=0.8] (1.3,-1.8,0) node {$O$};
+            \end{tikzpicture}
+        \end{center}
+        \\
+        \\
+        \paragraph{} Die Lagebeziehung zwischen zwei Ebenen $E_1$ und $E_2$ lässt sich wie folgt ermitteln:
+
+        \begin{center}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw (0,0) node{$\exists t\in\R\quad\textcolor{red}{\vv{n_1}} = t\cdot\textcolor{red}{\vv{n_2}}?$};
+                \draw [line width=0.8pt,color=grey] (-5,-0.3) -- (-4,-0.3);
+                \draw [line width=0.8pt,color=grey] (-3.1,-0.3) -- (3.1,-0.3);
+                \draw [line width=0.8pt,color=grey] (4,-0.3) -- (5,-0.3);
+                \draw (-3.55,-0.3) node {$\exists t$};
+                \draw (3.55,-0.3) node {$\nexists t$};
+                \draw [->,line width=0.8pt,color=grey](-5,-0.3) -- (-5,-2) node[below]{$E_1\parallel E_2$};
+                \draw [->,line width=0.8pt,color=grey](5,-0.3) -- (5,-2) node[below]{$E_1\cap E_2 = g;g:\vv{x}=\vv{q} + r \cdot \vv{u};r\in\R$};
+                \draw (-5,-2.8) node{$\textcolor{blue}{Q_E_2}\in E_1 \lor \textcolor{blue}{Q_E_1}\in E_2?$};
+                \draw [line width=0.8pt,color=grey] (-5,-3) -- (-5,-4);
+                \draw [line width=0.8pt,color=grey] (-8,-4) -- (-7.6,-4);
+                \draw [line width=0.8pt,color=grey] (-6.9,-4) -- (-3.1,-4);
+                \draw [line width=0.8pt,color=grey] (-2.4,-4) -- (-2,-4);
+                \draw (-7.25,-4) node{$\in$};
+                \draw (-2.75,-4) node{$\notin$};
+                \draw [->,line width=0.8pt,color=grey] (-8,-4) -- (-8,-5) node[below]{$E_1\equiv E_2$};
+                \draw [->,line width=0.8pt,color=grey] (-2,-4) -- (-2,-5) node[below]{$E_1\parallel E_2$};
+            \end{tikzpicture}
+        \end{center}
+        \\
+        \\
+        \paragraph{} Für die Berechnung der Schnittgeraden gibt es unterschiedliche Ansätze abhängig von der
+        Ausgangssituation, welche durch die zwei möglichen Darstellungsweisen von Ebenen bedingt sind. Drei mögliche
+        Fälle können auftreten:
+        \begin{enumerate}[1)]
+            \item $E_1:\textcolor{red}{n_1} \cdot x_1 + \textcolor{red}{n_2} \cdot x_2 + \textcolor{red}{n_3} \cdot x_3 = \textcolor{purple}{d} ; \quad \textcolor{purple}{d} = \textcolor{red}{n_1} \cdot \textcolor{blue}{q_1} + \textcolor{red}{n_2} \cdot \textcolor{blue}{q_2} + \textcolor{red}{n_3} \cdot \textcolor{blue}{q_3} \text{ } \land \text{ } E_2:\textcolor{red}{n_1} \cdot x_1 + \textcolor{red}{n_2} \cdot x_2 + \textcolor{red}{n_3} \cdot x_3 = \textcolor{purple}{d} ; \quad \textcolor{purple}{d} = \textcolor{red}{n_1} \cdot \textcolor{blue}{q_1} + \textcolor{red}{n_2} \cdot \textcolor{blue}{q_2} + \textcolor{red}{n_3} \cdot \textcolor{blue}{q_3}$
+            \item $E_1:\textcolor{red}{n_1} \cdot x_1 + \textcolor{red}{n_2} \cdot x_2 + \textcolor{red}{n_3} \cdot x_3 = \textcolor{purple}{d} ; \quad \textcolor{purple}{d} = \textcolor{red}{n_1} \cdot \textcolor{blue}{q_1} + \textcolor{red}{n_2} \cdot \textcolor{blue}{q_2} + \textcolor{red}{n_3} \cdot \textcolor{blue}{q_3} \text{ } \land \text{ } E_2:\vv{x}=\textcolor{blue}{\vv{p}} + s\cdot \textcolor{red}{\vv{u}} + t\cdot \textcolor{red}{\vv{v}};\quad s,t\in\R$
+            \item $E_1:\vv{x}=\textcolor{blue}{\vv{p}} + s\cdot \textcolor{red}{\vv{u}} + t\cdot \textcolor{red}{\vv{v}};\quad s,t\in\R \text{ } \land \text{ } E_2:\vv{x}=\textcolor{blue}{\vv{p}} + s\cdot \textcolor{red}{\vv{u}} + t\cdot \textcolor{red}{\vv{v}};\quad s,t\in\R$
+        \end{enumerate}
+        
 
     \subsection{Winkel zwischen Ebenen (und Geraden)}
 
