@@ -120,7 +120,7 @@ Eine Merkhilfe dazu ist das Wort "`Fuxufu"', wobei "`u"' dem $x_{0}$ entspricht.
 \\
 Die \textbf{Normale} an der Stelle $x_{0}$ bezeichnet die Gerade, die genau senkrecht zur Tangente steht und diese im Ber"uhrpunkt des Graphen schneidet.\\
 \\
-$N_{x_{0}}(x)=\frac{1}{f'(x_{0})}\cdot (x-x_{0})+f(x_{0})$\\
+$N_{x_{0}}(x)=-\frac{1}{f'(x_{0})}\cdot (x-x_{0})+f(x_{0})$\\
 
 
 \section{Vollst"andige Funktionsuntersuchung}
@@ -135,7 +135,7 @@ Am Anfang muss der Definitionsbereich angegeben werden, um eventuelle Divisionen
 
 Es gibt zwei Arten von Achsenschnittpunkten:
 \begin{enumerate}
-\item X-Achsenschittpunkte (Nullstellen), die man mit $f(x)=0$ herausfindet
+\item X-Achsenschittpunkte (Nullstellen), die man mit der notwendigen und hinreichenden Bedingung f"ur Nullstellen $f(x)=0$ herausfindet
 \item Y-Achsenschnittpunkt, den man durch einsetzen bekommt: $f(0)$ \\
 \end{enumerate}
 
@@ -231,9 +231,23 @@ $f$ sei eine Funktion...
 \item[$\bullet$] dann ist die Zahl $s$ untere Schranke, wenn $\forall x : f(x) \geq s$. $f$ ist in diesem Fall nach unten beschr"ankt. Die in diesem Fall gr"o"stm"ogliche Zahl wird \textbf{Infimum} genannt: inf$f$
 \end{description}
 \end{Bemerkung}
+
+
 \subsection{Extremstellen}
 
+F"ur die Bestimmung von Extremstellen gilt es zwei Bedingungen zu "uberpr"ufen:\\
+
+Hat an einer Stelle $x_{0}$ die erste Ableitung von $f$ eine Nullstelle, also $f'(x_{0}) = 0$, dann handelt es sich um eine Extremstelle \textbf{oder} um einen Sattelpunkt. Diese Bedingung ist die notwendige Bedingung f"ur eine Extremstelle. Mit ihr ist eine grobe Kategorisierung gemacht, eine Extremstelle ist noch nicht bewiesen.  \\\\
+
+Hat $f'$ an der Stelle $x_{0}$ einen Vorzeichenwechsel oder ist $f''(x_{0})\neq 0$, dann ist der Sonderfall des Wendepunktes ausgeschlossen und es handelt sich um deine Extremstelle. Es gilt also: \\\\ $\exists! $ $ x_{0} \in I \subseteq D_{f} : f(x_{0}) \geq oder \leq f(x) $ \\\\ Der Punkt $P(x_{0}|f(x_{0}))$ hei"st Hochpunkt oder Tiefpunkt. Diese Bedingung ist die hinreichende Bedingung f"ur eine Extremstelle.
+
 \subsection{Wendestellen}
+
+F"ur die Bestimmung von Wendestellen gilt es auch zwei Bedingungen zu "uberpr"ufen:\\
+
+Hat an einer Stelle $x_{0}$ die zweite Ableitung von $f$ eine Nullstelle, also $f''(x_{0}) = 0$, dann handelt es sich um eine Wendestelle \textbf{oder} um einen geraden Abschnitt. Diese Bedingung ist die notwendige Bedingung f"ur eine Wendestelle. \\\\
+
+Hat $f''$ an der Stelle $x_{0}$ einen Vorzeichenwechsel oder ist $f'''(x_{0})\neq 0$, dann ist der Sonderfall ausgeschlossen und es handelt sich um deine Wendestelle. Der Punkt $W(x_{0}|f(x_{0}))$ hei"st Wendepunkt. Diese Bedingung ist die hinreichende Bedingung f"ur eine Wendestelle.\\\\
 
 \begin{Bemerkung}
 Eine Hilfsformel, die den Zusammenhang zwischen den verschiedenen Ableitungen einfach darstellt ist die NEW-Regel:\\\\
@@ -267,7 +281,7 @@ Wenn diese Funktion umkehrbar ist, dann existiert auch eine Umkehrfunktion $\ove
 
 \begin{Bemerkung}
 Es gibt viele Funktionen die nicht in ihren vollst"andigen Definitionsmengen umkehrbar sind, zum Beispiel $x^n$ mit $n$ als gerade Zahl, $\sin(x), \tan(x)$, und viele mehr.  Hier beschr"ankt man die Funktion auf ein bestimmtes Intervall, um sie umkehren zu k"onnen.\\ \\
-Die Funktion $f(x)=x^2$ mit $D_{f}=\R$ und $W_{f}=\R_{0}^{+}$ hat f"ur $y=4$ zwei Urbilder: $-2$ und $2$. Schr"ankt man die Funktion auf $D_{f}=\R_{0}^{+}$, ist sie umkehrbar und die Umkehrfunktion lautet $\overline{f}(x)=\sqrt{x}$\\
+Die Funktion $f(x)=x^2$ mit $D_{f}=\R$ und $W_{f}=\R_{0}^{+}$ hat f"ur $y=4$ zwei Urbilder: $-2$ und $2$. Beschr"ankt man die Funktion auf $D_{f}=\R_{0}^{+}$, ist sie umkehrbar und die Umkehrfunktion lautet $\overline{f}(x)=\sqrt{x}$\\
 \end{Bemerkung}\\ \\ \\
 
 \begin{minipage}[b]{0.5\linewidth}
