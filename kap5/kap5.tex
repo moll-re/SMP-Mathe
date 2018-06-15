@@ -13,8 +13,8 @@
 
         \subsubsection{Der Ortsvektor}
 
-            \paragraph{} Der Vektor von $O$ auf den Punkt $P$, geschrieben als $\vv{OP}$ oder $\vv{o}$.\\
-            \paragraph{} Hat $P$ die Koordinaten $(P_1|P_2|...|P_n)$, so besitzt $\vv{o}$ die Darstellung $\left(\begin{array}{c} P_1 \\ P_2 \\ ...\\P_n\end{array}\right)$.
+            \paragraph{} Der Vektor von $O$ auf den Punkt $P$, geschrieben als $\vv{OP}$ oder $\vv{p}$.\\
+            \paragraph{} Hat $P$ die Koordinaten $(P_1|P_2|...|P_n)$, so besitzt $\vv{p}$ die Darstellung $\left(\begin{array}{c} P_1 \\ P_2 \\ ...\\P_n\end{array}\right)$.
 
         \subsubsection{Der Nullvektor}
 
@@ -225,7 +225,7 @@
         \\
         \\
 
-        \begin{minipage}{0.3\textwidth}
+        \begin{minipage}{0.45\textwidth}
             \definecolor{qqttqq}{rgb}{0,0.2,0}
             \definecolor{qqwuqq}{rgb}{0,0.4,0}
             \definecolor{ududff}{rgb}{0.3,0.3,1}
@@ -245,9 +245,8 @@
             \end{tikzpicture}
         \end{minipage}
         \begin{minipage}{0.1\textwidth}
-
         \end{minipage}
-        \begin{minipage}{0.6\textwidth}
+        \begin{minipage}{0.45\textwidth}
             \definecolor{qqttqq}{rgb}{0,0.2,0}
             \definecolor{qqwuqq}{rgb}{0,0.4,0}
             \definecolor{ududff}{rgb}{0.3,0.3,1}
@@ -260,7 +259,7 @@
                 \draw [->,line width=0.8pt] (0,0) -- (-3.46,-2);
                 \draw [->,line width=0.8pt] (0,0) -- (-4,0);
                 \draw [->,line width=0.8pt,color=qqwuqq] (-1.5,0) arc (180:210:1.5);
-                \draw (-3,1.5) node {(2)};
+                \draw (-4,1) node {(2)};
                 \draw[color=ududff] (-0.1,0.25) node {$O$};
                 \draw[color=qqwuqq] (-1,-0.3) node {$\beta$};
                 \draw[color=black] (1.64,1.2) node {$\vv{v}$};
@@ -271,7 +270,10 @@
             \end{tikzpicture}
         \end{minipage}
 
-        \begin{minipage}{0.5\textwidth}
+        \text{}
+        \\
+
+        \begin{minipage}{0.45\textwidth}
             \definecolor{qqttqq}{rgb}{0,0.2,0}
             \definecolor{qqwuqq}{rgb}{0,0.4,0}
             \definecolor{ududff}{rgb}{0.3,0.3,1}
@@ -292,7 +294,9 @@
                 \draw[color=qqttqq] (-0.1,0.45) node {$\alpha$};
             \end{tikzpicture}
         \end{minipage}
-        \begin{minipage}{0.5\textwidth}
+        \begin{minipage}{0.1\textwidth}
+        \end{minipage}
+        \begin{minipage}{0.45\textwidth}
             \definecolor{qqttqq}{rgb}{0,0.2,0}
             \definecolor{qqwuqq}{rgb}{0,0.4,0}
             \definecolor{ududff}{rgb}{0.3,0.3,1}
@@ -304,7 +308,7 @@
                 \draw [->,line width=0.8pt] (0,0) -- (3.46,2);
                 \draw [->,line width=0.8pt] (0,0) -- (4,0);
                 \draw [->,line width=0.8pt] (0,0) -- (-3.46,-2);
-                \draw (-3.5,2) node {(4)};
+                \draw (-3.5,1.2) node {(4)};
                 \draw[color=ududff] (-0.2,0.2) node {$O$};
                 \draw[color=black] (1.64,1.2) node {$\vv{v}$};
                 \draw[color=black] (2,-0.25) node {$\vv{u}$};
@@ -332,15 +336,13 @@
         \\
         Eine linear abhängige Familie \textbf{aus genau zwei} Vektoren wird als kollinear bezeichnet.
         \\
-        Eine linear abhängige Familie \textbf{aus genau drei} Vektoren, als komplanar.
+        Eine linear abhängige Familie \textbf{aus genau drei} Vektoren dagegen nennt man komplanar.
     \end{Bemerkung}
 
 \section{Skalarprodukt}
 
     \begin{minipage}{0.5\textwidth}
-        \paragraph{} Das Skalarprodukt ist eine multiplikative Verknüpfung des Vektorraums. Ihr Ergebnis ist ein Skalar ($S\in\R$) und wird aus der
-        Multiplikation der Beträge der Anteile von zwei beliebigen Vektoren $\vv{v}$ und $\vv{u}$ auf einer der Achsen, die durch die beiden Vektoren
-        definiert werden, gebildet. Somit ensteht folgende Formel: $\vv{v}\odot\vv{u}=|\vv{v}|\cdot|\vv{u}|\cdot\cos(\alpha);\alpha=(\vv{v},\vv{u})$.
+
     \end{minipage}
     \begin{minipage}{0.05\textwidth}
         \quad
@@ -367,8 +369,6 @@
     \begin{Bemerkung}
         Aus dieser Gleichung folgt: $\cos(\alpha)=\dfrac{\vv{v}\odot\vv{u}}{|\vv{v}|\cdot|\vv{u}|}$.
     \end{Bemerkung}
-    \paragraph{} \textbf{Ich weiß net genau, wie ich die andere Formel einführen soll, bzw. diese section im Allgemeinen gestalten soll.
-     Vorschläge sind willkommen.}
 
 \section{Kreuzprodukt}
 
@@ -376,13 +376,12 @@
 
     \subsection{Darstellungen}
 
-        \paragraph{} Eine Gerade ist ein sehr bekannter Bestandteil der elementaren Geometrie. Sie wird gerne dafür verwendet, jungen Menschen die Idee
-        der Unendlichkeit zu übermitteln, oder diese zumindest einzuführen. Bezogen auf die Vektorgeometrie ist sie nichts anderes als ein unendlich
-        langer Vektor, beziehungsweise eine Linearkombination aus unendlich vielen (identischen / kollinearen) Vektoren. Somit ergibt sich die eindeutige
-        \textbf{Parameterform} einer Geraden $g$: $g:\vv{x}=\textcolor{blue}{\vv{q}}+s\cdot\textcolor{red}{\vv{u}};s\in\R$. Diese Schreibweise beschreibt
-        die der Geraden zugehörigen Punktmenge. Der Vektor $\vv{q}$ bestimmt die \textcolor{blue}{Position} der Geraden im Raum und trägt folglich den
-        Namen \textbf{Stützvektor}, wohingegen der Vektor $\vv{u}$ die \textcolor{red}{Ausrichtung} der Geraden anzeigt und \textbf{Richtungsvektor}
-        genannt wird.
+        \paragraph{} Eine Gerade ist ein sehr bekannter Bestandteil der elementaren Geometrie. Bezogen auf die Vektorgeometrie ist sie nichts anderes als ein
+        unendlich langer Vektor, beziehungsweise eine Linearkombination aus unendlich vielen (identischen / kollinearen) Vektoren. Somit ergibt sich die
+        eindeutige \textbf{Parameterform} einer Geraden $g$ : \quad$g:\vv{x}=\textcolor{blue}{\vv{q}}+s\cdot\textcolor{red}{\vv{u}};s\in\R$. Diese Schreibweise
+        beschreibt die der Geraden zugehörigen Punktmenge. Der Vektor $\vv{q}$ bestimmt die \textcolor{blue}{Position} der Geraden im Raum und trägt folglich
+        den Namen \textbf{Stützvektor}, wohingegen der Vektor $\vv{u}$ die \textcolor{red}{Ausrichtung} der Geraden anzeigt und \textbf{Richtungsvektor} genannt
+        wird.
         \\
         \begin{Bemerkung}
             \paragraph{} Die Parameterform ist die einzige mögliche Darstellungsform einer Geraden im $\R^3$, da ihr Normalvektor nicht eindeutig bestimmt
@@ -528,7 +527,7 @@
                 \draw [->,line width=0.8pt,color=grey](-5,-0.3) -- (-5,-2) node[below]{$g\parallel h$};
                 \draw [->,line width=0.8pt,color=grey](5,-0.3) -- (5,-2) node[below]{$g\nparallel h$};
                 \draw (-5,-2.8) node{$\textcolor{blue}{Q_1}\in h \lor \textcolor{blue}{Q_2}\in g?$};
-                \draw (5,-2.8) node{$\exists r,s\in\R\backslash \{ 0\} \quad g = h\quad\Leftrightarrow\quad\textcolor{blue}{\vv{q_1}} + s\cdot\textcolor{red}{\vv{u_1}} = \textcolor{blue}{\vv{q_2}} + r\cdot\textcolor{red}{\vv{u_2}}?$};
+                \draw (5,-2.8) node{$\exists r,s\in\R \quad g = h\quad\Leftrightarrow\quad\textcolor{blue}{\vv{q_1}} + s\cdot\textcolor{red}{\vv{u_1}} = \textcolor{blue}{\vv{q_2}} + r\cdot\textcolor{red}{\vv{u_2}}?$};
                 \draw [line width=0.8pt,color=grey] (-5,-3) -- (-5,-4);
                 \draw [line width=0.8pt,color=grey] (5,-3) -- (5,-4);
                 \draw [line width=0.8pt,color=grey] (-8,-4) -- (-7.6,-4);
@@ -586,7 +585,9 @@
                     \begin{align*}
                         d(g,P) & =|\vv{LP}| \\
                                & = \left|\left(\begin{array}{c}{p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1})\\p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2})\\p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3})}\end{array}\right)\right| \\
-                               & = \sqrt{(p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + (\textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1}))^2 +  (p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2}))^2 + (p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3}))^2}
+                               & = \sqrt{(p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1}))^2 \\
+                               & \quad \overline{+ (p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2}))^2} \\
+                               & \quad \overline{+ (p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3}))^2}}
                     \end{align*}
                 \end{enumerate}
         \\
@@ -619,13 +620,19 @@
                     \item Norm des Vektors in Abhängigkeit von t bestimmen:
                     \begin{align*}
                         |\vv{LP}| &= \sqrt{(p_1 - (\textcolor{blue}{q_1} + t \cdot \textcolor{red}{u_1}))^2 + (p_2 - (\textcolor{blue}{q_2} + t \cdot \textcolor{red}{u_2}))^2 + (p_3 - (\textcolor{blue}{q_3} + t\cdot \textcolor{red}{u_3}))^2} \\
-                                  &= \sqrt{(\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2)t^2 + 2((\textcolor{blue}{q_1} - p_1) \cdot \textcolor{red}{u_1} + (\textcolor{blue}{q_2} - p_2) \cdot \textcolor{red}{u_2} + (\textcolor{blue}{q_3} - p_3) \cdot \textcolor{red}{u_3})t + ((p_1 - \textcolor{blue}{q_1})^2 + (p_2 - \textcolor{blue}{q_2})^2 + (p_3 - \textcolor{blue}{q_3})^2)} \\\\
+                                  &= \sqrt{(\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2)t^2 + 2((\textcolor{blue}{q_1} - p_1) \cdot \textcolor{red}{u_1} + (\textcolor{blue}{q_2} - p_2) \cdot \textcolor{red}{u_2} + (\textcolor{blue}{q_3} - p_3) \cdot \textcolor{red}{u_3})t} \\
+                                  & \quad \overline{+ ((p_1 - \textcolor{blue}{q_1})^2 + (p_2 - \textcolor{blue}{q_2})^2 + (p_3 - \textcolor{blue}{q_3})^2)}
+                                  \\\\
                         & \text{Somit ergibt sich eine Funktion $f(t)$:} \\\\
-                             f(t) &= \sqrt{(\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2)t^2 + 2((\textcolor{blue}{q_1} - p_1) \cdot \textcolor{red}{u_1} + (\textcolor{blue}{q_2} - p_2) \cdot \textcolor{red}{u_2} + (\textcolor{blue}{q_3} - p_3) \cdot \textcolor{red}{u_3})t + ((p_1 - \textcolor{blue}{q_1})^2 + (p_2 - \textcolor{blue}{q_2})^2 + (p_3 - \textcolor{blue}{q_3})^2)}
+                             f(t) &= \sqrt{(\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2)t^2 + 2((\textcolor{blue}{q_1} - p_1) \cdot \textcolor{red}{u_1} + (\textcolor{blue}{q_2} - p_2) \cdot \textcolor{red}{u_2} + (\textcolor{blue}{q_3} - p_3) \cdot \textcolor{red}{u_3})t} \\
+                                  & \quad \overline{+ ((p_1 - \textcolor{blue}{q_1})^2 + (p_2 - \textcolor{blue}{q_2})^2 + (p_3 - \textcolor{blue}{q_3})^2)}
                     \end{align*}
                     \item Tiefpunkt von $f(t)$ berechnen:
                     \\\\
-                    $f'(t) = \dfrac{2(\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2)t + 2((\textcolor{blue}{q_1} - p_1) \cdot \textcolor{red}{u_1} + (\textcolor{blue}{q_2} - p_2) \cdot \textcolor{red}{u_2} + (\textcolor{blue}{q_3} - p_3) \cdot \textcolor{red}{u_3})}{2\sqrt{(\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2)t^2 + 2((\textcolor{blue}{q_1} - p_1) \cdot \textcolor{red}{u_1} + (\textcolor{blue}{q_2} - p_2) \cdot \textcolor{red}{u_2} + (\textcolor{blue}{q_3} - p_3) \cdot \textcolor{red}{u_3})t + ((p_1 - \textcolor{blue}{q_1})^2 + (p_2 - \textcolor{blue}{q_2})^2 + (p_3 - \textcolor{blue}{q_3})^2)}}$
+                    \begin{align*}
+                        f'(t) &= \dfrac{2(\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2)t + 2((\textcolor{blue}{q_1} - p_1) \cdot \textcolor{red}{u_1} + (\textcolor{blue}{q_2} - p_2) \cdot \textcolor{red}{u_2} + (\textcolor{blue}{q_3} - p_3) \cdot \textcolor{red}{u_3})}{2\sqrt{(\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2)t^2 + 2((\textcolor{blue}{q_1} - p_1) \cdot \textcolor{red}{u_1} + (\textcolor{blue}{q_2} - p_2) \cdot \textcolor{red}{u_2} + (\textcolor{blue}{q_3} - p_3) \cdot \textcolor{red}{u_3})t}} \text{...} \\
+                          & \quad \text{...}\dfrac{}{\overline{+ ((p_1 - \textcolor{blue}{q_1})^2 + (p_2 - \textcolor{blue}{q_2})^2 + (p_3 - \textcolor{blue}{q_3})^2)}}
+                    \end{align*}
                     \\
                     \\
                     notwendige Bedingung TP:
@@ -634,7 +641,7 @@
                         \Leftrightarrow 0 &= 2(\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2)t + 2((\textcolor{blue}{q_1} - p_1) \cdot \textcolor{red}{u_1} + (\textcolor{blue}{q_2} - p_2) \cdot \textcolor{red}{u_2} + (\textcolor{blue}{q_3} - p_3) \cdot \textcolor{red}{u_3} \\
                         \Leftrightarrow t &= \dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}
                     \end{align*}
-                    \paragraph{} Die hinreichende Bedingung ist nicht zu prüfen, sie gilt (der Minimalabstand existiert immer), und die Art des Extremwerte
+                    \paragraph{} Die hinreichende Bedingung ist nicht zu prüfen, sie gilt (der Minimalabstand existiert immer), und die Art des Extremwerts
                     ist ebenfalls vorbestimmt, da der Verbindungsvektor unendlich lang wird wenn man den Lotfußpunkt in beide Richtungen entlang der
                     Geraden verschiebt.
                     \item Siehe Schritt \ref{d} Orthogonalität
@@ -1045,7 +1052,7 @@
             \item $E_1:\textcolor{red}{n_1} \cdot x_1 + \textcolor{red}{n_2} \cdot x_2 + \textcolor{red}{n_3} \cdot x_3 = \textcolor{purple}{d} ; \quad \textcolor{purple}{d} = \textcolor{red}{n_1} \cdot \textcolor{blue}{q_1} + \textcolor{red}{n_2} \cdot \textcolor{blue}{q_2} + \textcolor{red}{n_3} \cdot \textcolor{blue}{q_3} \text{ } \land \text{ } E_2:\vv{x}=\textcolor{blue}{\vv{p}} + s\cdot \textcolor{red}{\vv{u}} + t\cdot \textcolor{red}{\vv{v}};\quad s,t\in\R$
             \item $E_1:\vv{x}=\textcolor{blue}{\vv{p}} + s\cdot \textcolor{red}{\vv{u}} + t\cdot \textcolor{red}{\vv{v}};\quad s,t\in\R \text{ } \land \text{ } E_2:\vv{x}=\textcolor{blue}{\vv{p}} + s\cdot \textcolor{red}{\vv{u}} + t\cdot \textcolor{red}{\vv{v}};\quad s,t\in\R$
         \end{enumerate}
-        
+
 
     \subsection{Winkel zwischen Ebenen (und Geraden)}
 
