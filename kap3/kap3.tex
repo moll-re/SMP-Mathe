@@ -316,6 +316,24 @@ Es gibt viele Funktionen die nicht in ihren vollst"andigen Definitionsmengen umk
 Die Funktion $f(x)=x^2$ mit $D_{f}=\R$ und $W_{f}=\R_{0}^{+}$ hat f"ur $y=4$ zwei Urbilder: $-2$ und $2$. Beschr"ankt man die Funktion auf $D_{f}=\R_{0}^{+}$, ist sie umkehrbar und die Umkehrfunktion lautet $\overline{f}(x)=\sqrt{x}$\\
 \end{Bemerkung}\\ \\ \\
 
+\begin{Definition}
+Umkehrregel oder Inversenregel\\
+
+Sei $f$ eine bijektive (also umkehrbare), differenzierbare, reelle Funktion bei der gilt: $f'(x)\neq 0$, dann ist die Umkehrfunktion auch differenzierbar mit der Ableitung \\\\
+$\overline{f}'(y) = \dfrac{1}{f'(\overline{f}(y))} = \dfrac{1}{f'(x)}$
+
+\end{Definition}
+
+\begin{Beweis}
+\begin{array}{rcccl}
+$\Rightarrow & \overline{f}(f(x)) &=& x $&\qquad \qquad | $ ableiten \\\\
+$\Leftrightarrow & \overline{f}'(f(x)) \cdot f'(x) &=& 1 &$ \\\\
+$\Leftrightarrow & \overline{f}'(f(x)) &=& \dfrac{1}{f'(x)}&$\\\\
+$\Leftrightarrow & \overline{f}'(y) &=& \dfrac{1}{f'(x)}$& \qquad \qquad | $ mit $y=f(x)$  \\
+\end{array}
+\end{Beweis}
+
+
 \begin{minipage}[b]{0.5\linewidth}
 \begin{Bemerkung}
 Anschaulich ist eine Umkehrfunktion eine Axenspiegelung entlang der Winkelhalbierende am Ursprung, also dem Funktionsgraphen von $f(x)=x$
