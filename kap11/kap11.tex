@@ -40,10 +40,10 @@ Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine soge
   \begin{minipage}{0.6\textwidth}
     \begin{array}{rccl}
       $
-      \int_a^b f(x)dx = -\int_b^a f(x)dx\\\\
-      \int_a^b (f(x)+g(x))dx = \int_a^b f(x)dx + \int_a^b g(x)dx\\\\
-      \int_a^b r*f(x)dx = r*\int_a^b f(x)dx\\\\
-      \int_a^b f(x)dx + \int_b^c f(x)dx = \int_a^c f(x)dx
+      \int_a^b f(x)dx &=& -\int_b^a f(x)dx\\\\
+      \int_a^b (f(x)+g(x))dx &=& \int_a^b f(x)dx + \int_a^b g(x)dx\\\\
+      \int_a^b r*f(x)dx &=& r*\int_a^b f(x)dx\\\\
+      \int_a^b f(x)dx + \int_b^c f(x)dx &=& \int_a^c f(x)dx
       $
     \end{array}
   \end{minipage}
@@ -57,21 +57,32 @@ Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine soge
 \end{Theorem}
 \subsubsection{Beweise}
 Invertieren der Intergrationsgrenzen:\\
-$\int_a^b f(x)dx = F(b)-F(a) = -(F(a)-F(b)) = -\int_b^a f(x)dx$\\\\
+\begin{Beweis}
+  $\int_a^b f(x)dx = F(b)-F(a) = -(F(a)-F(b)) = -\int_b^a f(x)dx$
+
+\end{Beweis}
 Summenregel:\\
-$\int_a^b f(x)+g(x)dx = [F(x)+G(x)]_a^b = F(b)+G(b)-(F(a)+G(b)) = F(b)-F(a)+G(b)-G(b) = \int_a^b f(x)dx$+\int_a^b g(x)dx$\\\\
+\begin{Beweis}
+  $\int_a^b f(x)+g(x)dx = [F(x)+G(x)]_a^b = F(b)+G(b)-(F(a)+G(b)) = F(b)-F(a)+G(b)-G(b) = \int_a^b f(x)dx$+\int_a^b g(x)dx$
+\end{Beweis}
+
 Linearität:\\
-$\int_a^b r*f(x)dx = [r*F(x)]_a^b = r*F(b)-r*F(a) = r*(F(a)-F(b)) = r*\int_a^b f(x)dx$\\\\
+\begin{Beweis}
+  $\int_a^b r*f(x)dx = [r*F(x)]_a^b = r*F(b)-r*F(a) = r*(F(a)-F(b)) = r*\int_a^b f(x)dx$
+\end{Beweis}
+
 Abschnittweise Integration:\\
-$\int_a^b f(x)dx+ \int_b^c f(x)dx = F(a)-F(b)-(F(b)-F(c)) = F(c)-F(a) = \int_a^c f(x)dx$\\\\
+\begin{Beweis}
+  $\int_a^b f(x)dx+ \int_b^c f(x)dx = F(a)-F(b)-(F(b)-F(c)) = F(c)-F(a) = \int_a^c f(x)dx$
+\end{Beweis}
 
 \subsection{Merkenswerte Integrale}
 \begin{array}{rccl}
-  \int x^n dx$&=&$\frac{x^{n+1}}{n+1}\\
-  \int\sin x dx$&=&$ -\cos x\\
-  \int\cos x dx$&=&$ \sin x\\
-  \int\frac{ dx}{\cos^2x}$&=&$ \tan x\\
-  \int\frac{1}{x} dx$&=&$ \ln|x|\\
+  \int x^n dx&=&\frac{x^{n+1}}{n+1}\\
+  \int\sin x dx&=& -\cos x\\
+  \int\cos x dx&=& \sin x\\
+  \int\frac{ dx}{\cos^2x}&=& \tan x\\
+  \int\frac{1}{x} dx&=& \ln|x|\\
 \end{array}
 
 \subsection{Integrationsregeln}
@@ -81,33 +92,26 @@ $\int_a^b f(x)dx+ \int_b^c f(x)dx = F(a)-F(b)-(F(b)-F(c)) = F(c)-F(a) = \int_a^c
   und $v'$ in I stetig. Dann gilt:\\
   $\int u(x)'v(x) dx= u(x)v(x) - \int u(x)v'(x) dx$
 \end{Definition}
-Beweis:\\
+\begin{Beweis}\\
 Nachweisen u, v diffbar und u', v' stetig (kommt noch in sauber)\\
-$
-(u(x)*v(x))' = u'(x)v(x)+u(x)v'(x)\\
-\Leftrightarrow \int (u(x)*v(x))' dx = \int u'(x)v(x)+\int u(x)v'(x)\\
-\Leftrightarrow u(x)*v(x) = \int u'(x)v(x)+\int u(x)v'(x)\\
-\Leftrightarrow \int u(x)v'(x) = u(x)*v(x)- \int u'(x)v(x)\\
-$
-
-Mit dieser Regel kann man \zB Integrale folgender Form lösen:
-\[
-\int x\sin x\dD x
-\]
-Setzt man hier $u'=\sin x$, $v=x$, dann ist $u=-\cos x$ und $v'=1$. Setzt man
-diese Werte in die Produktintegrations-Formel ein, dann folgt:
-\begin{align*}
-\int x\sin x\dD x&= (-\cos x)x-\int (-\cos x)\cdot1\dD x\\
-&=-x\cos x+\int\cos x\dD x= -x\cos x+\sin x
-\end{align*}
-
-Ein anderes schönes Beispiel ist die Stammfunktion von $\ln x$. Dazu fasst man
-$\ln x$ als $1\cdot\ln x$ auf und wählt $u'=1$, $v=\ln x$, also $u=x$ und
-$v'=1/x$ und erhält:
-\[
-\int\ln x\dD x=x\ln x-\int x\cdot\frac{1}{x}\dD x=
-x\ln x-\int 1\dD x=x\ln x -x
-\]
+  $
+  (u(x)*v(x))' = u'(x)v(x)+u(x)v'(x)\\
+  \Leftrightarrow \int (u(x)*v(x))' dx = \int u'(x)v(x)+\int u(x)v'(x)\\
+  \Leftrightarrow u(x)*v(x) = \int u'(x)v(x)+\int u(x)v'(x)\\
+  \Leftrightarrow \int u(x)v'(x) = u(x)*v(x)- \int u'(x)v(x)\\
+  $
+\end{Beweis}
+  \begin{Beispiel}\\
+  \[
+  \int x\sin x\dD x
+  \]
+  Setzt man hier $u'=\sin x$, $v=x$, dann ist $u=-\cos x$ und $v'=1$. Setzt man
+  diese Werte in die Produktintegrations-Formel ein, dann folgt:
+  \begin{align*}
+  \int x\sin x\dD x&= (-\cos x)x-\int (-\cos x)\cdot1\dD x\\
+  &=-x\cos x+\int\cos x\dD x= -x\cos x+\sin x
+  \end{align*}
+\end{Beispiel}
 
 \subsubsection{Substitutionsmethode}
 Es soll die Stammfunktion von $x(1-x^2)^9$ bestimmt werden. Hier wäre zum
