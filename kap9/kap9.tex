@@ -46,9 +46,11 @@ x+0y+0z&=&1\\
 \end{array}\right.$\\
 \\
 \\
-$\mathbb{L}=\{(1|2|3) \}$ Die LÃ¶sungsmenge wird als n-Tupel alphabetisch sortiert.
+$\mathbb{L}=\{(1;2;3) \}$ Die LÃ¶sungsmenge wird als n-Tupel (geordente Objekte) alphabetisch sortiert.
 
 	\section{LGS mit dem Taschenrechner l"osen}
+	
+	\subsection{Eindeutig l"osbare lineare Gleichungssysteme}
 	
 Ein lineares Gleichungssystem l"asst sich sehr viel schneller mit dem Taschgenrechner l"osen:\\
 
@@ -68,11 +70,37 @@ $\Rightarrow$ $\left\vert \begin{array}{rccl}
 \\
 Dann geht man wieder in den rechnen-Modus und gibt ein:  [matrix], dann geht man auf [math], [rref]. dann geht man nochmal auf [matrix], [A] (die gerade bearbeitete Matrix):\\
 \\
-$\Rightarrow$ $\left\vert \begin{array}{rccl}
+$\Leftrightarrow$ $\left\vert \begin{array}{rccl}
 1&0&0&1\\
 0&1&0&2 \\
 0&0&1&3\\
-\end{array}\right\vert$ \qquad $\Rightarrow \mathbb{L}=\{(1|2|3) \}$ \\ 
+\end{array}\right\vert$ \qquad $\Rightarrow \mathbb{L}=\{(1;2;3) \}$ \\ 
 
-Wenn sich Werte mit Kommazahlen ergeben, ist es nützlich, im Taschenrechner [Math] $+$ [1](Frac) einzugeben, um sich die Werte in Brüchen anzeigen zu lassen.\\
+Die L"osungsmenge wird als n-Tupel angegeben.\\
+Wenn sich Werte mit Kommazahlen ergeben, ist es n"utzlich, im Taschenrechner [Math] $+$ [1](Frac) einzugeben, um sich die Werte in Br"uchen anzeigen zu lassen.\\
+
+	\subsection{Nicht eindeutig l"osbare lineare Gleichungssysteme}
+
+Oft begegnen einem auch unterbestimmte LGS, sei es in der Geometrie (Zwei Ebenengleichungen, die in einem Gleichungssystem als L"osung die Schnittgerade ergeben) oder in anderen Teilbereichen. Sie sind auch recht aufwendig von Hand zu l"osen, deshalb hier den schnelleren GTR-L"osungsweg:\\
+
+$\Rightarrow$ $\left\{ \begin{array}{rcl}
+x_{1}-2x_{2}+0x_{3}&=&10\\
+x_{1}-x_{2}-x_{3}& =& 5\\
+\end{array}\right.$\\
+\\
+Unterbestimmte LGS erkennt man daran, dass es mehr unbekannte als Gleichungen gibt:\\
+
+$\Rightarrow$ $\left\vert \begin{array}{rccl}
+1&-2&0&10\\
+1&-1&-1& 5 \\
+\end{array}\right\vert$\\
+\\
+\\
+$\Leftrightarrow$ $\left\vert \begin{array}{rccl}
+1&-2&0&10\\
+0&0&1&5 \\
+\end{array}\right\vert$  \qquad $\Rightarrow \mathbb{L}=\{(2t+10;t;t+5|t\in\R) \}$ \\  
+
+Auch hier wird die L"osungsmenge als n-Tupel angegeben, in Abh"angigkeit eines Faktors, dessen Wertebereich in der L"osungsmenge ebenfalls angegeben werden muss.\\\\
+
 
