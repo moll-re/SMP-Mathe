@@ -3,10 +3,12 @@
 
 \section{Kurze Wiederholung}
 \begin{Definition}
-  Im Kreis mit Radius 1 gelte:\\
-  $\cos(\alpha)= x_{_M}$\\
-  $\sin(\alpha)= y_{_M}$\\
-  $\tan(\alpha)=\dfrac {sin(\alpha)} {cos(\alpha)}$
+  Im Kreis mit Radius 1 gelte:
+  \begin{align*}
+    \cos(\alpha)&= x_{_M}\\
+    \sin(\alpha)&= y_{_M}\\
+    \tan(\alpha)&=\dfrac {\sin(\alpha)} {\cos(\alpha)}
+  \end{align*}
 \end{Definition}\\
 \definecolor{qqwuqq}{rgb}{0,0.39,0}
 \definecolor{ttzzqq}{rgb}{0.2,0.6,0}
@@ -47,7 +49,7 @@
 Es ergeben sich folgende (wissenswerte) Werte:
 \\
 \begin{center}
-  \begin{tabu} to 0.9\textwidth{|X[c]|X[c]|X[c]|X[c]|X[c]|X[c]|X[c]|X[c]|X[c]|}
+  \begin{tabu} to 0.9\textwidth{| X[c] | X[c] | X[c] | X[c] | X[c] | X[c] | X[c] | X[c] | X[c] |}
 
     \hline
     & 0$^\circ$ & 30$^\circ$ & 45$^\circ$ & 60$^\circ$ & 90$^\circ$ & 180$^\circ$ & 270$^\circ$ & 360$^\circ$\\
@@ -64,38 +66,47 @@ Es ergeben sich folgende (wissenswerte) Werte:
 \end{center}
 \section{Additions- und Verdopplungssätze}
 \begin{Theorem}
-  $\cos(a - b) = \cos(a)\cos(b) + \sin(a)\sin(b)$\\
-  $\sin(a - b) = \sin(a)\cos(b) - \cos(a)\sin(b)$\\
-  $\cos(a + b) = \cos(a)\cos(b) - \sin(a)\sin(b)$\\
-  $\sin(a + b) = \sin(a)\cos(b) + \cos(a)\sin(b)$
+  \begin{align*}
+    \cos(a - b) & = \cos(a)\cos(b) + \sin(a)\sin(b)\\
+    \sin(a - b) & = \sin(a)\cos(b) - \cos(a)\sin(b)\\
+    \cos(a + b) & = \cos(a)\cos(b) - \sin(a)\sin(b)\\
+    \sin(a + b) & = \sin(a)\cos(b) + \cos(a)\sin(b)
+  \end{align*}
 \end{Theorem}
-\\
-Hieraus ergeben sich einige weitere Relationen, wie z.B. $\sin(2a)$. Diese lassen sich jedoch schnell und leicht herleiten.
+\begin{Bemerkung}
+  Hieraus ergeben sich einige weitere Relationen, wie z.B. $\sin(2a)$. Diese lassen sich jedoch schnell und leicht herleiten.
+\end{Bemerkung}
 \section{Allgemeine Sinus- und Kosinussätze}
 In einem beliebigen Dreieck gelten abgewandelte Formen der aus der 8. Klasse bekannten Sätze:
 \begin{Theorem}
-  $\dfrac {a} {sin(\alpha)}=\dfrac {b} {sin(\beta)}=\dfrac {c} {sin(\gamma)}$\\\\
-  $c^2=a^2+b^2-2abcos(\gamma)$
+  \begin{minipage}{0.6\textwidth}
+    $\dfrac {a} {sin(\alpha)}=\dfrac {b} {sin(\beta)}=\dfrac {c} {sin(\gamma)}$\\\\
+    $c^2=a^2+b^2-2abcos(\gamma)$
+  \end{minipage}
+  \begin{minipage}{0.4\textwidth}
+    \definecolor{qqwuqq}{rgb}{0,0.39,0}
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.6cm]
+      \clip(-0.4,-4.3) rectangle (9,3);
+      \draw [shift={(4.22,1.92)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (-134.14:1.5) arc (-134.14:-47.61:1.5) -- cycle;
+      \draw [shift={(-0.38,-2.82)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (1.04:1.5) arc (1.04:45.86:1.5) -- cycle;
+      \draw [shift={(8.4,-2.66)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (132.39:1.5) arc (132.39:181.04:1.5) -- cycle;
+      \draw (4.22,1.92)-- (8.4,-2.66);
+      \draw (4.22,1.92)-- (-0.38,-2.82);
+      \draw (8.4,-2.66)-- (-0.38,-2.82);
+      \begin{scriptsize}
+        \draw[color=black] (6.7,-0.44) node {$a$};
+        \draw[color=black] (1.76,-0.08) node {$b$};
+        \draw[color=black] (4.06,-2.28) node {$c$};
+        \draw[color=qqwuqq] (4.4,1.05) node {$\gamma$};
+        \draw[color=qqwuqq] (0.7,-2.45) node {$\alpha$};
+        \draw[color=qqwuqq] (7.5,-2.2) node {$\beta$};
+      \end{scriptsize}
+    \end{tikzpicture}
+  \end{minipage}
 \end{Theorem}
-\definecolor{qqwuqq}{rgb}{0,0.39,0}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.53cm,y=0.64cm]
-  \clip(-0.4,-4.3) rectangle (9,3);
-  \draw [shift={(4.22,1.92)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (-134.14:1.5) arc (-134.14:-47.61:1.5) -- cycle;
-  \draw [shift={(-0.38,-2.82)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (1.04:1.5) arc (1.04:45.86:1.5) -- cycle;
-  \draw [shift={(8.4,-2.66)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (132.39:1.5) arc (132.39:181.04:1.5) -- cycle;
-  \draw (4.22,1.92)-- (8.4,-2.66);
-  \draw (4.22,1.92)-- (-0.38,-2.82);
-  \draw (8.4,-2.66)-- (-0.38,-2.82);
-  \begin{scriptsize}
-    \draw[color=black] (6.7,-0.44) node {$a$};
-    \draw[color=black] (1.76,-0.08) node {$b$};
-    \draw[color=black] (4.06,-2.28) node {$c$};
-    \draw[color=qqwuqq] (4.4,1.05) node {$\gamma$};
-    \draw[color=qqwuqq] (0.7,-2.45) node {$\alpha$};
-    \draw[color=qqwuqq] (7.5,-2.2) node {$\beta$};
-  \end{scriptsize}
-\end{tikzpicture}\\
-Man bemerkt, dass sich die bekannten Relationen ergeben, wenn einer der Winkel den Wert $\dfrac{\pi}{2}$ annimmt.
+\begin{Bemerkung}
+  Man bemerkt, dass sich die bekannten Relationen ergeben, wenn einer der Winkel den Wert $\dfrac{\pi}{2}$ annimmt.
+\end{Bemerkung}
 \section{Sinusfunktionen}
 Zur Vollständigen Funktionsdiskussion einer Sinus-Funktion sind einige Besonderheiten zu beachten:
 \begin{enumerate}

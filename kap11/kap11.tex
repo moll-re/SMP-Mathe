@@ -39,71 +39,67 @@ Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine soge
 \subsection{Sätze über Integrale}
 \begin{Theorem}
   \begin{minipage}{0.6\textwidth}
-    \begin{array}{rrl}
-      $
-      \int_a^b f(x)dx &=& -\int_b^a f(x)dx\\\\
-      \int_a^b (f(x)+g(x))dx &=& \int_a^b f(x)dx + \int_a^b g(x)dx\\\\
-      \int_a^b r*f(x)dx &=& r*\int_a^b f(x)dx\\\\
-      \int_a^b f(x)dx + \int_b^c f(x)dx &=& \int_a^c f(x)dx
-      $
-    \end{array}
+    \begin{align*}
+      \int_a^b f(x)dx &= -\int_b^a f(x)dx\\\\
+      \int_a^b (f(x)+g(x))dx &= \int_a^b f(x)dx + \int_a^b g(x)dx\\\\
+      \int_a^b r*f(x)dx &= r*\int_a^b f(x)dx\\\\
+      \int_a^b f(x)dx + \int_b^c f(x)dx &= \int_a^c f(x)dx
+    \end{align*}
   \end{minipage}
   \begin{minipage}{0.4\textwidth}
-    Invertieren der Intergrationsgrenzen\\\\
-    Summenregel\\\\
-    Linearität\\\\
+    Invertieren der Intergrationsgrenzen\\\\\\\\
+    Summenregel\\\\\\\\
+    Linearität\\\\\\\\
     Abschnittweise Integration
   \end{minipage}
 
 \end{Theorem}
-\subsubsection{Beweise}
 Invertieren der Intergrationsgrenzen:
 \begin{Beweis}
-  $\int_a^b f(x)dx = F(b)-F(a) = -(F(a)-F(b)) = -\int_b^a f(x)dx$
+  $$\int_a^b f(x)dx = F(b)-F(a) = -(F(a)-F(b)) = -\int_b^a f(x)dx$$
 \end{Beweis}
 \\
 Summenregel:
 \begin{Beweis}
-  $\int_a^b f(x)+g(x)dx = [F(x)+G(x)]_a^b = F(b)+G(b)-(F(a)+G(b)) = F(b)-F(a)+G(b)-G(b) = \int_a^b f(x)dx$+\int_a^b g(x)dx$
+  $$\int_a^b f(x)+g(x)dx = [F(x)+G(x)]_a^b = F(b)+G(b)-(F(a)+G(b)) = F(b)-F(a)+G(b)-G(b) $$$$= \int_a^b f(x)dx+\int_a^b g(x)dx$$
 \end{Beweis}
 \\
 Linearität:
 \begin{Beweis}
-  $\int_a^b r*f(x)dx = [r*F(x)]_a^b = r*F(b)-r*F(a) = r*(F(a)-F(b)) = r*\int_a^b f(x)dx$
+  $$\int_a^b r*f(x)dx = [r*F(x)]_a^b = r*F(b)-r*F(a) = r*(F(a)-F(b)) = r*\int_a^b f(x)dx$$
 \end{Beweis}
 \\
 Abschnittweise Integration:
 \begin{Beweis}
-  $\int_a^b f(x)dx+ \int_b^c f(x)dx = F(a)-F(b)-(F(b)-F(c)) = F(c)-F(a) = \int_a^c f(x)dx$
+  $$\int_a^b f(x)dx+ \int_b^c f(x)dx = F(a)-F(b)-(F(b)-F(c)) = F(c)-F(a) = \int_a^c f(x)dx$$
 \end{Beweis}
-
+\\\\
+\begin{Theorem}
+  Mittelwerte
+\end{Theorem}
 \subsection{Integrationsregeln}
 \subsubsection{Partielle Integration}
 \begin{Theorem}
   Seien $u$ und $v$ zwei stetig differenzierbare Funktionen im Intervall $I$ und $u'$
-  und $v'$ in I stetig. Dann gilt:\\
-  $\int u(x)'v(x) dx= u(x)v(x) - \int u(x)v'(x) dx$
+  und $v'$ in I stetig. Dann gilt:
+  $$\int u(x)'v(x) dx= u(x)v(x) - \int u(x)v'(x) dx$$
 \end{Theorem}
 \begin{Beweis}\\
 Nachweisen u, v diffbar und u', v' stetig (kommt noch in sauber)\\
-\begin{array}{rccl}
-  $
+\begin{align*}
   &&(u(x)*v(x))' &= u'(x)v(x)+u(x)v'(x)\\
   &\Leftrightarrow & \int (u(x)*v(x))' dx &= \int u'(x)v(x)+\int u(x)v'(x)\\
   &\Leftrightarrow & u(x)*v(x) &= \int u'(x)v(x)+\int u(x)v'(x)\\
   &\Leftrightarrow & \int u(x)v'(x) &= u(x)*v(x)- \int u'(x)v(x)\\
-  $
-\end{array}
+\end{align*}
 \end{Beweis}
-\begin{Beispiel}\\
-  \begin{array}{rrl}
-  $
-  \int x\sin(x) dx &=& \int x(-\cos(x))' dx\\
-  &=& -x\cos(x) - \int-\cos(x)*1 dx\\
-  &=& -x\cos(x) + \int\cos(x) dx\\
-  &=& -x\cos(x) + \sin(x)
-  $
-  \end{array}
+\begin{Beispiel}
+  \begin{align*}
+  \int x\sin(x) dx &= \int x(-\cos(x))' dx\\
+  &= -x\cos(x) - \int-\cos(x)*1 dx\\
+  &= -x\cos(x) + \int\cos(x) dx\\
+  &= -x\cos(x) + \sin(x)
+\end{align*}
 \end{Beispiel}
 \subsubsection{Substitution}
 Es soll die Stammfunktion von $x(1-x^2)^9$ bestimmt werden. Hier wäre zum
@@ -264,25 +260,34 @@ Insbesondere ist dann (rechne das nach!)
   Not yet... ;((
 \end{Beweis}
 \subsubsection{Integrale von $ln()$-Funktionen}
-KP
+\begin{Theorem}
+  Für $x \in \R^{+}$ ist $F$ eine Stammfunktion zur Funktion $f(x) = \ln(x)$ mit $F(x) = x \ln(x)-x$
+\end{Theorem}
+\begin{Beweis}
+  Der Beweis erfolgt über partielle Integration und wird dem Schüler als Übung überlassen.
+\end{Beweis}
 \subsubsection{Integrale von periodischen Funktionen}
-
+\begin{Theorem}
+  Für jede auf $\R$ stetige und periodische Funktion $f$ gilt:\\\\
+  $\int_a^{a+T} f(x)dx$ ist unabhängig von $a$ und $\int_a^{a+T} f(x)dx = \int_0^{T} f(x)dx$
+\end{Theorem}
+\begin{Beweis}
+  Patience...
+\end{Beweis}
 \subsection{Bemerkungen}
 Erweiterung der NEW-Regel\\
 
 \subsection{Merkenswerte Integrale}
-\begin{array}{rccl}
-  $
-  \int x^n dx&=&\frac{x^{n+1}}{n+1}\\
-  \int\sin x dx&=& -\cos x\\
-  \int\cos x dx&=& \sin x\\
-  \int\frac{ dx}{\cos^2x}&=& \tan x\\
-  \int\frac{1}{x} dx&=& \ln|x|\\
-  $
-\end{array}
+\begin{align*}
+  \int x^n dx&=\frac{x^{n+1}}{n+1}\\
+  \int\sin x dx&= -\cos x\\
+  \int\cos x dx&= \sin x\\
+  \int\frac{ dx}{\cos^2x}&= \tan x\\
+  \int\frac{1}{x} dx&= \ln|x|\\
+\end{align*}
 ln, e^x, usw.
 
-\section{Flächenberechnung mittels Integralen}
+\section{Flächen und Volumen mit Integralen berechnen}
 \begin{Definition}
   Für die auf dem Intervall $[a;b]$ (also stückweise) stetige Funktion $f$ mit Nullstellen und $x_1,x_2,...,x_n$
   mit $a \leq x_1 \leq x_2 \leq ... \leq x_n \leq b$ ist der Flächeninhalt $A$ zwischen dem Graphen von $f$ und
@@ -339,17 +344,26 @@ ytick={0},]
   \end{array}\right\\
   $\\
   Also gilt:\\
-  \begin{array}{rrl}
-    $
-    A_{-1}^{1} &=& |\int_{-1}^0 x^2-2x^3 dx| + |\int_{0}^{\dfrac{1}{2}} x^2-2x^3 dx| + |\int_{\dfrac{1}{2}}^1 x^2-2x^3 dx|\\
-    &=& |\Big[\dfrac{1}{3}x^3-\dfrac{1}{2}x^4\Big]_{-1}^0| + |\Big[\dfrac{1}{3}x^3-\dfrac{1}{2}x^4\Big]_{0}^{0.5}| + |\Big[\dfrac{1}{3}x^3-\dfrac{1}{2}x^4\Big]_{0.5}^1|\\
-    &=& |0-(-\dfrac{1}{3}-\dfrac{1}{2})| + |\dfrac{1}{24}-\dfrac{1}{32}-0| + |\dfrac{1}{3}-\dfrac{1}{2}- (\dfrac{1}{24}-\dfrac{1}{32})|\\
-    &=& 1 + \dfrac {1}{12} - \dfrac{1}{16} = \dfrac{49}{48}
-    $  FE
-\end{array}
+  \begin{align*}
+    A_{-1}^{1} &= |\int_{-1}^0 x^2-2x^3 dx| + |\int_{0}^{\dfrac{1}{2}} x^2-2x^3 dx| + |\int_{\dfrac{1}{2}}^1 x^2-2x^3 dx|\\
+    &= |\Big[\dfrac{1}{3}x^3-\dfrac{1}{2}x^4\Big]_{-1}^0| + |\Big[\dfrac{1}{3}x^3-\dfrac{1}{2}x^4\Big]_{0}^{0.5}| + |\Big[\dfrac{1}{3}x^3-\dfrac{1}{2}x^4\Big]_{0.5}^1|\\
+    &= |0-(-\dfrac{1}{3}-\dfrac{1}{2})| + |\dfrac{1}{24}-\dfrac{1}{32}-0| + |\dfrac{1}{3}-\dfrac{1}{2}- (\dfrac{1}{24}-\dfrac{1}{32})|\\
+    &= 1 + \dfrac {1}{12} - \dfrac{1}{16}\\
+    &= \dfrac{49}{48} \text{  FE}
+\end{align*}
 \end{Beispiel}
 \begin{GTR-Tipp}
   Mit $Y_1 = f(x)$ und $Y_2 = abs(Y_1)$ bzw. $Y_2 = |Y_1|$ (zu finden in 'MATH'>'NUM' oder über Alpha-F2) lässt sich die Fläche berechnen über 2nd-CALC mit der Option Integral.\\
   Hierzu wählt man $Y_2$ aus und gibt $a$ und $b$ an.
 \end{GTR-Tipp}
+
 \section{Uneigentliche Integrale}
+\begin{Definition}
+  Ist die Funktion $f$ auf $[a;+\infty)$ stetig und existiert der Grenzwert $\lim\limits_{Z \rightarrow \infty} \int_a^Z f(x)dx$,
+  so heißt dieser Grenzwert \emph{uneigentliches Integral} von $f$ über $[a;+\infty)$.\\
+  Schreibweise: $\int_a^{+\infty} f(x)dx$\\
+  Analog dazu spricht man von einem uneigentlichen Integral für $\int_{-\infty}^b f(x)dx$
+\end{Definition}
+\begin{Beispiel}
+  $f(x)= \dfrac{1}{\sqrt x}
+\end{Beispiel}
