@@ -8,15 +8,12 @@ Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine soge
 
 \section{Bestimmte Integrale}
 \begin{Definition}
-  Wenn Integrationsgrenzen angegeben werden, handelt es sich um ein bestimmtes Integral:\\
-  $
-  \begin{array}{rcl}
-    \int_{a}^{b} f(x)dx     & = & \lim\limits_{n \rightarrow \infty} U_n = \lim\limits_{n \rightarrow \infty} s_n\\
-                            & = & \lim\limits_{n \rightarrow \infty} O_n = \lim\limits_{n \rightarrow \infty} S_n\\
-                            & = & \lim\limits_{n \rightarrow \infty} \dfrac{b-a}{n}\sum\limits_{k=1}^{n}f(\dfrac{b-a}{n}k)
-
-  \end{array}
-  $\\
+  Wenn Integrationsgrenzen angegeben werden, handelt es sich um ein bestimmtes Integral:
+  \begin{align*}
+    \int_{a}^{b} f(x)dx & = \lim\limits_{n \rightarrow \infty} U_n = \lim\limits_{n \rightarrow \infty} s_n\\
+                        & = \lim\limits_{n \rightarrow \infty} O_n = \lim\limits_{n \rightarrow \infty} S_n\\
+                        & = \lim\limits_{n \rightarrow \infty} \dfrac{b-a}{n}\sum\limits_{k=1}^{n}f(\dfrac{b-a}{n}k)
+  \end{align*}
   $S_n$ und $O_n$ bezeichnen die Obersumme, wohingegen $s_n$ und $U_n$ die Untersumme bezeichnen.
 \end{Definition}
 \begin{Bemerkung}
@@ -36,7 +33,24 @@ Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine soge
   Stammfunktionen, die sich aber nur um einen konstanten Summanden
   unterscheiden.
 \end{Definition}
+\begin{Bemerkung}
+  Man beobachtet hier eine Erwiterung der NEW-Regel (siehe \ref{NEW-Regel}, NEW-Regel):\\\\
+  \begin{minipage}[b]{0.2\linewidth}
+    N $=$ Nullstellen\\
+    E $=$ Extremstellen\\
+    W $=$ Wendestellen
+  \end{minipage}
+  \hfill \vline \hfill
+  \begin{minipage}[b]{0.4\linewidth}
+    \begin{array}{rcccccl}
+    F &   N & E & W & & \\
+    f & \qquad \qquad& N & E & W & & \\
+    f' & \qquad \qquad && N & E & W & \\
+    \end{array}
+  \end{minipage}
+\end{Bemerkung}
 \subsection{Sätze über Integrale}
+Layout muss noch angepasst werden\\
 \begin{Theorem}
   \begin{minipage}{0.6\textwidth}
     \begin{align*}
@@ -47,6 +61,7 @@ Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine soge
     \end{align*}
   \end{minipage}
   \begin{minipage}{0.4\textwidth}
+    \\\\\\
     Invertieren der Intergrationsgrenzen\\\\\\\\
     Summenregel\\\\\\\\
     Linearität\\\\\\\\
@@ -274,8 +289,6 @@ Insbesondere ist dann (rechne das nach!)
 \begin{Beweis}
   Patience...
 \end{Beweis}
-\subsection{Bemerkungen}
-Erweiterung der NEW-Regel\\
 
 \subsection{Merkenswerte Integrale}
 \begin{align*}
@@ -283,7 +296,7 @@ Erweiterung der NEW-Regel\\
   \int\sin x dx&= -\cos x\\
   \int\cos x dx&= \sin x\\
   \int\frac{ dx}{\cos^2x}&= \tan x\\
-  \int\frac{1}{x} dx&= \ln|x|\\
+  \int\frac{1}{x} dx&= \ln(|x|)\\
 \end{align*}
 ln, e^x, usw.
 
@@ -291,8 +304,8 @@ ln, e^x, usw.
 \begin{Definition}
   Für die auf dem Intervall $[a;b]$ (also stückweise) stetige Funktion $f$ mit Nullstellen und $x_1,x_2,...,x_n$
   mit $a \leq x_1 \leq x_2 \leq ... \leq x_n \leq b$ ist der Flächeninhalt $A$ zwischen dem Graphen von $f$ und
-  der $x_1$-Achse im Intervall $[a;b]$ gegeben durch:\\\\
-  $A= |{\int_a^{x_1} f(x)dx}|+|{\int_{x_1}^{x_2} f(x)dx}|+...+|{\int_{x_{n-1}}^{x_n} f(x)dx}|+|{\int_{x_n}^b f(x)dx}|$
+  der $x_1$-Achse im Intervall $[a;b]$ gegeben durch:
+  $$A= |{\int_a^{x_1} f(x)dx}|+|{\int_{x_1}^{x_2} f(x)dx}|+...+|{\int_{x_{n-1}}^{x_n} f(x)dx}|+|{\int_{x_n}^b f(x)dx}|$$
 \end{Definition}
 Bildhaft sieht das folgendermaßen aus:\\
 \definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
