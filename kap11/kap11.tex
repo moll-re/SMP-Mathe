@@ -88,10 +88,19 @@ Abschnittweise Integration:
 \begin{Beweis}
   $$\int_a^b f(x)dx+ \int_b^c f(x)dx = F(a)-F(b)-(F(b)-F(c)) = F(c)-F(a) = \int_a^c f(x)dx$$
 \end{Beweis}
-\\\\
+
 \begin{Theorem}
-  Mittelwerte
+  Sei eine in $[a;b]$ stetige Funktion $f$. Wenn für $m,M \in \R$ gilt: $m\leq f(t) \leq M \; \forall t \in [a;b]$, dann gilt:
+  $$m(b-a) \leq \int_a^b f(t)dt \leq M(b-a)$$
 \end{Theorem}
+\begin{Beweis}
+  Es reicht, $m \leq f(t) \leq M$ als Ungleichung zwischen $a$ und $b$ zu integrieren.
+\end{Beweis}
+\begin{Bemerkung}
+  Eine Konsequenz davon ist, dass falls $|f(t)|\leq M \; \forall t \in [a;b]$, dann gilt:
+  $$|\int_a^b f(t)dt | \leq M(|b-a|)$$
+\end{Bemerkung}
+GRAAAAAAAAAAPHEN
 \subsection{Integrationsregeln}
 \subsubsection{Partielle Integration}
 \begin{Theorem}
@@ -301,6 +310,7 @@ Insbesondere ist dann (rechne das nach!)
 ln, e^x, usw.
 
 \section{Flächen und Volumen mit Integralen berechnen}
+\subsection{Fläche zwischen einer Funktion und der $x_1$-Achse}
 \begin{Definition}
   Für die auf dem Intervall $[a;b]$ (also stückweise) stetige Funktion $f$ mit Nullstellen und $x_1,x_2,...,x_n$
   mit $a \leq x_1 \leq x_2 \leq ... \leq x_n \leq b$ ist der Flächeninhalt $A$ zwischen dem Graphen von $f$ und
@@ -369,7 +379,20 @@ ytick={0},]
   Mit $Y_1 = f(x)$ und $Y_2 = abs(Y_1)$ bzw. $Y_2 = |Y_1|$ (zu finden in 'MATH'>'NUM' oder über Alpha-F2) lässt sich die Fläche berechnen über 2nd-CALC mit der Option Integral.\\
   Hierzu wählt man $Y_2$ aus und gibt $a$ und $b$ an.
 \end{GTR-Tipp}
+\subsection{Fläche zwischen zwei Funktionen}
 
+\subsection{Volumenangaben mittels Integralen}
+\begin{Definition}
+  Man betrachtet einen Körper, der durch zwei parallele Ebenen mit den Gleichungen $x_3 = a$ und $x_3 = b$ begrenzt wird.
+  Für alle $a\leq z \leq b$ nennt man $P_z$ die orthogonale Fläche zu $(O_z)$ mit der Seite $z$ und $S(z)$ die Fläche des
+  Schnitts des Körpers durch $P_z$. Ist $S$ stetig, so ist ist das Volumen $V$ des Körpers gegeben durch:
+  $$V=\int_a^b S(z)dz$$
+  Daraus folgt, dass ein Körper, der durch die Rotation der Kurve von $f$ um eine Achse entsteht, ein Volumen von
+  $$\int_a^b \pi f^2(z)dz$$
+  hat.\\
+  Tatsächlich ist die Fläche eines zu $(O_z)$ parallelen Querschnitts die der Scheibe mit Radius $f(z)$.
+\end{Definition}
+Unklar, ich weiß. (Ich habe es selbst noch nicht verstanden)
 \section{Uneigentliche Integrale}
 \begin{Definition}
   Ist die Funktion $f$ auf $[a;+\infty)$ stetig und existiert der Grenzwert $\lim\limits_{Z \rightarrow \infty} \int_a^Z f(x)dx$,
