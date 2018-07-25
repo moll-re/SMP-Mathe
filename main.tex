@@ -25,6 +25,11 @@
 \usepackage[makeroom]{cancel}                   %Durchgestrichene Terme mit \cancel{}
 \usepackage{tkz-tab}                            %für Monotonietabellen??
 \usepackage{marvosym}                           %Symbole wie Blitze und co. ...
+\usepackage{stackengine}
+\usepackage{scalerel}
+\usepackage{xcolor}
+
+
 <<<<<<< HEAD
 
 \pgfplotsset{compat=1.14}
@@ -43,6 +48,11 @@
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
+
+\newcommand\danger[1][2ex]{%
+  \renewcommand\stacktype{L}%
+  \scaleto{\stackon[1.3pt]{\color{red}$\triangle$}{\tiny !}}{#1}   % Achtung Zeichen mit \danger
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
