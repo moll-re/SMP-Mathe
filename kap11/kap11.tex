@@ -180,6 +180,38 @@ Abschnittweise Integration:
   $$\int_a^b f(x)dx+ \int_b^c f(x)dx = F(a)-F(b)-(F(b)-F(c)) = F(c)-F(a) = \int_a^c f(x)dx$$
 \end{Beweis}
 
+\begin{center}
+    \definecolor{lightblu}{rgb}{0,0,0.3}
+    \definecolor{lightgree}{rgb}{0,0.3,0}
+    \begin{tikzpicture}
+        \draw[->,line width=0.8pt] (-5.5,0) -- (5.5,0) node[below] {$x_1$};
+        \draw[->,line width=0.8pt] (0,-5.5) -- (0,5.5) node[right] {$x_2$};
+        \foreach  \x in {-5,...,-1,1,2,...,5}
+            \draw[line width=0.8pt] (\x,0.1) -- (\x,-0.1) node[below] {\x};
+        \foreach  \x in {-5,...,-1,1,2,...,5}
+            \draw[line width=0.8pt] (-0.1,\x) -- (0.1,\x) node[right] {\x};
+
+        \draw (-0.3,-0.3) node {$O$};
+
+        \draw[gray,very thin] (-5,-5) grid (5,5);
+
+        \draw[line width=0.1pt,color=lightblu,fill=lightblu,fill opacity=0.3] (-2.5,0) -- (-2.5,-2.5) ..controls(-1.62,-3.06) ..(0,0) -- cycle;
+        \draw[line width=0.1pt,color=lightgree,fill=lightgree,fill opacity=0.3] (0,0) ..controls(1.94,3.78) ..(3.5,4.5) -- (3.5,0) -- cycle;
+
+        \draw[line width=1.5pt,color=red] (-5,2) ..controls(-2,-4) ..(0,0);
+        \draw[line width=1.5pt,color=red] (0,0) ..controls(2,4) ..(5,5);
+
+        \draw[line width=1.2pt,color=orange] (-2.5,-2.5) -- (-2.5,0) node[above] {a};
+        \draw[line width=1.2pt,color=orange] (0,-0.2) node[right] {b};
+        \draw[line width=1.2pt,color=orange] (3.5,4.5) -- (3.5,0) node[below] {c};
+
+        \draw[line width=0.8pt,color=lightblu] (-1.5,-1.1) node {$A$};
+        \draw[line width=0.8pt,color=lightgree] (2.3,1.9) node {$B$};
+
+        \draw[line width=0.8pt,color=red] (2,4) node {$K$};
+    \end{tikzpicture}
+\end{center}
+
 \begin{Theorem}
   Sei eine in $[a;b]$ stetige Funktion $f$. Wenn für $m,M \in \R$ gilt: $m\leq f(t) \leq M \; \forall t \in [a;b]$, dann gilt:
   $$m(b-a) \leq \int_a^b f(t)dt \leq M(b-a)$$
