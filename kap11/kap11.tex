@@ -27,6 +27,8 @@ Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine soge
     \foreach  \x in {-5,...,-1,1,2,...,5}
         \draw[line width=0.8pt] (-0.1,\x) -- (0.1,\x) node[right] {\x};
 
+    \draw (-0.3,-0.3) node {$O$};
+
     \draw[gray,very thin] (-5,-5) grid (5,5);
 
     \draw[line width=1.5pt,color=red] (-5,2) ..controls(-2,-4) ..(0,0);
@@ -53,13 +55,32 @@ Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine soge
 
     \draw[->,line width=0.8pt] (1.5,-7) -- (12.5,-7) node[below] {$x_1$};
     \draw[->,line width=0.8pt] (7,-12.5) -- (7,-1.5) node[right] {$x_2$};
-    \foreach  \pos/ \name in {2/-5, 3/-4, 4/-3, 5/-2, 6/-1, 8/1, 9/2, 10/3, 11/4, 12/5}
-        \draw[line width=0.8pt] (\pos,-6.9) -- (\pos,-7.1) node[below] {\name};
-    \foreach  \pos/ \name in {-12/-5, -11/-4, -10/-3, -9/-2, -8/-1, -6/1, -5/2, -4/3, -3/4, -2/5}
-        \draw[line width=0.8pt] (6.9,\pos) -- (7.1,\pos) node[right] {\name};
+    \foreach  \x in {2,...,6,8,9,...,12}
+        \draw[line width=0.8pt] (\x,-6.9) -- (\x,-7.1);
+    \draw (2,-7.1) node[below] {-5};
+    \draw (3,-7.1) node[below] {-4};
+    \draw (4,-7.1) node[below] {-3};
+    \draw (5,-7.1) node[below] {-2};
+    \draw (6,-7.1) node[below] {-1};
+    \draw (8,-7.1) node[below] {1};
+    \draw (9,-7.1) node[below] {2};
+    \draw (10,-7.1) node[below] {3};
+    \draw (11,-7.1) node[below] {4};
+    \draw (12,-7.1) node[below] {5};
+    \foreach  \x in {-12,...,-8,-6,-5,...,-2}
+        \draw[line width=0.8pt] (6.9,\x) -- (7.1,\x);
+    \draw (7.1,-12)[right] node{-5}:
+    \draw (7.1,-11)[right] node{-4}:
+    \draw (7.1,-10)[right] node{-3}:
+    \draw (7.1,-9)[right] node{-2}:
+    \draw (7.1,-8)[right] node{-1}:
+    \draw (7.1,-6)[right] node{1}:
+    \draw (7.1,-5)[right] node{2}:
+    \draw (7.1,-4)[right] node{3}:
+    \draw (7.1,-3)[right] node{4}:
+    \draw (7.1,-2)[right] node{5}:
 
-    % \foreach \g / \u in {-12/-5, -11/-4, -10/-3, -9/-2, -8/-1, -6/1, -5/2, -4/3, -3/4, -2/5}
-        % \draw[line width=0.8pt] (\g,-7.1) node[below] {\u};
+    \draw (6.7,-7.3) node {$O$};
 
     \draw[gray,very thin] (2,-12) grid (12,-2);
 
@@ -81,6 +102,9 @@ Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine soge
 
     \draw (9.5,-4.4) node {$O_n$};
     \draw (8.625,-5.6) node {$U_n$};
+
+
+    \draw[line width=2pt] (-5,-12) -- (12,5);
 \end{tikzpicture}
 
 \begin{Bemerkung}
