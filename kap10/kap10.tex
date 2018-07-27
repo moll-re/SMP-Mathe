@@ -4,7 +4,6 @@
 	Algorithmen besitzen die folgenden charakteristischen Eigenschaften:
 	\begin{enumerate}
 		\item Eindeutigkeit: ein Algorithmus darf keine widersprüchliche Beschreibung haben. Diese muss eindeutig sein.
-		\item Eindeutigkeit: ein Algorithmus darf keine widersprüchliche Beschreibung haben. Diese muss eindeutig sein.
 		\item Ausführbarkeit: jeder Einzelschritt muss ausführbar sein.
 		\item Finitheit (= Endlichkeit): die Beschreibung des Algorithmus muss endlich sein.
 		\item Terminierung: nach endlich vielen Schritten muss der Algorithmus enden und ein Ergebnis liefern.
@@ -16,11 +15,11 @@
 Diese Eigenschaften können in der Mathematik genutzt werden, um Probleme zu lösen. Hierfür bedarf es einer einheitlichen Schreibweise.\\
 Insbesondere vor dem Abitur stehen den Schülern mehrere Möglichkeiten zur Verfügung, die im Folgenden behandelt werden.
 \subsection{Pseudocode}
-Pseudocode ist ein Programmcode, der nicht zur maschinellen Interpretation, sondern lediglich zur Veranschaulichung eines Algorithmus dient. Meistens ähnelt er höheren Programmiersprachen, gemischt mit natürlicher Sprache und mathematischer Notation.\\
+Pseudocode ist ein Programmcode, der nicht zur maschinellen Interpretation, sondern lediglich zur Veranschaulichung eines Algorithmus dient. Meistens ähnelt er höheren Programmiersprachen, gemischt mit natürlicher Sprache und mathematischer Notation.Er ist leichter verständlich als realer Programmcode aber klarer und weniger missverständlich als eine Beschreibung in natürlicher Sprache.\\
 Ein Beispiel erübrigt sich.
 \subsection{Python}
-Programmiersprache, bekannt durch ihre einfach verständliche Syntax, sie gilt als höhere Sprache, was sie zu einer auf die (gesprochene) Sprache angepasste Sprache macht. Sie ist somit gerade für Einsteiger interessant und eignet sich dennoch für größere Projekte. Ein weiterer Vorteil ist die mitllerweile allgegenwärtige Präsenz der Sprache, mittlerweile wird sie auch für Apps und Webdeveloppement verwendet.\\
-Er ist leichter verständlich als realer Programmcode aber klarer und weniger missverständlich als eine Beschreibung in natürlicher Sprache.
+Programmiersprache, bekannt durch ihre einfach verständliche Syntax, sie gilt als höhere Sprache, was sie zu einer auf die (gesprochene) Sprache angepasste Sprache macht. Sie ist somit gerade für Einsteiger interessant und eignet sich dennoch für größere Projekte. Ein weiterer Vorteil ist die mitlerweile allgegenwärtige Präsenz der Sprache, denn sie wird auch für Apps und Webdevelopment verwendet.\\
+
 \subsubsection{Syntax}
 Folgendes macht die Syntax Pythons aus:\\
 \begin{enumerate}
@@ -92,7 +91,7 @@ Durch die Verwendung des Newton-Rhapson Verfahrens erhält man die Iterationsvor
 ￼$x_{n+1}=x_{n}-\dfrac{f(x_{n})}{f'(x_{n}}$
 $\Leftrightarrow x_{n+1}=x_{n}-\dfrac{x_{n}^{2}-a}{2x_{n}}=\dfrac{x_{n}^{2}+a}{2x_{n}}=\dfrac{1}{2}(x_{n}+\dfrac{a}{x_{n}})$\\
 Als kluger, ungefähr zutreffender Startwert gilt $x_0=\dfrac{a+1}{2}$\\
-Eine mögliche Umsetung in Python wäre:\\
+Eine mögliche Umsetzung in Python wäre:\\
 
 \begin{lstlisting}[language=Python]
 	a=2															#Muss manuell angegeben werden

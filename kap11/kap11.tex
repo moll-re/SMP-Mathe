@@ -1,6 +1,6 @@
 \chapter{Integrale}
 \section{Einführung}
-Der Hauptunterschied zwischen einem bestimmten und einem unbestimmen Integral ist die Existenz (bestimmtes Integral) bzw. das Fehlen
+Der Hauptunterschied zwischen einem bestimmten und einem unbestimmten Integral ist die Existenz (bestimmtes Integral) bzw. das Fehlen
 (unbestimmtes Integral) der Integrationsgrenzen.\\
 Bei einem bestimmten Integral ist die Lösung ein Flächeinhalt, also ein einfacher Zahlenwert.\\
 Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine sogenannte Stammfunktion.\\
@@ -8,16 +8,105 @@ Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine soge
 
 \section{Bestimmte Integrale}
 \begin{Definition}
-  Wenn Integralgrenzen angegeben werden, handelt es sich um ein bestimmtes Integral:\\
-  $
-  \begin{array}{rcl}
-    \int_{a}^{b} f(x)dx & = & \lim\limits_{n \rightarrow \infty} U_n = \lim\limits_{n \rightarrow \infty} s_n\\
-                         & = & \lim\limits_{n \rightarrow \infty} O_n = \lim\limits_{n \rightarrow \infty} S_n\\
-                         & = & \lim\limits_{n \rightarrow \infty} \dfrac{b-a}{n}\sum\limits_{k=1}^{n}f(\dfrac{b-a}{n}k)
-  \end{array}
-  $\\
+  Wenn Integrationsgrenzen angegeben werden, handelt es sich um ein bestimmtes Integral:
+  \begin{align*}
+    \int_{a}^{b} f(x)dx & = \lim\limits_{n \rightarrow \infty} U_n = \lim\limits_{n \rightarrow \infty} s_n\\
+                        & = \lim\limits_{n \rightarrow \infty} O_n = \lim\limits_{n \rightarrow \infty} S_n\\
+                        & = \lim\limits_{n \rightarrow \infty} \dfrac{b-a}{n}\sum\limits_{k=1}^{n}f(\dfrac{b-a}{n}k)
+  \end{align*}
   $S_n$ und $O_n$ bezeichnen die Obersumme, wohingegen $s_n$ und $U_n$ die Untersumme bezeichnen.
 \end{Definition}
+
+\definecolor{lightblu}{rgb}{0,0,0.3}
+\definecolor{lightre}{rgb}{0.3,0,0}
+\begin{tikzpicture}
+    \draw[->,line width=0.8pt] (-5.5,0) -- (5.5,0) node[below] {$x_1$};
+    \draw[->,line width=0.8pt] (0,-5.5) -- (0,5.5) node[right] {$x_2$};
+    \foreach  \x in {-5,...,-1,1,2,...,5}
+        \draw[line width=0.8pt] (\x,0.1) -- (\x,-0.1) node[below] {\x};
+    \foreach  \x in {-5,...,-1,1,2,...,5}
+        \draw[line width=0.8pt] (-0.1,\x) -- (0.1,\x) node[right] {\x};
+
+    \draw (-0.3,-0.3) node {$O$};
+
+    \draw[gray,very thin] (-5,-5) grid (5,5);
+
+    \draw[line width=1.5pt,color=red] (-5,2) ..controls(-2,-4) ..(0,0);
+    \draw[line width=1.5pt,color=red] (0,0) ..controls(2,4) ..(5,5);
+
+    \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (0.5,0) -- (0.5,2.4) -- (1.25,2.4) -- (1.25,0) -- cycle;
+    \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (1.25,0) -- (1.25,3.5) -- (2,3.5) -- (2,0) -- cycle;
+    \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (2,0) -- (2,4.1) -- (2.75,4.1) -- (2.75,0) -- cycle;
+    \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (2.75,0) -- (2.75,4.5) -- (3.5,4.5) -- (3.5,0) -- cycle;
+
+    \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (0.5,0) -- (0.5,1) -- (1.25,1) -- (1.25,0) -- cycle;
+    \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (1.25,0) -- (1.25,2.4) -- (2,2.4) -- (2,0) -- cycle;
+    \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (2,0) -- (2,3.5) -- (2.75,3.5) -- (2.75,0) -- cycle;
+    \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (2.75,0) -- (2.75,4.1) -- (3.5,4.1) -- (3.5,0) -- cycle;
+
+    \draw[line width=1.2pt,color=orange] (0.5,1) -- (0.5,0) node[below] {a};
+    \draw[line width=1.2pt,color=orange] (3.5,4.5) -- (3.5,0) node[below] {b};
+
+    \draw (1.5,3.8) node {$O_n$};
+    \draw (2.375,2.5) node {$U_n$};
+
+
+
+
+    \draw[->,line width=0.8pt] (1.5,-7) -- (12.5,-7) node[below] {$x_1$};
+    \draw[->,line width=0.8pt] (7,-12.5) -- (7,-1.5) node[right] {$x_2$};
+    \foreach  \x in {2,...,6,8,9,...,12}
+        \draw[line width=0.8pt] (\x,-6.9) -- (\x,-7.1);
+    \draw (2,-7.1) node[below] {-5};
+    \draw (3,-7.1) node[below] {-4};
+    \draw (4,-7.1) node[below] {-3};
+    \draw (5,-7.1) node[below] {-2};
+    \draw (6,-7.1) node[below] {-1};
+    \draw (8,-7.1) node[below] {1};
+    \draw (9,-7.1) node[below] {2};
+    \draw (10,-7.1) node[below] {3};
+    \draw (11,-7.1) node[below] {4};
+    \draw (12,-7.1) node[below] {5};
+    \foreach  \x in {-12,...,-8,-6,-5,...,-2}
+        \draw[line width=0.8pt] (6.9,\x) -- (7.1,\x);
+    \draw (7.1,-12)[right] node{-5}:
+    \draw (7.1,-11)[right] node{-4}:
+    \draw (7.1,-10)[right] node{-3}:
+    \draw (7.1,-9)[right] node{-2}:
+    \draw (7.1,-8)[right] node{-1}:
+    \draw (7.1,-6)[right] node{1}:
+    \draw (7.1,-5)[right] node{2}:
+    \draw (7.1,-4)[right] node{3}:
+    \draw (7.1,-3)[right] node{4}:
+    \draw (7.1,-2)[right] node{5}:
+
+    \draw (6.7,-7.3) node {$O$};
+
+    \draw[gray,very thin] (2,-12) grid (12,-2);
+
+    \draw[line width=1.5pt,color=blue] (2,-9) ..controls(5,-3) ..(7,-4);
+    \draw[line width=1.5pt,color=blue] (7,-4) ..controls(10,-5) ..(12,-9);
+
+    \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (7.5,-7) -- (7.5,-4.2) -- (8.25,-4.2) -- (8.25,-7) -- cycle;
+    \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (8.25,-7) -- (8.25,-4.4) -- (9,-4.4) -- (9,-7) -- cycle;
+    \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (9,-7) -- (9,-4.75) -- (9.75,-4.75) -- (9.75,-7) -- cycle;
+    \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (9.75,-7) -- (9.75,-5.25) -- (10.5,-5.25) -- (10.5,-7) -- cycle;
+
+    \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (7.5,-7) -- (7.5,-4.4) -- (8.25,-4.4) -- (8.25,-7) -- cycle;
+    \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (8.25,-7) -- (8.25,-4.75) -- (9,-4.75) -- (9,-7) -- cycle;
+    \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (9,-7) -- (9,-5.25) -- (9.75,-5.25) -- (9.75,-7) -- cycle;
+    \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (9.75,-7) -- (9.75,-6.2) -- (10.5,-6.2) -- (10.5,-7) -- cycle;
+
+    \draw[line width=1.2pt,color=orange] (7.5,-4.2) -- (7.5,0-7) node[below] {a};
+    \draw[line width=1.2pt,color=orange] (10.5,-6.2) -- (10.5,-7) node[below] {b};
+
+    \draw (9.5,-4.4) node {$O_n$};
+    \draw (8.625,-5.6) node {$U_n$};
+
+
+    \draw[line width=2pt] (-5,-12) -- (12,5);
+\end{tikzpicture}
+
 \begin{Bemerkung}
   $a$ und $b$ bezeichnen jeweils die untere und obere Grenze des zu berechnenden Integrals. Sie bezeichnen anschaulich die $x$-Werte, zwischen denen die Fläche berechnet wird.
 \end{Bemerkung}
@@ -35,85 +124,131 @@ Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine soge
   Stammfunktionen, die sich aber nur um einen konstanten Summanden
   unterscheiden.
 \end{Definition}
-\subsection{Sätze über Integrale}
-\begin{Theorem}
-  \begin{minipage}{0.6\textwidth}
-    \begin{array}{rccl}
-      $
-      \int_a^b f(x)dx &=& -\int_b^a f(x)dx\\\\
-      \int_a^b (f(x)+g(x))dx &=& \int_a^b f(x)dx + \int_a^b g(x)dx\\\\
-      \int_a^b r*f(x)dx &=& r*\int_a^b f(x)dx\\\\
-      \int_a^b f(x)dx + \int_b^c f(x)dx &=& \int_a^c f(x)dx
-      $
+\begin{Bemerkung}
+  Man beobachtet hier eine Erwiterung der NEW-Regel (siehe \ref{NEW-Regel}, NEW-Regel):\\\\
+  \begin{minipage}[b]{0.2\linewidth}
+    N $=$ Nullstellen\\
+    E $=$ Extremstellen\\
+    W $=$ Wendestellen
+  \end{minipage}
+  \hfill \vline \hfill
+  \begin{minipage}[b]{0.4\linewidth}
+    \begin{array}{rcccccl}
+    F &   N & E & W & & \\
+    f & \qquad \qquad& N & E & W & & \\
+    f' & \qquad \qquad && N & E & W & \\
     \end{array}
   \end{minipage}
+\end{Bemerkung}
+\subsection{Sätze über Integrale}
+Layout muss noch angepasst werden\\
+\begin{Theorem}
+  \begin{minipage}{0.6\textwidth}
+    \begin{align*}
+      \int_a^b f(x)dx &= -\int_b^a f(x)dx\\\\
+      \int_a^b (f(x)+g(x))dx &= \int_a^b f(x)dx + \int_a^b g(x)dx\\\\
+      \int_a^b r*f(x)dx &= r*\int_a^b f(x)dx\\\\
+      \int_a^b f(x)dx + \int_b^c f(x)dx &= \int_a^c f(x)dx
+    \end{align*}
+  \end{minipage}
   \begin{minipage}{0.4\textwidth}
-    Invertieren der Intergrationsgrenzen\\\\
-    Summenregel\\\\
-    Linearität\\\\
+    \\\\\\
+    Invertieren der Intergrationsgrenzen\\\\\\\\
+    Summenregel\\\\\\\\
+    Linearität\\\\\\\\
     Abschnittweise Integration
   \end{minipage}
 
 \end{Theorem}
-\subsubsection{Beweise}
-Invertieren der Intergrationsgrenzen:\\
+Invertieren der Intergrationsgrenzen:
 \begin{Beweis}
-  $\int_a^b f(x)dx = F(b)-F(a) = -(F(a)-F(b)) = -\int_b^a f(x)dx$
-
+  $$\int_a^b f(x)dx = F(b)-F(a) = -(F(a)-F(b)) = -\int_b^a f(x)dx$$
 \end{Beweis}
-Summenregel:\\
+\\
+Summenregel:
 \begin{Beweis}
-  $\int_a^b f(x)+g(x)dx = [F(x)+G(x)]_a^b = F(b)+G(b)-(F(a)+G(b)) = F(b)-F(a)+G(b)-G(b) = \int_a^b f(x)dx$+\int_a^b g(x)dx$
+  $$\int_a^b f(x)+g(x)dx = [F(x)+G(x)]_a^b = F(b)+G(b)-(F(a)+G(b)) = F(b)-F(a)+G(b)-G(b) $$$$= \int_a^b f(x)dx+\int_a^b g(x)dx$$
 \end{Beweis}
-
-Linearität:\\
+\\
+Linearität:
 \begin{Beweis}
-  $\int_a^b r*f(x)dx = [r*F(x)]_a^b = r*F(b)-r*F(a) = r*(F(a)-F(b)) = r*\int_a^b f(x)dx$
+  $$\int_a^b r*f(x)dx = [r*F(x)]_a^b = r*F(b)-r*F(a) = r*(F(a)-F(b)) = r*\int_a^b f(x)dx$$
 \end{Beweis}
-
-Abschnittweise Integration:\\
+\\
+Abschnittweise Integration:
 \begin{Beweis}
-  $\int_a^b f(x)dx+ \int_b^c f(x)dx = F(a)-F(b)-(F(b)-F(c)) = F(c)-F(a) = \int_a^c f(x)dx$
+  $$\int_a^b f(x)dx+ \int_b^c f(x)dx = F(a)-F(b)-(F(b)-F(c)) = F(c)-F(a) = \int_a^c f(x)dx$$
 \end{Beweis}
 
-\subsection{Merkenswerte Integrale}
-\begin{array}{rccl}
-  \int x^n dx&=&\frac{x^{n+1}}{n+1}\\
-  \int\sin x dx&=& -\cos x\\
-  \int\cos x dx&=& \sin x\\
-  \int\frac{ dx}{\cos^2x}&=& \tan x\\
-  \int\frac{1}{x} dx&=& \ln|x|\\
-\end{array}
+\begin{center}
+    \definecolor{lightblu}{rgb}{0,0,0.3}
+    \definecolor{lightgree}{rgb}{0,0.3,0}
+    \begin{tikzpicture}
+        \draw[->,line width=0.8pt] (-5.5,0) -- (5.5,0) node[below] {$x_1$};
+        \draw[->,line width=0.8pt] (0,-5.5) -- (0,5.5) node[right] {$x_2$};
+        \foreach  \x in {-5,...,-1,1,2,...,5}
+            \draw[line width=0.8pt] (\x,0.1) -- (\x,-0.1) node[below] {\x};
+        \foreach  \x in {-5,...,-1,1,2,...,5}
+            \draw[line width=0.8pt] (-0.1,\x) -- (0.1,\x) node[right] {\x};
 
+        \draw (-0.3,-0.3) node {$O$};
+
+        \draw[gray,very thin] (-5,-5) grid (5,5);
+
+        \draw[line width=0.1pt,color=lightblu,fill=lightblu,fill opacity=0.3] (-2.5,0) -- (-2.5,-2.5) ..controls(-1.62,-3.06) ..(0,0) -- cycle;
+        \draw[line width=0.1pt,color=lightgree,fill=lightgree,fill opacity=0.3] (0,0) ..controls(1.94,3.78) ..(3.5,4.5) -- (3.5,0) -- cycle;
+
+        \draw[line width=1.5pt,color=red] (-5,2) ..controls(-2,-4) ..(0,0);
+        \draw[line width=1.5pt,color=red] (0,0) ..controls(2,4) ..(5,5);
+
+        \draw[line width=1.2pt,color=orange] (-2.5,-2.5) -- (-2.5,0) node[above] {a};
+        \draw[line width=1.2pt,color=orange] (0,-0.2) node[right] {b};
+        \draw[line width=1.2pt,color=orange] (3.5,4.5) -- (3.5,0) node[below] {c};
+
+        \draw[line width=0.8pt,color=lightblu] (-1.5,-1.1) node {$A$};
+        \draw[line width=0.8pt,color=lightgree] (2.3,1.9) node {$B$};
+
+        \draw[line width=0.8pt,color=red] (2,4) node {$K$};
+    \end{tikzpicture}
+\end{center}
+
+\begin{Theorem}
+  Sei eine in $[a;b]$ stetige Funktion $f$. Wenn für $m,M \in \R$ gilt: $m\leq f(t) \leq M \; \forall t \in [a;b]$, dann gilt:
+  $$m(b-a) \leq \int_a^b f(t)dt \leq M(b-a)$$
+\end{Theorem}
+\begin{Beweis}
+  Es reicht, $m \leq f(t) \leq M$ als Ungleichung zwischen $a$ und $b$ zu integrieren.
+\end{Beweis}
+\begin{Bemerkung}
+  Eine Konsequenz davon ist, dass falls $|f(t)|\leq M \; \forall t \in [a;b]$, dann gilt:
+  $$|\int_a^b f(t)dt | \leq M(|b-a|)$$
+\end{Bemerkung}
+GRAAAAAAAAAAPHEN
 \subsection{Integrationsregeln}
 \subsubsection{Partielle Integration}
-\begin{Definition}
+\begin{Theorem}
   Seien $u$ und $v$ zwei stetig differenzierbare Funktionen im Intervall $I$ und $u'$
-  und $v'$ in I stetig. Dann gilt:\\
-  $\int u(x)'v(x) dx= u(x)v(x) - \int u(x)v'(x) dx$
-\end{Definition}
+  und $v'$ in I stetig. Dann gilt:
+  $$\int u(x)'v(x) dx= u(x)v(x) - \int u(x)v'(x) dx$$
+\end{Theorem}
 \begin{Beweis}\\
 Nachweisen u, v diffbar und u', v' stetig (kommt noch in sauber)\\
-  $
-  (u(x)*v(x))' = u'(x)v(x)+u(x)v'(x)\\
-  \Leftrightarrow \int (u(x)*v(x))' dx = \int u'(x)v(x)+\int u(x)v'(x)\\
-  \Leftrightarrow u(x)*v(x) = \int u'(x)v(x)+\int u(x)v'(x)\\
-  \Leftrightarrow \int u(x)v'(x) = u(x)*v(x)- \int u'(x)v(x)\\
-  $
+\begin{align*}
+  &&(u(x)*v(x))' &= u'(x)v(x)+u(x)v'(x)\\
+  &\Leftrightarrow & \int (u(x)*v(x))' dx &= \int u'(x)v(x)+\int u(x)v'(x)\\
+  &\Leftrightarrow & u(x)*v(x) &= \int u'(x)v(x)+\int u(x)v'(x)\\
+  &\Leftrightarrow & \int u(x)v'(x) &= u(x)*v(x)- \int u'(x)v(x)\\
+\end{align*}
 \end{Beweis}
-  \begin{Beispiel}\\
-  \[
-  \int x\sin x\dD x
-  \]
-  Setzt man hier $u'=\sin x$, $v=x$, dann ist $u=-\cos x$ und $v'=1$. Setzt man
-  diese Werte in die Produktintegrations-Formel ein, dann folgt:
+\begin{Beispiel}
   \begin{align*}
-  \int x\sin x\dD x&= (-\cos x)x-\int (-\cos x)\cdot1\dD x\\
-  &=-x\cos x+\int\cos x\dD x= -x\cos x+\sin x
-  \end{align*}
+  \int x\sin(x) dx &= \int x(-\cos(x))' dx\\
+  &= -x\cos(x) - \int-\cos(x)*1 dx\\
+  &= -x\cos(x) + \int\cos(x) dx\\
+  &= -x\cos(x) + \sin(x)
+\end{align*}
 \end{Beispiel}
-
-\subsubsection{Substitutionsmethode}
+\subsubsection{Substitution}
 Es soll die Stammfunktion von $x(1-x^2)^9$ bestimmt werden. Hier wäre zum
 Ableiten die Kettenregel und die Produktregel nötig, beides gibt es aber in
 reiner Form beim Integrieren nicht. Man kann aber häufig durch geschickte
@@ -263,66 +398,131 @@ Insbesondere ist dann (rechne das nach!)
   J_4&=\frac{5}{16}\left(\arctan y+\frac{y}{y^2+1}\right)+
        \frac{5}{24}\cdot\frac{y}{(y^2+1)^2}+\frac{y}{6(y^2+1)^3}
 \end{align*}
+\subsubsection{Integrale von $e$-Funktionen}
+\begin{Theorem}
+  Für $f(x)=e^{l(x)}$ mit $l(x) = ax+b$ gilt:\\
+  $F(x) = \dfrac{1}{a}e^{l(x)}$
+\end{Theorem}
+\begin{Beweis}
+  Not yet... ;((
+\end{Beweis}
+\subsubsection{Integrale von $ln()$-Funktionen}
+\begin{Theorem}
+  Für $x \in \R^{+}$ ist $F$ eine Stammfunktion zur Funktion $f(x) = \ln(x)$ mit $F(x) = x \ln(x)-x$
+\end{Theorem}
+\begin{Beweis}
+  Der Beweis erfolgt über partielle Integration und wird dem Schüler als Übung überlassen.
+\end{Beweis}
+\subsubsection{Integrale von periodischen Funktionen}
+\begin{Theorem}
+  Für jede auf $\R$ stetige und periodische Funktion $f$ gilt:\\\\
+  $\int_a^{a+T} f(x)dx$ ist unabhängig von $a$ und $\int_a^{a+T} f(x)dx = \int_0^{T} f(x)dx$
+\end{Theorem}
+\begin{Beweis}
+  Patience...
+\end{Beweis}
 
-\subsection{Bemerkungen}
-Erweiterung der NEW-Regel
+\subsection{Merkenswerte Integrale}
+\begin{align*}
+  \int x^n dx&=\frac{x^{n+1}}{n+1}\\
+  \int\sin x dx&= -\cos x\\
+  \int\cos x dx&= \sin x\\
+  \int\frac{ dx}{\cos^2x}&= \tan x\\
+  \int\frac{1}{x} dx&= \ln(|x|)\\
+\end{align*}
+ln, e^x, usw.
 
-\section{Flächenberechnung mittels Integralen}
+\section{Flächen und Volumen mit Integralen berechnen}
+\subsection{Fläche zwischen einer Funktion und der $x_1$-Achse}
 \begin{Definition}
   Für die auf dem Intervall $[a;b]$ (also stückweise) stetige Funktion $f$ mit Nullstellen und $x_1,x_2,...,x_n$
   mit $a \leq x_1 \leq x_2 \leq ... \leq x_n \leq b$ ist der Flächeninhalt $A$ zwischen dem Graphen von $f$ und
-  der $x_1$-Achse im Intervall $[a;b]$ gegeben durch:\\\\
-  $A= |{\int_a^{x_1} f(x)dx}|+|{\int_{x_1}^{x_2} f(x)dx}|...+|{\int_{x_{n-1}}^{x_n} f(x)dx}|+|{\int_{x_n}^b f(x)dx}|$
+  der $x_1$-Achse im Intervall $[a;b]$ gegeben durch:
+  $$A= |{\int_a^{x_1} f(x)dx}|+|{\int_{x_1}^{x_2} f(x)dx}|+...+|{\int_{x_{n-1}}^{x_n} f(x)dx}|+|{\int_{x_n}^b f(x)dx}|$$
 \end{Definition}
-
-\\Graph+Intergal
+Bildhaft sieht das folgendermaßen aus:\\
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
 \definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
-\definecolor{ffqqqq}{rgb}{1.,0.,0.}
-\definecolor{qqzzqq}{rgb}{0.,0.6,0.}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=5.0cm,y=5.0cm]
-  \begin{axis}[
-  x=5.0cm,y=5.0cm,
-  axis lines=middle,
-  xmin=-1.0261085461981427,
-  xmax=0.8799969446433364,
-  ymin=-0.45014188815180656,
-  ymax=0.9656470777143747,
-  xtick={-1.0,-0.8,...,0.8},
-  ytick={-0.4,-0.2,...,0.8},]
-  \clip(-1.0261085461981427,-0.45014188815180656) rectangle (0.8799969446433364,0.9656470777143747);
-  \draw[line width=0.8pt,color=ffqqqq,fill=ffqqqq,fill opacity=0.10000000149011612] plot[raw gnuplot, id=func1] function{set samples 100; set xrange [-0.7:0.4]; plot 7.0*x**(3.0)+5.0*x**(2.0)-0.3} -- (0.4,0.) -- (-0.7,0.) -- cycle;
-  \draw[line width=2.4pt,color=qqzzqq] plot[raw gnuplot, id=func0] function{set samples 100; set xrange [-0.9261085461981428:0.7799969446433365]; plot 7.0*x**(3.0)+5.0*x**(2.0)-0.3};
-  \begin{scriptsize}
-  \draw[color=qqzzqq] (-0.836110892770214,-1.1411817405388711) node {$f$};
-  \draw[color=xdxdff] (-0.6828869787154327,0.05702926736952031) node {$A$};
-  \draw[color=xdxdff] (0.4203252024789926,0.05702926736952031) node {$B$};
-  \end{scriptsize}
-  \end{axis}
+\definecolor{ffqqtt}{rgb}{1.,0.,0.2}
+\definecolor{ccqqqq}{rgb}{0.8,0.,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\begin{axis}[
+x=1.5cm,y=1.5cm,
+axis lines=middle,
+xmin=-1.656172905056168,
+xmax=2.1525547061790204,
+ymin=-1,
+ymax=3,
+xtick={0},
+ytick={0},]
+\clip(-1.656172905056168,-2.232475229950016) rectangle (2.1525547061790204,5.08508018061208);
+\draw[line width=0.8pt,color=ffqqtt,fill=ffqqtt,fill opacity=0.10000000149011612, smooth,samples=50,domain=-1.0:1.5] plot(\x,{\x^(4.0)-\x}) -- (1.5,0.) -- (-1.,0.) -- cycle;
+\draw[line width=2.8pt,color=ccqqqq,smooth,samples=100,domain=-1.656172905056168:2.1525547061790204] plot(\x,{(\x)^(4.0)-(\x)});
+\begin{scriptsize}
+\draw[color=ccqqqq] (1,3.5) node {$f$};
+\draw[color=ffqqtt] (0.7930088921948063,0.0017783687666894088) node {$A$};
+\draw [fill=xdxdff] (-1.,0.) circle (2.5pt);
+\draw[color=xdxdff] (-1.1213515738197308,0.6765529455603252) node {$a$};
+\draw [fill=xdxdff] (1.5,0.) circle (2.5pt);
+\draw[color=xdxdff] (1.6427250259349402,0.6015779925832545) node {$b$};
+\draw [fill=uuuuuu] (0.,0.) circle (2.0pt);
+\draw[color=uuuuuu] (0.10323932480575641,0.48161806781994154) node {$X_1$};
+\draw [fill=uuuuuu] (1.,0.) circle (2.0pt);
+\draw[color=uuuuuu] (1.0229320813244895,-0.5380412926682192) node {$X_2$};
+\end{scriptsize}
+\end{axis}
 \end{tikzpicture}
+(Achtung Fläche kann nicht richtig gezeichnet werden (GeoGebra ist schuld))
+\\
 \begin{Beispiel}
   $f(x)=x^2-2x^3;x\in \R$\\
   notwendige und hinreichende Bedingung für Nullstellen:$f(x)=0$\\
-  $\Leftrightarrow x^2(x-2)&=0\\
+  $\Leftrightarrow x^2(1-2x)&=0\\
   \stackrel{SdN}{\Leftrightarrow}
   \left\{ \begin{array}{rcl}
   x^2&=0\\
-  x-2&=0
+  1-2x&=0
   \end{array}\right\\
   \Leftrightarrow
   \left\{ \begin{array}{rcl}
   x_1&=0\\
-  x_2&=2
+  x_2&=\dfrac{1}{2}
   \end{array}\right\\
   $\\
   Also gilt:\\
-  $A_{-1}^{3} &= |\int_{-1}^0 x^3-2x^2 dx| + |\int_{0}^2 x^3-2x^2 dx| + |\int_{2}^3 x^3-2x^2 dx|\\
-  &= |\Big[\dfrac{1}{4}x^4-\dfrac{2}{3}x^3\Big]_{-1}^0| + |\Big[\dfrac{1}{4}x^4-\dfrac{2}{3}x^3\Big]_{0}^2| + |\Big[\dfrac{1}{4}x^4-\dfrac{2}{3}x^3\Big]_{2}^3|\\
-  &= |0-(\dfrac{1}{4}-\dfrac{2}{3})| + |4-\dfrac{8}{3}-0| + |\dfrac{81}{4}-54 - (4-\dfrac{8}{3})|\\
-  &= \dfrac {35}{6}$FE\\
-  (Also hoffentlich)
-
+  \begin{align*}
+    A_{-1}^{1} &= |\int_{-1}^0 x^2-2x^3 dx| + |\int_{0}^{\dfrac{1}{2}} x^2-2x^3 dx| + |\int_{\dfrac{1}{2}}^1 x^2-2x^3 dx|\\
+    &= |\Big[\dfrac{1}{3}x^3-\dfrac{1}{2}x^4\Big]_{-1}^0| + |\Big[\dfrac{1}{3}x^3-\dfrac{1}{2}x^4\Big]_{0}^{0.5}| + |\Big[\dfrac{1}{3}x^3-\dfrac{1}{2}x^4\Big]_{0.5}^1|\\
+    &= |0-(-\dfrac{1}{3}-\dfrac{1}{2})| + |\dfrac{1}{24}-\dfrac{1}{32}-0| + |\dfrac{1}{3}-\dfrac{1}{2}- (\dfrac{1}{24}-\dfrac{1}{32})|\\
+    &= 1 + \dfrac {1}{12} - \dfrac{1}{16}\\
+    &= \dfrac{49}{48} \text{  FE}
+\end{align*}
 \end{Beispiel}
 \begin{GTR-Tipp}
   Mit $Y_1 = f(x)$ und $Y_2 = abs(Y_1)$ bzw. $Y_2 = |Y_1|$ (zu finden in 'MATH'>'NUM' oder über Alpha-F2) lässt sich die Fläche berechnen über 2nd-CALC mit der Option Integral.\\
   Hierzu wählt man $Y_2$ aus und gibt $a$ und $b$ an.
 \end{GTR-Tipp}
+\subsection{Fläche zwischen zwei Funktionen}
+
+\subsection{Volumenangaben mittels Integralen}
+\begin{Definition}
+  Man betrachtet einen Körper, der durch zwei parallele Ebenen mit den Gleichungen $x_3 = a$ und $x_3 = b$ begrenzt wird.
+  Für alle $a\leq z \leq b$ nennt man $P_z$ die orthogonale Fläche zu $(O_z)$ mit der Seite $z$ und $S(z)$ die Fläche des
+  Schnitts des Körpers durch $P_z$. Ist $S$ stetig, so ist ist das Volumen $V$ des Körpers gegeben durch:
+  $$V=\int_a^b S(z)dz$$
+  Daraus folgt, dass ein Körper, der durch die Rotation der Kurve von $f$ um eine Achse entsteht, ein Volumen von
+  $$\int_a^b \pi f^2(z)dz$$
+  hat.\\
+  Tatsächlich ist die Fläche eines zu $(O_z)$ parallelen Querschnitts die der Scheibe mit Radius $f(z)$.
+\end{Definition}
+Unklar, ich weiß. (Ich habe es selbst noch nicht verstanden)
+\section{Uneigentliche Integrale}
+\begin{Definition}
+  Ist die Funktion $f$ auf $[a;+\infty)$ stetig und existiert der Grenzwert $\lim\limits_{Z \rightarrow \infty} \int_a^Z f(x)dx$,
+  so heißt dieser Grenzwert \emph{uneigentliches Integral} von $f$ über $[a;+\infty)$.\\
+  Schreibweise: $\int_a^{+\infty} f(x)dx$\\
+  Analog dazu spricht man von einem uneigentlichen Integral für $\int_{-\infty}^b f(x)dx$
+\end{Definition}
+\begin{Beispiel}
+  $f(x)= \dfrac{1}{\sqrt x}
+\end{Beispiel}

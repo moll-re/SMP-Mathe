@@ -1,7 +1,9 @@
 \chapter{Vektorielle Geometrie}
 
 
+
 \section{Vektoren}
+
     \begin{Definition}
         Ein Vektor ist Element eines Vektorraums.
     \end{Definition}\\
@@ -9,12 +11,15 @@
     mathematische Korrektheit, die guten alten Zeiten...\\
     Tatsächlich kann ein Vektor in den meisten Fällen als Verschiebung bezeichnet werden, \textbf{nicht aber als Pfeil oder Strich!}\\
 
+
     \subsection{Besondere Vektoren}
+
 
         \subsubsection{Der Ortsvektor}
 
             \paragraph{} Der Vektor von $O$ auf den Punkt $P$, geschrieben als $\vv{OP}$ oder $\vv{p}$.\\
             \paragraph{} Hat $P$ die Koordinaten $(P_1|P_2|...|P_n)$, so besitzt $\vv{p}$ die Darstellung $\left(\begin{array}{c} P_1 \\ P_2 \\ ...\\P_n\end{array}\right)$.
+
 
         \subsubsection{Der Nullvektor}
 
@@ -24,10 +29,12 @@
                 Er ist somit das neutrale Element der Vektoraddition.
             \end{Bemerkung}
 
+
         \subsubsection{Der Verbindungsvektor}
 
             \paragraph{} Der Vektor $\vv{AB}$ ist der Vektor, der den Punkt $A$ auf den Punkt $B$ abbildet. Er ist definiert als:\\ $\vv{AB}=\vv{OB}-\vv{OA}$,
              woraus folgt, dass: \begin{center} $\vv{AB} = \left(\begin{array}{c} b_1 - a_1 \\ b_2 - a_2 \\ ... \\ b_n - a_n \end{array}\right)$. \end{center}
+
 
         \subsubsection{Der Gegenvektor}
 
@@ -37,6 +44,7 @@
                 \\
                 Er ist somit das inverse Element der Vektoraddition.
             \end{Bemerkung}
+
 
     \subsubsection{Der Einheitsvektor}
 
@@ -67,17 +75,22 @@
             \paragraph{} Ein Vektor, dessen Norm 1 beträgt wird als normiert oder Einheitsvektor bezeichnet. Für jeden Vektor $\vv{v}\in\R^{3}$ existiert
              ein Einheitsvektor $\vv{v^{*}}$ , der folgendermaßen definiert wird: $\vv{v^{*}}=\dfrac{1}{\text{|}\vv{v}\text{|}}*\vv{v}$.
 
+
+
 \section{Basen und Erzeugendensystem}
 
     \paragraph{} Eine endliche Anzahl von Vektoren $\vv{a_1},\vv{a_2},...,\vv{a_n}\in V$ heißt Erzeugendensystem, wenn sich \texbf{jeder} Vektor $\vv{v}\in V$
      als Linearkombination dieser Vektoren schreiben lässt. Um ein Erzeugendensystem zu bilden benötigt man mindestens die Anzahl Vektoren, die der Anzahl
       von Dimensionen von $\vv{v}$ entspricht. Wenn man \textbf{genau} diese Anzahl besitzt, spricht man von einer Basis.
 
+
     \subsection{Besondere Basen}
+
 
         \subsubsection{Orthogonalbasis}
 
             \paragraph{} Sind die Vektoren der Basis paarweise orthogonal zueinander, so spricht man von einer \textbf{Orthogonalbasis}.
+
 
         \subsubsection{Orthonormalbasis}
 
@@ -86,6 +99,7 @@
             \vv{e_2}=\left(\begin{array}{c}{0\\1\\0}\end{array}\right),\vv{e_3}=\left(\begin{array}{c}{0\\0\\1}\end{array}\right)$. Sie wird als \textbf{Standardbasis}
             des $\R^3$ bezeichnet. Vektoren wie $\vv{v}=\left(\begin{array}{c}{2\\3\\8}\end{array}\right)$ lassen sich als eine Linearkombination der drei
             Vektoren der Standardbasis darstellen: $\vv{v}=2\cdot\vv{e_1}+3\cdot\vv{e_2}+8\cdot\vv{e_3}$.
+
 
     \subsection{Basistransformation}
 
@@ -139,12 +153,14 @@
         \end{Beispiel}
 
 
+
 \section{Winkel zwischen Vektoren}
 
     \begin{Definition}
         \paragraph{} Unter einem Winkel zwischen zwei Vektoren versteht man den Winkel, der ensteht, wenn man beide Vektoren an einen \textbf{gemeinsamen Startpunkt}
         verschiebt ohne dabei ihre Ausrichtung zu verändern.
     \end{Definition}
+
 
     \subsection{Orientierte Winkel}
 
@@ -199,6 +215,7 @@
             Dies bedeutet, dass man nur Winkel zwischen $0°$ und $180°$ erhält, und das in beide \glqq Richtungen\grqq, als im mathematisch positiven und negativen Sinn.
             Diese Einschränkung kennzeichnet man mit dem Ausdruck \glqq \textbf{modulo $2\pi$}\grqq.
         \end{minipage}
+
 
     \subsection{Rechnungen mit Winkeln}
 
@@ -318,6 +335,8 @@
             \end{tikzpicture}
         \end{minipage}
 
+
+
 \section{Linearkombination}
 
     \paragraph{} Vektoren lassen sich allgemein mit der additiven Verknüpfung des Vektorraums verknüpfen.
@@ -339,6 +358,8 @@
         \\
         Eine linear abhängige Familie \textbf{aus genau drei} Vektoren dagegen nennt man komplanar.
     \end{Bemerkung}
+
+
 
 \section{Skalarprodukt}
 
@@ -374,8 +395,11 @@
         Aus dieser Gleichung folgt: $\cos(\alpha)=\dfrac{\vv{v}\odot\vv{u}}{|\vv{v}|\cdot|\vv{u}|}$.
     \end{Bemerkung}
 
+
+
 \section{Kreuzprodukt}
 
+<<<<<<< HEAD
     \paragraph{} Das Kreuzprodukt ist das zweite nützliche Werkzeug welches in der Vektorgeometrie genutzt wird. Es dient hauptsächlich zur einfachen Berechnung
     eines zu zwei \textbf{nicht kollinearen} Vektoren $\vv{u}$ und $\vv{v}$ orthogonalen Vektors $\vv{i}$. Seine Formel lautet wie folgt:
     $\vv{i} = \vv{u} \times \vv{v} = \left(\begin{array}{c} u_{\textcolor{red}{2}} \cdot v_{\textcolor{orange}{3}} - u_{\textcolor{red}{3}} \cdot v_{\textcolor{orange}{2}} \\ u_{\textcolor{red}{3}} \cdot v_{\textcolor{orange}{1}} - u_{\textcolor{red}{1}} \cdot v_{\textcolor{orange}{3}} \\ u_{\textcolor{red}{1}} \cdot v_{\textcolor{orange}{2}} - u_{\textcolor{red}{2}} \cdot v_{\textcolor{orange}{1}} \end{array}\right)$.
@@ -384,6 +408,8 @@
     \begin{Beweis}
 
     \end{Beweis}
+=======
+>>>>>>> cef224b0f24ab8d8aa26bd670887478f46c338af
 
 
 \section{Geraden}
@@ -424,6 +450,7 @@
                 \draw [line width=0.8pt] (6,2.65) node {$g$};
             \end{tikzpicture}
         \end{center}
+
 
     \subsection{Lagebeziehungen zwischen Geraden}
 
@@ -561,6 +588,7 @@
             \end{tikzpicture}
         \end{center}
 
+
     \subsection{Abstand zu einem Punkt}
 
         \begin{Definition}
@@ -673,6 +701,7 @@
             $d(g,P) = \dfrac{|\textcolor{red}{\vv{u}}\times\vv{\textcolor{blue}{Q}P}|}{|\textcolor{red}{\vv{u}}|}$.
         \end{Bemerkung}
 
+
     \subsection{Abstand zweier Geraden}
 
         \paragraph{} Zwei nicht sich schneidende oder identische Geraden haben einen \textbf{eindeutig definierten Minimalabstand}. Bei zwei parallelen
@@ -710,6 +739,7 @@
 
 
 \section{Ebenen}
+
 
     \subsection{Darstellungen}
 
@@ -860,6 +890,7 @@
             \item Siehe \ref{paramtonorm} (gleiches Prinzip) $\land \text{ Skalarprodukt \glqq ausmultiplizieren\grqq}$
         \end{enumerate}
 
+
     \subsection{Lagebeziehungen zwischen Ebenen und Geraden}
 
         \paragraph{} Ebenen und Geraden können im Gegensatz zu zwei Geraden nur eine von den drei folgenden Beziehungen
@@ -968,6 +999,7 @@
             \end{tikzpicture}
         \end{center}
 
+
     \subsection{Lagebeziehungen zwischen Ebenen}
 
         \paragraph{} Ebenen teilen bezüglich ihrer Lage zueinander eine Eigenschaft mit einer Ebene und einer Geraden.
@@ -1070,7 +1102,99 @@
 
     \subsection{Winkel zwischen Ebenen (und Geraden)}
 
+        \paragraph{} Die einzige bisher angesprochene Möglichkeit den Winkel zwischen zwei geometrischen Formen zu
+        ermitteln macht sich der Definition des Skalarprodukts zunutze. Wie bereits erläutert gilt:
+        $\cos(\alpha)=\dfrac{\vv{v}\odot\vv{u}}{|\vv{v}|\cdot|\vv{u}|}$. Hierbei soll erneut hervorgehoben werden, dass
+        der Winkel der "kleinere"  der beiden möglichen ist. Den anderen erhält man in Abhängigkeit des ersten.
+        Daraus lässt sich ableiten wie zwei Geraden oder Ebenen oder auch eine Gerade und eine Ebene zueinander stehen:
+        \begin{enumerate}[1)]
+            \item Geraden: $\cos(\alpha) = \dfrac{\textcolor{red}{\vv{u_1}} \odot \textcolor{red}{\vv{u_2}}} {|\textcolor{red}{\vv{u_1}}| \cdot |\textcolor{red}{\vv{u_2}}|}$
+            \item Ebenen: $\cos(\alpha) = \dfrac{\textcolor{orange}{\vv{n_1}} \odot \textcolor{orange}{\vv{n_2}}} {|\textcolor{orange}{\vv{n_1}}| \cdot |\textcolor{orange}{\vv{n_2}}|}$
+            \item Gerade / Ebene: $\sin(\alpha) = \dfrac{\textcolor{red}{\vv{u}} \odot \textcolor{orange}{\vv{n}}} {|\textcolor{red}{\vv{u}}| \cdot |\textcolor{orange}{\vv{n}}|}$
+        \end{enumerate}
+        \begin{center}
+            \definecolor{qqwuqq}{rgb}{0,0.4,0}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw (-2,7) node {1)};
+                \draw [line width=0.8pt] (-0.25,0.25) node {O};
+                \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.4] (4,2.42) -- (4.7,2.42) arc (0:90:0.7) -- cycle;
+                \draw (4.3,2.72) node {$\alpha$};
+                \draw [->,line width=0.8pt,color=blue] (0,0,0) -- (3,4,4);
+                \draw [->,line width=0.8pt,color=red] (3,4,4) -- (5,2,-1);
+                \draw [->,line width=0.8pt,color=blue] (0,0,0) -- (4,0,0);
+                \draw [->,line width=0.8pt,color=red] (4,0,0) -- (4,5,0);
+                \draw [,line width=0.8pt,color=red,dashed] (1,6,9) -- (3,4,4);
+                \draw [,line width=0.8pt,color=red,dashed] (5,2,-1) -- (7,0,-6);
+                \draw [,line width=0.8pt,color=red,dashed] (4,-3,0) -- (4,0,0);
+                \draw [,line width=0.8pt,color=red,dashed] (4,5,0) -- (4,8,0);
+                \draw [line width=0.8pt,color=blue] (0.5,1.5) node {$\vv{q_1}$};
+                \draw [line width=0.8pt,color=blue] (2,0.3,0) node {$\vv{q_2}$};
+                \draw [line width=0.8pt,color=red] (3.5,2.75) node {$\vv{u_1}$};
+                \draw [line width=0.8pt,color=red] (4.3,1.8,0) node {$\vv{u_2}$};
+                \draw [line width=0.8pt] (6,2.65) node {$g$};
+                \draw [line width=0.8pt] (4.2,6,0) node {$h$};
+            \end{tikzpicture}
+        \end{center}
+        \\
+        \begin{center}
+            \definecolor{qqwuqq}{rgb}{0,0.4,0}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw (-5.5,4.5) node {2)};
+                \draw[color=red,fill=red,opacity=0.5] (-4,0,4) -- (4,0,4) -- (4,0,-4) -- (-4,0,-4) -- cycle;
+                \draw[color=orange,fill=orange,opacity=0.5] (-4,3,4) -- (-4,3,-4) -- (4,-3,-4) -- (4,-3,4) -- cycle;
+                \draw[->,line width=0.8,color=red] (0,0,0) -- (0,4,0);
+                \draw[->,line width=0.8,color=orange] (0,0,0) -- (3,4,0);
+                \draw[line width=0.8] (0,0,-5) -- (0,0,5);
+                \draw[line width=0.8,dashed] (0,0,-9) -- (0,0,0-5);
+                \draw[line width=0.8,dashed] (0,0,5) -- (0,0,9);
+                \draw[line width=0.8,color=qqwuqq,fill=qqwuqq,fill opacity=0.4] (0,0,0) -- (0.65,0.9,0) arc (0:105:0.5) -- cycle;
+                \draw[line width=0.8,color=qqwuqq,fill=qqwuqq,fill opacity=0.4] (0,0,0) -- (0.9,-0.65,0) arc (320:400:0.5) -- cycle;
+                \draw[line width=0.8,color=red] (0.3,2,0) node {$\vv{n_1}$};
+                \draw[line width=0.8,color=orange] (1.9,2.1,0) node {$\vv{n_2}$};
+                \draw[line width=0.8] (3.7,0,-4.6) node {$E_1$};
+                \draw[line width=0.8] (-1.6,4.3,0) node {$E_2$};
+                \draw[line width=0.8] (0.25,0,7) node {$g$};
+                \draw[line width=0.8] (1.3,-1.8,0) node {$O$};
+                \draw (0.25,0.8) node {$\alpha$};
+                \draw (0.6,-0.2) node {$\alpha$};
+            \end{tikzpicture}
+        \end{center}
+        \\
+        \begin{center}
+            \definecolor{qqwuqq}{rgb}{0,0.4,0}
+            \definecolor{qqwuuq}{rgb}{0,0,0.4}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw (-6,5.5) node {3)};
+                \draw[->,line width=0.8,color=blue] (1,-2,0) -- (0,0,0);
+                \draw[line width=0.8,color=blue] (0.2,-1.1) node {$\vv{q}$};
+                \draw[line width=0.8,color=red,dashed] (-2,3,0) -- (-4,6,0);
+                \draw[color=red,fill=red,opacity=0.5]  (-4,0,4) -- (4,0,4) -- (4,0,-4) -- (-4,0,-4) -- cycle;
+                \draw[->,line width=0.8,color=red] (0,0,0) -- (-2,3,0);
+                \draw[line width=0.8,color=red,dashed] (2,-3,0) -- (0,0,0);
+                \draw[->,line width=0.8,color=red] (0,0,0) -- (0,4,0);
+                \draw[->,line width=0.8,color=black,dashed] (-2,0,0) -- (-2,4,0);
+                \draw[line width=0.8,color=qqwuqq,fill=qqwuqq,fill opacity=0.4] (0,0,0) -- (0,1.2,0) arc (90:140:0.8) -- cycle;
+                \draw[line width=0.8,color=qqwuuq,fill=qqwuuq,fill opacity=0.4] (0,0,0) -- (-0.65,0.95,0) arc (130:205:0.8) -- cycle;
+                \draw[line width=0.8,color=red] (-1.4,1.7) node {$\vv{u}$};
+                \draw[line width=0.8] (-3.9,5.4,0) node {$g$};
+                \draw[line width=0.8,color=red] (0.3,2,0) node {$\vv{n}$};
+                \draw[line width=0.8] (3.7,0,-4.6) node {$E$};
+                \draw[line width=0.8] (0.8,-2.4,0) node {$O$};
+                \draw[line width=0.8pt,color=black,fill=black,fill opacity=0.8] (0,0,0) circle (2pt);
+                \draw[line width=0.8] (0.3,0.2,0) node {$I$};
+                \draw (-0.2,0.7) node {$\beta$};
+                \draw (-0.55,0.3) node {$\alpha$};
+            \end{tikzpicture}
+        \end{center}
+
+
+
     \subsection{Abstand zu einem Punkt}
+
+        \paragraph{}
+
+        \underline{Hess'sche Normalenform}
+
 
 
 
