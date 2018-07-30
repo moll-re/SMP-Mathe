@@ -1191,10 +1191,45 @@
 
     \subsection{Abstand zu einem Punkt}
 
-        \paragraph{}
+        \paragraph{} Eine simple und intuitive Art den Abstand einer Ebene $E$ zu einem Punkt $P$ zu bestimmen, wäre eine Gerade
+        zu erstellen, welche durch $P$ geht und die als Richtungsvektor den Normalenvektor $E$s hat, da $\textcolor{red}{\vv{n}}$
+        per Definition orthogonal zu $E$ ist und somit ein anderer kollinearer Vektor den "schnellst möglichsten Weg zum Punkt"
+        darstellt. Anschließend müsste man den Schnittpunkt der Geraden und $E$ und die Norm des somit erhaltenen Vektors berechnen.
+        Es sticht einem schnell ins Auge, dass dies ein großer Aufwand ist. Tatsächlich gibt es einen für das Abitur zugelassenen
+        schnelleren Lösungsweg: die \textbf{Hess'sche Normalenform}.
+        \\
+        \begin{Definition}
+            \underline{Hess'sche Normalenform}:
+            \\ Die Hess'sche Normalenform ist eine besondere Normalenform einer Ebene, dadurch besonders, dass der Normalenvektor
+            normiert ist. Sie lässt sich wie folgt ableiten:
+            $E_h: \dfrac{\textcolor{red}{\vv{n}} \cdot [\vv{x} - \textcolor{blue}{\vv{q}}]}{|\textcolor{red}{\vv{n}}|} = 0$
+        \end{Definition}
+        \\
+        \\
+        \begin{center}
+            \definecolor{gree}{rgb}{0,0.4,0}
+            \definecolor{blu}{rgb}{0,0,0.4}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw[linewidth=0.1pt,color=red,fill=red,fill opacity=0.2] (-4,0,-4) -- (-4,0,4) -- (4,0,4) -- (4,0,-4) -- cycle;
 
-        \underline{Hess'sche Normalenform}
+                \draw[linewidth=0.8pt,color=black,fill=black,fill opacity=0.4] (2,0,-2) circle (2pt);
+                \draw[linewidth=0.8pt,color=black,fill=black,fill opacity=0.4] (2,2,-2) circle (2pt);
+                \draw[linewidth=0.8pt,color=black,fill=black,fill opacity=0.4] (-2,0,2) circle (2pt);
 
+                \draw[linewidth=0.8pt,color=gree] (2,0,-2) -- (2,2,-2);
+                \draw[->,linewidth=0.8pt,color=black] (-2,0,2) -- (2,2,-2);
+                \draw[->,linewidth=0.8pt,color=red] (-2,0,2) -- (-2,2.5,2);
+
+                \draw[linewidth=0.8pt,color=blu,fill=blu,fill opacity=0.2] (-2,0,2) -- (-1.2,1,2) arc (19.5:360:1) -- cycle;
+
+                \draw[linewidth=0.8pt,color=red] (-2.1,0.2,2.7) node {$R$};
+                \draw[linewidth=0.8pt,color=red] (-2.2,1.25,2) node {$\vv{n}$};
+                \draw[linewidth=0.8pt,color=gree] (2.2,1,-2) node {$d$};
+                \draw[linewidth=0.8pt,color=red] (2.6,0.2,-1.2) node {$F$};
+                \draw[linewidth=0.8pt,color=red] (2.3,2.15,-2) node {$P$};
+                \draw[linewidth=0.8pt,color=red] (3.7,0,-4.5) node {$E$};
+            \end{tikzpicture}
+        \end{center}
 
 
 
