@@ -1202,7 +1202,7 @@
             \underline{Hess'sche Normalenform}:
             \\ Die Hess'sche Normalenform ist eine besondere Normalenform einer Ebene, dadurch besonders, dass der Normalenvektor
             normiert ist. Sie lässt sich wie folgt ableiten:
-            $E_h: \dfrac{\textcolor{red}{\vv{n}} \cdot [\vv{x} - \textcolor{blue}{\vv{q}}]}{|\textcolor{red}{\vv{n}}|} = 0$
+            $E_h: \dfrac{\textcolor{red}{\vv{n}} \odot [\vv{x} - \textcolor{blue}{\vv{q}}]}{|\textcolor{red}{\vv{n}}|} = 0$
         \end{Definition}
         \\
         \\
@@ -1210,26 +1210,75 @@
             \definecolor{gree}{rgb}{0,0.4,0}
             \definecolor{blu}{rgb}{0,0,0.4}
             \begin{tikzpicture}[>=triangle 45]
+                \draw[->,linewidth=0.8pt,color=red] (-2,0,2) -- (-2,-2.5,2);
                 \draw[linewidth=0.1pt,color=red,fill=red,fill opacity=0.2] (-4,0,-4) -- (-4,0,4) -- (4,0,4) -- (4,0,-4) -- cycle;
+
+                \draw[linewidth=0.1pt,color=blu,fill=blu,fill opacity=0.2] (-2,0,2) -- (-1,0.65,2) arc (20:85:1.15) -- cycle;
+                \draw[linewidth=0.1pt,color=blu,fill=blu,fill opacity=0.2] (2,2,-2) -- (1,1.35,-2) arc (205:268:1.15) -- cycle;
+
+                \draw[linewidth=0.8pt,color=gree] (2,0,-2) -- (2,2,-2);
+                \draw[->,linewidth=0.8pt,color=black] (-2,0,2) -- (2,2,-2);
+                \draw[->,linewidth=0.8pt,color=red] (-2,0,2) -- (-2,2.5,2);
+                \draw[linewidth=0.8pt,color=black,dashed] (-2,0,2) -- (2,0,-2);
+
+                \draw[linewidth=0.8pt,color=gree] (2,0,-2) -- (2,-2,-2);
+                \draw[->,linewidth=0.8pt,color=black] (-2,0,2) -- (2,-2,-2);
+
+                \draw[linewidth=1pt] (-2,0.5,2) arc (90:180:0.5);
+                \draw[linewidth=1pt] (2,0.5,-2) arc (90:180:0.5);
+                \draw[linewidth=1pt] (-2.2,0.2,2) circle (0.5pt);
+                \draw[linewidth=1pt] (1.8,0.2,-2) circle (0.5pt);
 
                 \draw[linewidth=0.8pt,color=black,fill=black,fill opacity=0.4] (2,0,-2) circle (2pt);
                 \draw[linewidth=0.8pt,color=black,fill=black,fill opacity=0.4] (2,2,-2) circle (2pt);
                 \draw[linewidth=0.8pt,color=black,fill=black,fill opacity=0.4] (-2,0,2) circle (2pt);
 
-                \draw[linewidth=0.8pt,color=gree] (2,0,-2) -- (2,2,-2);
-                \draw[->,linewidth=0.8pt,color=black] (-2,0,2) -- (2,2,-2);
-                \draw[->,linewidth=0.8pt,color=red] (-2,0,2) -- (-2,2.5,2);
+                \draw[linewidth=0.8pt,color=black,fill=black,fill opacity=0.4] (2,-2,-2) circle (2pt);
 
-                \draw[linewidth=0.8pt,color=blu,fill=blu,fill opacity=0.2] (-2,0,2) -- (-1.2,1,2) arc (19.5:360:1) -- cycle;
-
-                \draw[linewidth=0.8pt,color=red] (-2.1,0.2,2.7) node {$R$};
-                \draw[linewidth=0.8pt,color=red] (-2.2,1.25,2) node {$\vv{n}$};
+                \draw[linewidth=0.8pt,color=blue] (-2.1,0.1,2.7) node {$Q$};
+                \draw[linewidth=0.8pt,color=red] (-2.25,1.25,2) node {$\vv{n}$};
+                \draw[linewidth=0.8pt,color=red] (-2.35,-1.25,2) node {$-\vv{n}$};
                 \draw[linewidth=0.8pt,color=gree] (2.2,1,-2) node {$d$};
+                \draw[linewidth=0.8pt,color=gree] (2.2,-1,-2) node {$d$};
                 \draw[linewidth=0.8pt,color=red] (2.6,0.2,-1.2) node {$F$};
                 \draw[linewidth=0.8pt,color=red] (2.3,2.15,-2) node {$P$};
+                \draw[linewidth=0.8pt,color=red] (2.3,-2.15,-2) node {$P$};
                 \draw[linewidth=0.8pt,color=red] (3.7,0,-4.5) node {$E$};
+                \draw[linewidth=0.8pt,color=blu] (-1.6,0.8,2) node {$\alpha$};
+                \draw[linewidth=0.8pt,color=blu] (1.6,1.25,-2) node {$\alpha$};
             \end{tikzpicture}
         \end{center}
+
+        \definecolor{gree}{rgb}{0,0.4,0}
+        \paragraph{} Anhand dieser Graphik lässt sich die Formel zur Berechnung des Abstands eines Punktes zu einer Ebene ablesen:
+        $\textcolor{gree}{d} = \dfrac{|\textcolor{red}{\vv{n}} \odot (\vv{p} - \textcolor{blue}{\vv{q}})|}{|\textcolor{red}{\vv{n}}|}$
+
+        \begin{Beweis}
+            \definecolor{gree}{rgb}{0,0.4,0}
+            \underline{$\vv{FP} = r \cdot \textcolor{red}{\vv{n}} ; r \in \R^{+}$}:
+            \\
+            \paragraph{} Nach Theoremen der Trigonometrie und der Definition des Skalarprodukts gilt:
+            \begin{align*}
+                \qquad \qquad cos(\alpha) &= \dfrac{\textcolor{gre}{d}}{|\vv{\textcolor{blue}{Q}P}|} \\
+                              cos(\alpha) &= \dfrac{\textcolor{red}{\vv{n}} \odot \vv{\textcolor{blue}{Q}P}}{|\textcolor{red}{\vv{n}}| \cdot |\vv{\textcolor{blue}{Q}P}|} \\
+            \end{align*}
+            \paragraph{} Daraus folgt:
+            \begin{align*}
+                \qquad \qquad \dfrac{\textcolor{gree}{d}}{|\vv{\textcolor{blue}{Q}P}|} &= \dfrac{\textcolor{red}{\vv{n}} \odot \vv{\textcolor{blue}{Q}P}}{|\textcolor{red}{\vv{n}}| \cdot |\vv{\textcolor{blue}{Q}P}|} \\
+                                                                                     d &= \dfrac{\textcolor{red}{\vv{n}} \odot \vv{\textcolor{blue}{Q}P}}{|\textcolor{red}{\vv{n}}|} \\
+                                                                                     d &= \dfrac{\textcolor{red}{\vv{n}} \odot (\vv{p} - \vv{\textcolor{blue}{q}})}{|\textcolor{red}{\vv{n}}|} \\
+            \end{align*}
+            \\
+            \underline{$\vv{FP} = r \cdot \textcolor{red}{\vv{n}} ; r \in \R^{-}$}:
+            \begin{align*}
+                \qquad \qquad \dfrac{\textcolor{gree}{d}}{|\vv{\textcolor{blue}{Q}P}|} &= \dfrac{-\textcolor{red}{\vv{n}} \odot \vv{\textcolor{blue}{Q}P}}{|-\textcolor{red}{\vv{n}}| \cdot |\vv{\textcolor{blue}{Q}P}|} \\
+                                                                                     d &= -\dfrac{\textcolor{red}{\vv{n}} \odot \vv{\textcolor{blue}{Q}P}}{|\textcolor{red}{\vv{n}}|} \\
+                                                                                     d &= -\dfrac{\textcolor{red}{\vv{n}} \odot (\vv{p} - \vv{\textcolor{blue}{q}})}{|\textcolor{red}{\vv{n}}|} \\
+            \end{align*}
+            \\
+            Somit lautet die gesuchte Formel: $\textcolor{gree}{d} = \dfrac{|\textcolor{red}{\vv{n}} \odot (\vv{p} - \textcolor{blue}{\vv{q}})|}{|\textcolor{red}{\vv{n}}|}$
+        \end{Beweis}
+
 
 
 
