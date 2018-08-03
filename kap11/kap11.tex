@@ -187,6 +187,46 @@ Abschnittweise Integration:
 \begin{Beweis}
   Es reicht, $m \leq f(t) \leq M$ als Ungleichung zwischen $a$ und $b$ zu integrieren.
 \end{Beweis}
+
+\begin{center}
+    \definecolor{lightblu}{rgb}{0,0,0.3}
+    \definecolor{blu}{rgb}{0,0.3,0.3}
+    \definecolor{lightgree}{rgb}{0,0.3,0}
+    \definecolor{gree}{rgb}{0.1,0.3,0}
+    \begin{tikzpicture}
+        \draw[gray,very thin] (-5,-5) grid (5,5);
+
+        \draw[->,line width=0.8pt] (-5.5,0) -- (5.5,0) node[below] {$x_1$};
+        \draw[->,line width=0.8pt] (0,-5.5) -- (0,5.5) node[right] {$x_2$};
+        \foreach  \x in {-5,...,-1,1,2,...,5}
+            \draw[line width=0.8pt] (\x,0.1) -- (\x,-0.1) node[below] {\x};
+        \foreach  \x in {-5,...,-1,1,2,...,5}
+            \draw[line width=0.8pt] (-0.1,\x) -- (0.1,\x) node[right] {\x};
+
+        \draw[line width=0.1pt,color=blu,fill=blu,fill opacity=0.3] (-2.5,0) -- (-2.5,3) -- (3.5,3) -- (3.5,0) -- cycle;
+        \draw[line width=0.1pt,color=gree,fill=gree,fill opacity=0.3] (-2.5,0) -- (-2.5,-4) -- (3.5,-4) -- (3.5,0) -- cycle;
+        \draw[line width=0.1pt,color=lightblu,fill=lightblu,fill opacity=0.3] (-2.5,0) -- (-2.5,-3.32) ..controls(-1.71,-3.25) ..(0,0) -- cycle;
+        \draw[line width=0.1pt,color=lightgree,fill=lightgree,fill opacity=0.3] (0,0) ..controls(1.8,2.7) ..(3.5,2.5) -- (3.5,0) -- cycle;
+
+        \draw[line width=1.5pt,color=red] (-5,-2) ..controls(-2,-4) ..(0,0);
+        \draw[line width=1.5pt,color=red] (0,0) ..controls(2,3) ..(5,2);
+
+        \draw[line width=1.5pt,color=blue] (-5,3) -- (5,3);
+        \draw[line width=1.5pt,color=blue] (-5,-4) -- (5,-4);
+
+        \draw[line width=1.2pt,color=orange] (-2.5,-3.32) -- (-2.5,0) node[above] {a};
+        \draw[line width=1.2pt,color=orange] (3.5,2.5) -- (3.5,0) node[below] {b};
+
+        \draw (-0.3,-0.3) node {$O$};
+        \draw[line width=0.8pt,color=lightblu] (-1.5,-1.3) node {$A$};
+        \draw[line width=0.8pt,color=lightgree] (2.3,1.2) node {$B$};
+
+        \draw[line width=0.8pt,color=red] (1,2) node {$K$};
+        \draw[line width=0.8pt,color=blue] (-3,3.3) node {$M$};
+        \draw[line width=0.8pt,color=blue] (3,-3.7) node {$m$};
+    \end{tikzpicture}
+\end{center}
+
 \begin{Bemerkung}
   Eine Konsequenz davon ist, dass falls $|f(t)|\leq M \; \forall t \in [a;b]$, dann gilt:
   $$|\int_a^b f(t)dt | \leq M(|b-a|)$$
@@ -541,6 +581,7 @@ ytick={0},]
         \draw[line width=1.5pt,color=red] (-4,0) ..controls(-1.8,3.8) ..(0,0);
         \draw[line width=7pt,color=white,dashed] (-4,0) ..controls(-1.8,-3.8) ..(0,0);
         % Repair the damage caused by the line above
+
         \draw[line width=0.8pt] (-4,0) -- (-3.85,0);
         \draw[line width=0.8pt] (0,-0.05) -- (0,-0.3);
 
