@@ -378,11 +378,11 @@
         \definecolor{qqqqtt}{rgb}{0,0,0.2}
         \definecolor{ududff}{rgb}{0.3,0.3,1}
         \begin{tikzpicture}[>=triangle 45]
-            \draw [line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (2,-1.5) -- (4,-1.5) arc (0:30:2) -- cycle;
-            \draw [->,line width=0.8pt,color=qqqqtt] (7.2,-1.5) -- (9,-1.5);
-            \draw [->,line width=0.8pt,color=qqqqtt] (2,-1.5) -- (7.2,1.5);
-            \draw [line width=0.8pt,color=qqqqtt,dashed] (7.2,1.5)-- (7.2,-1.5);
-            \draw [->,line width=0.8pt,color=ffqqqq] (2,-1.5) -- (7.2,-1.5);
+            \draw[line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (2,-1.5) -- (4,-1.5) arc (0:30:2) -- cycle;
+            \draw[->,line width=0.8pt,color=qqqqtt] (7.2,-1.5) -- (9,-1.5);
+            \draw[->,line width=0.8pt,color=qqqqtt] (2,-1.5) -- (7.2,1.5);
+            \draw[line width=0.8pt,color=qqqqtt,dashed] (7.2,1.5)-- (7.2,-1.5);
+            \draw[->,line width=0.8pt,color=ffqqqq] (2,-1.5) -- (7.2,-1.5);
             \draw[color=ududff] (1.8,-1.4) node {$O$};
             \draw[color=qqqqtt] (5.5,-1.8) node {$\vv{u}$};
             \draw[color=qqwuqq] (3.2,-1.15) node {$\alpha$};
@@ -399,17 +399,77 @@
 
 \section{Kreuzprodukt}
 
-<<<<<<< HEAD
     \paragraph{} Das Kreuzprodukt ist das zweite nützliche Werkzeug welches in der Vektorgeometrie genutzt wird. Es dient hauptsächlich zur einfachen Berechnung
     eines zu zwei \textbf{nicht kollinearen} Vektoren $\vv{u}$ und $\vv{v}$ orthogonalen Vektors $\vv{i}$. Seine Formel lautet wie folgt:
     $\vv{i} = \vv{u} \times \vv{v} = \left(\begin{array}{c} u_{\textcolor{red}{2}} \cdot v_{\textcolor{orange}{3}} - u_{\textcolor{red}{3}} \cdot v_{\textcolor{orange}{2}} \\ u_{\textcolor{red}{3}} \cdot v_{\textcolor{orange}{1}} - u_{\textcolor{red}{1}} \cdot v_{\textcolor{orange}{3}} \\ u_{\textcolor{red}{1}} \cdot v_{\textcolor{orange}{2}} - u_{\textcolor{red}{2}} \cdot v_{\textcolor{orange}{1}} \end{array}\right)$.
-    Zudem gilt: $|\vv{i}| = $
-
     \begin{Beweis}
-
+        Seien $\vv{u}$ und $\vv{v}$ beliebige zueinander? nicht kollineare Vektoren des $\R^3$. Ein zu beiden Vektoren orthogonaler Vektor ergibt sich durch: \\
+        \begin{align*}
+            \qquad &\left\{\begin{array}{rccl} \vv{u} \odot \vv{i} & = & 0 & (1) \\ \vv{v} \odot \vv{i} & = & 0 & (2)\end{array}\right. \\\\
+            \Leftrightarrow &\left\{\begin{array}{rccl} u_1i_1 + u_2i_2 + u_3i_3 & = & 0 & (1) \\ v_1i_1 + v_2i_2 + v_3i_3 & = & 0 & (2)\end{array}\right. \qquad \left| \text{ Sei } i_1 = t; t \in \R \\\\
+            \Leftrightarrow &\left\{\begin{array}{rccl} i_2 & = & \dfrac{-u_1t - u_3i_3}{u_2} & (1) \\ v_1t + v_2i_2 + v_3i_3 & = & 0 & (2)\end{array}\right. \\\\
+            \Leftrightarrow &\left\{\begin{array}{rccl} i_2 & = & \dfrac{-u_1t - u_3i_3}{u_2} & (1) \\ v_1t + v_2 \cdot \dfrac{-u_1t - u_3i_3}{u_2} + v_3i_3 & = & 0 & (2)\end{array}\right. \\\\
+            \Leftrightarrow &\left\{\begin{array}{rccl} i_2 & = & \dfrac{-u_1t - u_3i_3}{u_2} & (1) \\ \left(v_1 - \dfrac{v_2u_1}{u_2}\right) \cdot t + \left(v_3 - \dfrac{v_2u_3}{u_2}\right) \cdot i_3 & = & 0 & (2)\end{array}\right. \\\\
+            \Leftrightarrow &\left\{\begin{array}{rccl} i_2 & = & \dfrac{-u_1t - u_3i_3}{u_2} & (1) \\\\ i_3 & = & \dfrac{-\left(v_1 - \dfrac{v_2u_1}{u_2}\right)}{\left(v_3 - \dfrac{v_2u_3}{u_2}\right)} \cdot t & (2)\end{array}\right. \\\\
+            \Leftrightarrow &\left\{\begin{array}{rccl} i_2 & = & \dfrac{-u_1t - u_3i_3}{u_2} & (1) \\\\ i_3 & = & \dfrac{\dfrac{v_2u_1 - v_1u_2}{\cancel{u_2}}}{\dfrac{v_3u_2 - v_2u_3}{\cancel{u_2}}} \cdot t & (2)\end{array}\right. \\\\
+            \Leftrightarrow &\left\{\begin{array}{rccl} i_2 & = & \dfrac{-u_1t - u_3i_3}{u_2} & (1) \\\\ i_3 & = & \dfrac{v_2u_1 - v_1u_2}{v_3u_2 - v_2u_3} \cdot t & (2)\end{array}\right. \\\\
+            \Leftrightarrow &\left\{\begin{array}{rccl} i_2 & = & \dfrac{-u_1t - u_3 \cdot \dfrac{v_2u_1 - v_1u_2}{v_3u_2 - v_2u_3} \cdot t}{u_2} & (1) \\\\ i_3 & = & \dfrac{v_2u_1 - v_1u_2}{v_3u_2 - v_2u_3} \cdot t & (2)\end{array}\right. \\\\
+            \Leftrightarrow &\left\{\begin{array}{rccl} i_2 & = & \dfrac{\dfrac{u_3v_1u_2 - u_3v_2u_1 + u_1v_2u_3t - u_1v_3u_2t}{v_3u_2 - v_2u_3} \cdot t}{u_2} & (1) \\\\ i_3 & = & \dfrac{v_2u_1 - v_1u_2}{v_3u_2 - v_2u_3} \cdot t & (2)\end{array}\right. \\\\
+            \Leftrightarrow &\left\{\begin{array}{rccl} i_2 & = & \dfrac{u_3v_1u_2 - u_3v_2u_1 + u_1v_2u_3t - u_1v_3u_2t}{u_2v_3u_2 - u_2v_2u_3} \cdot t & (1) \\\\ i_3 & = & \dfrac{v_2u_1 - v_1u_2}{v_3u_2 - v_2u_3} \cdot t & (2)\end{array}\right. \\\\
+        \end{align*}
     \end{Beweis}
-=======
->>>>>>> cef224b0f24ab8d8aa26bd670887478f46c338af
+    Zudem gilt:
+    \begin{align*}
+        \qquad \qquad \qquad |\vv{i}| &= |\vv{u}| \cdot (\sin(\alpha) \cdot |\vv{v}|) \\
+                                      &= |\vv{u}| \cdot \left(\sin\left(\cos^{-1}\left(\dfrac{\vv{u} \odot \vv{v}}{|\vv{u}| \cdot |\vv{v}|}\right)\right) \cdot |\vv{v}|\right) \\
+    \end{align*}
+    \paragraph{} Einfacher gesagt ist der Betrag des Vektors $\vv{i}$ gleich der Fläche des Parallelogramms, welches die zwei Vektoren $\vv{u}$ und $\vv{v}$
+    aufspannen. Um diese doch recht verwirrende Erklärung etwas zu verdeutlichen folgt eine visuelle Darstellung:
+    \\
+    \\
+    \\
+    \definecolor{qqwuqq}{rgb}{0,0.4,0}
+    \definecolor{qqqqtt}{rgb}{0,0,0.2}
+    \definecolor{ududff}{rgb}{0.3,0.3,1}
+    \begin{tikzpicture}[>=triangle 45]
+        \draw[line width=0.8pt,color=orange,fill=orange,fill opacity=0.5] (2,-1.5) -- (7.2,1.5) -- (14.2,1.5) -- (9,-1.5) -- cycle;
+        \draw[line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (2,-1.5) -- (4,-1.5) arc (0:30:2) -- cycle;
+        \draw[->,line width=0.8pt,color=qqqqtt] (2,-1.5) -- (9,-1.5);
+        \draw[->,line width=0.8pt,color=qqqqtt] (2,-1.5) -- (7.2,1.5);
+        \draw[->,line width=0.8pt,color=qqqqtt,dashed] (7.2,1.5) -- (14.2,1.5);
+        \draw[->,line width=0.8pt,color=qqqqtt,dashed] (9,-1.5) -- (14.2,1.5);
+        \draw[line width=0.8pt,color=red,dashed] (7.2,1.5)-- (7.2,-1.5);
+        \draw[line width=0.8pt,color=orange,fill=orange,fill opacity=0.5] (0.3,2.3) -- (3,2.3) -- (3,1.1) -- (0.3,1.1) -- cycle;
+        \draw[color=ududff] (1.8,-1.4) node {$O$};
+        \draw[color=qqqqtt] (5.5,-1.8) node {$\vv{u}$};
+        \draw[color=qqqqtt] (10.6,1.8) node {$\vv{u}$};
+        \draw[color=qqwuqq] (3.2,-1.15) node {$\alpha$};
+        \draw[color=qqqqtt] (4.6,0.25) node {$\vv{v}$};
+        \draw[color=qqqqtt,dashed] (11.6,-0.3) node {$\vv{v}$};
+        \draw[color=red] (8.4,0) node {$\sin(\alpha) \cdot |\vv{v}|$};
+        \draw[color=black] (-0.3,1.7) node {$|\vv{i}| = $};
+    \end{tikzpicture}
+    \begin{Beweis}
+        \begin{align*}
+            |\vv{u}| \cdot (sin(\alpha) \cdot |\vv{v}|) &= \sqrt{(|\vv{u}|)^2 \cdot (|\vv{v}|)^2} \cdot \sin(\alpha) \\
+                                                        &= \sqrt{(|\vv{u}|)^2 \cdot (|\vv{v}|)^2 \cdot \textcolor{red}{(1 - \cos^2(\alpha))}} \\
+                                                        &= \sqrt{(\vv{u})^2 \cdot (\vv{v})^2 \cdot (1 - \cos^2(\alpha))} \\
+                                                        &= \sqrt{(\vv{u})^2 \cdot (\vv{v})^2 - (\vv{u})^2 \cdot (\vv{v})^2 \cdot \cos^2(\alpha)} \\
+                                                        &= \sqrt{\vv{u} \odot \vv{u} \cdot \vv{v} \odot \vv{v} - (|\vv{u}|)^2 \cdot (|\vv{v}|)^2 \cdot \cos^2(\alpha)} \\
+                                                        &= \sqrt{\vv{u} \odot \vv{u} \cdot \vv{v} \odot \vv{v} - |\vv{u}| \cdot |\vv{v}| \cdot \cos(\alpha) \cdot |\vv{u}| \cdot |\vv{v}| \cdot \cos(\alpha)} \\
+                                                        &= \sqrt{\vv{u} \odot \vv{u} \cdot \vv{v} \odot \vv{v} - \vv{u} \odot \vv{v} \cdot \vv{u} \odot \vv{v}} \\
+                                                        &= \sqrt{(u_1^2 + u_2^2 + u_3^2) \cdot (v_1^2 + v_2^2 + v_3^2) - (u_1v_1 + u_2v_2 + u_3v_3)^2} \\
+                                                        &= \sqrt{(\cancel{u_1^2v_1^2} + u_1^2v_2^2 + u_1^2v_3^2 + u_2^2v_1^2 + \cancel{u_2^2v_2^2} + u_2^2v_3^2 + u_3^2v_1^2 + u_3^2v_2^2} \\
+                                                        & \quad \overline{+\text{ }\cancel{u_3^2v_3^2}) - (\cancel{u_1^2v_1^2} + u_1v_1u_2v_2 + u_1v_1u_3v_3 + u_2v_2u_1v_1 + \cancel{u_2^2v_2^2}} \\
+                                                        & \quad \overline{+\text{ }u_2v_2u_3v_3 + u_3v_3u_1v_1 + u_3v_3u_2v_2 + \cancel{u_3^2v_3^2}} \\
+                                                        &= \sqrt{u_1^2v_2^2 + u_1^2v_3^2 + u_2^2v_1^2 + u_2^2v_3^2 + u_3^2v_1^2 + u_3^2v_2^2} \\
+                                                        & \quad \overline{+\text{ } - (2u_1v_1u_2v_2 + 2u_1v_1u_3v_3 + 2u_2v_2u_3v_3)} \\
+                                                        &= \sqrt{u_1^2v_2^2 - 2u_1v_1u_2v_2 + u_2^2v_1^2 + u_1^2v_3^2 - 2u_1v_1u_3v_3 + u_3^2v_1^2 + u_2^2v_3^2 - 2u_2v_2u_3v_3 + u_3^2v_2^2} \\
+                                                        &= \sqrt{(u_1v_2 - u_2v_1)^2 + (u_1v_3 - u_3v_1)^2 + (u_2v_3 - u_3v_2)^2} \\
+                                                        &= \left|\left(\begin{array}{c} u_2v_3 - u_3v_2 \\ u_3v_1 - u_1v_3 \\ u_1v_2 - u_2v_1 \end{array}\right)\right| \qquad \qquad \text{(unter anderem, aber auch)} \\
+                                                        &= |\vv{i}|
+        \end{align*}
+    \end{Beweis}
 
 
 \section{Geraden}
