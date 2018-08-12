@@ -88,8 +88,8 @@ Eine mögliche Umsetung in Python wäre:\\
 Es handelt sich hierbei um eine vereinfachte Version des Newton-Rhapson Verfahrens, da es zur Berechnung einer Näherung der Quadratwurzel einer reellen Zahl $a>0$￼ dient.\\
 Man erhält das gewünschte Ergebnis durch die Berechnung der Nullstelle einer Funktion $f(x)=x^{2}-a$. Es gilt also: $f'(x)=2x$.\\
 Durch die Verwendung des Newton-Rhapson Verfahrens erhält man die Iterationsvorschrift:\\
-￼$x_{n+1}=x_{n}-\dfrac{f(x_{n})}{f'(x_{n}}$
-$\Leftrightarrow x_{n+1}=x_{n}-\dfrac{x_{n}^{2}-a}{2x_{n}}=\dfrac{x_{n}^{2}+a}{2x_{n}}=\dfrac{1}{2}(x_{n}+\dfrac{a}{x_{n}})$\\
+￼$x_{n+1}=x_{n}-\dfrac{f(x_{n})}{f'(x_{n})}$
+$\Leftrightarrow x_{n+1}=x_{n}-\dfrac{x_{n}^{2}-a}{2x_{n}}=\dfrac{x_{n}^{2}+a}{2x_{n}}=\dfrac{1}{2}\left(x_{n}+\dfrac{a}{x_{n}}\right)$\\
 Als kluger, ungefähr zutreffender Startwert gilt $x_0=\dfrac{a+1}{2}$\\
 Eine mögliche Umsetzung in Python wäre:\\
 
