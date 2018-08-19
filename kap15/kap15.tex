@@ -182,21 +182,83 @@ et, avec $Q$ (charge totale) et $S$ (surface des armatures)
 \end{Definition}
 
 
-<<<<<<< HEAD
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-=======
 \subsection{Le champ magnétique}
->>>>>>> e4627b9d9ea8f6edc26bdc8366a71a7f8855da2c
+
+\begin{Definition}
+
+\textbf{Dans une bobine:} Soit $B_{i}$ l'intensité du champ magnétique, $I$ l'intensité du courant, $N$ le nombre de spires (jointives) et $l$ la longueur de la bobine,
+
+\begin{tikzpicture}
+    \draw (0,0) node {};
+    \draw (7.85,0) node {$B_{i}=\mu_{0}\cdot\dfrac{N\cdotI}{l}}$};
+    \draw[line width=0.4pt] (6.75,-0.05) -- (5.9,-0.45) node[color=blue,left] {$T$};
+    \draw[line width=0.4pt] (8.7,-0.3) -- (9.7,-0.7) node[color=blue,right] {$m$};
+    \draw[line width=0.4pt] (7.7,-0.3) -- (6.7,-1) node[color=betterPurple,left] {$S.I.$};
+\end{tikzpicture}
+
+avec la perméabilité du vide
+$$\mu_{0}=4\pi\cdot10^{-7} $$\\
+On obtient deux bobines de Helmholz quand $d=R$; Le champ est donc uniforme
+
+\end{Definition}
+
+\section{Mouvement, vitesse et accélération d'un systeme physique}
+
+\begin{Definition}
+
+Dans la \texfbf{base de Frenet:} avec $a_{\tau}$ l'accélération tangentielle et $a_{\eta}$ l'accélération normale et $\rho$ le rayon de courbure,
+
+\begin{tikzpicture}
+    \draw (0,0) node {};
+    \draw (7.85,0) node {$a_{\tau}=\dfrac{dV}{dt} \qquad \text{et} \qquad a_{\eta}=\dfrac{v^2}{\rho}$};
+    \draw[line width=0.4pt] (10,-0.3) -- (11,-0.7) node[color=blue,right] {$m$};
+\end{tikzpicture}
+
+$$a=\sqrt{{a_{\tau}}^2 + {a_{\eta}}^2}$$\\
+
+Voici les trois formules magiques pour un mouvement rectiligne uniformément varié:
+$$a_{x}=cste $$
+$$v_{x}=a_{x}\cdot t +v_{x0}$$
+$$x=\frac{1}{2}a_{x}\cdot t^2 + v_{x0} +x_{0} $$\\
+
+Dans un mouvement circulaire de rayon $R$, avec $\omega = \dfrac{\Delta \theta}{\Delta t}$ étant la vitesse angulaire,\\
+
+\begin{tikzpicture}
+    \draw (0,0) node {};
+    \draw (7.85,0) node {$V=\omega\cdot R$};
+    \draw[line width=0.4pt] (7.7,-0.3) -- (7.2,-0.6) node[color=blue,left] {rad/s};
+\end{tikzpicture}
+
+
+La fréquence $f$ est définie
+$$f(\text{Hz}) = \dfrac{1}{T(\text{s})} = \dfrac{\omega\, (\text{rad/s})}{2\pi(\text{rad})}$$
+\end{Definition}
+
+
+\section{Les 3 lois de Newton}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
