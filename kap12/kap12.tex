@@ -61,17 +61,28 @@ $e$ ist darstellbar bzw. ergibt sich durch:
 
 \\ Wir definieren eine Folge $(e_{n})n\in\N$ durch $e_{n}=\left(1+\dfrac{1}{n}\right)^n$ und versuchen ihre Konvergenz zu beweisen.
 \begin{itemize}
-\item$\dfrac{e_{n+1}}{e_{n}}=\dfrac{{\left(1+\dfrac{1}{n+1}\right)}^{n+1}}{{\left(1+\dfrac{1}{n+1}\right)}^{n}}=\left(\dfrac{n(n+2)}{(n+1)^2}\right)^n\cdot\left(1+\dfrac{1}{n}\right)=\textcolor{green}{\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}}\cdot\textcolor{red}{\dfrac{n+1}{n}}$
+\item$\dfrac{e_{n+1}}{e_{n}}=\dfrac{{\left(1+\dfrac{1}{n+1}\right)}^{n+1}}{{\left(1+\dfrac{1}{n+1}\right)}^{n}}=\left(\dfrac{n(n+2)}{(n+1)^2}\right)^n\cdot\left(1+\dfrac{1}{n}\right)=\textcolor{blue}{\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}}\cdot\textcolor{red}{\dfrac{n+1}{n}}$
 \item Die Umformung ermöglicht uns auf den Term ${\left(1-\dfrac{1}{(n+1)^2}}\right)^{n+1}$ die Ungleichung von Bernoulli anzuwenden. Diese besagt Folgendes: $(1+x)^n>1+nx$ für $n\geq2$ und $x>-1$\\
-$\Rightarrow\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}>1+(n+1)\cdot\left(-\dfrac{1}{(n+1)^2}\right)=1-\dfrac{1}{n+1}=\dfrac{n}{n+1}$
+$\Rightarrow\textcolor{blue}{\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}>}1+(n+1)\cdot\left(-\dfrac{1}{(n+1)^2}\right)=1-\dfrac{1}{n+1}=\textcolor{blue}{\dfrac{n}{n+1}}$
 \item Dies kann man an den ersten Ausdruck anwenden:\\
-$\Rightarrow\dfrac{e_{n+1}}{e_{n}}=\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}\cdot\dfrac{n+1}{n}\textcolor{green}{>\dfrac{n}{n+1}}\cdot\textcolor{red}{\dfrac{n+1}{n}}=1$\\\\
-\textbf{$\Rightarrow e_{n}$ ist streng monoton steigend}
+$\Rightarrow\dfrac{e_{n+1}}{e_{n}}=\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}\cdot\dfrac{n+1}{n}\textcolor{blue}{>\dfrac{n}{n+1}}\cdot\textcolor{red}{\dfrac{n+1}{n}}=1$\\\\
+\textbf{$\Leftrightarrow e_{n}$ ist streng monoton steigend}
 \end{itemize}
-Sei eine Folge $f_{n}$ mit $f_{n}=\left(1+\dfrac{1}{n}\right)^{n+2}$, deren Monotonieverhalten wir untersuhen wollen.
+Sei eine Folge $f_{n}$ mit $f_{n}=\left(1+\dfrac{1}{n}\right)^{n+2}$, deren Monotonieverhalten wir untersuhen wollen.\\
+Dazu formen wir den Term so um, dass die Bernoulli-Ungleichung angewandt werden kann.
 \begin{itemize}
-\item$\dfrac{f_{n}}{f_{n+1}}=\dfrac{\left(1+\dfrac{1}{n}\right)^{n+1}}{\left(1+\dfrac{1}{n}\right)^{n+2}}=\left(\dfrac{1+\dfrac{1}{n}}{1+\dfrac{1}{n+1}}\right)^{n+2}\cdot\dfrac{1}{1+\dfrac{1}{n}}=\left(\dfrac{\dfrac{n+1}{n}}{\dfrac{n+2}{n+1}}\right)\cdot\dfrac{n}{n+1}$
+\item$\dfrac{f_{n}}{f_{n+1}}=\dfrac{\left(1+\dfrac{1}{n}\right)^{n+1}}{\left(1+\dfrac{1}{n}\right)^{n+2}}=\left(\dfrac{1+\dfrac{1}{n}}{1+\dfrac{1}{n+1}}\right)^{n+2}\cdot\dfrac{1}{1+\dfrac{1}{n}}=\left(\dfrac{\dfrac{n+1}{n}}{\dfrac{n+2}{n+1}}\right)\cdot\dfrac{n}{n+1}=\left(\dfrac{(n+1)^2}{n(n+2)}\right)^{n+2}\cdot\dfrac{n}{n+1}\\=\left(\dfrac{n^2+2n+1}{n^2+2n}\right)^{n+2}\cdot\dfrac{n}{n+1}=\textcolor{blue}{\left(1+\dfrac{1}{n(n+2)}\right)^{n+2}}\cdot\textcolor{red}{\dfrac{n}{n+1}}$
+\item Bernoulli: $(1+x)^n>1+nx$ für $n\geq2$ und $x>-1$\\
+$\Rightarrow \textcolor{blue}{\left(1+\dfrac{1}{n(n+2)}\right)^{n+2}>}1+(n+2)\cdot\dfrac{1}{n(n+2)}=\textcolor{blue}{\dfrac{n+1}{n}}$
+\item$\Rightarrow\dfrac{f_n}{f_{n+1}}=\left(1+\dfrac{1}{n(n+2)}\right)^{n+2}\cdot\dfrac{n}{n+1}>\textcolor{blue}{\dfrac{n+1}{n}}\cdot\textcolor{red}{\dfrac{n}{n+1}}=1$
+\item $\dfrac{f_n}{f_{n+1}}>1\Leftrightarrow\dfrac{f_{n+1}}{f_{n}}<1$\textbf{$\Leftrightarrow f_n$ ist streng monoton steigend}
 \end{itemize}
+Als Letztes zeigt man, dass $f_n$ zu $e_n$ eine obere Schranke ist:\\
+\begin{align}
+$f_n>e_n\\
+\left(1+\dfrac{1}{n}\right)^{n+1}>\left(1\dfrac{1}[n}\right)^n$
+\end{align}
+Eine streng monoton steigende Folge, die eine monoton fallende Folge, als ober Schranke hat, konvergiert. Es gilt also, dass $e_n$ konvergent ist, $e_n$ besitzt einen besonderen Grenzwert, der \textit{Eulersche Zahl} genannt wird.
 
 \section{Eigenschaften}
 		
