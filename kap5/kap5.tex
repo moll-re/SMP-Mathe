@@ -342,7 +342,7 @@
     \paragraph{} Vektoren lassen sich allgemein mit der additiven Verknüpfung des Vektorraums verknüpfen.
     Diese Verknüpfung zwischen zwei beliebigen Vektoren $\vv{v}$ und $\vv{u}$ erfolgt, wie auch schon im Teil Verbindungsvektor gezeigt wird, wie
     folgt: $\vv{v}+\vv{u}=\left(\begin{array}{c}{v_1+u_1 \\ v_2+u_2 \\ ... \\ v_n+u_n}\end{array}\right)$. Anschaulich wird $\vv{u}$ an $\vv{v}$
-    angehängt und der Schaft von $\vv{v}$ mit der Spitze verbunden, um den neuen Vektor zu bilden.
+    angehängt und der Schaft von $\vv{v}$ mit der Spitze von $\vv{u}$ verbunden, um den neuen Vektor zu bilden.
     \\
     \begin{Definition}
         Eine Familie von Vektoren $\vv{a_1},\vv{a_2},...,\vv{a_n}\in V$ wird als linear abhängig bezeichnet, wenn die Gleichung:
@@ -403,21 +403,26 @@
     eines zu zwei \textbf{nicht kollinearen} Vektoren $\vv{u}$ und $\vv{v}$ orthogonalen Vektors $\vv{i}$. Seine Formel lautet wie folgt:
     $\vv{i} = \vv{u} \times \vv{v} = \left(\begin{array}{c} u_{\textcolor{red}{2}} \cdot v_{\textcolor{orange}{3}} - u_{\textcolor{red}{3}} \cdot v_{\textcolor{orange}{2}} \\ u_{\textcolor{red}{3}} \cdot v_{\textcolor{orange}{1}} - u_{\textcolor{red}{1}} \cdot v_{\textcolor{orange}{3}} \\ u_{\textcolor{red}{1}} \cdot v_{\textcolor{orange}{2}} - u_{\textcolor{red}{2}} \cdot v_{\textcolor{orange}{1}} \end{array}\right)$.
     \begin{Beweis}
-        Seien $\vv{u}$ und $\vv{v}$ beliebige zueinander? nicht kollineare Vektoren des $\R^3$. Ein zu beiden Vektoren orthogonaler Vektor ergibt sich durch: \\
+        Seien $\vv{u}$ und $\vv{v}$ beliebige zueinander nicht kollineare Vektoren des $\R^3$. Ein zu beiden Vektoren orthogonaler Vektor ergibt sich durch: \\
         \begin{align*}
             \qquad &\left\{\begin{array}{rccl} \vv{u} \odot \vv{i} & = & 0 & (1) \\ \vv{v} \odot \vv{i} & = & 0 & (2)\end{array}\right. \\\\
-            \Leftrightarrow &\left\{\begin{array}{rccl} u_1i_1 + u_2i_2 + u_3i_3 & = & 0 & (1) \\ v_1i_1 + v_2i_2 + v_3i_3 & = & 0 & (2)\end{array}\right. \qquad \left| \text{ Sei } i_1 = t; t \in \R \\\\
-            \Leftrightarrow &\left\{\begin{array}{rccl} i_2 & = & \dfrac{-u_1t - u_3i_3}{u_2} & (1) \\ v_1t + v_2i_2 + v_3i_3 & = & 0 & (2)\end{array}\right. \\\\
-            \Leftrightarrow &\left\{\begin{array}{rccl} i_2 & = & \dfrac{-u_1t - u_3i_3}{u_2} & (1) \\ v_1t + v_2 \cdot \dfrac{-u_1t - u_3i_3}{u_2} + v_3i_3 & = & 0 & (2)\end{array}\right. \\\\
-            \Leftrightarrow &\left\{\begin{array}{rccl} i_2 & = & \dfrac{-u_1t - u_3i_3}{u_2} & (1) \\ \left(v_1 - \dfrac{v_2u_1}{u_2}\right) \cdot t + \left(v_3 - \dfrac{v_2u_3}{u_2}\right) \cdot i_3 & = & 0 & (2)\end{array}\right. \\\\
-            \Leftrightarrow &\left\{\begin{array}{rccl} i_2 & = & \dfrac{-u_1t - u_3i_3}{u_2} & (1) \\\\ i_3 & = & \dfrac{-\left(v_1 - \dfrac{v_2u_1}{u_2}\right)}{\left(v_3 - \dfrac{v_2u_3}{u_2}\right)} \cdot t & (2)\end{array}\right. \\\\
-            \Leftrightarrow &\left\{\begin{array}{rccl} i_2 & = & \dfrac{-u_1t - u_3i_3}{u_2} & (1) \\\\ i_3 & = & \dfrac{\dfrac{v_2u_1 - v_1u_2}{\cancel{u_2}}}{\dfrac{v_3u_2 - v_2u_3}{\cancel{u_2}}} \cdot t & (2)\end{array}\right. \\\\
-            \Leftrightarrow &\left\{\begin{array}{rccl} i_2 & = & \dfrac{-u_1t - u_3i_3}{u_2} & (1) \\\\ i_3 & = & \dfrac{v_2u_1 - v_1u_2}{v_3u_2 - v_2u_3} \cdot t & (2)\end{array}\right. \\\\
-            \Leftrightarrow &\left\{\begin{array}{rccl} i_2 & = & \dfrac{-u_1t - u_3 \cdot \dfrac{v_2u_1 - v_1u_2}{v_3u_2 - v_2u_3} \cdot t}{u_2} & (1) \\\\ i_3 & = & \dfrac{v_2u_1 - v_1u_2}{v_3u_2 - v_2u_3} \cdot t & (2)\end{array}\right. \\\\
-            \Leftrightarrow &\left\{\begin{array}{rccl} i_2 & = & \dfrac{\dfrac{u_3v_1u_2 - u_3v_2u_1 + u_1v_2u_3t - u_1v_3u_2t}{v_3u_2 - v_2u_3} \cdot t}{u_2} & (1) \\\\ i_3 & = & \dfrac{v_2u_1 - v_1u_2}{v_3u_2 - v_2u_3} \cdot t & (2)\end{array}\right. \\\\
-            \Leftrightarrow &\left\{\begin{array}{rccl} i_2 & = & \dfrac{u_3v_1u_2 - u_3v_2u_1 + u_1v_2u_3t - u_1v_3u_2t}{u_2v_3u_2 - u_2v_2u_3} \cdot t & (1) \\\\ i_3 & = & \dfrac{v_2u_1 - v_1u_2}{v_3u_2 - v_2u_3} \cdot t & (2)\end{array}\right. \\\\
+            \Leftrightarrow &\left\{\begin{array}{rccl} u_1i_1 + u_2i_2 + u_3i_3 & = & 0 & (1) \qquad | \cdot v_1 \\ v_1i_1 + v_2i_2 + v_3i_3 & = & 0 & (2) \qquad | \cdot (-u_1) \end{array}\right. \\\\
+            \Leftrightarrow &\left\{\begin{array}{rccl} u_1v_1i_1 + u_2v_1i_2 + u_3v_1i_3 & = & 0 & (1) \\ -u_1v_1i_1 - u_1v_2i_2 - u_1v_3i_3 & = & 0 & (2) \qquad | (1) + (2) \end{array}\right. \\\\
+            \Leftrightarrow &\left\{\begin{array}{rccl} u_1v_1i_1 + u_2v_1i_2 + u_3v_1i_3 & = & 0 & (1) \\ u_2v_1i_2 + u_3v_1i_3 - u_1v_2i_2 - u_1v_3i_3 & = & 0 & (2) \end{array}\right. \\\\
+            \Leftrightarrow &\left\{\begin{array}{rccl} u_1v_1i_1 + u_2v_1i_2 + u_3v_1i_3 & = & 0 & (1) \\ (u_2v_1 - u_1v_2) \cdot i_2 + (u_3v_1 - u_1v_3) \cdot i_3 & = & 0 & (2) \end{array}\right. \\\\
+            \Leftrightarrow &\left\{\begin{array}{rccl} u_1v_1i_1 + u_2v_1i_2 + u_3v_1i_3 & = & 0 & (1) \\ (u_2v_1 - u_1v_2) \cdot i_2 & = & -(u_3v_1 - u_1v_3) \cdot i_3 & (2) \end{array}\right. \\\\
+            \Leftrightarrow &\left\{\begin{array}{rccl} u_1v_1i_1 + u_2v_1i_2 + u_3v_1i_3 & = & 0 & (1) \\ i_2 \text{ } = \text{ } (u_3v_1 - u_1v_3) \text{ $\land$ } i_3 & = & -(u_2v_1 - u_1v_2) & (2) \qquad \text{\textbf{Eine} mögliche Lösung}\end{array}\right.\\\\
+            \Leftrightarrow &\left\{\begin{array}{rccl} u_1v_1i_1 + u_2v_1i_2 + u_3v_1i_3 & = & 0 & (1) \\ i_2 & = & u_3v_1 - u_1v_3 & (2) \\ i_3 & = & u_1v_2 - u_2v_1 & (3) \end{array}\right. \\\\
+            \Leftrightarrow &\left\{\begin{array}{rccl} u_1v_1i_1 + (u_3v_1 - u_1v_3) \cdot u_2v_1 + (u_1v_2 - u_2v_1) \cdot u_3v_1 & = & 0 & (1) \\ i_2 & = & u_3v_1 - u_1v_3 & (2) \\ i_3 & = & u_1v_2 - u_2v_1 & (3) \end{array}\right. \\\\
+            \Leftrightarrow &\left\{\begin{array}{rccl} i_1 & = & \dfrac{-(u_3v_1 - u_1v_3) \cdot u_2v_1 - (u_1v_2 - u_2v_1) \cdot u_3v_1}{u_1v_1} & (1) \\\\ i_2 & = & u_3v_1 - u_1v_3 & (2) \\ i_3 & = & u_1v_2 - u_2v_1 & (3) \end{array}\right. \\\\
+            \Leftrightarrow &\left\{\begin{array}{rccl} i_1 & = & \dfrac{(u_1v_3 - u_3v_1) \cdot u_2 + (u_2v_1 - u_1v_2) \cdot u_3}{u_1} & (1) \\\\ i_2 & = & u_3v_1 - u_1v_3 & (2) \\ i_3 & = & u_1v_2 - u_2v_1 & (3) \end{array}\right. \\\\
+            \Leftrightarrow &\left\{\begin{array}{rccl} i_1 & = & u_2v_3 - u_3v_2 + \dfrac{ \cancel{-u_3v_1u_2} + \cancel{u_2v_1u_3}}{u_1} & (1) \\\\ i_2 & = & u_3v_1 - u_1v_3 & (2) \\ i_3 & = & u_1v_2 - u_2v_1 & (3) \end{array}\right. \\\\
+            \displaybreak[4] \\\\
+            \Leftrightarrow &\left\{\begin{array}{rccl} i_1 & = & u_2v_3 - u_3v_2 & (1) \\ i_2 & = & u_3v_1 - u_1v_3 & (2) \\ i_3 & = & u_1v_2 - u_2v_1 & (3) \end{array}\right. \\\\
+            \Leftrightarrow & \vv{i} = \left(\begin{array}{c} u_2v_3 - u_3v_2 \\ u_3v_1 - u_1v_3 \\ u_1v_2 - u_2v_1 \end{array}\right)
         \end{align*}
     \end{Beweis}
+    \\\\
     Zudem gilt:
     \begin{align*}
         \qquad \qquad \qquad |\vv{i}| &= |\vv{u}| \cdot (\sin(\alpha) \cdot |\vv{v}|) \\
@@ -433,7 +438,7 @@
     \definecolor{ududff}{rgb}{0.3,0.3,1}
     \begin{tikzpicture}[>=triangle 45]
         \draw[line width=0.8pt,color=orange,fill=orange,fill opacity=0.5] (2,-1.5) -- (7.2,1.5) -- (14.2,1.5) -- (9,-1.5) -- cycle;
-        \draw[line width=0.8pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (2,-1.5) -- (4,-1.5) arc (0:30:2) -- cycle;
+        \draw[line width=0.8pt,color=ududff,fill=ududff,fill opacity=0.1] (2,-1.5) -- (4,-1.5) arc (0:30:2) -- cycle;
         \draw[->,line width=0.8pt,color=qqqqtt] (2,-1.5) -- (9,-1.5);
         \draw[->,line width=0.8pt,color=qqqqtt] (2,-1.5) -- (7.2,1.5);
         \draw[->,line width=0.8pt,color=qqqqtt,dashed] (7.2,1.5) -- (14.2,1.5);
@@ -443,7 +448,7 @@
         \draw[color=ududff] (1.8,-1.4) node {$O$};
         \draw[color=qqqqtt] (5.5,-1.8) node {$\vv{u}$};
         \draw[color=qqqqtt] (10.6,1.8) node {$\vv{u}$};
-        \draw[color=qqwuqq] (3.2,-1.15) node {$\alpha$};
+        \draw[color=ududff] (3.2,-1.15) node {$\alpha$};
         \draw[color=qqqqtt] (4.6,0.25) node {$\vv{v}$};
         \draw[color=qqqqtt,dashed] (11.6,-0.3) node {$\vv{v}$};
         \draw[color=red] (8.4,0) node {$\sin(\alpha) \cdot |\vv{v}|$};
