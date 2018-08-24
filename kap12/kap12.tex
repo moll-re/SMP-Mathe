@@ -38,7 +38,7 @@ $e = 2,71828182845904523536028747135266249775724709369995...$\\
 \\
 $e$ ist eine irrationale, transzendente und reelle Zahl, die die Basis des (natürlichen) Logarithmus und der (natürlichen) Exponentialfunktion ist.\\
 Die Darstellung, der man am Häufigsten begegnet ist diese:
-$e=\lim\limits_{n\to \infty}\left(1+\dfrac{1}{n}\right)^n$
+$e=\lim\limits_{n\to \infty}\left(1+\dfrac{1}{n}\right)^n;n\in\R$
 \end{Definition}
 Benannt nach dem bekannten Mathematiker Leonhard Euler ist diese Zahl eine der wichtigsten Konstanten der Mathematik.
 Sie ist die Basis des natürlichen Logarithmus und der natürlichen Exponentialfunktion. Diese (spezielle) Exponentialfunktion wird aufgrund dieser Beziehung zur Zahl $e$ häufig kurz $e$-Funktion genannt.
@@ -59,50 +59,142 @@ $e$ ist darstellbar bzw. ergibt sich durch:
 
 	\subsection{Herleitung zur Zahl $e$}
 
-\\ Wir definieren eine Folge $(e_{n})n\in\N$ durch $e_{n}=\left(1+\dfrac{1}{n}\right)^n$ und versuchen ihre Konvergenz zu beweisen.
+Wir definieren eine Folge $(e_{n})n\in\N$ durch $e_{n}=\left(1+\dfrac{1}{n}\right)^n$ und beweisen ihre Konvergenz.
+
 \begin{itemize}
-\item$\dfrac{e_{n+1}}{e_{n}}=\dfrac{{\left(1+\dfrac{1}{n+1}\right)}^{n+1}}{{\left(1+\dfrac{1}{n+1}\right)}^{n}}=\left(\dfrac{n(n+2)}{(n+1)^2}\right)^n\cdot\left(1+\dfrac{1}{n}\right)=\textcolor{blue}{\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}}\cdot\textcolor{red}{\dfrac{n+1}{n}}$
-\item Die Umformung ermöglicht uns auf den Term ${\left(1-\dfrac{1}{(n+1)^2}}\right)^{n+1}$ die Ungleichung von Bernoulli anzuwenden. Diese besagt Folgendes: $(1+x)^n>1+nx$ für $n\geq2$ und $x>-1$\\
-$\Rightarrow\textcolor{blue}{\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}>}1+(n+1)\cdot\left(-\dfrac{1}{(n+1)^2}\right)=1-\dfrac{1}{n+1}=\textcolor{blue}{\dfrac{n}{n+1}}$
+\item\begin{align*}\dfrac{e_{n+1}}{e_{n}}&=\dfrac{{\left(1+\dfrac{1}{n+1}\right)}^{n+1}}{{\left(1+\dfrac{1}{n}\right)}^{n}}\\
+&=\left(\dfrac{n(n+2)}{(n+1)^2}\right)^{n+1}\cdot\left(1+\dfrac{1}{n}\right)\\
+&=\textcolor{blue}{\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}}\cdot\textcolor{red}{\dfrac{n+1}{n}}
+\end{align*}
+\item Die Umformung ermöglicht uns auf den Term $\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}$ die Ungleichung von Bernoulli anzuwenden. Diese besagt Folgendes: $(1+x)^n>1+nx$ für $n\geq2$ und $x>-1$\\
+\begin{align*}\Rightarrow\textcolor{blue}{\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}}&\textcolor{blue}{  >} 1+(n+1)\cdot\left(-\dfrac{1}{(n+1)^2}\right)\\
+&=1-\dfrac{1}{n+1}\\
+&=\textcolor{blue}{\dfrac{n}{n+1}}
+\end{align*}
 \item Dies kann man an den ersten Ausdruck anwenden:\\
-$\Rightarrow\dfrac{e_{n+1}}{e_{n}}=\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}\cdot\dfrac{n+1}{n}\textcolor{blue}{>\dfrac{n}{n+1}}\cdot\textcolor{red}{\dfrac{n+1}{n}}=1$\\\\
+\begin{align*}
+\Rightarrow\dfrac{e_{n+1}}{e_{n}}&=\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}\cdot\dfrac{n+1}{n}\\
+&\textcolor{blue} {>\dfrac{n}{n+1}}\cdot\textcolor{red}{\dfrac{n+1}{n}}\\
+&=1
+\end{align*}
 \textbf{$\Leftrightarrow e_{n}$ ist streng monoton steigend}
 \end{itemize}
 Sei eine Folge $f_{n}$ mit $f_{n}=\left(1+\dfrac{1}{n}\right)^{n+2}$, deren Monotonieverhalten wir untersuhen wollen.\\
 Dazu formen wir den Term so um, dass die Bernoulli-Ungleichung angewandt werden kann.
 \begin{itemize}
-\item$\dfrac{f_{n}}{f_{n+1}}=\dfrac{\left(1+\dfrac{1}{n}\right)^{n+1}}{\left(1+\dfrac{1}{n}\right)^{n+2}}=\left(\dfrac{1+\dfrac{1}{n}}{1+\dfrac{1}{n+1}}\right)^{n+2}\cdot\dfrac{1}{1+\dfrac{1}{n}}=\left(\dfrac{\dfrac{n+1}{n}}{\dfrac{n+2}{n+1}}\right)\cdot\dfrac{n}{n+1}=\left(\dfrac{(n+1)^2}{n(n+2)}\right)^{n+2}\cdot\dfrac{n}{n+1}\\=\left(\dfrac{n^2+2n+1}{n^2+2n}\right)^{n+2}\cdot\dfrac{n}{n+1}=\textcolor{blue}{\left(1+\dfrac{1}{n(n+2)}\right)^{n+2}}\cdot\textcolor{red}{\dfrac{n}{n+1}}$
+\item\begin{align*}\dfrac{f_{n}}{f_{n+1}}&=\dfrac{\left(1+\dfrac{1}{n}\right)^{n+1}}{\left(1+\dfrac{1}{n}\right)^{n+2}}\\
+&=\left(\dfrac{1+\dfrac{1}{n}}{1+\dfrac{1}{n+1}}\right)^{n+2}\cdot\dfrac{1}{1+\dfrac{1}{n}}\\
+&=\left(\dfrac{\dfrac{n+1}{n}}{\dfrac{n+2}{n+1}}\right)\cdot\dfrac{n}{n+1}\\
+&=\left(\dfrac{(n+1)^2}{n(n+2)}\right)^{n+2}\cdot\dfrac{n}{n+1}\\
+&=\left(\dfrac{n^2+2n+1}{n^2+2n}\right)^{n+2}\cdot\dfrac{n}{n+1}\\
+&=\textcolor{blue}{\left(1+\dfrac{1}{n(n+2)}\right)^{n+2}}\cdot\textcolor{red}{\dfrac{n}{n+1}}
+\end{align*}
 \item Bernoulli: $(1+x)^n>1+nx$ für $n\geq2$ und $x>-1$\\
-$\Rightarrow \textcolor{blue}{\left(1+\dfrac{1}{n(n+2)}\right)^{n+2}>}1+(n+2)\cdot\dfrac{1}{n(n+2)}=\textcolor{blue}{\dfrac{n+1}{n}}$
+\begin{align*}\Rightarrow \textcolor{blue}{\left(1+\dfrac{1}{n(n+2)}\right)^{n+2} &\textcolor{blue}{>}1+(n+2)\cdot\dfrac{1}{n(n+2)}\\
+&=\textcolor{blue}{\dfrac{n+1}{n}}
+\end{align*}
 \item$\Rightarrow\dfrac{f_n}{f_{n+1}}=\left(1+\dfrac{1}{n(n+2)}\right)^{n+2}\cdot\dfrac{n}{n+1}>\textcolor{blue}{\dfrac{n+1}{n}}\cdot\textcolor{red}{\dfrac{n}{n+1}}=1$
-\item $\dfrac{f_n}{f_{n+1}}>1\Leftrightarrow\dfrac{f_{n+1}}{f_{n}}<1$\textbf{$\Leftrightarrow f_n$ ist streng monoton steigend}
+\item $\dfrac{f_n}{f_{n+1}}>1\Leftrightarrow\dfrac{f_{n+1}}{f_{n}}<1$\textbf{$\Leftrightarrow f_n$ ist streng monoton fallend}
 \end{itemize}
 Als Letztes zeigt man, dass $f_n$ zu $e_n$ eine obere Schranke ist:\\
-\begin{align}
 $f_n>e_n\\
-\left(1+\dfrac{1}{n}\right)^{n+1}>\left(1\dfrac{1}[n}\right)^n$
-\end{align}
+\left(1+\dfrac{1}{n}\right)^{n+1}>\left(1\dfrac{1}{n}\right)^n$
+
 Eine streng monoton steigende Folge, die eine monoton fallende Folge, als ober Schranke hat, konvergiert. Es gilt also, dass $e_n$ konvergent ist, $e_n$ besitzt einen besonderen Grenzwert, der \textit{Eulersche Zahl} genannt wird.
+
+	\subsection{$e$ ist irrational}
+
+Wie schon erwähnt, handelt es sich bei der Eulerschen Zahl um eine transzendente Zahl, daraus ergibt sich, dass sie ebenfalls irrational ist. Trotzdem ist es interessant, dies zu beweisen.
+
+\begin{Beweis}
+\underline{Teil A:}\\\\
+Sei $f$ eine Funktion mit $f(x)=xe^{1-x}$ mit Schaubild $\mathcal{C}$\\
+\begin{enumerate}
+\item Monotonieverhalten:\\
+\begin{align*}
+f\prime(x)&=e^{1-x}-xe^{1-x}\\
+&=(1-x)e^{1-x}
+\end{align*}
+\begin{array}{rcl}
+$\forall x<1$: &$f\prime(x)>0&\Leftrightarrow f \nearrow$\\
+für $x=1$: &$f\prime(x)=0$ und VZW $+\rightarrow-&\Leftrightarrow$ Hochpunkt\\
+$\forall x>1$: &$f\prime(x)<0 &\Leftrightarrow f \searrow$\\
+\end{array}
+\\
+
+Grenzwerte:\\
+$\lim\limits_{x\to +\infty}\underbrace{x}_{\rightarrow+\infty}\underbrace{e^{1-x}}_{\rightarrow0}=0$ (Croissance comparée)\\\\
+$\lim\limits_{x\to -\infty}\underbrace{x}_{\rightarrow-\infty}\underbrace{e^{1-x}}_{\rightarrow+\infty}=-\infty$
+\item Hier Graph von f
+\item Man hat $I_1$,  das Integral mit $I_1=\int_0^1f(x)dx$
+\begin{align*}
+I_1&=\int_0^1xe^{1-x}dx\\
+&=\left[-xe^{1-x}\right]_0^1-\int_0^1-e^{1-x}dx\\
+&=-1e^{1-1}-0\cdote^1-\left[e^{1-x}\right]_0^1\\
+&=-1-1+e\\
+&=e-2
+\end{align*}
+
+\end{enumerate}
+\underline{Herkunft der Aufgabenstellung:} Buch? S.199 Nr. 78, d'après le bac (Blatt von Mme Treynard)
+\end{Beweis}
 
 \section{Eigenschaften}
 		
-Exponentielle Funktionen weisen oft sehr n"utzliche Eigenschaften auf. Sei $f(x)= a^x$ mit $a>1$ und $g(x)=x^n$ mit n $\in \R$:\\
 
-\left.\parbox{0.4\textwidth}{
 \begin{itemize}
-\item $\lim\limits_{x\to +\infty} \dfrac{f}{g} = \lim\limits_{x\to +\infty}\dfrac{a^x}{x^n} = +\infty $ \\
-\item $\lim\limits_{x\to -\infty} \dfrac{f}{g} = \lim\limits_{x\to -\infty}\dfrac{a^x}{x^n} = 0$ \\ 
-\end{itemize}
-} \right\}$ \quad Diese Vergleiche werden \textbf{croissances comparees} genannt
+\item$f(x)=a^x$
+\item$a\in\R^+$, $b\neq1$
+\item$D_f=\R$
+\item$W_f=\R^+$
+\item für $0>a>1$: $f$ ist streng monoton fallend\\
+für $a>1$: $f$ ist streng monoton wachsend
+\item für $0>a>1$: $\lim\limits_{x\to +\infty}f(x)=-\infty$\\
+			$\lim\limits_{x\to +\infty}f(x)=0$\\
+für $a>1$: $\lim\limits_{x\to +\infty}f(x)=0$\\
+	        $\lim\limits_{x\to -\infty}f(x)=+\infty$
+\item $f(0)=1$
+\item x-Achse ist waagerechte Asmyptote
+\item Sei $f(x)= a^x$ mit $a>1$ und $g(x)=x^n$ mit n $\in \R$:\\
 
-		
-		
+\left.\parbox{0.5\textwidth}{
+\begin{itemize}
+\item $\lim\limits_{x\to +\infty} f(x)\cdot g(x) = \lim\limits_{x\to +\infty} = a^x \cdot x^n= +\infty $ 
+\item $\lim\limits_{x\to -\infty} f(x)\cdot g(x) = \lim\limits_{x\to -\infty}a^x \cdot x^n= 0$ \\\\
+\item $\lim\limits_{x\to +\infty} \dfrac{f(x)}{g(x)} = \lim\limits_{x\to +\infty}\dfrac{a^x}{x^n} = +\infty $ 
+\item $\lim\limits_{x\to -\infty} \dfrac{f(x)}{g(x)} = \lim\limits_{x\to -\infty}\dfrac{a^x}{x^n} = 0$ \\\\
+\item $\lim\limits_{x\to +\infty} \dfrac{g(x)}{f(x)} = \lim\limits_{x\to +\infty}\dfrac{x^n}{a^x} =  0$ 
+\item $\lim\limits_{x\to -\infty} \dfrac{g(x)}{f(x)} = \lim\limits_{x\to -\infty}\dfrac{x^n}{a^x} = \pm\infty$
+\end{itemize}
+} \right\}$ \quad \textbf{Croissances comparées}
+
+\begin{Bemerkung}
+Diese Grenzwerte gelten auch wenn g ein Polynom beliebig hohen Grades ist.\\
+Allgemein kann man also sagen, dass eine Exponentialfunktion ihr Wachstum bezüglich dem jedes Polynoms immer durchsetzt.
+\end{Bemerkung}
+
+\begin{Bemerkung}
+\danger Das Vorzeichen der anderen Funktion(en) muss natürlich immer beachtet werden.\\
+Da die Wertemenge einer Exponentialfunktion immer $\R^+$ ist, hängt das Vorzeichen ausschließlich von der(den) anderen Funktion(en) ab. Wenn der (höchste) Exponent also eine gerade Zahl ist, dann bleiben die Grenzwerte dieselben ($0$ oder $+\infty$). Im Falle eines höchsten Exponenten, der ungerade ist, ändert sich dementsprechend das Vorzeichen ($0$ oder $-\infty$) des Grenzwertes für $x\to -\infty$. Der Grenzwert für $x\to+\infty$ bleibt derselbe, selbst wenn der höchste Exponent eine negative Zahl ist.
+\end{Bemerkung}
+
+Für $f(x)= a^x$ mit $0<a<1$ und $g(x)=x^n$ mit n $\in \R$:\\
+Es gilt weiterhin, dass sich das Wachstum der Exponentialfunktion durchsetzt, anhand dieser Aussage können die Grenzwerte von Funktionen, die Exponentialfunktionen mit Basis $<1$ beinhalten, leicht bestimmt werden.\\
+\danger Auch hier gilt es, auf das Vorzeichen der anderen Funktion(en) zu achten.
+
+\end{itemize}		
+
+
+	
+
+
 		\section{Ableitungsregeln}
 
-\begin{enumerate}
-\item 
-\end{enumerate}
 	\subsection{Aktivität}
 
 Quelle: Déclic 1ère
+
+	\subsection{Exponentialfonktionen mit natürlicher Basis}
+
+	\subsection{Exponentialfunktionen mit beliebiger Basis}
 
