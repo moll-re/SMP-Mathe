@@ -1,7 +1,7 @@
 \chapter{Exponentialfunktionen}
 
 \begin{Definition}
-Man bezeichnet als Exponentialfunktion eine Funktion der Form $x\rightarrow a^x$ mit $a\in \R$, $a>0$ und $a\neq1$\\
+Man bezeichnet als Exponentialfunktion eine Funktion der Form $x\rightarrow a^x$ mit $a\in \R^+\backslash 1$\\
 $x$ ist die Variable und wird \textit{Exponent} oder \textit{Hochzahl} genannt.\\
 $a$ nennt man \textit{Basis} oder \textit{Grundzahl}, sie ist für jede Funktion fest forgegeben.\\
 Die natürliche Exponentialfunktion wird durch die Funktionsvorschrift $f(x)=e^x$ beschrieben.
@@ -144,18 +144,23 @@ I_1&=\int_0^1xe^{1-x}dx\\
 
 \begin{itemize}
 \item$f(x)=a^x$
-\item$a\in\R^+$, $b\neq1$
+\item$a\in\R^+\backslash 1$
 \item$D_f=\R$
 \item$W_f=\R^+$
 \item für $0>a>1$: $f$ ist streng monoton fallend\\
 für $a>1$: $f$ ist streng monoton wachsend
 \item für $0>a>1$: $\lim\limits_{x\to +\infty}f(x)=-\infty$\\
-			$\lim\limits_{x\to +\infty}f(x)=0$\\
+			$\lim\limits_{x\to -\infty}f(x)=0$\\
 für $a>1$: $\lim\limits_{x\to +\infty}f(x)=0$\\
 	        $\lim\limits_{x\to -\infty}f(x)=+\infty$
 \item $f(0)=1$
 \item x-Achse ist waagerechte Asmyptote
-\item Sei $f(x)= a^x$ mit $a>1$ und $g(x)=x^n$ mit n $\in \R$:\\
+
+\end{itemize}
+
+\subsubsection{Zusammengesetzte Funktionen}
+
+Sei $f(x)= a^x$ mit $a>1$ und $g(x)=x^n$ mit n $\in \R$:\\
 
 \left.\parbox{0.5\textwidth}{
 \begin{itemize}
@@ -182,7 +187,7 @@ Für $f(x)= a^x$ mit $0<a<1$ und $g(x)=x^n$ mit n $\in \R$:\\
 Es gilt weiterhin, dass sich das Wachstum der Exponentialfunktion durchsetzt, anhand dieser Aussage können die Grenzwerte von Funktionen, die Exponentialfunktionen mit Basis $<1$ beinhalten, leicht bestimmt werden.\\
 \danger Auch hier gilt es, auf das Vorzeichen der anderen Funktion(en) zu achten.
 
-\end{itemize}		
+		
 
 
 	
