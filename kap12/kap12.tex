@@ -107,7 +107,7 @@ Eine streng monoton steigende Folge, die eine monoton fallende Folge, als ober S
 Wie schon erwähnt, handelt es sich bei der Eulerschen Zahl um eine transzendente Zahl, daraus ergibt sich, dass sie ebenfalls irrational ist. Trotzdem ist es interessant, dies zu beweisen.
 
 \begin{Beweis}
-\underline{Teil A:}\\\\
+\underline{Teil A:} unnötig\\\\
 Sei $f$ eine Funktion mit $f(x)=xe^{1-x}$ mit Schaubild $\mathcal{C}$\\
 \begin{enumerate}
 \item Monotonieverhalten:\\
@@ -115,18 +115,19 @@ Sei $f$ eine Funktion mit $f(x)=xe^{1-x}$ mit Schaubild $\mathcal{C}$\\
 f\prime(x)&=e^{1-x}-xe^{1-x}\\
 &=(1-x)\cdot e^{1-x}
 \end{align*}
-\begin{array}{rlcl}
+\begin{tabular}{rlcl}
 $\forall x<1$: &$f\prime(x)>0&&\Leftrightarrow f \nearrow$\\
-\text{für }$$x=1$$: &$f\prime(x)=0$&\mbox{und VZW }$+\rightarrow-&\Leftrightarrow$ Hochpunkt\\
+für $x=1$: &$f\prime(x)=0$&und VZW $+\rightarrow-&\Leftrightarrow$ Hochpunkt\\
 $\forall x>1$: &$f\prime(x)<0 &&\Leftrightarrow f \searrow$\\
-\end{array}
+\end{tabular}
 \\
 
 Grenzwerte:\\
 $\lim\limits_{x\to +\infty}\underbrace{x}_{\rightarrow+\infty}\underbrace{e^{1-x}}_{\rightarrow0}=0$ (Croissance comparée)\\\\
 $\lim\limits_{x\to -\infty}\underbrace{x}_{\rightarrow-\infty}\underbrace{e^{1-x}}_{\rightarrow+\infty}=-\infty$
 \item Hier Graph von f
-\item Man hat $I_1$,  das Integral mit $I_1=\int_0^1f(x)dx$
+\item Man hat $I_1$,  das Integral mit $I_1=\int_0^1f(x)dx$\\
+\begin{minipage}{0.45\textwidth}
 \begin{align*}
 I_1&=\int_0^1xe^{1-x}dx\\
 &=\left[-xe^{1-x}\right]_0^1-\int_0^1-e^{1-x}dx\\
@@ -134,7 +135,36 @@ I_1&=\int_0^1xe^{1-x}dx\\
 &=-1-1+e\\
 &=e-2
 \end{align*}
+\end{minipage}
+\begin{minipage}{0.55\textwidth}
+\begin{align*}
+u(x)&=x & u\prime(x)&=1\\
+v'(x)&=e^{1-x} & v(x)&=-e^{1-x}
+\end{align*}
+\end{minipage}{0.5\textwidth}
+\end{enumerate}
+\underline{Teil B}\\\\
+Sei $I_n$ das Integral mit $I_n=\int_0^1x^ne^{1-x}dx$, $n\geq 1$
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item \zz: $\forall x\in[0;1]$ gilt $x^n\leq x^ne^{1-x} \leq ex^n$\\
+\begin{align*}
+x^n &\stackrel{?}{\leq} x^ne^{1-x} &\stackrel{?}{\leq} ex^n\;|:x^n\\
+1&\stackrel{!}{\leq}e^{1-x}&\stackrel{!}{\leq}e
+\end{align*}
 
+\item%1b
+\item%1c
+\end{enumerate}
+\item%2
+\item%3
+\begin{enumerate}
+\item%3a
+\item%3b
+\item%c
+\end{enumerate}
+\item%4
 \end{enumerate}
 \underline{Herkunft der Aufgabenstellung:} Buch? S.199 Nr. 78, d'après le bac (Blatt von Mme Treynard)
 \end{Beweis}
