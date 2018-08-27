@@ -1,0 +1,82 @@
+\documentclass[11p,a4paper]{report}
+
+\usepackage{amsmath}		                      %Matheschreibweise...
+\usepackage{amssymb}                              %...Und Symbole
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2cm]{geometry}	              %Seitenrand
+\usepackage{fancyhdr}	                          %Titelblatt
+\usepackage{graphicx}	                          %Bilder einfügen
+\usepackage[listings,skins,breakable]{tcolorbox}
+\usepackage{tikz,pgf,pgfplots}                    %Grafiken zeichnen
+\usepackage{mdframed}	                          %Box			%\begin{mdframed} 		und			%\end{mdframed}
+\usepackage{epstopdf}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{tabu}                                 %Bessere Tabellen
+\usepackage{esvect}                               %Schönere Vektoren
+\usepackage{listings}                             %Für Pseudocode/Code...
+\usepackage{color}                                %...Und dessen Einfärbung
+\usepackage{booktabs}
+\usepackage{enumitem}                             %Angepasstes enumerieren
+\usepackage{enumerate}                            %Zeichen der Enumerierung beliebig wählbar
+\usepackage[hidelinks=true]{hyperref}
+\usepackage[makeroom]{cancel}                     %Durchgestrichene Terme mit \cancel{}
+\usepackage{tkz-tab}                              %Für Monotonietabellen??
+\usepackage{marvosym}                             %Symbole wie Blitze und co. ...
+\usepackage{stackengine}                          %Wofür sind die nächsten 4 imports?
+\usepackage{scalerel}
+\usepackage{xcolor}
+\usepackage{epigraph}
+\usepackage{array}
+
+% \pgfplotsset{compat=1.15}
+\usetikzlibrary{arrows}
+
+
+\nonstopmode                                      %Fehler bei Kompilierung werden "leise" gestellt (sehr viel praktischer)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Für Kopf- und Fußzeilen:
+\pagestyle{fancy}
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyhead[R]{Skript SMP}
+\fancyfoot[C]{\thepage}
+\parindent 0ex
+
+
+
+
+
+\include{style}
+\begin{document}
+\include{title}
+
+
+\begin{small}
+\tableofcontents
+\end{small}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Kapitel bitte hier einbinden:
+\include{kap1/kap1}
+\include{kap2/kap2}
+\include{kap3/kap3}
+\include{kap4/kap4}
+\include{kap5/kap5}
+\include{kap6/kap6}
+\include{kap7/kap7}
+\include{kap8/kap8}
+\include{kap9/kap9}
+\include{kap10/kap10}
+\include{kap11/kap11}
+\include{kap12/kap12}
+\include{kap13/kap13}
+\include{kap14/kap14}
+\include{kap15/kap15}
+%und so weiter
+
+\end{document}

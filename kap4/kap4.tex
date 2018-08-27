@@ -3,7 +3,7 @@
 
 \section{Kurze Wiederholung}
 \begin{Definition}
-  Im Kreis mit Radius 1 gelte:
+  In einem Kreis mit Radius 1 gelte:
   \begin{align*}
     \cos(\alpha)&= x_{_M}\\
     \sin(\alpha)&= y_{_M}\\
@@ -39,9 +39,9 @@
     \draw[color=uququq] (0.03,0.94) node {$A$};
     \fill [color=uququq] (0.54,0) circle (1.5pt);
     \draw[color=uququq] (0.7,0.04) node {$B$};
-    \draw[color=ttttff] (0.3,0.74) node {cos(α)};
-    \draw[color=ffqqqq] (0.74,0.4) node {sin(α)};
-    \draw[color=ttzzqq] (0.82,1.1) node {tan(α)};
+    \draw[color=ttttff] (0.3,0.74) node {cos};
+    \draw[color=ffqqqq] (0.74,0.4) node {sin};
+    \draw[color=ttzzqq] (0.82,1.1) node {tan};
     \draw[color=qqwuqq] (0.12,0.07) node {$\alpha$};
   \end{scriptsize}
 \end{tikzpicture}
@@ -125,46 +125,53 @@ Zur Vollständigen Funktionsdiskussion einer Sinus-Funktion sind einige Besonder
   \end{Beispiel}
   \item Bei der Teilung durch eine Sinusfunktion können Definitionslücken an dessen Nullstellen entstehen. Auch diese können in der bereits gezeigten Form angegeben werden.
   \end{enumerate}
+\subsection{Zusammengesetzte Sinusfunktionen}
 \section{Polarkoordinaten}
 In der Kursstufe beschränken wir uns auf die Benutzung von Polarkoordinaten für Punkte in der Ebene (2D).
 \begin{Definition}
   Polarkoordinaten sind eine Form der eindeutigen Punktangaben, doch anstatt wie kartesische Koordinaten 2 Entfernungen $x$ und $y$ zu verwenden, haben sie die Form $(r|\varphi)$. $r$ ist hierbei die Entfernung zum Origo und $\varphi$ ein orientierter Winkel (in $rad$).
 \end{Definition}
-\definecolor{zzzzzz}{rgb}{0.6,0.6,0.6}
-\definecolor{ffqqqq}{rgb}{1,0,0}
-\definecolor{qqzzqq}{rgb}{0,0.6,0}
-\begin{tikzpicture}[line cap=round,line join=round,x=1.0cm,y=1.0cm]
-  \draw[->,color=black] (-0.2,0) -- (2.64,0);
-  \foreach \x in {,1,2}
-  \draw[shift={(\x,0)},color=black] (0pt,-2pt);
-  \draw[color=black] (2.47,0.04) node [anchor=south west] { x};
-  \draw[->,color=black] (0,-0.29) -- (0,2.63);
-  \draw[color=black] (0.05,2.43) node [anchor=west] { y};
-  \clip(-0.2,-0.29) rectangle (2.64,2.63);
-  \draw [shift={(0,0)},color=ffqqqq,fill=ffqqqq,fill opacity=0.1] (0,0) -- (0:0.41) arc (0:46.48:0.4) -- cycle;
-  \draw [color=qqzzqq] (0,0)-- (2.05,2.16);
-  \draw [color=zzzzzz] (0,2.16)-- (2.05,2.16);
-  \draw [color=zzzzzz] (2.05,2.16)-- (2.05,0);
-  \begin{scriptsize}
-    \fill [color=black] (2.05,2.16) circle (1.5pt);
-    \draw[color=black] (2.12,2.29) node {$P$};
-    \draw[color=qqzzqq] (1.16,1.04) node {r};
-    \draw[color=ffqqqq] (0.5,0.17) node {$\varphi$};
-    \draw[color=zzzzzz] (0.96,2.02) node {y};
-    \draw[color=zzzzzz] (1.9,1.03) node {x};
-  \end{scriptsize}
-\end{tikzpicture}
+
 \subsection{Umrechnung}
-\subsubsection{Kartesisch $\rightarrow$ Polar}
+\begin{minipage}{0.5\linewidth}
+\textbf{Kartesisch $\rightarrow$ Polar}
 \begin{itemize}
   \item  $r=\sqrt{x^2+y^2}$
   \item $\varphi = \tan(\dfrac{y}{x})$
 \end{itemize}
-\subsubsection{Polar $\rightarrow$ Kartesisch}
+\textbf{Polar $\rightarrow$ Kartesisch}
 \begin{itemize}
   \item $x = r\cdot\cos(\varphi)$
   \item  $y=r\cdot\sin(\varphi)$
 \end{itemize}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+  \definecolor{zzzzzz}{rgb}{0.6,0.6,0.6}
+  \definecolor{ffqqqq}{rgb}{1,0,0}
+  \definecolor{qqzzqq}{rgb}{0,0.6,0}
+  \begin{tikzpicture}[line cap=round,line join=round,x=1.0cm,y=1.0cm]
+    \draw[->,color=black] (-0.2,0) -- (2.64,0);
+    \foreach \x in {,1,2}
+    \draw[shift={(\x,0)},color=black] (0pt,-2pt);
+    \draw[color=black] (2.47,0.04) node [anchor=south west] { x};
+    \draw[->,color=black] (0,-0.29) -- (0,2.63);
+    \draw[color=black] (0.05,2.43) node [anchor=west] { y};
+    \clip(-0.2,-0.29) rectangle (2.64,2.63);
+    \draw [shift={(0,0)},color=ffqqqq,fill=ffqqqq,fill opacity=0.1] (0,0) -- (0:0.41) arc (0:46.48:0.4) -- cycle;
+    \draw [color=qqzzqq] (0,0)-- (2.05,2.16);
+    \draw [color=zzzzzz] (0,2.16)-- (2.05,2.16);
+    \draw [color=zzzzzz] (2.05,2.16)-- (2.05,0);
+    \begin{scriptsize}
+      \fill [color=black] (2.05,2.16) circle (1.5pt);
+      \draw[color=black] (2.12,2.29) node {$P$};
+      \draw[color=qqzzqq] (1.16,1.04) node {r};
+      \draw[color=ffqqqq] (0.5,0.17) node {$\varphi$};
+      \draw[color=zzzzzz] (0.96,2.02) node {y};
+      \draw[color=zzzzzz] (1.9,1.03) node {x};
+    \end{scriptsize}
+  \end{tikzpicture}
+\end{minipage}
+
 
 
 \section{Beispiel einer Funktionsdiskussion}

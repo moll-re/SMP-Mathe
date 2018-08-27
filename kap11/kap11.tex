@@ -19,72 +19,43 @@ Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine soge
 
 \definecolor{lightblu}{rgb}{0,0,0.3}
 \definecolor{lightre}{rgb}{0.3,0,0}
-\begin{tikzpicture}
-    \draw[->,line width=0.8pt] (-5.5,0) -- (5.5,0) node[below] {$x_1$};
-    \draw[->,line width=0.8pt] (0,-5.5) -- (0,5.5) node[right] {$x_2$};
-    \foreach  \x in {-5,...,-1,1,2,...,5}
-        \draw[line width=0.8pt] (\x,0.1) -- (\x,-0.1) node[below] {\x};
-    \foreach  \x in {-5,...,-1,1,2,...,5}
-        \draw[line width=0.8pt] (-0.1,\x) -- (0.1,\x) node[right] {\x};
-    \draw (-0.3,-0.3) node {$O$};
-    \draw[gray,very thin] (-5,-5) grid (5,5);
-    \draw[line width=1.5pt,color=red] (-5,2) ..controls(-2,-4) ..(0,0);
-    \draw[line width=1.5pt,color=red] (0,0) ..controls(2,4) ..(5,5);
-    \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (0.5,0) -- (0.5,2.4) -- (1.25,2.4) -- (1.25,0) -- cycle;
-    \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (1.25,0) -- (1.25,3.5) -- (2,3.5) -- (2,0) -- cycle;
-    \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (2,0) -- (2,4.1) -- (2.75,4.1) -- (2.75,0) -- cycle;
-    \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (2.75,0) -- (2.75,4.5) -- (3.5,4.5) -- (3.5,0) -- cycle;
-    \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (0.5,0) -- (0.5,1) -- (1.25,1) -- (1.25,0) -- cycle;
-    \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (1.25,0) -- (1.25,2.4) -- (2,2.4) -- (2,0) -- cycle;
-    \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (2,0) -- (2,3.5) -- (2.75,3.5) -- (2.75,0) -- cycle;
-    \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (2.75,0) -- (2.75,4.1) -- (3.5,4.1) -- (3.5,0) -- cycle;
-    \draw[line width=1.2pt,color=orange] (0.5,1) -- (0.5,0) node[below] {a};
-    \draw[line width=1.2pt,color=orange] (3.5,4.5) -- (3.5,0) node[below] {b};
-    \draw (1.5,3.8) node {$O_n$};
-    \draw (2.375,2.5) node {$U_n$};
-    \draw[->,line width=0.8pt] (1.5,-7) -- (12.5,-7) node[below] {$x_1$};
-    \draw[->,line width=0.8pt] (7,-12.5) -- (7,-1.5) node[right] {$x_2$};
-    \foreach  \x in {2,...,6,8,9,...,12}
-        \draw[line width=0.8pt] (\x,-6.9) -- (\x,-7.1);
-    \draw (2,-7.1) node[below] {-5};
-    \draw (3,-7.1) node[below] {-4};
-    \draw (4,-7.1) node[below] {-3};
-    \draw (5,-7.1) node[below] {-2};
-    \draw (6,-7.1) node[below] {-1};
-    \draw (8,-7.1) node[below] {1};
-    \draw (9,-7.1) node[below] {2};
-    \draw (10,-7.1) node[below] {3};
-    \draw (11,-7.1) node[below] {4};
-    \draw (12,-7.1) node[below] {5};
-    \foreach  \x in {-12,...,-8,-6,-5,...,-2}
-        \draw[line width=0.8pt] (6.9,\x) -- (7.1,\x);
-    \draw (7.1,-12)[right] node{-5}:
-    \draw (7.1,-11)[right] node{-4}:
-    \draw (7.1,-10)[right] node{-3}:
-    \draw (7.1,-9)[right] node{-2}:
-    \draw (7.1,-8)[right] node{-1}:
-    \draw (7.1,-6)[right] node{1}:
-    \draw (7.1,-5)[right] node{2}:
-    \draw (7.1,-4)[right] node{3}:
-    \draw (7.1,-3)[right] node{4}:
-    \draw (7.1,-2)[right] node{5}:
-    \draw (6.7,-7.3) node {$O$};
-    \draw[gray,very thin] (2,-12) grid (12,-2);
-    \draw[line width=1.5pt,color=blue] (2,-9) ..controls(5,-3) ..(7,-4);
-    \draw[line width=1.5pt,color=blue] (7,-4) ..controls(10,-5) ..(12,-9);
-    \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (7.5,-7) -- (7.5,-4.2) -- (8.25,-4.2) -- (8.25,-7) -- cycle;
-    \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (8.25,-7) -- (8.25,-4.4) -- (9,-4.4) -- (9,-7) -- cycle;
-    \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (9,-7) -- (9,-4.75) -- (9.75,-4.75) -- (9.75,-7) -- cycle;
-    \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (9.75,-7) -- (9.75,-5.25) -- (10.5,-5.25) -- (10.5,-7) -- cycle;
-    \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (7.5,-7) -- (7.5,-4.4) -- (8.25,-4.4) -- (8.25,-7) -- cycle;
-    \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (8.25,-7) -- (8.25,-4.75) -- (9,-4.75) -- (9,-7) -- cycle;
-    \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (9,-7) -- (9,-5.25) -- (9.75,-5.25) -- (9.75,-7) -- cycle;
-    \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (9.75,-7) -- (9.75,-6.2) -- (10.5,-6.2) -- (10.5,-7) -- cycle;
-    \draw[line width=1.2pt,color=orange] (7.5,-4.2) -- (7.5,0-7) node[below] {a};
-    \draw[line width=1.2pt,color=orange] (10.5,-6.2) -- (10.5,-7) node[below] {b};
-    \draw (9.5,-4.4) node {$O_n$};
-    \draw (8.625,-5.6) node {$U_n$};
-    \draw[line width=2pt] (-5,-12) -- (12,5);
+\begin{tikzpicture}[scale=0.7]
+  \draw (-0.3,0.3) node {$O$};
+  \draw[->,line width=0.8pt] (-5.5,0) -- (5.5,0) node[below] {$x_1$};
+  \draw[->,line width=0.8pt] (0,-5.5) -- (0,5.5) node[right] {$x_2$};
+  \draw[line width=1.5pt,color=red] (-5,2) ..controls(-2,-4) ..(0,0);
+  \draw[line width=1.5pt,color=red] (0,0) ..controls(2,4) ..(5,5);
+  \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (0.5,0) -- (0.5,2.4) -- (1.25,2.4) -- (1.25,0) -- cycle;
+  \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (1.25,0) -- (1.25,3.5) -- (2,3.5) -- (2,0) -- cycle;
+  \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (2,0) -- (2,4.1) -- (2.75,4.1) -- (2.75,0) -- cycle;
+  \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (2.75,0) -- (2.75,4.5) -- (3.5,4.5) -- (3.5,0) -- cycle;
+  \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (0.5,0) -- (0.5,1) -- (1.25,1) -- (1.25,0) -- cycle;
+  \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (1.25,0) -- (1.25,2.4) -- (2,2.4) -- (2,0) -- cycle;
+  \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (2,0) -- (2,3.5) -- (2.75,3.5) -- (2.75,0) -- cycle;
+  \draw[line width=0.8pt,fill=lightblu,fill opacity=0.2] (2.75,0) -- (2.75,4.1) -- (3.5,4.1) -- (3.5,0) -- cycle;
+  \draw[line width=1.2pt,color=orange] (0.5,1) -- (0.5,0) node[below] {a};
+  \draw[line width=1.2pt,color=orange] (3.5,4.5) -- (3.5,0) node[below] {b};
+  \draw (1.5,3.8) node {$O_n$};
+  \draw (2.375,2.5) node {$U_n$};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=0.7]
+  \draw[->,line width=0.8pt] (1.5,-7) -- (12.5,-7) node[below] {$x_1$};
+  \draw[->,line width=0.8pt] (7,-12.5) -- (7,-1.5) node[right] {$x_2$};
+  \draw (6.7,-7.3) node {$O$};
+  \draw[line width=1.5pt,color=blue] (2,-9) ..controls(5,-3) ..(7,-4);
+  \draw[line width=1.5pt,color=blue] (7,-4) ..controls(10,-5) ..(12,-9);
+  \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (7.5,-7) -- (7.5,-4.2) -- (8.25,-4.2) -- (8.25,-7) -- cycle;
+  \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (8.25,-7) -- (8.25,-4.4) -- (9,-4.4) -- (9,-7) -- cycle;
+  \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (9,-7) -- (9,-4.75) -- (9.75,-4.75) -- (9.75,-7) -- cycle;
+  \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (9.75,-7) -- (9.75,-5.25) -- (10.5,-5.25) -- (10.5,-7) -- cycle;
+  \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (7.5,-7) -- (7.5,-4.4) -- (8.25,-4.4) -- (8.25,-7) -- cycle;
+  \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (8.25,-7) -- (8.25,-4.75) -- (9,-4.75) -- (9,-7) -- cycle;
+  \draw[line width=0.8pt,fill=lightre,fillre opacity=0.2] (9,-7) -- (9,-5.25) -- (9.75,-5.25) -- (9.75,-7) -- cycle;
+  \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (9.75,-7) -- (9.75,-6.2) -- (10.5,-6.2) -- (10.5,-7) -- cycle;
+  \draw[line width=1.2pt,color=orange] (7.5,-4.2) -- (7.5,0-7) node[below] {a};
+  \draw[line width=1.2pt,color=orange] (10.5,-6.2) -- (10.5,-7) node[below] {b};
+  \draw (9.5,-4.4) node {$O_n$};
+  \draw (8.625,-5.6) node {$U_n$};
 \end{tikzpicture}
 
 \begin{Bemerkung}
@@ -121,24 +92,16 @@ Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine soge
   \end{minipage}
 \end{Bemerkung}
 \subsection{Sätze über Integrale}
-Layout muss noch angepasst werden\\
 \begin{Theorem}
-  \begin{minipage}{0.6\textwidth}
-    \begin{align*}
-      \int_a^b f(x)dx &= -\int_b^a f(x)dx\\\\
-      \int_a^b (f(x)+g(x))dx &= \int_a^b f(x)dx + \int_a^b g(x)dx\\\\
-      \int_a^b r*f(x)dx &= r*\int_a^b f(x)dx\\\\
-      \int_a^b f(x)dx + \int_b^c f(x)dx &= \int_a^c f(x)dx
-    \end{align*}
-  \end{minipage}
-  \begin{minipage}{0.4\textwidth}
-    \\\\\\
-    Invertieren der Intergrationsgrenzen\\\\\\\\
-    Summenregel\\\\\\\\
-    Linearität\\\\\\\\
-    Abschnittweise Integration
-  \end{minipage}
+\begin{center}
+  \begin{tabular}{r c l l}
+    \( \displaystyle\int_a^b f(x)dx\) & $=$ &  -\( \displaystyle\int_b^a f(x)dx\) & Invertieren der Intergrationsgrenzen \\
+    \( \displaystyle\int_a^b (f(x)+g(x))dx \) & $=$ &  \( \displaystyle\int_a^b f(x)dx + \int_a^b g(x)dx\) & Summenregel\\
+    \( \displaystyle\int_a^b r*f(x)dx\)  & $=$ &  r*\( \displaystyle\int_a^b f(x)dx\) & Linearität\\
+    \( \displaystyle\int_a^b f(x)dx +\int_b^c f(x)dx\)  & $=$ &  \( \displaystyle\int_a^c f(x)dx\) & Abschnittweise Integration
+\end{tabular}
 
+\end{center}
 \end{Theorem}
 Invertieren der Intergrationsgrenzen:
 \begin{Beweis}
@@ -167,51 +130,48 @@ Abschnittweise Integration:
 \begin{Beweis}
   Es reicht, $m \leq f(t) \leq M$ als Ungleichung zwischen $a$ und $b$ zu integrieren.
 \end{Beweis}
-
-\begin{center}
+\begin{minipage}{0.5\linewidth}
+  \begin{Bemerkung}
+    Eine Konsequenz davon ist, dass falls $|f(t)|\leq M \; \forall t \in [a;b]$, dann gilt:
+    $$\left|\int_a^b f(t)dt \right| \leq M(|b-a|)$$
+  \end{Bemerkung}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+  \begin{center}
     \definecolor{lightblu}{rgb}{0,0,0.3}
     \definecolor{blu}{rgb}{0,0.3,0.3}
     \definecolor{lightgree}{rgb}{0,0.3,0}
     \definecolor{gree}{rgb}{0.1,0.3,0}
-    \begin{tikzpicture}
-        \draw[gray,very thin] (-5,-5) grid (5,5);
-
+    \begin{tikzpicture}[scale=0.50]
         \draw[->,line width=0.8pt] (-5.5,0) -- (5.5,0) node[below] {$x_1$};
         \draw[->,line width=0.8pt] (0,-5.5) -- (0,5.5) node[right] {$x_2$};
-        \foreach  \x in {-5,...,-1,1,2,...,5}
-            \draw[line width=0.8pt] (\x,0.1) -- (\x,-0.1) node[below] {\x};
-        \foreach  \x in {-5,...,-1,1,2,...,5}
-            \draw[line width=0.8pt] (-0.1,\x) -- (0.1,\x) node[right] {\x};
-
         \draw[line width=0.1pt,color=blu,fill=blu,fill opacity=0.3] (-2.5,0) -- (-2.5,3) -- (3.5,3) -- (3.5,0) -- cycle;
         \draw[line width=0.1pt,color=gree,fill=gree,fill opacity=0.3] (-2.5,0) -- (-2.5,-4) -- (3.5,-4) -- (3.5,0) -- cycle;
         \draw[line width=0.1pt,color=lightblu,fill=lightblu,fill opacity=0.3] (-2.5,0) -- (-2.5,-3.32) ..controls(-1.71,-3.25) ..(0,0) -- cycle;
         \draw[line width=0.1pt,color=lightgree,fill=lightgree,fill opacity=0.3] (0,0) ..controls(1.8,2.7) ..(3.5,2.5) -- (3.5,0) -- cycle;
-
         \draw[line width=1.5pt,color=red] (-5,-2) ..controls(-2,-4) ..(0,0);
         \draw[line width=1.5pt,color=red] (0,0) ..controls(2,3) ..(5,2);
-
         \draw[line width=1.5pt,color=blue] (-5,3) -- (5,3);
         \draw[line width=1.5pt,color=blue] (-5,-4) -- (5,-4);
-
         \draw[line width=1.2pt,color=orange] (-2.5,-3.32) -- (-2.5,0) node[above] {a};
         \draw[line width=1.2pt,color=orange] (3.5,2.5) -- (3.5,0) node[below] {b};
-
         \draw (-0.3,-0.3) node {$O$};
         \draw[line width=0.8pt,color=lightblu] (-1.5,-1.3) node {$A$};
         \draw[line width=0.8pt,color=lightgree] (2.3,1.2) node {$B$};
-
         \draw[line width=0.8pt,color=red] (1,2) node {$K$};
         \draw[line width=0.8pt,color=blue] (-3,3.3) node {$M$};
         \draw[line width=0.8pt,color=blue] (3,-3.7) node {$m$};
     \end{tikzpicture}
-\end{center}
+  \end{center}
+\end{minipage}
 
-\begin{Bemerkung}
-  Eine Konsequenz davon ist, dass falls $|f(t)|\leq M \; \forall t \in [a;b]$, dann gilt:
-  $$\left|\int_a^b f(t)dt \right| \leq M(|b-a|)$$
-\end{Bemerkung}
+Außerdem:
+\begin{Definition}
+  Für eine auf $[a;b]$ stetige Funktion $f$ mit $a \neq b$ gilt: Der Mittelwert von $f$ auf $[a;b]$ ist gegeben durch $$\mu = \dfrac{1}{b-a} \int_a^b f(t)dt$$
+\end{Definition}
+
 \subsection{Integrationsregeln}
+
 \subsubsection{Partielle Integration}
 \begin{Theorem}
   Seien $u$ und $v$ zwei stetig differenzierbare Funktionen im Intervall $I$ und $u'$
@@ -235,55 +195,6 @@ Nachweisen u, v diffbar und u', v' stetig (kommt noch in sauber)\\
   &= -x\cos(x) + \sin(x)
 \end{align*}
 \end{Beispiel}
-\subsubsection{Substitution}
-Es soll die Stammfunktion von $x(1-x^2)^9$ bestimmt werden. Hier wäre zum
-Ableiten die Kettenregel und die Produktregel nötig, beides gibt es aber in
-reiner Form beim Integrieren nicht. Man kann aber häufig durch geschickte
-Substitution das Integral auf eine Form bringen, für die dann eine
-Stammfunktion angegeben werden kann. Der wesentliche Punkt dabei ist, dass
-nicht nur $x$ sondern auch $\dD x$ der Substitution unterworfen werden muss.
-
-In diesem Beispiel setzen wir $u=1-x^2$. Dann ist $\dD u=u'(x)\dD x=-2x\dD x$.
-Somit ist $\dD x=-\dD u/2x$. Nun geht's los:
-\[
-\int x(1-x^2)^9\dD x=\int x u^9 \frac{-1}{2x}\dD u
-=-\frac{1}{2}\int u^9\dD u=-\frac{1}{20}u^{10}=-\frac{1}{20}(1-x^2)^{10}
-\]
-
-Hätten wir hier die Stammfunktion nicht benötigt, sondern nur den Wert eines
-bestimmten Integrals, dann hätte man sich die Rücksetzung sparen können, indem
-man die Grenzen auf die neue Variable umschreibt:
-\[
-\int_{x=0}^1 x(1-x^2)^9\dD x=-\frac{1}{2}\int_{u=1}^0u^9\dD u
-=-\frac{1}{20}\left[u^{10}\right]_1^0=-\frac{1}{20}(0-1)=\frac{1}{20}
-\]
-
-In diesem Beispiel haben wir einen Teilausdruck des Integrals gleich $u$
-gesetzt. Im folgenden Beispiel machen wir es anders herum und setzen $x$
-gleich einer Funktion von $u$. Es soll die Fläche einer Ellipse berechnet
-werden. Für den oberen Ellipsenbogen gilt die Gleichung (Auflösen der
-Mittelpunktsform~\eqref{eq:7} nach $y$):
-\[
-y=\frac{b}{a}\sqrt{a^2-x^2}
-\]
-Die Fläche unter dem oberen Ellipsenbogen ist die halbe Ellipsenfläche und
-berechnet sich so:
-\[
-A=\int\limits_{x=-a}^a \frac{b}{a}\sqrt{a^2-x^2}\,\dD x=
-\int\limits_{u=-\frac{\pi}{2}}^{\frac{\pi}{2}}
-\frac{b}{a}\sqrt{a^2-a^2\sin^2u}\,a\cos u\,\dD u=
-\int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}}ab\cos^2u\,\dD u
-\]
-Dabei hat man $x=a\sin u$ gesetzt, dann wird $\dD x=a\cos u \dD u$. Nun muss
-man nur noch die Stammfunktion von $\cos^2u$ ermitteln. Dazu kann man etwa die
-Beziehung $\cos2u=2\cos^2u-1$ heranziehen, also
-$\cos^2u=\frac{1}{2}(1+\cos2u)$. Diese hat die Stammfunktion
-$\frac{1}{2}(u+\sin u\cos u)$. Damit bekommt man für die Fläche:
-\[
-A=\frac{ab}{2}\left[u+\sin u\cos u\right]_{-\frac{\pi}{2}}^{+\frac{\pi}{2}}=
-\frac{ab}{2}[(\frac{\pi}{2}+0)-(-\frac{\pi}{2}+0)]=\frac{1}{2}\pi a b
-\]
-Die gesamte Fläche der Ellipse ist doppelt so groß, also $\pi a b$.
 
 \subsubsection{Partialbruchzerlegung}
 Die Partialbruchzerlegung ist ein allgemeines Verfahren zur Integration
@@ -387,8 +298,7 @@ Insbesondere ist dann (rechne das nach!)
 \end{align*}
 \subsubsection{Integrale von $e$-Funktionen}
 \begin{Theorem}
-  Für $f(x)=e^{l(x)}$ mit $l(x) = ax+b$ gilt:\\
-  $F(x) = \dfrac{1}{a}e^{l(x)}$
+  Für $f(x)=e^{l(x)}$ mit $l(x) = ax+b$ gilt:$F(x) = \dfrac{1}{a}e^{l(x)}$
 \end{Theorem}
 \begin{Beweis}
   Not yet... ;((
@@ -400,24 +310,31 @@ Insbesondere ist dann (rechne das nach!)
 \begin{Beweis}
   Der Beweis erfolgt über partielle Integration und wird dem Schüler als Übung überlassen.
 \end{Beweis}
-\subsubsection{Integrale von periodischen Funktionen}
+\subsubsection{Integrale von geraden Funktionen}
 \begin{Theorem}
-  Für jede auf $\R$ stetige und periodische Funktion $f$ gilt:\\\\
-  $\int_a^{a+T} f(x)dx$ ist unabhängig von $a$ und $\int_a^{a+T} f(x)dx = \int_0^{T} f(x)dx$
+  Sei $f$ eine auf einem Intervall $I$ stetige und auf $0$ zentrierte Funktion. Wenn $f$ gerade ist, gilt für alle $a\in \R$:
+  $\displaystyle{\int_{-a}^{a} f(t)dt = 2\int_{0}^{a} f(t)dt } $, und wenn $f$ ungerade ist
+  $\( \displaystyle\int_{-a}^{a} f(t)dt = 0 \) $
 \end{Theorem}
 \begin{Beweis}
-  Patience...
+  Sei die Funktion $\varphi(x) = \( \displaystyle\int_{-x}^{x}f(t)dt = F(x)-F(-x)$ mit $F$, einer Stammfunktion von $f$. Also ist $\varphi$ auf
+  $I = [-x;x]$ differenzierbar und $\varphi'(x) = F'(x)-F'(-x)=f(x)+f(-x)$.\\
+  Wenn $f$ auf $I$ ungerade ist, gilt: $\varphi'(x) = 0$ und somit konstant (und außerdem $=\varphi(x)$) auf $I$, was $\( \displaystyle\int_{-a}^{a} f(t)dt = 0$ beweist.\\
+  Wenn $f$ gerade ist, gilt: $\varphi'(x) = 2f(x)$. Also gilt für $\varphi(x)=\displaystyle{\int_0^x 2f(t)dt}$, einer Stammfunktion von $2f(x)$,  $\varphi(0)=0$, was $\displaystyle{\int_{-a}^{a} f(t)dt = 2\int_{0}^{a} f(t)dt }$ beweist.
+\end{Beweis}
+\subsubsection{Integrale von periodischen Funktionen}
+\begin{Theorem}
+  Für jede auf $\R$ stetige und periodische Funktion $f$ gilt:
+  \begin{center}
+  \( \displaystyle\int_a^{a+T} f(x)dx\) ist unabhängig von $a$ und \( \displaystyle\int_a^{a+T} f(x)dx = \int_0^{T} f(x)dx\)
+  \end{center}
+\end{Theorem}
+\begin{Beweis}
+  Sei die Funktion $\varphi = \displaystyle{\int_x^{x+T} f(t)dt}=F(x+T)-F(x)$ mit $F$, einer Stammfunktion von $f$. Dann ist
+  $\varphi(x)$ auf $f$ differenzierbar und $\varphi'(x)=F'(x+T)-F'(x) = f(x+T)-f(x)=0$ (denn $f$ hat die Periode $T$). Also ist $\varphi(x)$ auf $\R$ konstant. Daraus folgt, dass $\displaystyle{\int_a^{a+T}f(t)dt}$ nicht von $a$ abhängt und dass $\displaystyle{\int_a^{a+T} f(x)dx = \int_0^{T} f(x)dx}$.
 \end{Beweis}
 
-\subsection{Merkenswerte Integrale}
-\begin{align*}
-  \int x^n dx&=\frac{x^{n+1}}{n+1}\\
-  \int\sin x dx&= -\cos x\\
-  \int\cos x dx&= \sin x\\
-  \int\frac{ dx}{\cos^2x}&= \tan x\\
-  \int\frac{1}{x} dx&= \ln(|x|)\\
-\end{align*}
-ln, e^x, usw.
+
 
 \section{Flächen und Volumen mit Integralen berechnen}
 \subsection{Fläche zwischen einer Funktion und der $x_1$-Achse}
@@ -427,30 +344,21 @@ ln, e^x, usw.
   der $x_1$-Achse im Intervall $[a;b]$ gegeben durch:
   $$A= \left|{\int_a^{x_1} f(x)dx}\right|+\left|{\int_{x_1}^{x_2} f(x)dx}\right|+...+\left|{\int_{x_{n-1}}^{x_n} f(x)dx}\right|+\left|{\int_{x_n}^b f(x)dx}\right|$$
 \end{Definition}
-Bildhaft sieht das folgendermaßen aus:\\
+Bildhaft sieht das folgendermaßen aus:
 \begin{center}
     \definecolor{lightblu}{rgb}{0,0,0.3}
     \definecolor{lightgree}{rgb}{0,0.3,0}
     \begin{tikzpicture}
-        \draw[gray,very thin] (-5,-5) grid (5,5);
-
         \draw[->,line width=0.8pt] (-5.5,0) -- (5.5,0) node[below] {$x_1$};
         \draw[->,line width=0.8pt] (0,-5.5) -- (0,5.5) node[right] {$x_2$};
-        \foreach  \x in {-5,...,-1,1,2,...,5}
-            \draw[line width=0.8pt] (\x,0.1) -- (\x,-0.1) node[below] {\x};
-        \foreach  \x in {-5,...,-1,1,2,...,5}
-            \draw[line width=0.8pt] (-0.1,\x) -- (0.1,\x) node[right] {\x};
 
         \draw[line width=0.1pt,color=lightblu,fill=lightblu,fill opacity=0.3] (-2.5,0) -- (-2.5,-2.5) ..controls(-1.62,-3.072) ..(0,0) -- cycle;
         \draw[line width=0.1pt,color=lightgree,fill=lightgree,fill opacity=0.3] (0,0) ..controls(1.94,3.78) ..(3.5,4.5) -- (3.5,0) -- cycle;
-
         \draw[line width=1.5pt,color=red] (-5,2) ..controls(-2,-4) ..(0,0);
         \draw[line width=1.5pt,color=red] (0,0) ..controls(2,4) ..(5,5);
-
         \draw[line width=1.2pt,color=orange] (-2.5,-2.5) -- (-2.5,0) node[above] {a};
         \draw[line width=1.2pt,color=orange] (0,-0.2) node[right] {$x_1$};
         \draw[line width=1.2pt,color=orange] (3.5,4.5) -- (3.5,0) node[below] {b};
-
         \draw[line width=1.2pt,color=orange] (-2.5,-1.5) -- (-1,0);
         \draw[line width=1.2pt,color=orange] (-2.5,-0.5) -- (-2,0);
         \draw[line width=1.2pt,color=orange] (-2.5,-2.5) -- (3.5,3.5);
@@ -458,7 +366,6 @@ Bildhaft sieht das folgendermaßen aus:\\
         \draw[line width=1.2pt,color=orange] (2,0) -- (3.5,1.5);
         \draw[line width=1.2pt,color=orange] (3,0) -- (3.5,0.5);
         \draw[line width=1.2pt,color=orange] (1,2) -- (3.5,4.45);
-
         \draw[line width=1.2pt,color=black] (5.5,-2) -- (7.5,-2) -- (7.5,-3) -- (5.5,-3) -- cycle;
         \draw[line width=1.2pt,color=orange] (5.5,-3) -- (6.5,-2);
         \draw[line width=1.2pt,color=orange] (6.5,-3) -- (7.5,-2);
@@ -468,7 +375,6 @@ Bildhaft sieht das folgendermaßen aus:\\
         \draw[line width=3pt] (7.8,-2.5) node {:};
         \draw[line width=2pt] (9,-2.5) node {$\textcolor{orange}{C} = \textcolor{lightblue}{A} + \textcolor{lightgree}{B}$};
         \draw[line width=2pt] (10.75,-3) node {$ = |{\int_{\textcolor{orange}{a}}^{\textcolor{orange}{x_1}} f(x)dx}| + |{\int_{\textcolor{orange}{x_1}}^{\textcolor{orange}{b}} f(x)dx}|$};
-
         \draw (-0.3,-0.3) node {$O$};
         \draw[line width=0.8pt,color=lightblu] (-1.5,-1.1) node {$A$};
         \draw[line width=0.8pt,color=lightgree] (2.3,1.9) node {$B$};
@@ -494,7 +400,7 @@ Bildhaft sieht das folgendermaßen aus:\\
   $\\
   Also gilt:\\
   \begin{align*}
-    A_{-1}^{1} &= \left|\int_{-1}^0 x^2-2x^3 dx\right| + \left|\int_{0}^{\dfrac{1}{2}} x^2-2x^3 dx\right| + \left|\int_{\dfrac{1}{2}}^1 x^2-2x^3 dx\right|\\
+    A_{-1}^{1} &= \left|\int_{-1}^0 x^2-2x^3 dx\right| + \left|\int_{0}^{0.5} x^2-2x^3 dx\right| + \left|\int_{0.5}^1 x^2-2x^3 dx\right|\\
     &= \left|\left[\dfrac{1}{3}x^3-\dfrac{1}{2}x^4\right]_{-1}^0\right| + \left|\left[\dfrac{1}{3}x^3-\dfrac{1}{2}x^4\right]_{0}^{0.5}\right| + \left|\left[\dfrac{1}{3}x^3-\dfrac{1}{2}x^4\right]_{0.5}^1\right|\\
     &= \left|0-\left(-\dfrac{1}{3}-\dfrac{1}{2}\right)\right| + \left|\dfrac{1}{24}-\dfrac{1}{32}-0\right| + \left|\dfrac{1}{3}-\dfrac{1}{2}- \left(\dfrac{1}{24}-\dfrac{1}{32}\right)\right|\\
     &= 1 + \dfrac {1}{12} - \dfrac{1}{16}\\
@@ -509,32 +415,20 @@ Bildhaft sieht das folgendermaßen aus:\\
     \definecolor{lightblu}{rgb}{0,0,0.3}
     \definecolor{lightgree}{rgb}{0,0.3,0}
     \begin{tikzpicture}
-        \draw[gray,very thin] (-5,-5) grid (5,5);
-
         \draw[->,line width=0.8pt] (-5.5,0) -- (5.5,0) node[below] {$x_1$};
         \draw[->,line width=0.8pt] (0,-5.5) -- (0,5.5) node[right] {$x_2$};
-        \foreach  \x in {-5,...,-1,1,2,...,5}
-            \draw[line width=0.8pt] (\x,0.1) -- (\x,-0.1) node[below] {\x};
-        \foreach  \x in {-5,...,-1,1,2,...,5}
-            \draw[line width=0.8pt] (-0.1,\x) -- (0.1,\x) node[right] {\x};
-
         \draw[line width=0.1pt,color=lightblu,fill=lightblu,fill opacity=0.3] (-2.5,0) -- (-2.5,2.43) ..controls(-1.59,3.21) ..(0,0) -- cycle;
         \draw[line width=0.1pt,color=lightgree,fill=lightgree,fill opacity=0.3] (0,0) ..controls(1.94,3.78) ..(3.5,4.5) -- (3.5,0) -- cycle;
-
         \draw[line width=1.5pt,color=red] (-5,2) ..controls(-2,-4) ..(0,0);
         \draw[line width=1.5pt,color=red] (0,0) ..controls(2,4) ..(5,5);
-
         \draw[line width=1.5pt,color=red] (-4,0) ..controls(-1.8,3.8) ..(0,0);
         \draw[line width=7pt,color=white,dashed] (-4,0) ..controls(-1.8,-3.8) ..(0,0);
         % Repair the damage caused by the line above
-
         \draw[line width=0.8pt] (-4,0) -- (-3.85,0);
         \draw[line width=0.8pt] (0,-0.05) -- (0,-0.3);
-
         \draw[line width=1.2pt,color=orange] (-2.5,2.4) -- (-2.5,0) node[below] {a};
         \draw[line width=1.2pt,color=orange] (0,-0.2) node[right] {$x_1$};
         \draw[line width=1.2pt,color=orange] (3.5,4.5) -- (3.5,0) node[below] {b};
-
         \draw[line width=1.2pt,color=orange] (-2.5,0.5) -- (-1,2);
         \draw[line width=1.2pt,color=orange] (-2.5,1.5) -- (-1.4,2.6);
         \draw[line width=1.2pt,color=orange] (-2,0) -- (-0.65,1.35);
@@ -544,7 +438,6 @@ Bildhaft sieht das folgendermaßen aus:\\
         \draw[line width=1.2pt,color=orange] (2,0) -- (3.5,1.5);
         \draw[line width=1.2pt,color=orange] (3,0) -- (3.5,0.5);
         \draw[line width=1.2pt,color=orange] (1,2) -- (3.5,4.45);
-
         \draw[line width=1.2pt,color=black] (5.5,-2) -- (7.5,-2) -- (7.5,-3) -- (5.5,-3) -- cycle;
         \draw[line width=1.2pt,color=orange] (5.5,-3) -- (6.5,-2);
         \draw[line width=1.2pt,color=orange] (6.5,-3) -- (7.5,-2);
@@ -555,18 +448,18 @@ Bildhaft sieht das folgendermaßen aus:\\
         \draw[line width=2pt] (9,-2.5) node {$\textcolor{orange}{C} = \textcolor{lightblue}{A} + \textcolor{lightgree}{B}$};
         \draw[line width=2pt] (10.57,-3.05) node {$ = {\int_{\textcolor{orange}{a}}^{\textcolor{orange}{x_1}} f(x)dx} + {\int_{\textcolor{orange}{x_1}}^{\textcolor{orange}{b}} f(x)dx}$};
         \draw[line width=2pt] (9.47,-3.6) node {$ = {\int_{\textcolor{orange}{a}}^{\textcolor{orange}{b}} f(x)dx}$};
-
         \draw (-0.3,-0.3) node {$O$};
         \draw[line width=0.8pt,color=lightblu] (-1.5,1.1) node {$A$};
         \draw[line width=0.8pt,color=lightgree] (2.3,1.9) node {$B$};
-
         \draw[line width=0.8pt,color=red] (1.45,4.05) node{"$ $};
         \draw[line width=0.8pt,color=red] (1.8,4) node {$|K|$};
         \draw[line width=0.8pt,color=red] (2.15,4.05) node{"$ $};
     \end{tikzpicture}
 \end{center}
 \subsection{Fläche zwischen zwei Funktionen}
-
+\begin{Theorem}
+  Für zwei auf $[a;b]$ stetige Funktionen $f$ und $g$ gilt: Die Fläche zwischen ihren Schaubildern $C_f$ und $C_g$ ist gegeben durch: $\( \displaystyle \int_a^b (g(x)-f(x))dx$\).
+\end{Theorem}
 \subsection{Volumenangaben mittels Integralen}
 \begin{Definition}
   Man betrachtet einen Körper, der durch zwei parallele Ebenen mit den Gleichungen $x_3 = a$ und $x_3 = b$ begrenzt wird.
@@ -574,23 +467,37 @@ Bildhaft sieht das folgendermaßen aus:\\
   Schnitts des Körpers durch $P_z$. Ist $S$ stetig, so ist ist das Volumen $V$ des Körpers gegeben durch:
   $$V=\int_a^b S(z)dz$$
   Daraus folgt, dass ein Körper, der durch die Rotation der Kurve von $f$ um eine Achse entsteht, ein Volumen von
-  $$\int_a^b \pi f^2(z)dz$$
+  \( \displaystyle\int_a^b \pi f^2(z)dz\)
   hat.\\
   Tatsächlich ist die Fläche eines zu $(O_z)$ parallelen Querschnitts die der Scheibe mit Radius $f(z)$.
 \end{Definition}
 Unklar, ich weiß. (Ich habe es selbst noch nicht verstanden)
 \section{Uneigentliche Integrale}
 \begin{Definition}
-  Ist die Funktion $f$ auf $[a;+\infty)$ stetig und existiert der Grenzwert $\lim\limits_{Z \rightarrow \infty} \int_a^Z f(x)dx$,
+  Ist die Funktion $f$ auf $[a;+\infty)$ stetig und existiert der Grenzwert \( \displaystyle\lim\limits_{Z \rightarrow \infty} \int_a^Z f(x)dx\),
   so heißt dieser Grenzwert \emph{uneigentliches Integral} von $f$ über $[a;+\infty)$.\\
-  Schreibweise: $\int_a^{+\infty} f(x)dx$\\
-  Analog dazu spricht man von einem uneigentlichen Integral für $\int_{-\infty}^b f(x)dx$
+  Schreibweise: \( \displaystyle\int_a^{+\infty} f(x)dx\)\\
+  Analog dazu spricht man von einem uneigentlichen Integral für \( \displaystyle\int_{-\infty}^b f(x)dx\)
 \end{Definition}
 \begin{Beispiel}
   $f(x)=\dfrac{-3}{x^3}$\\
-  $A(z)=\int_z^{-2} \dfrac{-3}{x^3} dx = [\dfrac{3}{2}x^{-2}]_z^{-2} = \dfrac{3}{8}-\dfrac{3}{2}z^{-2}$
+  \( \displaystyle A(z)=\int_z^{-2} \dfrac{-3}{x^3} dx = \left[\dfrac{3}{2}x^{-2}\right]_z^{-2} = \dfrac{3}{8}-\dfrac{3}{2}z^{-2}\)\\
   $\lim \limits_{z \rightarrow \infty} \dfrac{3}{8}-\dfrac{3}{2}z^{-2} = \dfrac{3}{8}$
 \end{Beispiel}
 \begin{Bemerkung}
 Für Funktionen wie $f(x)= \dfrac{1}{\sqrt x}$ existiert kein Uneigentliches Integral.\\Stimmt nicht, sieht aber als Platzhalter gut aus.
 \end{Bemerkung}
+
+\section{Merkenswerte Integrale}
+Hier eine (möglicherweise unvollständige) rückblickende Liste mit Integralen, die insbesondere zum Abitur beherrscht werden sollten.\\
+Diese sollten ohne weitere Rechtfertigung oder Beweis verwendet werden dürfen.
+\begin{align*}
+  \int x^n dx&=\frac{x^{n+1}}{n+1} + C\\
+  \int\sin x dx&= -\cos x + C\\
+  \int\cos x dx&= \sin x + C\\
+  \int\frac{ dx}{\cos^2x}&= \tan x + C\\
+  \int\frac{1}{x} dx&= \ln(|x|) + C\\
+  \int\frac{1}{\sqrt{x}}dx &= 2\sqrt{x} + C\\
+
+\end{align*}
+ln, e^x, usw.
