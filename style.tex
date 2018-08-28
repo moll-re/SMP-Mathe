@@ -20,6 +20,9 @@
   }}
 
 
+% Mathe ganz links
+\setlength{\mathindent}{0pt}		
+
 %Beweis:
 \newenvironment{Beweis}
   {\begin{tcolorbox}[colback=gray!5!white,colframe=gray!70!black,opacityframe=0.5, opacitybacktitle=0.5,sharpish corners,boxrule=0pt,frame hidden,title=Beweis,breakable,break at=23cm,pad at break=1mm,]}
@@ -106,13 +109,13 @@
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
-\newcommand{\zz}{\mathrm{Z\kern-.3em\raise-0.5ex\hbox{Z}}}   % "zu zeigen"-Zeichen Quelle: http://www.matheboard.de/archive/155832/thread.html
+\newcommand{\zz}{\mathrm{Z\kern-.3em\raise-0.5ex\hbox{Z}}}   % "zu zeigen"-Zeichen mit \zz Quelle: http://www.matheboard.de/archive/155832/thread.html
 \newcommand\danger[1][2ex]{%
   \renewcommand\stacktype{L}%
   \scaleto{\stackon[1.3pt]{\color{red}$\triangle$}{\tiny !}}{#1}   % Achtung Zeichen mit \danger
 }
 
-
+\DeclareMathOperator{\ld}{ld}			%Logarithmus dualis als "operator" angesehen mit \ld
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Für den Titel:
