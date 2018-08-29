@@ -21,7 +21,7 @@
 
 
 % Mathe ganz links
-\setlength{\mathindent}{0pt}		
+\setlength{\mathindent}{0pt}
 
 %Beweis:
 \newenvironment{Beweis}
@@ -116,7 +116,9 @@
 }
 
 \DeclareMathOperator{\ld}{ld}			%Logarithmus dualis als "operator" angesehen mit \ld
-
+\newcommand{\logEqL}{\ratio\Leftrightarrow}  %(Linke Seite)"Per definitionem äquivalent zu" (Ist halt die Frage, ob ich das richtig nutze)
+\newcommand{\logEqR}{\Leftrightarrow\ratio}  %(Rechte Seite)"Per definitionem äquivalent zu"
+\newcommand{\definedBy}{\ratio=}             %Linke Seite wird definiert zu / durch rechte Seite
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Für den Titel:
 \renewcommand\epigraphflush{flushright}

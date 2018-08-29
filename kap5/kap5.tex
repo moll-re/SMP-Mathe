@@ -164,13 +164,9 @@
 
     \subsection{Orientierte Winkel}
 
-        \begin{minipage}{0.5\textwidth}\paragraph{}
-             Wenn man in der Mathematik mit Winkeln arbeitet, werden sie immer im \textbf{mathematisch positiven} Sinn angegeben.
-             Dies bedeutet, dass man von einem Vektor oder Schenkel, der an den Winkel grenzt, ausgeht und über Rotation um den Schnittpunkt \glqq gegen
-             den Uhrzeigersinn\grqq zum anderen gelangt, bis beide übereinanderliegen (wenn man davon ausgeht, dass sich beide schneiden).
-             So ergibt sich $\alpha = \angle ABC = \angle ac = (\vv{BA},\vv{BC}) = \frac{\pi}{3}$
-        \end{minipage}
-        \begin{minipage}{0.5\textwidth}\paragraph{}
+        \paragraph{} Wenn man in der Mathematik mit Winkeln arbeitet, werden sie immer im \textbf{mathematisch positiven} Sinn angegeben.
+        Dies bedeutet, dass man von einem Vektor oder Schenkel,
+        \begin{wrapfigure}[14]{r}{0.4\textwidth}
             \definecolor{qqwuqq}{rgb}{0,0.4,0}
             \definecolor{ududff}{rgb}{0.3,0.3,1}
             \begin{tikzpicture}[>=triangle 45]
@@ -188,10 +184,10 @@
                 \draw[color=black] (2.6,-1.7) node {$c$};
                 \draw[color=black] (2.6,1.7) node {$a$};
             \end{tikzpicture}
-        \end{minipage}
-
-        \\
-        \begin{minipage}{0.5\textwidth}\paragraph{}
+        \end{wrapfigure}
+        der an den Winkel grenzt, ausgeht und über Rotation um den Schnittpunkt \glqq gegen
+        den Uhrzeigersinn\grqq zum anderen gelangt, bis beide übereinanderliegen (wenn man davon ausgeht, dass sich beide schneiden).
+        \begin{wrapfigure}[14]{l}{0.4\textwidth}
             \definecolor{ududff}{rgb}{0.3,0.3,1}
             \definecolor{adadff}{rgb}{0.8,0.8,0}
             \begin{tikzpicture}[>=triangle 45]
@@ -209,12 +205,10 @@
                 \draw[color=black] (2.6,-1.7) node {$c$};
                 \draw[color=black] (2.6,1.7) node {$a$};
             \end{tikzpicture}
-        \end{minipage}
-        \begin{minipage}{0.5\textwidth}\paragraph{}
-            Ein Winkel $\alpha$ wird zudem immer so angegeben, dass $\alpha\in I; I = [-\pi,\pi]$ gilt.
-            Dies bedeutet, dass man nur Winkel zwischen $0°$ und $180°$ erhält, und das in beide \glqq Richtungen\grqq, als im mathematisch positiven und negativen Sinn.
-            Diese Einschränkung kennzeichnet man mit dem Ausdruck \glqq \textbf{modulo $2\pi$}\grqq.
-        \end{minipage}
+        \end{wrapfigure}
+        So ergibt sich $\alpha = \angle ABC = \angle ac = (\vv{BA},\vv{BC}) = \frac{\pi}{3}$. Ein Winkel $\alpha$ wird zudem immer so angegeben, dass $\alpha\in I; I = [-\pi,\pi]$ gilt.
+        Dies bedeutet, dass man nur Winkel zwischen $0°$ und $180°$ erhält, und das in beide \glqq Richtungen\grqq, als im mathematisch positiven und negativen Sinn.
+        Diese Einschränkung kennzeichnet man mit dem Ausdruck \glqq \textbf{modulo $2\pi$}\grqq.
 
 
     \subsection{Rechnungen mit Winkeln}
@@ -363,16 +357,10 @@
 
 \section{Skalarprodukt}
 
-    \begin{minipage}{0.45\textwidth}
-        \paragraph{} Das Skalarprodukt dient dazu ein Maß für den Winkel, den zwei Vektoren $\vv{a}$ und $\vv{b}$ einschließen, festzulegen. Zudem
-        lässt dich von dieser Definition aus der Winkel selber anhand der Vektoren bestimmt werden. Das Skalarprodukt wird zunächst als die
-        Multiplikation der Norm der Projektion des Vektors $\vv{b}$ in die Richtung von $\vv{a}$, das heißt der Anteil von $\vv{b}$ der auf der
-        Geraden liegt, entlang welcher $\vv{a}$ liegt, mit der Norm von $\vv{a}$ definiert.
-    \end{minipage}
-    \begin{minipage}{0.1\textwidth}
-        \quad
-    \end{minipage}
-    \begin{minipage}{0.45\textwidth}
+    \paragraph{} Das Skalarprodukt ist eine ("multiplikative") Verknüpfung des Vektorraums. Seinen Namen trägt es, da es aus zwei Vektoren
+    einen Skalar, alias eine Zahl macht. Es dient dazu ein Maß für den Winkel, den zwei Vektoren $\vv{u}$ und $\vv{v}$ einschließen,
+    festzulegen. Zudem lässt sich von dieser Definition aus der Winkel selber anhand der Vektoren bestimmt werden.
+    \begin{wrapfigure}[7]{r}{0.4\textwidth}
         \definecolor{ffqqqq}{rgb}{1,0,0}
         \definecolor{qqwuqq}{rgb}{0,0.4,0}
         \definecolor{qqqqtt}{rgb}{0,0,0.2}
@@ -389,10 +377,24 @@
             \draw[color=qqqqtt] (4.6,0.25) node {$\vv{v}$};
             \draw[color=ffqqqq] (4.6,-1.15) node {$\vv{v'}$};
         \end{tikzpicture}
-    \end{minipage}
+    \end{wrapfigure}
+    Es wird als die Multiplikation der Norm der Projektion des Vektors $\vv{v}$ in die Richtung von $\vv{u}$, das heißt, der Anteil
+    von $\vv{v}$ der auf der Geraden liegt, entlang welcher $\vv{u}$ liegt, mit der Norm von $\vv{u}$ definiert. Im Klartext bedeutet das:
+    \begin{align*}
+        \qquad \qquad \vv{u} \odot \vv{v} &\definedBy |\vv{u}| \cdot |\vv{v'}| \\
+                            &= |\vv{u}| \cdot |\vv{v}| \cdot \cos(\alpha)
+    \end{align*}
+    Daraus lässt sich ableiten, dass:
+    \begin{itemize}
+        \item $0 <= \alpha < 90 \text{ (spitzer Winkel)} \logEqR \cos{\alpha} > 0 \Leftrightarrow \vv{u} \odot \vv{v} > 0$
+        \item $90 < \alpha <= 180 \text{ (stumpfer Winkel)} \logEqR \cos{\alpha} < 0 \Leftrightarrow \vv{u} \odot \vv{v} < 0 $
+        \item $\alpha = 90 \text{ (rechter Winkel)} \logEqR \cos{\alpha} = 0 \Leftrightarrow \vv{u} \odot \vv{v} = 0$
+    \end{itemize}
+
+
     \\
     \begin{Bemerkung}
-        Aus dieser Gleichung folgt: $\cos(\alpha)=\dfrac{\vv{v}\odot\vv{u}}{|\vv{v}|\cdot|\vv{u}|}$.
+        Aus dieser Gleichung folgt: $\cos(\alpha) = \dfrac{\vv{v} \odot \vv{u}}{|\vv{v}| \cdot |\vv{u}|}$.
     \end{Bemerkung}
 
 
@@ -401,7 +403,7 @@
 
     \paragraph{} Das Kreuzprodukt ist das zweite nützliche Werkzeug welches in der Vektorgeometrie genutzt wird. Es dient hauptsächlich zur einfachen Berechnung
     eines zu zwei \textbf{nicht kollinearen} Vektoren $\vv{u}$ und $\vv{v}$ orthogonalen Vektors $\vv{i}$. Seine Formel lautet wie folgt:
-    $\vv{i} = \vv{u} \times \vv{v} = \left(\begin{array}{c} u_{\textcolor{red}{2}} \cdot v_{\textcolor{orange}{3}} - u_{\textcolor{red}{3}} \cdot v_{\textcolor{orange}{2}} \\ u_{\textcolor{red}{3}} \cdot v_{\textcolor{orange}{1}} - u_{\textcolor{red}{1}} \cdot v_{\textcolor{orange}{3}} \\ u_{\textcolor{red}{1}} \cdot v_{\textcolor{orange}{2}} - u_{\textcolor{red}{2}} \cdot v_{\textcolor{orange}{1}} \end{array}\right)$.
+    $\vv{i} = \vv{u} \times \vv{v} \definedBy \left(\begin{array}{c} u_{\textcolor{red}{2}} \cdot v_{\textcolor{orange}{3}} - u_{\textcolor{red}{3}} \cdot v_{\textcolor{orange}{2}} \\ u_{\textcolor{red}{3}} \cdot v_{\textcolor{orange}{1}} - u_{\textcolor{red}{1}} \cdot v_{\textcolor{orange}{3}} \\ u_{\textcolor{red}{1}} \cdot v_{\textcolor{orange}{2}} - u_{\textcolor{red}{2}} \cdot v_{\textcolor{orange}{1}} \end{array}\right)$.
     \begin{Beweis}
         Seien $\vv{u}$ und $\vv{v}$ beliebige zueinander nicht kollineare Vektoren des $\R^3$. Ein zu beiden Vektoren orthogonaler Vektor ergibt sich durch: \\
         \begin{align*}
@@ -422,6 +424,9 @@
             \Leftrightarrow & \vv{i} = \left(\begin{array}{c} u_2v_3 - u_3v_2 \\ u_3v_1 - u_1v_3 \\ u_1v_2 - u_2v_1 \end{array}\right)
         \end{align*}
     \end{Beweis}
+    \begin{Bemerkung}
+        \paragraph{} $\vv{u} \times \vv{v} = 0 \Leftrightarrow \vv{u} \parallel \vv{v} (\vv{u} = r \cdot \vv{v};r\in\R)$
+    \end{Bemerkung}
     \\\\
     Zudem gilt:
     \begin{align*}
