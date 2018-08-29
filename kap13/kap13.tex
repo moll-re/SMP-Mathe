@@ -11,17 +11,16 @@ $\log_ba=x\Leftrightarrow b^x=a$
 Man bezeichnet als Logarithmusfunktion eine Funktion der Form $x\rightarrow \log_bx$ mit $b\in \R^+\backslash 1$\\
 $x$ ist die Variable und wird \textcolor{red}{???} genannt, Logarithmusfunktionen sind nur für positive, reelle Zahlen definiert: $x\in\R^+$\\
 $b$ nennt man \textit{Basis} oder \textit{Grundzahl}, sie ist für jede Funktion fest forgegeben.\\
-
 \end{Definition}
 
 Hier Graphen
 \subsubsection{Besondere Logarithmen}
 
-\begin{tabular}{lcccl}
-Logarithmus naturalis&:&$\ln a$&$:=$&$\log_ea$\\
-Logarithmus dualis&:&$\ld a$&$:=$&$\log_2a$\\
-Dekadischer Logarithmus&:&$\lg a$&$:=$&$\log_{10}a
-\end{tabular}
+$\begin{array}{lcccl}
+\mbox{Logarithmus naturalis}&:&\ln a&:=&\log_ea\\
+\mbox{Logarithmus dualis}&:&\ld a&:=&\log_2a\\
+\mbox{Dekadischer Logarithmus}&:&\lg a&:=&\log_{10}a
+\end{array}$
 \\
 	\section{Eigenschaften}	
 
@@ -38,12 +37,23 @@ für $b>1$: $\lim\limits_{x\to +\infty}f(x)=+\infty$\\
 	        $\lim\limits_{x\to 0}f(x)=-\infty$
 \item $f(1)=0$
 \item y-Achse ist senkrechte Asmyptote
-
-
 \end{itemize}
 	\section{Rechengesetze}
 
 Aus den Potenzgesetzen kann man die Logarithmussätze erhalten.
 
-\begin{enumerate}
-\end{enumerate}
+\begin{Theorem}
+Seien $a,b,c\in\R^+$ und $n\in\N$\\
+\begin{center}
+$\begin{array}{cccl}
+\log_c(a\cdot b)&=&\log_ca+\log_cb&\qquad\mbox {Produktregel}\\
+\log_c\left(\dfrac{a}{b}\right)&=&\log_ca-\log_cb&\qquad\mbox{Quotientenregel}\\
+\log_ca^n&=&n\cdot\log_ca&\qquad\mbox{1. Potenzregel}\\
+\log_c\sqrt[n]{a}&=&\dfrac{1}{n}\cdot\log_ca&\qquad\mbox{2. Potenzregel}\\
+\end{array}$
+\end{center}
+\end{Theorem}
+
+\begin{Bemerkung}
+Die zweite Potenzregel ist nur ein Sonderfall der ersten, da $\sqrt[n]{a}=a^{\frac{1}{n}}$
+\end{Bemerkung}
