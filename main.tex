@@ -1,13 +1,15 @@
-\documentclass[11p,a4paper]{report}
+\documentclass[11p,a4paper,fleqn]{report}
 
 \usepackage{amsmath}		                      %Matheschreibweise...
 \usepackage{amssymb}                              %...Und Symbole
+\usepackage{colonequals}                          %Vertikal zentrierter Doppelpunkt
 \usepackage{mathrsfs}
 \usepackage{amsfonts}
 \usepackage[T1]{fontenc}
 \usepackage[margin=2cm]{geometry}	              %Seitenrand
 \usepackage{fancyhdr}	                          %Titelblatt
 \usepackage{graphicx}	                          %Bilder einfügen
+\usepackage{wrapfig}                              %Text um Graphiken "wickeln" (wrap)
 \usepackage[listings,skins,breakable]{tcolorbox}
 \usepackage{tikz,pgf,pgfplots}                    %Grafiken zeichnen
 \usepackage{mdframed}	                          %Box			%\begin{mdframed} 		und			%\end{mdframed}
@@ -29,7 +31,7 @@
 \usepackage{scalerel}
 \usepackage{xcolor}
 \usepackage{epigraph}
-\usepackage{array}
+\usepackage{array}			%Gleichungen mit mehr als einem Zeichen in der Zeile oder Tabellen
 
 % \pgfplotsset{compat=1.15}
 \usetikzlibrary{arrows}
