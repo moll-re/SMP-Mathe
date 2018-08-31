@@ -147,17 +147,17 @@ v'(x)&=e^{1-x}\quad & v(x)&=-e^{1-x}
 \end{alignat*}
 \end{minipage}
 \end{enumerate}
-\underline{Teil B:}\\\\
+\underline{Teil B:} $n\in\N\\\\
 Sei $I_n$ das Integral mit $I_n=\int_0^1x^ne^{1-x}\mbox{d}x$, $n\geq 1$
 \begin{enumerate}
 \item %1
 \begin{enumerate}
 \item $\zz$: $\forall x\in[0;1]$ gilt $x^n\leq x^ne^{1-x} \leq ex^n$\\
 \begin{center}
-\begin{array}{cccccc}
-$x^n &\stackrel{?}{\leq}& x^ne^{1-x} &\stackrel{?}{\leq}& ex^n&\qquad|:x^n\\
-1        &\stackrel{!}{\leq}&e^{1-x}         &\stackrel{!}{\leq}&e        &$
-\end{array}
+$\begin{array}{cccccc}
+x^n &\stackrel{?}{\leq}& x^ne^{1-x} &\stackrel{?}{\leq}& ex^n&\qquad|:x^n\\
+1        &\stackrel{!}{\leq}&e^{1-x}         &\stackrel{!}{\leq}&e        &
+\end{array}$
 \end{center}
 N.R.: für $x\in[0;1]$ ist $(1-x)\in[0;1]$ und entsprechen $e^{1-x}\in[e^{0};e^{1}]=[1;e]$
 \item Sei $J_n$ das Integral mit $J_n=\int_0^1x^n\mbox{d}x$
@@ -193,13 +193,40 @@ u(x)&=x^{n+1}\quad& u\prime(x)&=(n+1)x^n\\
 v'(x)&=e^{1-x}\quad & v(x)&=-e^{1-x}
 \end{alignat*}
 \end{minipage}
-\item%3
+ \\
+\item Sei $k_n=n!e-I_n$, $n\geq1$
 \begin{enumerate}
-\item%3a
-\item%3b
-\item%c
-\end{enumerate}
-\item%4
+\item
+\begin{align*}
+k_{n+1}&=(n+1)!e-I_{n+1}\\
+&=(n+1)n!e-(n+1)I_n+1\qquad\qquad\mbox{siehe 2.}\\
+&=(n+1)(n!e-I_n)+1\\
+&=(n+1)k_n+1
+\end{align*}
+\item $\zz$: $\forall n\geq1$ gilt $k_n\in\Z$:\\\\
+$\begin{array}{rl}
+\mbox{\textbf{IA}:} & \mbox{für }n=1:\quad k_1=1!e-I_1=e-(e-2)=2 \mbox{ (wahr)} \\\\
+\mbox{\textbf{IV}:} & \mbox{für ein beliebiges aber festes }n\in\N \mbox{ gelte:}\quad k_n\in\Z\\\\
+\mbox{\textbf{IB}:} & \mbox{dann gelte für }(n+1):\quad k_{n+1}\in\Z\\\\
+\mbox{\textbf{IS}:} & k_{n+1}=\underbrace{(n+1)}_{\in\Z\text{ da }n\in\N}\underbrace{k_n}_{\in\Z\text{(IB)}}+\underbrace{1}_{\in\Z}\in\Z\\\\
+\end{array}$
+\item $\zz$: $\forall n\geq 2$ gilt $n!e=k_n+I_n\not\in\Z$\\\\
+Wir haben: $\dfrac{1}{n+1}\leq I_n \leq  \dfrac{e}{n+1}$\quad(1.(c))\\\\
+Und es gilt: \begin{itemize}\item$k_n\in\Z$
+				\item $\forall n\geq0:\dfrac{1}{n+1}\geq 0$
+				\item $\forall n\geq2:n+1\geq3\Rightarrow \dfrac{1}{n+1}\leq \dfrac{1}{3}$\\
+					und $e\leq3 \Rightarrow \dfrac{e}{n+1}\leq 1$\\
+		\end{itemize}
+$\Rightarrow\forall n\geq2:0<I_n<1\Rightarrow I_n\not\in\N\Rightarrow k_n+I_n\not\in\N\Rightarrow n!e\not\in\N$\end{enumerate}
+\item Seien $p, q \in\N$\\
+Dann gilt für $n\geq q:\dfrac{n!p}{q}\in\N$\\\\
+Das stimmt weil $n!=n\cdot(n-1)\cdot...\cdot(q+1)\cdot q\cdot(q-1)\cdot...\cdot2\cdot1\Rightarrow q \text{ teilt }n!$
+$\Rightarrow \dfrac{n!}{q}\in\N\Rightarrow\dfrac{n!p}{q}\in\N\text{ da }p\in\N$\\\\
+Hypothese: $e\in\Q$\\\\
+$\Rightarrow \exists p,q \in\N$, sodass $e=\dfrac{p}{q}\\
+\Rightarrow n!e=\dfrac{n!p}{q}\in\N$\\\\
+Im Voraus wurde aber gezeigt, dass $n!e\not\in\N$: \textbf{Widerspruch}\\\\
+$\Leftrightarrow \boxed{e\not\in\Q}$ \heartsuit\\\\\\
 \end{enumerate}
 \underline{Herkunft der Aufgabenstellung:} Buch? S.199 Nr. 78, d'après le bac (Blatt von Mme Treynard)
 \end{Beweis}
@@ -260,11 +287,12 @@ Es gilt weiterhin, dass sich das Wachstum der Exponentialfunktion durchsetzt, an
 
 		\section{Ableitungsregeln}
 
+
+
+\subsubsection{Exponentialfonktionen mit natürlicher Basis}
+
+\subsubsection{Exponentialfunktionen mit beliebiger Basis}
+
 	\subsection{Aktivität}
 
-Quelle: Déclic 1ère
-
-	\subsection{Exponentialfonktionen mit natürlicher Basis}
-
-	\subsection{Exponentialfunktionen mit beliebiger Basis}
-
+Quelle: Déclic 1ère??????
