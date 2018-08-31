@@ -1,14 +1,18 @@
 \chapter{Integrale}
-\section{Einführung}
-Der Hauptunterschied zwischen einem bestimmten und einem unbestimmten Integral ist die Existenz (bestimmtes Integral) bzw. das Fehlen
-(unbestimmtes Integral) der Integrationsgrenzen.\\
-Bei einem bestimmten Integral ist die Lösung ein Flächeinhalt, also ein einfacher Zahlenwert.\\
-Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine sogenannte Stammfunktion.\\
+\section{Einführung - Stammfunktionen}
+\begin{Definition}
+  Sei $f$ eine Funktion, die über einem Intervall $I\in\R$ definiert ist. Man nennt jede Funktion $F$, die auf $I$ differenzierbar ist, für die gilt $F'(x)=f(x)$ ,$\forall x\in I$ eine \emph{Stammfunktion} von $f$.
+\end{Definition}
+\begin{Theorem}
+  Jede auf $I$ stetige Funktion besitzt eine Stammfunktion über $I$.
+\end{Theorem}
 
 
 \section{Bestimmte Integrale}
 \begin{Definition}
-  Wenn Integrationsgrenzen angegeben werden, handelt es sich um ein bestimmtes Integral:
+  Sei $f$ eine auf einem Intervall $I$ stetige Funktion und zwei reelle Zahlen $a,b\in\I$. Die reelle Zahl,
+  dargestellt durch  $\displaystyle{\int_a^b f(t)dt}$ und gegeben durch $F(b)-F(a)$, mit $F$ als beliebige Stammfunktion von $f$, wird bestimmtes Integral von $a$ bis $b$ von $f$ genannt.
+  Eine weitere Darstellungsmöglichkeit des bestimmten Integrals sieht folgendermaßen aus:
   \begin{align*}
     \int_{a}^{b} f(x)dx & = \lim\limits_{n \rightarrow \infty} U_n = \lim\limits_{n \rightarrow \infty} s_n\\
                         & = \lim\limits_{n \rightarrow \infty} O_n = \lim\limits_{n \rightarrow \infty} S_n\\
@@ -16,7 +20,13 @@ Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine soge
   \end{align*}
   $S_n$ und $O_n$ bezeichnen die Obersumme, wohingegen $s_n$ und $U_n$ die Untersumme bezeichnen.
 \end{Definition}
-
+\begin{Bemerkung}
+  Der Hauptunterschied zwischen einem bestimmten und einem unbestimmten Integral ist die Existenz (bestimmtes Integral) bzw. das Fehlen
+  (unbestimmtes Integral) der Integrationsgrenzen.\\
+  Bei einem bestimmten Integral ist die Lösung ein Flächeinhalt, also ein einfacher Zahlenwert.\\
+  Bei einem unbestimmten Integral erhält man als Lösung eine (wie soeben eingeführte) Stammfunktion.\\
+  Werden feste Integrationsgrenzen angegeben, handelt es sich um ein bestimmtes Integral.
+\end{Bemerkung}
 \definecolor{lightblu}{rgb}{0,0,0.3}
 \definecolor{lightre}{rgb}{0.3,0,0}
 \begin{tikzpicture}[scale=0.7]
@@ -59,14 +69,16 @@ Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine soge
 \end{tikzpicture}
 
 \begin{Bemerkung}
-  $a$ und $b$ bezeichnen jeweils die untere und obere Grenze des zu berechnenden Integrals. Sie bezeichnen anschaulich die $x$-Werte, zwischen denen die Fläche berechnet wird.
-\end{Bemerkung}
-\begin{Bemerkung}
-  Im allgemeinen Fall muss der Integrand $f(x)$ im Intervall $[a;b]$ stetig sein, damit das Integral bestimmt ist.
+  $a$ und $b$ bezeichnen jeweils die untere und obere Grenze des zu berechnenden Integrals. Sie bezeichnen anschaulich die $x$-Werte, zwischen denen die Fläche berechnet wird. Tatsächlich ist die geometrische Interpretation von $\displaystyle{\int_a^b f(t)dt}$ die Fläche zwischen dem Schaubild der Funktion und der $x_1$-Achse, die durch die Geraden $x=a$ und $x=b$ begrenzt wird.
 \end{Bemerkung}
 
+\begin{Theorem}
+  Für eine auf einem Intervall $I$ stetige Funktion $f$ und einer reellen Zahl $a\in I$ gilt: Die Funktion, die über $I$ definiert ist durch $x\mapsto\displaystyle{\int_a^xf(t)dt}$, ist die Stammfunktion von $f$, die bei $a$ gleich $0$ ist.
+\end{Theorem}
+
 \section{Stammfunktionen und der Hauptsatz der Differential- und Integralrechnung}
-\begin{Definition}
+Wir beschränken uns in diesem Kapitel auf die Integralrechnung, da die Differentialrechnung bereits in Kapitel \ref{Funktionsuntersuchung} behandelt wird.\\
+\begin{Theorem}
   Eine Funktion $F$ heißt Stammfunktion der Funktion $f$, wenn $F'(x)=f(x)$
   gilt.\\
   Ist $F$ irgendeine Stammfunktion von $f$, dann ist auch $F(x)+C$ (mit
@@ -74,7 +86,7 @@ Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine soge
   konstanter Summand weg. Jede Funktion hat also unendlich viele
   Stammfunktionen, die sich aber nur um einen konstanten Summanden
   unterscheiden.
-\end{Definition}
+\end{Theorem}
 \begin{Bemerkung}
   Man beobachtet hier eine Erweiterung der NEW-Regel (siehe \ref{NEW-Regel}, NEW-Regel):\\\\
   \begin{minipage}[b]{0.2\linewidth}
@@ -91,13 +103,13 @@ Bei einem unbestimmten Integral erhält man als Lösung eine Funktion, eine soge
     \end{array}
   \end{minipage}
 \end{Bemerkung}
-\subsection{Sätze über Integrale}
+\subsection{Weitere Sätze über Integrale}
 \begin{Theorem}
 \begin{center}
   \begin{tabular}{r c l l}
     \( \displaystyle\int_a^b f(x)dx\) & $=$ &  -\( \displaystyle\int_b^a f(x)dx\) & Invertieren der Intergrationsgrenzen \\
     \( \displaystyle\int_a^b (f(x)+g(x))dx \) & $=$ &  \( \displaystyle\int_a^b f(x)dx + \int_a^b g(x)dx\) & Summenregel\\
-    \( \displaystyle\int_a^b r*f(x)dx\)  & $=$ &  r*\( \displaystyle\int_a^b f(x)dx\) & Linearität\\
+    \( \displaystyle\int_a^b r*f(x)dx\)  & $=$ &  \( \displaystyle r*\int_a^b f(x)dx\) & Linearität\\
     \( \displaystyle\int_a^b f(x)dx +\int_b^c f(x)dx\)  & $=$ &  \( \displaystyle\int_a^c f(x)dx\) & Abschnittweise Integration
 \end{tabular}
 
@@ -170,7 +182,7 @@ Außerdem:
   Für eine auf $[a;b]$ stetige Funktion $f$ mit $a \neq b$ gilt: Der Mittelwert von $f$ auf $[a;b]$ ist gegeben durch $$\mu = \dfrac{1}{b-a} \int_a^b f(t)dt$$
 \end{Definition}
 
-\subsection{Integrationsregeln}
+\subsection{Integrationsregeln und -techniken}
 
 \subsubsection{Partielle Integration}
 \begin{Theorem}
@@ -197,111 +209,13 @@ Nachweisen u, v diffbar und u', v' stetig (kommt noch in sauber)\\
 \end{Beispiel}
 
 \subsubsection{Partialbruchzerlegung}
-Die Partialbruchzerlegung ist ein allgemeines Verfahren zur Integration
-gebrochen rationaler Funktionen. Es sei gegeben:
-\begin{equation}
-  \label{eq:68}
-  f(x)=\frac{P(x)}{Q(x)}
-  =\frac{a_0+a_1x+\dots+a_nx^n}{b_0+b_1x+\dots+b_mx^m}
-\end{equation}
-Im Falle $m\le n$ führt man zuerst eine Polynomdivision aus, dann bekommt man
-eine ganzrationale Funktion und eine gebrochen rationale mit $m>n$, so dass
-wir uns für das Weitere auf den Fall $m>n$ beschränken können.
-
-Das Nennerpolynom kann im Komplexen vollständig in Linearfaktoren zerlegt
-werden, im Reellen bleiben ggf. quadratische Faktoren übrig, die keine reellen
-Nullstellen mehr haben. Seien nun $x_k$ die Nullstellen von $Q(x)$ mit der
-Vielfachheit $\nu_k$ dann kann man $Q(x)$ stets auf die folgende Form bringen:
-\begin{equation}
-  \label{eq:69}
-  Q(x)=b_m(x-x_1)^{\nu_1}(x-x_2)^{\nu_2}\dots(x-x_k)^{\nu_k}
-  (x^2+\alpha_1x+\beta_1)^{\mu_1}\dots(x^2+\alpha_rx+\beta_r)^{\mu_r}
-\end{equation}
-Die gebrochen rationale Funktion $f(x)$ lässt sich nun als Summe von
-Partialbrüchen schreiben. Dabei gilt:
-\begin{enumerate}
-\item Jeder Linearfaktor $(x-x_k)$ der Vielfachheit $\nu_k$ trägt zur
-  Zerlegung die folgenden Summanden bei:
-  \[
-  \frac{A_1}{(x-x_k)}+\frac{A_2}{(x-x_k)^2}+\dots
-  +\frac{A_{\nu_k}}{(x-x_k)^{\nu_k}}
-  \]
-\item Jeder quadratische Faktor mit der Vielfachheit $\mu_k$ trägt die
-  folgenden Summanden bei:
-  \[
-  \frac{C_1x+D_1}{(x^2+\alpha x+\beta)}+
-  \frac{C_2x+D_2}{(x^2+\alpha x+\beta)^2}+\dots+
-  \frac{C_{\mu_k}x+D_{\mu_k}}{(x^2+\alpha x+\beta)^{\mu_k}}
-  \]
-\end{enumerate}
-
-\noindent Die Linearfaktoren lassen sich sofort integrieren, bei den
-quadratischen geht man so vor:
-\[
-(x^2+\alpha x+\beta)=\bigl(x+\tfrac{\alpha}{2}\bigr)^2+\delta^2
-=(\delta y)^2+\delta^2=\delta^2(y^2+1)
-\]
-Hier hat man quadratisch ergänzt und $\delta\cdot y=x+\frac{\alpha}{2}$
-substituiert. Mit dieser Substitution ist
-\[
-x=\delta y-\frac{\alpha}{2}\qquad y=\frac{x+\frac{\alpha}{2}}{\delta}\qquad
-\dD x=\delta\dD y
-\]
-Nun wird das Integral zu:
-\begin{align*}
-  \int\frac{Cx+D}{(x^2+\alpha x+\beta)^\mu}\dD x
-  &=\frac{1}{\delta^{2\mu-1}}
-  \int\frac{C\delta y+D-\frac12C\alpha}{(y^2+1)^\mu}\dD y\\
-  &=\frac{C}{\delta^{2\mu-2}}\int\frac{y\dD y}{(y^2+1)^\mu}
-  +\frac{D-\frac12C\alpha}{\delta^{2\mu-1}}\int\frac{\dD y}{(y^2+1)^\mu}
-\end{align*}
-Für das erste der beiden verbleibenden Integrale bekommt man dann
-\begin{equation}
-  \label{eq:70}
-  \int\frac{y\dD y}{(y^2+1)^\mu}=\frac12\int\frac{\dD u}{u^\mu}=
-  \begin{cases}
-    \dfrac{u^{1-\mu}}{2(1-\mu)}=&\text{für~}\mu=2, 3, \dots\\
-    \frac{1}{2}\ln|u|& \text{für~} \mu=1
-  \end{cases}
-\end{equation}
-Hier hat man $u=y^2+1$ gesetzt. Nun muss noch das zweite bestimmt werden.
-\[
-J_\mu=\int\frac{\dD y}{(y^2+1)^\mu}
-\]
-Für $\mu=1$ ist es bekannt, $J_1=\arctan y$.
-
-Wir werden eine Rekursionsformel für die $J_\mu$ herleiten. Wir beginnen mit
-der Beziehung
-\[
-J_{\mu+1}=\int\frac{(y^2+1)-y^2}{(y^2+1)^{\mu+1}}\dD y
-=J_\mu-\int\frac{y^2}{(y^2+1)^{\mu+1}}\dD y
-\]
-Nun denken wir uns den zweiten Integranden als $y\cdot$Rest geschrieben und
-integrieren partiell:
-\[
-\int y\cdot\frac{y\dD y}{(y^2+1)^{\mu+1}}=
-\frac{-y}{2\mu(y^2+1)^\mu}+\frac{1}{2\mu}\int\frac{\dD y}{(y^2+1)^\mu}=
-\frac{-y}{2\mu(y^2+1)^\mu}+\frac{1}{2\mu}\,J_\mu
-\]
-Setzt man das oben ein, so bekommt man die Rekursionsformel:
-\begin{equation}
-  \label{eq:71}
-  J_{\mu+1}=\left(1-\frac{1}{2\mu}\right)J_\mu+\frac{y}{2\mu(y^2+1)^\mu}
-\end{equation}
-Insbesondere ist dann (rechne das nach!)
-\begin{align*}
-  J_1&=\arctan y\\
-  J_2&=\frac{1}{2}\arctan y+\frac{y}{2(y^2+1)}\\
-  J_3&=\frac38\left(\arctan y+\frac{y}{y^2+1}\right)+\frac{y}{4(y^2+1)^2}\\
-  J_4&=\frac{5}{16}\left(\arctan y+\frac{y}{y^2+1}\right)+
-       \frac{5}{24}\cdot\frac{y}{(y^2+1)^2}+\frac{y}{6(y^2+1)^3}
-\end{align*}
+?
 \subsubsection{Integrale von $e$-Funktionen}
 \begin{Theorem}
-  Für $f(x)=e^{l(x)}$ mit $l(x) = ax+b$ gilt:$F(x) = \dfrac{1}{a}e^{l(x)}$
+  Für $f(x)=e^{l(x)}$ mit $l(x) = ax+b$ gilt: $F(x) = \dfrac{1}{a}e^{l(x)}$
 \end{Theorem}
 \begin{Beweis}
-  Not yet... ;((
+  Man bilde $F'(x)$.
 \end{Beweis}
 \subsubsection{Integrale von $ln()$-Funktionen}
 \begin{Theorem}
@@ -348,7 +262,7 @@ Bildhaft sieht das folgendermaßen aus:
 \begin{center}
     \definecolor{lightblu}{rgb}{0,0,0.3}
     \definecolor{lightgree}{rgb}{0,0.3,0}
-    \begin{tikzpicture}
+    \begin{tikzpicture}[scale=0.7]
         \draw[->,line width=0.8pt] (-5.5,0) -- (5.5,0) node[below] {$x_1$};
         \draw[->,line width=0.8pt] (0,-5.5) -- (0,5.5) node[right] {$x_2$};
 
@@ -414,7 +328,7 @@ Bildhaft sieht das folgendermaßen aus:
 \begin{center}
     \definecolor{lightblu}{rgb}{0,0,0.3}
     \definecolor{lightgree}{rgb}{0,0.3,0}
-    \begin{tikzpicture}
+    \begin{tikzpicture}[scale=0.7]
         \draw[->,line width=0.8pt] (-5.5,0) -- (5.5,0) node[below] {$x_1$};
         \draw[->,line width=0.8pt] (0,-5.5) -- (0,5.5) node[right] {$x_2$};
         \draw[line width=0.1pt,color=lightblu,fill=lightblu,fill opacity=0.3] (-2.5,0) -- (-2.5,2.43) ..controls(-1.59,3.21) ..(0,0) -- cycle;
@@ -461,17 +375,33 @@ Bildhaft sieht das folgendermaßen aus:
   Für zwei auf $[a;b]$ stetige Funktionen $f$ und $g$ gilt: Die Fläche zwischen ihren Schaubildern $C_f$ und $C_g$ ist gegeben durch: $\( \displaystyle \int_a^b (g(x)-f(x))dx$\).
 \end{Theorem}
 \subsection{Volumenangaben mittels Integralen}
-\begin{Definition}
+\begin{Theorem}
   Man betrachtet einen Körper, der durch zwei parallele Ebenen mit den Gleichungen $x_3 = a$ und $x_3 = b$ begrenzt wird.
-  Für alle $a\leq z \leq b$ nennt man $P_z$ die orthogonale Fläche zu $(O_z)$ mit der Seite $z$ und $S(z)$ die Fläche des
+  Für alle $a\leq z \leq b$ nennt man $P_z$ die orthogonale Fläche zu $x_3$-Achse mit der Seite $z$ und $S(z)$ die Fläche des
   Schnitts des Körpers durch $P_z$. Ist $S$ stetig, so ist ist das Volumen $V$ des Körpers gegeben durch:
-  $$V=\int_a^b S(z)dz$$
-  Daraus folgt, dass ein Körper, der durch die Rotation der Kurve von $f$ um eine Achse entsteht, ein Volumen von
-  \( \displaystyle\int_a^b \pi f^2(z)dz\)
-  hat.\\
-  Tatsächlich ist die Fläche eines zu $(O_z)$ parallelen Querschnitts die der Scheibe mit Radius $f(z)$.
-\end{Definition}
-Unklar, ich weiß. (Ich habe es selbst noch nicht verstanden)
+  $$V=\int_a^b S(z)dz$$\\
+\end{Theorem}
+\begin{Bemerkung}
+  Dieses Theorem nehmen wir hin, ohne es zu beweisen, uns geht es ohnehin um die Schlussfolgerungen, die wir daraus ziehen können:
+\end{Bemerkung}
+\begin{Theorem}
+  Ein Körper, der durch die Rotation der Kurve von $f$ um die $x_1$-Achse entsteht, hat ein Volumen von
+  \( \displaystyle \pi \int_a^b f^2(z)dz\).\\
+  Tatsächlich ist die Fläche eines zur $x_3$-Achse parallelen Querschnitts die der Scheibe mit Radius $f(z)$.
+\end{Theorem}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{ccqqqq}{rgb}{0.8,0,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.7]
+  \draw[->,line width=0.8pt] (-3.0,0) -- (11.0,0) node[below] {$x_1$};
+  \draw[->,line width=0.8pt] (0,-3.7) -- (0,3.7) node[right] {$x_2$};
+  \draw[->,line width=0.8pt] (-3.0,-3.0) -- (3.0,3.0) node[right] {$x_3$};
+  \draw (-0.3,0.3) node {$O$};
+  \draw[line width=2.4pt,color=ffqqqq,fill=ffqqqq,fill opacity=0.1, smooth,samples=50,domain=1:9] plot(\x,{sqrt(\x)}) -- (9,0) -- (1,0) -- cycle;
+  \draw[line width=2pt,color=ccqqqq,smooth,samples=100,domain=6.848866262443662e-8:10.024582490069186] plot(\x,{sqrt((\x))});
+  \draw[line width=2.4pt,dash pattern=on 1pt off 1pt,color=ffqqqq,smooth,samples=100,domain=6.848866262443662e-8:10.024582490069186] plot(\x,{0-sqrt((\x))});
+  \draw [rotate around={90:(1,0)},line width=1pt] (1,0) ellipse (1.0085893502642513cm and 0.13134868658068935cm);
+  \draw [rotate around={90:(9,0)},line width=1pt] (9,0) ellipse (3.0174458893236813cm and 0.32400570210806623cm);
+\end{tikzpicture}
 \section{Uneigentliche Integrale}
 \begin{Definition}
   Ist die Funktion $f$ auf $[a;+\infty)$ stetig und existiert der Grenzwert \( \displaystyle\lim\limits_{Z \rightarrow \infty} \int_a^Z f(x)dx\),
@@ -482,22 +412,36 @@ Unklar, ich weiß. (Ich habe es selbst noch nicht verstanden)
 \begin{Beispiel}
   $f(x)=\dfrac{-3}{x^3}$\\
   \( \displaystyle A(z)=\int_z^{-2} \dfrac{-3}{x^3} dx = \left[\dfrac{3}{2}x^{-2}\right]_z^{-2} = \dfrac{3}{8}-\dfrac{3}{2}z^{-2}\)\\
-  $\lim \limits_{z \rightarrow \infty} \dfrac{3}{8}-\dfrac{3}{2}z^{-2} = \dfrac{3}{8}$
+  $\lim \limits_{z \rightarrow -\infty} \dfrac{3}{8}-\dfrac{3}{2}z^{-2} = \dfrac{3}{8}$\\
+  $\Rightarrow$ Das uneigentliche Integral hat den Wert $\dfrac{3}{8}$.
 \end{Beispiel}
+\begin{Beispiel}
+  $f(x)=\dfrac{1}{\sqrt x}$\\
+  \( \displaystyle A(z)=\int_z1^{Z} \dfrac{1}{\sqrt x} dx = \left[2\sqrt x \right]_1^{Z} = 2\sqrt Z - 2\\
+  $\lim \limits_{Z \rightarrow \infty} 2\sqrt Z - 2 \stackrel{\rightarrow}{Z \rightarrow \infty} \infty$\\
+  $\Rightarrow$ Das uneigentliche Integral existiert nicht.
+\end{Beispiel}
+\begin{Definition}
+  Ist die Funktion $f$ auf $(a;b]$ stetig und existiert der Grenzwert \( \displaystyle\lim\limits_{Z \rightarrow a} \int_Z^b f(x)dx\),
+  so heißt dieser Grenzwert \emph{uneigentliches Integral} von $f$ über $(a;b]$.\\
+  Schreibweise: \( \displaystyle\int_a^b f(x)dx\)\\
+  Analog dazu spricht man von einem uneigentlichen Integral für \( \displaystyle\int_{c}^a f(x)dx\)
+\end{Definition}
 \begin{Bemerkung}
-Für Funktionen wie $f(x)= \dfrac{1}{\sqrt x}$ existiert kein Uneigentliches Integral.\\Stimmt nicht, sieht aber als Platzhalter gut aus.
+  Diese Berechnung ergibt nur dann Sinn, wenn bei $a$ eine Definitionslücke vorliegt.
 \end{Bemerkung}
-
 \section{Merkenswerte Integrale}
 Hier eine (möglicherweise unvollständige) rückblickende Liste mit Integralen, die insbesondere zum Abitur beherrscht werden sollten.\\
-Diese sollten ohne weitere Rechtfertigung oder Beweis verwendet werden dürfen.
+Diese sollten ohne weitere Rechtfertigung oder Beweis verwendet werden dürfen. (Diese Angabe ist ohne Gewähr)\\
 \begin{align*}
-  \int x^n dx&=\frac{x^{n+1}}{n+1} + C\\
-  \int\sin x dx&= -\cos x + C\\
-  \int\cos x dx&= \sin x + C\\
-  \int\frac{ dx}{\cos^2x}&= \tan x + C\\
-  \int\frac{1}{x} dx&= \ln(|x|) + C\\
-  \int\frac{1}{\sqrt{x}}dx &= 2\sqrt{x} + C\\
+  \int x^n dx &=\dfrac{x^{n+1}}{n+1} + C\\
+  \int\sin x dx &= -\cos x + C\\
+  \int\cos x dx &= \sin x + C\\
+  \int\dfrac{ dx}{\cos^2x} &= \tan x + C\\
+  \int\dfrac{1}{x} dx &= \ln(|x|) + C\\
+  \int\dfrac{1}{\sqrt{x}}dx &= 2\sqrt{x} + C\\
+  \int \dfrac{u'(x)}{u(x)} dx &= \ln(|u(x)|) + C\\
 
 \end{align*}
+\danger Definitionsmengen sind zu beachten.
 ln, e^x, usw.
