@@ -77,6 +77,7 @@
 \end{Theorem}
 
 \section{Stammfunktionen und der Hauptsatz der Differential- und Integralrechnung}
+Wir beschränken uns in diesem Kapitel auf die Integralrechnung, da die Differentialrechnung bereits in Kapitel \ref{Funktionsuntersuchung} behandelt wird.\\
 \begin{Definition}
   Eine Funktion $F$ heißt Stammfunktion der Funktion $f$, wenn $F'(x)=f(x)$
   gilt.\\
@@ -261,7 +262,7 @@ Bildhaft sieht das folgendermaßen aus:
 \begin{center}
     \definecolor{lightblu}{rgb}{0,0,0.3}
     \definecolor{lightgree}{rgb}{0,0.3,0}
-    \begin{tikzpicture}
+    \begin{tikzpicture}[scale=0.7]
         \draw[->,line width=0.8pt] (-5.5,0) -- (5.5,0) node[below] {$x_1$};
         \draw[->,line width=0.8pt] (0,-5.5) -- (0,5.5) node[right] {$x_2$};
 
@@ -327,7 +328,7 @@ Bildhaft sieht das folgendermaßen aus:
 \begin{center}
     \definecolor{lightblu}{rgb}{0,0,0.3}
     \definecolor{lightgree}{rgb}{0,0.3,0}
-    \begin{tikzpicture}
+    \begin{tikzpicture}[scale=0.7]
         \draw[->,line width=0.8pt] (-5.5,0) -- (5.5,0) node[below] {$x_1$};
         \draw[->,line width=0.8pt] (0,-5.5) -- (0,5.5) node[right] {$x_2$};
         \draw[line width=0.1pt,color=lightblu,fill=lightblu,fill opacity=0.3] (-2.5,0) -- (-2.5,2.43) ..controls(-1.59,3.21) ..(0,0) -- cycle;
@@ -374,17 +375,33 @@ Bildhaft sieht das folgendermaßen aus:
   Für zwei auf $[a;b]$ stetige Funktionen $f$ und $g$ gilt: Die Fläche zwischen ihren Schaubildern $C_f$ und $C_g$ ist gegeben durch: $\( \displaystyle \int_a^b (g(x)-f(x))dx$\).
 \end{Theorem}
 \subsection{Volumenangaben mittels Integralen}
-\begin{Definition}
+\begin{Theorem}
   Man betrachtet einen Körper, der durch zwei parallele Ebenen mit den Gleichungen $x_3 = a$ und $x_3 = b$ begrenzt wird.
-  Für alle $a\leq z \leq b$ nennt man $P_z$ die orthogonale Fläche zu $(O_z)$ mit der Seite $z$ und $S(z)$ die Fläche des
+  Für alle $a\leq z \leq b$ nennt man $P_z$ die orthogonale Fläche zu $x_3$-Achse mit der Seite $z$ und $S(z)$ die Fläche des
   Schnitts des Körpers durch $P_z$. Ist $S$ stetig, so ist ist das Volumen $V$ des Körpers gegeben durch:
-  $$V=\int_a^b S(z)dz$$
-  Daraus folgt, dass ein Körper, der durch die Rotation der Kurve von $f$ um eine Achse entsteht, ein Volumen von
-  \( \displaystyle\int_a^b \pi f^2(z)dz\)
-  hat.\\
-  Tatsächlich ist die Fläche eines zu $(O_z)$ parallelen Querschnitts die der Scheibe mit Radius $f(z)$.
-\end{Definition}
-Unklar, ich weiß. (Ich habe es selbst noch nicht verstanden)
+  $$V=\int_a^b S(z)dz$$\\
+\end{Theorem}
+\begin{Bemerkung}
+  Dieses Theorem nehmen wir hin, ohne es zu beweisen, uns geht es ohnehin um die Schlussfolgerungen, die wir daraus ziehen können:
+\end{Bemerkung}
+\begin{Theorem}
+  Ein Körper, der durch die Rotation der Kurve von $f$ um die $x_1$-Achse entsteht, hat ein Volumen von
+  \( \displaystyle \pi \int_a^b f^2(z)dz\).\\
+  Tatsächlich ist die Fläche eines zur $x_3$-Achse parallelen Querschnitts die der Scheibe mit Radius $f(z)$.
+\end{Theorem}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{ccqqqq}{rgb}{0.8,0,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.7]
+  \draw[->,line width=0.8pt] (-3.0,0) -- (11.0,0) node[below] {$x_1$};
+  \draw[->,line width=0.8pt] (0,-3.7) -- (0,3.7) node[right] {$x_2$};
+  \draw[->,line width=0.8pt] (-3.0,-3.0) -- (3.0,3.0) node[right] {$x_3$};
+  \draw (-0.3,0.3) node {$O$};
+  \draw[line width=2.4pt,color=ffqqqq,fill=ffqqqq,fill opacity=0.1, smooth,samples=50,domain=1:9] plot(\x,{sqrt(\x)}) -- (9,0) -- (1,0) -- cycle;
+  \draw[line width=2pt,color=ccqqqq,smooth,samples=100,domain=6.848866262443662e-8:10.024582490069186] plot(\x,{sqrt((\x))});
+  \draw[line width=2.4pt,dash pattern=on 1pt off 1pt,color=ffqqqq,smooth,samples=100,domain=6.848866262443662e-8:10.024582490069186] plot(\x,{0-sqrt((\x))});
+  \draw [rotate around={90:(1,0)},line width=1pt] (1,0) ellipse (1.0085893502642513cm and 0.13134868658068935cm);
+  \draw [rotate around={90:(9,0)},line width=1pt] (9,0) ellipse (3.0174458893236813cm and 0.32400570210806623cm);
+\end{tikzpicture}
 \section{Uneigentliche Integrale}
 \begin{Definition}
   Ist die Funktion $f$ auf $[a;+\infty)$ stetig und existiert der Grenzwert \( \displaystyle\lim\limits_{Z \rightarrow \infty} \int_a^Z f(x)dx\),
@@ -395,23 +412,36 @@ Unklar, ich weiß. (Ich habe es selbst noch nicht verstanden)
 \begin{Beispiel}
   $f(x)=\dfrac{-3}{x^3}$\\
   \( \displaystyle A(z)=\int_z^{-2} \dfrac{-3}{x^3} dx = \left[\dfrac{3}{2}x^{-2}\right]_z^{-2} = \dfrac{3}{8}-\dfrac{3}{2}z^{-2}\)\\
-  $\lim \limits_{z \rightarrow \infty} \dfrac{3}{8}-\dfrac{3}{2}z^{-2} = \dfrac{3}{8}$
+  $\lim \limits_{z \rightarrow -\infty} \dfrac{3}{8}-\dfrac{3}{2}z^{-2} = \dfrac{3}{8}$\\
+  $\Rightarrow$ Das uneigentliche Integral hat den Wert $\dfrac{3}{8}$.
 \end{Beispiel}
+\begin{Beispiel}
+  $f(x)=\dfrac{1}{\sqrt x}$\\
+  \( \displaystyle A(z)=\int_z1^{Z} \dfrac{1}{\sqrt x} dx = \left[2\sqrt x \right]_1^{Z} = 2\sqrt Z - 2\\
+  $\lim \limits_{Z \rightarrow \infty} 2\sqrt Z - 2 \stackrel{\rightarrow}{Z \rightarrow \infty} \infty$\\
+  $\Rightarrow$ Das uneigentliche Integral existiert nicht.
+\end{Beispiel}
+\begin{Definition}
+  Ist die Funktion $f$ auf $(a;b]$ stetig und existiert der Grenzwert \( \displaystyle\lim\limits_{Z \rightarrow a} \int_Z^b f(x)dx\),
+  so heißt dieser Grenzwert \emph{uneigentliches Integral} von $f$ über $(a;b]$.\\
+  Schreibweise: \( \displaystyle\int_a^b f(x)dx\)\\
+  Analog dazu spricht man von einem uneigentlichen Integral für \( \displaystyle\int_{c}^a f(x)dx\)
+\end{Definition}
 \begin{Bemerkung}
-Für Funktionen wie $f(x)= \dfrac{1}{\sqrt x}$ existiert kein Uneigentliches Integral.\\Stimmt nicht, sieht aber als Platzhalter gut aus.
+  Diese Berechnung ergibt nur dann Sinn, wenn bei $a$ eine Definitionslücke vorliegt.
 \end{Bemerkung}
-
 \section{Merkenswerte Integrale}
 Hier eine (möglicherweise unvollständige) rückblickende Liste mit Integralen, die insbesondere zum Abitur beherrscht werden sollten.\\
-Diese sollten ohne weitere Rechtfertigung oder Beweis verwendet werden dürfen.
+Diese sollten ohne weitere Rechtfertigung oder Beweis verwendet werden dürfen. (Diese Angabe ist ohne Gewähr)\\
 \begin{align*}
-  Warum wird das nicht angezeigt?
-  \int x^n dx &=\frac{x^{n+1}}{n+1} + C\\
+  \int x^n dx &=\dfrac{x^{n+1}}{n+1} + C\\
   \int\sin x dx &= -\cos x + C\\
   \int\cos x dx &= \sin x + C\\
-  \int\frac{ dx}{\cos^2x} &= \tan x + C\\
-  \int\frac{1}{x} dx &= \ln(|x|) + C\\
-  \int\frac{1}{\sqrt{x}}dx &= 2\sqrt{x} + C\\
+  \int\dfrac{ dx}{\cos^2x} &= \tan x + C\\
+  \int\dfrac{1}{x} dx &= \ln(|x|) + C\\
+  \int\dfrac{1}{\sqrt{x}}dx &= 2\sqrt{x} + C\\
+  \int \dfrac{u'(x)}{u(x)} dx &= \ln(|u(x)|) + C\\
 
 \end{align*}
+\danger Definitionsmengen sind zu beachten.
 ln, e^x, usw.
