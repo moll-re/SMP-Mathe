@@ -40,9 +40,14 @@ $e$ ist eine irrationale, transzendente und reelle Zahl, die die Basis des (nat�
 Die Darstellung, der man am Häufigsten begegnet ist diese:
 $e=\lim\limits_{t\to \infty}\left(1+\dfrac{1}{t}\right)^t;t\in\R$
 \end{Definition}
-\\
+\\\\
 Benannt nach dem bekannten Mathematiker Leonhard Euler ist diese Zahl eine der wichtigsten Konstanten der Mathematik.
 Sie ist die Basis des natürlichen Logarithmus und der natürlichen Exponentialfunktion. Diese (spezielle) Exponentialfunktion wird aufgrund dieser Beziehung zur Zahl $e$ häufig kurz $e$-Funktion genannt.\\
+\begin{Bemerkung}
+Eine alternative Definition wäre diese:
+Die positive Zahl $a$, für die die Exponentialfunktion $f$ mit $f(x)=a^x$  mit ihrer Ableitungsfunktion $f\prime$ übereinstimmt, heißt \textbf{Eulersche Zahl}.
+\end{Bemerkung}
+\\
 \begin{Definition}
   Eine reelle Zahl heißt (oder allgemeiner eine komplexe Zahl) transzendent,
   wenn sie nicht Nullstelle eines Polynoms mit ganzzahligen Koeffizienten ist.
@@ -279,17 +284,37 @@ Für $f(x)= a^x$ mit $0<a<1$ und $g(x)=x^n$ mit n $\in \R$:\\
 Es gilt weiterhin, dass sich das Wachstum der Exponentialfunktion durchsetzt, anhand dieser Aussage können die Grenzwerte von Funktionen, die Exponentialfunktionen mit Basis $<1$ beinhalten, leicht bestimmt werden.\\
 \danger Auch hier gilt es, auf das Vorzeichen der anderen Funktion(en) zu achten.
 
-		
-
-
-	
-
 
 		\section{Ableitungsregeln}
 
 
-
 \subsubsection{Exponentialfonktionen mit natürlicher Basis}
+
+\begin{Definition}
+Die natürliche Exponentialfunktion überstimmt mit ihrer Ableitungsfunktion. 
+$$f(x)=e^x\Leftrightarrow f'=e^x$$
+\end{Definition}
+\begin{Definition}
+Die Funktion $f$ mit $f(x)=e^{v(x)}$ ist eine Verkettung der Funktion $v:x\rightarrow v(x)$ mit der Exponentialfunktion $u: v \rightarrow e^v$. Exisitiert die Ableitung $v'$, so gilt nach der Kettenregel\\
+$$f'(x)=v'(x)\cdot e^{v(x)}$$
+\end{Definition}
+\begin{Bemerkung}
+Letzteres kann natürlich auch verwendet werden, um eine Stammfunktion zu ermitteln.\\
+Die Funktion $f$ mit $f(x)=e^{v(x)}$ mit $v$ differenzierbar hat als mögliche Stammfunktion $F$ mit
+$$F(x)=\dfrac{1}{v'(x)}\cdot e^{v(x)}$$
+\end{Bemerkung}
+\begin{Beispiel}
+\\
+\begin{itemize}
+\item$f(x)=\dfrac{2}{3} \cdot e^{-\frac{1}{2}x^2+1}\\
+\Rightarrow f'(x)= \dfrac{2}{3}\cdot(-x)\cdot e^{\frac{1}{2}x^2+1}= -\dfrac{2}{3}x\cdot e^{-\frac{1}{2}x^2+1}\\
+\Rightarrow F(x)=\dfrac{2}{3}:(-x)\cdot e^{\frac{1}{2}x^2+1}=-\dfrac{2}{3x}\cdot e^{\frac{1}{2}x^2+1}$\\
+\item$f(t)=\dfrac{\sin(tx)}{e^{tx}}\\
+\Rightarrow f'(x)=\dfrac{t\cdot\cos(tx)\cdot e^{tx}-\sin(tx)\cdot t\cdot e^{tx}}{(e^{tx})^2}=\dfrac{t\cdot e^{tx}\cdot(\cos(tx)-\sin(tx))}{(e^{tx})^2}=\dfrac{t\cdot(\cos(tx)-\sin(tx))}{e^{tx}}\\$
+\item$f(x)=x\cdot e^{t\sqrt{x}+0,5}\\
+\Rightarrow f'(x)=x\cdot (-\dfrac{t}{\sqrt{x}})\cdot e^{t\sqrt{x}+0,5}=-t\sqrt{x}\cdot e^{t\sqrt{x}+0,5}$
+\end{itemize}
+\end{Beispiel}
 
 \subsubsection{Exponentialfunktionen mit beliebiger Basis}
 
