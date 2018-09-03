@@ -45,7 +45,7 @@ Benannt nach dem bekannten Mathematiker Leonhard Euler ist diese Zahl eine der w
 Sie ist die Basis des natürlichen Logarithmus und der natürlichen Exponentialfunktion. Diese besondere Exponentialfunktion wird aufgrund dieser Beziehung zur Zahl $e$ häufig kurz $e$-Funktion genannt, sie eignet sich zur Modellierung von Wachstums- und Zufallsprozessen.\\
 \begin{Bemerkung}
 Eine alternative Definition wäre folgende:
-Die positive Zahl $a$, für die die Exponentialfunktion $f$ mit $f(x)=a^x$  mit ihrer Ableitungsfunktion $f'$ übereinstimmt, heißt Eulersche Zahl. (siehe 12.4)
+Die positive Zahl $a$, für die die Exponentialfunktion $f$ mit $f(x)=a^x$  mit ihrer Ableitungsfunktion $f'$ übereinstimmt, heißt Eulersche Zahl. (siehe 12.5)
 \end{Bemerkung}
 \\
 \begin{Definition}
@@ -287,16 +287,30 @@ Für $f(x)= a^x$ mit $0<a<1$ und $g(x)=x^n$ mit n $\in \R$:\\
 Es gilt weiterhin, dass sich das Wachstum der Exponentialfunktion durchsetzt, anhand dieser Aussage können die Grenzwerte von Funktionen, die Exponentialfunktionen mit Basis $<1$ beinhalten, leicht bestimmt werden.\\
 \danger Auch hier gilt es, auf das Vorzeichen der anderen Funktion(en) zu achten.
 
+		\section{Basiswechsel}
+
+Seien, $a,b\in\R^+\backslash1:$
+\begin{Theorem}
+$$a^x=b^{ x\cdot\log_b a}$$
+\end{Theorem}
+\begin{Beweis}
+\begin{align*}
+a^x&=(b^{\log_b a})^x\\
+&=b^{x\cdot\log_b a }
+\end{align*}
+\end{Beweis}
 
 		\section{Ableitungsregeln}
 
 Anhand der Definition des Differenzialquotienten kann man ermitteln, wie man Exponentialfunktionen ableitet.
 
 \begin{Beweis}
-$\dfrac{\text{d}}{\text{d}x}a^x =\lim\limits_{h\to0}\dfrac{a^{{x_0}+h}-a^{x_0}}{h}\\
-=\lim\limits_{h\to0}\dfrac{a^{x_0}\cdot a^h-a^{x_0}}{h}\\
-=\lim\limits_{h\to0}a^x\cdot\dfrac{a^h-1}{h}\\
-=a^x\cdot\underbrace{\lim\limits_{h\to0}\dfrac{a^h-1}{h}}_{\text{eine Konstante }\lambda}$
+\begin{align*}
+$\dfrac{\text{d}}{\text{d}x}(a^x) &=\lim\limits_{h\to0}\dfrac{a^{{x_0}+h}-a^{x_0}}{h}\\
+&=\lim\limits_{h\to0}\dfrac{a^{x_0}\cdot a^h-a^{x_0}}{h}\\
+&=\lim\limits_{h\to0}a^x\cdot\dfrac{a^h-1}{h}\\
+&=a^x\cdot\underbrace{\lim\limits_{h\to0}\dfrac{a^h-1}{h}}_{\text{eine Konstante }\lambda}$
+\end{align*}
 \end{Beweis}
 
 So erkennen wir, dass die Ableitung einer Funktion $f$ der Form $a^x$ diese selbe Funktion mal einem konstanten Vorfaktor $\lambda$ ist: $(a^x)'=a^x\cdot\lambda$\\
@@ -316,14 +330,14 @@ $\lambda$ entspricht also auch der Steigung der Tangenten der Ausgangsfunktion a
 
 \subsubsection{Exponentialfonktionen mit natürlicher Basis}
 
-\begin{Definition}
+\begin{Theorem}
 Die natürliche Exponentialfunktion überstimmt mit ihrer Ableitungsfunktion. 
-$$f(x)=e^x\Leftrightarrow f'=e^x$$
-\end{Definition}
-\begin{Definition}
+$$f(x)=e^x\Rightarrow f'=e^x$$
+\end{Theorem}
+\begin{Theorem}
 Die Funktion $f$ mit $f(x)=e^{v(x)}$ ist eine Verkettung der Funktion $v:x\rightarrow v(x)$ mit der Exponentialfunktion $u: v \rightarrow e^v$. Exisitiert die Ableitung $v'$, so gilt nach der Kettenregel\\
 $$f'(x)=v'(x)\cdot e^{v(x)}$$
-\end{Definition}
+\end{Theorem}
 \begin{Bemerkung}
 Letzteres kann natürlich auch verwendet werden, um eine Stammfunktion zu ermitteln.\\
 Die Funktion $f$ mit $f(x)=e^{v(x)}$ mit $v$ differenzierbar hat als mögliche Stammfunktion $F$ mit
@@ -344,6 +358,37 @@ $$F(x)=\dfrac{1}{v'(x)}\cdot e^{v(x)}$$
 
 \subsubsection{Exponentialfunktionen mit beliebiger Basis}
 
+Der vorher erwähnte Wert $\lambda$ ist für beliebige Basen schwierig festzulegen. Viel einfacher geht es nach einem Basiswechsel. Wenn man nämlich $e$ als Grundzahl wählt, kann wiederum die Ableitungsregel für Funktionen mit natürlicher Basis angewendet werden, so wurde das Problem umgangen.\\
+
+
+\begin{Theorem}
+Sei $f$ eine Funktion mit $f(x)=a^x,a\in\R^+\backslash1$. dann ist ihre Ableitungsfunktion $f'$, für die gilt:
+$$f'(x)=\ln (a)\cdot a^x$$
+\end{Theorem}
+\begin{Beweis}
+\begin{center}
+$\begin{array}{ccll}
+\dfrac{\text{d}}{\text{d}x}(a^x) &=&\dfrac{\text{d}}{\text{d}x}(e^{x\cdot\ln (a)})&\text{Basiswechsel und Kettenregel anwenden}\\
+&=&(x\cdot\ln (a))'\cdot e^{x\cdot\ln (a)}\qquad\qquad&\text{Ableiten (}\ln a\text{ ist eine Konstante)}\\
+&=&\ln (a) \cdot e^{x\cdot \ln a}&\text{Auf ursprüngliche Basis bringen}\\
+&=&\ln (a)\cdot a^x&
+\end{array}$
+\end{center}
+\end{Beweis}
+\\
+Dasselbe Prinzip kann auch für verkettete Funktionen angewendet werden.
+\begin{Theorem}
+Die Funktion $f$ mit $f(x)=a^{v(x)},a\in\R^+\backslash1$ ist eine Verkettung der Funktion $v:x\rightarrow v(x)$ mit der Exponentialfunktion $u: v \rightarrow a^v$. Exisitiert die Ableitung $v'$, so gilt nach der Kettenregel\\
+$$f'(x)=v'(x)\cdot\ln (a)\cdot a^{v(x)}$$
+\end{Theorem}
+\begin{Beweis}
+$\begin{array}{ccll}
+\dfrac{\text{d}}{\text{d}x}(a^{v(x)}) &=&\dfrac{\text{d}}{\text{d}x}(e^{v(x)\cdot\ln (a)})&\text{Basiswechsel und Kettenregel anwenden}\\
+&=&(v(x)\cdot\ln (a)})'\cdot e^{v(x)\cdot\ln (a)}\qquad\qquad&\text{Ableiten (}\ln a\text{ ist eine Konstante)}\\
+&=&v'(x)\cdot\ln (a) \cdot e^{v(x)\cdot \ln a}&\text{Auf ursprüngliche Basis bringen}\\
+&=&v'(x)\cdot\ln (a)\cdot a^{v(x)}&
+\end{array}$
+\end{Beweis}
 	\subsection{Aktivität}
 
 Quelle: Déclic 1ère??????
