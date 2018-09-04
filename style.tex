@@ -177,3 +177,8 @@
 \end{scope}
 \end{tikzpicture}%
 }
+\newcommand\raalign[2]{%Umrahmen einer align-Gl. mit &= 
+   \tikz[overlay,every node/.style={inner sep=0pt,outer sep=0pt}]%
+      \node[anchor=base west](g){\phantom{$\displaystyle #1\null=\null#2$}}%
+         node[draw=blue!50!black,fill=blue!20,fit=(g),inner sep=5pt]{};%
+   #1&=#2}
