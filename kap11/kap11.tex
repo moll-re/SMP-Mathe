@@ -1,7 +1,12 @@
 \chapter{Integrale}
 \section{Einführung - Stammfunktionen}
 \begin{Definition}
-  Sei $f$ eine Funktion, die über einem Intervall $I\in\R$ definiert ist. Man nennt jede Funktion $F$, die auf $I$ differenzierbar ist, für die gilt $F'(x)=f(x)$ ,$\forall x\in I$ eine \emph{Stammfunktion} von $f$.
+  Sei $f$ eine Funktion, die über einem Intervall $I\in\R$ definiert ist. Man nennt jede Funktion $F$, die auf $I$ differenzierbar ist, für die gilt $F'(x)=f(x)$ ,$\forall x\in I$ eine \emph{Stammfunktion} von $f$.\\
+  Ist $F$ irgendeine Stammfunktion von $f$, dann ist auch $F(x)+C$ (mit
+  konstantem $C$) eine Stammfunktion, denn beim Ableiten fällt $C$ als
+  konstanter Summand weg. Jede Funktion hat also unendlich viele
+  Stammfunktionen, die sich aber nur um einen konstanten Summanden
+  unterscheiden.
 \end{Definition}
 \begin{Theorem}
   Jede auf $I$ stetige Funktion besitzt eine Stammfunktion über $I$.
@@ -75,18 +80,7 @@
 \begin{Theorem}
   Für eine auf einem Intervall $I$ stetige Funktion $f$ und einer reellen Zahl $a\in I$ gilt: Die Funktion, die über $I$ definiert ist durch $x\mapsto\displaystyle{\int_a^xf(t)dt}$, ist die Stammfunktion von $f$, die bei $a$ gleich $0$ ist.
 \end{Theorem}
-
-\section{Stammfunktionen und der Hauptsatz der Differential- und Integralrechnung}
-Wir beschränken uns in diesem Kapitel auf die Integralrechnung, da die Differentialrechnung bereits in Kapitel \ref{Funktionsuntersuchung} behandelt wird.\\
-\begin{Theorem}
-  Eine Funktion $F$ heißt Stammfunktion der Funktion $f$, wenn $F'(x)=f(x)$
-  gilt.\\
-  Ist $F$ irgendeine Stammfunktion von $f$, dann ist auch $F(x)+C$ (mit
-  konstantem $C$) eine Stammfunktion, denn beim Ableiten fällt $C$ als
-  konstanter Summand weg. Jede Funktion hat also unendlich viele
-  Stammfunktionen, die sich aber nur um einen konstanten Summanden
-  unterscheiden.
-\end{Theorem}
+Aus diesen Sätzen stellt sich der \textbf{Hauptsatz der Differenzial- und Integralrechnung} zusammen. Wir beschränken uns in diesem Kapitel auf die Integralrechnung, da die Differentialrechnung bereits in Kapitel \ref{Funktionsuntersuchung} behandelt wird.\\
 \begin{Bemerkung}
   Man beobachtet hier eine Erweiterung der NEW-Regel (siehe \ref{NEW-Regel}, NEW-Regel):\\\\
   \begin{minipage}[b]{0.2\linewidth}
@@ -103,7 +97,7 @@ Wir beschränken uns in diesem Kapitel auf die Integralrechnung, da die Differen
     \end{array}
   \end{minipage}
 \end{Bemerkung}
-\subsection{Weitere Sätze über Integrale}
+\section{Sätze über Integrale}
 \begin{Theorem}
 \begin{center}
   \begin{tabular}{r c l l}
@@ -182,9 +176,28 @@ Außerdem:
   Für eine auf $[a;b]$ stetige Funktion $f$ mit $a \neq b$ gilt: Der Mittelwert von $f$ auf $[a;b]$ ist gegeben durch $$\mu = \dfrac{1}{b-a} \int_a^b f(t)dt$$
 \end{Definition}
 
-\subsection{Integrationsregeln und -techniken}
+\section{Integrationsregeln und -techniken}
 
-\subsubsection{Partielle Integration}
+\subsection{Potenzregel}
+Hoffentlich einleuchtend und selbstverständlich:
+\begin{Theorem}
+  $$\forall n \in \Z \textbackslash \{ -1\}:\int  x^n dx = \frac{1}{n+1}x^{n+1} + C$$
+\end{Theorem}
+\begin{Bemerkung}
+  Die einzige Ausnahme stellt der Fall $n=-1$ dar:
+\end{Bemerkung}
+\begin{Theorem}
+  $$\int  \dfrac{1}{x} dx = \ln(|x|) + C$$
+\end{Theorem}
+Eine Konsequenz dessen ist:
+\begin{Theorem}
+  $$\int  \dfrac{a}{bx+c} dx = \dfrac{a}{b}\ln(|bx+c|) + C$$
+\end{Theorem}
+\begin{Beweis}
+  So what?
+\end{Beweis}
+
+\subsection{Partielle Integration}
 \begin{Theorem}
   Seien $u$ und $v$ zwei stetig differenzierbare Funktionen im Intervall $I$ und $u'$
   und $v'$ in I stetig. Dann gilt:
@@ -208,23 +221,47 @@ Nachweisen u, v diffbar und u', v' stetig (kommt noch in sauber)\\
 \end{align*}
 \end{Beispiel}
 
-\subsubsection{Partialbruchzerlegung}
+\subsection{Substitution}
+\begin{Theorem}
+  Es sei $f$ eine auf $[a;b]$ stetige funktion und $g$ eine auf diesem Intervall differenzierbare Funktion mit stetiger Ableitung
+  $g'$. Wenn die verkettung $f \circ g$ esxistiert, gilt:
+  $$\int_a^b f(g(x)*g'(x)dx=\int_{g(a)}^{g(b)}f(z)dz$$
+\end{Theorem}
+Eine abgespeckte Variante dieses Theorems, genannt lineare Substitution ist gegeben durch:
+\begin{Theorem}
+  Für ein Funktion $f$ mit einer Stammfunktion $F$ und $r\neq 0$ gilt:
+  $$\int_a^b f(rx+s)dx=\dfrac{1}{r}[F(rx+s)]_a^b$$
+\end{Theorem}
+\begin{Beispiel}
+  Kommen noch (LS Grau S.186f)
+\end{Beispiel}
+
+\subsection{Substitution der Integrationsvariablen}
+\begin{Theorem}
+  Es sei $f$ eine auf $[a;b]$ stetige funktion und $g$ eine auf diesem Intervall differenzierbare und umkehrbare Funktion mit stetiger
+  Ableitungsfunktion $g'$. Wenn die verkettung $f \circ g$ esxistiert, gilt:
+  $$\int_a^b f(x)dx=\int_{\bar g (a)}^{\bar g (b)}f(g(t))*g'(t)dt$$
+\end{Theorem}
+
+\subsection{Partialbruchzerlegung}
 ?
-\subsubsection{Integrale von $e$-Funktionen}
+
+\subsection{Integrale von $e$-Funktionen}
 \begin{Theorem}
   Für $f(x)=e^{l(x)}$ mit $l(x) = ax+b$ gilt: $F(x) = \dfrac{1}{a}e^{l(x)}$
 \end{Theorem}
 \begin{Beweis}
   Man bilde $F'(x)$.
 \end{Beweis}
-\subsubsection{Integrale von $ln()$-Funktionen}
+\subsection{Integrale von $\ln()$-Funktionen}
+Es handelt sich hierbei streng genommen auch um eine Substitution:
 \begin{Theorem}
   Für $x \in \R^{+}$ ist $F$ eine Stammfunktion zur Funktion $f(x) = \ln(x)$ mit $F(x) = x \ln(x)-x$
 \end{Theorem}
 \begin{Beweis}
   Der Beweis erfolgt über partielle Integration und wird dem Schüler als Übung überlassen.
 \end{Beweis}
-\subsubsection{Integrale von geraden Funktionen}
+\subsection{Integrale von (un)geraden Funktionen}
 \begin{Theorem}
   Sei $f$ eine auf einem Intervall $I$ stetige und auf $0$ zentrierte Funktion. Wenn $f$ gerade ist, gilt für alle $a\in \R$:
   $\displaystyle{\int_{-a}^{a} f(t)dt = 2\int_{0}^{a} f(t)dt } $, und wenn $f$ ungerade ist
@@ -236,7 +273,7 @@ Nachweisen u, v diffbar und u', v' stetig (kommt noch in sauber)\\
   Wenn $f$ auf $I$ ungerade ist, gilt: $\varphi'(x) = 0$ und somit konstant (und außerdem $=\varphi(x)$) auf $I$, was $\( \displaystyle\int_{-a}^{a} f(t)dt = 0$ beweist.\\
   Wenn $f$ gerade ist, gilt: $\varphi'(x) = 2f(x)$. Also gilt für $\varphi(x)=\displaystyle{\int_0^x 2f(t)dt}$, einer Stammfunktion von $2f(x)$,  $\varphi(0)=0$, was $\displaystyle{\int_{-a}^{a} f(t)dt = 2\int_{0}^{a} f(t)dt }$ beweist.
 \end{Beweis}
-\subsubsection{Integrale von periodischen Funktionen}
+\subsection{Integrale von periodischen Funktionen}
 \begin{Theorem}
   Für jede auf $\R$ stetige und periodische Funktion $f$ gilt:
   \begin{center}
@@ -249,8 +286,8 @@ Nachweisen u, v diffbar und u', v' stetig (kommt noch in sauber)\\
 \end{Beweis}
 
 
-
 \section{Flächen und Volumen mit Integralen berechnen}
+
 \subsection{Fläche zwischen einer Funktion und der $x_1$-Achse}
 \begin{Definition}
   Für die auf dem Intervall $[a;b]$ (also stückweise) stetige Funktion $f$ mit Nullstellen und $x_1,x_2,...,x_n$
@@ -265,7 +302,6 @@ Bildhaft sieht das folgendermaßen aus:
     \begin{tikzpicture}[scale=0.7]
         \draw[->,line width=0.8pt] (-5.5,0) -- (5.5,0) node[below] {$x_1$};
         \draw[->,line width=0.8pt] (0,-5.5) -- (0,5.5) node[right] {$x_2$};
-
         \draw[line width=0.1pt,color=lightblu,fill=lightblu,fill opacity=0.3] (-2.5,0) -- (-2.5,-2.5) ..controls(-1.62,-3.072) ..(0,0) -- cycle;
         \draw[line width=0.1pt,color=lightgree,fill=lightgree,fill opacity=0.3] (0,0) ..controls(1.94,3.78) ..(3.5,4.5) -- (3.5,0) -- cycle;
         \draw[line width=1.5pt,color=red] (-5,2) ..controls(-2,-4) ..(0,0);
@@ -292,7 +328,6 @@ Bildhaft sieht das folgendermaßen aus:
         \draw (-0.3,-0.3) node {$O$};
         \draw[line width=0.8pt,color=lightblu] (-1.5,-1.1) node {$A$};
         \draw[line width=0.8pt,color=lightgree] (2.3,1.9) node {$B$};
-
         \draw[line width=0.8pt,color=red] (2,4) node {$K$};
     \end{tikzpicture}
 \end{center}
@@ -417,7 +452,7 @@ Bildhaft sieht das folgendermaßen aus:
 \end{Beispiel}
 \begin{Beispiel}
   $f(x)=\dfrac{1}{\sqrt x}$\\
-  \( \displaystyle A(z)=\int_z1^{Z} \dfrac{1}{\sqrt x} dx = \left[2\sqrt x \right]_1^{Z} = 2\sqrt Z - 2\\
+  \( \displaystyle A(z)=\int_z1^{Z} \dfrac{1}{\sqrt x} dx = \left[2\sqrt x \right]_1^{Z} = 2\sqrt Z - 2\)\\
   $\lim \limits_{Z \rightarrow \infty} 2\sqrt Z - 2 \stackrel{\rightarrow}{Z \rightarrow \infty} \infty$\\
   $\Rightarrow$ Das uneigentliche Integral existiert nicht.
 \end{Beispiel}
@@ -435,13 +470,13 @@ Hier eine (möglicherweise unvollständige) rückblickende Liste mit Integralen,
 Diese sollten ohne weitere Rechtfertigung oder Beweis verwendet werden dürfen. (Diese Angabe ist ohne Gewähr)\\
 \begin{align*}
   \int x^n dx &=\dfrac{x^{n+1}}{n+1} + C\\
+  \int\dfrac{1}{x} dx &= \ln(|x|) + C\\
   \int\sin x dx &= -\cos x + C\\
   \int\cos x dx &= \sin x + C\\
-  \int\dfrac{ dx}{\cos^2x} &= \tan x + C\\
-  \int\dfrac{1}{x} dx &= \ln(|x|) + C\\
+  \int\dfrac{1}{\cos^2x}dx &= \tan x + C\\
   \int\dfrac{1}{\sqrt{x}}dx &= 2\sqrt{x} + C\\
-  \int \dfrac{u'(x)}{u(x)} dx &= \ln(|u(x)|) + C\\
-
+  \int\dfrac{u'(x)}{u(x)} dx &= \ln(|u(x)|) + C\\
+  \int e^{ax+b}dx &= \dfrac{1}{a}e^{ax+b} + C\\
+  \int \dfrac{1}{\sqrt x} &= 2\sqrtx + C\\
 \end{align*}
 \danger Definitionsmengen sind zu beachten.
-ln, e^x, usw.
