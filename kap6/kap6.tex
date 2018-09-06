@@ -1,153 +1,181 @@
 \chapter{Komplexe Zahlen}
 
 
+\section{Einführung}
 
-	\section{Einf"uhrung}
-\underline{Problem:} Es gibt algebraische Gleichungen, die in der Menge  der reellen Zahlen $\R$  keine L"osung besitzen.\\
-\\
-$\Rightarrow x^2 + 1 = 0   $\\
-$\Leftrightarrow x = ± \sqrt{-1}$ Keine Reelle L"osung!\\
-\\
-Es kann hierbei ein neues Symbol eingeführt werden : $i = \sqrt{-1} $\\
-Damit kann man der obigen Gleichung die Lösung $x =±i$ zuordnen\\
-\\
-Wenn wir voraussetzen, dass diese neue Zahlen nach denselben Rechengesetzen genügen, wie die reellen Zahlen, erhalten wir damit auch Lösungen für andere bisher nicht lösbare quadratische Gleichungen, wie das folgende Beispiel zeigt:\\
-\\
-$\Rightarrow x^2 + 2x + 5 = 0$\\
-\\
-$\Rightarrow x = \dfrac { -2± \overbrace{ \sqrt{4-20}}^{=\sqrt{16*(-1)}} } { 2}
-=\frac {-2 ±4i}{2}
-= -1±2i$\\
-\\
-\\
-\begin{Bemerkung}
-Bezeichnungen\\
-\end{Bemerkung}
+	\paragraph{} Die Ursache für die Einführung der komplexen Zahlen ist vergleichbar mit der jeglicher anderer Zahlenmengen (abgesehen
+	von $\N$). Alles basiert auf einer Rechnung oder einer Menge an Rechnungen, welche für die vorhandenen Zahlenmengen \textbf{keine Lösung
+	besitzen} oder aber diese Zahlenmengen einem nicht erlauben eine Lösung zu finden. Ein Beispiel hierfür ist die Einführung der
+	negativen Zahlen. Gleichungen der Form $2 + x = 1$ waren eine Zeit lang nicht lösbar. Ebenso galt einmal, dass $x^2 - 2 = 0$ keine
+	Lösung besitzt, da hierfür die reellen Zahlen benötigt werden. Analog dazu wird die Erweiterung auf die komplexen Zahlen begründet.
+	Dies wird an folgendem klassischen Beispiel erläutert:
 
-\begin{enumerate}
-\item Der Ausdruck $\sqrt{-1}$ heißt \textbf{imaginäre Einheit} und wird hier mit $i$ bezeichnet.
-\item Ausdr"ucke der Form $i\cdot y$ mit $y \in \R$  heißen \textbf{imagin"are Zahlen}
-\item Ausdr"ucke der Form $z =x+i*y$ mit $x,y \in \R$ werden als \textbf{Komplexe Zahlen} bezeichnet
-\item Ist $z =x+i*y$ eine Komplexe Zahl, so heißen\\
-\indent $x=Re(z)$ \textbf{Realteil} von $z$\\
-\indent $y=Im(z)$ \textbf{Imaginärteil} von $z$
-\item Die Menge $\C =\{ {z = x+j y| x, y \in \R}\}$ wird als Menge der Komplexen Zahlen bezeichnet\\
-\end{enumerate}
+	\begin{align*}
+		\qquad \qquad x^2 + 1 &= 0 \\
+			\Leftrightarrow x &= \sqrt{-1} \quad \text{\Lightning}
+	\end{align*}
 
-\begin{Bemerkung}
-Aber\\
-\end{Bemerkung}
+	\paragraph{} Um dieser und anderen Gleichungen eine Lösung zuzuteilen ist es nicht nur notwendig die Zahlenmenge zu erweitern, sondern
+	auch, neue Symbole und Zeichen einzuführen um die neuen Zahlen zu kennzeichnen. Für die $\Z$ ist es das Symbol \dq-\dq, für $\Q$
+	\dq,\dq und $\dfrac{a}{b}$, für $\R$ $\sqrt{a}$ und die Zeichen $\pi$ und $e$ zum Beispiel (auch wenn beide sich anders darstellen lassen).
+	(Ein) gewisse(r) Mathematiker (Leibniz glaube ich) hat entschieden, dass das einzige benötigte Zeichen $i$ sein sollte, da er sie imaginäre
+	Zahl nannte (Für den Fall, dass ich hier ein bisschen was durcheinander bringe, sind Direktverbesserungen kommentarlos erlaubt und erwünscht).
+ 	Und dem war so, weshalb nun gilt:
+											$$i \in \C : i^2 = -1; \C \definedBy \R \cup \right\text\{i\left\}$$
 
-Der  \textbf{Imaginärteil} $y$ einer komplexen Zahl  $z =x+i*y$ ist selbst eine reelle Zahl! Der \textbf{Imaginärteil} ist lediglich der Faktor bei $i$!\\
+	\begin{Definition}
+		Komplexe Zahlen werden standartmäßig mit dem Buchstaben $z$ dargestellt. Die allgemeine Formel einer solchen Zahl lautet:
+		\\
+		\begin{tikzpicture}
+			\draw (0,0) node {};
+			\draw (7.9, 0) node {$z = x + y \cdot i; x,y \in \R; i \in \C$};
+			\draw[line width=0.4pt][decorate,decoration={brace,amplitude=3pt},rotate around={180:(7.6,-0.25)}] (7.6,-0.25) -- (8.1,-0.25);
+			\draw[line width=0.4pt][decorate,decoration={brace,amplitude=2pt},rotate around={180:(6.7,-0.25)}] (6.7,-0.25) -- (7,-0.25);
+		    %\draw[line width=0.4pt] (5.9,-0.05) -- (5.1,-0.4) node[color=blue,left] {$J$};
+		    %\draw[line width=0.4pt] (8.5,0.25) -- (9.2,0.7) node[color=blue,right] {$C$};
+		    %\draw[line width=0.4pt] (8.51,-0.3) -- (9.7,-0.7) node[color=blue,right] {$m^{2}$};
+		\end{tikzpicture}
+	\end{Definition}
 
-	\section{Darstellung komplexer Zahlen}
+	Wenn wir voraussetzen, dass diese neue Zahlen nach denselben Rechengesetzen genügen, wie die reellen Zahlen, erhalten wir damit auch Lösungen für andere bisher nicht lösbare quadratische Gleichungen, wie das folgende Beispiel zeigt:\\
+	\\
+	$\Rightarrow x^2 + 2x + 5 = 0$\\
+	\\
+	$\Rightarrow x = \dfrac { -2± \overbrace{ \sqrt{4-20}}^{=\sqrt{16*(-1)}} } { 2}
+	=\frac {-2 ±4i}{2}
+	= -1±2i$\\
+	\\
+	\\
+	\begin{Bemerkung}
+	Bezeichnungen\\
+	\end{Bemerkung}
 
-Eine komplexe Zahl wird durch zwei reelle Zahlen charakterisiert. Wie bei zweidimensionalen Vektoren brauchen wir hier zur geometrischen Veranschaulichung auch eine zweidimensionale Ebene.\\
+	\begin{enumerate}
+	\item Der Ausdruck $\sqrt{-1}$ heißt \textbf{imaginäre Einheit} und wird hier mit $i$ bezeichnet.
+	\item Ausdr"ucke der Form $i\cdot y$ mit $y \in \R$  heißen \textbf{imagin"are Zahlen}
+	\item Ausdr"ucke der Form $z =x+i*y$ mit $x,y \in \R$ werden als \textbf{Komplexe Zahlen} bezeichnet
+	\item Ist $z =x+i*y$ eine Komplexe Zahl, so heißen\\
+	\indent $x=Re(z)$ \textbf{Realteil} von $z$\\
+	\indent $y=Im(z)$ \textbf{Imaginärteil} von $z$
+	\item Die Menge $\C =\{ {z = x+j y| x, y \in \R}\}$ wird als Menge der Komplexen Zahlen bezeichnet\\
+	\end{enumerate}
+
+	\begin{Bemerkung}
+	Aber\\
+	\end{Bemerkung}
+
+	Der  \textbf{Imaginärteil} $y$ einer komplexen Zahl  $z =x+i*y$ ist selbst eine reelle Zahl! Der \textbf{Imaginärteil} ist lediglich der Faktor bei $i$!\\
+
+
+\section{Darstellung komplexer Zahlen}
+
+	Eine komplexe Zahl wird durch zwei reelle Zahlen charakterisiert. Wie bei zweidimensionalen Vektoren brauchen wir hier zur geometrischen Veranschaulichung auch eine zweidimensionale Ebene.\\
 
 	\subsection{Kartesische Darstellung}
 
-Jeder komplexen Zahl $z =x+i*y$ entspricht genau ein Punkt $P =(x,y)$ in der komplexen Zahlenebene und umgekehrt.\\
+		Jeder komplexen Zahl $z =x+i*y$ entspricht genau ein Punkt $P =(x,y)$ in der komplexen Zahlenebene und umgekehrt.\\
 
-\includegraphics[width=3in]{kap6/komplexezahlen1}
+		\includegraphics[width=3in]{kap6/komplexezahlen1}
 
-\begin{Bemerkung}
-Bezeichnungen\\
-\end{Bemerkung}
+		\begin{Bemerkung}
+		Bezeichnungen\\
+		\end{Bemerkung}
 
-\begin{enumerate}
-\item Die komplexe Zahlenebene nennt sich auch Gaußsche- Zahlenebene
-\item Hier werden die Achsen des Koordinatensystems als \textbf{reelle Achse} bzw. \textbf{imagin"are Achse} bezeichnet.\\
-\end{enumerate}
+		\begin{enumerate}
+		\item Die komplexe Zahlenebene nennt sich auch Gaußsche- Zahlenebene
+		\item Hier werden die Achsen des Koordinatensystems als \textbf{reelle Achse} bzw. \textbf{imagin"are Achse} bezeichnet.\\
+		\end{enumerate}
 
-\begin{Bemerkung}
-Beispiel\\
-\end{Bemerkung}
+		\begin{Bemerkung}
+		Beispiel\\
+		\end{Bemerkung}
 
-Die folgenden komplexen Zahlen sind in der Gaußschen Zahlenebene darzustellen: \\
-$z_{1} = 2+3*j$  $z_{2} =-3-j$ ($i$ wird hier $j$ genannt)
+		Die folgenden komplexen Zahlen sind in der Gaußschen Zahlenebene darzustellen: \\
+		$z_{1} = 2+3*j$  $z_{2} =-3-j$ ($i$ wird hier $j$ genannt)
 
-\includegraphics[width=3in]{kap6/komplexezahlen2}
+		\includegraphics[width=3in]{kap6/komplexezahlen2}
 
-\begin{Bemerkung}
-Bemerkungen\\
-\end{Bemerkung}
+		\begin{Bemerkung}
+		Bemerkungen\\
+		\end{Bemerkung}
 
-F"ur manche Anwendungen ist es hilfreich, eine komplexe Zahl nicht als Punkt $P=(x,y)$ in der Gaußschen Zahlenebene zu veranschaulichen, sondern stattdessen den Ortsvektor zu betrachten
+		F"ur manche Anwendungen ist es hilfreich, eine komplexe Zahl nicht als Punkt $P=(x,y)$ in der Gaußschen Zahlenebene zu veranschaulichen, sondern stattdessen den Ortsvektor zu betrachten
 
-$z=x+j*y \Leftrightarrow z=
-\begin{pmatrix}
-x\\
-y\\
-\end{pmatrix}$
+		$z=x+j*y \Leftrightarrow z=
+		\begin{pmatrix}
+		x\\
+		y\\
+		\end{pmatrix}$
 
-\includegraphics[width=3in]{kap6/komplexezahlen3}
+		\includegraphics[width=3in]{kap6/komplexezahlen3}
 
-In diesem Fall spricht man von z als einem \textbf{komplexen Zeiger}.\\
+		In diesem Fall spricht man von z als einem \textbf{komplexen Zeiger}.\\
 
 	\subsection{Polarkoordinatendarstellung}
 
-Neben der eben eingef"uhrten kartesischen Darstellung $z =x+j*y$ kann eine komplexe Zahl auch entsprechend der hier stehenden Skizze dich ihren Radius  und den Winkel  eindeutig festgelegt werden.
+		Neben der eben eingef"uhrten kartesischen Darstellung $z =x+j*y$ kann eine komplexe Zahl auch entsprechend der hier stehenden Skizze dich ihren Radius  und den Winkel  eindeutig festgelegt werden.
 
-\includegraphics[width=3in]{kap6/komplexezahlen4}
+		\includegraphics[width=3in]{kap6/komplexezahlen4}
 
-\begin{Bemerkung}
-Erinnerung\\
-\end{Bemerkung}
+		\begin{Bemerkung}
+		Erinnerung\\
+		\end{Bemerkung}
 
-Zusammenhang zwischen den Koordinaten $P(x,y)$ und $P(r,\varphi)$ :\\
+		Zusammenhang zwischen den Koordinaten $P(x,y)$ und $P(r,\varphi)$ :\\
 
-$
-\begin{pmatrix}
-x=r*cos(\varphi)\\
-\\
-y=r*sin(\varphi)
-\end{pmatrix}
-$
-bzw.
-$
-\begin{pmatrix}
-r= \sqrt{x^2+y^2}\\
-\\
-tan(\varphi) = \frac{y}{x}
-\end{pmatrix}
-$
-\\
-\\
+		$
+		\begin{pmatrix}
+		x=r*cos(\varphi)\\
+		\\
+		y=r*sin(\varphi)
+		\end{pmatrix}
+		$
+		bzw.
+		$
+		\begin{pmatrix}
+		r= \sqrt{x^2+y^2}\\
+		\\
+		tan(\varphi) = \frac{y}{x}
+		\end{pmatrix}
+		$
+		\\
+		\\
 
-\begin{Bemerkung}
-Bemerkung\\
-\end{Bemerkung}
+		\begin{Bemerkung}
+		Bemerkung\\
+		\end{Bemerkung}
 
-Der Zusammenhang zwischen dem Quotienten $\frac{x}{y}$ und dem Winkel $\varphi \in [0,2\pi)$ eindeutig, da die Tangensfunktion -periodisch ist.\\
-Damit erhält man die \textbf{trigonometrische Darstellung} :\\
+		Der Zusammenhang zwischen dem Quotienten $\frac{x}{y}$ und dem Winkel $\varphi \in [0,2\pi)$ eindeutig, da die Tangensfunktion -periodisch ist.\\
+		Damit erhält man die \textbf{trigonometrische Darstellung} :\\
 
-$z=x+j*y =r*cos(\varphi)+j*r*sin(\varphi) \Rightarrow z=r(cos(\varphi)+j*sin(\varphi))$\\
+		$z=x+j*y =r*cos(\varphi)+j*r*sin(\varphi) \Rightarrow z=r(cos(\varphi)+j*sin(\varphi))$\\
 
-Dieser Ausdruck von $z$ wird im Folgenden sehr h"aufig auftreten. Deshalb wird daf"ur die Abk"urzung\\
-\\
-$e^{j\varphi} =cos(\varphi)+j*sin(\varphi)$\\
-\\
-ein.
-Somit ergibt sich schließlich eine sehr kompakte Darstellung, die sogenannte \textbf{Exponentialdarstellung} einer komplexen Zahl:\\\\
-$z=  {r(cos(\varphi)+r*j*sin(\varphi))}=r*e^{j\varphi}$
+		Dieser Ausdruck von $z$ wird im Folgenden sehr h"aufig auftreten. Deshalb wird daf"ur die Abk"urzung\\
+		\\
+		$e^{j\varphi} =cos(\varphi)+j*sin(\varphi)$\\
+		\\
+		ein.
+		Somit ergibt sich schließlich eine sehr kompakte Darstellung, die sogenannte \textbf{Exponentialdarstellung} einer komplexen Zahl:\\\\
+		$z=  {r(cos(\varphi)+r*j*sin(\varphi))}=r*e^{j\varphi}$
 
-\begin{Bemerkung}
-Zusammenfassung\\
-\end{Bemerkung}
+		\begin{Bemerkung}
+		Zusammenfassung\\
+		\end{Bemerkung}
 
-Eine komplexe Zahl l"asst sich auf verschiedene Arten darstellen:\\
+		Eine komplexe Zahl l"asst sich auf verschiedene Arten darstellen:\\
 
 
-\begin{tcolorbox}
+		\begin{tcolorbox}
 
-\begin{enumerate}
+		\begin{enumerate}
 
-\item $z=x+j*y$ (kartesische Darstellung)
-\item $z=(cos(\varphi)+j*sin(\varphi))$ (trigonometrische Darstellung)
-\item $z=r*e^{j\varphi}$ (Exponential-Darstellung)\\
+		\item $z=x+j*y$ (kartesische Darstellung)
+		\item $z=(cos(\varphi)+j*sin(\varphi))$ (trigonometrische Darstellung)
+		\item $z=r*e^{j\varphi}$ (Exponential-Darstellung)\\
 
-\end{enumerate}
+		\end{enumerate}
 
-\end{tcolorbox}
+		\end{tcolorbox}
+
 
 	\subsection{Umrechnung zwischen den Darstellungen}
