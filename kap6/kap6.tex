@@ -29,43 +29,70 @@
 		\begin{tikzpicture}
 			\draw (0,0) node {};
 			\draw (7.9, 0) node {$z = x + y \cdot i; x,y \in \R; i \in \C$};
-			\draw[line width=0.4pt][decorate,decoration={brace,amplitude=3pt},rotate around={180:(7.6,-0.25)}] (7.6,-0.25) -- (8.1,-0.25);
-			\draw[line width=0.4pt][decorate,decoration={brace,amplitude=2pt},rotate around={180:(6.7,-0.25)}] (6.7,-0.25) -- (7,-0.25);
-		    %\draw[line width=0.4pt] (5.9,-0.05) -- (5.1,-0.4) node[color=blue,left] {$J$};
-		    %\draw[line width=0.4pt] (8.5,0.25) -- (9.2,0.7) node[color=blue,right] {$C$};
-		    %\draw[line width=0.4pt] (8.51,-0.3) -- (9.7,-0.7) node[color=blue,right] {$m^{2}$};
+			\draw[line width=0.8pt][decorate,decoration={brace,amplitude=3pt},rotate around={180:(7.6,-0.25)}] (7.6,-0.25) -- (8.1,-0.25);
+			\draw[line width=0.8pt][decorate,decoration={brace,amplitude=2pt},rotate around={180:(6.7,-0.25)}] (6.7,-0.25) -- (7,-0.25);
+		    \draw[line width=0.4pt] (6.55,-0.5) -- (5.1,-1.4) node[color=blue,left] {$Re(z)$};
+		    \draw[line width=0.4pt] (7.35,-0.5) -- (9.2,-1.4) node[color=blue,right] {$Im(z)$};
 		\end{tikzpicture}
+		\\
+		Hierbei wird $x = Re(z)$ Realteil und $y = Im(z)$ und zwar \bold{nur $y$} Imaginärteil genannt.
 	\end{Definition}
 
-	Wenn wir voraussetzen, dass diese neue Zahlen nach denselben Rechengesetzen genügen, wie die reellen Zahlen, erhalten wir damit auch Lösungen für andere bisher nicht lösbare quadratische Gleichungen, wie das folgende Beispiel zeigt:\\
-	\\
-	$\Rightarrow x^2 + 2x + 5 = 0$\\
-	\\
-	$\Rightarrow x = \dfrac { -2± \overbrace{ \sqrt{4-20}}^{=\sqrt{16*(-1)}} } { 2}
-	=\frac {-2 ±4i}{2}
-	= -1±2i$\\
-	\\
-	\\
 	\begin{Bemerkung}
-	Bezeichnungen\\
+		Eine Zahl $z = x + yi \in \C$ heißt rein imaginäre Zahl für $x = 0$. Analog dazu wird sie für $y = 0$ als reell bezeichnet.
 	\end{Bemerkung}
 
-	\begin{enumerate}
-	\item Der Ausdruck $\sqrt{-1}$ heißt \textbf{imaginäre Einheit} und wird hier mit $i$ bezeichnet.
-	\item Ausdr"ucke der Form $i\cdot y$ mit $y \in \R$  heißen \textbf{imagin"are Zahlen}
-	\item Ausdr"ucke der Form $z =x+i*y$ mit $x,y \in \R$ werden als \textbf{Komplexe Zahlen} bezeichnet
-	\item Ist $z =x+i*y$ eine Komplexe Zahl, so heißen\\
-	\indent $x=Re(z)$ \textbf{Realteil} von $z$\\
-	\indent $y=Im(z)$ \textbf{Imaginärteil} von $z$
-	\item Die Menge $\C =\{ {z = x+j y| x, y \in \R}\}$ wird als Menge der Komplexen Zahlen bezeichnet\\
-	\end{enumerate}
 
-	\begin{Bemerkung}
-	Aber\\
-	\end{Bemerkung}
+\section{Der Körper der komplexen Zahlen}
 
-	Der  \textbf{Imaginärteil} $y$ einer komplexen Zahl  $z =x+i*y$ ist selbst eine reelle Zahl! Der \textbf{Imaginärteil} ist lediglich der Faktor bei $i$!\\
+	\paragraph{} Da wir nun wissen (oder halt auch nicht), weshalb wir die komplexen Zahlen benötigen, gilt es nun die verschiedenen Verknüpfungen,
+	mit welchen wir zwei komplexe Zahlen verbinden, zu definieren. Wie alle anderen bekannten Mengen (außer $\N$), ist $\C$ teil eines \textbf{Körpers}
+	welcher die zwei Verknüpfungen, denen wir allgemein die Namen \textbf{Addition} und \textbf{Multiplikation} geben. Das 3-Tupel (oder auch Tripel)
+	($\C$, +, *) ist somit der Körper, mit welchem wir arbeiten werden (jemals gefragt warum keine weiteren Verknüpfungen eingeführt wurden?).
+	Jedoch muss auch erstmal bewiesen werden, dass dieses Tripel ein Körper ist:
 
+	\begin{Beweis}
+		\underline{\textbf{Die Addition}}:
+
+		\paragraph{} Für die Addition gilt bekanntlich zu beweisen, dass ($\C$, \oplus) eine abelsche oder auch kommutative Gruppe ist:
+
+		\begin{enumerate}[1)]
+			\item \begin{align*}
+						\forall z_1, z_2 \in \C: z_1 \oplus z_2 &\definedBy (x_1 + y_1i) \oplus (x_2 + y_2i) \\
+														   		&= ((x_1 + x_2) + (y_1 + y_2)i) \\
+														   		&\in \C \\
+						\Rightarrow \forall z_1, z_2 \in \C: \oplus : \C \times \C \rightarrow \C \quad \text{(Abges}&\text{chlossenheit)}
+				  \end{align*}
+			\item \begin{align*}
+				  		(z_1 \oplus z_2) \oplus z_3 &= ((x_1 + x_2) + (y_1 + y_2)i) \oplus (x_3 + y_3i) \\
+										  			&= ((x_1 + x_2 + x_3) + (y_1 + y_2 + y_3)i) \\
+												    &= (x_1 + y_1i) \oplus ((x_2 + x_3) + (y_2 + y_3)i) \\
+												    &= (x_1 + y_1i) \oplus ((x_2 + y_2i) \oplus (x_3 + y_3i)) \\
+												    &= z_1 \oplus (z_2 \oplus z_3) \\
+						\Rightarrow \forall z_1, z_2, z_3 \in \C: &(z_1 + z_2) \oplus z_3 = z_1 \oplus (z_2 + z_3) \quad \text{(Assoziativität)}
+				  \end{align*}
+			\item \begin{align*}
+						e = (0 + 0i) \in \C, z \in \C: z \oplus e &= (x + yi) \oplus (0 + 0i) \\
+															 	  &= ((x + 0) + (y + 0)i) \\
+															 	  &= (x + yi) \\
+						\Rightarrow \exists e : z \oplus e = z; z \in \C \quad \text{(Neutrales Element)}&
+				  \end{align*}
+			%\item \begin{align*}
+	  		%			z* = (0 + 0i) \in \C, z \in \C: z \oplus e &= (x + yi) \oplus (0 + 0i) \\
+	  		%												 	  &= ((x + 0) + (y + 0)i) \\
+	  		%													  &= (x + yi) \\
+	  		%			\Rightarrow \exists e : z \oplus e = z; z \in \C \quad \text{(Neutrales Element)}&
+	  		%		  \end{align*}
+			\item \begin{align*}
+						z_1 \oplus z_2 &= (x_1 + y_1i) \oplus (x_2 + y_2i) \\
+									   &= ((x_1 + x_2) + (y_1 + y_2)i) \\
+									   &= ((x_2 + x_1) + (y_2 + y_1)i) \\
+									   &= (x_2 + y_2i) \oplus (x_1 + y_1i) \\
+									   &= z_2 \oplus z_1 \\
+						\Rightarrow \forall z_1, z_2 \in \C: z_1 \oplus z_2 = z_2 \oplus z_1 \quad \text{(Kom}&\text{mutativität)}
+				  \end{align*}
+		\end{enumerate}
+	\end{Beweis}
 
 \section{Darstellung komplexer Zahlen}
 
