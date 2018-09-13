@@ -34,18 +34,19 @@ Seien $a$, $b\in\R$, sowie $n$, $m\in\N$, dann gilt:
 		\section{Die Eulersche Zahl ($e$)}
 
 \begin{Definition}
-$e = 2,71828182845904523536028747135266249775724709369995...$\\
-\\
-Die \textbf{Eulersche Zahl} ($e$) ist eine irrationale, transzendente und reelle Zahl, die die Basis des (natürlichen) Logarithmus und der (natürlichen) Exponentialfunktion ist.\\
-Die Darstellung, der man am Häufigsten begegnet ist diese:
-$e=\lim\limits_{t\to \infty}\left(1+\dfrac{1}{t}\right)^t;t\in\R$
+	$e = 2,71828182845904523536028747135266249775724709369995...$\\
+	\\
+	Die \textbf{Eulersche Zahl} ($e$) ist eine irrationale, transzendente und reelle Zahl, die die Basis des (natürlichen) 			Logarithmus und der (natürlichen) Exponentialfunktion ist.\\
+	Die Darstellung, der man am Häufigsten begegnet ist diese:
+	$e=\lim\limits_{t\to \infty}\left(1+\dfrac{1}{t}\right)^t;t\in\R$
 \end{Definition}
 \\\\
 Benannt nach dem bekannten Mathematiker Leonhard Euler ist diese Zahl eine der wichtigsten Konstanten der Mathematik.
 Sie ist die Basis des natürlichen Logarithmus und der natürlichen Exponentialfunktion. Diese besondere Exponentialfunktion wird aufgrund dieser Beziehung zur Zahl $e$ häufig kurz $e$-Funktion genannt, sie eignet sich zur Modellierung von Wachstums- und Zufallsprozessen.\\
+
 \begin{Bemerkung}
-Eine alternative Definition wäre folgende:
-Die positive Zahl $a$, für die die Exponentialfunktion $f$ mit $f(x)=a^x$  mit ihrer Ableitungsfunktion $f'$ übereinstimmt, heißt Eulersche Zahl. (siehe 12.5)
+	Eine alternative Definition wäre folgende:
+	Die positive Zahl $a$, für die die Exponentialfunktion $f$ mit $f(x)=a^x$  mit ihrer Ableitungsfunktion $f'$ übereinstimmt, 		heißt Eulersche Zahl. (siehe 12.5)
 \end{Bemerkung}
 \\
 \begin{Definition}
@@ -73,14 +74,14 @@ Wir definieren eine Folge $(e_{n})n\in\N$ durch $e_{n}=\left(1+\dfrac{1}{n}\righ
 &=\textcolor{blue}{\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}}\cdot\textcolor{red}{\dfrac{n+1}{n}}
 \end{align*}
 \item Die Umformung ermöglicht uns auf den Term $\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}$ die Ungleichung von Bernoulli anzuwenden. Diese besagt Folgendes: $(1+x)^n>1+nx$ für $n\geq2$ und $x>-1$\\
-\begin{align*}\Rightarrow\textcolor{blue}{\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}}&\textcolor{blue}{  >} 1+(n+1)\cdot\left(-\dfrac{1}{(n+1)^2}\right)\\
+\begin{align*}\Rightarrow\textcolor{blue}{\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}}&\textcolor{blue}{>} 1+(n+1)\cdot\left(-\dfrac{1}{(n+1)^2}\right)\\
 &=1-\dfrac{1}{n+1}\\
 &=\textcolor{blue}{\dfrac{n}{n+1}}
 \end{align*}
 \item Dies kann man an den ersten Ausdruck anwenden:\\
 \begin{align*}
 \Rightarrow\dfrac{e_{n+1}}{e_{n}}&=\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}\cdot\dfrac{n+1}{n}\\
-&\textcolor{blue} {>\dfrac{n}{n+1}}\cdot\textcolor{red}{\dfrac{n+1}{n}}\\
+&\textcolor{blue}{$>$\dfrac{n}{n+1}}\cdot\textcolor{red}{\dfrac{n+1}{n}}\\
 &=1
 \end{align*}
 \textbf{$\Leftrightarrow e_{n}$ ist streng monoton steigend}
@@ -95,7 +96,7 @@ Dazu formen wir den Term so um, dass die Bernoulli-Ungleichung angewandt werden 
 &=\left(\dfrac{n^2+2n+1}{n^2+2n}\right)^{n+2}\cdot\dfrac{n}{n+1}\\
 &=\textcolor{blue}{\left(1+\dfrac{1}{n(n+2)}\right)^{n+2}}\cdot\textcolor{red}{\dfrac{n}{n+1}}
 \end{align*}
-\item Bernoulli: $(1+x)^n>1+nx$ für $n\geq2$ und $x>-1$\\
+\item{ Bernoulli: $(1+x)^n>1+nx$ für $n\geq2$ und $x>-1$\\
 \begin{align*}\Rightarrow \textcolor{blue}{\left(1+\dfrac{1}{n(n+2)}\right)^{n+2} &\textcolor{blue}{>}1+(n+2)\cdot\dfrac{1}{n(n+2)}\\
 &=\textcolor{blue}{\dfrac{n+1}{n}}
 \end{align*}
@@ -105,7 +106,7 @@ Dazu formen wir den Term so um, dass die Bernoulli-Ungleichung angewandt werden 
 Als Letztes zeigt man, dass $f_n$ zu $e_n$ eine obere Schranke ist:\\
 $f_n>e_n\\
 \left(1+\dfrac{1}{n}\right)^{n+1}>\left(1\dfrac{1}{n}\right)^n$
-
+}
 Eine streng monoton steigende Folge, die eine monoton fallende Folge, als ober Schranke hat, konvergiert. Es gilt also, dass $e_n$ konvergent ist, $e_n$ besitzt einen besonderen Grenzwert, der \textit{Eulersche Zahl} genannt wird.
 
 	\subsection{$e$ ist irrational}
@@ -306,10 +307,10 @@ Anhand der Definition des Differenzialquotienten kann man ermitteln, wie man Exp
 
 \begin{Beweis}
 \begin{align*}
-$\dfrac{\text{d}}{\text{d}x}(a^x) &=\lim\limits_{h\to0}\dfrac{a^{{x_0}+h}-a^{x_0}}{h}\\
+\dfrac{\text{d}}{\text{d}x}(a^x) &=\lim\limits_{h\to0}\dfrac{a^{{x_0}+h}-a^{x_0}}{h}\\
 &=\lim\limits_{h\to0}\dfrac{a^{x_0}\cdot a^h-a^{x_0}}{h}\\
 &=\lim\limits_{h\to0}a^x\cdot\dfrac{a^h-1}{h}\\
-&=a^x\cdot\underbrace{\lim\limits_{h\to0}\dfrac{a^h-1}{h}}_{\text{eine Konstante }\lambda}$
+&=a^x\cdot\underbrace{\lim\limits_{h\to0}\dfrac{a^h-1}{h}}_{\text{eine Konstante }\lambda}
 \end{align*}
 \end{Beweis}
 
@@ -367,12 +368,12 @@ $$f'(x)=\ln (a)\cdot a^x$$
 \end{Theorem}
 \begin{Beweis}
 \begin{center}
-$\begin{array}{ccll}
+\begin{array}{ccll}
 \dfrac{\text{d}}{\text{d}x}(a^x) &=&\dfrac{\text{d}}{\text{d}x}(e^{x\cdot\ln (a)})&\text{Basiswechsel und Kettenregel anwenden}\\
 &=&(x\cdot\ln (a))'\cdot e^{x\cdot\ln (a)}\qquad\qquad&\text{Ableiten (}\ln a\text{ ist eine Konstante)}\\
 &=&\ln (a) \cdot e^{x\cdot \ln a}&\text{Auf ursprüngliche Basis bringen}\\
 &=&\ln (a)\cdot a^x&
-\end{array}$
+\end{array}
 \end{center}
 \end{Beweis}
 \\
@@ -390,5 +391,22 @@ $\begin{array}{ccll}
 \end{array}$
 \end{Beweis}
 	\subsection{Aktivität}
+
+\definecolor{sexdts}{rgb}{0.1803921568627451,0.49019607843137253,0.19607843137254902}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-7.62,
+xmax=8,
+ymin=-6.86,
+ymax=6.94,
+xtick={-7,-6,...,11},
+ytick={-6,-5,...,6},]
+\draw[line width=2pt,color=sexdts,smooth,samples=100,domain=-7.62:11.779999999999998] plot(\x,{(\x)});
+\end{axis}
+\end{tikzpicture}
 
 Quelle: Déclic 1ère??????
