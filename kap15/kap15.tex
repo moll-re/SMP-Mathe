@@ -254,27 +254,69 @@ $$f(\text{Hz}) = \dfrac{1}{T(\text{s})} = \dfrac{\omega\, (\text{rad/s})}{2\pi(\
 
 \subsection{$1^{ere}$ loi}
 
-\begin{Definiton}
-bla
+\begin{Definition}
+Dans un référentiel galiléen, le centre d'inertie d'un solide isolé ou pseudo-isolé est animé d'un mouvement \textbf{rectiligne uniforme} (et réciproquement):
+$$\sum \vv{F}_{ext} = \vv{0} \qquad \Leftrightarrow \qquad \text{Mvt rect. uniforme}$$
 \end{Definition}
 
 \subsection{$2^{eme}$ loi}
 
-\begin{Definiton}
-bla
+\begin{Definition}
+Dans un référentiel galiléen, le PFD prédit que
+$$\sum \vv{F}_{ext} = m\cdot \vv{a} $$
 \end{Definition}
 
 \subsection{$3^{eme}$ loi}
 
-\begin{Definiton}
-bla
+\begin{Definition}
+C'est le principe de l'action et de la réaction. Soient $A$ et $B$ deux centres d'inertie de deux objets dans un référentiel galiléen:
+$$\vv{F}_{A\rightarrow B} = - \vv{F}_{B\rightarrow A}$$
+
 \end{Definition}
 
 
+\section{Énergies et TEC}
 
+\begin{Definition}
+L'énergie fait bouger des choses... Il existe plusieures formes d'énergie:
+\begin{itemize}
+\item $E_{c}$ L'énergie cinétique, Vitesse $v$ : $E_{c} = 1/2 \cdot m \cdot v^2 $
+\item $E_{pp}$ L'énergie potentielle de pesanteur, Altitude $z$ : $E_{pp} = m \cdot g \cdot z$
+\item $E_{pe}$ L'énergie potentielle élastique, Longueur déformée $x$ : $E_{pe} = 1/2 \cdot k \cdot x$
+\item $E_{th}$ L'énergie thermique, Température $T$
+\item Les énergies physique, chimique et nucléaire, Masse des corps $m$\\\\
+\end{itemize}
 
+L'énergie peut cependant changer de forme par un travail, transfert d'énergie :
+\begin{itemize}
+\item travail mécanique $W_{m}$ (force) : $W_{A\rightarrow B}(\vv{F}) = W_{AB}(\vv{F}) = \vv{F}\cdot\vv{AB} = F \cdot AB \cdot \cos{\alpha} $
+\item travail électrique $W_{e}$ (courant électrique) : $W_{A\rightarrow B}(\vv{F}_{e}) = q \cdot (V_{A}-V_{B})$
+\item travail rayonnant $W_{r}$ (rayonnement)
+\item chaleur $Q$ (chaleur)
+\end{itemize}
 
+On retient aussi : 
+$$W_{AB}(\vv{P}) = m\cdot g \cdot (z_{A}-z_{B})$$
+$$W_{AB}(\vv{f}) = - f \cdot \widetilde{AB} $$
+$$W_{AB}(\vv{R}_{n}) = 0$$
+$$W_{AB}(\vv{F}_{R}) = 1/2 \cdot k \cdot ({x_{B}}^2 -{x_{A}}^2)$$\\\\
 
+La \textbf{puissance moyenne} mesure la quantité d'énergie transférée par seconde:
+
+\begin{tikzpicture}
+    \draw (0,0) node {};
+    \draw (7.85,0) node {$P_{m} (\vv{F})= \dfrac{W_{AB}(\vv{F})}{\Delta t}$};
+    \draw[line width=0.4pt] (9.5,0.2) -- (10.4,0.35) node[color=blue,right] {$J$};
+    \draw[line width=0.4pt] (9,-0.3) -- (10,-0.7) node[color=blue,right] {$s$};
+\end{tikzpicture}
+
+La \textbf{puissance instantanée}:
+$$P(\vv{F}) = \vv{F}\cdot \vv{v} = F\cdot v \cdot \cos{\alpha}$$\\
+
+Le \textbf{TEC}: 
+$$\Delta {E_{c}}_{A\rightarrow B} = \sum W_{AB}(\vv{F}_{ext})$$
+
+\end{Definition}
 
 
 
