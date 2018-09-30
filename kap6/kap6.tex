@@ -18,13 +18,13 @@
 	auch, neue Symbole und Zeichen einzuführen um die neuen Zahlen zu kennzeichnen. Für die $\Z$ ist es das Symbol \dq-\dq, für $\Q$
 	\dq,\dq und $\dfrac{a}{b}$, für $\R$ $\sqrt{a}$ und die Zeichen $\pi$ und $e$ zum Beispiel (auch wenn beide sich anders darstellen lassen). (Ein) gewisse(r) Mathematiker (Leibniz glaube ich) hat entschieden, dass das einzige benötigte Zeichen $i$ sein sollte, da er sie imaginäre Zahl nannte (Für den Fall, dass ich hier ein bisschen was durcheinander bringe, sind Direktverbesserungen kommentarlos erlaubt und erwünscht).
  	Und dem war so, weshalb nun gilt:
-											$$i \in \C : i^2 = -1; \C \definedBy \R \cup \right\text\{i\left\}$$
+											$$i \in \C : i^2 = -1; \C \definedBy \R \cup \left\{i\right\}$$
 
 	\begin{Definition}
 		Komplexe Zahlen werden standartmäßig mit dem Buchstaben $z$ dargestellt. Die allgemeine Formel einer solchen Zahl lautet:
 		\\
 		\begin{tikzpicture}
-			\draw (0,0) node {};
+			\draw (0,0) node {" "};
 			\draw (7.9, 0) node {$z = x + y \cdot i; x,y \in \R; i \in \C$};
 			\draw[line width=0.8pt][decorate,decoration={brace,amplitude=3pt},rotate around={180:(7.6,-0.25)}] (7.6,-0.25) -- (8.1,-0.25);
 			\draw[line width=0.8pt][decorate,decoration={brace,amplitude=2pt},rotate around={180:(6.7,-0.25)}] (6.7,-0.25) -- (7,-0.25);
@@ -32,7 +32,7 @@
 		    \draw[line width=0.4pt] (7.35,-0.5) -- (9.2,-1.4) node[color=blue,right] {$Im(z)$};
 		\end{tikzpicture}
 		\\
-		Hierbei wird $x = Re(z)$ Realteil und $y = Im(z)$ und zwar \bold{nur $y$} Imaginärteil genannt.
+		Hierbei wird $x = Re(z)$ Realteil und $y = Im(z)$ und zwar \textbf{nur $y$} Imaginärteil genannt.
 	\end{Definition}
 
 	\begin{Bemerkung}
@@ -47,14 +47,14 @@
 	\begin{Beweis}
 		\underline{\textbf{Die Addition}}:
 
-		\paragraph{} Für die Addition gilt bekanntlich zu beweisen, dass ($\C$, \oplus) eine abelsche oder auch kommutative Gruppe ist:
+		\paragraph{} Für die Addition gilt bekanntlich zu beweisen, dass ($\C$, $\oplus$) eine abelsche oder auch kommutative Gruppe ist:
 
 		\begin{enumerate}[1)]
 			\item \begin{align*}
 						\forall z_1, z_2 \in \C: z_1 \oplus z_2 &\definedBy (x_1 + y_1i) \oplus (x_2 + y_2i) \\
 														   		&= ((x_1 + x_2) + (y_1 + y_2)i) \\
 														   		&\in \C \\
-						\Rightarrow \forall z_1, z_2 \in \C: \oplus : \C \times \C \rightarrow \C \quad \text{(Abges}&\text{chlossenheit)}
+						\Rightarrow \forall z_1, z_2 \in \C: \oplus : \C \times \C \rightarrow \C & \quad \text{(Abgeschlossenheit)}
 				  \end{align*}
 			\item \begin{align*}
 				  		(z_1 \oplus z_2) \oplus z_3 &= ((x_1 + x_2) + (y_1 + y_2)i) \oplus (x_3 + y_3i) \\
@@ -62,20 +62,22 @@
 												    &= (x_1 + y_1i) \oplus ((x_2 + x_3) + (y_2 + y_3)i) \\
 												    &= (x_1 + y_1i) \oplus ((x_2 + y_2i) \oplus (x_3 + y_3i)) \\
 												    &= z_1 \oplus (z_2 \oplus z_3) \\
-						\Rightarrow \forall z_1, z_2, z_3 \in \C: &(z_1 + z_2) \oplus z_3 = z_1 \oplus (z_2 + z_3) \quad \text{(Assoziativität)}
+						\Rightarrow \forall z_1, z_2, z_3 \in \C: (z_1 + &z_2) \oplus  z_3 = z_1 \oplus (z_2 + z_3) \quad \text{(Assoziativität)}
 				  \end{align*}
 			\item \begin{align*}
-						e = (0 + 0i) \in \C, z \in \C: z \oplus e &= (x + yi) \oplus (0 + 0i) \\
-															 	  &= ((x + 0) + (y + 0)i) \\
-															 	  &= (x + yi) \\
-						\Rightarrow \exists e: z \oplus e = z; z \in \C \quad \text{(Neutrales Element)}&
+						e = (0 + 0i) \in \C, \forall z \in \C:& \\
+												   z \oplus e = (x + yi&) \oplus (0 + 0i) \\
+													  		  = ((x + 0&) + (y + 0)i) \\
+															  = (x + yi&) \\
+						\Rightarrow \exists e: z \oplus e = z; z \in \C \quad &\text{(Neutrales Element)}
 				  \end{align*}
 			\item \begin{align*}
-	  					z* = -(x + yi) \in \C, z \in \C \text{(Hierbei gilt es z* nicht mit \overline{z} zu verwechseln)}: z \oplus z* &= (x + yi) \oplus (-(x + yi)) \\
-																		  														 	   &= ((x - x) + (y - y)i) \\
-	  															  													 				   &= (0 + 0i) \\
-																																	   &= e \\
-	  					\Rightarrow \exists z*: z \oplus z* = e; z \in \C \quad \text{(Inverses Element)}&
+	  					z* = -(x + yi) \in \C, z \in \C \text{ (Hierbei gilt es z* nicht} & \text{mit $\overline{z}$ zu verwechseln)}: \\
+								  z \oplus z* = (x + yi) \oplus (-(x + yi)) \text{          } & \\
+								  			  = ((x - x) + (y - y)i) \text{ 				} & \\
+											  = (0 + 0i) \text{ 							} & \\
+											  = e \text{								    } & \\
+						\Rightarrow \exists z*: z \oplus z* = e; z \in \C \quad \text{(Inverses Element)} \qquad &
 	  			  \end{align*}
 			\item \begin{align*}
 						z_1 \oplus z_2 &= (x_1 + y_1i) \oplus (x_2 + y_2i) \\
@@ -91,7 +93,7 @@
 		\underline{\textbf{Die Multiplikation}}:
 	\end{Beweis}
 
-\section{Die Gauß'sche Zahlenmenge}
+\section{Die Gauß'sche Zahlenebene}
 
 	\paragraph{} Da jetzt der Körper der komplexe Zahlen definiert wurde, gilt es ihn nun in unser bekanntes Zahlensystem zu integrieren.
 	Hierfür kann man zum Beispiel beobachten, wie sich komplexe Zahlen auf der \textbf{reellen Zahlengerade} (welche eine Veranschaulichung des euklidischen Vektorraums $\R^1$ ist) verhalten:
