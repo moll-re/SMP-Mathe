@@ -22,20 +22,20 @@
 \setlength{\mathindent}{0pt}
 
 %Beweis:
-\newenvironment{Beweis}
-  {\begin{tcolorbox}[colback=gray!5!white,colframe=gray!70!black,opacityframe=0.5, opacitybacktitle=0.5,sharpish corners,boxrule=0pt,frame hidden,title=Beweis,breakable,break at=23cm,pad at break=1mm,]}
+\newenvironment{Beweis}[1][]
+  {\begin{tcolorbox}[colback=gray!5!white,colframe=gray!70!black,opacityframe=0.5, opacitybacktitle=0.5,sharpish corners,boxrule=0pt,frame hidden,title=Beweis \,#1,breakable,break at=23cm,pad at break=1mm,]}
   {\hfill\ensuremath{\square} \end{tcolorbox}}
 
 
 %Definition:
-\newenvironment{Definition}
-  {\begin{tcolorbox}[colback=red!7!white,colframe=red!70!black,sharpish corners,boxrule=0pt,frame hidden,title=Definition \thesubsection]}
+\newenvironment{Definition}[1][]
+  {\begin{tcolorbox}[colback=red!7!white,colframe=red!70!black,sharpish corners,boxrule=0pt,frame hidden,title=Definition \,#1]}
   {\end{tcolorbox}}
 
 
 %Theorem:
-\newenvironment{Theorem}
-  {\begin{tcolorbox}[colback=blue!5!white,colframe=blue!70!black,sharpish corners,boxrule=0pt,frame hidden,title=Theorem]}
+\newenvironment{Theorem}[1][]
+  {\begin{tcolorbox}[colback=blue!5!white,colframe=blue!70!black,sharpish corners,boxrule=0pt,frame hidden,title=Theorem\,#1]}
   {\end{tcolorbox}}
 
 %Beispiel
