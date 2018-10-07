@@ -1,7 +1,7 @@
 \chapter{Trigonometrie}
 \section{Kurze Wiederholung}
 \begin{Definition}
-  \begin{minipage}[b]{0.5\textwidth}
+  \begin{minipage}{0.5\textwidth}
     In einem Kreis mit Radius 1 gelte:
     \begin{align*}
       \cos(\alpha)&= x_{_M}\\
@@ -16,7 +16,7 @@
     \definecolor{ffqqqq}{rgb}{1,0,0}
     \definecolor{ttttff}{rgb}{0.2,0.2,1}
     \definecolor{uququq}{rgb}{0.25,0.25,0.25}
-    \begin{tikzpicture}[line join=round,x=2.0833333333333335cm,y=2.0833333333333335cm]
+    \begin{tikzpicture}[line join=round,x=2.0833333333333335cm,y=2.0833333333333335cm,scale=0.7]
       \draw[->,color=black] (-1.2,0) -- (1.2,0) node[below]{$x$};
       \foreach \x in {-1,1}
       \draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
@@ -121,12 +121,10 @@ Des Weiteren gilt:\\
 
 \section{Additions- und Verdopplungssätze}
 \begin{Theorem}
-  \begin{align*}
-    \cos(a - b) & = \cos(a)\cos(b) + \sin(a)\sin(b)\\
-    \sin(a - b) & = \sin(a)\cos(b) - \cos(a)\sin(b)\\
-    \cos(a + b) & = \cos(a)\cos(b) - \sin(a)\sin(b)\\
-    \sin(a + b) & = \sin(a)\cos(b) + \cos(a)\sin(b)
-  \end{align*}
+    $$\cos(a - b)  = \cos(a)\cos(b) + \sin(a)\sin(b)$$
+    $$\sin(a - b)  = \sin(a)\cos(b) - \cos(a)\sin(b)$$
+    $$\cos(a + b)  = \cos(a)\cos(b) - \sin(a)\sin(b)$$
+    $$\sin(a + b)  = \sin(a)\cos(b) + \cos(a)\sin(b)$$
 \end{Theorem}
 \begin{Bemerkung}
   Hieraus ergeben sich einige weitere Relationen, wie z.B. $\sin(2a)$. Diese lassen sich jedoch schnell und leicht herleiten.

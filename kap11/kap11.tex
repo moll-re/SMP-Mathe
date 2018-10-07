@@ -187,14 +187,14 @@ Hoffentlich einleuchtend und selbstverständlich:
   Die einzige Ausnahme stellt der Fall $n=-1$ dar:
 \end{Bemerkung}
 \begin{Theorem}
-  $$\int  \dfrac{1}{x} dx = \ln(|x|) + C$$
+  $$\int \dfrac{1}{x} dx = \ln(|x|) + C$$
 \end{Theorem}
 Eine Konsequenz dessen ist:
 \begin{Theorem}
-  $$\int  \dfrac{a}{bx+c} dx = \dfrac{a}{b}\ln(|bx+c|) + C$$
+  $$\int \dfrac{a}{bx+c} dx = \dfrac{a}{b}\ln(|bx+c|) + C$$
 \end{Theorem}
 \begin{Beweis}
-  So what?
+  $$\left(\dfrac{a}{b}\ln(|bx+c|)\right)' = \dfrac{a}{b}\cdot \dfrac{1}{bx+c}\cdot b = \dfrac{a}{bx+c}$$
 \end{Beweis}
 
 \subsection{Partielle Integration}
@@ -223,9 +223,9 @@ Nachweisen u, v diffbar und u', v' stetig (kommt noch in sauber)\\
 
 \subsection{Substitution}
 \begin{Theorem}
-  Es sei $f$ eine auf $[a;b]$ stetige funktion und $g$ eine auf diesem Intervall differenzierbare Funktion mit stetiger Ableitung
-  $g'$. Wenn die verkettung $f \circ g$ esxistiert, gilt:
-  $$\int_a^b f(g(x)*g'(x)dx=\int_{g(a)}^{g(b)}f(z)dz$$
+  Sei $f$ eine auf $[a;b]$ stetige funktion und $g$ eine auf diesem Intervall differenzierbare Funktion mit stetiger Ableitung
+  $g'$. Wenn die verkettung $f \circ g$ existiert, gilt:
+  $$\int_a^b f(g(x))\cdot g'(x)dx=\int_{g(a)}^{g(b)}f(z)dz$$
 \end{Theorem}
 Eine abgespeckte Variante dieses Theorems, genannt lineare Substitution ist gegeben durch:
 \begin{Theorem}
@@ -236,29 +236,28 @@ Eine abgespeckte Variante dieses Theorems, genannt lineare Substitution ist gege
     Zu berechnen: $$\int_0^4 \dfrac{x\sqrt{x}}{1 + x^2\sqrt{x}} dx$$ \\
     \textbf{Substitution}:
     \begin{align*}
-        \quad \qquad \qquad \qquad \qquad \qquad u &= x^2\sqrt{x} \quad (\text{alternativ } u = x^2\sqrt{x} + 1) \\
-                                    \dfrac{du}{dx} &= (x^2\sqrt{x})' \\
-                                                   &= \dfrac{5}{2} \cdot x\sqrt{x} \\
-                                \Leftrightarrow dx &= \dfrac{2}{5x\sqrt{x}}du
+        \quad \qquad \qquad \qquad \qquad \qquad
+        g(x) &= x^2\sqrt{x} \quad (\text{alternativ: } g(x) = x^2\sqrt{x} + 1) \\
+        \dfrac{dg}{dx} &= (x^2\sqrt{x})' \\
+                          &= \dfrac{5}{2} \cdot x\sqrt{x} \\
+        \Bigg(\Leftrightarrow dx &= \dfrac{2}{5x\sqrt{x}}dg \Rightarrow \int_0^4 \dfrac{x\sqrt{x}}{1 + x^2\sqrt{x}} dx = \int_{g(0)}^{g(4)} \dfrac{\cancel{x\sqrt{x}}}{1 + g} \cdot \dfrac{2}{5\cancel{x\sqrt{x}}}dg\Bigg)
     \end{align*}
     \textbf{Berechnung des Integrals}:
     \begin{align*}
-        \int_0^4 \dfrac{x\sqrt{x}}{1 + x^2\sqrt{x}} dx &= \int_{u(0)}^{u(4)} \dfrac{\cancel{x\sqrt{x}}}{1 + u} \cdot \dfrac{2}{5\cancel{x\sqrt{x}}}du \\
-                                                       &= \dfrac{2}{5} \cdot \int_{0^2\sqrt{0}}^{4^2\sqrt{4}} \dfrac{1}{1 + u}du \\
-                                                       &= \dfrac{2}{5} \cdot \left[\ln(|1 + u|)\right]_0^{32} \\
-                                                       &\boxed{= \dfrac{2}{5} \cdot \ln(33)}
+        \int_0^4 \dfrac{x\sqrt{x}}{1 + x^2\sqrt{x}} dx &= \int_0^4 f(g(x))\cdot g'(x)dx \text{\hspace{2cm}mit $f(x)=\dfrac{2}{5} \cdot \dfrac{1}{1+x}$ und $g(x) = x^2\sqrt{x}$}\\
+        &= \int_{g(0)}^{g(4)} \dfrac{2}{5} \cdot\dfrac{1}{1 + z}dz \\
+        &= \dfrac{2}{5} \cdot \int_{0^2\cdot\sqrt{0}}^{4^2\cdot\sqrt{4}} \dfrac{1}{1 + z}dz \\
+        &= \dfrac{2}{5} \cdot \left[\ln(|1 + z|)\right]_0^{32} \\
+        &\boxed{= \dfrac{2}{5} \cdot \ln(33)}
     \end{align*}
 \end{Beispiel}
 
 \subsection{Substitution der Integrationsvariablen}
 \begin{Theorem}
-  Es sei $f$ eine auf $[a;b]$ stetige funktion und $g$ eine auf diesem Intervall differenzierbare und umkehrbare Funktion mit stetiger
+  Sei $f$ eine auf $[a;b]$ stetige funktion und $g$ eine auf diesem Intervall differenzierbare und umkehrbare Funktion mit stetiger
   Ableitungsfunktion $g'$. Wenn die verkettung $f \circ g$ esxistiert, gilt:
   $$\int_a^b f(x)dx=\int_{\bar g (a)}^{\bar g (b)}f(g(t))*g'(t)dt$$
 \end{Theorem}
-
-\subsection{Partialbruchzerlegung}
-?
 
 \subsection{Integrale von $e$-Funktionen}
 \begin{Theorem}
