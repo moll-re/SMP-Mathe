@@ -6,13 +6,13 @@
 \usepackage{mathrsfs}
 \usepackage{amsfonts}
 \usepackage[T1]{fontenc}
-\usepackage[margin=2cm]{geometry}	              %Seitenrand
-\usepackage{fancyhdr}	                          %Titelblatt
-\usepackage{graphicx}	                          %Bilder einfügen
-\usepackage{wrapfig}                              %Text um Graphiken "wickeln" (wrap)
-\usepackage[listings,skins,breakable]{tcolorbox}
+\usepackage[margin=2cm]{geometry}	                %Seitenrand
+\usepackage{fancyhdr}	                            %Titelblatt
+\usepackage{graphicx}	                            %Bilder einfügen
+\usepackage{wrapfig}                               %Text um Graphiken "wickeln" (wrap)
+\usepackage[most]{tcolorbox}
 \usepackage{tikz,pgf,pgfplots}                    %Grafiken zeichnen
-\usepackage{mdframed}	                          %Box			%\begin{mdframed} 		und			%\end{mdframed}
+\usepackage{mdframed}	                            %Box			%\begin{mdframed} 		und			%\end{mdframed}
 \usepackage{epstopdf}
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
@@ -20,7 +20,6 @@
 \usepackage{esvect}                               %Schönere Vektoren
 \usepackage{listings}                             %Für Pseudocode/Code...
 \usepackage{color}                                %...Und dessen Einfärbung
-%\usepackage{booktabs}
 \usepackage{enumitem}                             %Angepasstes enumerieren
 \usepackage{enumerate}                            %Zeichen der Enumerierung beliebig wählbar
 \usepackage[hidelinks=true]{hyperref}
@@ -29,9 +28,10 @@
 \usepackage{marvosym}                             %Symbole wie Blitze und co. ...
 \usepackage{stackengine}                          %Wofür sind die nächsten 4 imports?
 %\usepackage{scalerel}
-%\usepackage{xcolor}
-\usepackage{epigraph}                             %FÜrs Titelblatt
-\usepackage{array}			%Gleichungen mit mehr als einem Zeichen in der Zeile oder Tabellen
+\usepackage{epigraph}                             %Fürs Titelblatt
+\usepackage{array}			                          %Gleichungen mit mehr als einem Zeichen in der Zeile oder Tabellen
+\usepackage{tocloft,titletoc,titlesec}            %Fürs Inhaltsverzeichnis
+
 
 %\pgfplotsset{compat=1.15}
 \usetikzlibrary{arrows}
@@ -39,6 +39,12 @@
 
 
 \nonstopmode                                      %Fehler bei Kompilierung werden "leise" gestellt (sehr viel praktischer)
+
+
+
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -49,18 +55,14 @@
 \fancyfoot[C]{\thepage}
 
 
-
-
 \include{style}
 \begin{document}
 \include{title}
 \parindent0mm
 
-
 \begin{small}
 \tableofcontents
 \end{small}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Kapitel bitte hier einbinden:

@@ -2,33 +2,33 @@
 \section{Algorithmen und Programmierung}
 \begin{Definition}
 	Algorithmen besitzen die folgenden charakteristischen Eigenschaften:
-	\begin{enumerate}
+	\begin{itemize}
 		\item Eindeutigkeit: ein Algorithmus darf keine widersprüchliche Beschreibung haben. Diese muss eindeutig sein.
 		\item Ausführbarkeit: jeder Einzelschritt muss ausführbar sein.
 		\item Finitheit (= Endlichkeit): die Beschreibung des Algorithmus muss endlich sein.
 		\item Terminierung: nach endlich vielen Schritten muss der Algorithmus enden und ein Ergebnis liefern.
 		\item Determiniertheit: der Algorithmus muss bei gleichen Voraussetzungen stets das gleiche Ergebnis liefern.
 		\item   Determinismus: zu jedem Zeitpunkt der Ausführung besteht höchstens eine Möglichkeit der Fortsetzung. Der Folgeschritt ist also eindeutig bestimmt.
-	\end{enumerate}
+	\end{itemize}
 \end{Definition}
 \\
 Diese Eigenschaften können in der Mathematik genutzt werden, um Probleme zu lösen. Hierfür bedarf es einer einheitlichen Schreibweise.\\
 Insbesondere vor dem Abitur stehen den Schülern mehrere Möglichkeiten zur Verfügung, die im Folgenden behandelt werden.
 \subsection{Pseudocode}
-Pseudocode ist ein Programmcode, der nicht zur maschinellen Interpretation, sondern lediglich zur Veranschaulichung eines Algorithmus dient. Meistens ähnelt er höheren Programmiersprachen, gemischt mit natürlicher Sprache und mathematischer Notation.Er ist leichter verständlich als realer Programmcode aber klarer und weniger missverständlich als eine Beschreibung in natürlicher Sprache.
+Pseudocode ist ein Programmcode, der nicht zur maschinellen Interpretation, sondern lediglich zur Veranschaulichung eines Algorithmus dient. Meistens ähnelt er höheren Programmiersprachen, gemischt mit natürlicher Sprache und mathematischer Notation. Er ist leichter verständlich als realer Programmcode aber klarer und weniger missverständlich als eine Beschreibung in natürlicher Sprache.
 \begin{Beispiel}
 	Ein Beispiel erübrigt sich.
 \end{Beispiel}
 \subsection{Python}
-Programmiersprache, bekannt durch ihre einfach verständliche Syntax, sie gilt als höhere Sprache, was sie zu einer auf die (gesprochene) Sprache angepasste Sprache macht. Sie ist somit gerade für Einsteiger interessant und eignet sich dennoch für größere Projekte. Ein weiterer Vorteil ist die mitlerweile allgegenwärtige Präsenz der Sprache, denn sie wird auch für Apps und Webdevelopment verwendet.\\
+Programmiersprache, bekannt durch ihre einfach verständliche Syntax, sie gilt als höhere Sprache, was sie zu einer auf die (gesprochene) Sprache angepasste Sprache macht. Sie ist somit gerade für Einsteiger interessant und eignet sich dennoch für größere Projekte. Ein weiterer Vorteil ist die mitlerweile allgegenwärtige Präsenz der Sprache, denn sie wird auch für Apps und Web-Entwicklung verwendet.\\
 
 \subsubsection{Syntax}
 Folgendes macht die Syntax Pythons aus:\\
-\begin{enumerate}
+\begin{itemize}
 \item gute Lesbarkeit des Quellcodes
 \item englische Schlüsselwörter
 \item wenig syntaktische Konstruktionen
-\end{enumerate}
+\end{itemize}
 
 \subsubsection{Funktionsweise}
 Python verwendet Schleifen und Verzweigungen.\\
@@ -66,7 +66,7 @@ Beispiele für Verfahren dieser Art werden im Folgenden behandelt.
 \subsubsection{Newton-Rhapson Verfahren}
 Das Newton-Rhapson Verfahren, auch bekannt als Newtonmethode dient der Nullstellenbestimmung komplexer Polynome und allgemein jeder differenzierbaren Funktion.\\
 Die Grundidee ist, die Nullstelle der Tangente an der Stelle $x_0$ von $f$ zu nehmen und den Vorgang mit $f($NS$_T)$ zu wiederholen.\\
-Eine mögliche Umsetung in Python wäre:\\
+Eine mögliche Umsetzung in Python wäre:\\
 \begin{lstlisting}[language=Python]
 	def fx(x):
 		return 3*x**3+5x**2+3					#beliebige Funktion (muss angegeben werden)

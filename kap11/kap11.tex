@@ -193,8 +193,7 @@ Eine Konsequenz dessen ist:
 
 \subsection{Partielle Integration}
 \begin{Theorem}
-  Seien $u$ und $v$ zwei stetig differenzierbare Funktionen im Intervall $I$ und $u'$
-  und $v'$ in I stetig. Dann gilt:
+  Seien $u$ und $v$ zwei stetig differenzierbare Funktionen auf dem Intervall $I$. Dann gilt:
   $$\int u(x)'v(x) dx= u(x)v(x) - \int u(x)v'(x) dx$$
 \end{Theorem}
 \begin{Beweis}\\
@@ -418,7 +417,7 @@ Bildhaft sieht das folgendermaßen aus:\\
 \subsection{Volumenangaben mittels Integralen}
 \begin{Theorem}
   Man betrachtet einen Körper, der durch zwei parallele Ebenen mit den Gleichungen $x_3 = a$ und $x_3 = b$ begrenzt wird.
-  Für alle $a\leq z \leq b$ nennt man $P_z$ die orthogonale Fläche zur $x_3$-Achse mit der Seite $z$ und $S(z)$ die Fläche des
+  Für alle $a\leq z \leq b$ nennt man $P_z$ die zur $x_1$-Achse orthogonale Fläche mit der Seite $z$ und $S(z)$ die Fläche des
   Schnitts des Körpers durch $P_z$. Ist $S$ stetig, so ist ist das Volumen $V$ des Körpers gegeben durch:
   $$V=\int_a^b S(z)dz$$\\
 \end{Theorem}
@@ -438,7 +437,7 @@ Bildhaft sieht das folgendermaßen aus:\\
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.7]
   \draw[->,line width=0.8pt] (-3.0,0) -- (11.0,0) node[below] {$x_1$};
   \draw[->,line width=0.8pt] (0,-3.7) -- (0,3.7) node[right] {$x_2$};
-  \draw[->,line width=0.8pt] (-3.0,-3.0) -- (3.0,3.0) node[right] {$x_3$};
+  \draw[->,line width=0.8pt] (3.0,3.0) -- (-3.0,-3.0) node[below] {$x_3$};
   \draw (-0.3,0.3) node {$O$};
   \draw[line width=2.4pt,color=ffqqqq,fill=ffqqqq,fill opacity=0.1, smooth,samples=50,domain=1:9] plot(\x,{sqrt(\x)}) -- (9,0) -- (1,0) -- cycle;
   \draw[line width=2pt,color=ccqqqq,smooth,samples=100,domain=6.848866262443662e-8:10.024582490069186] plot(\x,{sqrt((\x))});
@@ -488,4 +487,5 @@ Diese sollten ohne weitere Rechtfertigung oder Beweis verwendet werden dürfen. 
   \int e^{ax+b}dx &= \dfrac{1}{a}e^{ax+b} + C\\
   \int \dfrac{1}{\sqrt x} &= 2\sqrtx + C\\
 \end{align*}
+\\
 \danger Definitionsmengen sind zu beachten.
