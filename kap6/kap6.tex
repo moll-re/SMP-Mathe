@@ -66,10 +66,9 @@
 				  \end{align*}
 			\item \begin{align*}
 						e = (0 + 0i) \in \C, \forall z \in \C:& \\
-												   z \oplus e &= (x + yi) \oplus (0 + 0i) \\
-													  		  &= ((x + 0) + (y + 0)i) \\
-															  &= (x + yi) \\
-															  &= z \\
+												   z \oplus e = (x + yi&) \oplus (0 + 0i) \\
+													  		  = ((x + 0&) + (y + 0)i) \\
+															  = (x + yi&) \\
 						\Rightarrow \exists e: z \oplus e = z; z \in \C \quad &\text{(Neutrales Element)}
 				  \end{align*}
 			\item \begin{align*}
@@ -89,70 +88,23 @@
 						\Rightarrow \forall z_1, z_2 \in \C: z_1 \oplus z_2 = z_2 \oplus z_1 \quad \text{(Kom}&\text{mutativität)}
 				  \end{align*}
 		\end{enumerate}
-		\newpage
+		\\
+		\\
 		\underline{\textbf{Die Multiplikation}}:
-
-		\paragraph{} Für die Multiplikation gilt ebenfalls zu beweisen, dass ($\C$, $\otimes$) eine kommutative Gruppe ist:
-
-		\begin{enumerate}[1)]
-			\item \begin{align*}
-						\forall z_1, z_2 \in \C: z_1 \otimes z_2 &\definedBy (x_1 + y_1i) \otimes (x_2 + y_2i) \\
-														   		 &= ((x_1x_2 - y_1y_2) + (x_1y_2 + x_2y_1)i) \\
-														   		 &\in \C \\
-						\Rightarrow \forall z_1, z_2 \in \C: \otimes : \C \times \C \rightarrow \C & \quad \text{(Abgeschlossenheit)}
-				  \end{align*}
-			\item \begin{align*}
-				  		(z_1 \otimes z_2) \otimes z_3 &= ((x_1x_2 - y_1y_2) + (x_1y_2 + x_2y_1)i) \otimes (x_3 + y_3i) \\
-										  			  &= ((x_1x_2x_3 - y_1y_2x_3 - x_1y_2y_3 - x_2y_1y_3) + (x_1x_2y_3 - y_1y_2y_3 + x_1y_2x_3 + x_2y_1x_3)i) \\
-												      &= (x_1 + y_1i) \otimes ((x_2x_3 - y_2y_3) + (x_2y_3 + x_3y_2)i) \\
-												      &= (x_1 + y_1i) \otimes ((x_2 + y_2i) \otimes (x_3 + y_3i)) \\
-												      &= z_1 \otimes (z_2 \otimes z_3) \\
-						\Rightarrow \forall z_1, z_2, z_3 \in \C: (z_1 + &z_2) \otimes  z_3 = z_1 \otimes (z_2 + z_3) \quad \text{(Assoziativität)}
-				  \end{align*}
-			\item \begin{align*}
-						e = (1 + 0i) \in \C, \forall z \in \C:& \\
-												   z \otimes e &= (x + yi) \otimes (1 + 0i) \\
-													  		   &= ((1 \cdot x - 0 \cdot y) + (1 \cdot y + 0 \cdot x)i) \\
-															   &= (x + yi) \\
-															   &= z \\
-						\Rightarrow \exists e: z \otimes e = z; z \in \C \quad &\text{(Neutrales Element)}
-				  \end{align*}
-			\item \begin{align*}
-	  					z^{-1} = (x + yi)^{-1} \in \C, z \in \C:& \\
-								  z \otimes z^{-1} &= (x + yi) \otimes \dfrac{1}{(x + yi)} \\
-								  			  	   &= \dfrac{(x + yi) \cdot (x - yi)}{(x + yi) \cdot (x - yi)} \\
-												   &= \dfrac{((x^2 + y^2) + (0i))}{((x^2 + y^2) + (0i))} \\
-											  	   &= (1 + 0i) \\
-											  	   &= e \\
-						\Rightarrow \exists z^{-1}: z \otimes z^{-1} = e; z \in \C \quad \text{(Inverses Element)} \qquad &
-	  			  \end{align*}
-			\item \begin{align*}
-						z_1 \otimes z_2 &= (x_1 + y_1i) \otimes (x_2 + y_2i) \\
-									    &= ((x_1x_2 - y_1y_2) + (x_1y_2 + x_2y_1)i) \\
-									    &= ((- y_1y_2 + x_1x_2) + (x_2y_1 + x_1y_2)i) \\
-									    &= (x_2 + y_2i) \otimes (x_1 + y_1i) \\
-									    &= z_2 \otimes z_1 \\
-						\Rightarrow \forall z_1, z_2 \in \C: z_1 \otimes z_2 = z_2 \otimes z_1 \quad \text{(Kom}&\text{mutativität)}
-				  \end{align*}
-		\end{enumerate}
 	\end{Beweis}
-
-	\newpage
 
 \section{Die Gauß'sche Zahlenebene}
 
 	\paragraph{} Da jetzt der Körper der komplexe Zahlen definiert wurde, gilt es ihn nun in unser bekanntes Zahlensystem zu integrieren.
-	Hierfür kann man zum Beispiel beobachten, wie sich komplexe Zahlen auf der \textbf{reellen Zahlengerade} (welche eine Veranschaulichung des euklidischen Vektorraums $\R^1$ ist) verhalten. Nun sollte erstmal der Begriff des \textbf{Zeiger}s eingeführt werden.
-	\begin{Definition}
-		Als Zeiger definieren wir ein visuelles Hilfsmittel, welches dem Darstellungsmodul eines Vektors, einem Pfeil, sehr ähnlich ist, jedoch sich durch eine kleine Nuance von Letzterem zu unterscheiden ist.
-	\end{Definition}
+	Hierfür kann man zum Beispiel beobachten, wie sich komplexe Zahlen auf der \textbf{reellen Zahlengerade} (welche eine Veranschaulichung des euklidischen Vektorraums $\R^1$ ist) verhalten:
 	\\
 	\begin{center}
 		\begin{tikzpicture}[>=triangle 45]
-			\draw[->,line width=0.8pt] (-5.5,0) -- (6,0);
-			\foreach  \x in {-5,...,5}
-    			\draw (\x,0.2) -- (\x,-0.2) node[below] {\x};
-			\draw[->,line width=0.8pt,color=red] (0,0) -- (3,0);
+			\draw[line width=0.8pt] (0,0) -- (-5,0);
+			\draw[line width=0.8pt] (0,0) -- (5,0);
+			\foreach \x in {-5,-4,...,-1,1,2,...5}
+				\draw[line width=0.8pt] (\x,0.5) -- (\x,-0.5) node[below] {\x};
+			\draw[line width=0.8pt,color=blue] (-0.25,-0.25) node {$O$};
 		\end{tikzpicture}
 	\end{center}
 	\\
@@ -160,14 +112,12 @@
 	\\
 	\begin{center}
 		\begin{tikzpicture}[>=triangle 45]
-			\draw[->,line width=0.8pt] (-5.5,0) -- (6,0);
-			\foreach  \x in {-5,...,5}
-    			\draw (\x,0.2) -- (\x,-0.2) node[below] {\x};
-			\draw[->,line width=1.3pt,color=red,dashed] (0,0) -- (3.3,0);
-			\draw[->,line width=1.3pt,color=red] (0,0) -- (-3.3,0);
-			\draw[line width=1.3pt,color=red] (1.5,0.6) node {3};
-			\draw[line width=1.3pt,color=red] (-1.5,0.6) node {-3};
-			\draw[->,color=red] (2.7,0) arc (0:180:2.7);
-			\draw[line width=0.8pt,color=red] (0,3) node {180 \degree};
+			\draw[line width=0.8pt] (0,0) -- (-5,0);
+			\draw[line width=0.8pt] (0,0) -- (5,0);
+			\foreach \x in {-5,-4,...,-1,1,2,...5}
+				\draw[line width=0.8pt] (\x,0.5) -- (\x,-0.5) node[below] {\x};
+			\draw[line width=0.8pt, color=blue] (-0.25,-0.25) node {$O$};
+			\draw[line width=0.8pt, color=blue] (3,0.6) node {3};
+			\draw[line width=0.8pt, color=blue] (-3,0.6) node {-3};
 		\end{tikzpicture}
 	\end{center}
