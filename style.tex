@@ -189,41 +189,40 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Fürs Inhaltsverzeichnis:
-\contentsmargin{0cm}
+%\contentsmargin{0cm}
 \titlecontents{chapter}[0pc]
-{\addvspace{5pt}%
+{\addvspace{30pt}%
 \begin{tikzpicture}[remember picture, overlay]%
 \draw[fill=titlepagecolor,draw=titlepagecolor, rounded corners] (-4,-.1) rectangle (.5,.5);%
 \pgftext[left,x=-1.9cm,y=0.2cm]{\color{white}\Large \chaptertitlename\ \thecontentslabel};%
-\end{tikzpicture}\hspace{1cm}\color{titlepagecolor}\large\bfseries}%
+\end{tikzpicture}\hspace{1cm}\color{titlepagecolor}\large\bfseries}
 {}
 {}
-{\hspace*{20pt}\titlerule\hspace*{20pt}\large\bfseries \thecontentspage
-\begin{tikzpicture}[remember picture, overlay]
-\draw[fill=doc!25,draw=titlepagecolor, rounded corners=0pt] (2pt,0) rectangle (6,0.1pt);
-\end{tikzpicture}}%
-\titlecontents{section}[2.6pc]
-{\addvspace{1pt}}
-{\contentslabel[\thecontentslabel]{2.4pc}}
+{\hspace*{20pt}\hrulefill\hspace*{20pt}\large\bfseries \thecontentspage}%\hspace*{20pt}\rule{1cm}{0.3pt}}%
+\titlecontents{section}[5pc]
+{\addvspace{2pt}}
+{\contentslabel[\thecontentslabel]{2.8pc}}
 {}
 {\dotfill\small \thecontentspage}
 []
-\titlecontents{subsection}[5.2pc]
-{\addvspace{1.0pt}}
-{\contentslabel[\thecontentslabel]{2.4pc}}
+\titlecontents{subsection}[6.2pc]
+{\addvspace{2.0pt}}
+{\contentslabel[\thecontentslabel]{2.8pc}}
 {}
 {\dotfill\small\thecontentspage}
 []
 
-\makeatletter
+
 \renewcommand{\tableofcontents}{%
-\chapter*{%
-\vspace*{-20\p@}%
+\chapter*{}
+\vspace*{-20\p@}
 \begin{tikzpicture}[remember picture, overlay]%
 \pgftext[right,x=15cm,y=0.2cm]{\color{titlepagecolor}\Huge \contentsname};%
 \draw[fill=titlepagecolor,draw=titlepagecolor, rounded corners=15pt] (13,-.75) rectangle (20,1);%
 \clip (13,-.75) rectangle (20,1);
 \pgftext[right,x=15cm,y=0.2cm]{\color{white}\Huge \contentsname};%
-\end{tikzpicture}}%
+\end{tikzpicture}}
+
+\makeatletter
 \@starttoc{toc}}
 \makeatother

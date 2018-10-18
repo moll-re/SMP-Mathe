@@ -32,11 +32,12 @@
 \usepackage{array}			                          %Gleichungen mit mehr als einem Zeichen in der Zeile oder Tabellen
 \usepackage{tocloft,titletoc,titlesec}            %Fürs Inhaltsverzeichnis
 
-
+\usepackage{subfiles}
 %\pgfplotsset{compat=1.15}
 \usetikzlibrary{arrows}
 %\usetikzlibrary{fit}
 
+\setlength{\parindent}{0pt}
 
 \nonstopmode                                      %Fehler bei Kompilierung werden "leise" gestellt (sehr viel praktischer)
 
@@ -58,11 +59,10 @@
 \include{style}
 \begin{document}
 \include{title}
-\parindent0mm
 
-\begin{small}
-\tableofcontents
-\end{small}
+%\begin{small}
+  \tableofcontents
+%\end{small}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Kapitel bitte hier einbinden:
