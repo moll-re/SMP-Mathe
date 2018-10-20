@@ -1,4 +1,47 @@
-\chapter{Arithmetik}
+\chapter{Arithmetik oder Zahlentheorie}
+
+	\section{Teilbarkeit}
+
+\begin{Definition}
+Die ganze Zahl $a\in\Z$ teilt $b\in\Z$, wenn es ein $x$ gibt, mit $b=a\cdot x$. Mann schreibt:
+$$a|b$$
+
+$a$ ist ein \textb{Teiler} von $b$ und $b$ ist \textbf{Vielfaches} von $aA
+\end{Definition}
+
+Aus dieser Teilbarkeitsrelation ergeben sich mehrere Eigenschaften:\\
+Sei $a,b,c,t\in\Z$ und $t\neq0$:\\\\
+$a|b$ \quad und \quad$b|c$ \quad dann \quad $a|c$\\
+$a|b$ \quad dann \quad $a|bc$\\
+$at|bt\quad\Leftrightarrow\quad a|b$\\
+$a|b$\quad dann \quad $b=0$ \quad oder\quad $|a| \leq |b| $\\
+$a|b$\quad und\quad $b|a$ \quad dann\quad $a=\pm b$
+
+	\section{Primzahlen}
+
+\begin{Beweis}
+Es gibt unendlich viele Primzahlen: Beweis nach Euklid\\\\
+
+Jede ganze Zahl $n>1$ ist durch eine Primzahl teilbar. Entweder ist $n$ selber eine Primzahl oder $n=a\cdot b$ mit $a,b\in\N$.\\
+Also ist $1<a=\dfrac{n}{b}<n$. Wenn man diesen Schritt endlich oft macht, kommt man am Ende auf ein neues $a'\in\P$.\\
+$\A$: Nehmen wir jetzt an, es gäbe nur endlich viele Primzahlen $p_{1},p_{2},...,p_{r-1},p_{r}$.\\\\
+Dann ist $$N=p_{1},p_{2},...,p_{r-1},p_{r} +1 = \left(\prod_{r=1}^{r}P_{r}\right) + 1 $$ eine ganze Zahl $>1$ und hat daher mindestens einen Primteiler $p_{l} \in\P$ und $l\in\{1,2,...,r-1,r\}$
+Dann hat man:\\
+
+$\Rightarrow$ $\left\{ \begin{array}{rccl}
+$p_{l} & | & p_{1}\cdot p_{2}\cdot...\cdot p_{r-1}\cdot p_{r}$\\
+$p_{l} & | & p_{1}\cdot p_{2}\cdot...\cdot p_{r-1}\cdot p_{r} +1$\\
+\end{array}\right.\\
+
+
+$\Leftrightarrow p_{l} | \, p_{1}\cdot p_{2} \cdot...\cdot p_{r-1} \cdot p_{r} - \left(  p_{1}\cdot p_{2} \cdot...\cdot p_{r-1} \cdot p_{r} +1 \right)$\\\\
+$\Leftrightarrow p_{l} | \, (-1) \quad $oder$ \quad p_{l} | 1$ \qquad   WIDERSPRUCH, da $p_{l}=1$ aber $1\notin \P$ \\\\
+$N$ muss also einen Primteiler haben ungleich $p_{r} \quad mit \quad r\in\{1,2,3,...,r-1,r\}$ oder \textbf{selber prim sein}. 
+
+ 
+\end{Beweis}
+
+
 
 	\section{Die vollst"andige Induktion}
 
@@ -86,10 +129,6 @@ $ \textbf{Induktionsschluss}: &  \sum\limits_{i=1}^{n+1} i^2 = \overbrace{\sum\l
 
 \end{Beweis}\\\\
 
-\begin{Beweis}
-Summe der Kubikzahlen
-
-\end{Beweis}\\\\
 
 \begin{Beweis}
 Beweis einer Absch"atzung der Fakult"at \\

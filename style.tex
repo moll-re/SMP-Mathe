@@ -1,41 +1,18 @@
-%Kapitel-Titelblatt
-\makeatletter
-\def\thickhrulefill{\leavevmode \leaders \hrule height 1.2ex \hfill \kern \z@}
-\def\@makechapterhead#1{
-  \vspace*{10\p@}%
-  {\parindent \z@ \centering \reset@font
-        \thickhrulefill\quad
-        \huge\scshape\bfseries\textit{\@chapapp{}  \thechapter}\normalsize
-        \quad \thickhrulefill
-        \par\nobreak
-        \vspace*{10\p@}%
-        \interlinepenalty\@M
-        \hrule
-        \vspace*{10\p@}%
-        \Huge \bfseries #1 \par\nobreak
-        \par
-        \vspace*{10\p@}%
-        \hrule
-        \vskip 50\p@
-  }}
-
-\setlength{\mathindent}{0pt}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Eigene Environments
 %Beweis:
-\newenvironment{Beweis}
-  {\begin{tcolorbox}[colback=gray!5!white,colframe=gray!70!black,opacityframe=0.5, opacitybacktitle=0.5,sharpish corners,boxrule=0pt,frame hidden,title=Beweis,breakable,break at=23cm,pad at break=1mm,]}
+\newenvironment{Beweis}[1][]
+  {\begin{tcolorbox}[colback=gray!5!white,colframe=gray!70!black,opacityframe=0.5, opacitybacktitle=0.5,sharpish corners,boxrule=0pt,frame hidden,title=Beweis \,#1,breakable,break at=23cm,pad at break=1mm,]}
   {\hfill\ensuremath{\square} \end{tcolorbox}}
 
-
 %Definition:
-\newenvironment{Definition}
-  {\begin{tcolorbox}[colback=red!7!white,colframe=red!70!black,sharpish corners,boxrule=0pt,frame hidden,title=Definition \thesubsection]}
+\newenvironment{Definition}[1][]
+  {\begin{tcolorbox}[colback=red!7!white,colframe=red!70!black,sharpish corners,boxrule=0pt,frame hidden,title=Definition \,#1]}
   {\end{tcolorbox}}
 
-
 %Theorem:
-\newenvironment{Theorem}
-  {\begin{tcolorbox}[colback=blue!5!white,colframe=blue!70!black,sharpish corners,boxrule=0pt,frame hidden,title=Theorem]}
+\newenvironment{Theorem}[1][]
+  {\begin{tcolorbox}[colback=blue!5!white,colframe=blue!70!black,sharpish corners,boxrule=0pt,frame hidden,title=Theorem\,#1]}
   {\end{tcolorbox}}
 
 %Beispiel
@@ -51,7 +28,6 @@
    ]\underline{Beispiel:}\\}
 {\end{mdframed}}
 
-
 %Bemerkung
 \newenvironment{Bemerkung}
   {\par\noindent\normalfont\par\nopagebreak%
@@ -64,7 +40,6 @@
      skipabove=.5\baselineskip
    ]\underline{Bemerkung:}\\}
 {\end{mdframed}}
-
 
 %GTR-Tipp
 \newenvironment{GTR-Tipp}
@@ -79,8 +54,7 @@
    ]\underline{GTR-Tipp:}\\}
 {\end{mdframed}}
 
-
-%Codebox, aufrufbar mit \begin{lstlisting}[typ_der_Sprache]
+%Codebox, aufrufbar mit \begin{lstlisting}[Name_der_Sprache]
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
@@ -108,16 +82,51 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\Q}{\mathbb{Q}}
-\newcommand{\zz}{\mathrm{Z\kern-.3em\raise-0.5ex\hbox{Z}}}   % "zu zeigen"-Zeichen mit \zz Quelle: http://www.matheboard.de/archive/155832/thread.html
-\newcommand\danger[1][2ex]{%
-  \renewcommand\stacktype{L}%
-  \scaleto{\stackon[1.3pt]{\color{red}$\triangle$}{\tiny !}}{#1}   % Achtung Zeichen mit \danger
+\newcommand{\P}{\mathbb{P}}
+\newcommand{\A}{\mathbb{A}}
+% "zu zeigen"-Zeichen mit \zz Quelle: http://www.matheboard.de/archive/155832/thread.html
+\newcommand{\zz}{\mathrm{Z\kern-.3em\raise-0.5ex\hbox{Z}}}
+% Achtung Zeichen mit \danger
+\newcommand\danger[1]{
+  \renewcommand\stacktype{L}
+  \scaleto{\stackon[1.3pt]{\color{red}$\triangle$}{\tiny !}}{#1}
 }
+%Logarithmus dualis als "operator" angesehen mit \ld
+\DeclareMathOperator{\ld}{ld}
+%(Linke Seite)"Per definitionem äquivalent zu" (Ist halt die Frage, ob ich das richtig nutze)
+\newcommand{\logEqL}{\ratio\Leftrightarrow}
+%(Rechte Seite)"Per definitionem äquivalent zu"
+\newcommand{\logEqR}{\Leftrightarrow\ratio}
+%Linke Seite wird definiert zu / durch rechte Seite
+\newcommand{\definedBy}{\ratio=}
 
-\DeclareMathOperator{\ld}{ld}			%Logarithmus dualis als "operator" angesehen mit \ld
-\newcommand{\logEqL}{\ratio\Leftrightarrow}  %(Linke Seite)"Per definitionem äquivalent zu" (Ist halt die Frage, ob ich das richtig nutze)
-\newcommand{\logEqR}{\Leftrightarrow\ratio}  %(Rechte Seite)"Per definitionem äquivalent zu"
-\newcommand{\definedBy}{\ratio=}             %Linke Seite wird definiert zu / durch rechte Seite
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Kapitel-Titelblatt
+\makeatletter
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1.2ex \hfill \kern \z@}
+\def\@makechapterhead#1{
+  \vspace*{10\p@}%
+  {\parindent \z@ \centering \reset@font
+        \thickhrulefill\quad
+        \huge\scshape\bfseries\textit{\@chapapp{}  \thechapter}\normalsize
+        \quad \thickhrulefill
+        \par\nobreak
+        \vspace*{10\p@}%
+        \interlinepenalty\@M
+        \hrule
+        \vspace*{10\p@}%
+        \Huge \bfseries #1 \par\nobreak
+        \par
+        \vspace*{10\p@}%
+        \hrule
+        \vskip 50\p@
+  }}
+
+\setlength{\mathindent}{0pt}
+\makeatother
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Für den Titel:
 \renewcommand\epigraphflush{flushright}
@@ -178,3 +187,44 @@
 \end{scope}
 \end{tikzpicture}%
 }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Fürs Inhaltsverzeichnis:
+%\contentsmargin{0cm}
+\titlecontents{chapter}[0pc]
+{\addvspace{30pt}%
+\begin{tikzpicture}[remember picture, overlay]%
+\draw[fill=titlepagecolor,draw=titlepagecolor, rounded corners] (-4,-.1) rectangle (.5,.5);%
+\pgftext[left,x=-1.9cm,y=0.2cm]{\color{white}\Large \chaptertitlename\ \thecontentslabel};%
+\end{tikzpicture}\hspace{1cm}\color{titlepagecolor}\large\bfseries}
+{}
+{}
+{\hspace*{20pt}\hrulefill\hspace*{20pt}\large\bfseries \thecontentspage}%\hspace*{20pt}\rule{1cm}{0.3pt}}%
+\titlecontents{section}[5pc]
+{\addvspace{2pt}}
+{\contentslabel[\thecontentslabel]{2.8pc}}
+{}
+{\dotfill\small \thecontentspage}
+[]
+\titlecontents{subsection}[6.2pc]
+{\addvspace{2.0pt}}
+{\contentslabel[\thecontentslabel]{2.8pc}}
+{}
+{\dotfill\small\thecontentspage}
+[]
+
+
+\renewcommand{\tableofcontents}{%
+\chapter*{}
+\vspace*{-20\p@}
+\begin{tikzpicture}[remember picture, overlay]%
+\pgftext[right,x=15cm,y=0.2cm]{\color{titlepagecolor}\Huge \contentsname};%
+\draw[fill=titlepagecolor,draw=titlepagecolor, rounded corners=15pt] (13,-.75) rectangle (20,1);%
+\clip (13,-.75) rectangle (20,1);
+\pgftext[right,x=15cm,y=0.2cm]{\color{white}\Huge \contentsname};%
+\end{tikzpicture}}
+
+\makeatletter
+\@starttoc{toc}}
+\makeatother

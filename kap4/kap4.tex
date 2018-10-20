@@ -1,77 +1,130 @@
 \chapter{Trigonometrie}
-\@fleqntrue
-
 \section{Kurze Wiederholung}
 \begin{Definition}
-  In einem Kreis mit Radius 1 gelte:
-  \begin{align*}
-    \cos(\alpha)&= x_{_M}\\
-    \sin(\alpha)&= y_{_M}\\
-    \tan(\alpha)&=\dfrac {\sin(\alpha)} {\cos(\alpha)}
-  \end{align*}
+  \begin{minipage}{0.5\textwidth}
+    In einem Kreis mit Radius 1 gelte:
+    \begin{align*}
+      \cos(\alpha)&= x_{_M}\\
+      \sin(\alpha)&= y_{_M}\\
+      \tan(\alpha)&=\dfrac {\sin(\alpha)} {\cos(\alpha)}
+    \end{align*}
+  \end{minipage}
+  \begin{minipage}{0.5\textwidth}
+  \begin{center}
+    \definecolor{qqwuqq}{rgb}{0,0.39,0}
+    \definecolor{ttzzqq}{rgb}{0.2,0.6,0}
+    \definecolor{ffqqqq}{rgb}{1,0,0}
+    \definecolor{ttttff}{rgb}{0.2,0.2,1}
+    \definecolor{uququq}{rgb}{0.25,0.25,0.25}
+    \begin{tikzpicture}[line join=round,x=2.0833333333333335cm,y=2.0833333333333335cm,scale=0.7]
+      \draw[->,color=black] (-1.2,0) -- (1.2,0) node[below]{$x$};
+      \foreach \x in {-1,1}
+      \draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+      \draw[->,color=black] (0,-1.2) -- (0,1.2) node[left]{$y$};
+      \foreach \y in {-1,1}
+      \draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+      \draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+      \clip(-1.2,-1.2) rectangle (1.2,1.2);
+      \draw [shift={(0,0)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (0:0.21) arc (0:57.13:0.21) -- cycle;
+      \draw [line width=0.4pt] (0,0) circle (2.08cm);
+      \draw (0,0)-- (0.54,0.84);
+      \draw [line width=1.6pt,color=ttttff] (0,0.84)-- (0.54,0.84);
+      \draw [line width=1.6pt,color=ffqqqq] (0.54,0.84)-- (0.54,0);
+      \draw [line width=1.6pt,color=ttzzqq] (1,-1.2) -- (1,1.2);
+      \begin{scriptsize}
+        \fill [color=uququq] (0,0) circle (1.5pt);
+        \draw[color=uququq] (-0.11,-0.11) node {$O$};
+        \fill [color=black] (0.54,0.84) circle (1.5pt);
+        \draw[color=black] (0.61,0.92) node {$M$};
+        \fill [color=uququq] (0,0.84) circle (1.5pt);
+        \draw[color=uququq] (0.03,0.94) node {$A$};
+        \fill [color=uququq] (0.54,0) circle (1.5pt);
+        \draw[color=uququq] (0.7,0.04) node {$B$};
+        \draw[color=ttttff] (0.3,0.74) node {cos};
+        \draw[color=ffqqqq] (0.74,0.4) node {sin};
+        \draw[color=ttzzqq] (0.82,1.1) node {tan};
+        \draw[color=qqwuqq] (0.12,0.07) node {$\alpha$};
+      \end{scriptsize}
+    \end{tikzpicture}
+  \end{center}
+  \end{minipage}
 \end{Definition}\\
-\definecolor{qqwuqq}{rgb}{0,0.39,0}
-\definecolor{ttzzqq}{rgb}{0.2,0.6,0}
-\definecolor{ffqqqq}{rgb}{1,0,0}
-\definecolor{ttttff}{rgb}{0.2,0.2,1}
-\definecolor{uququq}{rgb}{0.25,0.25,0.25}
-\begin{tikzpicture}[line join=round,x=2.0833333333333335cm,y=2.0833333333333335cm]
-  \draw[->,color=black] (-1.2,0) -- (1.2,0) node[below]{$x$};
-  \foreach \x in {-1,1}
-  \draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
-  \draw[->,color=black] (0,-1.2) -- (0,1.2) node[left]{$y$};
-  \foreach \y in {-1,1}
-  \draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
-  \draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
-  \clip(-1.2,-1.2) rectangle (1.2,1.2);
-  \draw [shift={(0,0)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (0:0.21) arc (0:57.13:0.21) -- cycle;
-  \draw [line width=0.4pt] (0,0) circle (2.08cm);
-  \draw (0,0)-- (0.54,0.84);
-  \draw [line width=1.6pt,color=ttttff] (0,0.84)-- (0.54,0.84);
-  \draw [line width=1.6pt,color=ffqqqq] (0.54,0.84)-- (0.54,0);
-  \draw [line width=1.6pt,color=ttzzqq] (1,-1.2) -- (1,1.2);
-  \begin{scriptsize}
-    \fill [color=uququq] (0,0) circle (1.5pt);
-    \draw[color=uququq] (-0.11,-0.11) node {$O$};
-    \fill [color=black] (0.54,0.84) circle (1.5pt);
-    \draw[color=black] (0.61,0.92) node {$M$};
-    \fill [color=uququq] (0,0.84) circle (1.5pt);
-    \draw[color=uququq] (0.03,0.94) node {$A$};
-    \fill [color=uququq] (0.54,0) circle (1.5pt);
-    \draw[color=uququq] (0.7,0.04) node {$B$};
-    \draw[color=ttttff] (0.3,0.74) node {cos};
-    \draw[color=ffqqqq] (0.74,0.4) node {sin};
-    \draw[color=ttzzqq] (0.82,1.1) node {tan};
-    \draw[color=qqwuqq] (0.12,0.07) node {$\alpha$};
-  \end{scriptsize}
-\end{tikzpicture}
-\\\\\\
 Es ergeben sich folgende (wissenswerte) Werte:
 \\
 \begin{center}
-  \begin{tabu} to 0.9\textwidth{| X[c] | X[c] | X[c] | X[c] | X[c] | X[c] | X[c] | X[c] | X[c] |}
+  \begin{tikzpicture}[scale=5.3,cap=round,>=latex,scale=0.8]
+    % draw the coordinates
+    \draw[->] (-1.5cm,0cm) -- (1.5cm,0cm) node[right,fill=white] {$x$};
+    \draw[->] (0cm,-1.5cm) -- (0cm,1.5cm) node[above,fill=white] {$y$};
+    \draw[thick] (0cm,0cm) circle(1cm);
+    \foreach \x in {0,30,...,360} {
+            % lines from center to point
+            \draw[gray] (0cm,0cm) -- (\x:1cm);
+            % dots at each point
+            \filldraw[black] (\x:1cm) circle(0.4pt);
+            % draw each angle in degrees
+            \draw (\x:0.6cm) node[fill=white] {$\x^\circ$};
+    }
+    \foreach \x/\xtext in {
+        30/\frac{\pi}{6},
+        45/\frac{\pi}{4},
+        60/\frac{\pi}{3},
+        90/\frac{\pi}{2},
+        120/\frac{2\pi}{3},
+        135/\frac{3\pi}{4},
+        150/\frac{5\pi}{6},
+        180/\pi,
+        210/\frac{7\pi}{6},
+        225/\frac{5\pi}{4},
+        240/\frac{4\pi}{3},
+        270/\frac{3\pi}{2},
+        300/\frac{5\pi}{3},
+        315/\frac{7\pi}{4},
+        330/\frac{11\pi}{6},
+        360/2\pi}
+            \draw (\x:0.85cm) node[fill=white] {$\xtext$};
 
+    \foreach \x/\xtext/\y in {
+        30/\color{blue}\frac{\sqrt{3}}{2}\color{black}/\color{red}\frac{1}{2}\color{black},
+        45/\color{blue}\frac{\sqrt{2}}{2}\color{black}/\color{red}\frac{\sqrt{2}}{2}\color{black},
+        60/\color{blue}\frac{1}{2}\color{black}/\color{red}\frac{\sqrt{3}}{2}\color{black},
+        150/-\color{blue}\frac{\sqrt{3}}{2}\color{black}/\color{red}\frac{1}{2}\color{black},
+        135/-\color{blue}\frac{\sqrt{2}}{2}\color{black}/\color{red}\frac{\sqrt{2}}{2}\color{black},
+        120/-\color{blue}\frac{1}{2}\color{black}/\color{red}\frac{\sqrt{3}}{2}\color{black},
+        210/-\color{blue}\frac{\sqrt{3}}{2}\color{black}/-\color{red}\frac{1}{2}\color{black},
+        225/-\color{blue}\frac{\sqrt{2}}{2}\color{black}/-\color{red}\frac{\sqrt{2}}{2}\color{black},
+        240/-\color{blue}\frac{1}{2}/-\color{red}\frac{\sqrt{3}}{2}\color{black},
+        330/\color{blue}\frac{\sqrt{3}}{2}\color{black}/-\color{red}\frac{1}{2}\color{black},
+        315/\color{blue}\frac{\sqrt{2}}{2}\color{black}/-\color{red}\frac{\sqrt{2}}{2}\color{black},
+        300/\color{blue}\frac{1}{2}\color{black}/-\color{red}\frac{\sqrt{3}}{2}}\color{black}
+            \draw (\x:1.25cm) node[fill=white] {$\left(\xtext,\y\right)$};
+    \draw (-1.25cm,0cm) node[above=1pt] {(\color{blue}-1\color{black},\color{red}0\color{black})}
+          (1.25cm,0cm)  node[above=1pt] {(\color{blue}1\color{black},\color{red}0\color{black})}
+          (0cm,-1.25cm) node[fill=white] {(\color{blue}0\color{black},\color{red}-1\color{black})}
+          (0cm,1.25cm)  node[fill=white] {(\color{blue}0\color{black},\color{red}1\color{black})};
+  \end{tikzpicture}
+\end{center}
+\\
+Des Weiteren gilt:\\
+\begin{center}
+  \begin{tabu} to 0.9\textwidth{| X[c] | X[c] | X[c] | X[c] |}
     \hline
-    & 0$^\circ$ & 30$^\circ$ & 45$^\circ$ & 60$^\circ$ & 90$^\circ$ & 180$^\circ$ & 270$^\circ$ & 360$^\circ$\\
-    & 0 & $\dfrac{\pi}{6}$ & $\dfrac{\pi}{4}$ & $\dfrac{\pi}{3}$ & $\dfrac{\pi}{2}$ & \pi & $\dfrac{3\pi}{2}$ & $2\pi$\\
+    & 15$^\circ$ & 45$^\circ$ & 75$^\circ$\\
+    & $\dfrac{\pi}{12}$ & $\dfrac{\pi}{4}$ & $\dfrac{5\pi}{12}$\\
     \hline
-    $\sin(\alpha)$ & 0 & $\dfrac{1}{2}$ & $\dfrac{1}{\sqrt{2}}$ & $\dfrac{\sqrt{3}}{2}$ & 1 & 0 & -1 & 0\\
+    $\sin(\alpha)$ & $\dfrac{\sqrt{6}-\sqrt{2}}{4}$ & $\dfrac{1}{\sqrt{2}}$ & $\dfrac{\sqrt{6}+\sqrt{2}}{4}$\\
     \hline
-    $\cos(\alpha)$ & 1 & $\dfrac{\sqrt{3}}{2}$ & $\dfrac{1}{\sqrt{2}}$ & $\dfrac{1}{2}$ & 0 & -1 & 0 & 1\\
-    \hline
-    $\tan(\alpha)$ & 0 & $\dfrac{{1}}{\sqrt{3}}$ & 1 & $\sqrt{3}$ & X & 0 & X & 0\\
+    $\cos(\alpha)$ & $\dfrac{\sqrt{6}+\sqrt{2}}{4}$ & $\dfrac{\sqrt{3}}{2}$ & $\dfrac{\sqrt{6}-\sqrt{2}}{4}$\\
     \hline
   \end{tabu}
-
 \end{center}
+
 \section{Additions- und Verdopplungssätze}
 \begin{Theorem}
-  \begin{align*}
-    \cos(a - b) & = \cos(a)\cos(b) + \sin(a)\sin(b)\\
-    \sin(a - b) & = \sin(a)\cos(b) - \cos(a)\sin(b)\\
-    \cos(a + b) & = \cos(a)\cos(b) - \sin(a)\sin(b)\\
-    \sin(a + b) & = \sin(a)\cos(b) + \cos(a)\sin(b)
-  \end{align*}
+    $$\cos(a - b)  = \cos(a)\cos(b) + \sin(a)\sin(b)$$
+    $$\sin(a - b)  = \sin(a)\cos(b) - \cos(a)\sin(b)$$
+    $$\cos(a + b)  = \cos(a)\cos(b) - \sin(a)\sin(b)$$
+    $$\sin(a + b)  = \sin(a)\cos(b) + \cos(a)\sin(b)$$
 \end{Theorem}
 \begin{Bemerkung}
   Hieraus ergeben sich einige weitere Relationen, wie z.B. $\sin(2a)$. Diese lassen sich jedoch schnell und leicht herleiten.
@@ -185,79 +238,72 @@ Untersuchen Sie K im Intervall $[0;2\pi]$ auf gemeinsame Punkte mit der $x$-Achs
 Die Periode von $f$ ist $P=2\pi$. Die Amplitude $A$ beträgt $\dfrac{3}{2}\sqrt{3}$.
 \\
 
-\begin{minipage}{0.5\textwidth}
-  \subsection{Nullstellen}
-  \subsubsection{Notwendige und hinreichende Bedingung:}
+\subsection{Nullstellen}
+\subsubsection{Notwendige und hinreichende Bedingung:}
+\begin{align*}
+  f(x)&=0\\
+  \Leftrightarrow 2\cos(x)+2\sin(x)\cos(x)&=0\\
+  \Leftrightarrow 2\cos(x)(1+\sin(x))&=0\\
+  \stackrel{S.d.N}{\Rightarrow}
+  \left\{\begin{array}{rccl}
+    2\cos(x)&=&0&\\
+    1+\sin(x)&=&0&
+  \end{array}\right\\
+  \Leftrightarrow
+  \left\{ \begin{array}{rccl}
+    \cos(x)&=&0&\\
+    \sin(x)&=&-1&
+  \end{array}\right\\
+  \Leftrightarrow
+  \left\{ \begin{array}{rccl}
+    x_1&=&\dfrac{1}{2}\pi&\\\\
+    x_2&=&\dfrac{3}{2}\pi&
+  \end{array}\right\\
+  \Rightarrow \mathbb{L}=\left\{\left(\dfrac{1}{2}\pi\right|0\right);\left(\dfrac{3}{2}\pi\right|0\right)\right\}
+\end{align*}
+\subsection{Ableitungen}
   \begin{align*}
-    f(x)&=0\\
-    \Leftrightarrow 2\cos(x)+2\sin(x)\cos(x)&=0\\
-    \Leftrightarrow 2\cos(x)(1+\sin(x))&=0\\
-    \stackrel{S.d.N}{\Rightarrow}
-    \left\{\begin{array}{rccl}
-      2\cos(x)&=&0&\\
-      1+\sin(x)&=&0&
-    \end{array}\right\\
-    \Leftrightarrow
-    \left\{ \begin{array}{rccl}
-      \cos(x)&=&0&\\
-      \sin(x)&=&-1&
-    \end{array}\right\\
-    \Leftrightarrow
-    \left\{ \begin{array}{rccl}
-      x_1&=&\dfrac{1}{2}\pi&\\\\
-      x_2&=&\dfrac{3}{2}\pi&
-    \end{array}\right\\
-    \Rightarrow \mathbb{L}=\{(\dfrac{1}{2}\pi|0);(\dfrac{3}{2}\pi|0)\}
+    f'(x)&=-2\sin(x)+2(\cos(x)\cos(x)-\sin(x)\sin(x))\\
+    &=-2\sin(x)+2(\cos^2(x)-\sin^2(x))\\
+    &=-2\sin(x)+2(1-\sin^2(x)-\sin^2(x))\\
+    &=-4\sin^2(x)-2\sin(x)+2\\
+    f''(x)&=-4(\cos(x)\sin(x)+\sin(x)\cos(x))-2\cos(x)\\
+    &=-8\sin(x)\cos(x)-2\cos(x)\\
+    f'''(x)&=-8(\cos(x)\cos(x)-\sin(x)\sin(x))+2\sin(x)\\
+    &=-8(1-\sin^2(x)-\sin^2(x))+2\sin(x)\\
+    &=16\sin^2(x)+2\sin(x)-8
   \end{align*}
-\end{minipage}
-\vline
-\begin{minipage}{0.5\textwidth}
-  \subsection{Ableitungen}
-    \begin{align*}
-      f'(x)&=-2\sin(x)+2(\cos(x)\cos(x)-\sin(x)\sin(x))\\
-      &=-2\sin(x)+2(\cos^2(x)-\sin^2(x))\\
-      &=-2\sin(x)+2(1-\sin^2(x)-\sin^2(x))\\
-      &=-4\sin^2(x)-2\sin(x)+2\\
-      f''(x)&=-4(\cos(x)\sin(x)+\sin(x)\cos(x))-2\cos(x)\\
-      &=-8\sin(x)\cos(x)-2\cos(x)\\
-      f'''(x)&=-8(\cos(x)\cos(x)-\sin(x)\sin(x))+2\sin(x)\\
-      &=-8(1-\sin^2(x)-\sin^2(x))+2\sin(x)\\
-      &=16\sin^2(x)+2\sin(x)-8
-    \end{align*}\\
-\end{minipage}
-
 \subsection{Extremstellen}
-\begin{minipage}{0.5\textwidth}
+\begin{minipage}[t]{0.5\textwidth}
   \subsubsection{Notwendige Bedingung:}
-    f'(x)&=0\\
-    \Leftrightarrow4\sin^2(x)-2\sin(x)+2&=0\\
-    Substitution: y&=\sin(x)\\
-    \Rightarrow4y^2-2y+2=0\\
-    \stackrel{ABC-Formel}{\Rightarrow}y_{1,2}=\dfrac{2\pm\sqrt{(-2)^2-4*(-4)*2}}{-8}\\
+    $f'(x)&=0$\\
+    $\Leftrightarrow4\sin^2(x)-2\sin(x)+2&=0$\\
+    Substitution: $y&=\sin(x)$\\
+    $\Rightarrow4y^2-2y+2=0$\\
+    $\stackrel{ABC-Formel}{\Rightarrow}y_{1,2}=\dfrac{2\pm\sqrt{(-2)^2-4*(-4)*2}}{-8}$\\
     Resusbsitution:\\
-    \Rightarrow
+    $\Rightarrow
     \left\{\begin{array}{rccl}
       \sin(x)&=\dfrac{2+\sqrt{20}}{-8}\\
       \sin(x)&=\dfrac{2-\sqrt{20}}{-8}
     \end{array}\right\\
-    \Rightarrow\mathbb{L}=\{\dfrac{1}{6}\pi;\dfrac{5}{6}\pi;\dfrac{3}{2}\pi\}
+    \Rightarrow\mathbb{L}=\left\{\dfrac{1}{6}\pi;\dfrac{5}{6}\pi;\dfrac{3}{2}\pi\right\}$
 \end{minipage}
 \vline
-\begin{minipage}{0.5\textwidth}
+\begin{minipage}[t]{0.5\textwidth}
   \subsubsection{Hinreichende Bedingung:}
-  \begin{align*}
-    f''(x)&\neq0\\
+    $f''(x)&\neq0$\\
     \Rightarrow
     \left\{\begin{array}{rccl}
-      f''(\dfrac{1}{6}\pi)&\stackrel{?}{=}0\\\\
-      f''(\dfrac{5}{6}\pi)&\stackrel{?}{=}0\\\\
-      f''(\dfrac{3}{2}\pi)&\stackrel{?}{=}0
+      f''\left(\dfrac{1}{6}\pi\right)&\stackrel{?}{=}0\\\\
+      f''\left(\dfrac{5}{6}\pi\right)&\stackrel{?}{=}0\\\\
+      f''\left(\dfrac{3}{2}\pi\right)&\stackrel{?}{=}0
     \end{array}\right\\
     \Leftrightarrow
     \left\{\begin{array}{rccl}
-      8\sin(\dfrac{1}{6}\pi)\cos(\dfrac{1}{6}\pi)-2\sin(\dfrac{1}{6}\pi)&\stackrel{?}{=}0\\\\
-      8\sin(\dfrac{5}{6}\pi)\cos(\dfrac{5}{6}\pi)-2\sin(\dfrac{5}{6}\pi)&\stackrel{?}{=}0\\\\
-      8\sin(\dfrac{3}{2}\pi)\cos(\dfrac{3}{2}\pi)-2\sin(\dfrac{3}{2}\pi)&\stackrel{?}{=}0
+      8\sin\left(\dfrac{1}{6}\pi\right)\cos\left(\dfrac{1}{6}\pi\right)-2\sin\left(\dfrac{1}{6}\pi\right)&\stackrel{?}{=}0\\\\
+      8\sin\left(\dfrac{5}{6}\pi\right)\cos\left(\dfrac{5}{6}\pi\right)-2\sin\left(\dfrac{5}{6}\pi\right)&\stackrel{?}{=}0\\\\
+      8\sin\left(\dfrac{3}{2}\pi\right)\cos\left(\dfrac{3}{2}\pi\right)-2\sin\left(\dfrac{3}{2}\pi\right)&\stackrel{?}{=}0
     \end{array}\right\\
     \Leftrightarrow
     \left\{\begin{array}{rccl}
@@ -265,54 +311,58 @@ Die Periode von $f$ ist $P=2\pi$. Die Amplitude $A$ beträgt $\dfrac{3}{2}\sqrt{
       8*\dfrac{1}{2}*-\dfrac{\sqrt{3}}{2}-2*-\dfrac{\sqrt{3}}{2}&\stackrel{!}{\neq}&0&,  >0 \Rightarrow TP\\
       8*(-1)(0)-2(0)&\stackrel{!}{=}&0& \Rightarrow \text{kein } EP
     \end{array}\right\\
+\end{minipage}
+\subsubsection{Ergebnis}
+Auf dem Intervall $[0;2\pi]$  besitzt K den Hochpunkt H$\left(\dfrac{1}{6}\pi|f\left(\dfrac{1}{6}\pi\right)\right)$ und den Tiefpunk T$\left(\dfrac{5}{6}\pi|f\left(\dfrac{5}{6}\pi\right)\right)$.\\
+$\Leftrightarrow$ H$\left(\dfrac{1}{6}\pi|\dfrac{3}{2}\sqrt{3}\right)$ und T$\left(\dfrac{5}{6}\pi|-\dfrac{3}{2}\sqrt{3}\right)$.
+\subsection{Wendestellen}
+\begin{minipage}[t]{0.5\textwidth}
+  \subsubsection{Notwendige Bedingung:}
+  \begin{align*}
+    f''(x)=0\\
+    \Leftrightarrow -8\sin(x)\cos(x)-2\cos(x)=0\\
+    \Leftrightarrow \cos(x)(-2-8\sin(x))=0\\
+    \stackrel{SdN}{\Rightarrow}
+    \left\{\begin{array}{rccl}
+      \cos(x)&=&0\\
+      \sin(x)&=&-\dfrac{1}{4}
+    \end{array}\right\\
+    \Rightarrow \mathbb{L}=\left\{\dfrac{1}{2}\pi;\dfrac{3}{2}\pi;\sim3,394;\sim6,031\right\}
   \end{align*}
 \end{minipage}
+\vline
+\begin{minipage}[t]{0.5\textwidth}
+  \subsubsection{Hinreichende Bedingung:}
+    $f'''(x)&\neq0$\\
+    \Rightarrow
+    \left\{\begin{array}{rccl}
+      f'''\left(\dfrac{1}{2}\pi\right)&\stackrel{?}{=}0\\\\
+      f'''\left(\dfrac{3}{2}\pi\right)&\stackrel{?}{=}0\\\\
+      f'''\left(3,394)&\stackrel{?}{=}0\\\\
+      f'''\left(6,031)&\stackrel{?}{=}0
+    \end{array}\right\\
+    \Leftrightarrow
+    \left\{\begin{array}{rccl}
+      16\sin^2\left(\dfrac{1}{2}\pi\right)+\sin\left(\dfrac{1}{2}\pi\right)-8&\stackrel{?}{=}0\\\\
+      16\sin^2\left(\dfrac{3}{2}\pi\right)+\sin\left(\dfrac{3}{2}\pi\right)-8&\stackrel{?}{=}0\\
+      16\sin^2(3,394)+\sin(3,394)-8&\stackrel{?}{=}0\\
+      16\sin^2(6,031)+\sin(6,031)-8&\stackrel{?}{=}0
+    \end{array}\right\\
+    \Leftrightarrow
+    \left\{\begin{array}{rccl}
+      16*1+1-8&\stackrel{!}{\neq}&0&,>0\Rightarrow WP\\
+      16*1-1-8&\stackrel{!}{\neq}&0&,>0\Rightarrow WP\\
+      -7,5&\stackrel{!}{=}&0&,<0\Rightarrow WP\\
+      -7,5&\stackrel{!}{=}&0&,<0\Rightarrow WP&
+    \end{array}\right\\
+\end{minipage}
+\begin{Bemerkung}
+  Außerdem: $f'\left(\dfrac{3}{2}\pi\right)=0\Rightarrow$ Sattelpunkt
+\end{Bemerkung}
 
 \subsubsection{Ergebnis}
-Auf dem Intervall $[0;2\pi]$  besitzt K den Hochpunkt H$(\dfrac{1}{6}\pi|f(\dfrac{1}{6}\pi))$ und den Tiefpunk T$(\dfrac{5}{6}\pi|f(\dfrac{5}{6}\pi))$.\\
-$\Leftrightarrow$ H$(\dfrac{1}{6}\pi|\dfrac{3}{2}\sqrt{3})$ und T$(\dfrac{5}{6}\pi|-\dfrac{3}{2}\sqrt{3})$.
-\subsection{Wendestellen}
-\subsubsection{Notwendige Bedingung:}
-\begin{align*}
-  f''(x)=0\\
-  \Leftrightarrow -8\sin(x)\cos(x)-2\cos(x)=0\\
-  \Leftrightarrow \cos(x)(-2-8\sin(x))=0\\
-  \stackrel{SdN}{\Rightarrow}
-  \left\{\begin{array}{rccl}
-    \cos(x)&=&0\\
-    \sin(x)&=&-\dfrac{1}{4}
-  \end{array}\right\\
-  \Rightarrow \mathbb{L}=\{\dfrac{1}{2}\pi;\dfrac{3}{2}\pi;\sim3,394;\sim6,031\}
-\end{align*}
-\subsubsection{Hinreichende Bedingung:}
-
-\begin{align*}
-  f'''(x)&\neq0\\
-  \Rightarrow
-  \left\{\begin{array}{rccl}
-    f'''(\dfrac{1}{2}\pi)&\stackrel{?}{=}0\\\\
-    f'''(\dfrac{3}{2}\pi)&\stackrel{?}{=}0\\\\
-    f'''(3,394)&\stackrel{?}{=}0\\\\
-    f'''(6,031)&\stackrel{?}{=}0
-  \end{array}\right\\
-  \Leftrightarrow
-  \left\{\begin{array}{rccl}
-    16\sin^2(\dfrac{1}{2}\pi)+\sin(\dfrac{1}{2}\pi)-8&\stackrel{?}{=}0\\\\
-    16\sin^2(\dfrac{3}{2}\pi)+\sin(\dfrac{3}{2}\pi)-8&\stackrel{?}{=}0\\
-    16\sin^2(3,394)+\sin(3,394)-8&\stackrel{?}{=}0\\
-    16\sin^2(6,031)+\sin(6,031)-8&\stackrel{?}{=}0
-  \end{array}\right\\
-  \Leftrightarrow
-  \left\{\begin{array}{rccl}
-    16*1+1-8&\stackrel{!}{\neq}&0&,>0\Rightarrow WP\\
-    16*1-1-8&\stackrel{!}{\neq}&0&,>0,\text{ außerdem: } f'(\dfrac{3}{2}\pi)=0\Rightarrow Sattelpunkt\\
-    -7,5&\stackrel{!}{=}&0&,<0\Rightarrow WP\\
-    -7,5&\stackrel{!}{=}&0&,<0\Rightarrow WP&
-  \end{array}\right\\
-\end{align*}
-\subsubsection{Ergebnis}
-Auf dem Intervall $[0;2\pi]$  besitzt K die Wendepunkte $(\dfrac{1}{2}\pi|f(\dfrac{1}{2}\pi))$, $(3,394|f(3,394))$, $(6,031|f(6,031))$ und den Sattelpunkt $(\dfrac{3}{2}\pi|f(\dfrac{3}{2}\pi))$.\\
-\Leftrightarrow $W_1(\dfrac{1}{2}\pi|0)$, $W_2(3,394|-1,452)$, $W_3(6,031|1,452)$, $S(\dfrac{3}{2}\pi|0)$.\\
+Auf dem Intervall $[0;2\pi]$  besitzt K die Wendepunkte $\left(\dfrac{1}{2}\pi|f\left(\dfrac{1}{2}\pi\right)\right)$, $(3,394|f(3,394))$, $(6,031|f(6,031))$ und den Sattelpunkt $\left(\dfrac{3}{2}\pi|f\left(\dfrac{3}{2}\pi\right)\right)$.\\
+\Leftrightarrow $W_1\left(\dfrac{1}{2}\pi|0\right)$, $W_2(3,394|-1,452)$, $W_3(6,031|1,452)$, $S\left(\dfrac{3}{2}\pi|0\right)$.\\
 \subsection{Schaubild}
 \definecolor{ccqqqq}{rgb}{0.8,0,0}
 \definecolor{cqcqcq}{rgb}{0.75,0.75,0.75}

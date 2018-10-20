@@ -205,7 +205,7 @@ et, avec $Q$ (charge totale) et $S$ (surface des armatures)
 \definecolor{betterPurple}{rgb}{0.6,0,1}
 \begin{tikzpicture}
     \draw (0,0) node {};
-    \draw (7.85,0) node {$B_{i}=\mu_{0}\cdot\dfrac{N\cdotI}{l}}$};
+    \draw (7.85,0) node {$B_{i}=\mu_{0}\cdot\dfrac{N\cdot I}{l}}$};
     \draw[line width=0.4pt] (6.75,-0.05) -- (5.9,-0.45) node[color=blue,left] {$T$};
     \draw[line width=0.4pt] (8.7,-0.3) -- (9.7,-0.7) node[color=blue,right] {$m$};
     \draw[line width=0.4pt] (7.7,-0.3) -- (6.7,-1) node[color=betterPurple,left] {$S.I.$};
@@ -254,25 +254,190 @@ $$f(\text{Hz}) = \dfrac{1}{T(\text{s})} = \dfrac{\omega\, (\text{rad/s})}{2\pi(\
 
 \subsection{$1^{ere}$ loi}
 
-\begin{Definiton}
-bla
+\begin{Definition}
+Dans un référentiel galiléen, le centre d'inertie d'un solide isolé ou pseudo-isolé est animé d'un mouvement \textbf{rectiligne uniforme} (et réciproquement):
+$$\sum \vv{F}_{ext} = \vv{0} \qquad \Leftrightarrow \qquad \text{Mvt rect. uniforme}$$
 \end{Definition}
 
 \subsection{$2^{eme}$ loi}
 
-\begin{Definiton}
-bla
+\begin{Definition}
+Dans un référentiel galiléen, le PFD prédit que
+$$\sum \vv{F}_{ext} = m\cdot \vv{a} $$
 \end{Definition}
 
 \subsection{$3^{eme}$ loi}
 
-\begin{Definiton}
-bla
+\begin{Definition}
+C'est le principe de l'action et de la réaction. Soient $A$ et $B$ deux centres d'inertie de deux objets dans un référentiel galiléen:
+$$\vv{F}_{A\rightarrow B} = - \vv{F}_{B\rightarrow A}$$
+
+\end{Definition}
+
+
+\section{Énergies et TEC}
+
+\begin{Definition}
+L'énergie fait bouger des choses... Il existe plusieures formes d'énergie:
+\begin{itemize}
+\item $E_{c}$ L'énergie cinétique, Vitesse $v$ : $E_{c} = 1/2 \cdot m \cdot v^2 $
+\item $E_{pp}$ L'énergie potentielle de pesanteur, Altitude $z$ : $E_{pp} = m \cdot g \cdot z$
+\item $E_{pe}$ L'énergie potentielle élastique, Longueur déformée $x$ : $E_{pe} = 1/2 \cdot k \cdot x$
+\item $E_{th}$ L'énergie thermique, Température $T$
+\item Les énergies physique, chimique et nucléaire, Masse des corps $m$\\\\
+\end{itemize}
+
+L'énergie peut cependant changer de forme par un travail, transfert d'énergie :
+\begin{itemize}
+\item travail mécanique $W_{m}$ (force) : $W_{A\rightarrow B}(\vv{F}) = W_{AB}(\vv{F}) = \vv{F}\cdot\vv{AB} = F \cdot AB \cdot \cos{\alpha} $
+\item travail électrique $W_{e}$ (courant électrique) : $W_{A\rightarrow B}(\vv{F}_{e}) = q \cdot (V_{A}-V_{B})$
+\item travail rayonnant $W_{r}$ (rayonnement)
+\item chaleur $Q$ (chaleur)
+\end{itemize}
+
+On retient aussi : 
+$$W_{AB}(\vv{P}) = m\cdot g \cdot (z_{A}-z_{B})$$
+$$W_{AB}(\vv{f}) = - f \cdot \widetilde{AB} $$
+$$W_{AB}(\vv{R}_{n}) = 0$$
+$$W_{AB}(\vv{F}_{R}) = 1/2 \cdot k \cdot ({x_{B}}^2 -{x_{A}}^2)$$\\\\
+
+La \textbf{puissance moyenne} mesure la quantité d'énergie transférée par seconde:
+
+\begin{tikzpicture}
+    \draw (0,0) node {};
+    \draw (7.85,0) node {$P_{m} (\vv{F})= \dfrac{W_{AB}(\vv{F})}{\Delta t}$};
+    \draw[line width=0.4pt] (9.5,0.2) -- (10.4,0.35) node[color=blue,right] {$J$};
+    \draw[line width=0.4pt] (9,-0.3) -- (10,-0.7) node[color=blue,right] {$s$};
+\end{tikzpicture}
+
+La \textbf{puissance instantanée}:
+$$P(\vv{F}) = \vv{F}\cdot \vv{v} = F\cdot v \cdot \cos{\alpha}$$\\
+
+Le \textbf{TEC}: 
+$$\Delta {E_{c}}_{A\rightarrow B} = \sum W_{AB}(\vv{F}_{ext})$$
+
+\end{Definition}
+
+\section{L'analyse dimensionnelle}
+
+\begin{Definition}
+
+Les différentes dimensions sont:
+\begin{itemize}
+\item Longueur $L$
+\item Masse $M$
+\item Durée $T$
+\item Température $\theta$
+\item Intensité électrique $I$
+\item Intensité lumineuse $J$
+\item Quantité de matière $N$
+\end{itemize}
+Il ne faut pas oublier les grandeurs sans dimensions, comme les angles ou les facteurs...
+\end{Definition}
+
+
+\section{Mouvements dans le champ de pesanteur uniforme}
+
+\begin{Definition}
+
+La force de frottement du fluide sur le corps peut être donnée par l'expression:
+$$f=k\cdot v^n$$
+où $k$ contient le coefficient de pénétration du corps et la nature du fluide et $n$ est réel. Ce sont des coefficients seulement déterminables par des expériences.\\\\
+Pour des petites vitesses (quelques cm/s), $n=1$, la force de frottement est donc proportionnelle à la vitesse du corps. Dans le cas d'une sphère de rayon $R$ et $\eta$ la viscosité,
+$$f=(6\pi\cdot\R\cdot\eta )\cdot v$$ 
+Pour des vitesses plus grandes (quelques m/s), $n=2$ convient mieux. Si $S$ est la section, $C_{x}$ le coefficient de trainée, $\rho_{fluide}$ la masse volumique, 
+$$ f=\frac{1}{2}C_{x}\cdot\rho_{fluide}\cdot S\cdot v^2 $$  \\\\
+Dans une chute non libre, le régime \textbf{permanent} est atteint quand $\vv{P}=-\vv{f}$, donc quand $a=\dfrac{dv}{dt}=0$.  
+\end{Definition}
+
+
+\section{Mouvements de satellites et des planètes}
+
+\begin{Definition}
+
+L'accélération d'un satellite terrestre est égal au champ de gravitation:
+$$\vv{a}=\vv{\mathcal{G}}$$
+Des formules souvent retrouvées sont :
+
+$$g_{0}\approx\mathcal{G}_{0}=\dfrac{G\cdot M_{T}}{{R_{T}}^2} \Leftrightarrow G\cdot M_{T} = g_{0}\cdot {R_{T}}^2$$
+
+$$a=a_{n}=\dfrac{G\cdot M_{T}}{r^2} = \dfrac{v^2}{r} \Leftrightarrow v=\sqrt{\dfrac{G\cdot M_{T}}{r}} = \sqrt{\dfrac{g_{0}\cdot{R_{T}}^2}{(R_{T} + h) }}$$
+
+$$V=\dfrac{d}{t}=\dfrac{2\pi r}{T} \Leftrightarrow T = \dfrac{2\pi r}{v} = \dfrac{2\pi r}{\sqrt{\dfrac{G\cdot M_{T}}{r}}} = 2\pi\cdot\sqrt{\dfrac{r^3}{G\cdot M_{T}}} = 2\pi\cdot\sqrt{\dfrac{(R_{T} + h)^3}{g_{0} \cdot {R_{T}}^2}} $$
+\end{Definition}
+
+
+\subsection{Les 3 lois de Kepler}
+
+\begin{Definition}
+\textbf{$1^{\text{ère}}$ loi:}\\
+La trajectoire d'un astre (solaire) est une éllipse dont le soleil est un des foyers\\\\
+\textbf{$2^{\text{ème}}$ loi:}\\
+Si la planète met la mème durée pour aller de $A\rightarrow B$ que de $C\rightarrow D$, alors $\Big{\mathcal{A}}_{AMB}=\Big{\mathcal{A}}_{CMD}$\\\\
+\textbf{$3^{\text{ème}}$ loi:}\\
+$$\dfrac{T^2}{a^3}=cste$$
 \end{Definition}
 
 
 
+\section{Systèmes oscillants}
 
+\begin{Definition}
+A COMPLETER APRES AVOIT FAIT LES OSCILLATEURS ÉLECTRIQUES
+
+La période propre d'un pendule simple, non amorti est : 
+$$T_{0}=2\pi\sqrt{\dfrac{l}{g}}$$
+Bien que $T_{0}$ est aussi proportionnel à l'amplitude $\theta$, ce facteur peut être négligé dans nos calculs\\
+
+La période propre d'un pendule élastique horizontal non amorti est :
+$$T_{0}=2\pi\sqrt{\dfrac{m}{k}}$$
+
+On remarque que la \textbf{pulsation propre} $\omega_{0}$ d'un pendule élastique horizontal non amorti est un peu comme la vitesse angulaire pour un oscillateur:
+$$\omega_{0}=\dfrac{2\pi}{T_{0}}=\sqrt{\dfrac{k}{m}}$$
+
+Dans le cas d'un système oscillant amorti, on distingue entre un régime \textbf{pseudo-périodique} et un régime \textbf{apériodique} (aucune oscillation)
+
+\end{Definition}
+
+
+
+\section{Oscillateurs mécaniques en régime forcé}
+
+\begin{Definition}
+
+La bande passante est l'intervalle des fréquences pour lesquelles le résonnateur donne une réponse importante en amplitude. Elle est déterminable sur le graphique de l'amplitude en fonction de la fréquence. On fait $\dfrac{X_{mres}}{\sqrt{2}}$ et on retrouve la largeur de la bande passante $\Delta f = f_{2} - f_{1}$. Il en résulte le facteur de qualité $Q$:
+$$Q=\dfrac{f_{res}}{\Delta f} \approx \dfrac{f_{0}}{f_{2}-f_{1}} $$  
+
+\end{Definition}
+
+
+
+\section{Émission, propagation et réception des ondes}
+
+\begin{Definition}
+
+La célérité (vitesse de propagation) de l'onde est constante dans un milieu non dispersif.
+$$v=\dfrac{d}{\Delta t} = \dfrac{\lambda}{T} = \lambda \cdot f$$
+
+Une onde est périodique dans l'espace et dans le temps. Dans un moment donné, les points $P_{1}$ et $P_{2}$ du milieu (en gros, deux courbes d'onde) sont en phase si 
+$$d(P_{1};P_{2})=k\cdot\lambda\quad;k\in\Z$$
+et ils sont en opposition de phase si
+$$d(P_{1};P_{2})=(2k+1)\cdot\dfrac{\lambda}{2};\quadk\in\Z$$
+
+L'indice de réfraction $n$ et la célérité des ondes électromagnétiques sont proportionnels:
+$$v$$
+\end{Definition}
+
+
+\section{Difffraction des ondes}
+
+\begin{Definition}
+
+Il y a seulement diffraction si l'obstacle de l'onde a une dimension du même ordre de grandeur que celle-ci.\\
+L'écart angulaire pour la diffraction par une fente est, avec $a$ largeur de la fente, $\theta$, mesuré entre le milieu de la tache centrale et la première extinction:
+$$\theta=\dfrac{\lambda}{a}$$
+
+\end{Definition}
 
 
 

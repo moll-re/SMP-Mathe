@@ -29,8 +29,7 @@
   Der Hauptunterschied zwischen einem bestimmten und einem unbestimmten Integral ist die Existenz (bestimmtes Integral) bzw. das Fehlen
   (unbestimmtes Integral) der Integrationsgrenzen.\\
   Bei einem bestimmten Integral ist die Lösung ein Flächeinhalt, also ein einfacher Zahlenwert.\\
-  Bei einem unbestimmten Integral erhält man als Lösung eine (wie soeben eingeführte) Stammfunktion.\\
-  Werden feste Integrationsgrenzen angegeben, handelt es sich um ein bestimmtes Integral.
+  Bei einem unbestimmten Integral erhält man als Lösung eine (wie soeben eingeführte) Stammfunktion.
 \end{Bemerkung}
 \definecolor{lightblu}{rgb}{0,0,0.3}
 \definecolor{lightre}{rgb}{0.3,0,0}
@@ -109,23 +108,18 @@ Aus diesen Sätzen stellt sich der \textbf{Hauptsatz der Differenzial- und Integ
 
 \end{center}
 \end{Theorem}
-Invertieren der Intergrationsgrenzen:
-\begin{Beweis}
+
+\begin{Beweis}[- Invertieren der Intergrationsgrenzen]
   $$\int_a^b f(x)dx = F(b)-F(a) = -(F(a)-F(b)) = -\int_b^a f(x)dx$$
 \end{Beweis}
-\\
-Summenregel:
-\begin{Beweis}
+\begin{Beweis}[- Summenregel]
   $$\int_a^b f(x)+g(x)dx = [F(x)+G(x)]_a^b = F(b)+G(b)-(F(a)+G(b)) = F(b)-F(a)+G(b)-G(b) $$$$= \int_a^b f(x)dx+\int_a^b g(x)dx$$
 \end{Beweis}
-\\
-Linearität:
-\begin{Beweis}
+\begin{Beweis}[- Linearität]
   $$\int_a^b r*f(x)dx = [r*F(x)]_a^b = r*F(b)-r*F(a) = r*(F(a)-F(b)) = r*\int_a^b f(x)dx$$
 \end{Beweis}
-\\
-Abschnittweise Integration:
-\begin{Beweis}
+
+\begin{Beweis}[- Abschnittweise Integration]
   $$\int_a^b f(x)dx+ \int_b^c f(x)dx = F(a)-F(b)-(F(b)-F(c)) = F(c)-F(a) = \int_a^c f(x)dx$$
 \end{Beweis}
 
@@ -187,24 +181,22 @@ Hoffentlich einleuchtend und selbstverständlich:
   Die einzige Ausnahme stellt der Fall $n=-1$ dar:
 \end{Bemerkung}
 \begin{Theorem}
-  $$\int  \dfrac{1}{x} dx = \ln(|x|) + C$$
+  $$\int \dfrac{1}{x} dx = \ln(|x|) + C$$
 \end{Theorem}
 Eine Konsequenz dessen ist:
 \begin{Theorem}
-  $$\int  \dfrac{a}{bx+c} dx = \dfrac{a}{b}\ln(|bx+c|) + C$$
+  $$\int \dfrac{a}{bx+c} dx = \dfrac{a}{b}\ln(|bx+c|) + C$$
 \end{Theorem}
 \begin{Beweis}
-  So what?
+  $$\left(\dfrac{a}{b}\ln(|bx+c|)\right)' = \dfrac{a}{b}\cdot \dfrac{1}{bx+c}\cdot b = \dfrac{a}{bx+c}$$
 \end{Beweis}
 
 \subsection{Partielle Integration}
 \begin{Theorem}
-  Seien $u$ und $v$ zwei stetig differenzierbare Funktionen im Intervall $I$ und $u'$
-  und $v'$ in I stetig. Dann gilt:
+  Seien $u$ und $v$ zwei stetig differenzierbare Funktionen auf dem Intervall $I$. Dann gilt:
   $$\int u(x)'v(x) dx= u(x)v(x) - \int u(x)v'(x) dx$$
 \end{Theorem}
 \begin{Beweis}\\
-Nachweisen u, v diffbar und u', v' stetig (kommt noch in sauber)\\
 \begin{align*}
   &&(u(x)*v(x))' &= u'(x)v(x)+u(x)v'(x)\\
   &\Leftrightarrow & \int (u(x)*v(x))' dx &= \int u'(x)v(x)+\int u(x)v'(x)\\
@@ -214,7 +206,8 @@ Nachweisen u, v diffbar und u', v' stetig (kommt noch in sauber)\\
 \end{Beweis}
 \begin{Beispiel}
   \begin{align*}
-  \int x\sin(x) dx &= \int x(-\cos(x))' dx\\
+  \int x\sin(x) dx & \text{\qquad Mit $u(x)=x$; $u'(x)=1$; \,$v(x)=\sin(x)$; $v'(x)=-\cos(x)$}\\
+  &= \int x(-\cos(x))' dx\\
   &= -x\cos(x) - \int-\cos(x)*1 dx\\
   &= -x\cos(x) + \int\cos(x) dx\\
   &= -x\cos(x) + \sin(x)
@@ -223,42 +216,41 @@ Nachweisen u, v diffbar und u', v' stetig (kommt noch in sauber)\\
 
 \subsection{Substitution}
 \begin{Theorem}
-  Es sei $f$ eine auf $[a;b]$ stetige funktion und $g$ eine auf diesem Intervall differenzierbare Funktion mit stetiger Ableitung
-  $g'$. Wenn die verkettung $f \circ g$ esxistiert, gilt:
-  $$\int_a^b f(g(x)*g'(x)dx=\int_{g(a)}^{g(b)}f(z)dz$$
+  Sei $f$ eine auf $[a;b]$ stetige funktion und $g$ eine auf diesem Intervall differenzierbare Funktion mit stetiger Ableitung
+  $g'$. Wenn die verkettung $f \circ g$ existiert, gilt:
+  $$\int_a^b f(g(x))\cdot g'(x)dx=\int_{g(a)}^{g(b)}f(z)dz$$
 \end{Theorem}
 Eine abgespeckte Variante dieses Theorems, genannt lineare Substitution ist gegeben durch:
 \begin{Theorem}
   Für ein Funktion $f$ mit einer Stammfunktion $F$ und $r\neq 0$ gilt:
-  $$\int_a^b f(rx+s)dx=\dfrac{1}{r}[F(rx+s)]_a^b$$
+  $$\int_a^b f(rx+s)dx=\dfrac{1}{r}[F(rx+s)]_a^b + C$$
 \end{Theorem}
 \begin{Beispiel}
     Zu berechnen: $$\int_0^4 \dfrac{x\sqrt{x}}{1 + x^2\sqrt{x}} dx$$ \\
     \textbf{Substitution}:
     \begin{align*}
-        \quad \qquad \qquad \qquad \qquad \qquad u &= x^2\sqrt{x} \quad (\text{alternativ } u = x^2\sqrt{x} + 1) \\
-                                    \dfrac{du}{dx} &= (x^2\sqrt{x})' \\
-                                                   &= \dfrac{5}{2} \cdot x\sqrt{x} \\
-                                \Leftrightarrow dx &= \dfrac{2}{5x\sqrt{x}}du
+        \quad \qquad \qquad \qquad \qquad \qquad
+        g(x) &= x^2\sqrt{x} \quad (\text{alternativ: } g(x) = x^2\sqrt{x} + 1) \\
+        \dfrac{dg}{dx} &= (x^2\sqrt{x})' \\
+                          &= \dfrac{5}{2} \cdot x\sqrt{x} \\
+        \Bigg(\Leftrightarrow dx &= \dfrac{2}{5x\sqrt{x}}dg \Rightarrow \int_0^4 \dfrac{x\sqrt{x}}{1 + x^2\sqrt{x}} dx = \int_{g(0)}^{g(4)} \dfrac{\cancel{x\sqrt{x}}}{1 + g} \cdot \dfrac{2}{5\cancel{x\sqrt{x}}}dg\Bigg)
     \end{align*}
     \textbf{Berechnung des Integrals}:
     \begin{align*}
-        \int_0^4 \dfrac{x\sqrt{x}}{1 + x^2\sqrt{x}} dx &= \int_{u(0)}^{u(4)} \dfrac{\cancel{x\sqrt{x}}}{1 + u} \cdot \dfrac{2}{5\cancel{x\sqrt{x}}}du \\
-                                                       &= \dfrac{2}{5} \cdot \int_{0^2\sqrt{0}}^{4^2\sqrt{4}} \dfrac{1}{1 + u}du \\
-                                                       &= \dfrac{2}{5} \cdot \left[\ln(|1 + u|)\right]_0^{32} \\
-                                                       &\boxed{= \dfrac{2}{5} \cdot \ln(33)}
+        \int_0^4 \dfrac{x\sqrt{x}}{1 + x^2\sqrt{x}} dx &= \int_0^4 f(g(x))\cdot g'(x)dx \text{\hspace{2cm}mit $f(x)=\dfrac{2}{5} \cdot \dfrac{1}{1+x}$ und $g(x) = x^2\sqrt{x}$}\\
+        &= \int_{g(0)}^{g(4)} \dfrac{2}{5} \cdot\dfrac{1}{1 + z}dz \\
+        &= \dfrac{2}{5} \cdot \int_{0^2\cdot\sqrt{0}}^{4^2\cdot\sqrt{4}} \dfrac{1}{1 + z}dz \\
+        &= \dfrac{2}{5} \cdot \left[\ln(|1 + z|)\right]_0^{32} \\
+        &\boxed{= \dfrac{2}{5} \cdot \ln(33)}
     \end{align*}
 \end{Beispiel}
 
 \subsection{Substitution der Integrationsvariablen}
 \begin{Theorem}
-  Es sei $f$ eine auf $[a;b]$ stetige funktion und $g$ eine auf diesem Intervall differenzierbare und umkehrbare Funktion mit stetiger
+  Sei $f$ eine auf $[a;b]$ stetige funktion und $g$ eine auf diesem Intervall differenzierbare und umkehrbare Funktion mit stetiger
   Ableitungsfunktion $g'$. Wenn die verkettung $f \circ g$ esxistiert, gilt:
   $$\int_a^b f(x)dx=\int_{\bar g (a)}^{\bar g (b)}f(g(t))*g'(t)dt$$
 \end{Theorem}
-
-\subsection{Partialbruchzerlegung}
-?
 
 \subsection{Integrale von $e$-Funktionen}
 \begin{Theorem}
@@ -278,7 +270,7 @@ Es handelt sich hierbei streng genommen auch um eine Substitution:
 \subsection{Integrale von (un)geraden Funktionen}
 \begin{Theorem}
   Sei $f$ eine auf einem Intervall $I$ stetige und auf $0$ zentrierte Funktion. Wenn $f$ gerade ist, gilt für alle $a\in \R$:
-  $\displaystyle{\int_{-a}^{a} f(t)dt = 2\int_{0}^{a} f(t)dt } $, und wenn $f$ ungerade ist
+  $\displaystyle{\int_{-a}^{a} f(t)dt = 2\int_{0}^{a} f(t)dt } $, und wenn $f$ ungerade ist:
   $\( \displaystyle\int_{-a}^{a} f(t)dt = 0 \) $
 \end{Theorem}
 \begin{Beweis}
@@ -307,44 +299,44 @@ Es handelt sich hierbei streng genommen auch um eine Substitution:
   Für die auf dem Intervall $[a;b]$ (also stückweise) stetige Funktion $f$ mit Nullstellen und $x_1,x_2,...,x_n$
   mit $a \leq x_1 \leq x_2 \leq ... \leq x_n \leq b$ ist der Flächeninhalt $A$ zwischen dem Graphen von $f$ und
   der $x_1$-Achse im Intervall $[a;b]$ gegeben durch:
-  $$A= \left|{\int_a^{x_1} f(x)dx}\right|+\left|{\int_{x_1}^{x_2} f(x)dx}\right|+...+\left|{\int_{x_{n-1}}^{x_n} f(x)dx}\right|+\left|{\int_{x_n}^b f(x)dx}\right|$$
+  \begin{align*}
+    \qquad\qquad\qquad A &= \left|{\int_a^{x_1} f(x)dx}\right|+\left|{\int_{x_1}^{x_2} f(x)dx}\right|+...+\left|{\int_{x_{n-1}}^{x_n} f(x)dx}\right|+\left|{\int_{x_n}^b f(x)dx}\right|\\
+    &= \left|{\int_a^{b} f(x)dx}\right|
+  \end{align*}
 \end{Definition}
-Bildhaft sieht das folgendermaßen aus:
-\begin{center}
-    \definecolor{lightblu}{rgb}{0,0,0.3}
-    \definecolor{lightgree}{rgb}{0,0.3,0}
-    \begin{tikzpicture}[scale=0.7]
-        \draw[->,line width=0.8pt] (-5.5,0) -- (5.5,0) node[below] {$x_1$};
-        \draw[->,line width=0.8pt] (0,-5.5) -- (0,5.5) node[right] {$x_2$};
-        \draw[line width=0.1pt,color=lightblu,fill=lightblu,fill opacity=0.3] (-2.5,0) -- (-2.5,-2.5) ..controls(-1.62,-3.072) ..(0,0) -- cycle;
-        \draw[line width=0.1pt,color=lightgree,fill=lightgree,fill opacity=0.3] (0,0) ..controls(1.94,3.78) ..(3.5,4.5) -- (3.5,0) -- cycle;
-        \draw[line width=1.5pt,color=red] (-5,2) ..controls(-2,-4) ..(0,0);
-        \draw[line width=1.5pt,color=red] (0,0) ..controls(2,4) ..(5,5);
-        \draw[line width=1.2pt,color=orange] (-2.5,-2.5) -- (-2.5,0) node[above] {a};
-        \draw[line width=1.2pt,color=orange] (0,-0.2) node[right] {$x_1$};
-        \draw[line width=1.2pt,color=orange] (3.5,4.5) -- (3.5,0) node[below] {b};
-        \draw[line width=1.2pt,color=orange] (-2.5,-1.5) -- (-1,0);
-        \draw[line width=1.2pt,color=orange] (-2.5,-0.5) -- (-2,0);
-        \draw[line width=1.2pt,color=orange] (-2.5,-2.5) -- (3.5,3.5);
-        \draw[line width=1.2pt,color=orange] (1,0) -- (3.5,2.5);
-        \draw[line width=1.2pt,color=orange] (2,0) -- (3.5,1.5);
-        \draw[line width=1.2pt,color=orange] (3,0) -- (3.5,0.5);
-        \draw[line width=1.2pt,color=orange] (1,2) -- (3.5,4.45);
-        \draw[line width=1.2pt,color=black] (5.5,-2) -- (7.5,-2) -- (7.5,-3) -- (5.5,-3) -- cycle;
-        \draw[line width=1.2pt,color=orange] (5.5,-3) -- (6.5,-2);
-        \draw[line width=1.2pt,color=orange] (6.5,-3) -- (7.5,-2);
-        \draw[line width=1.2pt,color=orange] (5.5,-2.5) -- (6,-2);
-        \draw[line width=1.2pt,color=orange] (6,-3) -- (7,-2);
-        \draw[line width=1.2pt,color=orange] (7,-3) -- (7.5,-2.5);
-        \draw[line width=3pt] (7.8,-2.5) node {:};
-        \draw[line width=2pt] (9,-2.5) node {$\textcolor{orange}{C} = \textcolor{lightblue}{A} + \textcolor{lightgree}{B}$};
-        \draw[line width=2pt] (10.75,-3) node {$ = |{\int_{\textcolor{orange}{a}}^{\textcolor{orange}{x_1}} f(x)dx}| + |{\int_{\textcolor{orange}{x_1}}^{\textcolor{orange}{b}} f(x)dx}|$};
-        \draw (-0.3,-0.3) node {$O$};
-        \draw[line width=0.8pt,color=lightblu] (-1.5,-1.1) node {$A$};
-        \draw[line width=0.8pt,color=lightgree] (2.3,1.9) node {$B$};
-        \draw[line width=0.8pt,color=red] (2,4) node {$K$};
-    \end{tikzpicture}
-\end{center}
+Bildhaft sieht das folgendermaßen aus:\\
+\begin{minipage}{0.7\textwidth}
+  \definecolor{lightblu}{rgb}{0,0,0.3}
+  \definecolor{lightgree}{rgb}{0,0.3,0}
+  \begin{tikzpicture}[scale=0.9]
+      \draw[->,line width=0.8pt] (-5.5,0) -- (5.5,0) node[below] {$x_1$};
+      \draw[->,line width=0.8pt] (0,-5.5) -- (0,5.5) node[right] {$x_2$};
+      \draw[line width=0.1pt,color=lightblu,fill=lightblu,fill opacity=0.3] (-2.5,0) -- (-2.5,-2.5) ..controls(-1.62,-3.072) ..(0,0) -- cycle;
+      \draw[line width=0.1pt,color=lightgree,fill=lightgree,fill opacity=0.3] (0,0) ..controls(1.94,3.78) ..(3.5,4.5) -- (3.5,0) -- cycle;
+      \draw[line width=1.5pt,color=red] (-5,2) ..controls(-2,-4) ..(0,0);
+      \draw[line width=1.5pt,color=red] (0,0) ..controls(2,4) ..(5,5);
+      \draw[line width=1.2pt,color=orange] (-2.5,-2.5) -- (-2.5,0) node[above] {a};
+      \draw[line width=1.2pt,color=orange] (0,-0.2) node[right] {$x_1$};
+      \draw[line width=1.2pt,color=orange] (3.5,4.5) -- (3.5,0) node[below] {b};
+      \draw[line width=1.2pt,color=orange] (-2.5,-1.5) -- (-1,0);
+      \draw[line width=1.2pt,color=orange] (-2.5,-0.5) -- (-2,0);
+      \draw[line width=1.2pt,color=orange] (-2.5,-2.5) -- (3.5,3.5);
+      \draw[line width=1.2pt,color=orange] (1,0) -- (3.5,2.5);
+      \draw[line width=1.2pt,color=orange] (2,0) -- (3.5,1.5);
+      \draw[line width=1.2pt,color=orange] (3,0) -- (3.5,0.5);
+      \draw[line width=1.2pt,color=orange] (1,2) -- (3.5,4.45);
+      \draw (-0.3,-0.3) node {$O$};
+      \draw[line width=0.8pt,color=lightblu] (-1.5,-1.1) node {$A$};
+      \draw[line width=0.8pt,color=lightgree] (2.3,1.9) node {$B$};
+      \draw[line width=0.8pt,color=red] (2,4) node {$K$};
+  \end{tikzpicture}
+\end{minipage}
+\begin{minipage}[b]{0.3\textwidth}
+  \begin{align*}
+    \textcolor{orange}{C}  &= \textcolor{lightblue}{A} + \textcolor{lightgree}{B}\\
+    &= |{\int_{\textcolor{orange}{a}}^{\textcolor{orange}{x_1}} f(x)dx}| + |{\int_{\textcolor{orange}{x_1}}^{\textcolor{orange}{b}} f(x)dx}|
+  \end{align*}
+\end{minipage}
 \\
 \begin{Beispiel}
   $f(x)=x^2-2x^3;x\in \R$\\
@@ -374,51 +366,50 @@ Bildhaft sieht das folgendermaßen aus:
   Mit $Y_1 = f(x)$ und $Y_2 = abs(Y_1)$ bzw. $Y_2 = |Y_1|$ (zu finden in 'MATH'>'NUM' oder über Alpha-F2) lässt sich die Fläche berechnen über 2nd-CALC mit der Option Integral.\\
   Hierzu wählt man $Y_2$ aus und gibt $a$ und $b$ an.
 \end{GTR-Tipp}
-\begin{center}
-    \definecolor{lightblu}{rgb}{0,0,0.3}
-    \definecolor{lightgree}{rgb}{0,0.3,0}
-    \begin{tikzpicture}[scale=0.7]
-        \draw[->,line width=0.8pt] (-5.5,0) -- (5.5,0) node[below] {$x_1$};
-        \draw[->,line width=0.8pt] (0,-5.5) -- (0,5.5) node[right] {$x_2$};
-        \draw[line width=0.1pt,color=lightblu,fill=lightblu,fill opacity=0.3] (-2.5,0) -- (-2.5,2.43) ..controls(-1.59,3.21) ..(0,0) -- cycle;
-        \draw[line width=0.1pt,color=lightgree,fill=lightgree,fill opacity=0.3] (0,0) ..controls(1.94,3.78) ..(3.5,4.5) -- (3.5,0) -- cycle;
-        \draw[line width=1.5pt,color=red] (-5,2) ..controls(-2,-4) ..(0,0);
-        \draw[line width=1.5pt,color=red] (0,0) ..controls(2,4) ..(5,5);
-        \draw[line width=1.5pt,color=red] (-4,0) ..controls(-1.8,3.8) ..(0,0);
-        \draw[line width=7pt,color=white,dashed] (-4,0) ..controls(-1.8,-3.8) ..(0,0);
-        % Repair the damage caused by the line above
-        \draw[line width=0.8pt] (-4,0) -- (-3.85,0);
-        \draw[line width=0.8pt] (0,-0.05) -- (0,-0.3);
-        \draw[line width=1.2pt,color=orange] (-2.5,2.4) -- (-2.5,0) node[below] {a};
-        \draw[line width=1.2pt,color=orange] (0,-0.2) node[right] {$x_1$};
-        \draw[line width=1.2pt,color=orange] (3.5,4.5) -- (3.5,0) node[below] {b};
-        \draw[line width=1.2pt,color=orange] (-2.5,0.5) -- (-1,2);
-        \draw[line width=1.2pt,color=orange] (-2.5,1.5) -- (-1.4,2.6);
-        \draw[line width=1.2pt,color=orange] (-2,0) -- (-0.65,1.35);
-        \draw[line width=1.2pt,color=orange] (-1,0) -- (-0.3,0.7);
-        \draw[line width=1.2pt,color=orange] (0,0) -- (3.5,3.5);
-        \draw[line width=1.2pt,color=orange] (1,0) -- (3.5,2.5);
-        \draw[line width=1.2pt,color=orange] (2,0) -- (3.5,1.5);
-        \draw[line width=1.2pt,color=orange] (3,0) -- (3.5,0.5);
-        \draw[line width=1.2pt,color=orange] (1,2) -- (3.5,4.45);
-        \draw[line width=1.2pt,color=black] (5.5,-2) -- (7.5,-2) -- (7.5,-3) -- (5.5,-3) -- cycle;
-        \draw[line width=1.2pt,color=orange] (5.5,-3) -- (6.5,-2);
-        \draw[line width=1.2pt,color=orange] (6.5,-3) -- (7.5,-2);
-        \draw[line width=1.2pt,color=orange] (5.5,-2.5) -- (6,-2);
-        \draw[line width=1.2pt,color=orange] (6,-3) -- (7,-2);
-        \draw[line width=1.2pt,color=orange] (7,-3) -- (7.5,-2.5);
-        \draw[line width=3pt] (7.8,-2.5) node {:};
-        \draw[line width=2pt] (9,-2.5) node {$\textcolor{orange}{C} = \textcolor{lightblue}{A} + \textcolor{lightgree}{B}$};
-        \draw[line width=2pt] (10.57,-3.05) node {$ = {\int_{\textcolor{orange}{a}}^{\textcolor{orange}{x_1}} f(x)dx} + {\int_{\textcolor{orange}{x_1}}^{\textcolor{orange}{b}} f(x)dx}$};
-        \draw[line width=2pt] (9.47,-3.6) node {$ = {\int_{\textcolor{orange}{a}}^{\textcolor{orange}{b}} f(x)dx}$};
-        \draw (-0.3,-0.3) node {$O$};
-        \draw[line width=0.8pt,color=lightblu] (-1.5,1.1) node {$A$};
-        \draw[line width=0.8pt,color=lightgree] (2.3,1.9) node {$B$};
-        \draw[line width=0.8pt,color=red] (1.45,4.05) node{"$ $};
-        \draw[line width=0.8pt,color=red] (1.8,4) node {$|K|$};
-        \draw[line width=0.8pt,color=red] (2.15,4.05) node{"$ $};
-    \end{tikzpicture}
-\end{center}
+
+\begin{minipage}{0.7\textwidth}
+\definecolor{lightblu}{rgb}{0,0,0.3}
+\definecolor{lightgree}{rgb}{0,0.3,0}
+\begin{tikzpicture}[scale=0.9]
+    \draw[->,line width=0.8pt] (-5.5,0) -- (5.5,0) node[below] {$x_1$};
+    \draw[->,line width=0.8pt] (0,-5.5) -- (0,5.5) node[right] {$x_2$};
+    \draw[line width=0.1pt,color=lightblu,fill=lightblu,fill opacity=0.3] (-2.5,0) -- (-2.5,2.43) ..controls(-1.59,3.21) ..(0,0) -- cycle;
+    \draw[line width=0.1pt,color=lightgree,fill=lightgree,fill opacity=0.3] (0,0) ..controls(1.94,3.78) ..(3.5,4.5) -- (3.5,0) -- cycle;
+    \draw[line width=1.5pt,color=red] (-5,2) ..controls(-2,-4) ..(0,0);
+    \draw[line width=1.5pt,color=red] (0,0) ..controls(2,4) ..(5,5);
+    \draw[line width=1.5pt,color=red] (-4,0) ..controls(-1.8,3.8) ..(0,0);
+    \draw[line width=7pt,color=white,dashed] (-4,0) ..controls(-1.8,-3.8) ..(0,0);
+    % Repair the damage caused by the line above
+    \draw[line width=0.8pt] (-4,0) -- (-3.85,0);
+    \draw[line width=0.8pt] (0,-0.05) -- (0,-0.3);
+    \draw[line width=1.2pt,color=orange] (-2.5,2.4) -- (-2.5,0) node[below] {a};
+    \draw[line width=1.2pt,color=orange] (0,-0.2) node[right] {$x_1$};
+    \draw[line width=1.2pt,color=orange] (3.5,4.5) -- (3.5,0) node[below] {b};
+    \draw[line width=1.2pt,color=orange] (-2.5,0.5) -- (-1,2);
+    \draw[line width=1.2pt,color=orange] (-2.5,1.5) -- (-1.4,2.6);
+    \draw[line width=1.2pt,color=orange] (-2,0) -- (-0.65,1.35);
+    \draw[line width=1.2pt,color=orange] (-1,0) -- (-0.3,0.7);
+    \draw[line width=1.2pt,color=orange] (0,0) -- (3.5,3.5);
+    \draw[line width=1.2pt,color=orange] (1,0) -- (3.5,2.5);
+    \draw[line width=1.2pt,color=orange] (2,0) -- (3.5,1.5);
+    \draw[line width=1.2pt,color=orange] (3,0) -- (3.5,0.5);
+    \draw[line width=1.2pt,color=orange] (1,2) -- (3.5,4.45);
+    \draw (-0.3,-0.3) node {$O$};
+    \draw[line width=0.8pt,color=lightblu] (-1.5,1.1) node {$A$};
+    \draw[line width=0.8pt,color=lightgree] (2.3,1.9) node {$B$};
+    \draw[line width=0.8pt,color=red] (1.45,4.05) node{"$ $};
+    \draw[line width=0.8pt,color=red] (1.8,4) node {$|K|$};
+    \draw[line width=0.8pt,color=red] (2.15,4.05) node{"$ $};
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}[b]{0.3\textwidth}
+  \begin{align*}
+    \textcolor{orange}{C} &= \textcolor{lightblue}{A} + \textcolor{lightgree}{B}\\
+    &= {\int_{\textcolor{orange}{a}}^{\textcolor{orange}{x_1}} f(x)dx} + {\int_{\textcolor{orange}{x_1}}^{\textcolor{orange}{b}} f(x)dx}\\
+    &= {\int_{\textcolor{orange}{a}}^{\textcolor{orange}{b}} f(x)dx}
+  \end{align*}
+\end{minipage}
+
 \subsection{Fläche zwischen zwei Funktionen}
 \begin{Theorem}
   Für zwei auf $[a;b]$ stetige Funktionen $f$ und $g$ gilt: Die Fläche zwischen ihren Schaubildern $C_f$ und $C_g$ ist gegeben durch: $\( \displaystyle \int_a^b (g(x)-f(x))dx$\).
@@ -426,10 +417,13 @@ Bildhaft sieht das folgendermaßen aus:
 \subsection{Volumenangaben mittels Integralen}
 \begin{Theorem}
   Man betrachtet einen Körper, der durch zwei parallele Ebenen mit den Gleichungen $x_3 = a$ und $x_3 = b$ begrenzt wird.
-  Für alle $a\leq z \leq b$ nennt man $P_z$ die orthogonale Fläche zu $x_3$-Achse mit der Seite $z$ und $S(z)$ die Fläche des
+  Für alle $a\leq z \leq b$ nennt man $P_z$ die zur $x_1$-Achse orthogonale Fläche mit der Seite $z$ und $S(z)$ die Fläche des
   Schnitts des Körpers durch $P_z$. Ist $S$ stetig, so ist ist das Volumen $V$ des Körpers gegeben durch:
   $$V=\int_a^b S(z)dz$$\\
 \end{Theorem}
+\begin{Bemerkung}
+  Analog zur Unterteilung einer Fläche in kleine Balken, kann man ein Volumen in kleine Scheiben unterteilen.
+\end{Bemerkung}
 \begin{Bemerkung}
   Dieses Theorem nehmen wir hin, ohne es zu beweisen, uns geht es ohnehin um die Schlussfolgerungen, die wir daraus ziehen können:
 \end{Bemerkung}
@@ -443,7 +437,7 @@ Bildhaft sieht das folgendermaßen aus:
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.7]
   \draw[->,line width=0.8pt] (-3.0,0) -- (11.0,0) node[below] {$x_1$};
   \draw[->,line width=0.8pt] (0,-3.7) -- (0,3.7) node[right] {$x_2$};
-  \draw[->,line width=0.8pt] (-3.0,-3.0) -- (3.0,3.0) node[right] {$x_3$};
+  \draw[->,line width=0.8pt] (3.0,3.0) -- (-3.0,-3.0) node[below] {$x_3$};
   \draw (-0.3,0.3) node {$O$};
   \draw[line width=2.4pt,color=ffqqqq,fill=ffqqqq,fill opacity=0.1, smooth,samples=50,domain=1:9] plot(\x,{sqrt(\x)}) -- (9,0) -- (1,0) -- cycle;
   \draw[line width=2pt,color=ccqqqq,smooth,samples=100,domain=6.848866262443662e-8:10.024582490069186] plot(\x,{sqrt((\x))});
@@ -493,4 +487,5 @@ Diese sollten ohne weitere Rechtfertigung oder Beweis verwendet werden dürfen. 
   \int e^{ax+b}dx &= \dfrac{1}{a}e^{ax+b} + C\\
   \int \dfrac{1}{\sqrt x} &= 2\sqrtx + C\\
 \end{align*}
+\\
 \danger Definitionsmengen sind zu beachten.
