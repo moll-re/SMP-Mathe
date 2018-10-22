@@ -141,68 +141,129 @@
 
 \section{Die Gauß'sche Zahlenebene}
 
-	\paragraph{} Da jetzt der Körper der komplexe Zahlen definiert wurde, gilt es ihn nun in unser bekanntes Zahlensystem zu integrieren.
-	Hierfür kann man zum Beispiel beobachten, wie sich komplexe Zahlen auf der \textbf{reellen Zahlengerade} (welche eine Veranschaulichung des euklidischen Vektorraums $\R^1$ ist) verhalten. Nun sollte erstmal der Begriff des \textbf{Zeiger}s eingeführt werden.
-	\begin{Definition}
-		Als Zeiger definieren wir ein visuelles Hilfsmittel, welches dem Darstellungsmodul eines Vektors, einem Pfeil, sehr ähnlich ist, jedoch sich durch eine kleine Nuance von Letzterem zu unterscheiden ist.
-	\end{Definition}
-	\\
-	\begin{center}
-		\begin{tikzpicture}[>=triangle 45]
-			\draw[->,line width=0.8pt] (-5.5,0) -- (6,0) node[above] {$Re(z)$};
-			\foreach  \x in {-5,...,5}
-    			\draw (\x,0.2) -- (\x,-0.2) node[below] {$\x$};
-			\draw[->,line width=0.8pt,color=red] (0,0) -- (3,0);
-		\end{tikzpicture}
-	\end{center}
-	\\
-	\paragraph{} Zunächst muss verstanden werden, welche Transformation jeweils Addition und Multiplikation im $\R^1$ auf reelle Zahlen ausführt. Das lässt sich am einfachsten anhand einer Graphik erklären:
-	\\
-	\begin{center}
-		\begin{tikzpicture}[>=triangle 45]
-			\draw[->,line width=0.8pt] (-5.5,0) -- (6,0) node[above] {$Re(z)$};
-			\foreach  \x in {-5,...,5}
-    			\draw (\x,0.2) -- (\x,-0.2) node[below] {$\x$};
-			\draw[->,line width=1.5pt,color=red] (0,0) -- (-3,0);
-			\draw[->,line width=1.5pt,color=orange] (0,0) -- (4,0);
-			\draw[->,line width=1.5pt,color=red,dashed] (0,0) -- (3,0);
-			\draw[->,line width=1.5pt,color=orange,dashed] (0,0) -- (2,0);
-			\draw[line width=1.3pt,color=red] (1.5,0.4) node {3};
-			\draw[line width=1.3pt,color=red] (-1.5,0.4) node {-3};
-			\draw[->,color=red] (2.4,0) arc (0:180:2.4);
-			\draw[line width=2pt,color=white] (1.84,1.54) arc (40:55:2.4);
-			\draw[->,color=orange] (0.3,0) arc (180:0:1.5);
-			\draw[line width=0.8pt,color=orange] (1.8,1.8) node {$\cdot(2) = $ Skalierung mit Faktor $2$};
-			\draw[line width=0.8pt,color=red] (0,2.7) node {$\cdot (-1) = 180 \degree$ Drehung};
-		\end{tikzpicture}
-	\end{center}
 
-	\paragraph{} Da gilt, dass: $i^2 = -1$ ist die Multiplikation einer reellen Zahl mit $i^2$ äquivalent zu einer $180$- Grad Drehung. Daraus lässt sich schließen, dass die Multiplikation mit $i$ einer $90$- Grad Drehung entspricht, da: $a \cdot i^2 = a \cdot i \cdot i; a\in\R$ und man davon ausgeht, dass $\cdot(i)$ beides mal dieselbe Transformation anwendet.
-	\\
-	\begin{center}
-		\begin{tikzpicture}[>=triangle 45]
-			\draw[->,line width=0.8pt] (-5.5,0) -- (5.7,0) node[above] {$Re(z)$};
-			\draw[->,line width=0.8pt] (0,-5.5) -- (0,5.7) node[right] {$Im(z)$};
-			\foreach  \x in {-5,...,-1,1,2,...,5}
-                \draw [line width=0.8pt] (\x,0.1) -- (\x,-0.1) node[below] {$\x$};
-            \foreach  \x in {-5,...,-1,1,2,...,5}
-                \draw [line width=0.8pt] (-0.1,\x) -- (0.1,\x) node[right] {$\x i$};
-			\draw[line width=0.8pt] (-0.2,-0.2) node {$O$};
-			\draw[->,line width=1.5pt,color=red] (0,0) -- (-3,0);
-			\draw[->,line width=1.5pt,color=red,dashed] (0,0) -- (3,0);
-			\draw[line width=1.3pt,color=red] (1.5,0.3) node {3};
-			\draw[line width=1.3pt,color=red] (-1.5,0.3) node {-3};
-			\draw[->,line width=1.5pt,color=red] (0,0) -- (0,-3);
-			\draw[->,line width=1.5pt,color=red] (0,0) -- (0,3);
-			\draw[line width=1.3pt,color=red] (-0.3,1.5) node {$3i$};
-			\draw[line width=1.3pt,color=red] (-0.4,-1.5) node {$-3i$};
-			\draw[->,color=red] (2.4,0) arc (0:90:2.4);
-			\draw[->,color=red] (0,2.4) arc (90:180:2.4);
-			\draw[line width=1.3pt,color=red] (1.9,2) node {$\cdot(i)$};
-			\draw[line width=1.3pt,color=red] (-1.9,2) node {$\cdot(i)$};
-			\draw[->,color=red] (2.4,0) arc (360:270:2.4);
-			\draw[->,color=red] (0,-2.4) arc (270:180:2.4);
-			\draw[line width=1.3pt,color=red] (1.9,-2) node {$\cdot(-i)$};
-			\draw[line width=1.3pt,color=red] (-1.9,-2) node {$\cdot(-i)$};
-		\end{tikzpicture}
-	\end{center}
+	\subsubsection{Hinführung}
+
+		\paragraph{} Da jetzt der Körper der komplexe Zahlen definiert wurde, gilt es ihn nun in unser bekanntes Zahlensystem zu integrieren.
+		Hierfür kann man zum Beispiel beobachten, wie sich komplexe Zahlen auf der \textbf{reellen Zahlengerade} (welche eine Veranschaulichung des euklidischen Vektorraums $\R^1$ ist) verhalten. Nun sollte erstmal der Begriff des \textbf{Zeiger}s eingeführt werden.
+		\\
+		\begin{Definition}
+			Als Zeiger definieren wir ein visuelles Hilfsmittel, welches dem Darstellungsmodul eines Vektors, einem Pfeil, sehr ähnlich ist, jedoch sich durch eine kleine Nuance von Letzterem zu unterscheiden ist.
+		\end{Definition}
+		\\
+		\begin{center}
+			\begin{tikzpicture}[>=triangle 45]
+				\draw[->,line width=0.8pt] (-5.5,0) -- (6,0) node[above] {$Re(z)$};
+				\foreach  \x in {-5,...,5}
+	    			\draw (\x,0.2) -- (\x,-0.2) node[below] {$\x$};
+				\draw[->,line width=0.8pt,color=red] (0,0) -- (3,0);
+			\end{tikzpicture}
+		\end{center}
+		\\
+		\paragraph{} Zunächst muss verstanden werden, welche Transformation jeweils Addition und Multiplikation im $\R^1$ auf reelle Zahlen ausführt. Das lässt sich am einfachsten anhand einer Graphik erklären:
+		\\
+		\begin{center}
+			\begin{tikzpicture}[>=triangle 45]
+				\draw[->,line width=0.8pt] (-5.5,0) -- (6,0) node[above] {$Re(z)$};
+				\foreach  \x in {-5,...,5}
+	    			\draw (\x,0.2) -- (\x,-0.2) node[below] {$\x$};
+				\draw[->,line width=1.5pt,color=red] (0,0) -- (-3,0);
+				\draw[->,line width=1.5pt,color=orange] (0,0) -- (4,0);
+				\draw[->,line width=1.5pt,color=red,dashed] (0,0) -- (3,0);
+				\draw[->,line width=1.5pt,color=orange,dashed] (0,0) -- (2,0);
+				\draw[line width=1.3pt,color=red] (1.5,0.4) node {3};
+				\draw[line width=1.3pt,color=red] (-1.5,0.4) node {-3};
+				\draw[->,color=red] (2.4,0) arc (0:180:2.4);
+				\draw[line width=2pt,color=white] (1.84,1.54) arc (40:55:2.4);
+				\draw[->,color=orange] (0.3,0) arc (180:0:1.5);
+				\draw[line width=0.8pt,color=orange] (1.8,1.8) node {$\cdot(2) = $ Skalierung mit Faktor $2$};
+				\draw[line width=0.8pt,color=red] (0,2.7) node {$\cdot (-1) = 180 \degree$ Drehung};
+			\end{tikzpicture}
+		\end{center}
+
+		\paragraph{} Da gilt, dass: $i^2 = -1$ ist die Multiplikation einer reellen Zahl mit $i^2$ äquivalent zu einer $180$ - Grad Drehung. Daraus lässt sich schließen, dass die Multiplikation mit $i$ einer $90$ - Grad Drehung entspricht, da: $a \cdot i^2 = a \cdot i \cdot i; a\in\R$ und man davon ausgeht, dass $\cdot(i)$ beides mal dieselbe Transformation anwendet. Somit entsteht eine wunderschöne Ebene, in der alle Zahlen zusammen spielen und sich amüsieren können:
+		\\
+		\begin{center}
+			\begin{tikzpicture}[>=triangle 45]
+				\draw[->,line width=0.8pt] (-5.5,0) -- (5.7,0) node[above] {$Re(z)$};
+				\draw[->,line width=0.8pt] (0,-5.5) -- (0,5.7) node[right] {$Im(z)$};
+				\foreach  \x in {-5,...,-1,1,2,...,5}
+	                \draw [line width=0.8pt] (\x,0.1) -- (\x,-0.1) node[below] {$\x$};
+	            \foreach  \x in {-5,...,-1,1,2,...,5}
+	                \draw [line width=0.8pt] (-0.1,\x) -- (0.1,\x) node[right] {$\x i$};
+				\draw[line width=0.8pt] (-0.2,-0.2) node {$O$};
+				\draw[->,line width=1.5pt,color=red] (0,0) -- (-3,0);
+				\draw[->,line width=1.5pt,color=red,dashed] (0,0) -- (3,0);
+				\draw[line width=1.3pt,color=red] (1.5,0.3) node {3};
+				\draw[line width=1.3pt,color=red] (-1.5,0.3) node {-3};
+				\draw[->,line width=1.5pt,color=red] (0,0) -- (0,-3);
+				\draw[->,line width=1.5pt,color=red] (0,0) -- (0,3);
+				\draw[line width=1.3pt,color=red] (-0.3,1.5) node {$3i$};
+				\draw[line width=1.3pt,color=red] (-0.4,-1.5) node {$-3i$};
+				\draw[->,color=red] (2.4,0) arc (0:90:2.4);
+				\draw[->,color=red] (0,2.4) arc (90:180:2.4);
+				\draw[line width=1.3pt,color=red] (1.9,2) node {$\cdot(i)$};
+				\draw[line width=1.3pt,color=red] (-1.9,2) node {$\cdot(i)$};
+				\draw[->,color=red] (2.4,0) arc (360:270:2.4);
+				\draw[->,color=red] (0,-2.4) arc (270:180:2.4);
+				\draw[line width=1.3pt,color=red] (1.9,-2) node {$\cdot(-i)$};
+				\draw[line width=1.3pt,color=red] (-1.9,-2) node {$\cdot(-i)$};
+			\end{tikzpicture}
+		\end{center}
+
+		\paragraph{} Eine komplexe zahl $z = x + yi$ kann somit über einen Zeiger in der Gauß'schen Zahlenebene dargestellt werden. Für $z = 2 + 3i$
+		gilt beispielsweise:
+
+		\begin{center}
+			\begin{tikzpicture}[>=triangle 45]
+				\draw[->,line width=0.8pt] (-5.5,0) -- (5.7,0) node[above] {$Re(z)$};
+				\draw[->,line width=0.8pt] (0,-5.5) -- (0,5.7) node[right] {$Im(z)$};
+				\foreach  \x in {-5,...,-1,1,2,...,5}
+	                \draw [line width=0.8pt] (\x,0.1) -- (\x,-0.1) node[below] {$\x$};
+	            \foreach  \x in {-5,...,-1,1,2,...,5}
+	                \draw [line width=0.8pt] (-0.1,\x) -- (0.1,\x) node[right] {$\x i$};
+				\draw[line width=0.8pt] (-0.2,-0.2) node {$O$};
+				\draw[->,line width=1.5pt,color=red,dashed] (0,0) -- (2,0);
+				\draw[->,line width=1.5pt,color=red,dashed] (2,0) -- (2,3);
+				\draw[->,line width=1.5pt,color=red] (0,0) -- (2,3);
+				\draw[line width=1.3pt,color=red] (1,0.3) node {$2$};
+				\draw[line width=1.3pt,color=red] (1.65,0.9) node {$+$};
+				\draw[line width=1.3pt,color=red] (2.3,1.5) node {$3i$};
+				\draw[line width=1.3pt,color=red] (0.85,2.35) node {$2 + 3i$};
+			\end{tikzpicture}
+		\end{center}
+
+	\subsubsection{Rechenoperationen}
+
+		\paragraph{} Die bereits angesprochenen basischen Rechenoperationen lassen sich in der Gauß'schen Zahlenebene als Transformation darstellen. Weshalb dies interessant ist, wird im Verlauf dieses Abschniits hoffentlich noch deutlich.
+		\paragraph{} Die Addition ist die einfachste Transformation, weil sie equivalent zur Linearkombination bei Vektoren ist, da gilt: $$(z_1 + z_2) = ((x_1 + x_2) + (y_1 + y_2)i)$$ Bildlich bedeutet das:
+
+		\begin{center}
+			\begin{tikzpicture}[>=triangle 45]
+				\draw[->,line width=0.8pt] (-5.5,0) -- (5.7,0) node[above] {$Re(z)$};
+				\draw[->,line width=0.8pt] (0,-5.5) -- (0,5.7) node[right] {$Im(z)$};
+				\foreach  \x in {-5,...,-1,1,2,...,5}
+	                \draw [line width=0.8pt] (\x,0.1) -- (\x,-0.1) node[below] {$\x$};
+	            \foreach  \x in {-5,...,-1,1,2,...,5}
+	                \draw [line width=0.8pt] (-0.1,\x) -- (0.1,\x) node[right] {$\x i$};
+				\draw[line width=0.8pt] (-0.2,-0.2) node {$O$};
+				\draw[->,line width=1.5pt,color=black,dashed] (0,0) -- (5,0);
+				\draw[->,line width=1.5pt,color=black,dashed] (5,0) -- (5,4);
+				\draw[->,line width=1.5pt,color=orange,dashed] (0,0) -- (3,0);
+				\draw[->,line width=1.5pt,color=red,dashed] (0,0) -- (2,0);
+				\draw[->,line width=1.5pt,color=red,dashed] (2,0) -- (2,3);
+				\draw[->,line width=1.5pt,color=orange,dashed] (3,0) -- (3,1);
+				\draw[->,line width=1.5pt,color=red] (0,0) -- (2,3);
+				\draw[->,line width=1.5pt,color=orange] (0,0) -- (3,1);
+				\draw[->,line width=1.5pt,color=black] (0,0) -- (5,4);
+				\draw[line width=1.3pt,color=red] (1.5,0.3) node {$2$};
+				\draw[line width=1.3pt,color=red] (2.3,1.5) node {$3i$};
+				\draw[line width=1.3pt,color=red] (2.2,3.2) node {$2 + 3i$};
+				\draw[line width=1.3pt,color=orange] (2.3,0.3) node {$3$};
+				\draw[line width=1.3pt,color=orange] (3.3,0.5) node {$i$};
+				\draw[line width=1.3pt,color=orange] (3.2,1.2) node {$3 + i$};
+				\draw[line width=1.3pt,color=black] (4.2,0.3) node {$2 + 3 = 5$};
+				\draw[line width=1.3pt,color=black] (6,2) node {$3i + i = 4i$};
+				\draw[line width=1.3pt,color=black] (5.2,4.2) node {$5 + 4i$};
+			\end{tikzpicture}
+		\end{center}
