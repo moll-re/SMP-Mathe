@@ -1,3 +1,5 @@
+\definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Eigene Environments
 %Beweis:
@@ -12,7 +14,7 @@
 
 %Theorem:
 \newenvironment{Theorem}[1][]
-  {\begin{tcolorbox}[colback=blue!5!white,colframe=blue!70!black,sharpish corners,boxrule=0pt,frame hidden,title=Theorem\,#1]}
+  {\begin{tcolorbox}[colback=titlepagecolor!5!white,colframe=titlepagecolor,sharpish corners,boxrule=0pt,frame hidden,title=Theorem\,#1]}
   {\end{tcolorbox}}
 
 %Beispiel
@@ -130,7 +132,6 @@
 \renewcommand\epigraphflush{flushright}
 \renewcommand\epigraphsize{\normalsize}
 \setlength\epigraphwidth{0.7\textwidth}
-\definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}
 \DeclareFixedFont{\titlefont}{T1}{ppl}{b}{it}{0.5in}
 \makeatletter
 \def\printauthor{%
