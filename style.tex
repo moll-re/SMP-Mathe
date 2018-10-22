@@ -1,3 +1,27 @@
+\definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}   %Blau
+
+\def\blankpage{%
+      \clearpage%
+      \thispagestyle{empty}%
+      \null%
+      \clearpage}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Für Kopf- und Fußzeilen:
+\pagestyle{fancy}
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyhead[R]{Skript SMP}
+\fancyfoot[C]{\thepage}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Eigene Environments
 %Beweis:
@@ -12,7 +36,7 @@
 
 %Theorem:
 \newenvironment{Theorem}[1][]
-  {\begin{tcolorbox}[colback=blue!5!white,colframe=blue!70!black,sharpish corners,boxrule=0pt,frame hidden,title=Theorem\,#1]}
+  {\begin{tcolorbox}[colback=titlepagecolor!5!white,colframe=titlepagecolor,sharpish corners,boxrule=0pt,frame hidden,title=Theorem\,#1]}
   {\end{tcolorbox}}
 
 %Beispiel
@@ -132,7 +156,6 @@
 \renewcommand\epigraphflush{flushright}
 \renewcommand\epigraphsize{\normalsize}
 \setlength\epigraphwidth{0.7\textwidth}
-\definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}
 \DeclareFixedFont{\titlefont}{T1}{ppl}{b}{it}{0.5in}
 \makeatletter
 \def\printauthor{%
@@ -193,38 +216,26 @@
 %Fürs Inhaltsverzeichnis:
 %\contentsmargin{0cm}
 \titlecontents{chapter}[0pc]
-{\addvspace{30pt}%
+{\addvspace{40pt}
 \begin{tikzpicture}[remember picture, overlay]%
-\draw[fill=titlepagecolor,draw=titlepagecolor, rounded corners] (-4,-.1) rectangle (.5,.5);%
-\pgftext[left,x=-1.9cm,y=0.2cm]{\color{white}\Large \chaptertitlename\ \thecontentslabel};%
+\draw[fill=titlepagecolor,draw=titlepagecolor, rounded corners] (-4,-.1) rectangle (.5,.5);
+\pgftext[left,x=-1.9cm,y=0.2cm]{\color{white}\Large \chaptertitlename\ \thecontentslabel};
 \end{tikzpicture}\hspace{1cm}\color{titlepagecolor}\large\bfseries}
 {}
 {}
 {\hspace*{20pt}\hrulefill\hspace*{20pt}\large\bfseries \thecontentspage}%\hspace*{20pt}\rule{1cm}{0.3pt}}%
-\titlecontents{section}[5pc]
-{\addvspace{2pt}}
-{\contentslabel[\thecontentslabel]{2.8pc}}
-{}
-{\dotfill\small \thecontentspage}
-[]
-\titlecontents{subsection}[6.2pc]
-{\addvspace{2.0pt}}
-{\contentslabel[\thecontentslabel]{2.8pc}}
-{}
-{\dotfill\small\thecontentspage}
-[]
+[\addvspace{5pt}]
 
 
-\renewcommand{\tableofcontents}{%
-\chapter*{}
-\vspace*{-20\p@}
-\begin{tikzpicture}[remember picture, overlay]%
-\pgftext[right,x=15cm,y=0.2cm]{\color{titlepagecolor}\Huge \contentsname};%
-\draw[fill=titlepagecolor,draw=titlepagecolor, rounded corners=15pt] (13,-.75) rectangle (20,1);%
-\clip (13,-.75) rectangle (20,1);
-\pgftext[right,x=15cm,y=0.2cm]{\color{white}\Huge \contentsname};%
-\end{tikzpicture}}
+
+
+
+
+
 
 \makeatletter
-\@starttoc{toc}}
+\renewcommand{\tableofcontents}{
+    \chapter*{}
+    \@starttoc{toc}
+    }
 \makeatother
