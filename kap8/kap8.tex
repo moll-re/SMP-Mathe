@@ -6,18 +6,45 @@
 Die ganze Zahl $a\in\Z$ teilt $b\in\Z$, wenn es ein $x$ gibt, mit $b=a\cdot x$. Mann schreibt:
 $$a|b$$
 
-$a$ ist ein \textb{Teiler} von $b$ und $b$ ist \textbf{Vielfaches} von $aA
+$a$ ist ein \textbf{Teiler} von $b$ und $b$ ist \textbf{Vielfaches} von $a$
 \end{Definition}
 
+\begin{Theorem}
 Aus dieser Teilbarkeitsrelation ergeben sich mehrere Eigenschaften:\\
 Sei $a,b,c,t\in\Z$ und $t\neq0$:\\\\
-$a|b$ \quad und \quad$b|c$ \quad dann \quad $a|c$\\
-$a|b$ \quad dann \quad $a|bc$\\
-$at|bt\quad\Leftrightarrow\quad a|b$\\
-$a|b$\quad dann \quad $b=0$ \quad oder\quad $|a| \leq |b| $\\
-$a|b$\quad und\quad $b|a$ \quad dann\quad $a=\pm b$
+(1)\qquad$a|b$ \quad und \quad$b|c$ \quad dann \quad $a|c$\\
+(2)\qquad$a|b$ \quad dann \quad $a|bc$\\
+(3)\qquad$at|bt\quad\Leftrightarrow\quad a|b$\\
+(4)\qquad$a|b$\quad dann \quad $b=0$ \quad oder\quad $|a| \leq |b| $\\
+(5)\qquad$a|b$\quad und\quad $b|a$ \quad dann\quad $a=\pm b$
+\end{Theorem}
+
+\begin{Beweis}
+\begin{itemize}
+\item (1) \quad Wenn $a|b$ und $b|c$, dann gibt es $x,y\in\Z$ mit $b=a\cdot x$ und $c=b\cdot y$. Also gilt auch $c=b\cdot y=a\cdot(xy)$ und somit $a|c$\\ 
+\item (2) \quad Weil offensichtlich $b|bc$ gilt, folgt die Aussage sofort aus Aussage (3) \\
+\item (3)  \quad $at|bt\quad \Leftrightarrow\quad \exists x \in \Z : \, \, bt=atx \quad\Leftrightarrow \quad b=ax \quad\Leftrightarrow \quad a|b$ \\
+\item (4) \quad Sei $b=ax$ mit $x\in\Z$. Wenn $x=0$, dann ist $b=0$. In alles anderen Fällen ist $|x|>1$ und daher $|b| = |a| \cdot |x| \geq |a|$ 
+\item (5) \quad Wenn weder $a=0$ noch $b=0$ ist, dann folgt aus (4) $|a|\geq|b|\geq|a|$ und daher $a=\pm b$. Wenn also  $a=0$, dann folgt $b=0$
+\end{itemize}
+\end{Beweis}
+
+
 
 	\section{Primzahlen}
+
+Hier die Liste der Primzahlen bis 100: \\
+
+2,     3,     5,     7,    11,    13,    17,    19,    23,    29,    31,    37,    41,    43,    47,    53,    59,    61,    67,    71,    73,    79,    83,    89,    97\\\\
+
+\begin{Definition}
+Eine natürliche Zahl heißt Primzahl, wenn sie in $\N$ genau zwei Teiler besitzt. 
+\end{Definition}
+
+\begin{Theorem}
+Es gibt unendlich viele Primzahlen 
+\end{Theorem}
+
 
 \begin{Beweis}
 Es gibt unendlich viele Primzahlen: Beweis nach Euklid\\\\

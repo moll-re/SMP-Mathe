@@ -32,41 +32,21 @@
 \usepackage{array}			                          %Gleichungen mit mehr als einem Zeichen in der Zeile oder Tabellen
 \usepackage{tocloft,titletoc,titlesec}            %Fürs Inhaltsverzeichnis
 
-<<<<<<< HEAD
 \pgfplotsset{compat=1.15}
-=======
 \usepackage{subfiles}
-%\pgfplotsset{compat=1.15}
->>>>>>> 8a068d491d6738601bdf28c244cc2d589c925719
 \usetikzlibrary{arrows}
 %\usetikzlibrary{fit}
 
 \setlength{\parindent}{0pt}
-
 \nonstopmode                                      %Fehler bei Kompilierung werden "leise" gestellt (sehr viel praktischer)
 
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Für Kopf- und Fußzeilen:
-\pagestyle{fancy}
-\fancyhead[L]{\nouppercase{\leftmark}}
-\fancyhead[R]{Skript SMP}
-\fancyfoot[C]{\thepage}
 
 
 \include{style}
 \begin{document}
 \include{title}
-
-%\begin{small}
-  \tableofcontents
-%\end{small}
+\blankpage
+\tableofcontents
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Kapitel bitte hier einbinden:
