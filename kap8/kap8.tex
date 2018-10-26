@@ -1,4 +1,34 @@
-\chapter{Arithmetik oder Zahlentheorie}
+\chapter{Algebra oder Zahlentheorie}
+
+	\section{Körper}
+
+Ein Körper ist eine Menge $K$, versehen mit zwei inneren zweistelligen Verknüpfungen $+$ und $\cdot$, also Addition und Multiplikation, für welche eine Addition
+$$\oplus\quad : \quad K \times \ \rightarrow K$$
+$(a;b) \longmapsto a+b $\\\\
+und eine Multiplikation
+$$\odot \quad : \quad K \times K \rightarrow K$$
+$(a;b) \longmapsto a \cdot b $\\\\\\
+gegeben sind, sodass\\
+
+\begin{array}{rl}
+$ (A1) & a+(b+c) = (a+b)+c $\\\\
+$ (A2) & a+b = b+a$\\\\
+$ (A3) & \exists ! \quad 0 \quad $ mit:  \\\\
+$ & a+0 = 0+a = a$\\\\
+$ (A4) & \forall a\in K \quad \exists ! -a \in K$  mit:  \\\\
+$ & a+(-a) = 0$\\\\\\
+$ (M1) & a\cdot (b \cdot c) = (a\cdot b) \cdot c $\\\\
+$ (M2) & a\cdot b = b\cdot a    $\\\\
+$ (M3) & \exists ! \quad 1 \in K $ mit \\\\
+$ & 1\cdot a = a \cdot 1 = a $ \\\\
+$ (M4) & \exists ! \quad \dfrac{1}{a}$ \quad zu jedem $a \in K \backslash \{0\} $ mit: \\\\
+$ & a \cdot \dfrac{1}{a} = 1 $\\\\\\
+$(D)$ & $Distributivgesetz: $a\cdot (b+c) = ab + ac$ \\
+\end{array}\\\\\\
+
+Dies erfüllen $\Q$, $\R$, $\R^{n}$ (Vektorräume), $\C$, Matritzen, prime Restklassengruppen $\Z / p\Z$ und andere.
+
+
 
 	\section{Teilbarkeit}
 
@@ -41,6 +71,7 @@ Hier die Liste der Primzahlen bis 100: \\
 Eine natürliche Zahl heißt Primzahl, wenn sie in $\N$ genau zwei Teiler besitzt. 
 \end{Definition}
 
+
 \begin{Theorem}
 Es gibt unendlich viele Primzahlen 
 \end{Theorem}
@@ -50,9 +81,9 @@ Es gibt unendlich viele Primzahlen
 Es gibt unendlich viele Primzahlen: Beweis nach Euklid\\\\
 
 Jede ganze Zahl $n>1$ ist durch eine Primzahl teilbar. Entweder ist $n$ selber eine Primzahl oder $n=a\cdot b$ mit $a,b\in\N$.\\
-Also ist $1<a=\dfrac{n}{b}<n$. Wenn man diesen Schritt endlich oft macht, kommt man am Ende auf ein neues $a'\in\P$.\\
+Also ist $1<a=\dfrac{n}{b}<n$. Wenn man diesen Schritt endlich oft macht, kommt man am Ende auf ein neues $a'\in\mathbb{P}$.\\
 $\A$: Nehmen wir jetzt an, es gäbe nur endlich viele Primzahlen $p_{1},p_{2},...,p_{r-1},p_{r}$.\\\\
-Dann ist $$N=p_{1},p_{2},...,p_{r-1},p_{r} +1 = \left(\prod_{r=1}^{r}P_{r}\right) + 1 $$ eine ganze Zahl $>1$ und hat daher mindestens einen Primteiler $p_{l} \in\P$ und $l\in\{1,2,...,r-1,r\}$
+Dann ist $$N=p_{1},p_{2},...,p_{r-1},p_{r} +1 = \left(\p_{r=1}^{r}P_{r}\right) + 1 $$ eine ganze Zahl $>1$ und hat daher mindestens einen Primteiler $p_{l} \in\mathbb{P}$ und $l\in\{1,2,...,r-1,r\}$
 Dann hat man:\\
 
 $\Rightarrow$ $\left\{ \begin{array}{rccl}
@@ -62,7 +93,7 @@ $p_{l} & | & p_{1}\cdot p_{2}\cdot...\cdot p_{r-1}\cdot p_{r} +1$\\
 
 
 $\Leftrightarrow p_{l} | \, p_{1}\cdot p_{2} \cdot...\cdot p_{r-1} \cdot p_{r} - \left(  p_{1}\cdot p_{2} \cdot...\cdot p_{r-1} \cdot p_{r} +1 \right)$\\\\
-$\Leftrightarrow p_{l} | \, (-1) \quad $oder$ \quad p_{l} | 1$ \qquad   WIDERSPRUCH, da $p_{l}=1$ aber $1\notin \P$ \\\\
+$\Leftrightarrow p_{l} | \, (-1) \quad $oder$ \quad p_{l} | 1$ \qquad   WIDERSPRUCH, da $p_{l}=1$ aber $1\notin \mathbb{P}$ \\\\
 $N$ muss also einen Primteiler haben ungleich $p_{r} \quad mit \quad r\in\{1,2,3,...,r-1,r\}$ oder \textbf{selber prim sein}. 
 
  
@@ -179,7 +210,3 @@ $\forall n\in \N,\quad n\geq 4 : \quad n! >n^2 $\\\\
 
 
 
-
-
-
-Am Besten so viele Induktionen wie m"oglich?
