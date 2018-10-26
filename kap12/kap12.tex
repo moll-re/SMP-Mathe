@@ -67,25 +67,30 @@ $e$ ist darstellbar bzw. ergibt sich durch:
 Wir definieren eine Folge $(e_{n})n\in\N$ durch $e_{n}=\left(1+\dfrac{1}{n}\right)^n$ und beweisen ihre Konvergenz.
 
 \begin{itemize}
+
 \item\begin{align*}\dfrac{e_{n+1}}{e_{n}}&=\dfrac{{\left(1+\dfrac{1}{n+1}\right)}^{n+1}}{{\left(1+\dfrac{1}{n}\right)}^{n}}\\
 &=\left(\dfrac{n(n+2)}{(n+1)^2}\right)^{n+1}\cdot\left(1+\dfrac{1}{n}\right)\\
 &=\textcolor{blue}{\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}}\cdot\textcolor{red}{\dfrac{n+1}{n}}
 \end{align*}
+
 \item Die Umformung ermöglicht uns auf den Term $\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}$ die Ungleichung von Bernoulli anzuwenden. Diese besagt Folgendes: $(1+x)^n>1+nx$ für $n\geq2$ und $x>-1$\\
 \begin{align*}\Rightarrow\textcolor{blue}{\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}}&\textcolor{blue}{>} 1+(n+1)\cdot\left(-\dfrac{1}{(n+1)^2}\right)\\
 &=1-\dfrac{1}{n+1}\\
 &=\textcolor{blue}{\dfrac{n}{n+1}}
 \end{align*}
-\item Dies kann man an den ersten Ausdruck anwenden:\\
+
+\item Dies kann man für den ersten Ausdruck verwenden:\\
 \begin{align*}
 \Rightarrow\dfrac{e_{n+1}}{e_{n}}&=\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}\cdot\dfrac{n+1}{n}\\
-&\textcolor{blue}{$>$\dfrac{n}{n+1}}\cdot\textcolor{red}{\dfrac{n+1}{n}}\\
+&\textcolor{blue}{>\dfrac{n}{n+1}}\cdot\textcolor{red}{\dfrac{n+1}{n}}\\
 &=1
 \end{align*}
 \textbf{$\Leftrightarrow e_{n}$ ist streng monoton steigend}
 \end{itemize}
-Sei eine Folge $f_{n}$ mit $f_{n}=\left(1+\dfrac{1}{n}\right)^{n+2}$, deren Monotonieverhalten wir untersuhen wollen.\\
+
+Sei eine Folge $f_{n}$ mit $f_{n}=\left(1+\dfrac{1}{n}\right)^{n+2}$, deren Monotonieverhalten wir untersuchen wollen.\\
 Dazu formen wir den Term so um, dass die Bernoulli-Ungleichung angewandt werden kann.
+
 \begin{itemize}
 \item\begin{align*}\dfrac{f_{n}}{f_{n+1}}&=\dfrac{\left(1+\dfrac{1}{n}\right)^{n+1}}{\left(1+\dfrac{1}{n}\right)^{n+2}}\\
 &=\left(\dfrac{1+\dfrac{1}{n}}{1+\dfrac{1}{n+1}}\right)^{n+2}\cdot\dfrac{1}{1+\dfrac{1}{n}}\\
@@ -94,22 +99,29 @@ Dazu formen wir den Term so um, dass die Bernoulli-Ungleichung angewandt werden 
 &=\left(\dfrac{n^2+2n+1}{n^2+2n}\right)^{n+2}\cdot\dfrac{n}{n+1}\\
 &=\textcolor{blue}{\left(1+\dfrac{1}{n(n+2)}\right)^{n+2}}\cdot\textcolor{red}{\dfrac{n}{n+1}}
 \end{align*}
-\item{ Bernoulli: $(1+x)^n>1+nx$ für $n\geq2$ und $x>-1$\\
-\begin{align*}\Rightarrow \textcolor{blue}{\left(1+\dfrac{1}{n(n+2)}\right)^{n+2} &\textcolor{blue}{>}1+(n+2)\cdot\dfrac{1}{n(n+2)}\\
+
+\item Bernoulli: $(1+x)^n>1+nx$ für $n\geq2$ und $x>-1$\\
+\begin{align*}\Rightarrow\left(1+\dfrac{1}{n(n+2)}\right)^{n+2}&\textcolor{blue}{>}1+(n+2)\cdot\dfrac{1}{n(n+2)}\\
 &=\textcolor{blue}{\dfrac{n+1}{n}}
 \end{align*}
+
 \item$\Rightarrow\dfrac{f_n}{f_{n+1}}=\left(1+\dfrac{1}{n(n+2)}\right)^{n+2}\cdot\dfrac{n}{n+1}>\textcolor{blue}{\dfrac{n+1}{n}}\cdot\textcolor{red}{\dfrac{n}{n+1}}=1$
+\\\\
 \item $\dfrac{f_n}{f_{n+1}}>1\Leftrightarrow\dfrac{f_{n+1}}{f_{n}}<1$\textbf{$\Leftrightarrow f_n$ ist streng monoton fallend}
+\\\\
 \end{itemize}
-Als Letztes zeigt man, dass $f_n$ zu $e_n$ eine obere Schranke ist:\\
-$f_n>e_n\\
-\left(1+\dfrac{1}{n}\right)^{n+1}>\left(1\dfrac{1}{n}\right)^n$
-}
-Eine streng monoton steigende Folge, die eine monoton fallende Folge, als ober Schranke hat, konvergiert. Es gilt also, dass $e_n$ konvergent ist, $e_n$ besitzt einen besonderen Grenzwert, der \textit{Eulersche Zahl} genannt wird.
+Als Letztes zeigt man, dass $f_n$ zu $e_n$ eine obere Schranke ist:\\\\
+\begin{array}{rccc}
+&\left(1+\dfrac{1}{n}\right)^{n+1}&>&\left(1+\dfrac{1}{n}\right)^n}\\
+\Leftrightarrow&f_n&>&e_n
+\end{array}
+\\\\\\
+Eine streng monoton steigende Folge, die eine monoton fallende Folge, als ober Schranke hat, konvergiert. Es gilt also, dass $e_n$ konvergent ist. $e_n$ besitzt einen besonderen Grenzwert, der \textbf{Eulersche Zahl} genannt wird.
+\newpage
 
 	\subsection{$e$ ist irrational}
 
-Wie schon erwähnt, handelt es sich bei der Eulerschen Zahl um eine transzendente Zahl, daraus ergibt sich schon, dass sie irrational ist. Trotzdem ist es interessant, dies zu beweisen.
+Wie schon erwähnt, handelt es sich bei der Eulerschen Zahl um eine transzendente Zahl, daraus ergibt sich schon, dass sie irrational ist. Trotzdem ist es interessant, dies zu beweisen.\\
 
 \begin{Beweis}
 \underline{Teil A:} unnötig\\\\
@@ -137,7 +149,7 @@ Grenzwerte:
 \definecolor{sexdts}{rgb}{0.1803921568627451,0.49019607843137253,0.19607843137254902}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
 \begin{axis}[
-x=1cm,y=1cm,
+x=0.5cm,y=0.5cm,
 axis lines=middle,
 ymajorgrids=true,
 xmajorgrids=true,
@@ -591,7 +603,7 @@ u(x)&=x^{n+1}\quad& u\prime(x)&=(n+1)x^n\\
 v'(x)&=e^{1-x}\quad & v(x)&=-e^{1-x}
 \end{alignat*}
 \end{minipage}
- \\\\
+\newpage
 \item Sei $k_n=n!e-I_n$, $n\geq1$
 \begin{enumerate}
 \item
@@ -601,7 +613,6 @@ k_{n+1}&=(n+1)!e-I_{n+1}\\
 &=(n+1)(n!e-I_n)+1\\
 &=(n+1)k_n+1
 \end{align*}
-\newpage
 \item $\zz$: $\forall n\geq1$ gilt $k_n\in\Z$:\\\\
 $\begin{array}{rl}
 \mbox{\textbf{IA}:} & \mbox{für }n=1:\quad k_1=1!e-I_1=e-(e-2)=2 \mbox{ (wahr)} \\\\
@@ -626,13 +637,12 @@ Hypothese: $e\in\Q$\\\\
 $\Rightarrow \exists p,q \in\N$, sodass $e=\dfrac{p}{q}\\
 \Rightarrow n!e=\dfrac{n!p}{q}\in\N$\\\\
 Im Voraus wurde aber gezeigt, dass $n!e\not\in\N$: \textbf{Widerspruch}\\\\
-$\Leftrightarrow \boxed{e\not\in\Q}$ \heartsuit\\\\\\
+$\Leftrightarrow \boxed{e\not\in\Q}$\\
 \end{enumerate}
-\underline{Herkunft der Aufgabenstellung:} Buch? S.199 Nr. 78, d'après le bac (Blatt von Mme Treynard)
+\underline{Herkunft der Aufgabenstellung:} Buch? S.199 Nr. 78, d'après le bac
 \end{Beweis}
-
+\newpage
 \section{Eigenschaften}
-		
 
 \begin{itemize}
 \item$f(x)=a^x$
@@ -712,10 +722,10 @@ GRAPEHN VERSCHIEDEN A AUCH E UND LAMBDA SAGEN\\\\
 Hier ist auffällig, dass wenn man $a$ so verändert, dass der y-Achsenschnittpunkt (0|1) wird, man sich immer mehr der Zahl $e$ nähert. Wenn man für $a$ genau $e$ einsetzt hat man $ g_e(0)=1$. $\lambda$ ist also $1$ für die Funktion $e^x$, was gut zeigt, dass die natürliche Exponentialfunktion ihre eigene Ableitung darstellt:
 \begin{center}$\dfrac{\text{d}}{\text{d}x}e^x=(\lim\limits_{h\to0}\dfrac{e^h-1}{h})\cdot e^x=1\cdot e^x=e^x$\end{center}\\\\
 Eine wichtige Eigenschaft ist auch, dass $f'(0)=\lambda$ ist. Dies kann man auf zwei verschiedene aber gleichermaßen einfache Arten herausfinden, beide verwenden die vorher angewendete Definition des Differenzialquotienten.\\\\
-$\begin{array}{rl}
+\begin{array}{rl}
 \text{Differentialquotient neu angewendet:}& f'(0)=\lim\limits_{h\to0}\dfrac{a^{0+h}-a^0}{h}=\lim\limits_{h\to0}\dfrac{a^h-1}{h}=\textcolor{red}{\lambda}\\
 \text{Vorheriges Ergebnis genutzt:}&f'(x)=a^x\cdot\lim\limits_{h\to0}\dfrac{a^h-1}{h}\Rightarrow f'(0)=a^0\cdot\lim\limits_{h\to0}\dfrac{a^h-1}{h}=1\cdot\lim\limits_{h\to0}\dfrac{a^h-1}{h}=\textcolor{red}{\lambda}
-\end{array}$
+\end{array}
 \\\\\\
 $\lambda$ entspricht also auch der Steigung der Tangenten der Ausgangsfunktion an der y-Achse. 
 
@@ -736,7 +746,7 @@ Die Funktion $f$ mit $f(x)=e^{v(x)}$ mit $v$ differenzierbar hat als mögliche S
 $$F(x)=\dfrac{1}{v'(x)}\cdot e^{v(x)}+C$$
 \end{Bemerkung}
 \begin{Beispiel}
-\\
+
 \begin{enumerate}
 \item$f(x)=\dfrac{2}{3} \cdot e^{-\frac{1}{2}x^2+1}\\
 \Rightarrow f'(x)= \dfrac{2}{3}\cdot(-x)\cdot e^{\frac{1}{2}x^2+1}= -\dfrac{2}{3}x\cdot e^{-\frac{1}{2}x^2+1}\\
