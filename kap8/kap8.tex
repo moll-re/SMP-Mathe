@@ -33,15 +33,18 @@ Dies erfüllen $\Q$, $\R$, $\R^{n}$ (Vektorräume), $\C$, Matritzen, prime Restk
 	\section{Teilbarkeit}
 
 \begin{Definition}
-Die ganze Zahl $a\in\Z$ teilt $b\in\Z$, wenn es ein $x$ gibt, mit $b=a\cdot x$. Mann schreibt:
+Die ganze Zahl $a\in\Z$ teilt $b\in\Z$, wenn es ein $x$ gibt, mit $b=a\cdot x$. Man schreibt:
 $$a|b$$
 
-$a$ ist ein \textbf{Teiler} von $b$ und $b$ ist \textbf{Vielfaches} von $a$
+$a$ ist ein \textbf{Teiler} von $b$ und $b$ ist \textbf{Vielfaches} von $a$\\\\
+
+Zwei Zahlen $a,b\in\Z$  sind \textbf{teilerfremd}, wenn aus $ c | a  $ und $c|b$ folgt $|c|=1$
 \end{Definition}
 
 \begin{Theorem}
 Aus dieser Teilbarkeitsrelation ergeben sich mehrere Eigenschaften:\\
 Sei $a,b,c,t\in\Z$ und $t\neq0$:\\\\
+(0)\qquad$a|b$ \quad und \quad&a|c& \quad dann \quad $a|b\pm c $\\ 
 (1)\qquad$a|b$ \quad und \quad$b|c$ \quad dann \quad $a|c$\\
 (2)\qquad$a|b$ \quad dann \quad $a|bc$\\
 (3)\qquad$at|bt\quad\Leftrightarrow\quad a|b$\\
@@ -60,6 +63,11 @@ Sei $a,b,c,t\in\Z$ und $t\neq0$:\\\\
 \end{Beweis}
 
 
+\begin{Definition}
+s
+Die euklidische Division....
+
+\end{Definition}
 
 	\section{Primzahlen}
 
@@ -83,7 +91,7 @@ Es gibt unendlich viele Primzahlen: Beweis nach Euklid\\\\
 Jede ganze Zahl $n>1$ ist durch eine Primzahl teilbar. Entweder ist $n$ selber eine Primzahl oder $n=a\cdot b$ mit $a,b\in\N$.\\
 Also ist $1<a=\dfrac{n}{b}<n$. Wenn man diesen Schritt endlich oft macht, kommt man am Ende auf ein neues $a'\in\mathbb{P}$.\\
 $\A$: Nehmen wir jetzt an, es gäbe nur endlich viele Primzahlen $p_{1},p_{2},...,p_{r-1},p_{r}$.\\\\
-Dann ist $$N=p_{1},p_{2},...,p_{r-1},p_{r} +1 = \left(\p_{r=1}^{r}P_{r}\right) + 1 $$ eine ganze Zahl $>1$ und hat daher mindestens einen Primteiler $p_{l} \in\mathbb{P}$ und $l\in\{1,2,...,r-1,r\}$
+Dann ist $$N=p_{1}\cdot p_{2}\cdot ... \cdot p_{r-1} \cdot p_{r} +1 = \left(\prod_{r=1}^{r}P_{r}\right) + 1 $$ eine ganze Zahl $>1$ und hat daher mindestens einen Primteiler $p_{l} \in\mathbb{P}$ und $l\in\{1,2,...,r-1,r\}$
 Dann hat man:\\
 
 $\Rightarrow$ $\left\{ \begin{array}{rccl}
@@ -94,10 +102,40 @@ $p_{l} & | & p_{1}\cdot p_{2}\cdot...\cdot p_{r-1}\cdot p_{r} +1$\\
 
 $\Leftrightarrow p_{l} | \, p_{1}\cdot p_{2} \cdot...\cdot p_{r-1} \cdot p_{r} - \left(  p_{1}\cdot p_{2} \cdot...\cdot p_{r-1} \cdot p_{r} +1 \right)$\\\\
 $\Leftrightarrow p_{l} | \, (-1) \quad $oder$ \quad p_{l} | 1$ \qquad   WIDERSPRUCH, da $p_{l}=1$ aber $1\notin \mathbb{P}$ \\\\
-$N$ muss also einen Primteiler haben ungleich $p_{r} \quad mit \quad r\in\{1,2,3,...,r-1,r\}$ oder \textbf{selber prim sein}. 
-
- 
+$N$ muss also einen Primteiler haben ungleich $p_{r} \quad mit \quad r\in\{1,2,3,...,r-1,r\}$ oder \textbf{selber prim sein}.  
 \end{Beweis}
+
+\begin{Theorem}
+
+Jede natürliche Zahl $n\geq2$, die nicht prim ist, besitzt einen Primfaktor $p$, für den gilt
+$$p^2\leq n \quad\Leftrightarrow\quad p\leq \sqrt{n}$$
+Also lässt sich jede Zahl, die nicht prim ist, in Primfaktoren zerlegen.\\
+
+Jede natürliche Zahl $n\geq2$ besitzt eine eindeutige \textbf{Primfaktorzerlegung} der Form
+$$n=(p_{1})^{a_{1}} \cdot (p_{2})^{a_{2}} \cdot ... \cdot (p_{k-1})^{a_{k-1}} \cdot (p_{k})^{a_{k}}   $$
+mit $p_{1}< p_{2}< ... < p_{k-1}< p_{k}$ \quad und \quad $ \left\{ p_{1}, p_{2}, ... , p_{k-1}, p_{k} \right\} \in \mathbb{P}$ \quad und \quad $a_{1}, a_{2}, ...  a_{k-1}, a_{k} \in \N $
+
+
+\end{Theorem}
+
+
+	\section{Restklassen oder Kongruenzklassen}
+
+Die euklidische Division gibt einen Rest, für den gilt $r>0$ (wichtig!)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
