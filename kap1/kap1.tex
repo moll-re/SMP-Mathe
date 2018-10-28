@@ -131,14 +131,70 @@ Jedes Folgeglied einer solchen Folge ist das geometrische Mittel seines Vorgäng
 
 	\subsection{Monotonie}
 
+\begin{Definition}
+Eine Folge $(a_n)_n\in\N$ heißt monoton \begin{cases} \text{\textcolor{red}{steigend/wachsend}}\\\text{\textcolor{orange}{fallend/abnehmend}}\end{cases} wenn \begin{cases} \textcolor{red}{a_n+1\geq a_n}\\\textcolor{orange}{a_n+1\leq a_n}\end{cases}.\\\\
+Gelten dabei sagar \textbf{strikte} Ordnungsrelationen ($>$ oder $<$), dann ist $(a_n)$ \textbf{streng} monoton wachsend beziehungsweise abnehmend.
+
+\end{Definition}
+
 	\subsection{Beschränktheit}
+
+\begin{Definition}
+Man nennt eine  Folge $(a_n)n\in\N$ nach  \begin{cases} \text{\textcolor{red}{oben}}\\\text{\textcolor{orange}{unten}}\end{cases} \textbf{beschränkt}\\ wenn es eine Zahl  \begin{cases} \textcolor{red}{S\in\R}\\\textcolor{orange}{s\in\R}\end{cases} gibt mit  \begin{cases} \textcolor{red}{a_n\leq S}\\\textcolor{orange}{a_n\geq s}\end{cases} $\forall n\in\N$.\\\\
+\textcolor{red}{$S$} ist eine \textcolor{red}{obere }Schranke\\
+\textcolor{orange}{$s$} ist eine \textcolor{orange}{untere} Schranke
+\end{Definition}
+
+\begin{Definition}
+Die kleinste obere Schranke ist das \textbf{Supremum} der Menge $\{a_n;n\in\N\}$.\\
+Die größte untere Schranke ist das \textbf{Infimum} der Menge $\{a_n;n\in\N\}$.
+\end{Definition}
+
+
+\begin{Definition}
+Eine nach \textbf{oben und unten} beschränkte Folge heißt \textbf{beschränkte} Folge (suite bornée).}
+\end{Definition}
+
+\begin{Beispiel}
+\end{Beispiel}
+
+
 
 	\subsection{Konvergenz}
 
-\subsubsection{Definition}
+\begin{Definition}
+Eine Folge $(a_n)n\in\N$ heißt konvergent, wenn sie einen Grenzwert besitzt.\\
+Man sagt $a_n$ konvergiert gegen $g=\lim\limits_{n\to\infty}a_n$.
+\end{Definition}
+
+
+
+\begin{Theorem}
+Eine Folge $(a_n)n\in\N$ konvergiert gegen $g$ genau dann, wenn $(a_n-g)$ gegen den Wert $0$ konvergiert:\\
+$$\lim\limits_{n\to\infty}a_n=g\Leftrightarrow \lim\limits_{n\to\infty}(a_n-g)=0$$
+\end{Theorem}
+
+\begin{Theorem}
+Eine monotone Folge ist genau dann konvergent, wenn sie beschränkt ist.
+\end{Theorem}
+
+\begin{Beweis}
+\end{Beweis}
+
+\subsubsection{Divergenz}
+\begin{Definition}
+Eine Folge $(a_n)n\in\N$, die keinen Grenzwert $g\in\R$ besitzt (nicht kovergiert), wird \textbf{divergent} genannt.
+\end{Definition}
+
 \subsubsection{Epsilon-n0-Definition}
+\begin{Definition}
+$$(a_n) \text{ konvergiert gegen $g$} \Leftrightarrow \forall  \epsilon > 0 \exists n_0 \in\N \forall n\geq n_0 |a_n-g|<\epsilon$$
+\end{Definition}
 \subsubsection{Grenzwertsätze}
 
 
+Die Grenzwertsätze führen die Grenzwerte komplizierter Folgen auf einfachere Grenzwertbetrachtungen bekannter Folgen zurück.\\
+\begin{Theorem}
+\end{Theorem}
 
-		\section{Vollständige Induktion}
+
