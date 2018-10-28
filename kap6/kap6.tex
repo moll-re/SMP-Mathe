@@ -65,20 +65,20 @@
 						\Rightarrow \forall z_1, z_2, z_3 \in \C: (z_1 + &z_2) \oplus  z_3 = z_1 \oplus (z_2 + z_3) \quad \text{(Assoziativität)}
 				  \end{align*}
 			\item \begin{align*}
-						e = (0 + 0i) \in \C, \forall z \in \C:& \\
-												   z \oplus e &= (x + yi) \oplus (0 + 0i) \\
+						0 = (0 + 0i) \in \C, \forall z \in \C:& \\
+												   z \oplus 0 &= (x + yi) \oplus (0 + 0i) \\
 													  		  &= ((x + 0) + (y + 0)i) \\
 															  &= (x + yi) \\
 															  &= z \\
-						\Rightarrow \exists e: z \oplus e = z; z \in \C \quad &\text{(Neutrales Element)}
+						\Rightarrow \exists! 0: z \oplus 0 = z; z \in \C \quad &\text{(Neutrales Element)}
 				  \end{align*}
 			\item \begin{align*}
-	  					z* = -(x + yi) \in \C, z \in \C \text{ (Hierbei gilt es z* nicht} & \text{mit $\overline{z}$ zu verwechseln)}: \\
-								  z \oplus z* = (x + yi) \oplus (-(x + yi)) \text{          } & \\
-								  			  = ((x - x) + (y - y)i) \text{ 				} & \\
-											  = (0 + 0i) \text{ 							} & \\
-											  = e \text{								    } & \\
-						\Rightarrow \exists z*: z \oplus z* = e; z \in \C \quad \text{(Inverses Element)} \qquad &
+	  					-z = -(x + yi) \in \C, z \in \C &: \\
+								  z \oplus (-z) =& (x + yi) \oplus (-(x + yi)) \\
+								  			  =& ((x - x) + (y - y)i) \\
+											  =& (0 + 0i) \\
+											  =& 0  \\
+						\Rightarrow \forall z \in \C \exists -z: z \oplus -z = 0 \quad \text{(Inverses Element)} \qquad &
 	  			  \end{align*}
 			\item \begin{align*}
 						z_1 \oplus z_2 &= (x_1 + y_1i) \oplus (x_2 + y_2i) \\
@@ -110,12 +110,12 @@
 						\Rightarrow \forall z_1, z_2, z_3 \in \C: (z_1 + &z_2) \otimes  z_3 = z_1 \otimes (z_2 + z_3) \quad \text{(Assoziativität)}
 				  \end{align*}
 			\item \begin{align*}
-						e = (1 + 0i) \in \C, \forall z \in \C:& \\
-												   z \otimes e &= (x + yi) \otimes (1 + 0i) \\
+						1 = (1 + 0i) \in \C, \forall z \in \C:& \\
+												   z \otimes 1 &= (x + yi) \otimes (1 + 0i) \\
 													  		   &= ((1 \cdot x - 0 \cdot y) + (1 \cdot y + 0 \cdot x)i) \\
 															   &= (x + yi) \\
 															   &= z \\
-						\Rightarrow \exists e: z \otimes e = z; z \in \C \quad &\text{(Neutrales Element)}
+						\Rightarrow \exists! 1: z \otimes 1 = z; z \in \C \quad &\text{(Neutrales Element)}
 				  \end{align*}
 			\item \begin{align*}
 	  					z^{-1} = (x + yi)^{-1} \in \C, z \in \C:& \\
@@ -124,7 +124,7 @@
 												   &= \dfrac{((x^2 + y^2) + (0i))}{((x^2 + y^2) + (0i))} \\
 											  	   &= (1 + 0i) \\
 											  	   &= e \\
-						\Rightarrow \exists z^{-1}: z \otimes z^{-1} = e; z \in \C \quad \text{(Inverses Element)} \qquad &
+						\Rightarrow \forall z \in \C \exists z^{-1}: z \otimes z^{-1} = 1 \quad \text{(Inverses Element)} \qquad &
 	  			  \end{align*}
 			\item \begin{align*}
 						z_1 \otimes z_2 &= (x_1 + y_1i) \otimes (x_2 + y_2i) \\
@@ -142,7 +142,7 @@
 \section{Die Gauß'sche Zahlenebene}
 
 
-	\subsubsection{Hinführung}
+	\subsection{Hinführung}
 
 		\paragraph{} Da jetzt der Körper der komplexe Zahlen definiert wurde, gilt es ihn nun in unser bekanntes Zahlensystem zu integrieren.
 		Hierfür kann man zum Beispiel beobachten, wie sich komplexe Zahlen auf der \textbf{reellen Zahlengerade} (welche eine Veranschaulichung des euklidischen Vektorraums $\R^1$ ist) verhalten. Nun sollte erstmal der Begriff des \textbf{Zeiger}s eingeführt werden.
@@ -233,7 +233,7 @@
 			\end{tikzpicture}
 		\end{center}
 
-	\subsubsection{Rechenoperationen}
+	\subsection{Rechenoperationen}
 
 		\paragraph{} Die bereits angesprochenen basischen Rechenoperationen lassen sich in der Gauß'schen Zahlenebene als Transformation darstellen. Weshalb dies interessant ist, wird im Verlauf dieses Abschniits hoffentlich noch deutlich.
 		\paragraph{} Die Addition ist die einfachste Transformation, weil sie equivalent zur Linearkombination bei Vektoren ist, da gilt: $$(z_1 + z_2) = ((x_1 + x_2) + (y_1 + y_2)i)$$ Bildlich bedeutet das:
@@ -244,8 +244,10 @@
 				\draw[->,line width=0.8pt] (0,-5.5) -- (0,5.7) node[right] {$Im(z)$};
 				\foreach  \x in {-5,...,-1,1,2,...,5}
 	                \draw [line width=0.8pt] (\x,0.1) -- (\x,-0.1) node[below] {$\x$};
-	            \foreach  \x in {-5,...,-1,1,2,...,5}
+	            \foreach  \x in {-5,...,-2,2,3,...,5}
 	                \draw [line width=0.8pt] (-0.1,\x) -- (0.1,\x) node[right] {$\x i$};
+				\draw[line width=0.8pt] (-0.1,1) -- (0.1,1) node[right] {$i$};
+				\draw[line width=0.8pt] (-0.1,-1) -- (0.1,-1) node[right] {$-i$};
 				\draw[line width=0.8pt] (-0.2,-0.2) node {$O$};
 				\draw[->,line width=1.5pt,color=black,dashed] (0,0) -- (5,0);
 				\draw[->,line width=1.5pt,color=black,dashed] (5,0) -- (5,4);
@@ -265,5 +267,34 @@
 				\draw[line width=1.3pt,color=black] (4.2,0.3) node {$2 + 3 = 5$};
 				\draw[line width=1.3pt,color=black] (6,2) node {$3i + i = 4i$};
 				\draw[line width=1.3pt,color=black] (5.2,4.2) node {$5 + 4i$};
+			\end{tikzpicture}
+		\end{center}
+
+		\paragraph{} Im Gegensatz dazu ist die Multiplikation weniger intuitiv. Aus logistischen Gründen wird sie trotz allem in diesem Abschnitt besprochen. Bildlich stellt sie eine Drehstreckung dar (auch dies wird gegen Ende des Kapitels genauer beschrieben), da gilt: $$(z_1 \cdot z_2) = r_1_{\alpha} \cdot r_2_{\beta} = (r_1 \cdot r_2)_{\alpha + \beta}$$
+
+		\begin{center}
+			\begin{tikzpicture}[>=triangle 45]
+				\draw[line width=0.8pt,color=black,fill=black,fill opacity=0.1] (0,0) -- (4,0) arc (0:135:4) -- cycle;
+				\draw[line width=0.8pt,color=orange,fill=orange,fill opacity=0.3] (0,0) -- (1.2,0) arc (0:116.565:1.2) -- cycle;
+				\draw[line width=0.8pt,color=red,fill=red,fill opacity=0.3] (0,0) -- (2,0) arc (0:18.435:2) -- cycle;
+				\draw[->,line width=0.8pt] (-5.5,0) -- (5.7,0) node[above] {$Re(z)$};
+				\draw[->,line width=0.8pt] (0,-5.5) -- (0,5.7) node[right] {$Im(z)$};
+				\foreach  \x in {-5,...,-1,1,2,...,5}
+	                \draw [line width=0.8pt] (\x,0.1) -- (\x,-0.1) node[below] {$\x$};
+	            \foreach  \x in {-5,...,-2,2,3,...,5}
+	                \draw [line width=0.8pt] (-0.1,\x) -- (0.1,\x) node[right] {$\x i$};
+				\draw[line width=0.8pt] (-0.1,1) -- (0.1,1) node[right] {$i$};
+				\draw[line width=0.8pt] (-0.1,-1) -- (0.1,-1) node[right] {$-i$};
+				\draw[line width=0.8pt] (-0.2,-0.2) node {$O$};
+				\draw[->,line width=1.5pt,color=red] (0,0) -- (3,1);
+				\draw[->,line width=1.5pt,color=orange] (0,0) -- (-1,2);
+				\draw[->,line width=1.5pt,color=black] (0,0) -- (-5,5);
+				\draw[line width=1.3pt,color=red] (3.2,1.2) node {$3 + i$};
+				\draw[line width=1.3pt,color=orange] (-1.2,2.2) node {$-1 + 2i$};
+				\draw[line width=1.3pt,color=black] (-5.2,5.2) node {$-5 + 5i$};
+				\draw[line width=0.8pt,color=red] (1.5,0.25) node {$\alpha$};
+				\draw[line width=0.8pt,color=orange] (0.5,0.6) node {$\beta$};
+				\draw[line width=0.8pt,color=black] (1.5,2) node {$\alpha + \beta$};
+				\draw[line width=0.8pt,color=black] (-3.3,2.2) node {$r = r_1 \cdot r_2$};
 			\end{tikzpicture}
 		\end{center}
