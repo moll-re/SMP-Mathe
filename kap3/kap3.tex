@@ -32,7 +32,7 @@ Ist $f:[a;b]\Rightarrow$ eine stetige reelle Funktion die auf einem Intervall de
 
 \subsubsection{Stetige Fortsetzungen}
 
-beim Vereinfachen von gebrochenrationalen Funktionen ist Vorsicht geboten, denn eine hebbare Definitionsl"ucke ''aufzuheben'' ver"andert den Definitionsbereich der Funktion. Die daraus resultierende Funktion wird \textbf{stetige Fortsetzung} genannt.
+Beim Vereinfachen von gebrochenrationalen Funktionen ist Vorsicht geboten, denn eine hebbare Definitionsl"ucke ''aufzuheben'' ver"andert den Definitionsbereich der Funktion. Die daraus resultierende Funktion wird \textbf{stetige Fortsetzung} genannt.
 
 
 
@@ -65,7 +65,7 @@ Ein Ableitungswert gibt die Steigung an einem bestimmten Punkt an. Im Allgemeine
 \begin{Definition}
 Sind die Funktionen $u$ und $v$ an der Stelle $x_{0}$ $\in$ $D$ differenzierbar, dann ist die Funktion $f(x)=u(x)\cdot v(x)$ bei $x_{0}$ auch differenzierbar und es gilt: \\
 \\
-$f'(x0) = u'(x_{0})v(x_{0})+u(x_{0})v'(x_{0})$\\
+$f'(x_{0}) = u'(x_{0})v(x_{0})+u(x_{0})v'(x_{0})$\\
 \end{Definition}
 \begin{Beweis}
 $
@@ -189,7 +189,7 @@ $\lim\limits_{x \rightarrow x_{0}}f(x) = g $\quad $\Leftrightarrow$ \quad $\fora
 Regel von l'Hospital: f"ur Grenzwerte des Typs $0/0$ und $\infty/\infty$\\\\
 Seien zwei Funktionen $f$ und $g$ differenzierbar und eine Zahl $x_{0}$ : g(x_{0})\neq0$ und gelte entweder\\\\
 \lim\limits_{x \rightarrow x_{0}}g(x) = \lim\limits_{x \rightarrow x_{0}}f(x) = \infty$ \qquad ODER \qquad  $\lim\limits_{x \rightarrow x_{0}}g(x) = \lim\limits_{x \rightarrow x_{0}}f(x) = 0$\\\\
-dann gilt:\\\\
+(sie sind also entweder konvergent gegen $0$ oder bestimmt divergent) \\dann gilt:\\\\
 $\lim\limits_{x \rightarrow x_{0}} \dfrac{f(x)}{g(x)} = \lim\limits_{x \rightarrow x_{0}}\dfrac{f'(x)}{g'(x)}$\\
 \end{Definition}
 
@@ -263,6 +263,15 @@ $f$ sei eine Funktion...
 \item[$\bullet$] dann ist die Zahl $s$ untere Schranke, wenn $\forall x : f(x) \geq s$. $f$ ist in diesem Fall nach unten beschr"ankt. Die in diesem Fall gr"o"stm"ogliche Zahl wird \textbf{Infimum} genannt: inf$f$
 \end{description}
 \end{Bemerkung}
+\begin{Bemerkung}
+Eine Funktion $f$ ist...
+\begin{description}
+\item[$\bullet$] \textbf{konvergent}, wenn sie einen Grenzwert $g\in\R$ hat
+\item[$\bullet$] \textbf{bestimmt divergent}, wenn sie  \textbf{keinen} reellen Grenzwert, also $\lim\limits_{x \rightarrow +\infty}{f(x)} = \pm \infty$
+\item[$\bullet$] \textbf{unbestimmt divergent}, wenn es keine Zahl $g\in\overline{\R}$ ($\overline{\R} = \R$ mit $\infty$ und $-\infty$) gibt mit $\lim\limits_{x \rightarrow +\infty}{f(x)} = g$\\\\
+Beispiel: $f(x)=x\cdot\sin{x}$
+\end{description}
+\end{Bemerkung}
 
 
 \subsection{Extremstellen}
@@ -301,6 +310,31 @@ f'' & \qquad \qquad &&& N & E & W \\
 \end{minipage}
 \end{Bemerkung}
 
+\subsection{Funktionseinordnung}
+
+\begin{Definition}
+Jede Funktion $f$ bildet auf verschiedene Weise eine Definitionsmenge $D_{f}$ auf eine Wertmenge $W_{f}$ ab. \\Hat eine Menge $G$ eine größere Mächtigkeit (notiert $|G|$) als $K$, dann besitzt $G$ mehr Elemente als $K$, auch wenn beide überabzählbar unendlich groß sind. \\\\
+Eine Funktion $f$ ist ...
+\begin{description}
+\item[$\bullet$] \textbf{surjektiv}, wenn sie jedes Element der Zielmenge mindestens einmal als Funktionswert annimmt. Das heißt, jedes Element der Zielmenge hat mindestens ein Urbild.\\\\
+$$\forall y \in W_{f} \quad \exists x \in D_{f}:\quad f(x)=y $$\\\\
+$|D_{f}| \geq |W_{f}|$. \quadBeispiel: $\qquad f(x)=\sin{x} $\\
+
+\item[$\bullet$] \textbf{injektiv}, wenn zu jedem Element der Wertmenge höchstens ein (oder auch gar kein) Element der Definitionsmenge existiert. Zwei verschiedene Elemente $x_{1}$ und $x_{2}$ der Definitionsmenge bilden also nie auf den gleichen Term $y$ der Wertmenge ab.\\\\
+$$\forall x_{1}, x_{2} \in D_{f} :\qquad f(x_{1}) = f(x_{2}) \quad \Rightarrow \quad x_{1}=x_{2} $$\\\\
+\danger \quad Dies bedeutet \textbf{nicht}:\quad $\forall x_{1}, x_{2} \in D_{f} :\qquad x_{1} = x_{2} \quad\Rightarrow\quad f(x_{1}) = f(x_{2}) $ \\\\
+$|D_{f}| \leq |W_{f}|$.\quad Beispiel: $\quad f(x)=2x$ \quad mit \quad $D_{f}=\Z$\\
+
+\item[$\bullet$] \textbf{bijektiv}, wenn eine vollständige Paarbildung existiert. Jedes Element der Wertmenge besitzt genau ein Element der Definitionsmenge und jedes Element der Definitionsmenge besitzt genau ein Element der Wertmenge. Eine Funktion ist genau dann bijektiv, wenn sie sowohl sujektiv, als auch injektiv ist.\\\
+
+$|D_{f}| = |W_{f}|$. \quad Beispiel: $\qquad f(x)=x^3 $\\\\
+\end{description}
+Ausführlichere Erklärungen hier, einfach auf die Links klicken:\\ 
+\href{http://www.math.uni-konstanz.de/~huynh/Vorkurs2015/Vorlesung_12.pdf}{\textcolor{blue}{Uni Vorlesungsskript}} \qquad oder \qquad
+\href{https://www.mathe-online.at/mathint/fun1/i_isb.html}{\textcolor{blue}{Überschaubar(er) mit Graphen}} \\
+
+\end{Definition}
+
 \subsection{Umkehrbarkeit}
 
 
@@ -313,7 +347,7 @@ Wenn diese Funktion umkehrbar ist, dann existiert auch eine Umkehrfunktion $\ove
 \end{Definition}
 
 \begin{Bemerkung}
-Es gibt viele Funktionen die nicht in ihren vollst"andigen Definitionsmengen umkehrbar sind, zum Beispiel $x^n$ mit $n$ als gerade Zahl, $\sin(x), \tan(x)$, und viele mehr.  Hier beschr"ankt man die Funktion auf ein bestimmtes Intervall, um sie umkehren zu k"onnen.\\ \\
+Es gibt viele Funktionen (surjektive Funktionen) die nicht in ihrer vollst"andigen Definitionsmenge umkehrbar sind, zum Beispiel $x^n$ mit $n$ als gerade Zahl, $\sin(x), \tan(x)$, und viele mehr.  Hier beschr"ankt man die Funktion auf ein bestimmtes Intervall, um sie umkehren zu k"onnen.\\ \\
 Die Funktion $f(x)=x^2$ mit $D_{f}=\R$ und $W_{f}=\R_{0}^{+}$ hat f"ur $y=4$ zwei Urbilder: $-2$ und $2$. Beschr"ankt man die Funktion auf $D_{f}=\R_{0}^{+}$, ist sie umkehrbar und die Umkehrfunktion lautet $\overline{f}(x)=\sqrt{x}$\\
 \end{Bemerkung}\\ \\ \\
 
