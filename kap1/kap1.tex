@@ -57,12 +57,15 @@ Wie man im GTR macht
 \end{GTR-Tipp}
 
 \subsubsection{Web-Diagramme}
-Hier handelt es sich um eine graphisches Verfahren, das dazu dient, das Verhalten einer Folge, deren Darstellung rekursiv ist, zu untersuchen.\\
-Dazu muss man der rekursiven Folgenvorschrift eine Funktion $f(a_{n-1})=a_{n}$ zuordnen, sodass - grob gesagt - " die Funktion das Gleiche mit x macht, dass die Folge macht, um von $a_{n}$ auf $a_{n+1}$ zu kommen. Zusätzlich zeichnet man in ein kartesisches Koordinatensystem die Hauptdiagonale ein (entspricht dem Graphen von $f(x)=x$).\\
+Hier handelt es sich um ein graphisches Verfahren, das dazu dient, das Verhalten einer Folge, deren Darstellung rekursiv ist, zu untersuchen.\\
+Dazu muss man der rekursiven Folgenvorschrift eine Funktion $f(a_{n-1})=a_{n}$ zuordnen, sodass - grob gesagt - " die Funktion das Gleiche mit x macht, dass die Folge macht, um von $a_{n}$ auf $a_{n+1}$ zu kommen". Zusätzlich zeichnet man in ein kartesisches Koordinatensystem die Hauptdiagonale ein (entspricht dem Graphen von $f(x)=x$).\\
 Dann trägt man das erste Folgeglied auf die Abzissenachse ein und verbindet ihn mit der entsprechenden Funktion anhand eines vertikalen\\
 
+\begin{Beispiel}
+\end{Beispiel}
+
 \begin{Bemerkung}
-Dieses Verfahren kann aber ausschließlich bei rekusiven Folgen angewendet werden, bei denen keine zusätzliche Abhängigkeit von $n$ vorliegt (Beispiel: $a_{n}=3\cdot a_{n-1}+3+4\cdot n$) oder die Rekursivitätsebene den 1. Grad überschreitet, was bedeutet, dass $a_{n}$ nicht nur in Abhängigkeit von $a_{n-1}$ beschrieben wird, sondern zusätzlich von mindestens $a_{n-2}$ (Beispiel: die Fibonacci-Folge).\\
+Dieses Verfahren kann ausschließlich bei rekusiven Folgen angewendet werden, bei denen keine zusätzliche Abhängigkeit von $n$ vorliegt (Beispiel: $a_{n}=3\cdot a_{n-1}+3+4\cdot n$) oder die Rekursivitätsebene den 1. Grad überschreitet, was bedeutet, dass $a_{n}$ nicht nur in Abhängigkeit von $a_{n-1}$ beschrieben wird, sondern von anderen Rekursivitätsebenen wie $a_{n-2}$ (Beispiel: die Fibonacci-Folge).\\
 \end{Bemerkung}
 
 \begin{GTR-Tipp}
@@ -163,16 +166,20 @@ Eine nach \textbf{oben und unten} beschränkte Folge heißt \textbf{beschränkte
 	\subsection{Konvergenz}
 
 \begin{Definition}
-Eine Folge $(a_n)n\in\N$ heißt konvergent, wenn sie einen Grenzwert besitzt.\\
+Eine Folge $(a_n)n\in\N$ ist konvergent, wenn sie einen Grenzwert besitzt.\\
 Man sagt $a_n$ konvergiert gegen $g=\lim\limits_{n\to\infty}a_n$.
 \end{Definition}
 
 
-
+ 
 \begin{Theorem}
-Eine Folge $(a_n)n\in\N$ konvergiert gegen $g$ genau dann, wenn $(a_n-g)$ gegen den Wert $0$ konvergiert:\\
+
 $$\lim\limits_{n\to\infty}a_n=g\Leftrightarrow \lim\limits_{n\to\infty}(a_n-g)=0$$
 \end{Theorem}
+\\
+\underline{Wörtlich:} Eine Folge $(a_n)$ konvergiert gegen $g$ genau dann, wenn $(a_n-g)$ gegen den Wert $0$ konvergiert.
+\subsubsection{Monotone Konvergenz}
+
 
 \begin{Theorem}
 Eine monotone Folge ist genau dann konvergent, wenn sie beschränkt ist.
@@ -181,14 +188,37 @@ Eine monotone Folge ist genau dann konvergent, wenn sie beschränkt ist.
 \begin{Beweis}
 \end{Beweis}
 
+Viel besser zu verstehen, wenn man zwei Fälle unterscheidet:
+
+\begin{Theorem}
+$$\exists\, S\in\R \quad \exists \,n_0\in\N \quad \forall n\geq n_0\,:\, a_n\leq a_{n+1}\; \land \; a_n\leq S$$
+$$\Rightarrow \exists\, g\in\R \,:\, \lim\limits_{n\to\infty}a_n=g\;\land\; g\leq S $$
+ \begin{center}und\end{center}
+$$\exists \, s\in\R \quad\exists \, n_0\in\N \quad \forall n\geq n_0\,:\, a_n\geq a_{n+1}\; \land \;a_n\geq s$$
+$$\Rightarrow \exists \, g\in\R \,:\, \lim\limits_{n\to\infty}a_n=g\;\land\; g\geq s$$
+\end{Theorem}
+
+	\underline{Wörtlicch:}
+\begin{itemize}
+\item Eine monoton \textbf{wachsende} Folge $(a_n)$ ist genau dann \textbf{konvergent}, wenn sie nach \textbf{oben beschränkt} ist. Ihr Grenzwert $g$ ist kleiner oder gleich der oberen Schranke $S\in\R$.
+\item  Eine monoton \textbf{fallende} Folge $(a_n)$ ist genau dann \textbf{konvergent}, wenn sie nach \textbf{unten beschränkt} ist. Ihr Grenzwert $g$ ist größer oder gleich der oberen Schranke $s\in\R$.
+\end{itemize}
+
 \subsubsection{Divergenz}
 \begin{Definition}
-Eine Folge $(a_n)n\in\N$, die keinen Grenzwert $g\in\R$ besitzt (nicht kovergiert), wird \textbf{divergent} genannt.
+Eine Folge $(a_n)$, die keinen Grenzwert $g\in\R$ besitzt (nicht kovergiert), wird \textbf{divergent} genannt.\\\\
+Kann man ihr trotzdem einen Grenzwert wie $\pm\infty$ zuordnen ist sie \textbf{bestimmt divergent}.\\
+Besitzt die Folge überhaupt keinen Grenzwert, so heißt sie \textbf{unbestimmt divergent}.
 \end{Definition}
+
+\begin{Bemerkung}
+Man nennt einen Grenzwert $g=+\infty$ oder $g=-\infty$ einen \textbf{uneigentlichen Grenzwert}.
+\end{Bemerkung}
+
 
 \subsubsection{Epsilon-n0-Definition}
 \begin{Definition}
-$$(a_n) \text{ konvergiert gegen $g$} \Leftrightarrow \forall  \epsilon > 0 \exists n_0 \in\N \forall n\geq n_0 |a_n-g|<\epsilon$$
+$$\lim\limits_{n\to\infty}a_n=g \ \Leftrightarrow\ \forall  \epsilon > 0\quad \exists\, n_0 \in\N \quad \forall n\geq n_0\,:\, |a_n-g|<\epsilon$$
 \end{Definition}
 \subsubsection{Grenzwertsätze}
 
