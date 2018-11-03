@@ -3,7 +3,7 @@
 	\section{Körper}
 
 Ein Körper ist eine Menge $K$, versehen mit zwei inneren zweistelligen Verknüpfungen $+$ und $\cdot$, also Addition und Multiplikation, für welche eine Addition
-$$\oplus\quad : \quad K \times \ \rightarrow K$$
+$$\oplus\quad : \quad K \times K \rightarrow K$$
 $(a;b) \longmapsto a+b $\\\\
 und eine Multiplikation
 $$\odot \quad : \quad K \times K \rightarrow K$$
@@ -26,11 +26,12 @@ $ & a \cdot \dfrac{1}{a} = 1 $\\\\\\
 $(D)$ & $Distributivgesetz: $a\cdot (b+c) = ab + ac$ \\
 \end{array}\\\\\\
 
-Dies erfüllen $\Q$, $\R$, $\R^{n}$ (Vektorräume), $\C$, Matritzen, prime Restklassengruppen $\Z / p\Z$ und andere.
-
+Dies erfüllen $\Q$, $\R$, $\R^{n}$ (Vektorräume), $\C$, Matritzen, prime Restklassengruppen $\Z / p\Z$ ...
 
 
 	\section{Teilbarkeit}
+
+	\subsection{Teilbarkeitseigenschaften}
 
 \begin{Definition}
 Die ganze Zahl $a\in\Z$ teilt $b\in\Z$, wenn es ein $x$ gibt, mit $b=a\cdot x$. Man schreibt:
@@ -62,11 +63,13 @@ Sei $a,b,c,t\in\Z$ und $t\neq0$:\\\\
 \end{itemize}
 \end{Beweis}
 
+	\subsection{Euklidische Division}
 
 \begin{Definition}
-s
-Die euklidische Division....
-
+Seien $a$ und $b$ zwei natürliche Zahlen. Es gibt dann immer $q,r \in \N$ sodass 
+$$a= b\cdot q + r \qquad 0\leq r < b$$
+$q$ heißt \textbf{Quotient} und $r$  heißt \textbf{Rest}.
+Man schreibt: \qquad $q=a \div b$ \qquad und \qquad $r \equiv a \mod b$
 \end{Definition}
 
 	\section{Primzahlen}
@@ -105,6 +108,7 @@ $\Leftrightarrow p_{l} | \, (-1) \quad $oder$ \quad p_{l} | 1$ \qquad   WIDERSPR
 $N$ muss also einen Primteiler haben ungleich $p_{r} \quad mit \quad r\in\{1,2,3,...,r-1,r\}$ oder \textbf{selber prim sein}.  
 \end{Beweis}
 
+
 \begin{Theorem}
 
 Jede natürliche Zahl $n\geq2$, die nicht prim ist, besitzt einen Primfaktor $p$, für den gilt
@@ -121,19 +125,71 @@ mit $p_{1}< p_{2}< ... < p_{k-1}< p_{k}$ \quad und \quad $ \left\{ p_{1}, p_{2},
 
 	\section{Restklassen oder Kongruenzklassen}
 
-Die euklidische Division gibt einen Rest, für den gilt $r>0$ (wichtig!)
+\begin{Definition}
+Seien drei natürliche Zahlen $a, b, n \in \N$ mit $n\geq 2$.\\ Wenn $a=q_{1} \cdot n + r_{1}$  \qquad und \qquad  $b=q_{2} \cdot n + r_{2}$ \qquad und \quad $r_{1}=r_{2}$,\qquad also falls $a$ und $b$ bei der euklidischen Division durch $n$ den gleichen Rest besitzen, dann gilt
+$$a \equiv b\mod n$$
+\end{Definition}
 
+\begin{Beispiel}
+\begin{itemize}
+\item $29\equiv-121 \mod 5 $ \quad da $29 \equiv 5\cdot 5 +4$ \quad und \quad $-121 = 5\cdot (-25) +4$ 
+\item $88\equiv 24 \mod 8 $ \quad da $8|88$ \quad und \quad $8|24$
+\item $87\equiv 23 \mod 8$ \\
+\end{itemize}
+\end{Beispiel}
 
+\begin{Theorem}
+Seien $a,b$ zwei ganze Zahlen und $n\in\N$ mit $n\geq 2$, dann gilt\\\\
+(1)\qquad $ a\equiv b \mod n \quad \Leftrightarrow \quad n|(a-b)$\\
+(2)\qquad $ a\equiv 0 \mod n \quad\Leftrightarrow\quad n|a$\\
+(3)\qquad falls $n'\geq 2$ und $n'|n$ dann gilt: \quad $a \equiv b \mod n \quad \Rightarrow \quad a \equiv b \mod n' $\\\\
+\end{Theorem}
 
+\begin{Beweis}
+\begin{itemize}
+\item (1) \quad $ a \equiv b \mod n \quad\Leftrightarrow\quad a - b \equiv 0 \mod n \quad\Leftrightarrow\quad $ $n$ teilt $(a-b)$ 
+\end{itemize}
+\end{Beweis}
 
+\begin{Beispiel}
+\begin{itemize}
+\item (1) \quad $61 \equiv 29 \mod 8$ \quad (Rest 5) $\quad\Leftrightarrow\quad 8| (61-29) = 32 $ 
+\item (3) \quad $4 \geq 2$ \, und \, $4|12$ \quad $43 \equiv 67 \mod 12 \quad(r=7)\qquad \Rightarrow \quad 43 \equiv 67 \mod 4  $ \\
+\end{itemize}
+\end{Beispiel}
 
+\begin{Theorem}
+Für jedes $n\in \N$ mit $n\geq 2$ gilt: \\Jede ganze Zahl $a$ ist modulo $n$ kongruent zu einer natürlichen Zahl $r$ mit $0 \geq r \geq n-1$\\\\
+Anders gesagt gibt es zu jeder Zahl immer Kongruenzklassen.
+\end{Theorem}
 
+\vspace{2em}
 
+\begin{Definition}
+Es seien $n \in \N$ mit $n \geq 2$ und $r \in \N$ mit $0 \leq r < n$ \\
+Die Menge $ [r] \mod n $ ist die Menge aller ganzen Zahlen $z$, die bei der euklidischen Division durch $n$ den Rest $r$ liefern.\\\\
+Sie ist eine Menge von Zahlen, die den Abstand $n$ zueinander haben.\\\\\\
+Für Kongruenzen sind mit der Addition und der Multiplikation verträglich. Seien $a, b, a^{*}, b^{*}$ ganze Zahlen:\\\\
+ $\Rightarrow$ $\left\{ \begin{array}{rcl}
+$ a & \equiv & a^{*} \mod n  $\\
+$ b & \equiv & b^{*}\mod n  $
+\end{array}\right.\\\\
+$\Rightarrow a+b \equiv a^{*} + b^{*} \mod n$ \qquad und \qquad  $a\cdot b \equiv a^{*} \cdot b^{*} \mod n$
+\end{Definition}
 
+\begin{Beispiel}
+\begin{itemize}
+\item $ [1] \mod 4 = \{ ... , -7, -3, 1, 5, 9, ... \} $
+\item $ [2] \mod 4 = \{ ... , -6, -2, 2, 6, 10, ... \} $
+\item $ [3] \mod 4 = \{ ... , -5, -1, 3, 7, 11, ... \} $
+\item $ [4] \mod 4 = [0] \mod 4 = \{ ... , -8, -4, 0, 4, 8, 12, ... \} $\\
+\end{itemize}
+\end{Beispiel}
 
-
-
-
+\begin{Theorem}
+Seien $a,b \in \N$ mit \quad $a,b \geq 2$ \quad und $a|b$, dann gilt
+$$[r] \mod b \quad \subseteq \quad [r] \mod a $$
+\end{Theorem}
 
 
 
