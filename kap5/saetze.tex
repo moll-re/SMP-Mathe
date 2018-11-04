@@ -5,21 +5,76 @@
     $$a^2+b^2=c^2$$
   \end{minipage}
   \begin{minipage}{0.5\textwidth}
-
+    \definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+    \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.4]
+    \clip(-13,-3) rectangle (0,4);
+    \draw[line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (-6.851258827998152,2.8478198196798843) -- (-6.633398787368505,2.627871663644841) -- (-6.413450631333462,2.8457317042744883) -- (-6.631310671963109,3.0656798603095314) -- cycle;
+    \draw [line width=0.4pt] (-11.704106007375259,-1.9589560257157905)-- (-6.631310671963109,3.0656798603095314);
+    \draw [line width=0.4pt] (-6.631310671963109,3.0656798603095314)-- (-1.6066747859377828,-2.007115475102615);
+    \draw [line width=0.4pt] (-11.704106007375259,-1.9589560257157905)-- (-1.6066747859377828,-2.007115475102615);
+    \begin{scriptsize}
+    \draw [fill=ududff] (-11.704106007375259,-1.9589560257157905) circle (2.5pt);
+    \draw[color=ududff] (-12,-1.646543156800932) node {$A$};
+    \draw [fill=ududff] (-1.6066747859377828,-2.007115475102615) circle (2.5pt);
+    \draw[color=ududff] (-1,-1.6903244744253179) node {$B$};
+    \draw [fill=ududff] (-6.631310671963109,3.0656798603095314) circle (2.5pt);
+    \draw[color=ududff] (-6.509790378375092,3.4) node {$C$};
+    \draw[color=black] (-8.611293624345604,0.5425227244183474) node {$b$};
+    \draw[color=black] (-4.831506536106975,0.5425227244183474) node {$a$};
+    \draw[color=black] (-6.611946786165325,-1.7) node {$c$};
+    \end{scriptsize}
+    \end{tikzpicture}
   \end{minipage}
 \end{Theorem}
 \begin{Beweis}
-  test
+  Man modelliere die 3 Seiten durch Vektoren, $\vv{a}$, $\vv{b}$ und $\vv{c}$.\\
+  Es gilt: $$\vv{a} \cdot \vv{b} &= 0 $$
+  $$ a_1 b_1+a_2 b_2 &= 0 $$
+  Außerdem:
+  \begin{center}
+    \begin{align*}
+      |\vv{a} + \vv{b}| &= \sqrt{(b_1-a_1)^2+(b_2-a_2)^2}\\
+      &= \sqrt{{b_1}^2-2b_1 a_2+{a_1}^2 + {b_2}^2-2b_2 a_2+{a_2}^2}\\
+      &= \sqrt{{b_1}^2 + {b_2}^2 + {a_1}^2 + {a_2}^2 -2(b_1 a_2 + b_2 a_2)}\\
+      &= \sqrt{{b_1}^2 + {b_2}^2 + {a_1}^2 + {a_2}^2}\\
+      &= |\vv{c}| \text{, denn $\vv{a} + \vv{b} = \vv{c}$}\\
+      \Leftrightarrow |\vv{c}|^2 &= {b_1}^2 + {b_2}^2 + {a_1}^2 + {a_2}^2\\
+      \Leftrightarrow |\vv{c}|^2 &= |\vv{a}|^2 + |\vv{b}|^2\\
+      \Leftrightarrow c^2 &= a^2 + b^2\\
+    \end{align*}
+  \end{center}
 \end{Beweis}
-Die Umkehrung dieses Satzes:
-\begin{Theorem}
+\begin{Bemerkung}
+  Dieser Beweis ist weitaus intuitiver und einfacher, wenn er in der klasischen Geometrie vollführt wird, aber unser Ziel ist es die vorliegenden Sätze über Vektoren, und damit analytisch zu beweisen.
+\end{Bemerkung}
+\begin{Theorem}[- Umkehrung]
   \begin{minipage}{0.5\textwidth}
     Falls für ein Dreieck $\Delta ABC$ gilt:\\
     $$a^2+b^2=c^2$$
     Dann ist dieses Dreieck in $C$ rechtwinklig.
   \end{minipage}
   \begin{minipage}{0.5\textwidth}
-    draw
+    \definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+    \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.4]
+    \clip(-13,-3) rectangle (0,4);
+    \draw[line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (-6.851258827998152,2.8478198196798843) -- (-6.633398787368505,2.627871663644841) -- (-6.413450631333462,2.8457317042744883) -- (-6.631310671963109,3.0656798603095314) -- cycle;
+    \draw [line width=0.4pt] (-11.704106007375259,-1.9589560257157905)-- (-6.631310671963109,3.0656798603095314);
+    \draw [line width=0.4pt] (-6.631310671963109,3.0656798603095314)-- (-1.6066747859377828,-2.007115475102615);
+    \draw [line width=0.4pt] (-11.704106007375259,-1.9589560257157905)-- (-1.6066747859377828,-2.007115475102615);
+    \begin{scriptsize}
+    \draw [fill=ududff] (-11.704106007375259,-1.9589560257157905) circle (2.5pt);
+    \draw[color=ududff] (-12,-1.646543156800932) node {$A$};
+    \draw [fill=ududff] (-1.6066747859377828,-2.007115475102615) circle (2.5pt);
+    \draw[color=ududff] (-1,-1.6903244744253179) node {$B$};
+    \draw [fill=ududff] (-6.631310671963109,3.0656798603095314) circle (2.5pt);
+    \draw[color=ududff] (-6.509790378375092,3.4) node {$C$};
+    \draw[color=black] (-8.611293624345604,0.5425227244183474) node {$b$};
+    \draw[color=black] (-4.831506536106975,0.5425227244183474) node {$a$};
+    \draw[color=black] (-6.611946786165325,-1.7) node {$c$};
+    \end{scriptsize}
+    \end{tikzpicture}
   \end{minipage}
 \end{Theorem}
 \begin{Beweis}
@@ -27,29 +82,78 @@ Die Umkehrung dieses Satzes:
 \end{Beweis}
 
 \subsection{Euklids Sätze}
-\begin{Theorem}{- Höhensatz}
+\begin{Theorem}[- Kathetensatz]
   \begin{minipage}{0.5\textwidth}
   In einem in $C$ rechtwinkligen Dreieck $\Delta ABC$ mit $h$ der Höhe zu $C$ gilt:\\
     \begin{itemize}
-      \item a^2 = p \cdot c\\
-      \item b^2 = q \cdot c
+      \item $a^2 = p \cdot c$
+      \item $b^2 = q \cdot c$
     \end{itemize}
   \end{minipage}
   \begin{minipage}{0.5\textwidth}
-
+    \definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+    \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=.6]
+    \clip(-8.311937785825172,-3) rectangle (8.290449729798194,2);
+    \draw [shift={(-3.5656013566444793,1.3718053107067734)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.16] (0,0) -- (-120.15054216593154:0.48766804060251406) arc (-120.15054216593154:-30.15055075070568:0.48766804060251406) -- cycle;
+    \draw [line width=0.4pt] (-5.890547931937073,-2.630796139481519)-- (-3.5656013566444793,1.3718053107067734);
+    \draw [line width=0.4pt] (3.459368369267905,-2.708712108658227)-- (-3.5656013566444793,1.3718053107067734);
+    \draw [line width=0.4pt] (-5.890547931937073,-2.630796139481519)-- (3.459368369267905,-2.708712108658227);
+    \draw [line width=0.4pt] (-3.5656013566444793,1.3718053107067734)-- (-3.5991154959818794,-2.6498914097811452);
+    \draw [line width=0.4pt] (-5.890547931937073,-2.630796139481519)-- (-3.5991154959818794,-2.6498914097811452);
+    \draw [line width=0.4pt] (3.459368369267905,-2.708712108658227)-- (-3.5991154959818794,-2.6498914097811452);
+    \begin{scriptsize}
+    \draw [fill=ududff] (-5.890547931937073,-2.630796139481519) circle (2.5pt);
+    \draw[color=ududff] (-6.1,-2.3936022538574075) node {$A$};
+    \draw [fill=ududff] (3.459368369267905,-2.708712108658227) circle (2.5pt);
+    \draw[color=ududff] (3.543814134600391,-2.43) node {$B$};
+    \draw [fill=ududff] (-3.5656013566444793,1.3718053107067734) circle (2.5pt);
+    \draw[color=ududff] (-3.4786056500758114,1.8) node {$C$};
+    \draw[color=black] (-4.9,-0.583811969844107) node {$b$};
+    \draw[color=black] (0.07595251253806888,-0.38874475360315236) node {$a$};
+    \draw[color=black] (-1.8638825823030425,-2.9) node {$c$};
+    \draw[color=black] (-3.75,-0.5079524968615136) node {$h$};
+    \draw[color=black] (-4.605660677246067,-2.328579848443756) node {$q$};
+    \draw[color=black] (-0.03241816315137868,-2.3719281187195236) node {$p$};
+    \end{scriptsize}
+    \end{tikzpicture}
   \end{minipage}
 \end{Theorem}
 \begin{Beweis}
   test
 \end{Beweis}
-\begin{Theorem}
+\begin{Theorem}[- Höhensatz]
   \begin{minipage}{0.5\textwidth}
-  Sei ein Dreieck $\Delta ABC$ mit M einem Punkt der Geraden $(AB)$ und N einem Punkt der Geraden $(AC)$. Wenn gilt:\\
-  $$\dfrac{AB}{AC}=\dfrac{AM}{AN}$$
-    Dann ist $(BC)//(MN)$.
+    In einem in $C$ rechtwinkligen Dreieck $\Delta ABC$ mit $h$ der Höhe zu $C$ gilt:
+    $$h^2=p\cdot q$$
   \end{minipage}
   \begin{minipage}{0.5\textwidth}
-    draw
+    \definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+    \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=.6]
+    \clip(-8.311937785825172,-3) rectangle (8.290449729798194,2);
+    \draw [shift={(-3.5656013566444793,1.3718053107067734)},line width=0.5pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.16] (0,0) -- (-120.15054216593154:0.48766804060251406) arc (-120.15054216593154:-30.15055075070568:0.48766804060251406) -- cycle;
+    \draw [line width=0.4pt] (-5.890547931937073,-2.630796139481519)-- (-3.5656013566444793,1.3718053107067734);
+    \draw [line width=0.4pt] (3.459368369267905,-2.708712108658227)-- (-3.5656013566444793,1.3718053107067734);
+    \draw [line width=0.4pt] (-5.890547931937073,-2.630796139481519)-- (3.459368369267905,-2.708712108658227);
+    \draw [line width=0.4pt] (-3.5656013566444793,1.3718053107067734)-- (-3.5991154959818794,-2.6498914097811452);
+    \draw [line width=0.4pt] (-5.890547931937073,-2.630796139481519)-- (-3.5991154959818794,-2.6498914097811452);
+    \draw [line width=0.4pt] (3.459368369267905,-2.708712108658227)-- (-3.5991154959818794,-2.6498914097811452);
+    \begin{scriptsize}
+    \draw [fill=ududff] (-5.890547931937073,-2.630796139481519) circle (2.5pt);
+    \draw[color=ududff] (-6.1,-2.3936022538574075) node {$A$};
+    \draw [fill=ududff] (3.459368369267905,-2.708712108658227) circle (2.5pt);
+    \draw[color=ududff] (3.543814134600391,-2.43) node {$B$};
+    \draw [fill=ududff] (-3.5656013566444793,1.3718053107067734) circle (2.5pt);
+    \draw[color=ududff] (-3.4786056500758114,1.8) node {$C$};
+    \draw[color=black] (-4.9,-0.583811969844107) node {$b$};
+    \draw[color=black] (0.07595251253806888,-0.38874475360315236) node {$a$};
+    \draw[color=black] (-1.8638825823030425,-2.9) node {$c$};
+    \draw[color=black] (-3.75,-0.5079524968615136) node {$h$};
+    \draw[color=black] (-4.605660677246067,-2.328579848443756) node {$q$};
+    \draw[color=black] (-0.03241816315137868,-2.3719281187195236) node {$p$};
+    \end{scriptsize}
+    \end{tikzpicture}
   \end{minipage}
 \end{Theorem}
 \begin{Beweis}

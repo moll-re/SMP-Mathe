@@ -8,11 +8,6 @@
 
 
 
-
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Für Kopf- und Fußzeilen:
 \pagestyle{fancy}
@@ -36,7 +31,7 @@
 
 %Theorem:
 \newenvironment{Theorem}[1][]
-  {\begin{tcolorbox}[colback=titlepagecolor!5!white,colframe=titlepagecolor,sharpish corners,boxrule=0pt,frame hidden,title=Theorem\,#1]}
+  {\begin{tcolorbox}[colback=titlepagecolor!5!white,colframe=titlepagecolor,sharpish corners,boxrule=0pt,frame hidden,title=Theorem \,#1]}
   {\end{tcolorbox}}
 
 %Beispiel
@@ -130,7 +125,7 @@
 \makeatletter
 \def\thickhrulefill{\leavevmode \leaders \hrule height 1.2ex \hfill \kern \z@}
 \def\@makechapterhead#1{
-  \vspace*{10\p@}%
+  \vspace*{9\p@}%
   {\parindent \z@ \centering \reset@font
         \thickhrulefill\quad
         \huge\scshape\bfseries\textit{\@chapapp{}  \thechapter}\normalsize
@@ -144,8 +139,9 @@
         \par
         \vspace*{10\p@}%
         \hrule
-        \vskip 50\p@
-  }}
+  }
+  %%HIER NAME DES AUTORS (KP WIE THO)
+  \vskip 50\p@}
 
 \setlength{\mathindent}{0pt}
 \makeatother
