@@ -232,16 +232,17 @@ $\Rightarrow & 84 &\equiv& -1 \mod 17$ \\
 $\Rightarrow & 84^{501} &\equiv& -1 \mod 17 
 \end{array}
 \end{minipage}
-$$\Rightarrow \quad 35^{228} + 84^{501}\quad\equiv\quad 1-1 \mod 17 \quad\equiv\quad 0 \mod 17$$\\
+$$\Rightarrow \quad 35^{228} + 84^{501}\quad\equiv\quad 1-1 \mod 17 \quad\equiv\quad 0 \mod 17$$
 \end{Beispiel}
 
+\hypertarget{teiler_ab_teiler_br}{
 \begin{Definition}
 Es seien $a$ und $b$ zwei natürliche Zahlen größer Null mit $a>b$. $r$ sei der Rest der Euklidischen Division von a durch b. Dann gilt:\\
 \begin{enumerate}
 \item Wenn $r = 0$, dann sind die gemeinsamen Teiler von $a$ und $b$ die Teiler von $b$. Da die Division aufgeht, teilt $b$ die Zahl $a$. $a$ ist also ein Vielfaches von $b$, deshalb sind die Teiler von $a$ auch die Teiler von $b$.
 \item Wenn $r \neq 0$, dann sind die gemeinsamen Teiler von $a$ und $b$ gerade die gemeinsamen Teiler von $b$ und $r$. (Äquivalenz $\Leftrightarrow$) 
 \end{enumerate}
-\end{Definition}
+\end{Definition}}
 
 \begin{Beweis}
 Die Euklidische Division sagt \quad $a = b \cdot q +r$\\\\
@@ -254,6 +255,72 @@ Umgekehrt gilt: wenn $n | b$ und $n | r$:\\\\
 \Rightarrow \quad $n | q \cdot b + r$\\
 \Rightarrow \quad $$n | a$\\
 \end{Beweis}
+
+\subsection{Der Euklidische Algorithmus}
+
+Der Euklidische Algorithmus ist eine effiziente Methode um den ggT (größter gemeinsamer Teiler) zweier Zahlen zu finden, wenn die Primfaktorzerlegung nicht vorliegt.\\
+
+\begin{Definition} 
+
+Seien $a,b \in \N$. Sei $a$ die größere Zahl, also $a > b$. Sei $b$ kein Teiler von $a$. Nun wiederholt man immer wieder die Euklidische Division mit den Resten der vorherigen Division. Nach hyperlink{teiler_ab_teiler_br}{\textcolor{titlepagecolor}{\underline{diesem Satze}}} sind die Teiler von $a$ und $b$ auch die Teiler von $b$ und $r$. Man möchte ja den ersten gemeinsamen Teiler der Zahlen $a$ und $b$ finden.\\\\
+$$
+\begin{array}{rccl}
+a & = & q_{1} \cdot b + r_{1} \qquad \qquad &0 < r_{1}  < b \\
+b & = & q_{2} \cdot r_{1} + r_{2} \qquad \qquad &0 < r_{2}  < r_{1} \\
+r_{1} & = & q_{3} \cdot r_{2} + r_{3} \qquad \qquad &0 < r_{3}  < r_{2} \\
+ && \vdots & \\
+r_{n-2} & = & q_{n} \cdot r_{n-1} + r_{n} \qquad \qquad &0 < r_{n}  < r_{n-1} \\
+r_{n-1} & = & q_{n+1} \cdot r_{n} + 0 \qquad \qquad &  \\
+\end{array}
+$$\\
+Deshalb ist $r_{n}$ der größte gemeinsame Teiler der Zahlen $a$ und $b$:\\\\
+Die Folge der Reste $r_{k} \in \N$ mit $k = \{1, 2, ..., n-1, n\}$ ist streng monoton fallend. Diese Folge hat den Grenzwert $g = 0$. Deshalb gibt es immer \textbf{ein} letztes $r_{n}$ der Folge.\\\\
+Die \textbf{Existenz} von der letzten Zahl $r_{n}$ ist sicher, da $b \nmid a$. Die Teiler von $a$ und $b$ sind also auch die Teiler von $b$ und $r_{1}$. Da die Folge der Reste monoton fallend ist, kommt man am Ende auf jeden Fall auf eine Zahl $r_{n}$, die Teilerin von $a$ und $b$ ist. (zum \hyperlink{teiler_ab_teiler_br}{\textcolor{titlepagecolor}{\underline{Satz}}})
+\end{Definition}
+
+\begin{Theorem}
+Aus vorheriger Definition des Euklidischen Algorithmus ergeben sich diese Eigenschaften der Zahl $r_{n}$:
+\begin{enumerate}
+\item $r_{n}$ ist gleichzeitig Teiler von $a$ und $b$.
+\item Jeder andere Teiler von $a$ und $b$ ist auch Teiler von $r_{n}$
+\end{enumerate}
+$r_{n}$ ist der größte gemeinsame Teiler von $a$ und $b$.\quad ggT$(a;b) = r_{n}$. Es gilt also:
+\begin{itemize}
+\item ggT$(a;b) =$ ggT$(b;a)$
+\item $a | c$ und $b | d \quad \Rightarrow \quad$ ggT$(a,b) |$ ggT$(c;d)$\\
+\end{itemize}
+\end{Theorem}
+
+\begin{Beispiel}
+
+
+	Man sucht den ggT von $a = 780$ und $b = 567$.\\\\
+		\left. \begin{array}{rcccl}
+		$780 & = & 1 \cdot 567 & + & 213$\\
+		$567 & = & 2 \cdot 213 & + & 141$\\
+		$213 & = & 1 \cdot 141 & + & 72$\\
+		$141 & = & 1 \cdot 72 & + & 69$\\
+		$72 & = & 1 \cdot 69 & + & 3$\\
+		$69 & = & 23 \cdot 3 & + & 0$\\
+		\end{array}\\\\
+	\right\} \qquad ggT$(780;567) =$\,\, ggT$(567;780) =$\,\, 3$\\\\
+	
+	Jetzt sucht man den ggT von $c = 3\cdot 780 = 2340$ und $d = 567 \cdot 5 = 2835$.\\\\
+		\left. \begin{array}{rcccl}
+		$2835 & = & 1 \cdot 2340 & + & 495$\\
+		$2340 & = & 4 \cdot 495 & + & 360$\\
+		$495 & = & 1 \cdot 360 & + & 135$\\
+		$360 & = & 2 \cdot 135 & + & 90$\\
+		$135 & = & 1 \cdot 90 & + & 45$\\
+		$90 & = & 2 \cdot 45 & + & 0$\\
+		\end{array}\\
+		\right\} \qquad $ggT$(2340;2835) =$ ggT$(2835;2340) = 45 $\\\\
+\\\\\
+Aus \quad $780\, |\, 2340$ und $567 | 2835$ \quad folgt \quad  ggT$(780,567)\, |\,$ ggT$(2340;2385)\,\,\,$ oder auch $3 \,|\, 45$
+
+
+\end{Beispiel}
+
 
 
 
