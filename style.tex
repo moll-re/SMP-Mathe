@@ -149,7 +149,16 @@
 
 \setlength{\mathindent}{0pt}
 \makeatother
-
+\makeatletter
+\newcommand{\chapterauthor}[1]{%
+  {\parindent0pt\vspace*{-45pt}%
+  \begin{flushright}
+    \linespread{1.1} by \scshape#1%
+  \end{flushright}
+  \par\nobreak\vspace*{35pt}}
+  \@afterheading%
+}
+\makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Für den Titel:
