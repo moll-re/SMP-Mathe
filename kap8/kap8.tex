@@ -1,4 +1,5 @@
 \chapter{Algebra oder Zahlentheorie}
+\chapterauthor{Bruno}
 
 	\section{Körper}
 
@@ -45,7 +46,7 @@ Zwei Zahlen $a,b\in\Z$  sind \textbf{teilerfremd}, wenn aus $ c | a  $ und $c|b$
 \begin{Theorem}
 Aus dieser Teilbarkeitsrelation ergeben sich mehrere Eigenschaften:\\
 Sei $a,b,c,t\in\Z$ und $t\neq0$:\\\\
-(0)\qquad$a|b$ \quad und \quad&a|c& \quad dann \quad $a|b\pm c $\\ 
+(0)\qquad$a|b$ \quad und \quad&a|c& \quad dann \quad $a|b\pm c $\\
 (1)\qquad$a|b$ \quad und \quad$b|c$ \quad dann \quad $a|c$\\
 (2)\qquad$a|b$ \quad dann \quad $a|bc$\\
 (3)\qquad$at|bt\quad\Leftrightarrow\quad a|b$\\
@@ -55,10 +56,10 @@ Sei $a,b,c,t\in\Z$ und $t\neq0$:\\\\
 
 \begin{Beweis}
 \begin{itemize}
-\item (1) \quad Wenn $a|b$ und $b|c$, dann gibt es $x,y\in\Z$ mit $b=a\cdot x$ und $c=b\cdot y$. Also gilt auch $c=b\cdot y=a\cdot(xy)$ und somit $a|c$\\ 
+\item (1) \quad Wenn $a|b$ und $b|c$, dann gibt es $x,y\in\Z$ mit $b=a\cdot x$ und $c=b\cdot y$. Also gilt auch $c=b\cdot y=a\cdot(xy)$ und somit $a|c$\\
 \item (2) \quad Weil offensichtlich $b|bc$ gilt, folgt die Aussage sofort aus Aussage (3) \\
 \item (3)  \quad $at|bt\quad \Leftrightarrow\quad \exists x \in \Z : \, \, bt=atx \quad\Leftrightarrow \quad b=ax \quad\Leftrightarrow \quad a|b$ \\
-\item (4) \quad Sei $b=ax$ mit $x\in\Z$. Wenn $x=0$, dann ist $b=0$. In alles anderen Fällen ist $|x|>1$ und daher $|b| = |a| \cdot |x| \geq |a|$ 
+\item (4) \quad Sei $b=ax$ mit $x\in\Z$. Wenn $x=0$, dann ist $b=0$. In alles anderen Fällen ist $|x|>1$ und daher $|b| = |a| \cdot |x| \geq |a|$
 \item (5) \quad Wenn weder $a=0$ noch $b=0$ ist, dann folgt aus (4) $|a|\geq|b|\geq|a|$ und daher $a=\pm b$. Wenn also  $a=0$, dann folgt $b=0$
 \end{itemize}
 \end{Beweis}
@@ -66,7 +67,7 @@ Sei $a,b,c,t\in\Z$ und $t\neq0$:\\\\
 	\subsection{Euklidische Division}
 
 \begin{Definition}
-Seien $a$ und $b$ zwei natürliche Zahlen. Es gibt dann immer $q,r \in \N$ sodass 
+Seien $a$ und $b$ zwei natürliche Zahlen. Es gibt dann immer $q,r \in \N$ sodass
 $$a= b\cdot q + r \qquad 0\leq r < b$$
 $q$ heißt \textbf{Quotient} und $r$  heißt \textbf{Rest}.
 Man schreibt: \qquad $q=a \div b$ \qquad und \qquad $r \equiv a \mod b$
@@ -79,12 +80,12 @@ Hier die Liste der Primzahlen bis 100: \\
 2,     3,     5,     7,    11,    13,    17,    19,    23,    29,    31,    37,    41,    43,    47,    53,    59,    61,    67,    71,    73,    79,    83,    89,    97\\\\
 
 \begin{Definition}
-Eine natürliche Zahl heißt Primzahl, wenn sie in $\N$ genau zwei Teiler besitzt. 
+Eine natürliche Zahl heißt Primzahl, wenn sie in $\N$ genau zwei Teiler besitzt.
 \end{Definition}
 
 
 \begin{Theorem}
-Es gibt unendlich viele Primzahlen 
+Es gibt unendlich viele Primzahlen
 \end{Theorem}
 
 
@@ -105,7 +106,7 @@ $p_{l} & | & p_{1}\cdot p_{2}\cdot...\cdot p_{r-1}\cdot p_{r} +1$\\
 
 $\Leftrightarrow p_{l} | \, p_{1}\cdot p_{2} \cdot...\cdot p_{r-1} \cdot p_{r} - \left(  p_{1}\cdot p_{2} \cdot...\cdot p_{r-1} \cdot p_{r} +1 \right)$\\\\
 $\Leftrightarrow p_{l} | \, (-1) \quad $oder$ \quad p_{l} | 1$ \qquad   WIDERSPRUCH, da $p_{l}=1$ aber $1\notin \mathbb{P}$ \\\\
-$N$ muss also einen Primteiler haben ungleich $p_{r} \quad mit \quad r\in\{1,2,3,...,r-1,r\}$ oder \textbf{selber prim sein}.  
+$N$ muss also einen Primteiler haben ungleich $p_{r} \quad mit \quad r\in\{1,2,3,...,r-1,r\}$ oder \textbf{selber prim sein}.
 \end{Beweis}
 
 
@@ -132,7 +133,7 @@ $$a \equiv b\mod n$$
 
 \begin{Beispiel}
 \begin{itemize}
-\item $29\equiv-121 \mod 5 $ \quad da $29 \equiv 5\cdot 5 +4$ \quad und \quad $-121 = 5\cdot (-25) +4$ 
+\item $29\equiv-121 \mod 5 $ \quad da $29 \equiv 5\cdot 5 +4$ \quad und \quad $-121 = 5\cdot (-25) +4$
 \item $88\equiv 24 \mod 8 $ \quad da $8|88$ \quad und \quad $8|24$
 \item $87\equiv 23 \mod 8$ \\
 \end{itemize}
@@ -147,13 +148,13 @@ Seien $a,b$ zwei ganze Zahlen und $n\in\N$ mit $n\geq 2$, dann gilt\\\\
 
 \begin{Beweis}
 \begin{itemize}
-\item (1) \quad $ a \equiv b \mod n \quad\Leftrightarrow\quad a - b \equiv 0 \mod n \quad\Leftrightarrow\quad $ $n$ teilt $(a-b)$ 
+\item (1) \quad $ a \equiv b \mod n \quad\Leftrightarrow\quad a - b \equiv 0 \mod n \quad\Leftrightarrow\quad $ $n$ teilt $(a-b)$
 \end{itemize}
 \end{Beweis}
 
 \begin{Beispiel}
 \begin{itemize}
-\item (1) \quad $61 \equiv 29 \mod 8$ \quad (Rest 5) $\quad\Leftrightarrow\quad 8| (61-29) = 32 $ 
+\item (1) \quad $61 \equiv 29 \mod 8$ \quad (Rest 5) $\quad\Leftrightarrow\quad 8| (61-29) = 32 $
 \item (3) \quad $4 \geq 2$ \, und \, $4|12$ \quad $43 \equiv 67 \mod 12 \quad(r=7)\qquad \Rightarrow \quad 43 \equiv 67 \mod 4  $ \\
 \end{itemize}
 \end{Beispiel}
@@ -229,7 +230,7 @@ $\Rightarrow & 35^{228} &\equiv& 1 \mod 17$
 \begin{array}{rccl}
 $\Rightarrow & 84 &=& 85 - 1 = 17 \cdot 5 - 1 $\\
 $\Rightarrow & 84 &\equiv& -1 \mod 17$ \\
-$\Rightarrow & 84^{501} &\equiv& -1 \mod 17 
+$\Rightarrow & 84^{501} &\equiv& -1 \mod 17
 \end{array}
 \end{minipage}
 $$\Rightarrow \quad 35^{228} + 84^{501}\quad\equiv\quad 1-1 \mod 17 \quad\equiv\quad 0 \mod 17$$
@@ -240,7 +241,7 @@ $$\Rightarrow \quad 35^{228} + 84^{501}\quad\equiv\quad 1-1 \mod 17 \quad\equiv\
 Es seien $a$ und $b$ zwei natürliche Zahlen größer Null mit $a>b$. $r$ sei der Rest der Euklidischen Division von a durch b. Dann gilt:\\
 \begin{enumerate}
 \item Wenn $r = 0$, dann sind die gemeinsamen Teiler von $a$ und $b$ die Teiler von $b$. Da die Division aufgeht, teilt $b$ die Zahl $a$. $a$ ist also ein Vielfaches von $b$, deshalb sind die Teiler von $a$ auch die Teiler von $b$.
-\item Wenn $r \neq 0$, dann sind die gemeinsamen Teiler von $a$ und $b$ gerade die gemeinsamen Teiler von $b$ und $r$. (Äquivalenz $\Leftrightarrow$) 
+\item Wenn $r \neq 0$, dann sind die gemeinsamen Teiler von $a$ und $b$ gerade die gemeinsamen Teiler von $b$ und $r$. (Äquivalenz $\Leftrightarrow$)
 \end{enumerate}
 \end{Definition}}
 
@@ -260,7 +261,7 @@ Umgekehrt gilt: wenn $n | b$ und $n | r$:\\\\
 
 Der Euklidische Algorithmus ist eine effiziente Methode um den ggT (größter gemeinsamer Teiler) zweier Zahlen zu finden, wenn die Primfaktorzerlegung nicht vorliegt.\\
 
-\begin{Definition} 
+\begin{Definition}
 
 Seien $a,b \in \N$. Sei $a$ die größere Zahl, also $a > b$. Sei $b$ kein Teiler von $a$. Nun wiederholt man immer wieder die Euklidische Division mit den Resten der vorherigen Division. Nach \hyperlink{teiler_ab_teiler_br}{\textcolor{titlepagecolor}{\underline{diesem Satz}}} sind die Teiler von $a$ und $b$ auch die Teiler von $b$ und $r$. Man möchte ja den ersten gemeinsamen Teiler der Zahlen $a$ und $b$ finden.\\\\
 $$
@@ -304,7 +305,7 @@ $r_{n}$ ist der größte gemeinsame Teiler von $a$ und $b$.\quad ggT$(a;b) = r_{
 		$69 & = & 23 \cdot 3 & + & 0$\\
 		\end{array}\\\\
 	\right\} \qquad ggT$(780;567) =$\,\, ggT$(567;780) =$\,\, 3$\\\\
-	
+
 	Jetzt sucht man den ggT von $c = 3\cdot 780 = 2340$ und $d = 567 \cdot 5 = 2835$.\\\\
 		\left. \begin{array}{rcccl}
 		$2835 & = & 1 \cdot 2340 & + & 495$\\
@@ -331,7 +332,7 @@ Daher wird der Beweis in zwei Etappen durchgef"uhrt; mit dem \textbf{Induktionsa
 
 \begin{Beweis}
  Beweis der Gau"sschen Summenformel\\
- 
+
 \mathrm{Z\kern-.3em\raise-0.5ex\hbox{Z}} : $S(n) = \sum\limits_{i=1}^n i  = \dfrac{n(n+1)}{2}$\\\\
 
 \begin{array}{rl}
@@ -368,7 +369,7 @@ Beweis der Bernoullischen Ungleichung\\
 \textbf{Induktionsanfang}: & $(1+x)^0 = 1 \geq 1 = 1+0x $\\\\
 \textbf{Induktionsvorraussetzung}: & $Es gelte nun: $(1+x)^n \geq 1+nx ; n\in \N_{0} $\\\\
 \textbf{Induktionsbehauptung}: & $ (1+x)^{n+1} \geq 1+(n+1)x $\\\\
-\textbf{Induktionsschluss}: & $ (1+x)^{n+1} = (1+x)^n \cdot (1+x) {\overset{\text{I.V.}} \geq} (1+nx)\cdot(1+x) = nx^2+nx+x+1$\\\\ 
+\textbf{Induktionsschluss}: & $ (1+x)^{n+1} = (1+x)^n \cdot (1+x) {\overset{\text{I.V.}} \geq} (1+nx)\cdot(1+x) = nx^2+nx+x+1$\\\\
 &$\geq 1+x+nx = 1+(n+1)x   $\\\\
 
 \end{array}
@@ -428,8 +429,3 @@ $\forall n\in \N,\quad n\geq 4 : \quad n! >n^2 $\\\\
 \end{array}
 
 \end{Beweis}
-
-
-
-
-

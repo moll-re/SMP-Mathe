@@ -7,6 +7,10 @@
       \clearpage}
 
 
+\newlength{\lmargin}
+\setlength{\lmargin}{1in + \hoffset + \oddsidemargin}
+\newdynamicframe[odd]{2cm}{2cm}{-\lmargin}{6cm}[frameD-1a]
+\newdynamicframe[even]{2cm}{2cm}{\textwidth+\lmargin-1cm}{6cm}[frameD-1b]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Für Kopf- und Fußzeilen:

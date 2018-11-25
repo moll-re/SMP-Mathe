@@ -36,8 +36,12 @@
 \usepackage{subfiles}
 \usetikzlibrary{arrows}
 %\usetikzlibrary{fit}
+%Für die Seitenangabe
+\usepackage{calc}
+\usepackage{flowfram}
+\usepackage{color}
+\usepackage{nopageno}
 
-\setlength{\parindent}{0pt}
 \nonstopmode                                      %Fehler bei Kompilierung werden "leise" gestellt (sehr viel praktischer)
 
 
@@ -45,9 +49,10 @@
 \include{style}
 \begin{document}
 \include{title}
+%\pagenumbering{gobble}
 \blankpage
 \tableofcontents
-
+\include{pagenumbering}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Kapitel bitte hier einbinden:
 \include{kap1/kap1}
