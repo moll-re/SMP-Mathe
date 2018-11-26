@@ -7,6 +7,10 @@
       \clearpage}
 
 
+\newlength{\lmargin}
+\setlength{\lmargin}{1in + \hoffset + \oddsidemargin}
+\newdynamicframe[odd]{2cm}{2cm}{-\lmargin}{6cm}[frameD-1a]
+\newdynamicframe[even]{2cm}{2cm}{\textwidth+\lmargin-1cm}{6cm}[frameD-1b]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Für Kopf- und Fußzeilen:
@@ -145,7 +149,16 @@
 
 \setlength{\mathindent}{0pt}
 \makeatother
-
+\makeatletter
+\newcommand{\chapterauthor}[1]{%
+  {\parindent0pt\vspace*{-45pt}%
+  \begin{flushright}
+    \linespread{1.1} by \scshape#1%
+  \end{flushright}
+  \par\nobreak\vspace*{35pt}}
+  \@afterheading%
+}
+\makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Für den Titel:
