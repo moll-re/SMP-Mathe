@@ -11,67 +11,66 @@
 
 
     \subsection{Besondere Vektoren}
+      \begin{Definition}[- Der Ortsvektor]
+        Der Vektor von $O$ auf den Punkt $P$, geschrieben als $\vv{OP}$ oder $\vv{p}$.\\
+        Hat $P$ die Koordinaten $(P_1|P_2|...|P_n)$, so besitzt $\vv{p}$ die Darstellung $\left(\begin{array}{c} P_1 \\ P_2 \\ ...\\P_n\end{array}\right)$.
+      \end{Definition}
 
+      \begin{Definition}[- Der Nullvektor]
+        Der Vektor mit Wert $\left(\begin{array}{c} 0 \\ 0 \\ ...\\0\end{array}\right)$, er hat keine und alle Richtungen zugleich.
+      \end{Definition}
+      \begin{Bemerkung}
+        Er ist somit das neutrale Element der Vektoraddition.
+      \end{Bemerkung}
 
-        \subsubsection{Der Ortsvektor}
+      \begin{Definition}[- Der Verbindingsvektor]
+        Der Vektor $\vv{AB}$ ist der Vektor, der den Punkt $A$ auf den Punkt $B$ abbildet. Er ist definiert als:\\ $\vv{AB}=\vv{OB}-\vv{OA}$,
+        woraus folgt, dass: \begin{center} $\vv{AB} = \left(\begin{array}{c} b_1 - a_1 \\ b_2 - a_2 \\ ... \\ b_n - a_n \end{array}\right)$. \end{center}
+      \end{Definition}
 
-            \paragraph{} Der Vektor von $O$ auf den Punkt $P$, geschrieben als $\vv{OP}$ oder $\vv{p}$.\\
-            \paragraph{} Hat $P$ die Koordinaten $(P_1|P_2|...|P_n)$, so besitzt $\vv{p}$ die Darstellung $\left(\begin{array}{c} P_1 \\ P_2 \\ ...\\P_n\end{array}\right)$.
+      \begin{Definition}[- Der Gegenvektor]
+        Der Gegenvektor zu $\vv{AB}$ ist $\vv{BA}$, definiert als  $-\vv{AB}$.\\
 
+      \end{Definition}
 
-        \subsubsection{Der Nullvektor}
+      \begin{Bemerkung}
+        Er ist somit das inverse Element der Vektoraddition.
+      \end{Bemerkung}
 
-            \paragraph{} Der Vektor mit Wert $\left(\begin{array}{c} 0 \\ 0 \\ ...\\0\end{array}\right)$, er hat keine und alle Richtungen zugleich.
-            \begin{Bemerkung}
-                \\
-                Er ist somit das neutrale Element der Vektoraddition.
-            \end{Bemerkung}
-
-
-        \subsubsection{Der Verbindungsvektor}
-
-            \paragraph{} Der Vektor $\vv{AB}$ ist der Vektor, der den Punkt $A$ auf den Punkt $B$ abbildet. Er ist definiert als:\\ $\vv{AB}=\vv{OB}-\vv{OA}$,
-             woraus folgt, dass: \begin{center} $\vv{AB} = \left(\begin{array}{c} b_1 - a_1 \\ b_2 - a_2 \\ ... \\ b_n - a_n \end{array}\right)$. \end{center}
-
-
-        \subsubsection{Der Gegenvektor}
-
-            \paragraph{} Der Gegenvektor zu $\vv{AB}$ ist $\vv{BA}$, definiert als  $-\vv{AB}$.
-            \\
-            \begin{Bemerkung}
-                \\
-                Er ist somit das inverse Element der Vektoraddition.
-            \end{Bemerkung}
-
-
-    \subsubsection{Der Einheitsvektor}
-
-        \subsubsubsection{Norm eines Vektors}
-
-            \paragraph{} Die Norm eines Vektors ist anschaulich als seine Länge zu interpretieren. Der Betrag, wie sie ebenfalls genannt wird, eines
-             Vektors $\vv{v}$ ist folgendermaßen definiert: $\text{|}\vv{v}\text{|} = \sqrt{\displaystyle\sum_{i=1}^{n}v_{i}^2} ; \vv{v}\in\R^n$.
-            \\
-            \begin{tikzpicture}
-                \draw[dashed, ->] (0,0,0) -- (0,0,3);
-                \draw[dashed, ->] (0,0,0) -- (5,0,0);
-                \draw[dashed, ->] (0,0,0) -- (0,3,0);
-                \draw[dashed, color=red] (0,0,0) -- (5,0,3);
-                \draw (0,0,3) -- (5,0,3) -- (5,3,3) -- (0,3,3) -- (0,0,3);
-                \draw (0,3,3) -- (0,3,0) -- (5,3,0) -- (5,3,3);
-                \draw (5,3,0) -- (5,0,0) -- (5,0,3);
-                \draw[->, color=red] (0,0,0) -- (5,3,3);
-                \draw (0,0,3.3) node {$x_1$};
-                \draw (5.3,0,0) node {$x_2$};
-                \draw (0,3.3,0) node {$x_3$};
-                \draw (2.5,1.8,1.5) node [color=red]{$\vv{v}$};
-                \draw (6.5,3,3) node [color=blue]{$P_1 (v_1, v_2, v_3)$};
-                \draw (6.5,0,3) node [color=blue]{$P_2 (v_1, v_2, 0)$};
-                \draw (1.7,0,1.9) node [color=red]{$\sqrt{v_1^{2}+v_2^{2}}$};
+      \begin{Bemerkung}
+        \begin{Definition}[- Norm eines Vektors]
+        Die Norm eines Vektors ist anschaulich als seine Länge zu interpretieren. Der Betrag, wie sie ebenfalls genannt wird, eines
+         Vektors $\vv{v}$ ist folgendermaßen definiert: $\text{|}\vv{v}\text{|} = \sqrt{\displaystyle\sum_{i=1}^{n}v_{i}^2} ; \vv{v}\in\R^n$.
+        \end{Definition}
+        \begin{minipage}{0.5\textwidth}
+          \begin{tikzpicture}
+            \draw[dashed, ->] (0,0,0) -- (0,0,3);
+            \draw[dashed, ->] (0,0,0) -- (5,0,0);
+            \draw[dashed, ->] (0,0,0) -- (0,3,0);
+            \draw[dashed, color=red] (0,0,0) -- (5,0,3);
+            \draw (0,0,3) -- (5,0,3) -- (5,3,3) -- (0,3,3) -- (0,0,3);
+            \draw (0,3,3) -- (0,3,0) -- (5,3,0) -- (5,3,3);
+            \draw (5,3,0) -- (5,0,0) -- (5,0,3);
+            \draw[->, color=red] (0,0,0) -- (5,3,3);
+            \draw (0,0,3.3) node {$x_1$};
+            \draw (5.3,0,0) node {$x_2$};
+            \draw (0,3.3,0) node {$x_3$};
+            \draw (2.5,1.8,1.5) node [color=red]{$\vv{v}$};
+            \draw (6.5,3,3) node [color=blue]{$P_1 (v_1, v_2, v_3)$};
+            \draw (6.5,0,3) node [color=blue]{$P_2 (v_1, v_2, 0)$};
+            \draw (1.7,0,1.9) node [color=red]{$\sqrt{v_1^{2}+v_2^{2}}$};
             \end{tikzpicture}
-            \paragraph{} Anhand dieser Graphik lässt sich die Berechnung der Norm eines Vektors $\vv{v}\in\R^3$ verdeutlichen. Für diesen glit:
-            $\text{|}\vv{v}\text{|}=\sqrt{v_1^{2}+v_2^{2}+v_3^{2}}$.
-            \paragraph{} Ein Vektor, dessen Norm 1 beträgt wird als normiert oder Einheitsvektor bezeichnet. Für jeden Vektor $\vv{v}\in\R^{3}$ existiert
-             ein Einheitsvektor $\vv{v^{*}}$ , der folgendermaßen definiert wird: $\vv{v^{*}}=\dfrac{1}{\text{|}\vv{v}\text{|}}*\vv{v}$.
+        \end{minipage}
+        \begin{minipage}{0.5\textwidth}
+          Anhand dieser Graphik lässt sich die Berechnung der Norm eines Vektors $\vv{v}\in\R^3$ verdeutlichen. Für diesen glit:
+          $\text{|}\vv{v}\text{|}=\sqrt{v_1^{2}+v_2^{2}+v_3^{2}}$.
+        \end{minipage}
+      \end{Bemerkung}
+
+      \begin{Definition}[- Der Einheitsvektor]
+        Ein Vektor, dessen Norm 1 beträgt wird als normiert oder Einheitsvektor bezeichnet. Für jeden Vektor $\vv{v}\in\R^{3}$ existiert ein Einheitsvektor $\vv{v^{*}}$ , der folgendermaßen definiert wird: $\vv{v^{*}}=\dfrac{1}{\text{|}\vv{v}\text{|}}*\vv{v}$.
+      \end{Definition}
+
 
 
 
@@ -376,10 +375,13 @@
     Vektoren bestimmt werden.
     Es wird als die Multiplikation der Norm der Projektion des Vektors $\vv{v}$ in die Richtung von $\vv{u}$, das heißt, der Anteil
     von $\vv{v}$ der auf der Geraden liegt, entlang welcher $\vv{u}$ liegt, mit der Norm von $\vv{u}$ definiert. Im Klartext bedeutet das:
-    \begin{align*}
-        \qquad \qquad \vv{u} \odot \vv{v} &\definedBy |\vv{u}| \cdot |\vv{v'}| \\
-                            &= |\vv{u}| \cdot |\vv{v}| \cdot \cos(\alpha) \\
-    \end{align*}
+    \begin{Definition}
+      \begin{align*}
+          \qquad \qquad \vv{u} \odot \vv{v} &\definedBy |\vv{u}| \cdot |\vv{v'}| \\
+                              &= |\vv{u}| \cdot |\vv{v}| \cdot \cos(\alpha) \\
+      \end{align*}
+    \end{Definition}\\
+
     Daraus lässt sich ableiten, dass:
     \begin{itemize}
         \item $0 <= \alpha < 90 \text{ (spitzer Winkel)} \logEqR \cos{\alpha} > 0 \Leftrightarrow \vv{u} \odot \vv{v} > 0$
@@ -408,9 +410,12 @@
 
 \section{Kreuzprodukt}
 
-    \paragraph{} Das Kreuzprodukt ist das zweite nützliche Werkzeug welches in der Vektorgeometrie genutzt wird. Es dient hauptsächlich zur einfachen Berechnung
-    eines zu zwei \textbf{nicht kollinearen} Vektoren $\vv{u}$ und $\vv{v}$ orthogonalen Vektors $\vv{i}$. Seine Formel lautet wie folgt:
-    $\vv{i} = \vv{u} \times \vv{v} \definedBy \left(\begin{array}{c} u_{\textcolor{red}{2}} \cdot v_{\textcolor{orange}{3}} - u_{\textcolor{red}{3}} \cdot v_{\textcolor{orange}{2}} \\ u_{\textcolor{red}{3}} \cdot v_{\textcolor{orange}{1}} - u_{\textcolor{red}{1}} \cdot v_{\textcolor{orange}{3}} \\ u_{\textcolor{red}{1}} \cdot v_{\textcolor{orange}{2}} - u_{\textcolor{red}{2}} \cdot v_{\textcolor{orange}{1}} \end{array}\right)$.
+    \paragraph{} Das Kreuzprodukt ist das zweite nützliche Werkzeug, welches in der Vektorgeometrie genutzt wird. Es dient hauptsächlich zur einfachen Berechnung
+    eines zu zwei \textbf{nicht kollinearen} Vektoren $\vv{u}$ und $\vv{v}$ orthogonalen Vektors $\vv{i}$. \\
+    \begin{Definition}
+      $$\vv{i} = \vv{u} \times \vv{v} \definedBy \left(\begin{array}{c} u_{\textcolor{red}{2}} \cdot v_{\textcolor{orange}{3}} - u_{\textcolor{red}{3}} \cdot v_{\textcolor{orange}{2}} \\ u_{\textcolor{red}{3}} \cdot v_{\textcolor{orange}{1}} - u_{\textcolor{red}{1}} \cdot v_{\textcolor{orange}{3}} \\ u_{\textcolor{red}{1}} \cdot v_{\textcolor{orange}{2}} - u_{\textcolor{red}{2}} \cdot v_{\textcolor{orange}{1}} \end{array}\right)$$
+    \end{Definition}
+
     \begin{Beweis}
         Seien $\vv{u}$ und $\vv{v}$ beliebige zueinander nicht kollineare Vektoren des $\R^3$. Ein zu beiden Vektoren orthogonaler Vektor ergibt sich durch: \\
         \begin{align*}
