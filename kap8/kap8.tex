@@ -285,10 +285,10 @@ Aus vorheriger Definition des Euklidischen Algorithmus ergeben sich diese Eigens
 \item $r_{n}$ ist gleichzeitig Teiler von $a$ und $b$.
 \item Jeder andere Teiler von $a$ und $b$ ist auch Teiler von $r_{n}$
 \end{enumerate}
-$r_{n}$ ist der größte gemeinsame Teiler von $a$ und $b$.\quad ggT$(a;b) = r_{n}$. Es gilt also:
+$r_{n}$ ist der größte gemeinsame Teiler von $a$ und $b$.\quad ggT$(a\,;b) = r_{n}$. Es gilt also:
 \begin{itemize}
-\item ggT$(a;b) =$ ggT$(b;a)$
-\item $a | c$ und $b | d \quad \Rightarrow \quad$ ggT$(a,b) |$ ggT$(c;d)$\\
+\item ggT$(a\,;b) =$ ggT$(b\,;a)$
+\item $a | c$ und $b | d \quad \Rightarrow \quad$ ggT$(a\,;b) |$ ggT$(c\,;d)$\\
 \end{itemize}
 \end{Theorem}
 
@@ -316,11 +316,69 @@ $r_{n}$ ist der größte gemeinsame Teiler von $a$ und $b$.\quad ggT$(a;b) = r_{
 		$90 & = & 2 \cdot 45 & + & 0$\\
 		\end{array}\\
 		\right\} \qquad $ggT$(2340;2835) =$ ggT$(2835;2340) = 45 $\\\\
-\\\\\
+\\\\
 Aus \quad $780\, |\, 2340$ und $567 | 2835$ \quad folgt \quad  ggT$(780,567)\, |\,$ ggT$(2340;2385)\,\,\,$ oder auch $3 \,|\, 45$
 
 
 \end{Beispiel}
+
+\subsection{Der kleine Satz von Fermat}
+
+\begin{Definition}
+Sei $a$ eine ganze Zahl und $p \in \mathbb{P}$ kein Teiler von $a$. Dann gilt
+$$a^{p-1} \equiv 1 \mod p$$
+\end{Definition}
+
+\begin{Beweis}
+
+\end{Beweis}
+
+
+\subsection{Zusammenhänge zwischen ggT und kgV}
+
+blablabla
+
+\subsection{Die Sätze von Bézout, Gauß und der Fundamentalsatz des ggT}
+
+
+\begin{Definition}
+Der \textbf{Fundamentalsatz des ggT} besagt, dass für $a,b \, \in \N$ ganze Zahlen $u$ und $v$ exisitieren, sodass gilt: 
+$$a\cdot u + b\cdot v \,=\, \text{ggT(a; b)} $$
+Wenn $a$ und $b$ teilerfremd sind, dann gilt im Sonderfall: $\exists u, v \, \in \Z$:
+$$a\cdot u + b\cdot v \,=\, \text{ggT(a; b)} \,=\, 1 $$
+\\\\\\
+Daraus folgt der \textbf{Satz von Bézout}. Zwei ganze Zahlen ungleich Null sind genau dann teilerfremd, wenn $\exists u, v \, \in \Z$ gibt, sodass gilt:
+$$a\cdot u + b\cdot v \,=\, 1 $$
+\\\\\\
+Der \textbf{Satz von Gauß} ist bei diophantischen Gleichungen nützlich: Es seien $a$, $b$ und $c$ ganze Zahlen ungleich Null und seien $a$ und $b$ teilerfremd.
+$$a | bc \quad \Rightarrow \quad a | c$$
+\\\\\\
+Daraus folgt:
+$$\text{ggT(a; $b_{1}$)} \quad \text{und} \quad \text{ggT(a; $b_{2}$)} \qquad \Leftrightarrow \qquad \text{ggT(a; $b_{1}\cdot b_{2}$)}    $$
+\end{Definition}
+
+
+
+\begin{Beispiel}
+Musterlösung einer diophantischen Gleichung
+\end{Beispiel}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
