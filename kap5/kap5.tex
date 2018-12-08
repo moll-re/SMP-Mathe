@@ -76,26 +76,27 @@
 
 \section{Basen und Erzeugendensystem}
 
-    \paragraph{} Eine endliche Anzahl von Vektoren $\vv{a_1},\vv{a_2},...,\vv{a_n}\in V$ heißt Erzeugendensystem, wenn sich \texbf{jeder} Vektor $\vv{v}\in V$
-     als Linearkombination dieser Vektoren schreiben lässt. Um ein Erzeugendensystem zu bilden benötigt man mindestens die Anzahl Vektoren, die der Anzahl
-      von Dimensionen von $\vv{v}$ entspricht. Wenn man \textbf{genau} diese Anzahl besitzt, spricht man von einer Basis.
-
+    \begin{Definition}
+      Eine endliche Anzahl von Vektoren $\vv{a_1},\vv{a_2},...,\vv{a_n}\in V$ heißt Erzeugendensystem, wenn sich \texbf{jeder} Vektor $\vv{v}\in V$
+      als Linearkombination dieser Vektoren schreiben lässt. Um ein Erzeugendensystem zu bilden benötigt man mindestens die Anzahl Vektoren, die der Anzahl von Dimensionen von $\vv{v}$ entspricht. Wenn man \textbf{genau} diese Anzahl besitzt, spricht man von einer Basis.
+    \end{Definition}
 
     \subsection{Besondere Basen}
 
 
-        \subsubsection{Orthogonalbasis}
+        \begin{Definition}[- Orthogonalbasis]
+          Sind die Vektoren der Basis paarweise orthogonal zueinander, so spricht man von einer \textbf{Orthogonalbasis}.
+        \end{Definition}
 
-            \paragraph{} Sind die Vektoren der Basis paarweise orthogonal zueinander, so spricht man von einer \textbf{Orthogonalbasis}.
 
 
-        \subsubsection{Orthonormalbasis}
-
-            \paragraph{} Sind die Vektoren zusätzlich zu dieser Bedingung normiert, wird sie als \textbf{Orthonormalbasis} bezeichnet.
-            Die einfachste und meist benutzte Basis des $\R^3$ besteht aus den drei Vektoren $\vv{e_1}=\left(\begin{array}{c}{1\\0\\0}\end{array}\right),
-            \vv{e_2}=\left(\begin{array}{c}{0\\1\\0}\end{array}\right),\vv{e_3}=\left(\begin{array}{c}{0\\0\\1}\end{array}\right)$. Sie wird als \textbf{Standardbasis}
-            des $\R^3$ bezeichnet. Vektoren wie $\vv{v}=\left(\begin{array}{c}{2\\3\\8}\end{array}\right)$ lassen sich als eine Linearkombination der drei
-            Vektoren der Standardbasis darstellen: $\vv{v}=2\cdot\vv{e_1}+3\cdot\vv{e_2}+8\cdot\vv{e_3}$.
+        \begin{Definition}[- Orthonormalbasis]
+          Sind die Vektoren zusätzlich zu dieser Bedingung normiert, wird sie als \textbf{Orthonormalbasis} bezeichnet.
+          Die einfachste und meist benutzte Basis des $\R^3$ besteht aus den drei Vektoren $\vv{e_1}=\left(\begin{array}{c}{1\\0\\0}\end{array}\right),
+          \vv{e_2}=\left(\begin{array}{c}{0\\1\\0}\end{array}\right),\vv{e_3}=\left(\begin{array}{c}{0\\0\\1}\end{array}\right)$. Sie wird als \textbf{Standardbasis}
+          des $\R^3$ bezeichnet. Vektoren wie $\vv{v}=\left(\begin{array}{c}{2\\3\\8}\end{array}\right)$ lassen sich als eine Linearkombination der drei
+          Vektoren der Standardbasis darstellen: $\vv{v}=2\cdot\vv{e_1}+3\cdot\vv{e_2}+8\cdot\vv{e_3}$.
+        \end{Definition}
 
 
     \subsection{Basistransformation}
