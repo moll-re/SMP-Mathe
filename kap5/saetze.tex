@@ -46,7 +46,7 @@
   \end{center}
 \end{Beweis}
 \begin{Bemerkung}
-  Dieser Beweis ist weitaus intuitiver und einfacher, wenn er in der klassischen Geometrie vollführt wird, aber unser Ziel ist es die vorliegenden Sätze über Vektoren, und damit analytisch zu beweisen.
+  Dieser Beweis ist weitaus intuitiver und einfacher, wenn er in der klassischen Geometrie vollführt wird, aber das Ziel ist der Beweis über Vektoren, und somit analytisch.
 \end{Bemerkung}
 \begin{Theorem}[- Umkehrung]
   \begin{minipage}{0.5\textwidth}
@@ -78,7 +78,7 @@
   \end{minipage}
 \end{Theorem}
 \begin{Beweis}
-  test
+  Sind Äquivalenzumformungen nicht schön?
 \end{Beweis}
 
 \subsection{Euklids Sätze}
@@ -120,7 +120,24 @@
   \end{minipage}
 \end{Theorem}
 \begin{Beweis}
-  test
+  \begin{itemize}
+    \item \begin{align*}
+      a^2 &= c^2-b^2 \text{\qquad\qquad $|$Pythagoras}\\
+      &= c^2 -(q^2+h^2)\\
+      &= c^2 - ((c-p)^2+(a^2-p^2))\\
+      &= c^2 - c^2+ 2cp -p^2 - a^2 + p^2\\
+      \Leftrightarrow 2a^2&=2cp \\
+      \Leftrightarrow a^2&=cp
+    \end{align*}
+    \item \begin{align*}
+      b^2 &= c^2-a^2 \text{\qquad\qquad $|$Pythagoras}\\
+      &= c^2 -(p^2+h^2)\\
+      &= c^2 - ((c-q)^2+(b^2-q^2))\\
+      &= c^2 - c^2+ 2cq -q^2 - b^2 + q^2\\
+      \Leftrightarrow 2b^2&=2cq \\
+      \Leftrightarrow b^2&=cq
+    \end{align*}
+  \end{itemize}
 \end{Beweis}
 \begin{Theorem}[- Höhensatz]
   \begin{minipage}{0.5\textwidth}
@@ -157,31 +174,81 @@
   \end{minipage}
 \end{Theorem}
 \begin{Beweis}
-  test
+  Der ist einfach:
+  \begin{align*}
+    a^2+b^2 &=c^2\\
+    \Leftrightarrow p^2+h^2+q^2+h^2 &= (p+q)^2\\
+    \Leftrightarrow p^2+h^2+q^2+h^2 &= p^2+2pq+q^2\\
+    \Leftrightarrow h^2+h^2 &= 2pq\\
+    \Leftrightarrow 2h^2 &= 2pq\\
+    \Leftrightarrow h^2 &= pq\\
+  \end{align*}
 \end{Beweis}
 
 \subsection{Strahlensätze}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
 \begin{Theorem}
   \begin{minipage}{0.5\textwidth}
     Sei ein Dreieck $\Delta ABC$ mit M einem Punkt der Geraden $(AB)$ und N einem Punkt der Geraden $(AC)$. Wenn $(BC)//(MN)$, dann gilt:\\
     $$\dfrac{AM}{AB}=\dfrac{AN}{AC}=\dfrac{MN}{BC}$$
   \end{minipage}
   \begin{minipage}{0.5\textwidth}
-
+    \begin{center}
+      \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.2]
+      \clip(-15,-3) rectangle (10,20);
+      \draw [line width=1pt] (-13.88,18.25)-- (6.89,-2);
+      \draw [line width=1pt] (-6.52,-2)-- (3.2960189635404364,18.25132707869476);
+      \draw [line width=1pt] (-13.88,18.25)-- (3.2960189635404364,18.25132707869476);
+      \draw [line width=1pt] (-6.52,-2)-- (6.89,-2);
+      \begin{scriptsize}
+      \draw [fill=ududff] (-13.88,18.25) circle (2.5pt);
+      \draw[color=ududff] (-13.478989755879722,19.31815120175381) node {$C$};
+      \draw [fill=ududff] (3.2960189635404364,18.25132707869476) circle (2.5pt);
+      \draw[color=ududff] (3.7115390914138193,19.31815120175381) node {$B$};
+      \draw [fill=ududff] (-6.52,-2) circle (2.5pt);
+      \draw[color=ududff] (-8,-0.5) node {$M$};
+      \draw [fill=ududff] (6.89,-2) circle (2.5pt);
+      \draw[color=ududff] (7.286777284725581,-0.957857182233367) node {$N$};
+      \draw [fill=uuuuuu] (-2.2164992168880455,6.878507902839813) circle (2pt);
+      \draw[color=uuuuuu] (-0.8432164151340418,7.31906411461164) node {$A$};
+      \end{scriptsize}
+      \end{tikzpicture}
+    \end{center}
   \end{minipage}
 \end{Theorem}
 \begin{Beweis}
   test
 \end{Beweis}
-Die Umkehrung dieses Satzes:
-\begin{Theorem}
+
+\begin{Theorem}[- Umkehrung]
   \begin{minipage}{0.5\textwidth}
   Sei ein Dreieck $\Delta ABC$ mit M einem Punkt der Geraden $(AB)$ und N einem Punkt der Geraden $(AC)$. Wenn gilt:\\
   $$\dfrac{AB}{AC}=\dfrac{AM}{AN}$$
     Dann ist $(BC)//(MN)$.
   \end{minipage}
   \begin{minipage}{0.5\textwidth}
-    draw
+    \begin{center}
+      \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.2]
+      \clip(-15,-3) rectangle (10,20);
+      \draw [line width=1pt] (-13.88,18.25)-- (6.89,-2);
+      \draw [line width=1pt] (-6.52,-2)-- (3.2960189635404364,18.25132707869476);
+      \draw [line width=1pt] (-13.88,18.25)-- (3.2960189635404364,18.25132707869476);
+      \draw [line width=1pt] (-6.52,-2)-- (6.89,-2);
+      \begin{scriptsize}
+      \draw [fill=ududff] (-13.88,18.25) circle (2.5pt);
+      \draw[color=ududff] (-13.478989755879722,19.31815120175381) node {$C$};
+      \draw [fill=ududff] (3.2960189635404364,18.25132707869476) circle (2.5pt);
+      \draw[color=ududff] (3.7115390914138193,19.31815120175381) node {$B$};
+      \draw [fill=ududff] (-6.52,-2) circle (2.5pt);
+      \draw[color=ududff] (-8,-0.5) node {$M$};
+      \draw [fill=ududff] (6.89,-2) circle (2.5pt);
+      \draw[color=ududff] (7.286777284725581,-0.957857182233367) node {$N$};
+      \draw [fill=uuuuuu] (-2.2164992168880455,6.878507902839813) circle (2pt);
+      \draw[color=uuuuuu] (-0.8432164151340418,7.31906411461164) node {$A$};
+      \end{scriptsize}
+      \end{tikzpicture}
+    \end{center}
   \end{minipage}
 \end{Theorem}
 \begin{Beweis}
@@ -189,15 +256,15 @@ Die Umkehrung dieses Satzes:
 \end{Beweis}
 
 \subsection{Der Satz des Apollinius}
-\begin{Definition}
+\begin{Theorem}
   \begin{minipage}[t]{0.5\textwidth}
-    Gegeben sind: Eine Strecke $[AB]$ und eine positive Zahl $\lambda \in \R^{+} \backslash \{1\}$. Dann ist die Punktmenge $$M_{A}=\{X| \dfrac{\overline{AX}} {\overline{XB}}=\lambda \}$$ ein Kreis, den man \textbf{Kreis des Apollinius} nennt.
+    Gegeben sind: Eine Strecke $[AB]$ und eine positive Zahl $\lambda \in \R^{+} \backslash \{1\}$. Dann ist die Punktmenge $$M_{A}=\left\{ X \left| \dfrac{\overline{AX}} {\overline{BX}}=\lambda \right\}$$ ein Kreis, den man \textbf{Kreis des Apollinius} nennt.
   \end{minipage}
   \begin{minipage}[t]{0.5\textwidth}
     \center{Anschaulich:}\\
     \definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
     \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.4]
-      \clip(-15.430804837667225,-8) rectangle (6.387208662312055,4);
+      \clip(-14,-6.5) rectangle (4,3);
       \draw [line width=0.6pt] (-3.467268565272,-2.1740714480434544) circle (4.233988972549521cm);
       \draw [line width=0.6pt] (-6.695919714230329,0.5649930597768731)-- (-5.612633124394338,-2.1755042586210407);
       \draw [line width=0.6pt] (-6.695919714230329,0.5649930597768731)-- (-13.088243523450211,-2.180496945578665);
@@ -216,26 +283,14 @@ Die Umkehrung dieses Satzes:
       \end{scriptsize}
     \end{tikzpicture}
   \end{minipage}
-  Der Satz besagt also, dass alle Punkte $X$ deren Abst"ande zu $A$ ($\overline{AX}$) und zu $B$ ($\overline{XB}$) im Verh"altnis $\lambda$ stehen, auf einem Kreis liegen.\\
-\end{Definition}
+\end{Theorem}
+\begin{\small}
 \begin{Beweis}
-  Anfangen kann man den den Beweis damit, dass man zwei Punkte sucht, die die Bedingung erf"ullen \textbf{und} auf der Geraden $AB$ liegen. Logisch ist, dass einer dieser Punkte zwischen $A$ und $B$ sein wird, dieser wird \textbf{innerer Teilungspunkt} $T_{i}$ genannt. Der andere Punkt liegt au"serhalb der Strecke $[AB]$ und wird \textbf{"au"serer Teilungspunkt} $T_{a}$ genannt. \\
-  Im letzten Schritt des Beweises wird man anhand des Skalarprodukts zeigen, dass f"ur alle Punkte $X$, die ebenfalls die Verh"altnisgleichung erf"ullen, die Vektoren $\vv{T_{i}X}$ und $\vv{T_{a}X}$ orthogonal zueinander sind. Somit liegen diese Punkte auf dem Thaleskreis (frz.: Theoreme du triangle rectangle) "uber $T_{i}$ und $T_{a}$, der dann \textbf{Apolliniuskreis} genannt wird.\\
-  \begin{enumerate}
+\begin{enumerate}
+  \item {Die Ausgangspunkte:  \vartriangleright $A(0|0)$ \qquad \vartriangleright $B(b|0)$ \qquad \vartriangleright $T_{i}(t_{i}|0)$ \qquad \vartriangleright $T_{a}(t_{a}|0)$ \qquad \vartriangleright $X(x|y)$
+  }
 
-
-  \item {Um uns die Arbeit so einfach wie m"oglich zu machen, platzieren wir unseren ersten Punkt $A$ auf den Ursprung eines Koordinatensystems und die Strecke $[AB]$ entlang der $x$-Achse . Der Punkt $B$ hat den Abstand $\overline{AB}$ zu $A$, den man $b$ abk"urzt. Gleicherma"sen verf"ahrt man mit den L"angen $\overline{AT_{i}}=t_{i}$ und $\overline{AT_{a}}= t_{a}$, und man f"uhrt den Punkt $X(x|y)$ ein.\\
-  Hier nochmal ein "Uberblick:\\
-  \\
-  \vartriangleright $A(0|0)$ \qquad \vartriangleright $B(b|0)$ \qquad \vartriangleright $T_{i}(t_{i}|0)$ \qquad \vartriangleright $T_{a}(t_{a}|0)$ \qquad \vartriangleright $X(x|y)$\\
-  \\}
-
-  \item {Nun gilt:
-  \begin{center}
-  $\dfrac{\overline{AT_{i}}}{\overline{T_{i}B}} = \lambda$ \qquad und \qquad $\dfrac{\overline{AT_{a}}}{\overline{T_{a}B}} = \lambda$ \\
-  \end{center}
-  Das benutzt man, um die Koordinaten $t_{i}$ und $t_{a}$ in Abh"angigkeit von $b$ und $\lambda$ auszudr"ucken, denn diese Punkte sind ja durch das Verh"altnis $\lambda$ in der Ebene festgelegt.\\
-
+  \item {Nun gilt:\\
   \begin{minipage}[t]{0.5\textwidth}
   \begin{array}{rccl}
   &$\dfrac{\overline{AT_{i}}}{\overline{T_{i}B}}$ & $=$ & $\lambda$\\
@@ -250,84 +305,64 @@ Die Umkehrung dieses Satzes:
   \begin{array}{rccl}
   &$\dfrac{\overline{AT_{a}}}{\overline{T_{a}B}} $&$ = $&$ \lambda$\\
   $\Leftrightarrow $&$ \dfrac{t_{a}}{t_{a}-b} $&$ = $& $\lambda$\\
-  $\Leftrightarrow & $t_{a}$&$=$&$\lambda \cdot t_{a} - \lambda \cdot b$\\
+  $\Leftrightarrow $&$ t_{a}$&$=$&$\lambda \cdot t_{a} - \lambda \cdot b$\\
   $\Leftrightarrow & \lambda \cdot t_{a} - t_{a} $&$=$&$\lambda \cdot b$\\
   $\Leftrightarrow & (\lambda -1 \cdot )t_{a} $&$=$&$\lambda \cdot b$\\
   $\Leftrightarrow & t_{a} $&$=$&$ \dfrac{\lambda}{\lambda -1}\cdot b$\\
   \end{array}
-  \end{minipage}}
-  \\
-  \item{ Jetzt wo wir $T_{i}$ und $T_{a}$ in Abh"angigkeit von $b$ und $\lambda$ bestimmt haben, kann man die Vorraussetzung auch noch auf den Punkt $X$ anwenden.\\
-  \\
-  \begin{array}{rcccl}
-  &$\dfrac{\overline{AX}}{\overline{XB}}$ & $=$ & $\lambda$ \\
-  $\Leftrightarrow & $(\dfrac{\overline{AX}}{\overline{XB}})^2$ & $=$ & \lambda^2$\\
-  $\Leftrightarrow & $\dfrac{(\overline{AX})^2}{(\overline{XB})^2}$ & $=$ & \lambda^2$\\
-  $\Leftrightarrow & $\dfrac{x^2+y^2}{(x-b)^2+y^2} $ & $=$ & $\lambda^2$\\
-  $\Leftrightarrow & $x^2+y^2$ & $=$ & $\lambda^2 \cdtot [(x-b)^2+y^2]$\\
-  $\Leftrightarrow & $0$ & $=$ & $\lambda^2 \cdot (x-b)^2 +\lambda^2 y^2 -x^2 -y^2$\\
-  $\Leftrightarrow & $0$ & $=$ & $x^2\cdot \lambda^2 - 2bx\cdot \lambda^2 +b^2\cdot \lambda^2 +y^2\cdot \lambda^2 -x^2-y^2 $ &\textcolor{red}{(1)}\\
-  \\
-  \end{array}
-  }
-
-
-
-  \item{
-  Bevor man zum Ende kommt, kann man noch die Ergebnisse aus 2) benutzen, um $t_{i}$ und $t_{a}$ miteinander zu verrechnen, denn diesen Zusammenhang braucht man gleich.\\
+  \end{minipage}\\
   \begin{center}
   \begin{array} {rccccccl}
-  $t_{i} + t_{a} $ & $=$ & $\dfrac {\lambda}{\lambda +1}\cdot b + $\dfrac {\lambda}{\lambda -1}\cdot b  $ &$=$& $(\dfrac{\lambda}{\lambda+1} + \dfrac{\lambda}{\lambda-1})\cdot b$ & $=$ & $\dfrac{\lambda^2}{\lambda^2 -1}\cdot 2b$ \qquad \textcolor{red}{(2)}\\
+  $t_{i} + t_{a} $ & $=$ & $\dfrac {\lambda}{\lambda +1}\cdot b + $\dfrac {\lambda}{\lambda -1}\cdot b  $ &$=$& $(\dfrac{\lambda}{\lambda+1} + \dfrac{\lambda}{\lambda-1})\cdot b$ & $=$ & $\dfrac{\lambda^2}{\lambda^2 -1}\cdot 2b$ \qquad \textcolor{red}{(1)}\\
   \end{array}
   \\
   \begin{array} {rcccccl}
-  $t_{i} \cdot t_{a} $ & $=$ & $\dfrac {\lambda}{\lambda +1}\cdot b \cdot $\dfrac {\lambda}{\lambda +1}\cdot b $ & $=$ & $\dfrac{\lambda^2}{\lambda^2 -1}\cdot b^2$ \qquad \textcolor{red}{(3)}\\ \\
+  $t_{i} \cdot t_{a} $ & $=$ & $\dfrac {\lambda}{\lambda +1}\cdot b \cdot $\dfrac {\lambda}{\lambda +1}\cdot b $ & $=$ & $\dfrac{\lambda^2}{\lambda^2 -1}\cdot b^2$ \qquad \textcolor{red}{(2)}\\ \\
   \end{array}
   \end{center}
   }
 
-  \item{
-  Nun kommt der finale Schritt. Man bildet die Vektoren $\vv{T_{i}X} = \left(\begin{array}{c} x-t_{i} \\ y \end{array}\right)$ und $\vv{T_{a}X} = \left(\begin{array}{c} x-t_{a} \\ y \end{array}\right)$ und berechnet deren Skalarprodukt. $\ast$ TROMMELWIRBEL$\ast$ \\
-  \\
+  \item{$T_{i}$ und $T_{a}$ in Abhängigkeit von $b$ und $\lambda$ jetzt auch noch $X$:
+  \begin{array}{rccll}
+                    &$ \dfrac{\overline{AX}}{\overline{XB}}$        & $=$ & $\lambda$ \\
+  $\Leftrightarrow $&$ \dfrac{(\overline{AX})^2}{(\overline{XB})^2}$& $=$ & $\lambda^2$ \\
+  $\Leftrightarrow $&$ \dfrac{x^2+y^2}{(x-b)^2+y^2} $               & $=$ & $\lambda^2$ \\
+  $\Leftrightarrow $&$ x^2+y^2 $                                    & $=$ & $\lambda^2 \cdtot [(x-b)^2+y^2]$ \\
+  $\Leftrightarrow $&$ 0 $                                          & $=$ & $\lambda^2 \cdot (x-b)^2 +\lambda^2 y^2 -x^2 -y^2$\\
+                    &                                               & $=$ & $ x^2\cdot \lambda^2 - 2bx\cdot \lambda^2 +b^2\cdot \lambda^2 +y^2\cdot \lambda^2 -x^2-y^2 $ \textcolor{red}{(3)}
+  \end{array}
+  }
+
+  \item{$\vv{T_{i}X} = \left(\begin{array}{c} x-t_{i} \\ y \end{array}\right); \vv{T_{a}X} = \left(\begin{array}{c} x-t_{a} \\ y \end{array}\right)$
   \begin{center}
   \begin{array}{rccl}
   $\vv{T_{i}X} \cdot \vv{T_{a}X}$ &$=$& $(x-t_{i})\cdot (x-t_{a}) +y^2$\\
-  & $=$ & $x^2 -(t_{i} +t_{a})x + t_{i}\cdot t_{a} + y^2$ & $Benutze (2) und (3) \\
+  & $=$ & $x^2 -(t_{i} +t_{a})x + t_{i}\cdot t_{a} + y^2$ & $Benutze (1) und (2) \\
   & $=$ & $x^2 - \dfrac{\lambda^2}{\lambda^2 - 1} \cdot 2bx + \dfrac{\lambda^2}{\lambda^2 - 1} \cdot b^2 +y^2$\\
   & $=$ & $\dfrac{x^2 \cdot (\lambda^2 -1) - 2bx\cdot \lambda^2 + b^2\cdot \lambda^2 + y^2 \cdot (\lambda^2 -1)}{\lambda^2 -1}$\\
-  & $=$ & $\dfrac{x^2 \cdot \lambda^2 - 2bx\cdot \lambda^2 b^2\cdot \lambda^2 +y^2\cdot \lambda^2 -x^2 -y^2} {\lambda^2 -1}$ &  $Benutze (1) \\
+  & $=$ & $\dfrac{x^2 \cdot \lambda^2 - 2bx\cdot \lambda^2 b^2\cdot \lambda^2 +y^2\cdot \lambda^2 -x^2 -y^2} {\lambda^2 -1}$ &  $Benutze (3) \\
   & $=$ & $0$\\
   \\
   \end{array}
   \end{center}
   }
 
-  Damit hat man bewiesen, dass f"ur alle Punkte $X$ die Vektoren $\vv{T_{i}X}$ und $\vv{T_{a}X}$ orthogonal zueinander sind, weshalb sie auf dem Thaleskreis "uber $T_{i}$ und $T_{a}$ liegen m"ussen.\\ \\
+  $\Rightarrow \vv{T_{i}X} \bot \vv{T_{a}X} \forall X \Rightarrow \vv{T_{i}X},\vv{T_{a}X}\in$ Thaleskreis über $T_{i}$ und $T_{a}$.
   \end{enumerate}
 \end{Beweis}
-
-
-Die Figur und die Zusammenh"ange, die man durch den Satz des Apollinius erhalten hat, kann man benutzen, um ein wenig mit Winkeln zu spielen: \\
-\\
-\includegraphics[width=5in]{kap5/Apollinius_Winkel}\\
-\\
-\begin{mdframed}
-Auf dieser Skizze sind 10 Winkel gekennzeichnet, zu welchen sich eine ganze Reihe von Beziehungen aufstellen l"asst:\\
-\\
-\begin{array}{rcccl}
-$\vartriangleright \alpha + \beta + \gamma = 180 $ & $\vartriangleright \beta + \gamma_{2} + \delta_{2} = \ang{180} $ & $\vartriangleright \delta_{1} + \delta_{2} = \ang{180} $ & $\vartriangleright \alpha + \gamma + \epsilon + \zeta = \ang{180} $ &$\vartriangleright \epsilon + \zeta + \eta = \ang{180}$\\
-$\vartriangleright \aplha + \gamma_{1} + \delta_{1} = \ang{180} $ & $\vartriangleright \gamma_{1} + \gamma_{2} = \gamma $ & $\vartriangleright \gamma_{2} + \epsilon = \ang{90} $ & $\vartriangleright \beta + \eta = \ang{180} $ &$\vartriangleright \gamma_{2} + \delta_{2} + \epsilon + \zeta = \ang{180}$\\
-\\
-\end{array}
-\\
-Hiermit bekommt man ein zehndimensionales Gleichungssystem mit dem sich $\gamma_{1} = \gamma_{2}$ zeigen l"asst. Dies bedeutet dass die Gerade $T_{i}X$ auch noch die Winkelhalbierende des Winkels $\gamma = \angle AXB$ ist:
-\\
-\end{mdframed}
-\begin{Definition}
-  Eine Innenwinkelhalbierende eines Dreiecks teilt die gegen"uberliegende Seite im Verh"altnis der Anliegenden Seiten. \qquad $\gamma_{1}=\gamma_{2} \Rightarrow \overline{AT_{i}}:\overline{T_{i}B}=\overline{AX}:\overline{XB}$\\
-  \tiny{Quelle: Skript 1ere SBC S.68-71, 06.03.18, Tobias Rave}
-\end{Definition}
- \begin{center}
-\includegraphics[width=4.7in]{kap5/Apollinus_Winkelhalbierende_Bild.pdf}
-\end{center}
+\begin{Bemerkung}
+  \begin{minipage}{0.5\textwidth}
+    \includegraphics[width=8cm]{kap5/Apollinius_Winkel}
+  \end{minipage}
+  \begin{minipage}{0.5\textwidth}
+    Die Figur und die Zusammenh"ange, die man durch den Satz des Apollinius erhalten hat, kann man benutzen, um ein wenig mit Winkeln zu spielen:
+  \end{minipage}\\
+  Über diese 10 Winkel lassen sich einige Beziehungen aufstellen:\\
+  \begin{array}{rcccl}
+  $\vartriangleright \alpha + \beta + \gamma = 180 $ & $\vartriangleright \beta + \gamma_{2} + \delta_{2} = \ang{180} $ & $\vartriangleright \delta_{1} + \delta_{2} = \ang{180} $ & $\vartriangleright \alpha + \gamma + \epsilon + \zeta = \ang{180} $ &$\vartriangleright \epsilon + \zeta + \eta = \ang{180}$\\
+  $\vartriangleright \aplha + \gamma_{1} + \delta_{1} = \ang{180} $ & $\vartriangleright \gamma_{1} + \gamma_{2} = \gamma $ & $\vartriangleright \gamma_{2} + \epsilon = \ang{90} $ & $\vartriangleright \beta + \eta = \ang{180} $ &$\vartriangleright \gamma_{2} + \delta_{2} + \epsilon + \zeta = \ang{180}$
+  \end{array}
+  \\
+  Löst man dieses Gleichungssystem, erhält man $\gamma_{1} = \gamma_{2}$, was bedeutet, dass die Gerade $T_{i}X$ Winkelhalbierende des Winkels $\gamma = \angle AXB$ ist:
+\end{Bemerkung}
 \end{small}

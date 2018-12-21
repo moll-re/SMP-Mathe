@@ -66,7 +66,7 @@
   \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (9.75,-7) -- (9.75,-5.25) -- (10.5,-5.25) -- (10.5,-7) -- cycle;
   \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (7.5,-7) -- (7.5,-4.4) -- (8.25,-4.4) -- (8.25,-7) -- cycle;
   \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (8.25,-7) -- (8.25,-4.75) -- (9,-4.75) -- (9,-7) -- cycle;
-  \draw[line width=0.8pt,fill=lightre,fillre opacity=0.2] (9,-7) -- (9,-5.25) -- (9.75,-5.25) -- (9.75,-7) -- cycle;
+  \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (9,-7) -- (9,-5.25) -- (9.75,-5.25) -- (9.75,-7) -- cycle;
   \draw[line width=0.8pt,fill=lightre,fill opacity=0.2] (9.75,-7) -- (9.75,-6.2) -- (10.5,-6.2) -- (10.5,-7) -- cycle;
   \draw[line width=1.2pt,color=orange] (7.5,-4.2) -- (7.5,0-7) node[below] {a};
   \draw[line width=1.2pt,color=orange] (10.5,-6.2) -- (10.5,-7) node[below] {b};
@@ -80,7 +80,7 @@
 
 \begin{Theorem}
   Für eine auf einem Intervall $I$ stetige Funktion $f$ und einer reellen Zahl $a\in I$ gilt: Die Funktion, die über $I$ definiert ist durch $x\mapsto\displaystyle{\int_a^xf(t)dt}$, ist die Stammfunktion von $f$, die bei $a$ gleich $0$ ist.
-\end{Theorem}
+\end{Theorem}\\
 Aus diesen Sätzen stellt sich der \textbf{Hauptsatz der Differenzial- und Integralrechnung} zusammen. Wir beschränken uns in diesem Kapitel auf die Integralrechnung, da die Differentialrechnung bereits in Kapitel \ref{Funktionsuntersuchung} behandelt wird.\\
 \begin{Bemerkung}
   Man beobachtet hier eine Erweiterung der NEW-Regel (siehe \ref{NEW-Regel}, NEW-Regel):\\\\
@@ -181,10 +181,10 @@ Hoffentlich einleuchtend und selbstverständlich:
 \end{Theorem}
 \begin{Bemerkung}
   Die einzige Ausnahme stellt der Fall $n=-1$ dar:
-\end{Bemerkung}
-\begin{Theorem}
-  $$\int \dfrac{1}{x} dx = \ln(|x|) + C$$
-\end{Theorem}
+  \begin{Theorem}
+    $$\int \dfrac{1}{x} dx = \ln(|x|) + C$$
+  \end{Theorem}
+\end{Bemerkung}\\
 Eine Konsequenz dessen ist:
 \begin{Theorem}
   $$\int \dfrac{a}{bx+c} dx = \dfrac{a}{b}\ln(|bx+c|) + C$$
@@ -201,9 +201,9 @@ Eine Konsequenz dessen ist:
 \begin{Beweis}\\
 \begin{align*}
   &&(u(x)*v(x))' &= u'(x)v(x)+u(x)v'(x)\\
-  &\Rightarrow & \int (u(x)*v(x))' dx &= \int u'(x)v(x)+\int u(x)v'(x)\\
-  &\Leftrightarrow & u(x)*v(x) &= \int u'(x)v(x)+\int u(x)v'(x)\\
-  &\Leftrightarrow & \int u(x)v'(x) &= u(x)*v(x)- \int u'(x)v(x)\\
+  &\Rightarrow & \int (u(x)*v(x))' dx &= \int u'(x)v(x)dx+\int u(x)v'(x)dx\\
+  &\Leftrightarrow & u(x)*v(x) &= \int u'(x)v(x)dx + \int u(x)v'(x)dx\\
+  &\Leftrightarrow & \int u(x)v'(x)dx &= u(x)*v(x)- \int u'(x)v(x)dx\\
 \end{align*}
 \end{Beweis}
 \begin{Beispiel}
@@ -219,9 +219,9 @@ Eine Konsequenz dessen ist:
 \subsection{Substitution}
 \begin{Theorem}
   Sei $f$ eine auf $[a;b]$ stetige funktion und $g$ eine auf diesem Intervall differenzierbare Funktion mit stetiger Ableitung
-  $g'$. Wenn die verkettung $f \circ g$ existiert, gilt:
+  $g'$. Wenn die Verkettung $f \circ g$ existiert, gilt:
   $$\int_a^b f(g(x))\cdot g'(x)dx=\int_{g(a)}^{g(b)}f(z)dz$$
-\end{Theorem}
+\end{Theorem}\\
 Eine abgespeckte Variante dieses Theorems, genannt lineare Substitution ist gegeben durch:
 \begin{Theorem}
   Für ein Funktion $f$ mit einer Stammfunktion $F$ und $r\neq 0$ gilt:
@@ -271,19 +271,22 @@ Es handelt sich hierbei streng genommen auch um eine Substitution:
 \end{Beweis}
 \subsection{Integrale von (un)geraden Funktionen}
 \begin{Theorem}
-  Sei $f$ eine auf einem Intervall $I$ stetige und auf $0$ zentrierte Funktion. Wenn $f$ gerade ist, gilt für alle $a\in \R$:
+  Sei $f$ eine auf einem Intervall $I$ stetige und auf $0$ zentrierte Funktion. Wenn $f$ gerade ist, gilt $\forall a\in \R$:
   $\displaystyle{\int_{-a}^{a} f(t)dt = 2\int_{0}^{a} f(t)dt } $, und wenn $f$ ungerade ist:
   $\( \displaystyle\int_{-a}^{a} f(t)dt = 0 \) $
 \end{Theorem}
 \begin{Beweis}
   Sei die Funktion $\varphi(x) = \( \displaystyle\int_{-x}^{x}f(t)dt = F(x)-F(-x)$ mit $F$, einer Stammfunktion von $f$. Also ist $\varphi$ auf
   $I = [-x;x]$ differenzierbar und $\varphi'(x) = F'(x)-F'(-x)=f(x)+f(-x)$.\\
-  Wenn $f$ auf $I$ ungerade ist, gilt: $\varphi'(x) = 0$ und somit konstant (und außerdem $=\varphi(x)$) auf $I$, was $\( \displaystyle\int_{-a}^{a} f(t)dt = 0$ beweist.\\
-  Wenn $f$ gerade ist, gilt: $\varphi'(x) = 2f(x)$. Also gilt für $\varphi(x)=\displaystyle{\int_0^x 2f(t)dt}$, einer Stammfunktion von $2f(x)$,  $\varphi(0)=0$, was $\displaystyle{\int_{-a}^{a} f(t)dt = 2\int_{0}^{a} f(t)dt }$ beweist.
+  \begin{itemize}
+    \item Wenn $f$ auf $I$ ungerade ist, gilt: $f(x)=-f(-x) \Rightarrow \varphi'(x) = 0$ und somit konstant. Deshalb gilt $\varphi(x)=\varphi'(x)=0$ auf $I$, was $\( \displaystyle\int_{-a}^{a} f(t)dt = 0$ beweist.
+    \item Wenn $f$ gerade ist, gilt: $f(x)=f(-x) \Rightarrow \varphi'(x) = 2f(x)$. Also gilt für $\varphi(x)=\displaystyle{\int_0^x 2f(t)dt}$, einer Stammfunktion von $2f(x)$,  $\varphi(0)=0$, was $\displaystyle{\int_{-a}^{a} f(t)dt = 2\int_{0}^{a} f(t)dt }$ beweist.
+  \end{itemize}
 \end{Beweis}
+
 \subsection{Integrale von periodischen Funktionen}
 \begin{Theorem}
-  Für jede auf $\R$ stetige und periodische Funktion $f$ gilt:
+  Für jede in $\R$ stetige und periodische Funktion $f$ gilt:
   \begin{center}
   \( \displaystyle\int_a^{a+T} f(x)dx\) ist unabhängig von $a$ und \( \displaystyle\int_a^{a+T} f(x)dx = \int_0^{T} f(x)dx\)
   \end{center}
@@ -307,36 +310,74 @@ Es handelt sich hierbei streng genommen auch um eine Substitution:
   \end{align*}
 \end{Definition}
 Bildhaft sieht das folgendermaßen aus:\\
-\begin{minipage}{0.7\textwidth}
+\begin{minipage}[t]{0.5\textwidth}
   \definecolor{lightblu}{rgb}{0,0,0.3}
   \definecolor{lightgree}{rgb}{0,0.3,0}
-  \begin{tikzpicture}[scale=0.9]
-      \draw[->,line width=0.8pt] (-5.5,0) -- (5.5,0) node[below] {$x_1$};
-      \draw[->,line width=0.8pt] (0,-5.5) -- (0,5.5) node[right] {$x_2$};
-      \draw[line width=0.1pt,color=lightblu,fill=lightblu,fill opacity=0.3] (-2.5,0) -- (-2.5,-2.5) ..controls(-1.62,-3.072) ..(0,0) -- cycle;
-      \draw[line width=0.1pt,color=lightgree,fill=lightgree,fill opacity=0.3] (0,0) ..controls(1.94,3.78) ..(3.5,4.5) -- (3.5,0) -- cycle;
-      \draw[line width=1.5pt,color=red] (-5,2) ..controls(-2,-4) ..(0,0);
-      \draw[line width=1.5pt,color=red] (0,0) ..controls(2,4) ..(5,5);
-      \draw[line width=1.2pt,color=orange] (-2.5,-2.5) -- (-2.5,0) node[above] {a};
-      \draw[line width=1.2pt,color=orange] (0,-0.2) node[right] {$x_1$};
-      \draw[line width=1.2pt,color=orange] (3.5,4.5) -- (3.5,0) node[below] {b};
-      \draw[line width=1.2pt,color=orange] (-2.5,-1.5) -- (-1,0);
-      \draw[line width=1.2pt,color=orange] (-2.5,-0.5) -- (-2,0);
-      \draw[line width=1.2pt,color=orange] (-2.5,-2.5) -- (3.5,3.5);
-      \draw[line width=1.2pt,color=orange] (1,0) -- (3.5,2.5);
-      \draw[line width=1.2pt,color=orange] (2,0) -- (3.5,1.5);
-      \draw[line width=1.2pt,color=orange] (3,0) -- (3.5,0.5);
-      \draw[line width=1.2pt,color=orange] (1,2) -- (3.5,4.45);
-      \draw (-0.3,-0.3) node {$O$};
-      \draw[line width=0.8pt,color=lightblu] (-1.5,-1.1) node {$A$};
-      \draw[line width=0.8pt,color=lightgree] (2.3,1.9) node {$B$};
-      \draw[line width=0.8pt,color=red] (2,4) node {$K$};
-  \end{tikzpicture}
-\end{minipage}
-\begin{minipage}[b]{0.3\textwidth}
+  \begin{tikzpicture}[scale=0.7]
+    \draw[->,line width=0.8pt] (-5.5,0) -- (5.5,0) node[below] {$x_1$};
+    \draw[->,line width=0.8pt] (0,-5.5) -- (0,5.5) node[right] {$x_2$};
+    \draw[line width=0.1pt,color=lightblu,fill=lightblu,fill opacity=0.3] (-2.5,0) -- (-2.5,-2.5) ..controls(-1.62,-3.072) ..(0,0) -- cycle;
+    \draw[line width=0.1pt,color=lightgree,fill=lightgree,fill opacity=0.3] (0,0) ..controls(1.94,3.78) ..(3.5,4.5) -- (3.5,0) -- cycle;
+    \draw[line width=1.5pt,color=red] (-5,2) ..controls(-2,-4) ..(0,0);
+    \draw[line width=1.5pt,color=red] (0,0) ..controls(2,4) ..(5,5);
+    \draw[line width=1.2pt,color=orange] (-2.5,-2.5) -- (-2.5,0) node[above] {a};
+    \draw[line width=1.2pt,color=orange] (0,-0.2) node[right] {$x_1$};
+    \draw[line width=1.2pt,color=orange] (3.5,4.5) -- (3.5,0) node[below] {b};
+    \draw[line width=1.2pt,color=orange] (-2.5,-1.5) -- (-1,0);
+    \draw[line width=1.2pt,color=orange] (-2.5,-0.5) -- (-2,0);
+    \draw[line width=1.2pt,color=orange] (-2.5,-2.5) -- (3.5,3.5);
+    \draw[line width=1.2pt,color=orange] (1,0) -- (3.5,2.5);
+    \draw[line width=1.2pt,color=orange] (2,0) -- (3.5,1.5);
+    \draw[line width=1.2pt,color=orange] (3,0) -- (3.5,0.5);
+    \draw[line width=1.2pt,color=orange] (1,2) -- (3.5,4.45);
+    \draw (-0.3,-0.3) node {$O$};
+    \draw[line width=0.8pt,color=lightblu] (-1.5,-1.1) node {$A$};
+    \draw[line width=0.8pt,color=lightgree] (2.3,1.9) node {$B$};
+    \draw[line width=0.8pt,color=red] (2,4) node {$K$};
+  \end{tikzpicture}\\
   \begin{align*}
     \textcolor{orange}{C}  &= \textcolor{lightblue}{A} + \textcolor{lightgree}{B}\\
     &= |{\int_{\textcolor{orange}{a}}^{\textcolor{orange}{x_1}} f(x)dx}| + |{\int_{\textcolor{orange}{x_1}}^{\textcolor{orange}{b}} f(x)dx}|
+  \end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+  \definecolor{lightblu}{rgb}{0,0,0.3}
+  \definecolor{lightgree}{rgb}{0,0.3,0}
+  \begin{tikzpicture}[scale=0.7]
+    \draw[->,line width=0.8pt] (-5.5,0) -- (5.5,0) node[below] {$x_1$};
+    \draw[->,line width=0.8pt] (0,-5.5) -- (0,5.5) node[right] {$x_2$};
+    \draw[line width=0.1pt,color=lightblu,fill=lightblu,fill opacity=0.3] (-2.5,0) -- (-2.5,2.43) ..controls(-1.59,3.21) ..(0,0) -- cycle;
+    \draw[line width=0.1pt,color=lightgree,fill=lightgree,fill opacity=0.3] (0,0) ..controls(1.94,3.78) ..(3.5,4.5) -- (3.5,0) -- cycle;
+    \draw[line width=1.5pt,color=red] (-5,2) ..controls(-2,-4) ..(0,0);
+    \draw[line width=1.5pt,color=red] (0,0) ..controls(2,4) ..(5,5);
+    \draw[line width=1.5pt,color=red] (-4,0) ..controls(-1.8,3.8) ..(0,0);
+    \draw[line width=7pt,color=white,dashed] (-4,0) ..controls(-1.8,-3.8) ..(0,0);
+    % Repair the damage caused by the line above
+    \draw[line width=0.8pt] (-4,0) -- (-3.85,0);
+    \draw[line width=0.8pt] (0,-0.05) -- (0,-0.3);
+    \draw[line width=1.2pt,color=orange] (-2.5,2.4) -- (-2.5,0) node[below] {a};
+    \draw[line width=1.2pt,color=orange] (0,-0.2) node[right] {$x_1$};
+    \draw[line width=1.2pt,color=orange] (3.5,4.5) -- (3.5,0) node[below] {b};
+    \draw[line width=1.2pt,color=orange] (-2.5,0.5) -- (-1,2);
+    \draw[line width=1.2pt,color=orange] (-2.5,1.5) -- (-1.4,2.6);
+    \draw[line width=1.2pt,color=orange] (-2,0) -- (-0.65,1.35);
+    \draw[line width=1.2pt,color=orange] (-1,0) -- (-0.3,0.7);
+    \draw[line width=1.2pt,color=orange] (0,0) -- (3.5,3.5);
+    \draw[line width=1.2pt,color=orange] (1,0) -- (3.5,2.5);
+    \draw[line width=1.2pt,color=orange] (2,0) -- (3.5,1.5);
+    \draw[line width=1.2pt,color=orange] (3,0) -- (3.5,0.5);
+    \draw[line width=1.2pt,color=orange] (1,2) -- (3.5,4.45);
+    \draw (-0.3,-0.3) node {$O$};
+    \draw[line width=0.8pt,color=lightblu] (-1.5,1.1) node {$A$};
+    \draw[line width=0.8pt,color=lightgree] (2.3,1.9) node {$B$};
+    \draw[line width=0.8pt,color=red] (1.45,4.05) node{"$ $};
+    \draw[line width=0.8pt,color=red] (1.8,4) node {$|K|$};
+    \draw[line width=0.8pt,color=red] (2.15,4.05) node{"$ $};
+  \end{tikzpicture}\\
+  \begin{align*}
+    \textcolor{orange}{C} &= \textcolor{lightblue}{A} + \textcolor{lightgree}{B}\\
+    &= {\int_{\textcolor{orange}{a}}^{\textcolor{orange}{x_1}} f(x)dx} + {\int_{\textcolor{orange}{x_1}}^{\textcolor{orange}{b}} f(x)dx}\\
+    &= {\int_{\textcolor{orange}{a}}^{\textcolor{orange}{b}} f(x)dx}
   \end{align*}
 \end{minipage}
 \\
@@ -369,48 +410,6 @@ Bildhaft sieht das folgendermaßen aus:\\
   Hierzu wählt man $Y_2$ aus und gibt $a$ und $b$ an.
 \end{GTR-Tipp}
 
-\begin{minipage}{0.7\textwidth}
-\definecolor{lightblu}{rgb}{0,0,0.3}
-\definecolor{lightgree}{rgb}{0,0.3,0}
-\begin{tikzpicture}[scale=0.9]
-    \draw[->,line width=0.8pt] (-5.5,0) -- (5.5,0) node[below] {$x_1$};
-    \draw[->,line width=0.8pt] (0,-5.5) -- (0,5.5) node[right] {$x_2$};
-    \draw[line width=0.1pt,color=lightblu,fill=lightblu,fill opacity=0.3] (-2.5,0) -- (-2.5,2.43) ..controls(-1.59,3.21) ..(0,0) -- cycle;
-    \draw[line width=0.1pt,color=lightgree,fill=lightgree,fill opacity=0.3] (0,0) ..controls(1.94,3.78) ..(3.5,4.5) -- (3.5,0) -- cycle;
-    \draw[line width=1.5pt,color=red] (-5,2) ..controls(-2,-4) ..(0,0);
-    \draw[line width=1.5pt,color=red] (0,0) ..controls(2,4) ..(5,5);
-    \draw[line width=1.5pt,color=red] (-4,0) ..controls(-1.8,3.8) ..(0,0);
-    \draw[line width=7pt,color=white,dashed] (-4,0) ..controls(-1.8,-3.8) ..(0,0);
-    % Repair the damage caused by the line above
-    \draw[line width=0.8pt] (-4,0) -- (-3.85,0);
-    \draw[line width=0.8pt] (0,-0.05) -- (0,-0.3);
-    \draw[line width=1.2pt,color=orange] (-2.5,2.4) -- (-2.5,0) node[below] {a};
-    \draw[line width=1.2pt,color=orange] (0,-0.2) node[right] {$x_1$};
-    \draw[line width=1.2pt,color=orange] (3.5,4.5) -- (3.5,0) node[below] {b};
-    \draw[line width=1.2pt,color=orange] (-2.5,0.5) -- (-1,2);
-    \draw[line width=1.2pt,color=orange] (-2.5,1.5) -- (-1.4,2.6);
-    \draw[line width=1.2pt,color=orange] (-2,0) -- (-0.65,1.35);
-    \draw[line width=1.2pt,color=orange] (-1,0) -- (-0.3,0.7);
-    \draw[line width=1.2pt,color=orange] (0,0) -- (3.5,3.5);
-    \draw[line width=1.2pt,color=orange] (1,0) -- (3.5,2.5);
-    \draw[line width=1.2pt,color=orange] (2,0) -- (3.5,1.5);
-    \draw[line width=1.2pt,color=orange] (3,0) -- (3.5,0.5);
-    \draw[line width=1.2pt,color=orange] (1,2) -- (3.5,4.45);
-    \draw (-0.3,-0.3) node {$O$};
-    \draw[line width=0.8pt,color=lightblu] (-1.5,1.1) node {$A$};
-    \draw[line width=0.8pt,color=lightgree] (2.3,1.9) node {$B$};
-    \draw[line width=0.8pt,color=red] (1.45,4.05) node{"$ $};
-    \draw[line width=0.8pt,color=red] (1.8,4) node {$|K|$};
-    \draw[line width=0.8pt,color=red] (2.15,4.05) node{"$ $};
-\end{tikzpicture}
-\end{minipage}
-\begin{minipage}[b]{0.3\textwidth}
-  \begin{align*}
-    \textcolor{orange}{C} &= \textcolor{lightblue}{A} + \textcolor{lightgree}{B}\\
-    &= {\int_{\textcolor{orange}{a}}^{\textcolor{orange}{x_1}} f(x)dx} + {\int_{\textcolor{orange}{x_1}}^{\textcolor{orange}{b}} f(x)dx}\\
-    &= {\int_{\textcolor{orange}{a}}^{\textcolor{orange}{b}} f(x)dx}
-  \end{align*}
-\end{minipage}
 
 \subsection{Fläche zwischen zwei Funktionen}
 \begin{Theorem}
@@ -489,4 +488,4 @@ Diese sollten ohne weitere Rechtfertigung oder Beweis verwendet werden dürfen. 
   \int e^{ax+b}dx &= \dfrac{1}{a}e^{ax+b} + C
 \end{align*}
 \\
-\danger Definitionsmengen sind zu beachten.
+$\danger$ Definitionsmengen sind zu beachten.
