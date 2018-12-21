@@ -1,86 +1,260 @@
 \chapter{Statistik und Wahrscheinlichkeit}
 \chapterauthor{Rémy}
 \section{Wiederholungen: Unter- \& Mittelstufe}
-\subsection{Das Pascalsche Dreieck}
-\subsection{Baumdiagramme}
+\subsection{Zufallsexperimente}
+\begin{Definition}
+  Als Zufallsexperiment bezeichnet man Versuche, deren Ergebnisse sich nicht vorhersagen lassen, also vom Zufall abhängig sind.\\
+  Vor der Durchführung eines Zufallsexperiments muss eine \textbf{Ergebnismenge} $S$ festgelegt werden. Sie beinhaltet alle möglichen Ergebnisse: $S = \{ e_1, e_2, ..., e_n \} $\\
+  Ein Versuch heißt Zufallsexperiment, falls:
+  \begin{itemize}
+    \item er unter gleichen Bedingungen beliebig oft wiederholbar ist
+    \item alle möglichen Ergebnisse vor Durchführung bekannt sind
+    \item sein Ergebnis sich nicht mit Sicherheit vorhersagen lässt
+    \item bei jeder Durchführung genau ein Ergebnis aus $S$ auftritt
+  \end{itemize}
+\end{Definition}
+\begin{Beispiel}
+  Bekannte Zufallsexperimente sind:
+  \begin{itemize}
+    \item das Werfen einer Münze
+    \item das Werfen eines Würfels
+    \item das Ziehen einer Kugel aus einer Urne
+    \item ...
+  \end{itemize}
+\end{Beispiel}
+\begin{Definition}[- Laplace-Experiment]
+  Laplace-Experimente sind Experimente, deren Ergebnisse jeweils gleichwahrscheinlich sind.
+\end{Definition}
+\begin{Beispiel}
+  Ein Beispiel hierfür wäre der Wurf eines \textbf{perfekten} Würfels.
+\end{Beispiel}
+\begin{Theorem}
+  In einem Laplace-Experiment gilt für die Wahrscheinlichkeit $P$, dass ein Ergebnis $A$ von $n$ möglichen Ergebnis eintritt:
+  $$P(A)=\dfrac{1}{n}$$
+\end{Theorem}
+\subsubsection{Mehrstufige Zufallsexperimente}
+\begin{Definition}
+  Werden mehrere ($n$) Zufallsexperimente nacheinander ausgerführt, so kann man sie als ein einziges Zufallsexperiment zusammenfassen. Man nennt dies ein \textbf{mehrstufiges Zufallsexperiment}. Die Ergebnisse eines solchen Experiments kann man als geordnete $n$-Tupel auffassen.
+\end{Definition}
+\begin{Beispiel}
+  Zweifaches Werfen einer Münze: $S=\{ (Z/Z),(Z/K),(K/Z),(K/K)\} $.\\
+\end{Beispiel}
+\begin{Bemerkung}
+  Alternativ kann man $S$ als einfache Menge definieren. Bei zweifachem Münzwurf wäre eine mögliche Darstellung $S = \{ 0,1,2\}$ mit der Anzahl an Kopf-Würfen als Ergebnis möglich.
+\end{Bemerkung}
+\subsubsection{Ereignisse}
+\begin{Definition}[- Ereignisse]
+  Jede Teilmenge $A$ von der Ergebnismenge $S$ nennt man ein Ereignis. Endet das Zufallsexperiment mit einem Ergebnis aus $A$, sagt man: $A$ ist eingetreten.
+\end{Definition}
+\begin{Beispiel}
+  Werfen eines Würfels: $S = \{ 1,2,3,4,5,6 \}$\\\\
+  \begin{minipage}{0.4\textwidth}
+    $A$: Augenzahl ist gerade:\\
+    $B$: Augenzahl ist ungerade:\\
+    $C$: Augenzahl ist Primzahl:\\
+    $D$: Augenzahl $<7$:\\
+    $E$: Augenzahl $=6$:\\
+    $F$: Augenzahl $>6$:\\
+  \end{minipage}
+  \begin{minipage}{0.6\textwidth}
+    $A = \{ 2,4,6 \}$\\
+    $B = \{ 1,3,5 \}$\\
+    $C = \{ 2,3,5 \}$\\
+    $D =S$\\
+    $E = \{ 6 \}$\\
+    $F = \{ \}$
+  \end{minipage}
+\end{Beispiel}
+\begin{Bemerkung}
+  \begin{itemize}
+    \item Ein Ereignis, das nur aus einem Ergebnis besteht, heißt \textbf{Elementarereignis}.
+    \item $B=\bar A$ (A quer) ist das \textbf{Gegenereignis} von $A$. Es gilt: $B = S \backslash A$
+    \item Ein Ereignis, das immer eintritt, heißt \textbf{sicheres Ereignis}
+    \item Ein Ereignis, das niemals eintritt, heißt \textbf{unmögliches Ereignis}
+  \end{itemize}
+\end{Bemerkung}
+
+\subsubsection{Baumdiagramme}
+\begin{Definition}[- Bernoulli-Experiment]
+  Bei Bernoulli-Experimenten gibt es nur $2$ mögliche Ausgänge: Erfolg / Miserfolg ($= \overline{\text{Erfolg}}$). Mehrfaches Ausführen ($l$ Mal) von Bernoulli-Experimenten ergibt eine \textbf{Bernoulli-Kette} der Länge $l$.
+\end{Definition}\\
+Eine Bernoulli-Kette kann als \textbf{Baumdiagramm} dargestellt werden:\\
+
 \tikzstyle{level 1}=[level distance=3.5cm, sibling distance=3.5cm]
 \tikzstyle{level 2}=[level distance=3.5cm, sibling distance=2cm]
-
-% Define styles for bags and leafs
-\tikzstyle{bag} = [text width=4em, text centered]
-\tikzstyle{end} = [circle, minimum width=3pt,fill, inner sep=0pt]
-
-% The sloped option gives rotated edge labels. Personally
-% I find sloped labels a bit difficult to read. Remove the sloped options
-% to get horizontal labels.
-\begin{tikzpicture}[grow=right, sloped]
-\node[bag] {Bag 1 $4W, 3B$}
+\tikzstyle{optionen} = [text width=4em, text centered]
+\tikzstyle{ergebnis} = [circle, minimum width=3pt,fill, inner sep=0pt]
+%Remove the sloped options to get horizontal labels.
+\begin{center}
+\begin{tikzpicture}[grow=right, ]%sloped]
+\node[optionen] {\small{1. Durchführung} $E, \overline{E}$}
+  child {
+    node[optionen] {\small{2. Durchführung} $E, \overline{E}$}
     child {
-        node[bag] {Bag 2 $4W, 5B$}
-            child {
-                node[end, label=right:
-                    {$P(W_1\cap W_2)=\frac{4}{7}\cdot\frac{4}{9}$}] {}
-                edge from parent
-                node[above] {$W$}
-                node[below]  {$\frac{4}{9}$}
-            }
-            child {
-                node[end, label=right:
-                    {$P(W_1\cap B_2)=\frac{4}{7}\cdot\frac{5}{9}$}] {}
-                edge from parent
-                node[above] {$B$}
-                node[below]  {$\frac{5}{9}$}
-            }
-            edge from parent
-            node[above] {$W$}
-            node[below]  {$\frac{4}{7}$}
+      node[ergebnis, label=right:
+        {$P(\overline{E_1}\cap \overline{E_2})=\frac{1}{2}\cdot\frac{1}{2}$}] {}
+      edge from parent
+      node[above] {$\overline{E}$}
+      node[below]  {$\frac{1}{2}$}
     }
     child {
-        node[bag] {Bag 2 $3W, 6B$}
-        child {
-                node[end, label=right:
-                    {$P(B_1\cap W_2)=\frac{3}{7}\cdot\frac{3}{9}$}] {}
-                edge from parent
-                node[above] {$B$}
-                node[below]  {$\frac{3}{9}$}
-            }
-            child {
-                node[end, label=right:
-                    {$P(B_1\cap B_2)=\frac{3}{7}\cdot\frac{6}{9}$}] {}
-                edge from parent
-                node[above] {$W$}
-                node[below]  {$\frac{6}{9}$}
-            }
-        edge from parent
-            node[above] {$B$}
-            node[below]  {$\frac{3}{7}$}
-    };
+      node[ergebnis, label=right:
+        {$P(\overline{E_1}\cap E_2)=\frac{1}{2}\cdot\frac{1}{2}$}] {}
+      edge from parent
+      node[above] {$E$}
+      node[below]  {$\frac{1}{2}$}
+    }
+    edge from parent
+    node[above] {$\overline{E}$}
+    node[below]  {$\frac{1}{2}$}
+  }
+  child {
+    node[optionen] {\small{2. Durchführung} $E, \overline{E}$}
+    child {
+      node[ergebnis, label=right:
+          {$P(E_1 \cap \overline{E_2})=\frac{1}{2}\cdot\frac{1}{2}$}] {}
+      edge from parent
+      node[above] {$\overline{E}$}
+      node[below]  {$\frac{1}{2}$}
+        }
+    child {
+      node[ergebnis, label=right:
+        {$P(E_1\cap E_2)=\frac{1}{2}\cdot\frac{1}{2}$}] {}
+      edge from parent
+      node[above] {$\overline{E}$}
+      node[below]  {$\frac{1}{2}$}
+    }
+    edge from parent
+    node[above] {$E$}
+    node[below]  {$\frac{1}{2}$}
+  };
 \end{tikzpicture}
+\end{center}\\
+$E$ bezeichnet das Erfolgs-Ereignis, $\overline{E}$ bezeichnet somit den Miserfolg. Jeder Pfad trägt 2 Informationen: das jeweilige Ereignis und seine Wahrscheinlichkeit.
 
-YUP, das ist Copy-Paste, don't blame me!
-\subsubsection{Pfadregeln}
+\begin{Definition}[- Pfadregeln]
+  \begin{itemize}
+    \item Die Summe der Wahrscheinlichkeiten auf den Ästen, die von einem Knoten (Ort der Verzweigung), ist $=1$.
+    \item Die Wahrscheinlichkeit eines Pfades (also eines Elementarereignisses) ist gleich dem \textbf{Produkt} der Wahrscheinlichkeiten aller Äste des Pfades.
+    \item Die Wahrscheinlichkeit eines Ereignissesb ist gleich der \textbf{Summe} der Wahrscheinlichkeit der Pfade, die zu diesem Ereignis führen.
+  \end{itemize}
+\end{Definition}
+\begin{Bemerkung}
+  Besonders beim Urnenmodell eines Zufallsexperiments muss beachtet werden, ob nach dem Ziehen zurückgelegt wird, oder nicht, weil sich die Wahrscheinlichkeiten der Äste sonst entsprechend verändern.
+\end{Bemerkung}
+
+\subsubsection{Wahrscheinlichkeitsverteilung}
+\begin{Definition}[- Häufigkeiten]
+  Nach der $n$-fachen Durchführung eines Zufallsexperiments betrachtet man, wie oft Ereignisse eingetreten sind.\\
+  Ist das Ereignis $A$ $H$-mal eingetreten, so nennt man $H$ die \textbf{absolute Häufigkeit} und $\dfrac{H}{n}$ die \textbf{relative Häufigkeit} von $A$.
+\end{Definition}
+\begin{Theorem}[- Empirisches Gesetz der großen Zahlen]
+  Wird ein Zufallsexperiment sehr häufig durchgeführt, so stabilisieren sich die relativen Häufigkeiten der Ereignisse. Es gilt:
+  $$\lim_{n\to \infty} \left(\dfrac{H_n(E)}{n}\right) = P(E)$$mit $E$ einem Ereignis, und $H_n$ seiner Häufigkeit nach $n$ Wiederholungen.
+\end{Theorem}
+\begin{Definition}
+  Man nennt die Zuordnung $e_i \longmapsto P(e_i)$ \textbf{Wahrscheinlichkeitsverteilung}, wenn gilt:
+  \begin{itemize}
+    \item $e_i \in S=\{ e_1,e_2,...,e_n\} \land P(e_i)\in \R$
+    \item $!\exists P(e_i) \forall e_i \in S$
+    \item $0 \leq P(e_i)\leq 1 \forall i \leq n$
+    \item $P(e_1)+P(e_2)+...+P(e_n)=1$
+    \item ?
+  \end{itemize}
+\end{Definition}
+
+
+\subsection{Zufallsvariable}
+\begin{Definition}
+  Sind die Ergebnisse eines Zufallsexperiments Zahlen, oder kann man den Ergebnissen Zahlen zuornen, so nennt man die Variable für diese Zahlen \textbf{Zufallsvariable} $X$.\\
+  Mit Hilfe von Zufallsvariablen kann man Zufallsexperimente einfacher bechreiben.
+\end{Definition}
+\begin{Beispiel}
+  Zählen von Erfolgen ($1$) und Miserfolgen ($0$) bei Bernoulli-Ketten: statt $P((\text{Erfolg},\text{Erfolg},...,\text{Erfolg},))$ ($n$ Mal) schreibt man einfach: $P(x=k*1)$ mit $k$ der gewünschten Anzahl an Erfolgen.
+\end{Beispiel}
+
+
+\subsection{Das Pascal'sche Dreieck}
+\begin{center}
+  \begin{array}{c}
+    (1)
+    \\\\
+    (1) \qquad (1)
+    \\\\
+    (1) \qquad (2) \qquad (1)
+    \\\\
+    (1) \qquad (3) \qquad (3) \qquad (1)
+    \\\\
+    (1) \qquad (4) \qquad (6) \qquad (4) \qquad (1)
+    \\\\
+    (1) \qquad (5) \qquad (10) \qquad (10) \qquad (5) \qquad (1)
+    \\\\
+    (1) \qquad (6) \qquad (15) \qquad (21) \qquad (15) \qquad (6) \qquad (1)
+    \\\\
+    (1) \qquad (7) \qquad (21) \qquad (35) \qquad (35) \qquad (21) \qquad (7) \qquad (1)
+  \end{array} % Und immer so weiter ...
+\end{center}\\
+Bekannt aus der Mittelstufe. Es ergibt sich, wenn man die Summe von zwei Werten eine Stufe tiefer, zwischen die beiden Werte schreibt. Es wird vor Allem für Binomialkoeffizienten verwendet, findet aber auch in der Wahrscheinlichkeitsrechnung Verwendung.
+
+
 \section{Kombinatorik}
 \subsection{Binomialkoeffizienten}
 \begin{Definition}
   Der Binomialkoeffizient ist die Anzahl der $k$-elementigen Teilmengen einer $n$-elementigen Menge.
-  $$ \left(\begin{array}{c} n \\ k \end{array}\right) = \dfrac{n!}{(n-k)!k!} \text{\qquad (gesprochen "n über k") }$$
+  $$ {n\choose k} = \dfrac{n!}{(n-k)!k!} \text{\qquad (gesprochen "n über k"\qquad) \forall 0 \leq k \leq n}$$
 \end{Definition}
 \begin{Bemerkung}
-  Anschaulich entspricht das den Möglichkeiten, genau $n$ bestimmte Kugeln zu ziehen, wobei die gezogenen Kugeln nicht zurückgelegt werden, und die Reihenfolge, in der sie gezogen wurden, nicht beachtet werden.
+  Anschaulich entspricht das den Möglichkeiten, genau $k$ bestimmte Kugeln von $n$ Kugeln zu ziehen, wobei die gezogenen Kugeln nicht zurückgelegt werden, und die Reihenfolge, in der sie gezogen wurden, nicht beachtet wird.
 \end{Bemerkung}
 \begin{Bemerkung}
-  Die gefundenen Werte entsprechen den Vorfaktoren, die man für das $k$te Element aus der $n$ten Reihe aus dem Pascalschen Dreieck ablesen kann.\\
+  Die gefundenen Werte entsprechen den Vorfaktoren, die man für das $k$-te Element aus der $n$ten Reihe aus dem Pascalschen Dreieck ablesen kann.\\
   Das bedeutet, dass Potenzen von Binomen auch über Binomialkoeffizienten darstellbar sind:
-  $$(a+b)^n = \sum_{k=0}^n \left(\begin{array}{c} n \\ k \end{array}\right) a^{n-k}b^{k}$$
+  $$(a+b)^n = \sum_{k=0}^n {n\choose k} a^{n-k}b^{k}$$
 \end{Bemerkung}
 
 \begin{Bemerkung}
-  Da die Fakultät ($!$) nicht für negative Zahlen definiert ist, gilt die obige Definition nur für $0 \leq k \leq n$.
+  Die obige Definition gilt nur für $0 \leq k \leq n$ da die Fakultät ($!$) nicht für negative Zahlen definiert ist.
 \end{Bemerkung}
 
 \begin{GTR-Tipp}
-
+  Im englischen wird ${n \choose r}$ als "$n$ choose $r$" gesprochen. Auf dem GTR findet sich die Option unter 'MATH' > 'PRB'. Es handelt sich um 'nCr'.\\
+  Benutzung: <ZAHL$_1$> 'nCr' <ZAHL$_2$>. (Entspricht ${Z_1 \choose Z_2}$)
 \end{GTR-Tipp}
+
+\begin{Theorem}
+  Für Binomialkoeffizienten gelten mehrere Eigenschaften, unter ihnen wollen wir folgende zwei hervorheben:
+  \begin{enumerate}
+    \item $${n+1 \choose k+1} = {n \choose k}+{n \choose k+1}$$
+    \item $${n \choose k} = {n \choose n-k}$$
+  \end{enumerate}
+\end{Theorem}
+\begin{Beweis}
+  \begin{enumerate}
+    \item \begin{align*}
+      {n+1 \choose k+1} &= \dfrac{(n+1)!}{(n-k)!k!}\\
+      &= \dfrac{n!}{k!}\dfrac{(n+1)}{(n-k)!(k+1)}\\
+      &= \dfrac{n!}{k!}\dfrac{n-k+k+1}{(n-k)!(k+1)}\\
+      &= \dfrac{n!}{k!}  \left( \dfrac{n-k}{(n-k)!(k+1)}+\dfrac{k+1}{(n-k)!(k+1)} \right)\\
+      &= \dfrac{n!}{k!}  \left( \dfrac{1}{(n-k-1)!(k+1)}+\dfrac{1}{(n-k)!} \right)\\
+      &= \dfrac{n!}{k!}  \left( \dfrac{1}{(n-(k+1))!(k+1)}+\dfrac{1}{(n-k)!} \right)\\
+      &= \dfrac{n!}{(n-k)!k!}  + \dfrac{n!}{(n-k-1)!(k+1)!}\\
+      &= {n \choose k}+{n \choose k+1}
+      \end{align*}
+    \item \begin{align*}
+      {n \choose k}  &= \dfrac{n!}{(n-k)!k!}\\
+      &= \dfrac{n!}{k!(n-k)!}\\
+      &= \dfrac{n!}{(n-(k-n))!(n-k)!}\\
+      &= {n \choose n-k}
+    \end{align*}
+  \end{enumerate}
+\end{Beweis}
+\begin{Bemerkung}
+  \begin{enumerate}
+    \item Entspricht der Aussage, dass ein Glied im Pascal'schen Dreieck sich aus der Summe der zwei überliegenden Glieder ergibt.
+    \item Entspricht der Aussage, dass das Pascal'sche Dreieck symmetrisch ist.
+  \end{enumerate}
+\end{Bemerkung}
+
 
 \subsection{Kombinatorik}
 \begin{Theorem}
@@ -90,11 +264,11 @@ YUP, das ist Copy-Paste, don't blame me!
     \item Die Reihenfolge der Elemente wird berücksichtigt:
           $$n(n-1)(n-2)...(n-(k-1))$$
     \item Die Reihenfolge der Elemente wird \textbf{nicht} berücksichtigt:
-          $$\left(\begin{array}{c} n \\ k \end{array}\right)$$
+          $${n\choose k}$$
   \end{itemize}
 \end{Theorem}
 \begin{Bemerkung}
-  Auch hier gilt die Einschränkung $0 \leq k \leq n$. Diese ist sinnvoll, denn es ist nicht möglich, eine $k$-elementige Teilmenge einer $n$-elementigen Menge zu nehmen. Deshalb gilt:
+  Auch hier gilt die Einschränkung $0 \leq k \leq n$. Diese ist sinnvoll, denn es ist nicht möglich, eine $k$-elementige Teilmenge einer $n$-elementigen Menge zu nehmen, wenn $k > n$. Deshalb gilt:
   $$\text{Anzahl Möglichkeiten\,} = 0 \text{\qquad für \:} n \leq k $$
 \end{Bemerkung}
 \begin{Beweis}
@@ -115,8 +289,18 @@ YUP, das ist Copy-Paste, don't blame me!
       \Rightarrow \text{\quad Möglichkeiten insgesamt:\, } & \dfrac{n(n-1)(n-2)...(n-(k-1))\text{\quad \} \small{1 neue Möglichkeit pro unterschiedlichem Fall}}}{1*2*...*(k-1)(k-2)k \text{ \quad \} \small{Anzahl der Wege, die zur selben Teilmenge führen}}}\\
       & = \dfrac{n(n-1)(n-2)...(n-(k-1))}{k!}\\
       & = \dfrac{n!}{(n-k)!k!}\\
-      & = \left(\begin{array}{c} n \\ k \end{array}\right)
+      & = {n\choose k}
     \end{align*}
-
   \end{itemize}
 \end{Beweis}
+
+\begin{Theorem}
+  Für eine Bernoulli-Kette der Länge $l \in \N$ und der Trefferwahrscheinlichkeit $P$ (Wahrscheinlichkeit für einen Pfad) gilt:
+  $$P(X=k) = {l \choose k} p^k (1-p ^{l-k})$$
+  mit $k$ der gerwünschten Anzahl an Erfolgen.
+\end{Theorem}
+\begin{Bemerkung}
+  \begin{Definition}
+    $X$ heißt in diesem Fall \textbf{binomialverteilte Zufallsvariable}. Die entsprechende Wahrscheinlichkeitsverteilung heißt Binomialverteilung $B_{l,p}(k)$. $l$ ist die Länge der Bernoulli-Kette, $p$ die Erfolgswahrscheinlichkeit und $k$ ist die gewünschte Anzahl an Erfolgen.
+  \end{Definition}
+\end{Bemerkung}
