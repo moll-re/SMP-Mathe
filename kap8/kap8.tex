@@ -360,10 +360,70 @@ $$\text{ggT(a; $b_{1}$)} \quad \text{und} \quad \text{ggT(a; $b_{2}$)} \qquad \L
 
 
 \begin{Beispiel}
-Musterlösung einer diophantischen Gleichung
+Musterlösung einer diophantischen Gleichung: \\
+$$(1)\qquad 12597 a - 3813 b = 3$$
+
+Enweder man sucht mit dem Taschenrechner eine Lösung oder man verwendet den oft längen Weg mit einer hohen Vorzeichenfehlerwahrscheinlichkeit. Wir sind mutig und die Zahken sind groß, deshalb nehmen wir den Weg mit dem Gaus'schen Algorithmus. Man merkt dass 12597, 3813 mit 3 gekürzt werden kann.\\
+
+$$(1) \quad \Leftrightarrow \quad 4199 a - 1271 b = 1$$
+
+\begin{array}{rcl}
+4199 & = & 3 \cdot 1271 + 386 \\
+1271 & = & 3 \cdot 386 + 113 \\
+386 & = & 3 \cdot 113 + 47 \\
+113 & = & 2 \cdot 47 + 19 \\
+47 & = & 2 \cdot 19 + 9 \\
+19 & = & 2 \cdot 9 + 1 \\
+\end{array}\\\\
+
+Jetzt wird zurück eingesetzt, um auf eine Lösung zu kommen\\\\
+
+\begin{array}{rcl}
+1 &=& 19 - 2 \cdot (9) \\
+1 &=& 19 - 2 \cdot (47 - 2\cdot 19) = 5 \cdot 19 - 2 \cdot 47 \\
+1 &=& 5 \cdot (113 - 2\cdot 47) - 2 \cdot 47 = 5 \cdot 113 - 12 \cdot 47 \\
+1 &=& 5 \cdot 113 - 12 \cdot (386 - 3\cdot 113) = 41 \cdot 113 - 12 \cdot 386 \\
+1 &=& 41 \cdot(1271 - 3\cdot 386) - 12\cdot 386 = 41 \cdot 1271 - 135 \cdot 386 \\
+1 &=& 41 \cdot 1271 - 135 \cdot (4199 - 3 \cdot 1271) = 446 \cdot 1271 - 135 \cdot 4199 \\
+\end{array}\\\\
+
+Eine Lösung dieser Gleichung ist also das Zahlentupel $(-135;-446)$. Jetzt zieht man eine Gleichung von der anderen ab:\\
+
+\begin{array}{rl}
+\Rightarrow & 4199 (a + 135) - 1271 (b + 446) = 0 \\
+\Leftrightarrow & 4199 (a + 135) = 1271 (b + 446) \\
+\end{array}\\\\
+
+Unter Verwendung des Satzes von Gauß folgert man \\
+
+\begin{array}{rl}
+\Rightarrow & 4199 | b + 446  \\
+\Rightarrow & 4199k = b + 446 \\
+\Leftrightarrow & b =  4199k - 446 \\
+\end{array}\\\\
+
+Jetzt wird eingesetzt\\
+
+\begin{array}{rl}
+\Rightarrow & 4199a +135\cdot4199 = 1271 (4199k -446 + 446 ) = 1271 \cdot 4199k \\
+\Leftrightarrow & a = 1271k - 135 \\
+\end{array}\\\\
+
+Die Lösungsmenge Für die Geichung (1) lautet 
+$$\mathbb{L} = \{ (1271k -135 ; 4199k - 446) ; \quad k \in \Z  \}$$
+\\
+Jetzt kann man jede ganze Zahl $F$ durch unendlich viele Linearkombinationen von 1271 und 4199 darstellen. Sei die Aufgabe
+$$ 4199 a - 1271 b = F$$
+
+$$\mathbb{L}_{F} = \{ (1271k -  (F \cdot 135) ; 4199k - (F \cdot 446)) ; \quad k \in \Z  \}$$
+
+
+
+
 \end{Beispiel}
 
 
+\subsection{Das RSA Verschlüsselungsverfahren}
 
 
 
