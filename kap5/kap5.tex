@@ -537,14 +537,14 @@
 
     \subsection{Lagebeziehungen zwischen Geraden}
 
-        \paragraph{} Es gibt bezüglich Geraden vier verschiedene Beziehungen, vorausgesetzt diese befinden sich im $\R^3$. Zwei Geraden $g$ und $h$ können...
-        \\
-        \\
+        \paragraph{} Es gibt bezüglich Geraden vier verschiedene Beziehungen, vorausgesetzt diese befinden sich im $\R^3$. Zwei Geraden $g$ und $h$ können...\\
+
+        \begin{minipage}[t]{0.5\textwidth}
         \begin{left}
-            \quad 1)\text{ } ...\textbf{parallel}...
+            \quad 1)\text{...\textbf{parallel} sein...}
         \end{left}
         \begin{center}
-            \begin{tikzpicture}[>=triangle 45]
+            \begin{tikzpicture}[>=triangle 45,scale=0.6]
                 \draw [line width=0.8pt] (-0.25,0.25) node {O};
                 \draw [->,line width=0.8pt,color=blue] (0,0,0) -- (3,4,4);
                 \draw [->,line width=0.8pt,color=red] (3,4,4) -- (5,2,-1);
@@ -562,12 +562,13 @@
                 \draw [line width=0.8pt] (7.7,5.15) node {$h$};
             \end{tikzpicture}
         \end{center}
-
+        \end{minipage}
+        \begin{minipage}[t]{0.5\textwidth}
         \begin{left}
-            \quad 2)\text{ } ...\textbf{identisch}...
+            \quad 2)\text{...\textbf{identisch} sein...}
         \end{left}
         \begin{center}
-            \begin{tikzpicture}[>=triangle 45]
+            \begin{tikzpicture}[>=triangle 45,scale=0.6]
                 \draw [line width=0.8pt] (-0.25,0.25) node {O};
                 \draw [->,line width=0.8pt,color=blue] (0,0,0) -- (3,4,4);
                 \draw [->,line width=0.8pt,color=blue] (0,0,0) -- (6,1,-3.5);
@@ -583,12 +584,13 @@
                 \draw [line width=0.8pt] (-0.3,2.8) node {$g = h$};
             \end{tikzpicture}
         \end{center}
-
+        \end{minipage}\\\\
+        \begin{minipage}[t]{0.5\textwidth}
         \begin{left}
-            \quad 3)\text{ } ...\textbf{windschief zueinander}...
+            \quad 3)\text{...\textbf{windschief zueinander} sein...}
         \end{left}
         \begin{center}
-            \begin{tikzpicture}[>=triangle 45]
+            \begin{tikzpicture}[>=triangle 45,scale=0.6]
                 \draw [line width=0.8pt] (-0.25,0.25) node {O};
                 \draw [->,line width=0.8pt,color=blue] (0,0,0) -- (3,4,4);
                 \draw [->,line width=0.8pt,color=red] (3,4,4) -- (5,2,-1);
@@ -604,19 +606,16 @@
                 \draw [line width=0.8pt,color=red] (4.3,1.8,0) node {$\vv{u_2}$};
                 \draw [line width=0.8pt] (6,2.65) node {$g$};
                 \draw [line width=0.8pt] (4.2,6,0) node {$h$};
-                \draw [line width=0.8pt,color=black] (7.2,3.7) node {Schnittpunkt nicht vorhanden};
+                \draw [line width=0.8pt,color=black] (7.2,3.7) node {\tiny{Schnittpunkt nicht vorhanden}};
             \end{tikzpicture}
         \end{center}
-        \\
-        \\
-        ...sein oder...
-        \\
-        \\
+        \end{minipage}
+        \begin{minipage}[t]{0.5\textwidth}
         \begin{left}
-            \quad 4)\text{ } ...\textbf{sich schneiden}
+            \quad 4)\text{...\textbf{sich schneiden}}
         \end{left}
         \begin{center}
-            \begin{tikzpicture}[>=triangle 45]
+            \begin{tikzpicture}[>=triangle 45,scale=0.6]
                 \draw [line width=0.8pt] (-0.25,0.25) node {O};
                 \draw [->,line width=0.8pt,color=blue] (0,0,0) -- (3,4,4);
                 \draw [->,line width=0.8pt,color=red] (3,4,4) -- (5,2,-1);
@@ -636,11 +635,10 @@
                 \draw [line width=0.8pt,color=black] (4.2,2.7) node {$I$};
             \end{tikzpicture}
         \end{center}
-        \\
-        \\
+        \end{minipage}
+
         \paragraph{} Die Lagebeziehung zwischen zwei Geraden $g$ und $h$ lässt sich wie folgt ermitteln:
 
-        \begin{center}
             \begin{tikzpicture}[>=triangle 45]
                 \draw (0,0) node{$\exists t\in\R\quad\textcolor{red}{\vv{u_1}} = t\cdot\textcolor{red}{\vv{u_2}}?$};
                 \draw [line width=0.8pt,color=grey] (-5,-0.3) -- (-4,-0.3);
@@ -977,13 +975,14 @@
     \subsection{Lagebeziehungen zwischen Ebenen und Geraden}
 
         \paragraph{} Ebenen und Geraden können im Gegensatz zu zwei Geraden nur eine von den drei folgenden Beziehungen
-        zueinander haben. Eine Ebene $E$ und eine Gerade $g$ können...
+        zueinander haben. Eine Ebene $E$ und eine Gerade $g$ können...\\
 
+        \begin{minipage}[t]{0.5\textwidth}
         \begin{left}
-            \quad 1)\text{ } ...\textbf{parallel}...
+            \quad 1)\text{...\textbf{parallel} sein ...}
         \end{left}
         \begin{center}
-            \begin{tikzpicture}[>=triangle 45]
+            \begin{tikzpicture}[>=triangle 45,scale=0.6]
                 \draw[->,line width=0.8,color=blue] (1,-2,0) -- (-2,4,0);
                 \draw[line width=0.8,color=blue] (-0.3,1.2,0) node {$\vv{q}$};
                 \draw[color=red,fill=red,opacity=0.5]  (-4,0,4) -- (4,0,4) -- (4,0,-4) -- (-4,0,-4) -- cycle;
@@ -1002,16 +1001,13 @@
                 \draw[line width=0.8pt,color=black,fill=black,fill opacity=0.8] (0.8,3.8,0) circle (0.5pt);
             \end{tikzpicture}
         \end{center}
-        \\
-        \\
-        ...sein oder...
-        \\
-        \\
+        \end{minipage}
+        \begin{minipage}[t]{0.5\textwidth}
         \begin{left}
-            \quad 2)\text{ } ...\textbf{sich schneiden}
+            \quad 2)\text{...\textbf{sich schneiden}}
         \end{left}
         \begin{center}
-            \begin{tikzpicture}[>=triangle 45]
+            \begin{tikzpicture}[>=triangle 45,scale=0.6]
                 \draw[->,line width=0.8,color=blue] (1,-2,0) -- (-1,4,0);
                 \draw[line width=0.8,color=blue] (0.2,1.2,0) node {$\vv{q}$};
                 \draw[line width=0.8,color=red,dashed] (-2,0,0) -- (-3,-4,0);
@@ -1028,16 +1024,15 @@
                 \draw[line width=0.8] (-1.7,0,0) node {$I$};
             \end{tikzpicture}
         \end{center}
-        \\
-        \\
-        Zudem kann g...
-        \\
-        \\
+        \end{minipage}\\\\
+
+        \begin{center}
+        \begin{minipage}[t]{0.5\textwidth}
         \begin{left}
-            \quad 3)\text{ } ...\textbf{in E liegen}
+            \quad 3)\text{ Zudem kann g \textbf{in E liegen}}
         \end{left}
         \begin{center}
-            \begin{tikzpicture}[>=triangle 45]
+            \begin{tikzpicture}[>=triangle 45,scale=0.6]
                 \draw[->,line width=0.8,color=blue] (1,-2,0) -- (-2,0,0);
                 \draw[line width=0.8] (0.7,-0.8,0) node {$\textcolor{blue}{\vv{q}} = \textcolor{blue}{\vv{q_1}} = \textcolor{blue}{\vv{q_2}}$};
                 \draw[color=red,fill=red,opacity=0.5]  (-4,0,4) -- (4,0,4) -- (4,0,-4) -- (-4,0,-4) -- cycle;
@@ -1056,12 +1051,12 @@
                 \draw[line width=0.8] (1.3,-1.8,0) node {$O$};
             \end{tikzpicture}
         \end{center}
-        \\
-        \\
+        \end{minipage}
+        \end{center}
         \paragraph{} Die Lagebeziehung zwischen einer Ebene $E$ und einer Geraden $g$ lässt sich wie folgt ermitteln:
 
         \begin{center}
-            \begin{tikzpicture}[>=triangle 45]
+            \begin{tikzpicture}[>=triangle 45,scale=0.6]
                 \draw (0,0) node{$\textcolor{red}{\vv{n}} \odot \textcolor{red}{\vv{u}} = 0?$};
                 \draw [line width=0.8pt,color=grey] (-5,-0.3) -- (-4,-0.3);
                 \draw [line width=0.8pt,color=grey] (-3.1,-0.3) -- (3.1,-0.3);
@@ -1086,13 +1081,13 @@
     \subsection{Lagebeziehungen zwischen Ebenen}
 
         \paragraph{} Ebenen teilen bezüglich ihrer Lage zueinander eine Eigenschaft mit einer Ebene und einer Geraden.
-        Zwei Ebenen $E_1$ und $E_2$ können ebenfalls:
-
+        Zwei Ebenen $E_1$ und $E_2$ können ebenfalls:\\
+        \begin{minipage}[t]{0.5\textwidth}
         \begin{left}
-            \quad 1)\text{ } ...\textbf{parallel}...
+            \quad 1)\text{...\textbf{parallel} sein...}
         \end{left}
         \begin{center}
-            \begin{tikzpicture}[>=triangle 45]
+            \begin{tikzpicture}[>=triangle 45,scale=0.6]
                 \draw[color=red,fill=red,opacity=0.5]  (-4,0,4) -- (4,0,4) -- (4,0,-4) -- (-4,0,-4) -- cycle;
                 \draw[color=orange,fill=orange,opacity=0.5]  (-4,4,4) -- (4,4,4) -- (4,4,-4) -- (-4,4,-4) -- cycle;
                 \draw[->,line width=0.8,color=red] (0,0,0) -- (0,4,0);
@@ -1104,12 +1099,13 @@
                 \draw[line width=0.8] (1.3,-1.8,0) node {$O$};
             \end{tikzpicture}
         \end{center}
-
+        \end{minipage}
+        \begin{minipage}[t]{0.5\textwidth}
         \begin{left}
-            \quad 2)\text{ } ...\textbf{identisch}
+            \quad 2)\text{...\textbf{identisch} sein}
         \end{left}
         \begin{center}
-            \begin{tikzpicture}[>=triangle 45]
+            \begin{tikzpicture}[>=triangle 45,scale=0.5]
                 \draw[color=red,fill=red,opacity=0.5]  (1,0,-1) -- (1,0,7) -- (-7,0,7) -- (-7,0,-1) -- cycle;
                 \draw[color=orange,fill=orange,opacity=0.5]  (-1,0,1) -- (7,0,1) -- (7,0,-7) -- (-1,0,-7) -- cycle;
                 \draw[->,line width=0.8,color=red] (-3,0,3) -- (-3,4,3);
@@ -1121,16 +1117,15 @@
                 \draw[line width=0.8] (1.3,-1.8,0) node {$O$};
             \end{tikzpicture}
         \end{center}
-        \\
-        \\
-        ...sein oder...
-        \\
-        \\
+        \end{minipage}\\
+
+        \begin{center}
+        \begin{minipage}[t]{0.5\textwidth}
         \begin{left}
             \quad 3)\text{ } ...\textbf{sich schneiden}
         \end{left}
         \begin{center}
-            \begin{tikzpicture}[>=triangle 45]
+            \begin{tikzpicture}[>=triangle 45,scale=0.6]
                 \draw[color=red,fill=red,opacity=0.5]  (-4,0,4) -- (4,0,4) -- (4,0,-4) -- (-4,0,-4) -- cycle;
                 \draw[color=orange,fill=orange,opacity=0.5]  (-4,4,0) -- (4,4,0) -- (4,-4,0) -- (-4,-4,0) -- cycle;
                 \draw[->,line width=0.8,color=red] (0,0,0) -- (0,4,0);
@@ -1146,8 +1141,9 @@
                 \draw[line width=0.8] (1.3,-1.8,0) node {$O$};
             \end{tikzpicture}
         \end{center}
-        \\
-        \\
+        \end{minipage}
+        \end{center}
+
         \paragraph{} Die Lagebeziehung zwischen zwei Ebenen $E_1$ und $E_2$ lässt sich wie folgt ermitteln:
 
         \begin{center}
