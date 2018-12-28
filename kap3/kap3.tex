@@ -1,7 +1,7 @@
 \chapter{Funktionsuntersuchung}\label{Funktionsuntersuchung}
 \chapterauthor{Bruno}
 
-Die \textbf{Analysis} (griechisch  análysis, deutsch "`Aufl"osung"') ist ein Teilgebiet der Mathematik.  Die Untersuchung von reellen und komplexen Funktionen hinsichtlich Stetigkeit, Differenzierbarkeit und Integrierbarkeit z"ahlt zu den Hauptgegenst"anden der Analysis. Die hierzu entwickelten Methoden sind in allen Natur- und Ingenieurwissenschaften von großer Bedeutung.\\
+Die \textbf{Analysis} (griechisch  análysis, deutsch "`Aufl"osung"') ist ein Teilgebiet der Mathematik. Die Untersuchung von reellen und komplexen Funktionen hinsichtlich Stetigkeit, Differenzierbarkeit und Integrierbarkeit z"ahlt zu den Hauptgegenst"anden der Analysis. Die hierzu entwickelten Methoden sind in allen Natur- und Ingenieurwissenschaften von großer Bedeutung.
 
 \section{Stetigkeit}
 
@@ -12,11 +12,14 @@ Eine Funktion ist stetig an der Stelle $x_{0}$, wenn:
 \item $\lim\limits_{x \rightarrow x_{0}} {f(x)}$ existiert
 \item $\lim\limits_{x \rightarrow x_{0}^{\pm}} {f(x)}=f(x_{0})$\\
 \end{enumerate}
-\end{Definition}
+\end{Definition}\\
+
 Stetigkeit ist eine lokale Eigenschaft. Die Funktion $f$ hei"st dann stetig, wenn sie an jeder Stelle ihrer Definitionsmenge stetig ist.
 
 \begin{Bemerkung}
-Ist $f$ stetig und $I\subset \R$ ein reelles Intevall, dann ist $f(I)$ ebenfalls ein Intervall. Ist $f$ zudem streng monoton, so ist die Umkehrfunktion $f^{-1}$ ebenfalls stetig.
+\begin{Theorem}
+	Ist $f$ stetig und $I\subset \R$ ein reelles Intevall, dann ist $f(I)$ ebenfalls ein Intervall. Ist $f$ zudem streng monoton, so ist die Umkehrfunktion $f^{-1}$ ebenfalls stetig.
+\end{Theorem}
 \end{Bemerkung}
 
 \begin{Bemerkung}
@@ -26,10 +29,9 @@ So sagt der \textbf{Zwischenwertsatz} aus, dass eine reelle, im Intervall $[a;b]
 Haben $a$ und $b$ zudem verschiedene Vorzeichen, so verspricht der Zwischenwertsatz mindestens eine Nullstelle von $f$ in diesem abgeschlossenen Intervall. Dieser Sonderfall ist als \textbf{Nullstellensatz} von Bolzano bekannt.
 \end{Bemerkung}
 
-\begin{Definition}
-Zwischenwertsatz:\\
+\begin{Theorem}[- Zwischenwertsatz]
 Ist $f:[a;b]\Rightarrow$ eine stetige reelle Funktion die auf einem Intervall definiert ist, dann existiert zu \textbf{jedem} $s \in [f(a);f(b)]$ bzw. $[f(b);f(a)]$ (vom Vorzeichen der Funktionswerte abh"angig) \textbf{ein} $c \in [a;b] $ mit $f(c)=s$
-\end{Definition}
+\end{Theorem}
 
 \subsubsection{Stetige Fortsetzungen}
 
@@ -48,26 +50,29 @@ Dieser Grenzwert ist die \textbf{Ableitung} von $f$ an der Stelle $x_{0}$.\\
 Die Funktion hei"st differenzierbar, wenn sie $\forall x \in D$ differenzierbar ist.\\
 \end{Definition}
 \\
+
 Die Funktion $f(x)=|x|$ ist nicht differenzierbar, da bei der Stelle $x_{0}=0$ der linksseitige Grenzwert des Differenzenquotienten ($\lim\limits_{h \rightarrow 0^{-}}{f'(x_{0})=-1}$) nicht mit dem rechtsseitigen Grenzwert (1) "ubereinstimmt.\\
 
 \subsection{Zusammenhang zwischen Stetigkeit und Differenzierbarkeit}
 
 Ist eine Funktion $f$ an der Stelle $x_{0}$ differenzierbar, so ist sie an dieser Stelle auch stetig.
 Die Umkehrung gilt erst einmal nicht, aber es gibt eine verneinende Aussage: Ist $f$ an der Stelle $x_{0}$ nicht stetig, so ist sie hier auch nicht differenzierbar.\\
-
-Ist eine Funktion differenzierbar und ist ihre Ableitung zus"atzlich stetig, dann wird sie \textbf{Stetig differenzierbar} genannt.
+\begin{Theorem}
+	$f$ differenzierbar $\Rightarrow f$ stetig.
+\end{Theorem}
+\begin{Bemerkung}
+	Ist eine Funktion differenzierbar und ist ihre Ableitung zus"atzlich stetig, dann wird sie \textbf{Stetig differenzierbar} genannt.
+\end{Bemerkung}
 
 \section{Ableitungsregeln}
 
 
 Ein Ableitungswert gibt die Steigung an einem bestimmten Punkt an. Im Allgemeinen und zum Beweisen wird der Differentenquotient ben"otigt, um eine Ableitungsfunktion zu definieren, es geht aber in vielen F"allen schneller.
 
-\subsection{Produktregel}
-\begin{Definition}
+\begin{Theorem}[- Produktregel]
 Sind die Funktionen $u$ und $v$ an der Stelle $x_{0}$ $\in$ $D$ differenzierbar, dann ist die Funktion $f(x)=u(x)\cdot v(x)$ bei $x_{0}$ auch differenzierbar und es gilt: \\
-\\
-$f'(x_{0}) = u'(x_{0})v(x_{0})+u(x_{0})v'(x_{0})$\\
-\end{Definition}
+$$f'(x_{0}) = u'(x_{0})v(x_{0})+u(x_{0})v'(x_{0})$$
+\end{Theorem}
 \begin{Beweis}
 $
 \begin{array}{rcl}
@@ -81,12 +86,10 @@ $
 $
 \end{Beweis}
 
-\subsection{Quotientenregel}
-\begin{Definition}
+\begin{Theorem}[- Quotientenregel]
 Sind die Funktionen $u$ und $v$ an der Stelle $x_{0}$ $\in$ $D$ differenzierbar, dann ist die Funktion $f(x)=\frac{u(x)} {v(x)}$ bei $x_{0}$ auch differenzierbar und es gilt: \\
-\\
-$f'(x_{0})=\frac{u'(x_{0})\cdot v(x_{0})-u(x_{0})\cdot v'(x_{0})}{v^2(x_{0})}$\\
-\end{Definition}
+$$f'(x_{0})=\frac{u'(x_{0})\cdot v(x_{0})-u(x_{0})\cdot v'(x_{0})}{v^2(x_{0})}$$\\
+\end{Theorem}
 \begin{Beweis}
 $
 \begin{array}{rcl}
@@ -103,26 +106,27 @@ $
 $
 \end{Beweis}
 
-\subsection{Kettenregel}
-\begin{Definition}
+\begin{Theorem}[- Kettenregel]
 Die Funktion $v$ sei an der Stelle $x_{0}$ differenzierbar und die Funktion $u$ an der Stelle $v(x_{0})$. Dann ist die Funktion $f=u\circ v$ mit der Gleichung $f(x)= u(v(x))$ an der Stelle $x_{0}$ differenzierbar. Es gilt:\\
-\\
-$f'(x_{0})=v'(x_{0})\cdot u'(v(x_{0}))$
-\end{Definition}
+
+$$f'(x_{0})=v'(x_{0})\cdot u'(v(x_{0}))$$
+\end{Theorem}
 
 \subsection{Tangente und Normale}
-\begin{Definition}
+\begin{Theorem}
 Ist die Funktion $f$ differenzierbar an der Stelle $x_{0}$, dann hat die \textbf{Tangente} an dem Graphen von $f$ die Steigung $a=f'(x_{0})$ und den Y-Achsenabschnitt $b=-f'(x_{0})\cdot x_{0}+f(x_{0})$. Daraus ergibt sich die Tangentengleichung:\\
-\\
-$T_{x_{0}}(x)=f'(x_{0})\cdot (x-x_{0})+f(x_{0}) $ \\
-\end{Definition}
-\\
-Eine Merkhilfe dazu ist das Wort "`Fuxufu"', wobei "`u"' dem $x_{0}$ entspricht.\\
-\\
-Die \textbf{Normale} an der Stelle $x_{0}$ bezeichnet die Gerade, die genau senkrecht zur Tangente steht und diese im Ber"uhrpunkt des Graphen schneidet.\\
-\\
-$N_{x_{0}}(x)=-\frac{1}{f'(x_{0})}\cdot (x-x_{0})+f(x_{0})$\\
 
+$$T_{x_{0}}(x)=f'(x_{0})\cdot (x-x_{0})+f(x_{0}) $$ \\
+\end{Theorem}
+\\
+\begin{Bemerkung}
+	Eine Merkhilfe dazu ist das Wort "`Fuxufu"', wobei "`u"' dem $x_{0}$ entspricht.\\
+\end{Bemerkung}
+\\
+\begin{Definition}
+Die \textbf{Normale} an der Stelle $x_{0}$ bezeichnet die Gerade, die genau senkrecht zur Tangente steht und diese im Ber"uhrpunkt des Graphen schneidet.\\
+$$N_{x_{0}}(x)=-\frac{1}{f'(x_{0})}\cdot (x-x_{0})+f(x_{0})$$\\
+\end{Definition}
 
 \section{Vollst"andige Funktionsuntersuchung}
 
@@ -188,10 +192,17 @@ $\lim\limits_{x \rightarrow x_{0}}f(x) = g $\quad $\Leftrightarrow$ \quad $\fora
 
 \begin{Definition}
 Regel von l'Hospital: f"ur Grenzwerte des Typs $0/0$ und $\infty/\infty$\\\\
+<<<<<<< HEAD
 Seien zwei Funktionen $f$ und $g$ differenzierbar und gelte entweder\\\\
 \lim\limits_{x \rightarrow x_{0}}g(x) = \lim\limits_{x \rightarrow x_{0}}f(x) = \infty$ \qquad ODER \qquad  $\lim\limits_{x \rightarrow x_{0}}g(x) = \lim\limits_{x \rightarrow x_{0}}f(x) = 0$\\\\
 (sie sind also entweder konvergent gegen $0$ oder bestimmt divergent) \\dann gilt:\\\\
 $\lim\limits_{x \rightarrow x_{0}} \dfrac{f(x)}{g(x)} = \lim\limits_{x \rightarrow x_{0}}\dfrac{f'(x)}{g'(x)}$\\
+=======
+Seien zwei Funktionen $f$ und $g$ differenzierbar und eine Zahl $x_{0}$ : $g(x_{0})\neq0$ und gelte entweder\\
+$$\lim\limits_{x \rightarrow x_{0}}g(x) = \lim\limits_{x \rightarrow x_{0}}f(x) = \infty \qquad \text{ODER} \qquad  \lim\limits_{x \rightarrow x_{0}}g(x) = \lim\limits_{x \rightarrow x_{0}}f(x) = 0$$\\
+(sie sind also entweder konvergent gegen $0$ oder bestimmt divergent) \\dann gilt:\\
+$$\lim\limits_{x \rightarrow x_{0}} \dfrac{f(x)}{g(x)} = \lim\limits_{x \rightarrow x_{0}}\dfrac{f'(x)}{g'(x)}$$\\
+>>>>>>> 9f8a2d4040470f65359aabd4f9fe608479676cb9
 \end{Definition}
 
 \begin{Bemerkung}
@@ -330,11 +341,13 @@ $|D_{f}| \leq |W_{f}|$.\quad Beispiel: $\quad f(x)=2x$ \quad mit \quad $D_{f}=\Z
 
 $|D_{f}| = |W_{f}|$. \quad Beispiel: $\qquad f(x)=x^3 $\\\\
 \end{description}
+\end{Definition}
+\begin{Bemerkung}
 Ausführlichere Erklärungen hier, einfach auf die Links klicken:\\
 \href{http://www.math.uni-konstanz.de/~huynh/Vorkurs2015/Vorlesung_12.pdf}{\textcolor{blue}{Uni Vorlesungsskript}} \qquad oder \qquad
 \href{https://www.mathe-online.at/mathint/fun1/i_isb.html}{\textcolor{blue}{Überschaubar(er) mit Graphen}} \\
+\end{Bemerkung}
 
-\end{Definition}
 
 \subsection{Umkehrbarkeit}
 
