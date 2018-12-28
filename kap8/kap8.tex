@@ -288,7 +288,8 @@ Aus vorheriger Definition des Euklidischen Algorithmus ergeben sich diese Eigens
 $r_{n}$ ist der größte gemeinsame Teiler von $a$ und $b$.\quad ggT$(a\,;b) = r_{n}$. Es gilt also:
 \begin{itemize}
 \item ggT$(a\,;b) =$ ggT$(b\,;a)$
-\item $a | c$ und $b | d \quad \Rightarrow \quad$ ggT$(a\,;b) |$ ggT$(c\,;d)$\\
+\item $a | c$ und $b | d \quad \Rightarrow \quad$ ggT$(a\,;b) |$ ggT$(c\,;d)$
+\item ggT$(a^2;b^2)$ $=$ $\left(\text{ggT}(a;b)\right)^2$\\
 \end{itemize}
 \end{Theorem}
 
@@ -327,16 +328,80 @@ Aus \quad $780\, |\, 2340$ und $567 | 2835$ \quad folgt \quad  ggT$(780,567)\, |
 \begin{Definition}
 Sei $a$ eine ganze Zahl und $p \in \mathbb{P}$ kein Teiler von $a$. Dann gilt
 $$a^{p-1} \equiv 1 \mod p$$
+$$\Rightarrow a^p \equiv a \mod p$$
 \end{Definition}
 
 \begin{Beweis}
+
+Seien $p$ eine Primzahl und $a \in Z$ und zwei Listen (oder Mengen) von Zahlen
+$$M: a, 2a, 3a, 4a, ..., (p-2)a, (p-1)a$$
+$$N: 1, 2, 3, 4, ..., (p-2), (p-1)$$
+\\
+Erst wird bewiesen, dass bei der Division von 2 Zahlen $k,k' \in \N$ mit $k \neq k'$ ein anderer Rest rauskommt. Dies wird und später hilfreich sein.\\
+
+\begin{array}{rcccl}
+$\Rightarrow & k & \not\equiv & k' \mod p $ & $(da $k \neq k'$ und $k<p$ und $k'<p$)\\
+$\Rightarrow & k \cdot a & \not\equiv & k' \cdot a \mod p $ &\\
+\end{array}\\
+\\\\
+Die Reste von beliebigen Zahlen $x \in M$ durch $p \in \mathbb{P}$ ergeben genau die Zahlen $y \in N$, da in beiden Mengen genau $(p-1)$ verschiedene Elemente sind und da gerade gezeigt wurde dass jedes Element aus $M$ bei der Division durch p einen unterschiedlichen Rest hat. Die Reihenfolge der zu $x \in M$ zugehörigen Reste $y \in N$  ist natürlich nicht klar (ganz normal bei Mengen). \\\\
+Wir benennen um, damit es klarer wird:
+$$
+\left.\begin{array}{rcl}
+$a & \equiv & r_{1} \mod p$\\
+$2a & \equiv & r_{2} \mod p$ \\
+$3a & \equiv & r_{3} \mod p $\\
+&& \vdots & 
+$(p - 2)a & \equiv & r_{p-2} \mod p$ \\
+$(p - 1)a & \equiv & r_{p-1} \mod p$ \\
+\end{array}
+\right\} $r_{1}, r_{2}, ..., r_{p-1}$ sind alle voneinander verschieden ($\widehat{=}$ paarweise verschieden) und sind genau alle Elemente aus der Menge $N$\\
+\\
+Demnach gilt die Schreibweise:\\\\
+$r_1 \cdot r_2 \cdot r_3 \cdot ... \cdot r_{p-2} \cdot r_{p-1} \quad = \quad 1 \cdot 2 \cdot 3 \cdot (p-2) \cdot (p-1) \quad = \quad (p-1)! $\\\\
+Daraus folgt:\\\\
+\begin{array}{rcl}
+$a \cdot 2a \cdot 3a \cdot ... \cdot (p-1)a & \equiv & r_1 \cdot r_2 \cdot r_3 \cdot ... \cdot r_{p-1} \mod p $\\
+(p-1)! a^{p-1} & \equiv & (p-1)! \mod p\\
+\end{array}\\
+\\
+Da ggT($(p-1)! ; p$) $= 1$, kann man durch (p-1)! teilen, ohne dass sich das Modulo verändert\\\\
+$ \Rightarrow a^{p-1} \equiv 1 \mod p$
+
 
 \end{Beweis}
 
 
 \subsection{Zusammenhänge zwischen ggT und kgV}
 
-blablabla
+
+\begin{Theorem}
+Das kgV besitzt ähnliche Eigenschaften wie der ggT
+Seien $a,b,c,d,k$ ganze Zahlen ungleich Null. Dann gilt:
+\begin{enumerate}
+\item kgV($a;b$) = kgV($b;a$)
+\item kgV($k\cdot a ; k \cdot b$) = $|k| \cdot$ kgV ($a;b$)
+\item Falls $a | c$ und $b | d$, dann gilt auch kgV($a;b$) &|& kgV($c;d$)
+\end{enumerate}\\
+
+Eine wichtige Eigenschaft, die oft benutzt wird, ist folgende:
+$$\text{ggT}(a;b) \cdot \text{kgV}(a;b) = |a \cdot b|$$
+
+Eine andere Art, den ggT und den kgV zu ermitteln ist die über die Primfaktorzerlegung. Diese wird gleich mithilfe eines Beispiels erklärt.
+\end{Theorem}
+
+\begin{Beispiel}
+\begin{array}{rcccl}
+$a = 12474 &=& 2 \cdot 3^4 \cdot 7 \cdot 11 &=& 2^1 \cdot 3^{\textcolor{red}{4}} \cdot 5^0 \cdot 7^1 \cdot 11^{\textcolor{red}{1}} \cdot 17^0 $\\
+$b = 33320 &=& 2^3 \cdot 5 \cdot 7^2 \cdot17 &=& 2^{\textcolor{red}{3}} \cdot 3^0 \cdot 5^{\textcolor{red}{1}} \cdot 7^{\textcolor{red}{2}} \cdot 11^0 \cdot 17^{\textcolor{red}{1}} $\\
+\end{array}\\\\
+Daraus ergeben sich\\
+ggT($a;b$) $= 2^1 \cdot 7^1 \quad = \quad 14$\\
+kgV($a;b$) $= 2^{\textcolor{red}{3}} \cdot 3^{\textcolor{red}{4}} \cdot 5^{\textcolor{red}{1}} \cdot 7^{\textcolor{red}{2}} \cdot 11^{\textcolor{red}{1}} \cdot 17^{\textcolor{red}{1}} \quad = \quad 29688120 $
+ 
+\end{Beispiel}
+
+
 
 \subsection{Die Sätze von Bézout, Gauß und der Fundamentalsatz des ggT}
 
@@ -426,15 +491,9 @@ $$\mathbb{L}_{F} = \{ (1271k -  (F \cdot 135) ; 4199k - (F \cdot 446)) ; \quad k
 \subsection{Das RSA Verschlüsselungsverfahren}
 
 
+jkdhgadkjhsagjshfgsdkjfhgsdfj,hsgdf,jhSDFG,SJDHFG,JDHGALJDslkdhgflaskjdhflaskjdhflaksjdhflkasjdhflksjavbmnsfhiuwezriuewzrpqwuroiwurpoiuerpoebnbvxy,cmvnb,xymnvb,xmcnvbsalkjfhwpoiefu
 
-
-
-
-
-
-
-
-
+SO, BITTE ENTSCHLÜSSELN
 
 
 
