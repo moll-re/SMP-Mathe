@@ -1,7 +1,7 @@
 \chapter{Funktionsuntersuchung}\label{Funktionsuntersuchung}
 \chapterauthor{Bruno}
 
-Die \textbf{Analysis} (griechisch  análysis, deutsch "`Aufl"osung"') ist ein Teilgebiet der Mathematik.  Die Untersuchung von reellen und komplexen Funktionen hinsichtlich Stetigkeit, Differenzierbarkeit und Integrierbarkeit z"ahlt zu den Hauptgegenst"anden der Analysis. Die hierzu entwickelten Methoden sind in allen Natur- und Ingenieurwissenschaften von großer Bedeutung.\\
+Die \textbf{Analysis} (griechisch  análysis, deutsch "`Aufl"osung"') ist ein Teilgebiet der Mathematik. Die Untersuchung von reellen und komplexen Funktionen hinsichtlich Stetigkeit, Differenzierbarkeit und Integrierbarkeit z"ahlt zu den Hauptgegenst"anden der Analysis. Die hierzu entwickelten Methoden sind in allen Natur- und Ingenieurwissenschaften von großer Bedeutung.
 
 \section{Stetigkeit}
 
@@ -16,7 +16,9 @@ Eine Funktion ist stetig an der Stelle $x_{0}$, wenn:
 Stetigkeit ist eine lokale Eigenschaft. Die Funktion $f$ hei"st dann stetig, wenn sie an jeder Stelle ihrer Definitionsmenge stetig ist.
 
 \begin{Bemerkung}
-Ist $f$ stetig und $I\subset \R$ ein reelles Intevall, dann ist $f(I)$ ebenfalls ein Intervall. Ist $f$ zudem streng monoton, so ist die Umkehrfunktion $f^{-1}$ ebenfalls stetig.
+\begin{Theorem}
+	Ist $f$ stetig und $I\subset \R$ ein reelles Intevall, dann ist $f(I)$ ebenfalls ein Intervall. Ist $f$ zudem streng monoton, so ist die Umkehrfunktion $f^{-1}$ ebenfalls stetig.
+\end{Theorem}
 \end{Bemerkung}
 
 \begin{Bemerkung}
@@ -26,10 +28,9 @@ So sagt der \textbf{Zwischenwertsatz} aus, dass eine reelle, im Intervall $[a;b]
 Haben $a$ und $b$ zudem verschiedene Vorzeichen, so verspricht der Zwischenwertsatz mindestens eine Nullstelle von $f$ in diesem abgeschlossenen Intervall. Dieser Sonderfall ist als \textbf{Nullstellensatz} von Bolzano bekannt.
 \end{Bemerkung}
 
-\begin{Definition}
-Zwischenwertsatz:\\
+\begin{Theorem}[- Zwischenwertsatz]
 Ist $f:[a;b]\Rightarrow$ eine stetige reelle Funktion die auf einem Intervall definiert ist, dann existiert zu \textbf{jedem} $s \in [f(a);f(b)]$ bzw. $[f(b);f(a)]$ (vom Vorzeichen der Funktionswerte abh"angig) \textbf{ein} $c \in [a;b] $ mit $f(c)=s$
-\end{Definition}
+\end{Theorem}
 
 \subsubsection{Stetige Fortsetzungen}
 
@@ -54,20 +55,22 @@ Die Funktion $f(x)=|x|$ ist nicht differenzierbar, da bei der Stelle $x_{0}=0$ d
 
 Ist eine Funktion $f$ an der Stelle $x_{0}$ differenzierbar, so ist sie an dieser Stelle auch stetig.
 Die Umkehrung gilt erst einmal nicht, aber es gibt eine verneinende Aussage: Ist $f$ an der Stelle $x_{0}$ nicht stetig, so ist sie hier auch nicht differenzierbar.\\
-
-Ist eine Funktion differenzierbar und ist ihre Ableitung zus"atzlich stetig, dann wird sie \textbf{Stetig differenzierbar} genannt.
+\begin{Theorem}
+	$f$ differenzierbar $\Rightarrow f$ stetig.
+\end{Theorem}
+\begin{Bemerkung}
+	Ist eine Funktion differenzierbar und ist ihre Ableitung zus"atzlich stetig, dann wird sie \textbf{Stetig differenzierbar} genannt.
+\end{Bemerkung}
 
 \section{Ableitungsregeln}
 
 
 Ein Ableitungswert gibt die Steigung an einem bestimmten Punkt an. Im Allgemeinen und zum Beweisen wird der Differentenquotient ben"otigt, um eine Ableitungsfunktion zu definieren, es geht aber in vielen F"allen schneller.
 
-\subsection{Produktregel}
-\begin{Definition}
+\begin{Theorem}[- Produktregel]
 Sind die Funktionen $u$ und $v$ an der Stelle $x_{0}$ $\in$ $D$ differenzierbar, dann ist die Funktion $f(x)=u(x)\cdot v(x)$ bei $x_{0}$ auch differenzierbar und es gilt: \\
-\\
-$f'(x_{0}) = u'(x_{0})v(x_{0})+u(x_{0})v'(x_{0})$\\
-\end{Definition}
+$$f'(x_{0}) = u'(x_{0})v(x_{0})+u(x_{0})v'(x_{0})$$
+\end{Theorem}
 \begin{Beweis}
 $
 \begin{array}{rcl}
@@ -81,12 +84,10 @@ $
 $
 \end{Beweis}
 
-\subsection{Quotientenregel}
-\begin{Definition}
+\begin{Theorem}[- Quotientenregel]
 Sind die Funktionen $u$ und $v$ an der Stelle $x_{0}$ $\in$ $D$ differenzierbar, dann ist die Funktion $f(x)=\frac{u(x)} {v(x)}$ bei $x_{0}$ auch differenzierbar und es gilt: \\
-\\
-$f'(x_{0})=\frac{u'(x_{0})\cdot v(x_{0})-u(x_{0})\cdot v'(x_{0})}{v^2(x_{0})}$\\
-\end{Definition}
+$$f'(x_{0})=\frac{u'(x_{0})\cdot v(x_{0})-u(x_{0})\cdot v'(x_{0})}{v^2(x_{0})}$$\\
+\end{Theorem}
 \begin{Beweis}
 $
 \begin{array}{rcl}
@@ -103,19 +104,18 @@ $
 $
 \end{Beweis}
 
-\subsection{Kettenregel}
-\begin{Definition}
+\begin{Theorem}[- Kettenregel]
 Die Funktion $v$ sei an der Stelle $x_{0}$ differenzierbar und die Funktion $u$ an der Stelle $v(x_{0})$. Dann ist die Funktion $f=u\circ v$ mit der Gleichung $f(x)= u(v(x))$ an der Stelle $x_{0}$ differenzierbar. Es gilt:\\
-\\
-$f'(x_{0})=v'(x_{0})\cdot u'(v(x_{0}))$
-\end{Definition}
+
+$$f'(x_{0})=v'(x_{0})\cdot u'(v(x_{0}))$$
+\end{Theorem}
 
 \subsection{Tangente und Normale}
-\begin{Definition}
+\begin{Theorem}
 Ist die Funktion $f$ differenzierbar an der Stelle $x_{0}$, dann hat die \textbf{Tangente} an dem Graphen von $f$ die Steigung $a=f'(x_{0})$ und den Y-Achsenabschnitt $b=-f'(x_{0})\cdot x_{0}+f(x_{0})$. Daraus ergibt sich die Tangentengleichung:\\
 \\
 $T_{x_{0}}(x)=f'(x_{0})\cdot (x-x_{0})+f(x_{0}) $ \\
-\end{Definition}
+\end{Theorem}
 \\
 Eine Merkhilfe dazu ist das Wort "`Fuxufu"', wobei "`u"' dem $x_{0}$ entspricht.\\
 \\
