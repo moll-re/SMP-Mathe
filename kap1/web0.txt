@@ -1,0 +1,31 @@
+\documentclass[10pt]{article}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{ttqqqq}{rgb}{0.2,0,0}
+\definecolor{sexdts}{rgb}{0.1803921568627451,0.49019607843137253,0.19607843137254902}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-5.088547334373463,
+xmax=22.65108937607874,
+ymin=-4.075119239735864,
+ymax=10.874639170629912,
+xtick={-4,-2,...,22},
+ytick={-4,-2,...,10},]
+\clip(-5.088547334373463,-4.075119239735864) rectangle (22.65108937607874,10.874639170629912);
+\draw[line width=2pt,color=sexdts,smooth,samples=100,domain=2.505408374793447e-7:22.65108937607874] plot(\x,{2*sqrt((\x))+2});
+\draw[line width=2pt,color=ttqqqq,smooth,samples=100,domain=-5.088547334373463:22.65108937607874] plot(\x,{(\x)});
+\begin{scriptsize}
+\draw[color=sexdts] (0.8405353212957103,2.9444911186724285) node {$f$};
+\draw[color=ttqqqq] (-1.446396560176685,-3.1751691937860826) node {$Hauptdiagonale$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{document}

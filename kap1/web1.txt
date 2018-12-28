@@ -1,0 +1,42 @@
+\documentclass[10pt]{article}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{rvwvcq}{rgb}{0.08235294117647059,0.396078431372549,0.7529411764705882}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{ttqqqq}{rgb}{0.2,0,0}
+\definecolor{sexdts}{rgb}{0.1803921568627451,0.49019607843137253,0.19607843137254902}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-1.8059310726041948,
+xmax=21.731302722239086,
+ymin=-2.01447455212563,
+ymax=10.670477401431077,
+xtick={-1,0,...,21},
+ytick={-2,-1,...,10},]
+\clip(-1.8059310726041948,-2.01447455212563) rectangle (21.731302722239086,10.670477401431077);
+\draw[line width=2pt,color=sexdts,smooth,samples=100,domain=1.4376221380591118e-7:21.731302722239086] plot(\x,{2*sqrt((\x))+2});
+\draw[line width=2pt,color=ttqqqq,smooth,samples=100,domain=-1.8059310726041948:21.731302722239086] plot(\x,{(\x)});
+\draw [line width=2pt] (0,0)-- (0,2);
+\draw [line width=2pt] (0,2)-- (2,2);
+\draw [line width=2pt] (2,2)-- (2,0);
+\begin{scriptsize}
+\draw [fill=ffqqqq] (0,0) circle (2.5pt);
+\draw[color=ffqqqq] (0.22437993412656146,0.3841672124633506) node {$a0$};
+\draw [fill=rvwvcq] (0,2) circle (2.5pt);
+\draw[color=rvwvcq] (0.15251051795910106,2.378543511110368) node {$A$};
+\draw [fill=rvwvcq] (2,2) circle (2.5pt);
+\draw[color=rvwvcq] (2.146886816606127,2.378543511110368) node {$B$};
+\draw [fill=ffqqqq] (2,0) circle (2.5pt);
+\draw[color=ffqqqq] (2.2187562327735875,0.3841672124633506) node {$a1$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{document}
