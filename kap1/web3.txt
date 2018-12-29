@@ -1,0 +1,50 @@
+\documentclass[10pt]{article}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{rvwvcq}{rgb}{0.08235294117647059,0.396078431372549,0.7529411764705882}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{wrwrwr}{rgb}{0.3803921568627451,0.3803921568627451,0.3803921568627451}
+\definecolor{ttqqqq}{rgb}{0.2,0,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-7.064895824577204,
+xmax=28.351157204568363,
+ymin=-8.78942481077331,
+ymax=10.29739460798684,
+xtick={-6,-4,...,28},
+ytick={-8,-6,...,10},]
+\clip(-7.064895824577204,-8.78942481077331) rectangle (28.351157204568363,10.29739460798684);
+\draw[line width=2pt,color=ttqqqq,smooth,samples=100,domain=-7.064895824577204:28.351157204568363] plot(\x,{(\x)});
+\draw[line width=2pt,color=wrwrwr,smooth,samples=100,domain=-7.064895824577204:28.351157204568363] plot(\x,{3/2*(\x)-4});
+\draw [line width=2pt] (5,0)-- (4.999511757557879,3.4992676363368176);
+\draw [line width=2pt] (4.999511757557879,3.4992676363368176)-- (3.490167444195548,3.490167444195548);
+\draw [line width=2pt] (3.490167444195548,3.490167444195548)-- (3.493252072731324,0);
+\draw [line width=2pt] (3.4921577126709917,1.2382365690064878)-- (1.2326800880447495,1.2326800880447495);
+\draw [line width=2pt] (1.2326800880447495,1.2326800880447495)-- (1.2275059703280837,-2.1587410445078743);
+\draw [line width=2pt] (1.2275059703280837,-2.1587410445078743)-- (-2.1638122523457697,-2.1638122523457697);
+\draw [line width=2pt] (-2.1638122523457697,-2.1638122523457697)-- (-2.157820383689419,-7.2367305755341285);
+\draw [line width=2pt] (-2.157820383689419,-7.2367305755341285)-- (-7.246229313030961,-7.246229313030961);
+\draw [line width=2pt] (-2.157820383689419,-7.2367305755341285)-- (-2.172139496975313,0);
+\begin{scriptsize}
+\draw [fill=ffqqqq] (5,0) circle (2.5pt);
+\draw[color=ffqqqq] (5.290170003147623,0.6593618561624863) node {$a_0$};
+\draw [fill=ffqqqq] (3.493252072731324,0) circle (2.5pt);
+\draw[color=ffqqqq] (3.803236479023191,0.6593618561624863) node {$a_1$};
+\draw [fill=rvwvcq] (-7.246229313030961,-7.246229313030961) circle (2.5pt);
+\draw[color=rvwvcq] (-6.875649739688639,-5.937215959952919) node {$J$};
+\draw [fill=ffqqqq] (-2.172139496975313,0) circle (2.5pt);
+\draw[color=ffqqqq] (-1.8741460676337316,0.6593618561624863) node {$a_3$};
+\draw [fill=ffqqqq] (1.2307994510983928,0) circle (2.5pt);
+\draw[color=ffqqqq] (1.5322834603604218,0.6593618561624863) node {$a_2$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{document}

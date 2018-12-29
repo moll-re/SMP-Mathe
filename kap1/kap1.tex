@@ -15,6 +15,7 @@ In einem Ausdruck muss das $n$ immer dasselbe bleiben!
 
 
 \begin{GTR-Tipp}
+\\
 Um statt Funktionen Folgen zu behandeln:
 \begin{itemize}
 \item\textcolor{gray}{ON} $\rightarrow \textcolor{red}{\text{MODE}} \rightarrow \text{Zeile 4: statt \textcolor{gray}{FUNC} \textcolor{red}{SEQ} auswählen}$
@@ -71,14 +72,17 @@ Für manche Folgen sind beide Darstellungen möglich, wobei die explizite Darste
 \end{Bemerkung}
 
 \subsubsection{Web-Diagramme}
-Hier handelt es sich um ein graphisches Verfahren, das dazu dient, das Verhalten einer Folge, deren Darstellung rekursiv ist, zu untersuchen.\\
-Dazu muss man der rekursiven Folgenvorschrift eine Funktion $f(a_{n-1})=a_{n}$ zuordnen, sodass - grob gesagt - " die Funktion das Gleiche mit x macht, dass die Folge macht, um von $a_{n}$ auf $a_{n+1}$ zu kommen". Man muss verstehen, dass es sich hierbei nicht um den Graphen der Folge handelt, die Werte der Folgenglieder sind nicht wie gewohnt abzulesen. Zusätzlich zeichnet man in ein kartesisches Koordinatensystem die Hauptdiagonale ein (entspricht dem Graphen von $f(x)=x$).  Exemplarisch wird hier die Folge $a_{n+1}=2\sqrt{a_n}+2$ behandelt, entsprechend ist die Hilfsfunktion hier $f$ mit $f(x)=2\sqrt{x} +2$.\\
 
-%graph mit nur funktion und diagonale 
 
+Hier handelt es sich um ein graphisches Verfahren, das dazu dient, das Verhalten einer Folge, deren Darstellung rekursiv ist, zu untersuchen.  Es ermögicht die Beobachtung des Langzeitverhaltens (Konvergenz, Divergenz oder Oszillation) einer rekursiven Folge. 
+\\
+\begin{minipage}[c]{0,5\textwidth}
+Dazu muss man der rekursiven Folgenvorschrift eine \textcolor{blue}{Funktion $f(a_{n-1})=a_{n}$} zuordnen, sodass - grob gesagt - " die Funktion das Gleiche mit x macht, dass die Folge macht, um von $a_{n}$ auf $a_{n+1}$ zu kommen". Man muss verstehen, dass es sich hierbei nicht um den Graphen der Folge handelt, die Werte der Folgenglieder sind nicht wie gewohnt abzulesen. Zusätzlich zeichnet man in ein kartesisches Koordinatensystem die \textcolor{blue}{Hauptdiagonale} ein (entspricht dem Graphen von $f(x)=x$).  Exemplarisch wird hier die Folge $a_{n+1}=2\sqrt{a_n}+2$ behandelt, dementsprechend ist die Hilfsfunktion hier $f$ mit $f(x)=2\sqrt{x} +2$.\\
+\end{minipage}
+\begin{minipage} 
 \definecolor{ttqqqq}{rgb}{0.2,0,0}
 \definecolor{sexdts}{rgb}{0.1803921568627451,0.49019607843137253,0.19607843137254902}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.5]
 \begin{axis}[
 x=1cm,y=1cm,
 axis lines=middle,
@@ -99,17 +103,15 @@ ytick={-4,-2,...,10},]
 \end{scriptsize}
 \end{axis}
 \end{tikzpicture}
-\newpage
-Dann trägt man den Wert des ersten Folgegliedes auf die Abzissenachse ein und verbindet ihn mit der entsprechenden Funktion anhand eines vertikalen Striches. Der Ordinatenwert, der so erhalten wird (Punkt \textcolor{blue}{A}), entspricht dem Wert von $a_1$. Um den Vorgang erneuern zu können, muss der gefundene Wert wieder auf die Abzissenachse, dazu benutzt man die Hauptdiagonale als "Spiegel". Ein horizontaler Strich bis zur Hauptdiagonale (zum Punkt \textcolor{blue}{B})  und ein vertikaler bis zur Abzissenachse lösen das Problem. So ist der Wert von $a_1$ aud der Abzissenachse, dort wird er für den nächsten Schritt benötigt.
+\end{minipage}
 
 
- Exemplarisch wird hier die Folge $a_{n+1}=2\sqrt{a_n}+2$ behandelt. \\
-%graph mit nur a0 und a1
+\begin{minipage}{0,5\textwidth}
 \definecolor{rvwvcq}{rgb}{0.08235294117647059,0.396078431372549,0.7529411764705882}
 \definecolor{ffqqqq}{rgb}{1,0,0}
 \definecolor{ttqqqq}{rgb}{0.2,0,0}
 \definecolor{sexdts}{rgb}{0.1803921568627451,0.49019607843137253,0.19607843137254902}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.5]
 \begin{axis}[
 x=1cm,y=1cm,
 axis lines=middle,
@@ -117,7 +119,7 @@ ymajorgrids=true,
 xmajorgrids=true,
 xmin=-1.7059310726041948,
 xmax=13.731302722239086,
-ymin=-2.01447455212563,
+ymin=-1.91447455212563,
 ymax=10.670477401431077,
 xtick={-1,0,...,21},
 ytick={-2,-1,...,10},]
@@ -129,24 +131,196 @@ ytick={-2,-1,...,10},]
 \draw [line width=2pt] (2,2)-- (2,0);
 \begin{scriptsize}
 \draw [fill=ffqqqq] (0,0) circle (2.5pt);
-\draw[color=ffqqqq] (0.22437993412656146,0.3841672124633506) node {$a0$};
+\draw[color=ffqqqq] (0.22437993412656146,0.3841672124633506) node {$a_0$};
 \draw [fill=rvwvcq] (0,2) circle (2.5pt);
 \draw[color=rvwvcq] (0.15251051795910106,2.378543511110368) node {$A$};
 \draw [fill=rvwvcq] (2,2) circle (2.5pt);
 \draw[color=rvwvcq] (2.146886816606127,2.378543511110368) node {$B$};
 \draw [fill=ffqqqq] (2,0) circle (2.5pt);
-\draw[color=ffqqqq] (2.2187562327735875,0.3841672124633506) node {$a1$};
+\draw[color=ffqqqq] (2.2187562327735875,0.3841672124633506) node {$a_1$};
 \end{scriptsize}
 \end{axis}
 \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0,5\textwidth}
+Dann trägt man den Wert des ersten Folgegliedes auf die Abzissenachse ein und verbindet ihn mit der entsprechenden Funktion anhand eines vertikalen Striches. Der Ordinatenwert, der so erhalten wird (Punkt \textcolor{blue}{A}), entspricht dem Wert von $a_1$. Um den Vorgang erneuern zu können, muss der gefundene Wert wieder auf die Abzissenachse, dazu benutzt man die Hauptdiagonale als "Spiegel". Ein horizontaler Strich bis zur Hauptdiagonale (zum Punkt \textcolor{blue}{B})  und ein vertikaler bis zur Abzissenachse lösen das Problem. So ist der Wert von $a_1$ aud der Abzissenachse, dort wird er für den nächsten Schritt benötigt.
+\end{minipage}
+\\\\\\
+Dasselbe muss mehrmals wiederholt werden, so wird jeweils das nächste Folgeglied auf die Abzissenachse abgebildet (\textcolor{red}{rote} Punkte). Daraus kann man dann eine \textcolor{blue}{Tendenz} erkennen\textcolor{blue}{, die die Entwicklung der Folgeglieder beschreibt}. Je nach dem, was für eine Tendenz zu erkennen ist, kann man verschiedene Schlüsse bezüglich der Entwicklung der Folge schließen. In diesem Falle wird deutlich, dass die Folge konvergiert, der Grenzwert ist die Schnittstelle zwischen der Hilfsfunktion und der Hauptdiagonalen, es fehlt nur noch diesen zu berechnen.
+\\\\
+%web2 weg
+\begin{minipage}{0.7\textwidth}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{ttqqqq}{rgb}{0.2,0,0}
+\definecolor{sexdts}{rgb}{0.1803921568627451,0.49019607843137253,0.19607843137254902}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.9]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-1.6667190270420253,
+xmax=12.536582509046294,
+ymin=-1.3943671167960805,
+ymax=8.554893100362574,
+xtick={-1,0,...,17},
+ytick={-1,0,...,8},]
+\clip(-1.6667190270420253,-1.3943671167960805) rectangle (17.536582509046294,8.954893100362574);
+\draw[line width=2pt,color=sexdts,smooth,samples=100,domain=3.636824072042055e-8:17.536582509046294] plot(\x,{2*sqrt((\x))+2});
+\draw[line width=2pt,color=ttqqqq,smooth,samples=100,domain=-1.6667190270420253:17.536582509046294] plot(\x,{(\x)});
+\draw [line width=2pt] (0,0)-- (0,2);
+\draw [line width=2pt] (2,2)-- (2,0);
+\draw [line width=2pt] (0,2)-- (2,2);
+\draw [line width=2pt] (2,2)-- (2.0002386442865516,4.828595866705989);
+\draw [line width=2pt] (2.0002386442865516,4.828595866705989)-- (4.832521331888258,4.832521331888258);
+\draw [line width=2pt] (4.824827755036873,0)-- (4.834981558980159,6.397718298836414);
+\draw [line width=2pt] (4.834981558980159,6.397718298836414)-- (6.4,6.4);
+\draw [line width=2pt] (6.439718755130408,0)-- (6.400072931869821,7.059673085040108);
+\draw [line width=2pt] (7.062828081198973,0)-- (7.050714692879745,7.310636381029959);
+\draw [line width=2pt] (6.400072931869821,7.059673085040108)-- (7.048509591757752,7.054150668760428);
+\draw [line width=2pt] (7.050714692879745,7.310636381029959)-- (7.312337285505,7.312337285505);
+\draw [line width=2pt] (7.312337285505,7.312337285505)-- (7.337053956685568,0);
+\begin{scriptsize}
+\draw [fill=ffqqqq] (0,0) circle (2.5pt);
+\draw[color=ffqqqq] (0.16565707372976055,0.35738443554168037) node {$a_0$};
+\draw [fill=ffqqqq] (2,0) circle (2.5pt);
+\draw[color=ffqqqq] (2.159282271369464,0.35738443554168037) node {$a_1$};
+\draw [fill=ffqqqq] (4.824827755036873,0) circle (2.5pt);
+\draw[color=ffqqqq] (4.988470970961102,0.35738443554168037) node {$a_2$};
+\draw [fill=ffqqqq] (6.439718755130408,0) circle (2.5pt);
+\draw[color=ffqqqq] (6.600961939640273,0.35738443554168037) node {$a_3$};
+\draw [fill=ffqqqq] (7.062828081198973,0) circle (2.5pt);
+\draw[color=ffqqqq] (7.231299318305767,0.35738443554168037) node {$a_5$};
+\draw [fill=ffqqqq] (7.337053956685568,0) circle (2.5pt);
+\draw[color=ffqqqq] (7.495161476816905,0.35738443554168037) node {$a_6$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}
+$$h(x)=x; f(x)=2\sqrt{x}+2$$\\
+$$h(x)=g(x)\Leftrightarrow x-2\sqrt{x}-2=0$$\\
+$$\Rightarrow x_1=\left(\dfrac{2+\sqrt{12}}{2}\right)^2$$\\
+$$g=x_1$$
+\end{minipage}
+
+\\
+Es gibt andere mögliche Tendenzen, hier ein paar Besipiele:\\\\\\\\
+\begin{minipage}{0,45\textwidth}
+Die divergierende Treppe, es gibt also keinen Grenzwert, man kann den uneigendlichen Grenzwert aber ablesen, hier ist der Grenzwert der Folge $a_n$ mit $a_{n+1}=-\dfrac{3}{2}a_n-4$ und $a_0=5$: $-\infty$
+\end{minipage}
+\begin{minipage}{0,5\textwidth}
+\definecolor{rvwvcq}{rgb}{0.08235294117647059,0.396078431372549,0.7529411764705882}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{wrwrwr}{rgb}{0.3803921568627451,0.3803921568627451,0.3803921568627451}
+\definecolor{ttqqqq}{rgb}{0.2,0,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.5]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-5.564895824577204,
+xmax=10.351157204568363,
+ymin=-8.78942481077331,
+ymax=9.29739460798684,
+xtick={-6,-4,...,28},
+ytick={-8,-6,...,10},]
+\clip(-7.064895824577204,-8.78942481077331) rectangle (28.351157204568363,10.29739460798684);
+\draw[line width=2pt,color=ttqqqq,smooth,samples=100,domain=-7.064895824577204:28.351157204568363] plot(\x,{(\x)});
+\draw[line width=2pt,color=wrwrwr,smooth,samples=100,domain=-7.064895824577204:28.351157204568363] plot(\x,{3/2*(\x)-4});
+\draw [line width=2pt] (5,0)-- (4.999511757557879,3.4992676363368176);
+\draw [line width=2pt] (4.999511757557879,3.4992676363368176)-- (3.490167444195548,3.490167444195548);
+\draw [line width=2pt] (3.490167444195548,3.490167444195548)-- (3.493252072731324,0);
+\draw [line width=2pt] (3.4921577126709917,1.2382365690064878)-- (1.2326800880447495,1.2326800880447495);
+\draw [line width=2pt] (1.2326800880447495,1.2326800880447495)-- (1.2275059703280837,-2.1587410445078743);
+\draw [line width=2pt] (1.2275059703280837,-2.1587410445078743)-- (-2.1638122523457697,-2.1638122523457697);
+\draw [line width=2pt] (-2.1638122523457697,-2.1638122523457697)-- (-2.157820383689419,-7.2367305755341285);
+\draw [line width=2pt] (-2.157820383689419,-7.2367305755341285)-- (-7.246229313030961,-7.246229313030961);
+\draw [line width=2pt] (-2.157820383689419,-7.2367305755341285)-- (-2.172139496975313,0);
+\begin{scriptsize}
+\draw [fill=ffqqqq] (5,0) circle (2.5pt);
+\draw[color=ffqqqq] (5.290170003147623,0.6593618561624863) node {$a_0$};
+\draw [fill=ffqqqq] (3.493252072731324,0) circle (2.5pt);
+\draw[color=ffqqqq] (3.803236479023191,0.6593618561624863) node {$a_1$};
+\draw [fill=rvwvcq] (-7.246229313030961,-7.246229313030961) circle (2.5pt);
+\draw[color=rvwvcq] (-6.875649739688639,-5.937215959952919) node {$J$};
+\draw [fill=ffqqqq] (-2.172139496975313,0) circle (2.5pt);
+\draw[color=ffqqqq] (-1.8741460676337316,0.6593618561624863) node {$a_3$};
+\draw [fill=ffqqqq] (1.2307994510983928,0) circle (2.5pt);
+\draw[color=ffqqqq] (1.5322834603604218,0.6593618561624863) node {$a_2$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{minipage}
 
 
+\begin{minipage}{0,5\textwidth}
+Die konvergierende Spirale, es gibt also einen Grenzwert, den man erneut mit der Schnittstelle zwischen Funktion und Hauptdiagonale ermitteln kann. Hier konvergiert die Folge  $a_n$ mit $a_{n+1}=\dfrac{4}{a_n}+1$ und $a_1=1$
+\end{minipage}
+\begin{minipage}{0,5\textwidth}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{wrwrwr}{rgb}{0.3803921568627451,0.3803921568627451,0.3803921568627451}
+\definecolor{wvvxds}{rgb}{0.396078431372549,0.3411764705882353,0.8235294117647058}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.8]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-1.4635665987461786,
+xmax=8.87634424568403,
+ymin=-1.6012600965995993,
+ymax=6.32408946253023,
+xtick={-1,0,...,15},
+ytick={-1,0,...,7},]
+\clip(-1.4635665987461786,-1.6012600965995993) rectangle (15.097634424568403,7.32408946253023);
+\draw[line width=2pt,color=wvvxds,smooth,samples=100,domain=-1.4635665987461786:15.097634424568403] plot(\x,{4/(\x)+1});
+\draw[line width=2pt,color=wrwrwr,smooth,samples=100,domain=-1.4635665987461786:15.097634424568403] plot(\x,{(\x)});
+\draw [line width=2pt] (1,0)-- (1,5);
+\draw [line width=2pt] (1,5)-- (5,5);
+\draw [line width=2pt] (5,5)-- (5,0);
+\draw [line width=2pt] (5,1.8)-- (1.8115586238362207,1.8115586238362207);
+\draw [line width=2pt] (1.819217423943969,0)-- (1.819217423943969,3.1987476303564684);
+\draw [line width=2pt] (1.819217423943969,3.1987476303564684)-- (3.188287472262904,3.188287472262904);
+\draw [line width=2pt] (3.188287472262904,3.188287472262904)-- (3.182039920366344,0);
+\draw [line width=2pt] (3.1864592764550546,2.255311821982552)-- (2.2426555359698286,2.2426555359698286);
+\draw [line width=2pt] (2.2364079840732676,0)-- (2.2364079840732676,2.788582418094674);
+\draw [line width=2pt] (2.2364079840732676,2.788582418094674)-- (2.791956440140071,2.791956440140071);
+\draw [line width=2pt] (2.791956440140071,2.791956440140071)-- (2.792662064245665,0);
+\begin{scriptsize}
+\draw[color=wvvxds] (0.8120182746863592,7.267199840694417) node {$f$};
+\draw [fill=ffqqqq] (1,0) circle (2.5pt);
+\draw[color=ffqqqq] (1.1407138675155035,0.3140238385394505) node {$a_1$};
+\draw [fill=ffqqqq] (5,0) circle (2.5pt);
+\draw[color=ffqqqq] (5.1356295342081815,0.3140238385394505) node {$a_2$};
+\draw [fill=ffqqqq] (1.819217423943969,0) circle (2.5pt);
+\draw[color=ffqqqq] (1.9624528495883644,0.3140238385394505) node {$a_3$};
+\draw [fill=ffqqqq] (3.182039920366344,0) circle (2.5pt);
+\draw[color=ffqqqq] (3.3151616354621507,0.3140238385394505) node {$a_4$};
+\draw [fill=ffqqqq] (2.2364079840732676,0) circle (2.5pt);
+\draw[color=ffqqqq] (2.379643409717663,0.3140238385394505) node {$a_5$};
+\draw [fill=ffqqqq] (2.792662064245665,0) circle (2.5pt);
+\draw[color=ffqqqq] (2.935897489890061,0.3140238385394505) node {$a_6$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{minipage}
 
 \begin{Bemerkung}
 Dieses Verfahren kann ausschließlich bei rekusiven Folgen angewendet werden, bei denen keine zusätzliche Abhängigkeit von $n$ vorliegt (Beispiel: $a_{n}=3\cdot a_{n-1}+3+4\cdot n$) oder die Rekursivitätsebene den 1. Grad überschreitet, was bedeutet, dass $a_{n}$ nicht nur in Abhängigkeit von $a_{n-1}$ beschrieben wird, sondern von anderen Rekursivitätsebenen wie $a_{n-2}$ (Beispiel: die Fibonacci-Folge).\\
 \end{Bemerkung}
 
 \begin{GTR-Tipp}
+\\
+Mit den GTR ist dieses Verfahren auch möglich, die Arbeit der Fertigstellung der Striche wird vom Rechner übernommen. Das Bild ist vom Benutzer nur noch zu deuten, gegebenenfalls ist die Schnittstelle auszurechnen.
+\begin{itemize}
+\item Der Rechner muss auf \textcolor{red}{SEQ} stehen
+\item in \textcolor{gray}{Y=} die rekursive Folge angeben
+\item In \textcolor{gray}{2nd }\textcolor{red}{FORMAT} von \textcolor{gray}{Time} auf \textcolor{red}{Web} stellen
+\item \textcolor{red}{TRACE} verwenden
+\item Sooft auf \textcolor{gray}{ENTER} drücken, bis ausreichend Striche zu sehen sind.
+\end{itemize}
 
 \end{GTR-Tipp}
 
@@ -266,7 +440,7 @@ Eine monotone Folge ist genau dann konvergent, wenn sie beschränkt ist.
 \begin{Beweis}
 \end{Beweis}
 
-Viel besser zu verstehen, wenn man zwei Fälle unterscheidet:
+Besser zu verstehen, wenn man zwei Fälle unterscheidet:
 
 \begin{Theorem}
 $$\exists\, S\in\R \quad \exists \,n_0\in\N \quad \forall n\geq n_0\,:\, a_n\leq a_{n+1}\; \land \; a_n\leq S$$
