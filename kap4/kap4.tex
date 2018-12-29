@@ -5,11 +5,11 @@
 \begin{Definition}
   \begin{minipage}{0.5\textwidth}
     In einem Kreis mit Radius 1 gelte:
-    \begin{align*}
-      \cos(\alpha)&= x_{_M}\\
-      \sin(\alpha)&= y_{_M}\\
-      \tan(\alpha)&=\dfrac {\sin(\alpha)} {\cos(\alpha)}
-    \end{align*}
+    \begin{itemize}
+      \item $\cos(\alpha) = x_{_M}$
+      \item $\sin(\alpha) = y_{_M}$
+      \item $\tan(\alpha) = \dfrac {\sin(\alpha)} {\cos(\alpha)}$
+    \end{itemize}
   \end{minipage}
   \begin{minipage}{0.5\textwidth}
   \begin{center}
@@ -135,16 +135,18 @@ Des Weiteren gilt:\\
 In einem beliebigen Dreieck gelten abgewandelte Formen der aus der 8. Klasse bekannten Sätze:
 \begin{Theorem}
   \begin{minipage}{0.6\textwidth}
-    $\dfrac {a} {sin(\alpha)}=\dfrac {b} {sin(\beta)}=\dfrac {c} {sin(\gamma)}$\\\\
-    $c^2=a^2+b^2-2abcos(\gamma)$
+    \begin{itemize}
+      \item $\dfrac {a} {sin(\alpha)}=\dfrac {b} {sin(\beta)}=\dfrac {c} {sin(\gamma)}$
+      \item $c^2=a^2+b^2-2abcos(\gamma)$
+    \end{itemize}
   \end{minipage}
   \begin{minipage}{0.4\textwidth}
-    \definecolor{qqwuqq}{rgb}{0,0.39,0}
+    \definecolor{qqwuqq}{rgb}{0,50,0}
     \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.6cm]
       \clip(-0.4,-4.3) rectangle (9,3);
-      \draw [shift={(4.22,1.92)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (-134.14:1.5) arc (-134.14:-47.61:1.5) -- cycle;
-      \draw [shift={(-0.38,-2.82)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (1.04:1.5) arc (1.04:45.86:1.5) -- cycle;
-      \draw [shift={(8.4,-2.66)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (132.39:1.5) arc (132.39:181.04:1.5) -- cycle;
+      \draw [shift={(4.22,1.92)},color=qqwuqq,fill=qqwuqq,fill opacity=0.5] (0,0) -- (-134.14:1.5) arc (-134.14:-47.61:1.5) -- cycle;
+      \draw [shift={(-0.38,-2.82)},color=qqwuqq,fill=qqwuqq,fill opacity=0.5] (0,0) -- (1.04:1.5) arc (1.04:45.86:1.5) -- cycle;
+      \draw [shift={(8.4,-2.66)},color=qqwuqq,fill=qqwuqq,fill opacity=0.5] (0,0) -- (132.39:1.5) arc (132.39:181.04:1.5) -- cycle;
       \draw (4.22,1.92)-- (8.4,-2.66);
       \draw (4.22,1.92)-- (-0.38,-2.82);
       \draw (8.4,-2.66)-- (-0.38,-2.82);
@@ -203,26 +205,28 @@ In der Kursstufe beschränken wir uns auf die Benutzung von Polarkoordinaten fü
 \begin{minipage}{0.5\linewidth}
   \definecolor{zzzzzz}{rgb}{0.6,0.6,0.6}
   \definecolor{ffqqqq}{rgb}{1,0,0}
-  \definecolor{qqzzqq}{rgb}{0,0.6,0}
-  \begin{tikzpicture}[line cap=round,line join=round,x=1.0cm,y=1.0cm]
-    \draw[->,color=black] (-0.2,0) -- (2.64,0);
-    \foreach \x in {,1,2}
+  \definecolor{qqzztt}{rgb}{0,0.6,0.2}
+  \definecolor{qqqqff}{rgb}{0,0,1}
+  \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=2.0cm,y=2.0cm]
+    \draw[->,color=black] (-0.31,0) -- (3.05,0);
+    \foreach \x in {,0.5,1,1.5,2,2.5,3}
     \draw[shift={(\x,0)},color=black] (0pt,-2pt);
-    \draw[color=black] (2.47,0.04) node [anchor=south west] { x};
-    \draw[->,color=black] (0,-0.29) -- (0,2.63);
-    \draw[color=black] (0.05,2.43) node [anchor=west] { y};
-    \clip(-0.2,-0.29) rectangle (2.64,2.63);
-    \draw [shift={(0,0)},color=ffqqqq,fill=ffqqqq,fill opacity=0.1] (0,0) -- (0:0.41) arc (0:46.48:0.4) -- cycle;
-    \draw [color=qqzzqq] (0,0)-- (2.05,2.16);
-    \draw [color=zzzzzz] (0,2.16)-- (2.05,2.16);
-    \draw [color=zzzzzz] (2.05,2.16)-- (2.05,0);
+    \draw[color=black] (2.9,0.02) node [anchor=south west] {$x$};
+    \draw[->,color=black] (0,-0.5) -- (0,2.19);
+    \foreach \y in {-0.5,0.5,1,1.5,2}
+    \draw[color=black] (0.03,2.1) node [anchor=west] {$y$};
+    \clip(-0.31,-0.5) rectangle (3.05,2.19);
+    \draw [shift={(0,0)},line width=1.6pt,color=ffqqqq,fill=ffqqqq,fill opacity=0.1] (0,0) -- (0:0.53) arc (0:42.19:0.53) -- cycle;
+    \draw [line width=1.6pt,color=qqzztt] (0,0)-- (2.14,1.94);
+    \draw [line width=1.6pt,color=zzzzzz] (0,1.94)-- (2.14,1.94);
+    \draw [line width=2pt,color=zzzzzz] (2.14,1.94)-- (2.14,0);
     \begin{scriptsize}
-      \fill [color=black] (2.05,2.16) circle (1.5pt);
-      \draw[color=black] (2.12,2.29) node {$P$};
-      \draw[color=qqzzqq] (1.16,1.04) node {r};
-      \draw[color=ffqqqq] (0.5,0.17) node {$\varphi$};
-      \draw[color=zzzzzz] (0.96,2.02) node {y};
-      \draw[color=zzzzzz] (1.9,1.03) node {x};
+      \fill [color=qqqqff] (2.14,1.94) circle (1.7pt);
+      \draw[color=qqqqff] (2.19,2.02) node {$P$};
+      \draw[color=qqzztt] (1.15,0.94) node {$r$};
+      \draw[color=ffqqqq] (0.36,0.17) node {$\varphi$};
+      \draw[color=zzzzzz] (1.11,1.89) node {$x$};
+      \draw[color=zzzzzz] (2.25,0.94) node {$y$};
     \end{scriptsize}
   \end{tikzpicture}
 \end{minipage}
@@ -243,26 +247,27 @@ Die Periode von $f$ ist $P=2\pi$. Die Amplitude $A$ beträgt $\dfrac{3}{2}\sqrt{
 \subsection{Nullstellen}
 \subsubsection{Notwendige und hinreichende Bedingung:}
 \begin{align*}
-  f(x)&=0\\
-  \Leftrightarrow 2\cos(x)+2\sin(x)\cos(x)&=0\\
-  \Leftrightarrow 2\cos(x)(1+\sin(x))&=0\\
+  f(x)                                        &=0\\
+  \Leftrightarrow 2\cos(x)+2\sin(x)\cos(x)    &=0\\
+  \Leftrightarrow 2\cos(x)(1+\sin(x))         &=0\\
   \stackrel{S.d.N}{\Rightarrow}
   \left\{\begin{array}{rccl}
-    2\cos(x)&=&0&\\
-    1+\sin(x)&=&0&
-  \end{array}\right\\
+    2\cos(x)  &=  &0  & \\
+    1+\sin(x) &=  &0  &
+  \end{array} \\
   \Leftrightarrow
   \left\{ \begin{array}{rccl}
-    \cos(x)&=&0&\\
-    \sin(x)&=&-1&
-  \end{array}\right\\
+    \cos(x) & = & 0 \\
+    \sin(x) & = & -1
+  \end{array} \\
   \Leftrightarrow
   \left\{ \begin{array}{rccl}
-    x_1&=&\dfrac{1}{2}\pi&\\\\
+    x_1&=&\dfrac{1}{2}\pi&  \\\\
     x_2&=&\dfrac{3}{2}\pi&
-  \end{array}\right\\
-  \Rightarrow \mathbb{L}=\left\{\left(\dfrac{1}{2}\pi\right|0\right);\left(\dfrac{3}{2}\pi\right|0\right)\right\}
+  \end{array} \\
+  \Rightarrow \mathbb{L} &= \left \{ \left( \dfrac{1}{2} \pi \right| 0 \right) ; \left( \dfrac{3}{2} \pi \right| 0 \right) \right\}\\
 \end{align*}
+
 \subsection{Ableitungen}
   \begin{align*}
     f'(x)&=-2\sin(x)+2(\cos(x)\cos(x)-\sin(x)\sin(x))\\

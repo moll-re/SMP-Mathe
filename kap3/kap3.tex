@@ -162,8 +162,7 @@ Die Funktion nennt man \textbf{ungerade}.\\
 \subsubsection{Symmetrie zu einem beliebigen Punkt}
 \begin{Definition}
 Symmetrie zu einem Punkt liegt vor, wenn f"ur den Punkt $P(x_{0}|y_{0})$ gilt:\\
-\\
-$f(x_{0}+h)-y_{0}=-f(x_{0}-h)+y_{0}$
+$$f(x_{0}+h)-y_{0}=-f(x_{0}-h)+y_{0}$$
 \end{Definition}
 \begin{Beispiel}
 \\
@@ -191,25 +190,18 @@ $\lim\limits_{x \rightarrow x_{0}}f(x) = g $\quad $\Leftrightarrow$ \quad $\fora
 \end{Definition}
 
 \begin{Definition}
-Regel von l'Hospital: f"ur Grenzwerte des Typs $0/0$ und $\infty/\infty$\\\\
-<<<<<<< HEAD
-Seien zwei Funktionen $f$ und $g$ differenzierbar und gelte entweder\\\\
-\lim\limits_{x \rightarrow x_{0}}g(x) = \lim\limits_{x \rightarrow x_{0}}f(x) = \infty$ \qquad ODER \qquad  $\lim\limits_{x \rightarrow x_{0}}g(x) = \lim\limits_{x \rightarrow x_{0}}f(x) = 0$\\\\
-(sie sind also entweder konvergent gegen $0$ oder bestimmt divergent) \\dann gilt:\\\\
-$\lim\limits_{x \rightarrow x_{0}} \dfrac{f(x)}{g(x)} = \lim\limits_{x \rightarrow x_{0}}\dfrac{f'(x)}{g'(x)}$\\
-=======
-Seien zwei Funktionen $f$ und $g$ differenzierbar und eine Zahl $x_{0}$ : $g(x_{0})\neq0$ und gelte entweder\\
-$$\lim\limits_{x \rightarrow x_{0}}g(x) = \lim\limits_{x \rightarrow x_{0}}f(x) = \infty \qquad \text{ODER} \qquad  \lim\limits_{x \rightarrow x_{0}}g(x) = \lim\limits_{x \rightarrow x_{0}}f(x) = 0$$\\
-(sie sind also entweder konvergent gegen $0$ oder bestimmt divergent) \\dann gilt:\\
-$$\lim\limits_{x \rightarrow x_{0}} \dfrac{f(x)}{g(x)} = \lim\limits_{x \rightarrow x_{0}}\dfrac{f'(x)}{g'(x)}$$\\
->>>>>>> 9f8a2d4040470f65359aabd4f9fe608479676cb9
+	Regel von l'Hospital: für Grenzwerte des Typs $0/0$ und $\infty/\infty$\\
+	Seien zwei differenzierbare Funktionen $f$ und $g$ und eine Zahl $x_{0} : g(x_{0})\neq0$ und gelte entweder\\
+	$$\lim\limits_{x \rightarrow x_{0}}g(x) = \lim\limits_{x \rightarrow x_{0}}f(x) = \infty \qquad \text{ODER} \qquad  \lim\limits_{x \rightarrow x_{0}}g(x) = \lim\limits_{x \rightarrow x_{0}}f(x) = 0$$\\
+	(sie sind also entweder konvergent gegen $0$ oder bestimmt divergent) dann gilt:\\
+	$$\lim\limits_{x \rightarrow x_{0}} \dfrac{f(x)}{g(x)} = \lim\limits_{x \rightarrow x_{0}}\dfrac{f'(x)}{g'(x)}$$
 \end{Definition}
 
 \begin{Bemerkung}
-\begin{enumerate}
-\item Falls die Funktionsvorschrift nicht direkt ein Bruch ist (siehe 2. Beispiel) sollte man diese erst zu einem Bruch umformen, um mit der Hospital-Regel fortfahren zu k"onnen.
-\item ACHTUNG: Die Hospital-Regel ist nicht umkehrbar!
-\end{enumerate}
+	\begin{enumerate}
+		\item Falls die Funktionsvorschrift nicht direkt ein Bruch ist (siehe 2. Beispiel) sollte man diese erst zu einem Bruch umformen, um mit der Hospital-Regel fortfahren zu können.
+		\item ACHTUNG: Die Hospital-Regel ist nicht umkehrbar!
+	\end{enumerate}
 \end{Bemerkung}
 
 \begin{Beispiel}
@@ -234,25 +226,31 @@ $\Rightarrow \lim\limits_{x \rightarrow \infty} g(x) & = & \lim\limits_{x \right
 Eine Asymptote ist eine Gerade oder Kurve, die sich dem Graphen einer Funktion immer weiter ann"ahert. Dabei unterscheidet man verschiedene F"alle:\\
 \begin{Definition}
 \begin{enumerate}
-\item \textbf{Senkrechte Asymptote}: Hat $f$ an der stelle $x_{0}$ eine Polstelle, und gilt:\\
-\indent \qquad $\lim\limits_{x \rightarrow x_{0^{+}}} f(x) = \pm \infty$\\
-dann ist die Gerade $x=x_{0}$ eine senkrechte Asymptote von $f$.\\
-\item \textbf{Waagerechte Asymptote}: Konvergiert $f$ f"ur $x\rightarrow \infty$ gegen eine reelle Zahl $g\in \R$, das hei"st $\indent \qquad\lim\limits_{x \rightarrow x_{0^{+}}}{f(x)}=g$.\\
-Die Gerade $y=g$ ist die \textbf{waagerechte} Asymptote von $f$. Das Gleiche gilt f"ur $\lim\limits_{x \rightarrow -\infty}$.\\
-Bei gebrochenrationalen Funktionen ist dies der Fall, wenn der Z"ahlergrad kleiner (dann ist $g=0$) oder gleich dem Nennergrad $m$ ist.\\
-\item \textbf{Schr"age Asymptote}: Sie ist eine Gerade ($g:\R \rightarrow \R$), der sich $f$ mit $|x|\rightarrow \infty$ beliebig ann"ahert:\\
-\indent \qquad$\lim\limits_{x \rightarrow \infty}{[f(x)-g(x)]}=0$ oder $\lim\limits_{x \rightarrow -\infty}{[f(x)-g(x)]}=0$\\
-Bei einer gebrochenrationalen Funktion ist der ''Fehlergrad'', das hei"st der Abstand von $g$ zu $f$ durch den Rest der Polynomdivision von Z"ahler mit Nenner gegeben.\\
-\item \textbf{Asymptotische Kurven} Indem man in der Definition der schr"agen Asymptote auch Polynome zul"asst, erh"alt man N"aherungskuven, die die gleiche Limesbedingung erf"ullen m"ussen:\\
-\indent \qquad$\lim\limits_{x \rightarrow \infty}{[f(x)-P(x)]}=0$ oder $\lim\limits_{x \rightarrow -\infty}{[f(x)-P(x)]}=0$\\
-Diese begegnen einen bei gebrochenrationalen Funktion mit $n>m+1$.\\
+	\item \textbf{Senkrechte Asymptote:}\\
+	Hat $f$ an der stelle $x_{0}$ eine Polstelle, und gilt:
+		$$\lim\limits_{x \rightarrow x_{0^{+}}} f(x) = \pm \infty$$
+	dann ist die Gerade $x=x_{0}$ eine senkrechte Asymptote von $f$.
+
+	\item \textbf{Waagerechte Asymptote:}\\
+	Konvergiert $f$ f"ur $x\rightarrow \infty$ gegen eine reelle Zahl $g\in \R$, das heißt $\lim\limits_{x \rightarrow x_{0^{+}}}{f(x)}=g$, dann ist die Gerade $y=g$ die \textbf{waagerechte} Asymptote von $f$. Das Gleiche gilt f"ur $\lim\limits_{x \rightarrow -\infty}$.\\
+	Bei gebrochenrationalen Funktionen ist dies der Fall, wenn der Z"ahlergrad kleiner (dann ist $g=0$) oder gleich dem Nennergrad $m$ ist.
+
+	\item \textbf{Schr"age Asymptote:}\\
+	Sie ist eine Gerade ($g:\R \rightarrow \R$), der sich $f$ mit $|x|\rightarrow \infty$ beliebig ann"ahert:
+	$$\lim\limits_{x \rightarrow \infty}{[f(x)-g(x)]}=0 \text{ oder } \lim\limits_{x \rightarrow -\infty}{[f(x)-g(x)]}=0$$
+	Bei einer gebrochenrationalen Funktion ist der ''Fehlergrad'', das hei"st der Abstand von $g$ zu $f$ durch den Rest der Polynomdivision von Z"ahler mit Nenner gegeben.
+
+	\item \textbf{Asymptotische Kurven:}\\
+	Indem man in der Definition der schr"agen Asymptote auch Polynome zul"asst, erh"alt man N"aherungskuven, die die gleiche Limesbedingung erf"ullen m"ussen:
+	$$\lim\limits_{x \rightarrow \infty}{[f(x)-P(x)]}=0 \text{ oder } \lim\limits_{x \rightarrow -\infty}{[f(x)-P(x)]}=0$$
+	Diese erscheinen bei gebrochenrationalen Funktion mit $n>m+1$.
 \end{enumerate}
 \end{Definition}
 
 \subsection{Monotonie}
 
 \begin{Definition}
-Eine stetige Funktion $f$ mit $a,b\in I \subset D_{f}$ ist :\\
+Eine stetige Funktion $f$ mit $a,b\in I \subset D_{f}$ ist:\\
 \begin{enumerate}
 \item ... auf dem Intervall $I$ monoton wachsend, wenn $\forall a < b: f(a)\leq f(b)$
 \item ... auf dem Intervall $I$ monoton fallend, wenn $\forall a < b: f(a) \geq f(b)$ \\
@@ -280,11 +278,12 @@ Eine Funktion $f$ ist...
 \begin{description}
 \item[$\bullet$] \textbf{konvergent}, wenn sie einen Grenzwert $g\in\R$ hat
 \item[$\bullet$] \textbf{bestimmt divergent}, wenn sie  \textbf{keinen} reellen Grenzwert, also $\lim\limits_{x \rightarrow +\infty}{f(x)} = \pm \infty$
-\item[$\bullet$] \textbf{unbestimmt divergent}, wenn es keine Zahl $g\in\overline{\R}$ ($\overline{\R} = \R$ mit $\infty$ und $-\infty$) gibt mit $\lim\limits_{x \rightarrow +\infty}{f(x)} = g$\\\\
-Beispiel: $f(x)=x\cdot\sin{x}$
+\item[$\bullet$] \textbf{unbestimmt divergent}, wenn es keine Zahl $g\in\overline{\R}$ ($\overline{\R} = \R$ mit $\infty$ und $-\infty$) gibt mit $\lim\limits_{x \rightarrow +\infty}{f(x)} = g$
 \end{description}
 \end{Bemerkung}
-
+\begin{Beispiel}
+	$f(x)=x\cdot\sin{x}$
+\end{Beispiel}
 
 \subsection{Extremstellen}
 
