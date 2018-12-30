@@ -357,14 +357,14 @@ Jedes Folgeglied einer solchen Folge ist das arithmetische Mittel seines Vorgän
 
 \begin{Definition}
 Eine Folge wird geometrisch genannt, wenn der Quotient zweier aufeinander folgender Glieder konstant ist.
-\begin{enumerate}
+\begin{itemize}
 \item Rekursive Darstellung:\\
 \indent $a_{n}=a_{n-1}\cdot q$
 \item Explizite Darstellung:\\
 \indent Mit Startglied $a_{0}$: $a_{n}=a_{0}\cdot q^n$\\
 \indent Mit Startglied $a_{1}$: $a_{n}=a_{1}\cdot q^{n-1}$\\
 \indent Mit Startglied $a_{x}$: $a_{n}=a_{x}\cdot q^{n-x}$\\
-\end{enumerate}
+\end{itemize}
 \end{Definition}
 
 \begin{Bemerkung}
@@ -386,10 +386,16 @@ Jedes Folgeglied einer solchen Folge ist das geometrische Mittel seines Vorgäng
 	\subsection{Monotonie}
 
 \begin{Definition}
-Eine Folge $(a_n)_n\in\N$ heißt monoton \begin{cases} \text{\textcolor{red}{steigend/wachsend}}\\\text{\textcolor{orange}{fallend/abnehmend}}\end{cases} wenn \begin{cases} \textcolor{red}{a_n+1\geq a_n}\\\textcolor{orange}{a_n+1\leq a_n}\end{cases}.\\\\
+Eine Folge $(a_n)_n\in\N$ heißt monoton \begin{cases} \text{\textcolor{red}{steigend/wachsend}}\\\text{\textcolor{orange}{fallend/abnehmend}}\end{cases} wenn \begin{cases} \textcolor{red}{a_{n+1}\geq a_n}\\\textcolor{orange}{a_{n+1}\leq a_n}\end{cases}.\\\\
 Gelten dabei sagar \textbf{strikte} Ordnungsrelationen ($>$ oder $<$), dann ist $(a_n)$ \textbf{streng} monoton wachsend beziehungsweise abnehmend.
 
 \end{Definition}
+
+\underline{Strategie:} 
+\begin{itemize}
+\item Das \textcolor{blue}{Vorzeichen von $a_{n+1}-a_n$ bestimmen}, ist es $\leq0$ dann ist die Folge fallend, ist es $\geq0$, dann ist die Folge wachsend. 
+\item \textcolor{blue}{$\dfrac{a_{n+1}}{a_n}$ mit 1 vergleichen}, ist es $\leq1$, dann ist die Folge fallend, ist es $\geq1$, dann ist die Folge wachsend.
+\end{itemize}
 
 	\subsection{Beschränktheit}
 
