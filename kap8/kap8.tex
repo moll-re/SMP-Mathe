@@ -491,12 +491,23 @@ $$\mathbb{L}_{F} = \{ (1271k -  (F \cdot 135) ; 4199k - (F \cdot 446)) ; \quad k
 \subsection{Das RSA Verschlüsselungsverfahren}
 
 
-jkdhgadkjhsagjshfgsdkjfhgsdfj,hsgdf,jhSDFG,SJDHFG,JDHGALJDslkdhgflaskjdhflaskjdhflaksjdhflkasjdhflksjavbmnsfhiuwezriuewzrpqwuroiwurpoiuerpoebnbvxy,cmvnb,xymnvb,xmcnvbsalkjfhwpoiefu
+Die RSA-Verschlüsselung ist eine sehr sichere Verschlüsselungsmethode, welche auch sehr viele Kommunikationsdienste benutzen. Mit einem langen Schlüssel kann ein brute force Angriff (Rumprobieren) mehrere Generationen dauern und noch ist kein Algorithmus (öffentlich) bekannt, der entschlüsseln kann.
 
-SO, BITTE ENTSCHLÜSSELN
+\subsubdection{Konstruktion der Schlüssel}
 
-
-
+\begin{enumerate}
+\item Man nimmt 2 sehr große Primzahlen $p$ und $q$, die privat bleiben.\\
+\item Man rechnet das Rsa-Modul $N=p \cdot q$. $N$ ist ein Teil des öffentlichen Schlüssels und hat mehrere hunderte von Dezimalstellen\\
+\item Man bestimmt die Anzahl der zu $N$ teilerfremden Zahlen. Wenn man dazu nur $N$ kennt, brauchen Computer Jahre. Da wir aber die Primfaktorzerlegung haben, ist $\Phi(N) = (p - 1) \cdot (q - 1)$. \Phi sei die Funktion die die Anzahl an teilerfremden Zahlen angibt. Die Anzahl der zu $N$ teilerfremden Zahlen ist das Produkt der zu $p$ teilerfremden Zahlen mit den zu $q$ teilerfremden Zahlen. $p$ und $q$ sind prim, deshalb ist $\Phi(p)=(p - 1)$.
+\end{enumerate}\\
+\item Man wählt eine Zahl $e$ mit $1<e<(p-1)\cdot(q-1) mit ggT(e;(p-1)(q-1)) = 1$. Sie ist also teilerfremd mit $\Phi(N)$\\
+Der öffentliche Schlüssel ist $(e,N)$. Geheim bleiben $p$, $q$, und $(p - 1) \cdot (q-1)$.
+\item Jetzt bestimmt man eine Zahl $d$ mit $e \cdot d \equiv 1 \mod (p-1)(q-1)$. Man bestimmt also das Inverse Element zu $e$ bei der Rechnung $\mod (p-1)(q-1)$. Dies macht man mithilfe des Euklidischen Algorithmus:\\
+$e \cdot d \equiv 1 \mod (p-1)(q-1) $\\
+$\Leftrightarrow (p-1)(q-1) \cdot k = e \cdot d -1 \quad (k \in \Z)$\\
+$\Leftrightarrow e \cdot d - k \cdot (p-1)(q-1) = 1$ \quad Eine lösbare Diophantische Gleichung (ggT($e;(p-1)(q-1)) = 1$))\\
+$\Leftrightarrow e \cdot d + k \cdot (p-1)(q-1) = 1$ \quad da $k \in \Z$\\\\
+Der private Schlüssel ist ($d,N$)
 
 
 
