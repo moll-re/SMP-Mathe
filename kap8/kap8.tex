@@ -481,33 +481,78 @@ Jetzt kann man jede ganze Zahl $F$ durch unendlich viele Linearkombinationen von
 $$ 4199 a - 1271 b = F$$
 
 $$\mathbb{L}_{F} = \{ (1271k -  (F \cdot 135) ; 4199k - (F \cdot 446)) ; \quad k \in \Z  \}$$
-
-
-
-
-\end{Beispiel}
+\end{Beispiel}\\\\
 
 
 \subsection{Das RSA Verschlüsselungsverfahren}
+\\\\
 
+Die RSA-Verschlüsselung ist eine sehr sichere Verschlüsselungsmethode, welche auch sehr viele Kommunikationsdienste benutzen. Mit einem langen Schlüssel kann ein brute force Angriff (Rumprobieren) mehrere Generationen dauern und noch ist kein Algorithmus (öffentlich) bekannt, der entschlüsseln kann.\\
 
-Die RSA-Verschlüsselung ist eine sehr sichere Verschlüsselungsmethode, welche auch sehr viele Kommunikationsdienste benutzen. Mit einem langen Schlüssel kann ein brute force Angriff (Rumprobieren) mehrere Generationen dauern und noch ist kein Algorithmus (öffentlich) bekannt, der entschlüsseln kann.
-
-\subsubdection{Konstruktion der Schlüssel}
+\subsubsection{Konstruktion der Schlüssel}
 
 \begin{enumerate}
 \item Man nimmt 2 sehr große Primzahlen $p$ und $q$, die privat bleiben.\\
-\item Man rechnet das Rsa-Modul $N=p \cdot q$. $N$ ist ein Teil des öffentlichen Schlüssels und hat mehrere hunderte von Dezimalstellen\\
-\item Man bestimmt die Anzahl der zu $N$ teilerfremden Zahlen. Wenn man dazu nur $N$ kennt, brauchen Computer Jahre. Da wir aber die Primfaktorzerlegung haben, ist $\Phi(N) = (p - 1) \cdot (q - 1)$. \Phi sei die Funktion die die Anzahl an teilerfremden Zahlen angibt. Die Anzahl der zu $N$ teilerfremden Zahlen ist das Produkt der zu $p$ teilerfremden Zahlen mit den zu $q$ teilerfremden Zahlen. $p$ und $q$ sind prim, deshalb ist $\Phi(p)=(p - 1)$.
-\end{enumerate}\\
-\item Man wählt eine Zahl $e$ mit $1<e<(p-1)\cdot(q-1) mit ggT(e;(p-1)(q-1)) = 1$. Sie ist also teilerfremd mit $\Phi(N)$\\
+\item Man rechnet das Rsa-Modul $N=p \cdot q$ aus. $N$ ist ein Teil des öffentlichen Schlüssels und hat mehrere hunderte von Dezimalstellen\\
+\item Man bestimmt die Anzahl der zu $N$ teilerfremden Zahlen. Wenn man dazu nur $N$ kennt, brauchen Computer Jahre. Da wir aber die Primfaktorzerlegung haben, ist \, $\varphi(N) = (p - 1) \cdot (q - 1)$. $\varphi$ sei die Funktion die die Anzahl an teilerfremden Zahlen angibt. Die Anzahl der zu $N$ teilerfremden Zahlen ist das Produkt der zu $p$ teilerfremden Zahlen mit den zu $q$ teilerfremden Zahlen. $p$ und $q$ sind prim, deshalb ist $\varphi(p)=(p - 1)$.
+\item Man wählt eine Zahl $e$ mit $1<e<(p-1)\cdot(q-1)$ mit ggT($e;(p-1)(q-1)$) $= 1$. Sie ist also teilerfremd mit $\varphi(N)$\\
 Der öffentliche Schlüssel ist $(e,N)$. Geheim bleiben $p$, $q$, und $(p - 1) \cdot (q-1)$.
-\item Jetzt bestimmt man eine Zahl $d$ mit $e \cdot d \equiv 1 \mod (p-1)(q-1)$. Man bestimmt also das Inverse Element zu $e$ bei der Rechnung $\mod (p-1)(q-1)$. Dies macht man mithilfe des Euklidischen Algorithmus:\\
-$e \cdot d \equiv 1 \mod (p-1)(q-1) $\\
-$\Leftrightarrow (p-1)(q-1) \cdot k = e \cdot d -1 \quad (k \in \Z)$\\
-$\Leftrightarrow e \cdot d - k \cdot (p-1)(q-1) = 1$ \quad Eine lösbare Diophantische Gleichung (ggT($e;(p-1)(q-1)) = 1$))\\
-$\Leftrightarrow e \cdot d + k \cdot (p-1)(q-1) = 1$ \quad da $k \in \Z$\\\\
+\item Jetzt bestimmt man eine Zahl $d$ mit \, $e \cdot d \equiv 1 \mod (p-1)(q-1)$. Man bestimmt also das Inverse Element zu $e$ bei der Rechnung mit $\mod (p-1)(q-1)$. Dies macht man mithilfe des Euklidischen Algorithmus:\\\\
+$e \cdot d \quad \equiv \quad 1 \mod (p-1)(q-1) $\\\\
+$\Leftrightarrow (p-1)(q-1) \cdot k \quad = \quad e \cdot d -1 \qquad (k \in \Z)$\\\\
+$\Leftrightarrow e \cdot d - k \cdot (p-1)(q-1) = 1$ \qquad Eine lösbare Diophantische Gleichung! (ggT($e;(p-1)(q-1)) = 1$))\\\\
+$\Leftrightarrow e \cdot d + k \cdot (p-1)(q-1) = 1$ \qquad da $k \in \Z$\\\\
 Der private Schlüssel ist ($d,N$)
+\end{enumerate}\\
+
+\subsubsection{Ver- und Entschlüsselung der Nachricht}
+
+Sei $T$ der Klartext, also der unverschlüsselte Text und $G$ der geheime, verschlüsselte Text.\\
+\begin{description}
+\item[$\bullet$] Verschlüsselung: $\quad G = T^{e} \mod N $\\
+\item[$\bullet$] Entschlüsselung: $\quad T = G^{d} \mod N $\\
+\end{description}
+Damit diese Rechnung funktioniert, muss $(T^{e})^{d} \equiv T \mod N$ gelten. Um dies zu prüfen, schauen wir uns die Ausgangsgleichheiten an: 
+$$e \cdot d \equiv 1 \mod (p-1)(q-1) \qquad \Leftrightarrow \qquad e \cdot d = r \cdot (p-1)(q-1) +1 \qquad r \in \Z$$
+Und es sei die (Eulersche) Formel gegeben (Vorraussetzung: ggT($a;pq$) $= 1$):
+$$a^{(p-1)(q-1)} \equiv 1 \mod pq$$
+\\
+Dann müssen nur Potenzgesetze angewandt werden:\\
+
+\begin{array}{rcl}
+$\left(T^{e}\right)^d \, = \, T^{e \cdot d} & = &  T^{r \cdot (p-1)(q-1) +1}\\
+& = & T^{r \cdot (p-1)(q-1)} \cdot T \\
+& = & \left(T^{(p-1)(q-1)}\right)^r \cdot T \quad \\
+& \equiv & 1^r \cdot T \mod pq \quad \\
+& \equiv & T \mod N  $ \\\\
+\end{array}
+
+
+\begin{Beispiel}
+Nehmen wir zur Veranschaulichung lieber kleine Primzahlen
+\begin{enumerate}
+\item $p = 7$ und $q = 23$\\
+\item $N = p \cdot q = 161$\\
+\item $\varphi(N) = (p-1)(q-1) = 132$\\
+\item $e = 5$ passt, da ggT($5; 161$) $ = 1$ \,und\, $1<5<132$\\
+\item Sei $d$ mit $5d \equiv 1 mod 132$ \, oder auch äquivalent \,$5d + 132r = 1$. Ein Lösungstupel ist $(53;-2)$. \\
+\end{enumerate}
+Der öffentliche Schlüssel ist $(5;161)$ und der geheime Schlüssel ist $(53;161)$\\\\
+Nun verschlüsseln wir die Nachricht \glqq ADVENT\grqq. Der Absender bekommt den öffentlichen Schlüssel.\\\\
+
+\begin{tabular}{l*{6}{c}r}
+Nachricht              & A & D & V & E & N  & T  \\
+\hline
+Zugehörige Zahl & 1 & 4 & 22 & 5 & 14 & 20  \\
+$G = T^5 \mod 161$            & 1 & 58 & 22 & 66 &  84 & 125  \\\\
+Übermittlung der Nachricht &&&&&& \\\\
+$T = G^{53} \mod 161$         &  1 & 4 & 22 & 5 & 14 & 20  \\
+Entschlüsselte Nachricht              & A & D & V & E & N  & T  \\
+\end{tabular}
+\end{Beispiel}
+
+
+
 
 
 
