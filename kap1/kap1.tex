@@ -142,7 +142,7 @@ ytick={-2,-1,...,10},]
 \end{tikzpicture}
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
-Dann trägt man den Wert des ersten Folgegliedes auf die Abzissenachse ein und verbindet ihn mit der entsprechenden Funktion anhand eines vertikalen Striches. Der Ordinatenwert, der so erhalten wird (Punkt \textcolor{blue}{A}), entspricht dem Wert von $a_1$. Um den Vorgang erneuern zu können, muss der gefundene Wert wieder auf die Abzissenachse, dazu benutzt man die Hauptdiagonale als "Spiegel". Ein horizontaler Strich bis zur Hauptdiagonale (zum Punkt \textcolor{blue}{B})  und ein vertikaler bis zur Abzissenachse lösen das Problem. So ist der Wert von $a_1$ aud der Abzissenachse, dort wird er für den nächsten Schritt benötigt.
+Dann trägt man den Wert des ersten Folgegliedes auf die Abzissenachse ein und verbindet ihn mit der entsprechenden Funktion anhand eines vertikalen Striches. Der Ordinatenwert, der so erhalten wird (Punkt \textcolor{blue}{A}), entspricht dem Wert von $a_1$. Um den Vorgang erneuern zu können, muss der gefundene Wert wieder auf die Abzissenachse, dazu benutzt man die Hauptdiagonale als \"Spiegel". Ein horizontaler Strich bis zur Hauptdiagonale (zum Punkt \textcolor{blue}{B})  und ein vertikaler bis zur Abzissenachse lösen das Problem. So ist der Wert von $a_1$ aud der Abzissenachse, dort wird er für den nächsten Schritt benötigt.
 \end{minipage}
 \\\\\\
 Dasselbe muss mehrmals wiederholt werden, so wird jeweils das nächste Folgeglied auf die Abzissenachse abgebildet (\textcolor{red}{rote} Punkte). Daraus kann man dann eine \textcolor{blue}{Tendenz} erkennen\textcolor{blue}{, die die Entwicklung der Folgeglieder beschreibt}. Je nach dem, was für eine Tendenz zu erkennen ist, kann man verschiedene Schlüsse bezüglich der Entwicklung der Folge schließen. In diesem Falle wird deutlich, dass die Folge konvergiert, der Grenzwert ist die Schnittstelle zwischen der Hilfsfunktion und der Hauptdiagonalen, es fehlt nur noch diesen zu berechnen.
@@ -397,6 +397,23 @@ Gelten dabei sagar \textbf{strikte} Ordnungsrelationen ($>$ oder $<$), dann ist 
 \item \textcolor{blue}{$\dfrac{a_{n+1}}{a_n}$ mit 1 vergleichen}, ist es $\leq1$, dann ist die Folge fallend, ist es $\geq1$, dann ist die Folge wachsend.
 \end{itemize}
 
+\begin{Beispiel}
+Untersucht wird die Monotonie der Folge $a_n=\dfrac{8n}{n^2+1}$.
+\begin{align*}
+a_{n+1}-a_n&=\dfrac{8(n+1)}{(n+1)^2+1}-\dfrac{8n}{n^2+1}\\
+&=\dfrac{8n+8}{n^2+2n+1+1}-\dfrac{8n}{n^2+1}\\
+&=\dfrac{8n^3+8n^2+8n+8-(8n^3+16n^2+16n)}{(n^2+2n+2)(n^2+1)}\\
+&=\dfrac{-8n^2-8n+8}{(n^2+2n+2)(n^2+1)}\\
+&=-\underbrace{\dfrac{8(n^2+n-1)}{(n^2+2n+2)(n^2+1)}}_{\geq2\forall n\in \N}<0\text{ für } (n^2+n+1)>0\Leftrightarrow \text{ für } $(n\geq 1)$ (weil $n\in\N$)
+\end{align*}
+
+\Rightarrow \indent$a_n$ ist für $n\in\N$ weder steigend noch fallend.\\
+\indent $a_n$ ist für $n\in\N*$ streng monoton fallend.
+
+
+%%%%%PLOUUUUs GRaphehen net vergessen
+\end{Beispiel}
+
 	\subsection{Beschränktheit}
 
 \begin{Definition}
@@ -416,8 +433,64 @@ Eine nach \textbf{oben und unten} beschränkte Folge heißt \textbf{beschränkte
 \end{Definition}
 
 \begin{Beispiel}
+\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+\definecolor{rvwvcq}{rgb}{0.08235294117647059,0.396078431372549,0.7529411764705882}
+\definecolor{sexdts}{rgb}{0.1803921568627451,0.49019607843137253,0.19607843137254902}
+\definecolor{wrwrwr}{rgb}{0.3803921568627451,0.3803921568627451,0.3803921568627451}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm;scale=0.5]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-0.857875380692505,
+xmax=15.77803725575799,
+ymin=-1.7256298925712856,
+ymax=2.757177100304307,
+xtick={0,1,...,15},
+ytick={-1.5,-1,...,2.5},]
+\clip(-0.857875380692505,-1.7256298925712856) rectangle (15.77803725575799,2.757177100304307);
+\draw [line width=2pt,color=sexdts,domain=-0.857875380692505:15.77803725575799] plot(\x,{(--1.1-0*\x)/1});
+\draw [line width=2pt,color=rvwvcq,domain=-0.857875380692505:15.77803725575799] plot(\x,{(-0.05-0*\x)/1});
+\begin{scriptsize}
+\draw [fill=wrwrwr] (50,0.000014272476927059673) circle (2.5pt);
+\draw[color=sexdts] (0.19615572528107583,1.2745490084679743) node {$f$};
+\draw[color=rvwvcq] (0.24695240508703153,0.18876997761567066) node {$g$};
+\draw [fill=qqwuqq] (0,1) circle (2.5pt);
+\draw [fill=qqwuqq] (1,0.8) circle (2.5pt);
+\draw [fill=qqwuqq] (2,0.64) circle (2.5pt);
+\draw [fill=qqwuqq] (3,0.512) circle (2.5pt);
+\draw [fill=qqwuqq] (4,0.4096) circle (2.5pt);
+\draw [fill=qqwuqq] (5,0.32768) circle (2.5pt);
+\draw [fill=qqwuqq] (6,0.26214400000000015) circle (2.5pt);
+\draw [fill=qqwuqq] (7,0.20971520000000016) circle (2.5pt);
+\draw [fill=qqwuqq] (8,0.16777216000000014) circle (2.5pt);
+\draw [fill=qqwuqq] (9,0.13421772800000012) circle (2.5pt);
+\draw [fill=qqwuqq] (10,0.10737418240000011) circle (2.5pt);
+\draw [fill=qqwuqq] (11,0.08589934592000009) circle (2.5pt);
+\draw [fill=qqwuqq] (12,0.0687194767360001) circle (2.5pt);
+\draw [fill=qqwuqq] (13,0.05497558138880008) circle (2.5pt);
+\draw [fill=qqwuqq] (14,0.04398046511104006) circle (2.5pt);
+\draw [fill=qqwuqq] (15,0.03518437208883206) circle (2.5pt);
+\draw [fill=qqwuqq] (16,0.028147497671065648) circle (2.5pt);
+\draw [fill=qqwuqq] (17,0.02251799813685252) circle (2.5pt);
+\draw [fill=qqwuqq] (18,0.018014398509482017) circle (2.5pt);
+\draw [fill=qqwuqq] (19,0.014411518807585615) circle (2.5pt);
+\draw [fill=qqwuqq] (20,0.011529215046068495) circle (2.5pt);
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+Die abgebildete Folge $a_n=0,8^n$ besitzt als mögliche obere Schranke die Gerade $f:y=1,1$, unten die Gerade $g:y=-0,05$. $a_n$ ist also \textbf{beschränkt}.
 \end{Beispiel}
 
+		\subsubsection{Unbeschränktheit}
+
+\begin{Beispiel}
+Unbeschränktheit mit Abschätzungen zeigen:\\
+$a_n=\dfrac{n^2}{n+2}\geq\dfrac{n^2}{n+2n}=\dfrac{n^2}{3n}=\dfrac{1}{3}n\qquad\forall n\geq1$\\\\
+\\$u_n=\dfrac{1}{3}n$ ist eine unbeschränkte Folge, $a_n$ ist ab einem bestimmten Glied ($a_1$) immer darüber: 
+\\$a_n$ ist ebenfalls unbeschränkt, sie divergiert nach $+\infty$
+\end{Beispiel}
 
 
 	\subsection{Konvergenz}
@@ -461,6 +534,94 @@ $$\Rightarrow \exists \, g\in\R \,:\, \lim\limits_{n\to\infty}a_n=g\;\land\; g\g
 \item  Eine monoton \textbf{fallende} Folge $(a_n)$ ist genau dann \textbf{konvergent}, wenn sie nach \textbf{unten beschränkt} ist. Ihr Grenzwert $g$ ist größer oder gleich der oberen Schranke $s\in\R$.
 \end{itemize}
 
+\begin{Beispiel}
+Untersucht wird die Folge $u_n=\dfrac{n^2}{2^n}$\\
+\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-1.378638916426288,
+xmax=14.41366474370366,
+ymin=-3.4891981146801427,
+ymax=3.730407375415932,
+xtick={-1,0,...,25},
+ytick={-3,-2,...,3},]
+\clip(-1.378638916426288,-3.4891981146801427) rectangle (25.41366474370366,3.730407375415932);
+\begin{scriptsize}
+\draw [fill=qqwuqq] (0,0) circle (2.5pt);
+\draw [fill=qqwuqq] (1,0.5) circle (2.5pt);
+\draw [fill=qqwuqq] (2,1) circle (2.5pt);
+\draw [fill=qqwuqq] (3,1.125) circle (2.5pt);
+\draw [fill=qqwuqq] (4,1) circle (2.5pt);
+\draw [fill=qqwuqq] (5,0.78125) circle (2.5pt);
+\draw [fill=qqwuqq] (6,0.5625) circle (2.5pt);
+\draw [fill=qqwuqq] (7,0.3828125) circle (2.5pt);
+\draw [fill=qqwuqq] (8,0.25) circle (2.5pt);
+\draw [fill=qqwuqq] (9,0.158203125) circle (2.5pt);
+\draw [fill=qqwuqq] (10,0.09765625) circle (2.5pt);
+\draw [fill=qqwuqq] (11,0.05908203125) circle (2.5pt);
+\draw [fill=qqwuqq] (12,0.03515625) circle (2.5pt);
+\draw [fill=qqwuqq] (13,0.0206298828125) circle (2.5pt);
+\draw [fill=qqwuqq] (14,0.011962890625) circle (2.5pt);
+\draw [fill=qqwuqq] (15,0.006866455078125) circle (2.5pt);
+\draw [fill=qqwuqq] (16,0.00390625) circle (2.5pt);
+\draw [fill=qqwuqq] (17,0.00220489501953125) circle (2.5pt);
+\draw [fill=qqwuqq] (18,0.0012359619140625) circle (2.5pt);
+\draw [fill=qqwuqq] (19,0.0006885528564453125) circle (2.5pt);
+\draw [fill=qqwuqq] (20,0.0003814697265625) circle (2.5pt);
+\draw [fill=qqwuqq] (21,0.00021028518676757812) circle (2.5pt);
+\draw [fill=qqwuqq] (22,0.00011539459228515625) circle (2.5pt);
+\draw [fill=qqwuqq] (23,0.00006306171417236328) circle (2.5pt);
+\draw [fill=qqwuqq] (24,0.000034332275390625) circle (2.5pt);
+\draw [fill=qqwuqq] (25,0.00001862645149230957) circle (2.5pt);
+\draw [fill=qqwuqq] (26,0.000010073184967041016) circle (2.5pt);
+\draw [fill=qqwuqq] (27,0.000005431473255157471) circle (2.5pt);
+\draw [fill=qqwuqq] (28,0.0000029206275939941406) circle (2.5pt);
+\draw [fill=qqwuqq] (29,0.0000015664845705032349) circle (2.5pt);
+\draw [fill=qqwuqq] (30,8.381903171539307E-7) circle (2.5pt);
+\draw [fill=qqwuqq] (31,4.4750049710273743E-7) circle (2.5pt);
+\draw [fill=qqwuqq] (32,2.384185791015625E-7) circle (2.5pt);
+\draw [fill=qqwuqq] (33,1.26776285469532E-7) circle (2.5pt);
+\draw [fill=qqwuqq] (34,6.728805601596832E-8) circle (2.5pt);
+\draw [fill=qqwuqq] (35,3.565219230949879E-8) circle (2.5pt);
+\draw [fill=qqwuqq] (36,1.885928213596344E-8) circle (2.5pt);
+\draw [fill=qqwuqq] (37,9.96078597381711E-9) circle (2.5pt);
+\draw [fill=qqwuqq] (38,5.2532413974404335E-9) circle (2.5pt);
+\draw [fill=qqwuqq] (39,2.7666828827932477E-9) circle (2.5pt);
+\draw [fill=qqwuqq] (40,1.4551915228366852E-9) circle (2.5pt);
+\draw [fill=qqwuqq] (41,7.644302968401462E-10) circle (2.5pt);
+\draw [fill=qqwuqq] (42,4.0108716348186135E-10) circle (2.5pt);
+\draw [fill=qqwuqq] (43,2.1020696294726804E-10) circle (2.5pt);
+\draw [fill=qqwuqq] (44,1.1004885891452432E-10) circle (2.5pt);
+\draw [fill=qqwuqq] (45,5.7553961596568115E-11) circle (2.5pt);
+\draw [fill=qqwuqq] (46,3.007016857736744E-11) circle (2.5pt);
+\draw [fill=qqwuqq] (47,1.5695889032940613E-11) circle (2.5pt);
+\draw [fill=qqwuqq] (48,8.185452315956354E-12) circle (2.5pt);
+\draw [fill=qqwuqq] (49,4.265032771400001E-12) circle (2.5pt);
+\draw [fill=qqwuqq] (50,2.220446049250313E-12) circle (2.5pt);
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\begin{itemize}
+\item \underline{Beschränktheit:}\\\\$\forall n\in\N\quad a_n\geq0, \text{ für } n=0,\quad a_n=0\Rightarrow$ die untere Schranke \textcolor{red}{$s=0$ ist das Infimum}.
+\item\underline{Monotonie:} 
+\begin{align*}
+\textcolor{blue}{\dfrac{u_{n+1}}{u_n}}&=\dfrac {(n+1)^2}{2^{n+1}}\cdot\dfrac{2^n}{n^2}\\
+&=\dfrac{(n+1)^2}{2n^2}\\
+&=\dfrac{1}{2}\cdot\left(\dfrac{n+1}{n}\right)^2\\
+&=\dfrac{1}{2}\cdot\left(1+\dfrac{1}{n}\right)^2\textcolor{blue}{\leq \dfrac{8}{9}<1}\qquad \forall n\geq3
+\end{align*}
+\begin{align*}\text{N.R.:}\qquad1+\dfrac{1}{n}&\leq\dfrac{4}{3}\qquad \forall n\geq3\\
+\Rightarrow \quad \left(1+\dfrac{1}{n}\right)^2&\leq \dfrac{16}{9}
+\end{align*}
+Somit ist $u_n$ ab dem 3. Folgeglied \textcolor{blue}{streng monoton fallend} $\Rightarrow S=\dfrac{9}{8}$
+\end{itemize}
+$\Rightarrow a_n$ konvergiert gegen den Grenzwert $g=0$
+\end{Beispiel}
+
 \subsubsection{Divergenz}
 \begin{Definition}
 Eine Folge $(a_n)$, die keinen Grenzwert $g\in\R$ besitzt (nicht kovergiert), wird \textbf{divergent} genannt.\\\\
@@ -471,6 +632,82 @@ Besitzt die Folge überhaupt keinen Grenzwert, so heißt sie \textbf{unbestimmt 
 \begin{Bemerkung}
 Man nennt einen Grenzwert $g=+\infty$ oder $g=-\infty$ einen \textbf{uneigentlichen Grenzwert}.
 \end{Bemerkung}
+
+\begin{Beispiel}
+\begin{itemize}
+\item Die Folge $u_n=-4n^5$ ist bestimmt divergent ($g=-\infty$).
+\item Die Folge $a_n=-n\sin n$ ist unbestimmt divergent, sie besitzt überhaupt keinen Grenzwert.\\
+\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.3]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-2.896396943553246,
+xmax=46.558472172527566,
+ymin=-17.739859682103166,
+ymax=18.07474916976965,
+xtick={-5,0,...,60},
+ytick={-15,-10,...,15},]
+\clip(-5.896396943553246,-17.739859682103166) rectangle (60.558472172527566,18.07474916976965);
+\begin{scriptsize}
+\draw [fill=qqwuqq] (0,0) circle (7.5pt);
+\draw [fill=qqwuqq] (1,-0.8414709848078965) circle (7.5pt);
+\draw [fill=qqwuqq] (2,-1.8185948536513634) circle (7.5pt);
+\draw [fill=qqwuqq] (3,-0.4233600241796016) circle (7.5pt);
+\draw [fill=qqwuqq] (4,3.027209981231713) circle (7.5pt);
+\draw [fill=qqwuqq] (5,4.794621373315692) circle (7.5pt);
+\draw [fill=qqwuqq] (6,1.6764929891935552) circle (7.5pt);
+\draw [fill=qqwuqq] (7,-4.598906191031523) circle (7.5pt);
+\draw [fill=qqwuqq] (8,-7.914865972987054) circle (7.5pt);
+\draw [fill=qqwuqq] (9,-3.7090663671758093) circle (7.5pt);
+\draw [fill=qqwuqq] (10,5.440211108893697) circle (7.5pt);
+\draw [fill=qqwuqq] (11,10.999892272057739) circle (7.5pt);
+\draw [fill=qqwuqq] (12,6.43887501600522) circle (7.5pt);
+\draw [fill=qqwuqq] (13,-5.462171478746332) circle (7.5pt);
+\draw [fill=qqwuqq] (14,-13.868502979728184) circle (7.5pt);
+\draw [fill=qqwuqq] (15,-9.754317602356753) circle (7.5pt);
+\draw [fill=qqwuqq] (16,4.606453066641045) circle (7.5pt);
+\draw [fill=qqwuqq] (17,16.343757361952466) circle (7.5pt);
+\draw [fill=qqwuqq] (18,13.517770441890171) circle (7.5pt);
+\draw [fill=qqwuqq] (19,-2.8476669835960946) circle (7.5pt);
+\draw [fill=qqwuqq] (20,-18.258905014552553) circle (7.5pt);
+\draw [fill=qqwuqq] (21,-17.56976840925718) circle (7.5pt);
+\draw [fill=qqwuqq] (22,0.1947288043888853) circle (7.5pt);
+\draw [fill=qqwuqq] (23,19.463069296028923) circle (7.5pt);
+\draw [fill=qqwuqq] (24,21.73388068815897) circle (7.5pt);
+\draw [fill=qqwuqq] (25,3.3087937524443256) circle (7.5pt);
+\draw [fill=qqwuqq] (26,-19.826519712469672) circle (7.5pt);
+\draw [fill=qqwuqq] (27,-25.82215006692158) circle (7.5pt);
+\draw [fill=qqwuqq] (28,-7.585362072620333) circle (7.5pt);
+\draw [fill=qqwuqq] (29,19.245382642176057) circle (7.5pt);
+\draw [fill=qqwuqq] (30,29.640948722785854) circle (7.5pt);
+\draw [fill=qqwuqq] (31,12.525167005015016) circle (7.5pt);
+\draw [fill=qqwuqq] (32,-17.6456537997341) circle (7.5pt);
+\draw [fill=qqwuqq] (33,-32.99709138353982) circle (7.5pt);
+\draw [fill=qqwuqq] (34,-17.98881132808081) circle (7.5pt);
+\draw [fill=qqwuqq] (35,14.986393432365286) circle (7.5pt);
+\draw [fill=qqwuqq] (36,35.704038723952166) circle (7.5pt);
+\draw [fill=qqwuqq] (37,23.81091093420898) circle (7.5pt);
+\draw [fill=qqwuqq] (38,-11.262005990956641) circle (7.5pt);
+\draw [fill=qqwuqq] (39,-37.58802006507943) circle (7.5pt);
+\draw [fill=qqwuqq] (40,-29.804526419173953) circle (7.5pt);
+\draw [fill=qqwuqq] (41,6.503529420993068) circle (7.5pt);
+\draw [fill=qqwuqq] (42,38.49390501245662) circle (7.5pt);
+\draw [fill=qqwuqq] (43,35.76631393302973) circle (7.5pt);
+\draw [fill=qqwuqq] (44,-0.7788847046381974) circle (7.5pt);
+\draw [fill=qqwuqq] (45,-38.29065860403533) circle (7.5pt);
+\draw [fill=qqwuqq] (46,-41.48226399184522) circle (7.5pt);
+\draw [fill=qqwuqq] (47,-5.807936769025528) circle (7.5pt);
+\draw [fill=qqwuqq] (48,36.87622374353601) circle (7.5pt);
+\draw [fill=qqwuqq] (49,46.733879985214124) circle (7.5pt);
+\draw [fill=qqwuqq] (50,13.118742685196437) circle (7.5pt);
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{itemize}
+\end{Beispiel}
 
 
 \subsubsection{Epsilon-n0-Definition}
