@@ -1,0 +1,77 @@
+\documentclass[10pt]{article}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-5.896396943553246,
+xmax=60.558472172527566,
+ymin=-17.739859682103166,
+ymax=18.07474916976965,
+xtick={-5,0,...,60},
+ytick={-15,-10,...,15},]
+\clip(-5.896396943553246,-17.739859682103166) rectangle (60.558472172527566,18.07474916976965);
+\begin{scriptsize}
+\draw [fill=qqwuqq] (0,0) circle (2.5pt);
+\draw [fill=qqwuqq] (1,-0.8414709848078965) circle (2.5pt);
+\draw [fill=qqwuqq] (2,-1.8185948536513634) circle (2.5pt);
+\draw [fill=qqwuqq] (3,-0.4233600241796016) circle (2.5pt);
+\draw [fill=qqwuqq] (4,3.027209981231713) circle (2.5pt);
+\draw [fill=qqwuqq] (5,4.794621373315692) circle (2.5pt);
+\draw [fill=qqwuqq] (6,1.6764929891935552) circle (2.5pt);
+\draw [fill=qqwuqq] (7,-4.598906191031523) circle (2.5pt);
+\draw [fill=qqwuqq] (8,-7.914865972987054) circle (2.5pt);
+\draw [fill=qqwuqq] (9,-3.7090663671758093) circle (2.5pt);
+\draw [fill=qqwuqq] (10,5.440211108893697) circle (2.5pt);
+\draw [fill=qqwuqq] (11,10.999892272057739) circle (2.5pt);
+\draw [fill=qqwuqq] (12,6.43887501600522) circle (2.5pt);
+\draw [fill=qqwuqq] (13,-5.462171478746332) circle (2.5pt);
+\draw [fill=qqwuqq] (14,-13.868502979728184) circle (2.5pt);
+\draw [fill=qqwuqq] (15,-9.754317602356753) circle (2.5pt);
+\draw [fill=qqwuqq] (16,4.606453066641045) circle (2.5pt);
+\draw [fill=qqwuqq] (17,16.343757361952466) circle (2.5pt);
+\draw [fill=qqwuqq] (18,13.517770441890171) circle (2.5pt);
+\draw [fill=qqwuqq] (19,-2.8476669835960946) circle (2.5pt);
+\draw [fill=qqwuqq] (20,-18.258905014552553) circle (2.5pt);
+\draw [fill=qqwuqq] (21,-17.56976840925718) circle (2.5pt);
+\draw [fill=qqwuqq] (22,0.1947288043888853) circle (2.5pt);
+\draw [fill=qqwuqq] (23,19.463069296028923) circle (2.5pt);
+\draw [fill=qqwuqq] (24,21.73388068815897) circle (2.5pt);
+\draw [fill=qqwuqq] (25,3.3087937524443256) circle (2.5pt);
+\draw [fill=qqwuqq] (26,-19.826519712469672) circle (2.5pt);
+\draw [fill=qqwuqq] (27,-25.82215006692158) circle (2.5pt);
+\draw [fill=qqwuqq] (28,-7.585362072620333) circle (2.5pt);
+\draw [fill=qqwuqq] (29,19.245382642176057) circle (2.5pt);
+\draw [fill=qqwuqq] (30,29.640948722785854) circle (2.5pt);
+\draw [fill=qqwuqq] (31,12.525167005015016) circle (2.5pt);
+\draw [fill=qqwuqq] (32,-17.6456537997341) circle (2.5pt);
+\draw [fill=qqwuqq] (33,-32.99709138353982) circle (2.5pt);
+\draw [fill=qqwuqq] (34,-17.98881132808081) circle (2.5pt);
+\draw [fill=qqwuqq] (35,14.986393432365286) circle (2.5pt);
+\draw [fill=qqwuqq] (36,35.704038723952166) circle (2.5pt);
+\draw [fill=qqwuqq] (37,23.81091093420898) circle (2.5pt);
+\draw [fill=qqwuqq] (38,-11.262005990956641) circle (2.5pt);
+\draw [fill=qqwuqq] (39,-37.58802006507943) circle (2.5pt);
+\draw [fill=qqwuqq] (40,-29.804526419173953) circle (2.5pt);
+\draw [fill=qqwuqq] (41,6.503529420993068) circle (2.5pt);
+\draw [fill=qqwuqq] (42,38.49390501245662) circle (2.5pt);
+\draw [fill=qqwuqq] (43,35.76631393302973) circle (2.5pt);
+\draw [fill=qqwuqq] (44,-0.7788847046381974) circle (2.5pt);
+\draw [fill=qqwuqq] (45,-38.29065860403533) circle (2.5pt);
+\draw [fill=qqwuqq] (46,-41.48226399184522) circle (2.5pt);
+\draw [fill=qqwuqq] (47,-5.807936769025528) circle (2.5pt);
+\draw [fill=qqwuqq] (48,36.87622374353601) circle (2.5pt);
+\draw [fill=qqwuqq] (49,46.733879985214124) circle (2.5pt);
+\draw [fill=qqwuqq] (50,13.118742685196437) circle (2.5pt);
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{document}

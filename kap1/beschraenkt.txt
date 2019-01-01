@@ -1,0 +1,55 @@
+\documentclass[10pt]{article}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+\definecolor{rvwvcq}{rgb}{0.08235294117647059,0.396078431372549,0.7529411764705882}
+\definecolor{sexdts}{rgb}{0.1803921568627451,0.49019607843137253,0.19607843137254902}
+\definecolor{wrwrwr}{rgb}{0.3803921568627451,0.3803921568627451,0.3803921568627451}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-0.857875380692505,
+xmax=15.77803725575799,
+ymin=-1.7256298925712856,
+ymax=2.757177100304307,
+xtick={0,1,...,15},
+ytick={-1.5,-1,...,2.5},]
+\clip(-0.857875380692505,-1.7256298925712856) rectangle (15.77803725575799,2.757177100304307);
+\draw [line width=2pt,color=sexdts,domain=-0.857875380692505:15.77803725575799] plot(\x,{(--1.1-0*\x)/1});
+\draw [line width=2pt,color=rvwvcq,domain=-0.857875380692505:15.77803725575799] plot(\x,{(-0.05-0*\x)/1});
+\begin{scriptsize}
+\draw [fill=wrwrwr] (50,0.000014272476927059673) circle (2.5pt);
+\draw[color=sexdts] (0.19615572528107583,1.2745490084679743) node {$f$};
+\draw[color=rvwvcq] (0.24695240508703153,0.18876997761567066) node {$g$};
+\draw [fill=qqwuqq] (0,1) circle (2.5pt);
+\draw [fill=qqwuqq] (1,0.8) circle (2.5pt);
+\draw [fill=qqwuqq] (2,0.64) circle (2.5pt);
+\draw [fill=qqwuqq] (3,0.512) circle (2.5pt);
+\draw [fill=qqwuqq] (4,0.4096) circle (2.5pt);
+\draw [fill=qqwuqq] (5,0.32768) circle (2.5pt);
+\draw [fill=qqwuqq] (6,0.26214400000000015) circle (2.5pt);
+\draw [fill=qqwuqq] (7,0.20971520000000016) circle (2.5pt);
+\draw [fill=qqwuqq] (8,0.16777216000000014) circle (2.5pt);
+\draw [fill=qqwuqq] (9,0.13421772800000012) circle (2.5pt);
+\draw [fill=qqwuqq] (10,0.10737418240000011) circle (2.5pt);
+\draw [fill=qqwuqq] (11,0.08589934592000009) circle (2.5pt);
+\draw [fill=qqwuqq] (12,0.0687194767360001) circle (2.5pt);
+\draw [fill=qqwuqq] (13,0.05497558138880008) circle (2.5pt);
+\draw [fill=qqwuqq] (14,0.04398046511104006) circle (2.5pt);
+\draw [fill=qqwuqq] (15,0.03518437208883206) circle (2.5pt);
+\draw [fill=qqwuqq] (16,0.028147497671065648) circle (2.5pt);
+\draw [fill=qqwuqq] (17,0.02251799813685252) circle (2.5pt);
+\draw [fill=qqwuqq] (18,0.018014398509482017) circle (2.5pt);
+\draw [fill=qqwuqq] (19,0.014411518807585615) circle (2.5pt);
+\draw [fill=qqwuqq] (20,0.011529215046068495) circle (2.5pt);
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{document}
