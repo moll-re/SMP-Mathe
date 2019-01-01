@@ -345,7 +345,7 @@ $\Rightarrow & k \cdot a & \not\equiv & k' \cdot a \mod p $ &\\
 \end{array}\\
 \\\\
 Die Reste von beliebigen Zahlen $x \in M$ durch $p \in \mathbb{P}$ ergeben genau die Zahlen $y \in N$, da in beiden Mengen genau $(p-1)$ verschiedene Elemente sind und da gerade gezeigt wurde dass jedes Element aus $M$ bei der Division durch p einen unterschiedlichen Rest hat. Die Reihenfolge der zu $x \in M$ zugehörigen Reste $y \in N$  ist natürlich nicht klar (ganz normal bei Mengen). \\\\
-Wir benennen um, damit es klarer wird:
+Wir benennen um, damit es klarer wird:\\
 $$
 \left.\begin{array}{rcl}
 $a & \equiv & r_{1} \mod p$\\
@@ -355,17 +355,18 @@ $3a & \equiv & r_{3} \mod p $\\
 $(p - 2)a & \equiv & r_{p-2} \mod p$ \\
 $(p - 1)a & \equiv & r_{p-1} \mod p$ \\
 \end{array}
-\right\} $r_{1}, r_{2}, ..., r_{p-1}$ sind alle voneinander verschieden ($\widehat{=}$ paarweise verschieden) und sind genau alle Elemente aus der Menge $N$\\
+$$
+$r_{1}, r_{2}, ..., r_{p-1}$ sind alle voneinander verschieden ($\widehat{=}$ paarweise verschieden) und sind genau alle Elemente aus der Menge $N$\\
 \\
 Demnach gilt die Schreibweise:\\\\
-$r_1 \cdot r_2 \cdot r_3 \cdot ... \cdot r_{p-2} \cdot r_{p-1} \quad = \quad 1 \cdot 2 \cdot 3 \cdot (p-2) \cdot (p-1) \quad = \quad (p-1)! $\\\\
+$r_1 \cdot r_2 \cdot r_3 \cdot ... \cdot r_{p-2} \cdot r_{p-1} \quad = \quad 1 \cdot 2 \cdot 3 \cdot ... \cdot (p-2) \cdot (p-1) \quad = \quad (p-1)! $\\\\
 Daraus folgt:\\\\
 \begin{array}{rcl}
-$a \cdot 2a \cdot 3a \cdot ... \cdot (p-1)a & \equiv & r_1 \cdot r_2 \cdot r_3 \cdot ... \cdot r_{p-1} \mod p $\\
-(p-1)! a^{p-1} & \equiv & (p-1)! \mod p\\
+$ a \cdot 2a \cdot 3a \cdot ... \cdot (p-1)a & \equiv & r_1 \cdot r_2 \cdot r_3 \cdot ... \cdot r_{p-1} \mod p $\\
+$(p-1)! a^{p-1} & \equiv & (p-1)! \mod p$\\
 \end{array}\\
 \\
-Da ggT($(p-1)! ; p$) $= 1$, kann man durch (p-1)! teilen, ohne dass sich das Modulo verändert\\\\
+Da ggT$\left((p-1)! ; p\right) = 1$, kann man durch (p-1)! teilen, ohne dass sich das Modulo verändert\\\\
 $ \Rightarrow a^{p-1} \equiv 1 \mod p$
 
 
