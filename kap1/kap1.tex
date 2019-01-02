@@ -197,7 +197,7 @@ ytick={-1,0,...,8},]
 \end{tikzpicture}
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
-$$h(x)=x; f(x)=2\sqrt{x}+2$$
+$$h(x)=x; \quad f(x)=2\sqrt{x}+2$$
 $$h(x)=g(x)\Leftrightarrow x-2\sqrt{x}-2=0$$
 $$\Rightarrow x_1=\left(\dfrac{2+\sqrt{12}}{2}\right)^2$$
 $$g=x_1$$
@@ -307,7 +307,7 @@ Die konvergierende Spirale, es gibt also einen Grenzwert, den man erneut mit der
 \end{minipage}
 
 \begin{Bemerkung}
-Dieses Verfahren kann ausschließlich bei rekusiven Folgen angewendet werden, bei denen keine zusätzliche Abhängigkeit von $n$ vorliegt (Beispiel: $a_{n}=3\cdot a_{n-1}+3+4\cdot n$) oder die Rekursivitätsebene den 1. Grad überschreitet, was bedeutet, dass $a_{n}$ nicht nur in Abhängigkeit von $a_{n-1}$ beschrieben wird, sondern von anderen Rekursivitätsebenen wie $a_{n-2}$ (Beispiel: die Fibonacci-Folge).\\
+Dieses Verfahren kann ausschließlich bei rekusiven Folgen angewendet werden, bei denen keine zusätzliche Abhängigkeit von $n$ vorliegt (Beispiel: $a_{n}=3\cdot a_{n-1}+4n+3$) oder die Rekursivitätsebene den 1. Grad überschreitet, was bedeutet, dass $a_{n}$ nicht nur in Abhängigkeit von $a_{n-1}$ beschrieben wird, sondern von anderen Rekursivitätsebenen wie $a_{n-2}$ (Beispiel: die Fibonacci-Folge).\\
 \end{Bemerkung}
 
 \begin{GTR-Tipp}
@@ -408,7 +408,7 @@ a_{n+1}-a_n&=\dfrac{8(n+1)}{(n+1)^2+1}-\dfrac{8n}{n^2+1}\\
 \end{align*}
 
 \Rightarrow \indent$a_n$ ist für $n\in\N$ weder steigend noch fallend.\\
-\indent $a_n$ ist für $n\in\N*$ streng monoton fallend.
+\indent $a_n$ ist für $n\in\N^*$ streng monoton fallend.
 
 
 %%%%%PLOUUUUs GRaphehen net vergessen
@@ -719,4 +719,45 @@ $$\lim\limits_{n\to\infty}a_n=g \ \Leftrightarrow\ \forall  \epsilon > 0\quad \e
 
 Die Grenzwertsätze führen die Grenzwerte komplizierter Folgen auf einfachere Grenzwertbetrachtungen bekannter Folgen zurück.\\
 \begin{Theorem}
+Seien $u_n$ und $v_n$ sind konvergente Folgen mit Grenzwerten U und V.
+\begin{itemize}
+\item Die Folge $u_n\pm v_n$ ist konvergent und besitzt den Grenzwert $U\pm V$.
+\item Die Folge $u_n\cdot v_n$ ist konvergent und besitzt den Grenzwert $U\cdot V$.
+\item Die Folge $\dfrac{u_n}{v_n}$ ist konvergent und besitzt für $V\not=0$ den Grenzwert $\dfrac{U}{V}$.
+\end{itemize}
 \end{Theorem}
+
+\begin{Beispiel}
+$a_n=\dfrac{4\sqrt{n}-n}{\sqrt{n}-2n}=\dfrac{\not n\left(\frac{4}{\sqrt{n}}-1\right)}{\not n\left(\frac{1}{\sqrt{n}}-2\right)}=\dfrac{\frac{4}{\sqrt{n}}-1}{\frac{1}{\sqrt{n}}-2}$\\\\
+$g=\lim\limits_{n\to\infty}a_n=\lim\limits_{n\to\infty}\dfrac{\frac{4}{\sqrt{n}}-1}{\frac{1}{\sqrt{n}}-2}=\dfrac{\lim\limits_{n\to\infty}\frac{4}{\sqrt{n}}-\lim\limits_{n\to\infty}1}{\lim\limits_{n\to\infty}\frac{1}{\sqrt{n}}-\lim\limits_{n\to\infty}2}=\dfrac{0-1}{0-2}=\dfrac{1}{2}$
+\end{Beispiel}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
