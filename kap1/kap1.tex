@@ -27,7 +27,7 @@ Um statt Funktionen Folgen zu behandeln:
 \end{GTR-Tipp}
 
 \begin{Bemerkung}
-Es ist üblich eine rekursive Folge mit $a_{n+1}$ in Abhängigkeit von $a_n$ zu haben. Dies Darstellung ist mit dem GTR nicht direkt verwendbar. Man muss es "umschreiben" um $a_n$ in Abhängigkeit von $a_{n-1}$ zu haben.
+Es ist üblich eine rekursive Folge mit $a_{n+1}$ in Abhängigkeit von $a_n$ zu haben. Diese Darstellung ist mit dem GTR nicht direkt verwendbar. Man muss es \"umschreiben\" um $a_n$ in Abhängigkeit von $a_{n-1}$ zu haben.
 \end{Bemerkung}
 
 		\section{Verschiedene Darstellungen}
@@ -508,6 +508,12 @@ $$\lim\limits_{n\to\infty}a_n=g\Leftrightarrow \lim\limits_{n\to\infty}(a_n-g)=0
 \end{Theorem}
 \\
 \underline{Wörtlich:} Eine Folge $(a_n)$ konvergiert gegen $g$ genau dann, wenn $(a_n-g)$ gegen den Wert $0$ konvergiert.
+
+\begin{Beispiel}
+$a_n=\dfrac{3n^4-1}{n^4}$\\\\
+$a_n$ hat vermutlich den Grenzwert $g=3$.\\\\
+$a_n-3=\dfrac{3n^4-1}{n^4}-3=\dfrac{3n^4-1-3n^4}{n^4}=-\dfrac{1}{n^4}\underrightarrow{n\rightarrow \infty}0$
+\end{Beispiel}
 \subsubsection{Monotone Konvergenz}
 
 
@@ -516,9 +522,19 @@ Eine monotone Folge ist genau dann konvergent, wenn sie beschränkt ist.
 \end{Theorem}
 
 \begin{Beweis}
+Ohne Beschränkung der Allgeminheit nehmen wir an, dass die Folge monoton wachsend sei und sei $a$ die kleinste obere Schranke (Supremum).
+\begin{itemize}
+\item Sei $\varepsilon\geq0$ dann ist $a-\varepsilon$ keine obere Schranke der Folgeglieder $\{a_n;\in\N\}$.
+\item $(a_n)$ ist wachsend
+\item $\exists n_0\in\N$ mit $a_{n_{0}}$ \geq a-\varepsilon$
+\item $\forall n>n_0$ gilt $a-\varepsilon<a_{n_{0}}\leq a_n<a+\varepsilon$\qquad|-a\\
+$\Leftrightarrow -\varepsilon < a_{n_{0}}-a\leq a_n-a<\varepsilon$
+\item $\Rightarrow \lim\limits_{n\to\infty}a_n=0$
+\end{itemize}
+Analog kann man mit einer nach unten beschränkten monoton fallenden Folge argumentieren.
 \end{Beweis}
 
-Besser zu verstehen, wenn man zwei Fälle unterscheidet:
+Besser zu verstehen, wenn man es so sagt:
 
 \begin{Theorem}
 $$\exists\, S\in\R \quad \exists \,n_0\in\N \quad \forall n\geq n_0\,:\, a_n\leq a_{n+1}\; \land \; a_n\leq S$$
@@ -712,8 +728,132 @@ ytick={-15,-10,...,15},]
 
 \subsubsection{Epsilon-n0-Definition}
 \begin{Definition}
-$$\lim\limits_{n\to\infty}a_n=g \ \Leftrightarrow\ \forall  \epsilon > 0\quad \exists\, n_0 \in\N \quad \forall n\geq n_0\,:\, |a_n-g|<\epsilon$$
+$$\lim\limits_{n\to\infty}a_n=g \ \Leftrightarrow\ \forall  \varepsilon > 0\quad \exists\, n_0 \in\N \quad \forall n\geq n_0\,:\, |a_n-g|<\varepsilon$$
 \end{Definition}
+
+\\
+\underline{Strategie:}
+\begin{itemize}
+\item den Ausdruck $|a_n-g|$ vereinfachen
+\item die Ungleichung $|a_n-g|<\varepsilon$ zu einer Ungleichung der Form $n>...$ umformen.
+\item man hat jetzt die Bedingung für $n$, $n_0$ ist das erste Glied, dass sie erfüllt.
+\item Beweis führen: sei $n\geq n_0$ beliebig, dann ist $|a_n-g|=...<\varepsilon$.
+\end{itemize}
+
+\begin{Bemerkung}
+Wenn ein bestimmtes $\varepsilon$ angegeben ist, dann verwendet man, um das \textcolor{red}{gesuchte $n_0$} zu finden die Gaußklammern. Angewendet werden diese $\lfloor x \rfloor$ um eine Zahl abzurunden, diese $\lceil x \rceil$ um aufzurunden. In unserem Fall wollen wir eine ganze Zahl, für die die Ungleichung auf jeden Fall erfüllt wird, deshalb rundet man auf also \textcolor{red}{Gaußklammer $\lceil x \rceil$}.
+\end{Bemerkung}
+
+\begin{Bemerkung}
+\begin{center}Auch Divergenz kann so gezeigt werden:\end{center}
+$$\forall a \in \R \;\exists \varepsilon >0\; \forall n_0 \in\N \;\exists n\geq n_0\,:\, |a_n-a|\geq \varepsilon$$
+\end{Bemerkung}
+
+
+\begin{Beispiel}
+Die Folge $a_n= \dfrac{1-2n}{5+3n}$ wird untersucht, es wird geschätzt, dass $(a_n)$ gegen $-\dfrac{2}{3}$ konvergiert.
+
+\begin{center}
+\definecolor{qqzzqq}{rgb}{0,0.6,0}
+\definecolor{qqttcc}{rgb}{0,0.2,0.8}
+\definecolor{ttzzqq}{rgb}{0.2,0.6,0}
+\definecolor{rvwvcq}{rgb}{0.08235294117647059,0.396078431372549,0.7529411764705882}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.9]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-1.3380762576126726,
+xmax=14.36327999137987,
+ymin=-4.1973484399012415,
+ymax=4.2646038591741595,
+xtick={-1,0,...,14},
+ytick={-4,-3,...,4},]
+\clip(-1.3380762576126726,-4.1973484399012415) rectangle (14.36327999137987,4.2646038591741595);
+\draw [line width=0.8pt,color=ffqqqq,domain=-1.3380762576126726:14.36327999137987] plot(\x,{(-0.6666666666666666-0*\x)/1});
+\draw [line width=2pt,color=rvwvcq,domain=-1.3380762576126726:14.36327999137987] plot(\x,{(-0.5666666666666667-0*\x)/1});
+\draw [line width=2pt,color=ttzzqq,domain=-1.3380762576126726:14.36327999137987] plot(\x,{(-0.7666666666666666-0*\x)/1});
+\draw [color=ffqqqq](1.0710631363167173,-0.6016180012006462) node[anchor=north west] {$g=-\dfrac{2}{3}$};
+\draw [color=qqttcc](6.764302997592639,0.7288022611185742) node[anchor=north west] {$a:y=g+\varepsilon$};
+\draw [color=qqzzqq](6.8961464470116605,-0.9971483494577117) node[anchor=north west] {$b:y=g-\varepsilon$};
+\begin{scriptsize}
+\draw [fill=qqwuqq] (0,0.2) circle (2.5pt);
+\draw [fill=qqwuqq] (1,-0.125) circle (2.5pt);
+\draw [fill=qqwuqq] (2,-0.2727272727272727) circle (2.5pt);
+\draw [fill=qqwuqq] (3,-0.35714285714285715) circle (2.5pt);
+\draw [fill=qqwuqq] (4,-0.4117647058823529) circle (2.5pt);
+\draw [fill=qqwuqq] (5,-0.45) circle (2.5pt);
+\draw [fill=qqwuqq] (6,-0.4782608695652174) circle (2.5pt);
+\draw [fill=qqwuqq] (7,-0.5) circle (2.5pt);
+\draw [fill=qqwuqq] (8,-0.5172413793103449) circle (2.5pt);
+\draw [fill=qqwuqq] (9,-0.53125) circle (2.5pt);
+\draw [fill=qqwuqq] (10,-0.5428571428571428) circle (2.5pt);
+\draw [fill=qqwuqq] (11,-0.5526315789473685) circle (2.5pt);
+\draw [fill=qqwuqq] (12,-0.5609756097560976) circle (2.5pt);
+\draw [fill=qqwuqq] (13,-0.5681818181818182) circle (2.5pt);
+\draw [fill=qqwuqq] (14,-0.574468085106383) circle (2.5pt);
+\draw [fill=qqwuqq] (15,-0.58) circle (2.5pt);
+\draw [fill=qqwuqq] (16,-0.5849056603773585) circle (2.5pt);
+\draw [fill=qqwuqq] (17,-0.5892857142857143) circle (2.5pt);
+\draw [fill=qqwuqq] (18,-0.5932203389830508) circle (2.5pt);
+\draw [fill=qqwuqq] (19,-0.5967741935483871) circle (2.5pt);
+\draw [fill=qqwuqq] (20,-0.6) circle (2.5pt);
+\draw [fill=qqwuqq] (21,-0.6029411764705882) circle (2.5pt);
+\draw [fill=qqwuqq] (22,-0.6056338028169014) circle (2.5pt);
+\draw [fill=qqwuqq] (23,-0.6081081081081081) circle (2.5pt);
+\draw [fill=qqwuqq] (24,-0.6103896103896104) circle (2.5pt);
+\draw [fill=qqwuqq] (25,-0.6125) circle (2.5pt);
+\draw [fill=qqwuqq] (26,-0.6144578313253012) circle (2.5pt);
+\draw [fill=qqwuqq] (27,-0.6162790697674418) circle (2.5pt);
+\draw [fill=qqwuqq] (28,-0.6179775280898876) circle (2.5pt);
+\draw [fill=qqwuqq] (29,-0.6195652173913043) circle (2.5pt);
+\draw [fill=qqwuqq] (30,-0.6210526315789474) circle (2.5pt);
+\draw [fill=qqwuqq] (31,-0.6224489795918368) circle (2.5pt);
+\draw [fill=qqwuqq] (32,-0.6237623762376238) circle (2.5pt);
+\draw [fill=qqwuqq] (33,-0.625) circle (2.5pt);
+\draw [fill=qqwuqq] (34,-0.6261682242990654) circle (2.5pt);
+\draw [fill=qqwuqq] (35,-0.6272727272727273) circle (2.5pt);
+\draw [fill=qqwuqq] (36,-0.6283185840707964) circle (2.5pt);
+\draw [fill=qqwuqq] (37,-0.6293103448275862) circle (2.5pt);
+\draw [fill=qqwuqq] (38,-0.6302521008403361) circle (2.5pt);
+\draw [fill=qqwuqq] (39,-0.6311475409836066) circle (2.5pt);
+\draw [fill=qqwuqq] (40,-0.632) circle (2.5pt);
+\draw [fill=qqwuqq] (41,-0.6328125) circle (2.5pt);
+\draw [fill=qqwuqq] (42,-0.6335877862595419) circle (2.5pt);
+\draw [fill=qqwuqq] (43,-0.6343283582089553) circle (2.5pt);
+\draw [fill=qqwuqq] (44,-0.635036496350365) circle (2.5pt);
+\draw [fill=qqwuqq] (45,-0.6357142857142857) circle (2.5pt);
+\draw [fill=qqwuqq] (46,-0.6363636363636364) circle (2.5pt);
+\draw [fill=qqwuqq] (47,-0.636986301369863) circle (2.5pt);
+\draw [fill=qqwuqq] (48,-0.6375838926174496) circle (2.5pt);
+\draw [fill=qqwuqq] (49,-0.6381578947368421) circle (2.5pt);
+\draw [fill=qqwuqq] (50,-0.6387096774193548) circle (2.5pt);
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{center}
+\begin{itemize}
+\item \begin{align*}|a_n-g|&=\left|\dfrac{1-2n}{5+3n}+\dfrac{2}{3}\right|\\
+&=\left|\dfrac{3(1-2n)+2(5+3n)}{3(5+3n)}\right|\\
+&=\left|\dfrac{3-6n+10+6n}{15+9n\right}|\\
+&=\left|\dfrac{13}{15+9n}\right|\\
+&=\dfrac{13}{15+9n}
+\end{align*}
+\item
+\begin{array}{cccc}
+&\dfrac{13}{15+9n}&<&\varepsilon\\
+\Leftrightarrow&13&<&\varepsilon(15+9n)\\
+\Leftrightarrow&13-15\epsilon&<&9n\varepsilon\\
+\Leftrightarrow&n&>&\dfrac{13-15\varepsilon}{9\varepsilon}\\
+\end{array}
+\item $n_0=\left\lceil \dfrac{13-15\varepsilon}{9\varepsilon}\right\rceil$
+\item Sei $\varepsilon$ beliebig und $n\geq n_0$, dann gilt $|a_n-g|=\left|\dfrac{1-2n}{5+3n}+\dfrac{2}{3}\right|=\dfrac{13}{15+9n}<\epsilon$
+\end{itemize}
+
+\end{Beispiel}
 \subsubsection{Grenzwertsätze}
 
 
