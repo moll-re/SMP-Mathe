@@ -1379,71 +1379,136 @@
                 \draw[line width=0.8pt] (-0.25,-0.25) node {$O$};
                 \draw[line width=0.8pt,color=blue,fill=blue,fill opacity=0.3] (3.5,2) arc (0:360:1.5);
                 \draw[line width=0.8p] (2,2) circle (1pt);
-                \draw[line width=0.8p,color=purp] (2.2,1.7) node {$M (2,2)$};
+                \draw[line width=0.8p,color=purp] (2.2,1.7) node {$M_1 (2,2)$};
                 \draw[->,line width=0.8p,color=purp] (2,2) -- (3.06,3.06);
                 \draw[line width=0.8p,color=purp] (2.33,2.63) node {$r$};
                 \draw[line width=0.8pt,color=lightblue,fill=lightblue,fill opacity=0.3] (-1,-3) arc (0:360:2);
                 \draw[line width=0.8p] (-3,-3) circle (1pt);
-                \draw[line width=0.8p,color=purp] (-2.8,-3.3) node {$M (2,2)$};
+                \draw[line width=0.8p,color=purp] (-2.8,-3.3) node {$M_2 (-3,-3)$};
                 \draw[->,line width=0.8p,color=purp] (-3,-3) -- (-4.05,-1.30);
                 \draw[line width=0.8p,color=purp] (-3.33,-2.05) node {$r$};
             \end{tikzpicture}
         \end{center}
 
         \paragraph{} Hieraus ergibt sich eine einfache Formel, um einen Kreis zu definieren, aus welcher auch die allgemeine Kreisgleichung folgt:
+        \\
         \begin{align*}
-            \qquad \qquad \qquad &|\vv{MP}| = r ; P \in M_K \\
+            \qquad \qquad \qquad &|\vv{MP}| = r ; P \in M_K \text{ mit $M_k$ Kreismenge} \\
                  \Leftrightarrow &|\vv{MP}|^2 = r^2 \\
                  \Leftrightarrow &|\vv{p} - \vv{m}|^2 = r^2 \\
                  \Leftrightarrow &\left|\left(\begin{array}{c} x - a \\ y - b\end{array}\right)\right|^2 = r^2 ; (x,y) = (p_x,p_y) \land (a,b) = (m_x,m_y) \\
                  \Leftrightarrow &\left(\sqrt{(x - a)^2 + (y - b)^2}\right)^2 = r^2 \\
                  \Leftrightarrow &(x - a)^2 + (y - b)^2 = r^2 \\
         \end{align*}
-        \paragraph{} Wie die Graphik es bereits verdeutlicht, kann es von Nutzen sein mit einer Kreisscheibe zu arbeiten. Diese wird durch die Menge der Punkte repräsentiert, die innerhalb des Kreises liegen, definiert.
+        \paragraph{} Wie die Graphik es bereits verdeutlicht, kann es von Nutzen sein mit einer Kreisscheibe zu arbeiten. Diese wird über die Menge der Punkte, die innerhalb des Kreises liegen, definiert.
         Somit erschließt sich, dass jeglicher Punkt, der eine Entfernung zum Mittelpunkt, welche kleiner als der oder gleich dem Radius ist, teil dieser Kreisscheibe ist:
                                                     $$|\vv{MP}| \leq r ; P \in M_K$$
 
         \begin{Bemerkung}
             Anhand dessen lässt sich bereits eine Eigenschaft eines Kreises im Vektorraum erkennen: \textbf{er ist lediglich im $\R^2$ definierbar}. Überträgt man diese Formel in einen Raum mit mehr Dimensionen erhält man eine Sphäre oder gar eine Hypersphäre.
         \end{Bemerkung}
-        \\
-        \textbf{\underline{Tangenten}}:
-        \\
-        \paragraph{} Eine Tangente an einen Punkt eines Kreises ist vergleichbar mit der an einen Punkt einer Kurve. Sie ist gerade zu der Geraden equivalent, die den Kreis in diesem Punkt berührt. Dies impliziert auch, dass es nur eine Menge von identischen Geraden gibt, welche diese Tangente darstellen.
 
-        \begin{center}
-            \definecolor{purp}{rgb}{0.5,0,0.5}
-            \definecolor{lightblue}{rgb}{0,0.7,0.7}
-            \begin{tikzpicture}[>=triangle 45]
-                \draw[->,line width=0.8pt] (-5.5,0,0) -- (5.5,0,0) node[below] {$x_1$};
-                \draw[->,line width=0.8pt] (0,-5.5,0) -- (0,5.5,0) node[right] {$x_2$};
-                \foreach  \x in {-5,...,-1,1,2,...,5}
-                    \draw[line width=0.8pt] (\x,0.1,0) -- (\x,-0.1,0) node[below] {\x};
-                \foreach  \x in {-5,...,-1,1,2,...,5}
-                    \draw[line width=0.8pt] (-0.1,\x,0) -- (0.1,\x,0) node[right] {\x};
-                \draw[line width=0.8pt] (-0.25,-0.25) node {$O$};
-                \draw[line width=0.8pt,color=blue,fill=blue,fill opacity=0.3] (3.5,2) arc (0:360:1.5);
-                \draw[line width=0.8pt] (2,2) circle (1pt);
-                \draw[line width=0.8pt,color=purp] (2.2,1.7) node {$M_1 (2,2)$};
-                \draw[->,line width=0.8pt,color=purp] (2,2) -- (3.06,3.06);
-                \draw[line width=0.8pt,color=purp] (3.26,3.26) node {$P$};
-                \draw[line width=0.8pt,color=purp] (2.33,2.63) node {$r_1$};
-                \draw[line width=1.5pt,color=grey] (0,6.12) -- (6.12,0);
-                \draw[->,line width=1.5pt,color=red] (3.06, 3.06) -- (4.56,1.56);
-                \draw[line width=0.8pt,color=grey] (4.4,2) node {$t_1$};
-                \draw[line width=0.8pt,color=lightblue,fill=lightblue,fill opacity=0.3] (-1,-3) arc (0:360:2);
-                \draw[line width=0.8pt] (-3,-3) circle (1pt);
-                \draw[line width=0.8pt,color=purp] (-2.8,-3.3) node {$M_2 (2,2)$};
-                \draw[->,line width=0.8pt,color=purp] (-3,-3) -- (-4.05,-1.30);
-                \draw[line width=0.8pt,color=purp] (-4.25,-1.1) node {$P$};
-                \draw[line width=0.8pt,color=purp] (-3.33,-2.05) node {$r_2$};
-                \draw[line width=1.5pt,color=grey] (-7.05,-3.4) -- (-1.75,0.3);
-                \draw[->,line width=1.5pt,color=red] (-4.05,-1.3) -- (-2.9,-0.5);
-                \draw[line width=0.8pt,color=grey] (-6.5,-2.7) node {$t_2$};
-            \end{tikzpicture}
-        \end{center}
+        \\
+        \subsubsection{Tangenten an einen Kreis}
 
-        %\paragraph{} Erneut liefert
+            \\
+
+            \paragraph{} Eine Tangente an einen Punkt eines Kreises ist vergleichbar mit der an einen Punkt einer Kurve. Sie ist gerade zu der Geraden equivalent, die den Kreis in diesem Punkt berührt. Dies impliziert auch, dass es nur eine Menge von identischen Geraden gibt, welche erfolgreich als Tangente kandidieren können.
+
+            \begin{center}
+                \definecolor{purp}{rgb}{0.5,0,0.5}
+                \definecolor{lightblue}{rgb}{0,0.7,0.7}
+                \begin{tikzpicture}[>=triangle 45]
+                    \draw[->,line width=0.8pt] (-5.5,0) -- (5.5,0) node[below] {$x_1$};
+                    \draw[->,line width=0.8pt] (0,-5.5) -- (0,5.5) node[right] {$x_2$};
+                    \foreach  \x in {-5,...,-1,1,2,...,5}
+                        \draw[line width=0.8pt] (\x,0.1,0) -- (\x,-0.1,0) node[below] {\x};
+                    \foreach  \x in {-5,...,-1,1,2,...,5}
+                        \draw[line width=0.8pt] (-0.1,\x,0) -- (0.1,\x,0) node[right] {\x};
+                    \draw[line width=0.8pt] (-0.25,-0.25) node {$O$};
+                    \draw[line width=0.8pt,color=blue,fill=blue,fill opacity=0.3] (3.5,2) arc (0:360:1.5);
+                    \draw[line width=0.8pt] (2,2) circle (1pt);
+                    \draw[line width=0.8pt,color=purp] (2.2,1.7) node {$M_1 (2,2)$};
+                    \draw[->,line width=0.8pt,color=purp] (2,2) -- (3.06,3.06);
+                    \draw[line width=0.8pt,color=purp] (3.26,3.26) node {$P$};
+                    \draw[line width=0.8pt,color=purp] (2.33,2.63) node {$r_1$};
+                    \draw[line width=1.5pt,color=grey] (0,6.12) -- (6.12,0);
+                    \draw[->,line width=1.5pt,color=red] (3.06, 3.06) -- (4.56,1.56);
+                    \draw[line width=0.8pt] (2.7,2.7) arc (-140:-45:0.5);
+                    \draw[line width=0.8pt] (3.1,2.8) circle (0.5pt);
+                    \draw[line width=0.8pt,color=grey] (5.3,1.2) node {$t_1$};
+                    \draw[line width=0.8pt,color=grey] (-2.8,-0.8) node {$X$};
+
+                    \draw[line width=0.8pt,color=lightblue,fill=lightblue,fill opacity=0.3] (-1,-3) arc (0:360:2);
+                    \draw[line width=0.8pt] (-3,-3) circle (1pt);
+                    \draw[line width=0.8pt,color=purp] (-2.8,-3.3) node {$M_2 (-3,-3)$};
+                    \draw[->,line width=0.8pt,color=purp] (-3,-3) -- (-4.05,-1.30);
+                    \draw[line width=0.8pt,color=purp] (-4.25,-1.1) node {$P$};
+                    \draw[line width=0.8pt,color=purp] (-3.33,-2.05) node {$r_2$};
+                    \draw[line width=1.5pt,color=grey] (-7.05,-3.4) -- (-1.75,0.3);
+                    \draw[->,line width=1.5pt,color=red] (-4.05,-1.3) -- (-2.9,-0.5);
+                    \draw[line width=0.8pt] (-3.8,-1.7) arc (-60:30:0.5);
+                    \draw[line width=0.8pt] (-3.75,-1.35) circle (0.5pt);
+                    \draw[line width=0.8pt,color=grey] (-6.5,-2.7) node {$t_2$};
+                    \draw[line width=0.8pt,color=grey] (4.4,1.3) node {$X$};
+                \end{tikzpicture}
+            \end{center}
+
+            \paragraph{} Erneut liefert uns die Graphik eine generelle Formel:
+            \\
+            \begin{align*}
+                \qquad \qquad \qquad &\vv{MP} \odot \vv{PX} = 0 ; P \in M_K, X \in M_T \text{ mit $M_K$ und $M_T$ Kreis- und Tangentenmenge} \\
+                     \Leftrightarrow &(\vv{p} - \vv{m}) \odot (\vv{x} - \vv{p}) = 0 \quad | + (\vv{p} - \vv{m})^2 \\
+                     \Leftrightarrow &(\vv{p} - \vv{m}) \odot (\vv{x} - \vv{p}) + (\vv{p} - \vv{m})^2 = (\vv{p} - \vv{m})^2 \\
+                     \Leftrightarrow &(\vv{p} - \vv{m}) \odot ((\vv{x} \cancel{- \vv{p}}) + (\cancel{\vv{p}} - \vv{m})) = (\vv{p} - \vv{m})^2 \\
+                     \Leftrightarrow &(\vv{p} - \vv{m}) \odot (\vv{x} - \vv{m}) = r^2 \\
+            \end{align*}
+
+        \subsubsection{Polare an einen Kreis}
+
+            \begin{Definition}
+                \paragraph{} Sei $\mathscr{C}$ ein Kreis mit Mittelpunkt $M$ und $P$ ein Punkt mit $|\vv{MP}| \nleq r$. Des Weiteren seien die zwei Tangenten(mengen) an den Kreis, die durch den Punkt $P$ gehen, gegeben. Dann bezeichnet man die Gerade, welche die Berührpunkte der Tangenten beinhaltet als \textbf{Polare an den Kreis $\mathscr{C}$ zum Punkt P}.
+            \end{Definition}
+
+            \begin{Bemerkung}
+                Tatsächlich ist das nur die halbe Wahrheit, die Polare existiert für alle $P$ ungleich dem Kreismittelpunkt. Sie wird ein wenig anders definiert, als wir es gesehen hatten.
+            \end{Bemerkung}
+
+            \paragraph{} Die Prozedur sollte allmählich bekannt vorkommen:
+
+            \begin{center}
+                \definecolor{purp}{rgb}{0.5,0,0.5}
+                \definecolor{lightblue}{rgb}{0,0.7,0.7}
+                \begin{tikzpicture}[>=triangle 45]
+                    \draw[line width=0.8pt,color=lightblue,fill=lightblue,fill opacity=0.3] (0,0) arc (0:360:3);
+                    \draw[line width=0.8pt] (5,0) arc (0:360:4);
+                    \draw[line width=0.8pt] (-7,0) -- (7,0);
+                    \draw[->,line width=0.8pt,color=purp] (-3,0) -- (-1.85,2.75);
+                    \draw[line width=0.8pt] (-2.05,2.25) arc (-110:-20:0.5);
+                    \draw[line width=0.8pt] (-1.78,2.52) circle (0.5pt);
+                    \draw[->,line width=0.8pt,color=purp] (-3,0) -- (-1.85,-2.75);
+                    \draw[line width=0.8pt] (-2.05,-2.25) arc (110:20:0.5);
+                    \draw[line width=0.8pt] (-1.78,-2.52) circle (0.5pt);
+                    \draw[line width=0.8pt] (1,0) -- (-1.85,2.75);
+                    \draw[line width=0.8pt] (1,0) -- (-1.85,-2.75);
+                    \draw[line width=0.8pt,color=purp] (-3.3,-0.25) node {$M$};
+                    \draw[line width=0.8pt,color=purp,fill=purp] (-3,0) circle (2pt);
+                    \draw[line width=0.8pt] (1.3,-0.25) node {$M_T$};
+                    \draw[line width=0.8pt,fill=black] (1,0) circle (2pt);
+                    \draw[line width=0.8pt,color=purp] (5.2,0.4) node {$P$};
+                    \draw[line width=0.8pt,color=purp,fill color=purp] (5,0) circle (2pt);
+                    \draw[line width=0.8pt,color=purp] (-2.225,1.175) node {$r$};
+                    \draw[line width=0.8pt,color=purp] (-0.625,1.175) node {$r_T$};
+                    \draw[line width=0.8pt,color=blue] (-1.65,-4.5) node {$p$};
+                    \draw[line width=0.8pt,color=blue] (-1.57,4) node {$X$};
+                    \draw[line width=0.8pt,fill=black] (-1.85,3.9) circle (2pt);
+                    \draw[line width=1pt] (6.167,-0.475) -- (-4.333,3.8);
+                    \draw[line width=1pt] (6.167,0.475) -- (-4.333,-3.8);
+                    \draw[line width=1pt,color=blue] (-1.85,-5) -- (-1.85,5);
+                    \draw[line width=0.8pt] (-1.35,0) arc (0:90:0.5);
+                    \draw[line width=0.8pt] (-1.63,0.2) circle (0.5pt);
+                \end{tikzpicture}
+            \end{center}
 
 
     \subsection{Sphären}
