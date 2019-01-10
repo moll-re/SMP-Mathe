@@ -66,12 +66,14 @@
   \end{minipage}
 \end{Beispiel}
 \begin{Bemerkung}
-  \begin{itemize}
-    \item Ein Ereignis, das nur aus einem Ergebnis besteht, heißt \textbf{Elementarereignis}.
-    \item $B=\bar A$ (A quer) ist das \textbf{Gegenereignis} von $A$. Es gilt: $B = S \backslash A$
-    \item Ein Ereignis, das immer eintritt, heißt \textbf{sicheres Ereignis}
-    \item Ein Ereignis, das niemals eintritt, heißt \textbf{unmögliches Ereignis}
-  \end{itemize}
+  \begin{Definition}
+    \begin{itemize}
+      \item Ein Ereignis, das nur aus einem Ergebnis besteht, heißt \textbf{Elementarereignis}.
+      \item $B=\bar A$ (A quer) ist das \textbf{Gegenereignis} von $A$. Es gilt: $B = S \backslash A$
+      \item Ein Ereignis, das immer eintritt, heißt \textbf{sicheres Ereignis}
+      \item Ein Ereignis, das niemals eintritt, heißt \textbf{unmögliches Ereignis}
+    \end{itemize}
+  \end{Definition}
 \end{Bemerkung}
 
 \subsubsection{Baumdiagramme}
@@ -153,7 +155,7 @@ $E$ bezeichnet das Erfolgs-Ereignis, $\overline{E}$ bezeichnet somit den Miserfo
   $$\lim_{n\to \infty} \left(\dfrac{H_n(E)}{n}\right) = P(E)$$mit $E$ einem Ereignis, und $H_n$ seiner Häufigkeit nach $n$ Wiederholungen.
 \end{Theorem}
 \begin{Definition}
-  Man nennt die Zuordnung $e_i \longmapsto P(e_i)$ \textbf{Wahrscheinlichkeitsverteilung}, wenn gilt:
+  Man nennt $P(e_i)$ \textbf{Wahrscheinlichkeit} und die Zuordnung $e_i \longmapsto P(e_i)$ \textbf{Wahrscheinlichkeitsverteilung}, wenn gilt:
   \begin{itemize}
     \item $e_i \in S=\{ e_1,e_2,...,e_n\} \land P(e_i)\in \R$
     \item $!\exists P(e_i) \forall e_i \in S$
@@ -201,7 +203,7 @@ Bekannt aus der Mittelstufe. Es ergibt sich, wenn man die Summe von zwei Werten 
 \subsection{Binomialkoeffizienten}
 \begin{Definition}
   Der Binomialkoeffizient ist die Anzahl der $k$-elementigen Teilmengen einer $n$-elementigen Menge.
-  $$ {n\choose k} = \dfrac{n!}{(n-k)!k!} \text{\qquad (gesprochen "n über k"\qquad) \forall 0 \leq k \leq n}$$
+  $$ {n\choose k} = \dfrac{n!}{(n-k)!k!} \text{\qquad (gesprochen "n über k")}\qquad \forall 0 \leq k \leq n$$
 \end{Definition}
 \begin{Bemerkung}
   Anschaulich entspricht das den Möglichkeiten, genau $k$ bestimmte Kugeln von $n$ Kugeln zu ziehen, wobei die gezogenen Kugeln nicht zurückgelegt werden, und die Reihenfolge, in der sie gezogen wurden, nicht beachtet wird.
@@ -217,8 +219,8 @@ Bekannt aus der Mittelstufe. Es ergibt sich, wenn man die Summe von zwei Werten 
 \end{Bemerkung}
 
 \begin{GTR-Tipp}
-  Im englischen wird ${n \choose r}$ als "$n$ choose $r$" gesprochen. Auf dem GTR findet sich die Option unter 'MATH' > 'PRB'. Es handelt sich um 'nCr'.\\
-  Benutzung: <ZAHL$_1$> 'nCr' <ZAHL$_2$>. (Entspricht ${Z_1 \choose Z_2}$)
+  Im englischen wird ${n \choose r}$ als "$n$ choose $r$" gesprochen. Auf dem GTR findet sich die Option unter \texttt{MATH} > \texttt{PRB}. Es handelt sich um \texttt{nCr}.\\
+  Benutzung: \texttt{<ZAHL$_1$>} \texttt{nCr} \texttt{<ZAHL$_2$>}. (Entspricht ${Z_1 \choose Z_2}$)
 \end{GTR-Tipp}
 
 \begin{Theorem}
@@ -286,21 +288,35 @@ Bekannt aus der Mittelstufe. Es ergibt sich, wenn man die Summe von zwei Werten 
     ..\\
     $k$-te Auswahl: $n-(k-1)$ Möglichkeiten, $k$ mögliche Permutationen\\
     \begin{align*}
-      \Rightarrow \text{\quad Möglichkeiten insgesamt:\, } & \dfrac{n(n-1)(n-2)...(n-(k-1))\text{\quad \} \small{1 neue Möglichkeit pro unterschiedlichem Fall}}}{1*2*...*(k-1)(k-2)k \text{ \quad \} \small{Anzahl der Wege, die zur selben Teilmenge führen}}}\\
+      \Rightarrow \text{\quad Möglichkeiten insgesamt:\, } & \dfrac{n(n-1)(n-2)...(n-(k-1))\text{\quad \} \tiny{1 neue Möglichkeit pro unterschiedlichem Fall}}}{1*2*...*(k-1)(k-2)k \text{ \quad \} \tiny{Anzahl der Wege, die zur selben Teilmenge führen}}}\\
       & = \dfrac{n(n-1)(n-2)...(n-(k-1))}{k!}\\
       & = \dfrac{n!}{(n-k)!k!}\\
       & = {n\choose k}
     \end{align*}
   \end{itemize}
 \end{Beweis}
-
+\begin{Beispiel}
+  Nehmen wir das Ereignis $E$: bei einer Lotto-Ziehung ``6 aus 49'' sind genau 4 Zahlen richtig.
+  $$P(E) = \dfrac{{6 \choose 4}{43 \choose 2}}{{49 \choose 6}}$$
+  Zunächst nimmt man die Anzahl an Möglichkeiten, 4 richtige Kugeln von 6 zu ziehen, man multipliziert diese durch die Anzahl an Möglichkeiten, 2 Kugeln aus den 43 ``unerwünschten'' zu ziehen. Um die Wahrscheinlichkeit zu erhalten teilt man durch die Gesamtanzahl an Möglichkeite, 6 Kugeln aus 49 zu ziehen.
+\end{Beispiel}
 \begin{Theorem}
   Für eine Bernoulli-Kette der Länge $l \in \N$ und der Trefferwahrscheinlichkeit $P$ (Wahrscheinlichkeit für einen Pfad) gilt:
-  $$P(X=k) = {l \choose k} p^k (1-p ^{l-k})$$
-  mit $k$ der gerwünschten Anzahl an Erfolgen.
+  $$P(X=k) = {l \choose k} p^k (1-p) ^{l-k}$$
+  mit $k$ der gerwünschten Anzahl an Erfolgen.\\
+  Außerdem gilt:
+  $$P(X\leq k) = \sum_{i=0}^{k}{l \choose i} p^i (1-p) ^{l-i}$$
 \end{Theorem}
 \begin{Bemerkung}
   \begin{Definition}
     $X$ heißt in diesem Fall \textbf{binomialverteilte Zufallsvariable}. Die entsprechende Wahrscheinlichkeitsverteilung heißt Binomialverteilung $B_{l,p}(k)$. $l$ ist die Länge der Bernoulli-Kette, $p$ die Erfolgswahrscheinlichkeit und $k$ ist die gewünschte Anzahl an Erfolgen.
   \end{Definition}
 \end{Bemerkung}
+\begin{GTR-Tipp}
+  Beide Berechnungen werden durch einen GTR-Befehl automatisiert:\\
+  \begin{itemize}
+    \item $\displaystyle{{l \choose k}} p^k (1-p) ^{l-k}$ wird duch den Befehl \texttt{binomPDF(l,p,k)} berechnet.
+    \item $\displaystyle{\sum_{i=0}^{k}{l \choose i}} p^i (1-p) ^{l-i}$ wird duch den Befehl \texttt{binomCDF(l,p,k)} berechnet.
+  \end{itemize}\\
+  Beide Befehle befinden sich im \texttt{DISTR}-Menü (\texttt{2ND}+\texttt{VARS})
+\end{GTR-Tipp}
