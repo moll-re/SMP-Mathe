@@ -406,7 +406,7 @@ Bildhaft sieht das folgendermaßen aus:\\
 \end{align*}
 \end{Beispiel}
 \begin{GTR-Tipp}
-  Mit $Y_1 = f(x)$ und $Y_2 = abs(Y_1)$ bzw. $Y_2 = |Y_1|$ (zu finden in 'MATH'>'NUM' oder über Alpha-F2) lässt sich die Fläche berechnen über 2nd-CALC mit der Option Integral.\\
+Mit $Y_1 = f(x)$ und $Y_2 = abs(Y_1)$ bzw. $Y_2 = |Y_1|$ (zu finden in \texttt{MATH} > \texttt{NUM} oder über \texttt{F2}, also \texttt{ALPHA}+\texttt{WINDOW}) lässt sich die Fläche berechnen über \texttt{MATH} > \texttt{MATH} mit der Option \texttt{fnInt}.\\
   Hierzu wählt man $Y_2$ aus und gibt $a$ und $b$ an.
 \end{GTR-Tipp}
 
@@ -433,19 +433,24 @@ Bildhaft sieht das folgendermaßen aus:\\
   \( \displaystyle \pi \int_a^b f^2(z)dz\).\\
   Tatsächlich ist die Fläche eines zur $x_3$-Achse parallelen Querschnitts die der Scheibe mit Radius $f(z)$.
 \end{Theorem}
-\definecolor{ffqqqq}{rgb}{1,0,0}
-\definecolor{ccqqqq}{rgb}{0.8,0,0}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.7]
-  \draw[->,line width=0.8pt] (-3.0,0) -- (11.0,0) node[below] {$x_1$};
-  \draw[->,line width=0.8pt] (0,-3.7) -- (0,3.7) node[right] {$x_2$};
-  \draw[->,line width=0.8pt] (3.0,3.0) -- (-3.0,-3.0) node[below] {$x_3$};
-  \draw (-0.3,0.3) node {$O$};
-  \draw[line width=2.4pt,color=ffqqqq,fill=ffqqqq,fill opacity=0.1, smooth,samples=50,domain=1:9] plot(\x,{sqrt(\x)}) -- (9,0) -- (1,0) -- cycle;
-  \draw[line width=2pt,color=ccqqqq,smooth,samples=100,domain=6.848866262443662e-8:10.024582490069186] plot(\x,{sqrt((\x))});
-  \draw[line width=2.4pt,dash pattern=on 1pt off 1pt,color=ffqqqq,smooth,samples=100,domain=6.848866262443662e-8:10.024582490069186] plot(\x,{0-sqrt((\x))});
-  \draw [rotate around={90:(1,0)},line width=1pt] (1,0) ellipse (1.0085893502642513cm and 0.13134868658068935cm);
-  \draw [rotate around={90:(9,0)},line width=1pt] (9,0) ellipse (3.0174458893236813cm and 0.32400570210806623cm);
-\end{tikzpicture}
+\begin{minipage}{0.8\textwidth}
+  \definecolor{ffqqqq}{rgb}{1,0,0}
+  \definecolor{ccqqqq}{rgb}{0.8,0,0}
+  \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.7]
+    \draw[->,line width=0.8pt] (-3.0,0) -- (11.0,0) node[below] {$x_1$};
+    \draw[->,line width=0.8pt] (0,-3.7) -- (0,3.7) node[right] {$x_2$};
+    \draw[->,line width=0.8pt] (3.0,3.0) -- (-3.0,-3.0) node[below] {$x_3$};
+    \draw (-0.3,0.3) node {$O$};
+    \draw[line width=2.4pt,color=ffqqqq,fill=ffqqqq,fill opacity=0.1, smooth,samples=50,domain=1:9] plot(\x,{sqrt(\x)}) -- (9,0) -- (1,0) -- cycle;
+    \draw[line width=2pt,color=ccqqqq,smooth,samples=100,domain=6.848866262443662e-8:10.024582490069186] plot(\x,{sqrt((\x))});
+    \draw[line width=2.4pt,dash pattern=on 1pt off 1pt,color=ffqqqq,smooth,samples=100,domain=6.848866262443662e-8:10.024582490069186] plot(\x,{0-sqrt((\x))});
+    \draw [rotate around={90:(1,0)},line width=1pt] (1,0) ellipse (1.0085893502642513cm and 0.13134868658068935cm);
+    \draw [rotate around={90:(9,0)},line width=1pt] (9,0) ellipse (3.0174458893236813cm and 0.32400570210806623cm);
+  \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+  \uptodownarrow
+\end{minipage}
 \section{Uneigentliche Integrale}
 \begin{Definition}
   Ist die Funktion $f$ auf $[a;+\infty)$ stetig und existiert der Grenzwert \( \displaystyle\lim\limits_{Z \rightarrow \infty} \int_a^Z f(x)dx\),
