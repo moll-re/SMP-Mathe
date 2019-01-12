@@ -1362,9 +1362,11 @@
 
 \section{Kreise und Sphären}
 
+    \paragraph{} Letzte relevant Objektgruppe ist die der Kreise und Sphären, wobei Letztere lediglich auf den $\R^3$ angewandte Formen der Ersten sind.
+
     \subsection{Kreise}
 
-        \paragraph{} Letzte relevant Objektgruppe ist die der Kreise und Sphären, wobei Letztere lediglich auf den $\R^3$ angewandte Formen der Ersten sind. Kreise werden über einen \textbf{Mittelpunkt} und einen \textbf{Radius} definiert. Alle Punkte, welche einen Distanz gleich dem Radius zum Mittelpunkt aufweisen, sind teil der Kreismenge, die den Kreis algebraisch beschreibt. Wie bei allen anderen Sektionen der Geometrie ist es von Nöten, das Ganze zu visualisieren:
+        \paragraph{} Kreise werden über einen \textbf{Mittelpunkt} und einen \textbf{Radius} definiert. Alle Punkte, welche einen Distanz gleich dem Radius zum Mittelpunkt aufweisen, sind teil der Kreismenge, die den Kreis algebraisch beschreibt. Wie bei allen anderen Sektoren der Geometrie ist es von Nöten, das Ganze zu visualisieren:
 
         \begin{center}
             \definecolor{purp}{rgb}{0.5,0,0.5}
@@ -1412,9 +1414,9 @@
         \subsubsection{Tangenten an einen Kreis}
 
             \\
-
-            \paragraph{} Eine Tangente an einen Punkt eines Kreises ist vergleichbar mit der an einen Punkt einer Kurve. Sie ist gerade zu der Geraden equivalent, die den Kreis in diesem Punkt berührt. Dies impliziert auch, dass es nur eine Menge von identischen Geraden gibt, welche erfolgreich als Tangente kandidieren können.
-
+            \begin{Definition}
+                \paragraph{} Eine Tangente an einen Punkt eines Kreises ist vergleichbar mit der an einen Punkt einer Kurve. Sie ist gerade zu der Geraden equivalent, die \textbf{den Kreis in diesem Punkt berührt}. Dies impliziert auch, dass es nur eine Menge identischer Geraden gibt, welche erfolgreich als Tangente kandidieren können.
+            \end{Definition}
             \begin{center}
                 \definecolor{purp}{rgb}{0.5,0,0.5}
                 \definecolor{lightblue}{rgb}{0,0.7,0.7}
@@ -1471,7 +1473,7 @@
             \end{Definition}
 
             \begin{Bemerkung}
-                Tatsächlich ist das nur die halbe Wahrheit, die Polare existiert für alle $P$ ungleich dem Kreismittelpunkt. Sie wird ein wenig anders definiert, als wir es gesehen hatten.
+                Tatsächlich ist das nur die halbe Wahrheit, die Polare existiert für alle $P$ ungleich $M$. Sie landet dann außerhalb des Kreises und schneidet diesen nicht (berührt ihn in einem, wenn gilt $|\vv{MP}| = r$).
             \end{Bemerkung}
 
             \paragraph{} Die Prozedur sollte allmählich bekannt vorkommen:
@@ -1496,9 +1498,11 @@
                     \draw[line width=0.8pt] (1.3,-0.25) node {$M_T$};
                     \draw[line width=0.8pt,fill=black] (1,0) circle (2pt);
                     \draw[line width=0.8pt,color=purp] (5.2,0.4) node {$P$};
+                    \draw[line width=0.8pt,fill=black] (-1.85,2.75) circle (2pt);
+                    \draw[line width=0.8pt,color=purp] (-1.5,2.9) node {$B$};
                     \draw[line width=0.8pt,color=purp,fill color=purp] (5,0) circle (2pt);
                     \draw[line width=0.8pt,color=purp] (-2.225,1.175) node {$r$};
-                    \draw[line width=0.8pt,color=purp] (-0.625,1.175) node {$r_T$};
+                    \draw[line width=0.8pt] (-0.625,1.175) node {$r_T$};
                     \draw[line width=0.8pt,color=blue] (-1.65,-4.5) node {$p$};
                     \draw[line width=0.8pt,color=blue] (-1.57,4) node {$X$};
                     \draw[line width=0.8pt,fill=black] (-1.85,3.9) circle (2pt);
@@ -1510,7 +1514,62 @@
                 \end{tikzpicture}
             \end{center}
 
+            \paragraph{} Wenn auch ein wenig um mehr Ecken gedacht als üblich:
+            \\
+            \begin{align*}
+                \qquad \qquad \qquad &\left|\begin{array}{c} \vv{MB} \odot \vv{PB} = 0 \\ \vv{MP} \odot \vv{BX} = 0 \end{array}\right| \\
+                     \Leftrightarrow &\left|\begin{array}{c} (\vv{b} - \vv{m}) \odot (\vv{b} - \vv{p}) = 0 \\ (\vv{p} - \vv{m}) \odot (\vv{x} - \vv{b}) = 0 \end{array}\right| \qquad \text{Nach der bereits aufgestellten Formel für Tangenten} \\
+                     \Leftrightarrow &\left|\begin{array}{c} (\vv{b} - \vv{m}) \odot (\vv{p} - \vv{m}) = r^2 \\ (\vv{p} - \vv{m}) \odot (\vv{x} - \vv{b}) = 0 \end{array}\right| \qquad (1) + (2) \\
+                     \Leftrightarrow &(\vv{p} - \vv{m})((\vv{x} - \cancel{\vv{b}}) + (\cancel{\vv{b}} - \vv{m})) = r^2 \\
+                     \Leftrightarrow &(\vv{p} - \vv{m})(\vv{x} - \vv{m}) = r^2 \\
+            \end{align*}
+
+
 
     \subsection{Sphären}
+
+        \paragraph{} Sphären werden wie Kreise über einen \textbf{Mittelpunkt} und einen \textbf{Radius} definiert. Alle Punkte, welche einen Distanz gleich dem Radius zum Mittelpunkt aufweisen, sind teil der Sphärenmenge, die die Sphäre algebraisch beschreibt:
+
+        \begin{center}
+            \definecolor{purp}{rgb}{0.5,0,0.5}
+            \definecolor{lightblue}{rgb}{0,0.7,0.7}
+            \begin{tikzpicture}[>=triangle 45]
+                \draw[line width=0.8pt] (-5,0,0) arc (180:360:5cm and 2.5cm);
+                \draw[line width=0.8pt,dashed] (-5,0,0) arc (180:0:5cm and 2.5cm);
+                \draw[line width=0.8pt] (0,5,0) arc (90:270:2.5cm and 5cm);
+                \draw[line width=0.8pt,dashed] (0,5,0) arc (90:-90:2.5cm and 5cm);
+                \draw[line width=0.8pt] (0,0,0) circle (5cm);
+                \shade[ball color=lightblue,opacity=0.3] (0,0,0) circle (5cm);
+                \draw[line width=0.8pt] (4,4,0) node {$\mathscr{C}$};
+                \draw[line width=0.8pt,color=purp] (-0.3,0.3,0) node {$M$};
+                \draw[line width=0.8pt,color=purp,fill=purp] (0,0,0) circle (2pt);
+                \draw[line width=0.8pt,color=purp] (1.3,1.6,1.4435) node {$r$};
+                \draw[->,line width=0.8pt,color=purp] (0,0,0) -- (2.887,2.887,2.887);
+                \draw[line width=0.8pt,color=purp] (3.2,3.2,3.2) node {$P$};
+                \draw[line width=0.8pt,color=blue] (0,5,0) arc (90:-90:1.9cm and 5cm);
+                \draw[line width=0.8pt,color=blue,dashed] (0,5,0) arc (90:270:1.9cm and 5cm);
+            \end{tikzpicture}
+        \end{center}
+
+        \begin{Theorem}[- Sphärengleichung]
+            \paragraph{} Eine Sphäre im $\R^n ; n>=3$ mit Mittelpunkt $M$ und Radius $r$ ist eindeutig über die folgende Gleichung definiert:
+                                    $$|\vv{MP}| = r ; P \in M_{\mathscr{C}}$$
+            \paragraph{} Die allgebraische Formel lautet somit wie folgt:
+                                    $$(x-a)^2 + (y-b)^2 + (z-c)^2 = r^2 ; (x,y,z) = (p_x,p_y,p_z) \land (a,b,c) = (m_x,m_y,m_z)$$
+        \end{Theorem}
+
+        \begin{Beweis}
+            \begin{align*}
+                                &|\vv{MP}| = r ; P \in M_\mathscr{C} \text{ mit $M_\mathscr{C}$ Kreismenge} \\
+                \Leftrightarrow &|\vv{MP}|^2 = r^2 \\
+                \Leftrightarrow &|\vv{p} - \vv{m}|^2 = r^2 \\
+                \Leftrightarrow &\left|\left(\begin{array}{c} x - a \\ y - b \\ z - c \end{array}\right)\right|^2 = r^2 ; (x,y,z) = (p_x,p_y,p_z) \land (a,b,c) = (m_x,m_y,m_z) \\
+                \Leftrightarrow &\left(\sqrt{(x - a)^2 + (y - b)^2 + (z - c)^2}\right)^2 = r^2 \\
+                \Leftrightarrow &(x - a)^2 + (y - b)^2 + (z - c)^2 = r^2 \\
+            \end{align*}
+        \end{Beweis}
+
+
+
 \section{Sätze}
 \input{kap5/saetze}
