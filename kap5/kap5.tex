@@ -1552,7 +1552,7 @@
         \end{center}
 
         \begin{Theorem}[- Sphärengleichung]
-            \paragraph{} Eine Sphäre im $\R^n ; n>=3$ mit Mittelpunkt $M$ und Radius $r$ ist eindeutig über die folgende Gleichung definiert:
+            \paragraph{} Eine Sphäre im $\R^n ; n \geq 3$ mit Mittelpunkt $M$ und Radius $r$ ist eindeutig über die folgende Gleichung definiert:
                                     $$|\vv{MP}| = r ; P \in M_{\mathscr{C}}$$
             \paragraph{} Die allgebraische Formel lautet somit wie folgt:
                                     $$(x-a)^2 + (y-b)^2 + (z-c)^2 = r^2 ; (x,y,z) = (p_x,p_y,p_z) \land (a,b,c) = (m_x,m_y,m_z)$$
@@ -1568,6 +1568,42 @@
                 \Leftrightarrow &(x - a)^2 + (y - b)^2 + (z - c)^2 = r^2 \\
             \end{align*}
         \end{Beweis}
+
+
+        \subsubsection{Tangenten an eine Sphäre}
+
+            \paragraph{} Die Tangente in einem Punkt an eine Sphäre unterscheidet sich nur in einer Eigenschaft von der an einen Kreis: mehrere nicht identische Geraden berühren eine Sphäre in einem Punkt. Tatsächlich stellt diese Menge von Geraden eine \textbf{Ebene} dar:
+
+            \begin{center}
+                \definecolor{purp}{rgb}{0.5,0,0.5}
+                \definecolor{lightblue}{rgb}{0,0.7,0.7}
+                \begin{tikzpicture}[>=triangle 45]
+                    \draw[line width=0.8pt] (-5,0,0) arc (180:360:5cm and 2.5cm);
+                    \draw[line width=0.8pt,dashed] (-5,0,0) arc (180:0:5cm and 2.5cm);
+                    \draw[line width=0.8pt] (0,5,0) arc (90:270:2.5cm and 5cm);
+                    \draw[line width=0.8pt,dashed] (0,5,0) arc (90:-90:2.5cm and 5cm);
+                    \draw[line width=0.8pt] (0,0,0) circle (5cm);
+                    \shade[ball color=lightblue,opacity=0.3] (0,0,0) circle (5cm);
+                    \draw[line width=0.8pt] (3,5,0) node {$\mathscr{C}$};
+                    \draw[line width=0.8pt,color=purp] (-0.3,0.3,0) node {$M$};
+                    \draw[line width=0.8pt,color=purp,fill=purp] (0,0,0) circle (2pt);
+                    \draw[line width=0.8pt,color=purp] (1.3,1.6,1.4435) node {$r$};
+                    \draw[->,line width=0.8pt,color=purp] (0,0,0) -- (2.887,2.887,2.887);
+                    \draw[line width=0.8pt,color=purp] (3.2,3.2,3.2) node {$P$};
+                    \draw[line width=0.8pt,color=blue] (0,5,0) arc (90:-90:1.9cm and 5cm);
+                    \draw[line width=0.8pt,color=blue,dashed] (0,5,0) arc (90:270:1.9cm and 5cm);
+                    \draw[line width=0.4pt,color=orange] (11.548,-5.774,11.548) -- (-5.774,11.548,-5.774);
+                    \draw[line width=0.4pt,color=orange] (-5.774,11.548,11.548) -- (11.548,-5.774,-5.774);
+                    \draw[line width=0.4pt,color=orange] (-5.774,-5.774,-5.774) -- (11.548,11.548,11.548);
+                    \draw[line width=0.1pt,color=orange,fill=orange,fill opacity=0.1] (8.661,-2.887,8.661) -- (-2.887,8.661,8.661) --     (-2.887,-2.887,-2.887) -- (-2.887,8.661,-2.887) -- (8.661,-2.887,-2.887) -- (8.661,8.661,8.661) -- cycle;
+                    \draw[line width=0.8pt] (-3,-8,0) node {\begin{tabular}{c} Wenn ein harmloses Versehen eines Menschen in \glqq wahrer Schönheit\grqq \text{ } endet... \\ \linebreak Spaß beiseite, ich habs einfach mal so gelassen \\ \end{tabular}};
+                \end{tikzpicture}
+            \end{center}
+
+
+
+
+
 
 
 
