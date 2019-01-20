@@ -1,5 +1,8 @@
-\chapter{Statistik und Wahrscheinlichkeit}
+\chapter{Wahrscheinlichkeitstheorie}
 \chapterauthor{Rémy}
+\begin{Bemerkung}
+  Der Oberbegriff \textbf{Stochastik} wird hier nicht verwendet, da wir uns SMP nicht mit der überflüssigen \textbf{Statistik} beschäftigen.
+\end{Bemerkung}
 \section{Wiederholungen: Unter- \& Mittelstufe}
 \subsection{Zufallsexperimente}
 \begin{Definition}
@@ -121,9 +124,9 @@ Eine Bernoulli-Kette kann als \textbf{Baumdiagramm} dargestellt werden:\\
         }
     child {
       node[ergebnis, label=right:
-        {$P(E_1\cap E_2)=\frac{1}{2}\cdot\frac{1}{2}$}] {}
+        {$P(E_1 \cap E_2)=\frac{1}{2}\cdot\frac{1}{2}$}] {}
       edge from parent
-      node[above] {$\overline{E}$}
+      node[above] {$E$}
       node[below]  {$\frac{1}{2}$}
     }
     edge from parent
@@ -163,7 +166,17 @@ $E$ bezeichnet das Erfolgs-Ereignis, $\overline{E}$ bezeichnet somit den Miserfo
     \item $P(e_1)+P(e_2)+...+P(e_n)=1$
     \item ?
   \end{itemize}
-\end{Definition}
+\end{Definition}\\
+\underline{Darstellung:}\\
+\begin{tikzpicture}
+
+\end{tikzpicture}
+\begin{Bemerkung}
+
+\end{Bemerkung}
+\begin{GTR-Tipp}
+
+\end{GTR-Tipp}
 
 
 \subsection{Zufallsvariable}
@@ -320,3 +333,60 @@ Bekannt aus der Mittelstufe. Es ergibt sich, wenn man die Summe von zwei Werten 
   \end{itemize}\\
   Beide Befehle befinden sich im \texttt{DISTR}-Menü (\texttt{2ND}+\texttt{VARS})
 \end{GTR-Tipp}
+
+\subsection{Bedingte Wahrscheinlichkeiten}
+\begin{Definition}
+  Sind $A$ und $B$ beliebige Ereignisse mit $P(A)\neq 0$, so bezeichnet man $P_A(B)$ oder $P(B|A)$ die \textbf{durch $A$ bedingte Wahrscheinlichkeit von $B$}. Es gilt:
+  $$P_A(B) = \dfrac{P(A \cap B)}{P(A)}$$
+\end{Definition}\\
+Daraus ergibt sich die korrekte Darstellung als Baumdiagramm:\\
+\begin{center}
+\begin{tikzpicture}[grow=right, ]%sloped]
+\node[optionen] {\small{1. Durchführung} $A, \overline{A}$}
+  child {
+    node[optionen] {\small{2. Durchführung} $B,\overline{B}$}
+    child {
+      node[ergebnis, label=right:
+        {$P(\overline{A} \cap \overline{B})=P(\overline{A})\cdot P_{\overline{A}}(\overline{B})$}] {}
+      edge from parent
+      node[above] {$\overline{B}$}
+      node[below]  {$P_{\overline{A}}(\overline{B})$}
+    }
+    child {
+      node[ergebnis, label=right:
+        {$P(\overline{A} \cap B)=P(\overline{A})\cdot P_{\overline{A}}(B)$}] {}
+      edge from parent
+      node[above] {$B$}
+      node[below]  {$P_{\overline{A}}(B)$}
+    }
+    edge from parent
+    node[above] {$\overline{A}$}
+    node[below]  {$P(\overline{A})$}
+  }
+  child {
+    node[optionen] {\small{2. Durchführung} $B, \overline{B}$}
+    child {
+      node[ergebnis, label=right:
+          {$P(A \cap \overline{B})=P(A)\cdot P_A(\overline{B})$}] {}
+      edge from parent
+      node[above] {$\overline{B}$}
+      node[below]  {$P_A(\overline{B})$}
+        }
+    child {
+      node[ergebnis, label=right:
+        {$P(A \cap B)=P(A)\cdot P_A(B)$}] {}
+      edge from parent
+      node[above] {$B$}
+      node[below]  {$P_A(B)$}
+    }
+    edge from parent
+    node[above] {$A$}
+    node[below]  {$P(A)$}
+  };
+\end{tikzpicture}
+\end{center}\\
+\subsection{Stochastische Unabhängigkeit}
+\begin{Definition}
+  Die Ergebnisse $A$ und $B$ werden stochastisch unabhängig genannt, wenn das Eintreten $A$s die Wahrscheinlichkeit $B$s nicht verändert. Es gilt dann:
+  $$P_A(B)=P(B)$$
+\end{Definition}

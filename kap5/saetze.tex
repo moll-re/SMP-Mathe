@@ -174,15 +174,16 @@
   \end{minipage}
 \end{Theorem}
 \begin{Beweis}
-  Der ist einfach:
-  \begin{align*}
-    a^2+b^2 &=c^2\\
-    \Leftrightarrow p^2+h^2+q^2+h^2 &= (p+q)^2\\
-    \Leftrightarrow p^2+h^2+q^2+h^2 &= p^2+2pq+q^2\\
-    \Leftrightarrow h^2+h^2 &= 2pq\\
-    \Leftrightarrow 2h^2 &= 2pq\\
-    \Leftrightarrow h^2 &= pq\\
-  \end{align*}
+  \begin{center}
+    \begin{align*}
+      && a^2+b^2 &= c^2\\
+      & \Leftrightarrow& p^2+h^2+q^2+h^2 &= (p+q)^2\\
+      & \Leftrightarrow& p^2+h^2+q^2+h^2 &= p^2+2pq+q^2\\
+      & \Leftrightarrow& h^2+h^2 &= 2pq\\
+      & \Leftrightarrow& 2h^2 &= 2pq\\
+      & \Leftrightarrow& h^2 &= pq\\
+    \end{align*}
+  \end{center}
 \end{Beweis}
 
 \subsection{Strahlensätze}
@@ -218,7 +219,28 @@
   \end{minipage}
 \end{Theorem}
 \begin{Beweis}
-  test
+  \begin{center}
+    \begin{align*}
+      (BC)//(MN)  \Leftrightarrow \vv{BC}  &= k\cdot\vv{MN},k\in \R              &\qquad | \text{Die Vektoren sind kollinear.} \\
+                                           &= k\cdot (\vv{MA}+\vv{AN})           &\qquad | \vv{MN}=\vv{MA}+\vv{AN} \\
+                                           &= \vv{BA}+\vv{AC}                    & \\
+    \end{align*}
+    Da $\vv{MA}$ und $\vv{BA}$ kollinear sind, und $\vv{AN}$ und $\vv{AC}$ auch, gilt:\\
+    $\left\{\begin{array}{rcl}
+        |\vv{BA}| &= k\cdot |\vv{MA}|\\
+        |\vv{AC}| &= k\cdot |\vv{AN}|\\
+        |\vv{BC}| &= k\cdot |\vv{MN}|
+    \end{array}
+    \Leftrightarrow
+    \left\{\begin{array}{rcl}
+        \dfrac{|\vv{BA}|}{|\vv{MA}|} &= k\\
+        \dfrac{|\vv{AC}|}{|\vv{AN}|} &= k\\
+        \dfrac{|\vv{BC}|}{|\vv{MN}|} &= k
+    \end{array}
+  \end{center}
+  \Leftrightarrow \dfrac{|\vv{BA}|}{|\vv{MA}|} = \dfrac{|\vv{AC}|}{|\vv{AN}|} = \dfrac{|\vv{BC}|}{|\vv{MN}|}
+  \Leftrightarrow \dfrac{|\vv{MA}|}{|\vv{BA}|} = \dfrac{|\vv{AN}|}{|\vv{AC}|} = \dfrac{|\vv{MN}|}{|\vv{BC}|}
+  $
 \end{Beweis}
 
 \begin{Theorem}[- Umkehrung]
@@ -252,7 +274,7 @@
   \end{minipage}
 \end{Theorem}
 \begin{Beweis}
-  test
+  Auch hier profitieren wir von Äquivalenzumformungen.
 \end{Beweis}
 
 \subsection{Der Satz des Apollinius}
@@ -286,11 +308,20 @@
 \end{Theorem}
 \begin{\small}
 \begin{Beweis}
+\begin{small}
+  Anfangen kann man den den Beweis damit, dass man zwei Punkte sucht, die die Bedingung erf"ullen \textbf{und} auf der Geraden $AB$ liegen. Logisch ist, dass einer dieser Punkte zwischen $A$ und $B$ sein wird, dieser wird \textbf{innerer Teilungspunkt} $T_{i}$ genannt. Der andere Punkt liegt au"serhalb der Strecke $[AB]$ und wird \textbf{"au"serer Teilungspunkt} $T_{a}$ genannt. \\
+  Im letzten Schritt des Beweises wird man anhand des Skalarprodukts zeigen, dass f"ur alle Punkte $X$, die ebenfalls die Verh"altnisgleichung erf"ullen, die Vektoren $\vv{T_{i}X}$ und $\vv{T_{a}X}$ orthogonal zueinander sind. Somit liegen diese Punkte auf dem Thaleskreis (frz.: Theoreme du triangle rectangle) "uber $T_{i}$ und $T_{a}$, der dann \textbf{Apolliniuskreis} genannt wird.\\
+\end{small}
 \begin{enumerate}
-  \item {Die Ausgangspunkte:  \vartriangleright $A(0|0)$ \qquad \vartriangleright $B(b|0)$ \qquad \vartriangleright $T_{i}(t_{i}|0)$ \qquad \vartriangleright $T_{a}(t_{a}|0)$ \qquad \vartriangleright $X(x|y)$
-  }
+  \item
+  Für möglichst einfache Koordinaten platziert man $A$ auf den Origo, $[AB]$ entlang der $x$-Achse, und kürzt $\overline{AB}$ mit $b$ ab. Gleicherma"sen verf"ahrt man mit den L"angen $\overline{AT_{i}}=t_{i}$ und $\overline{AT_{a}}= t_{a}$, und man f"uhrt den Punkt $X(x|y)$ ein.\\
+  Hier nochmal ein "Uberblick:
+  \begin{center}
+    \vartriangleright $A(0|0)$ \qquad \vartriangleright $B(b|0)$ \qquad \vartriangleright $T_{i}(t_{i}|0)$ \qquad \vartriangleright $T_{a}(t_{a}|0)$ \qquad \vartriangleright $X(x|y)$
+  \end{center}
 
-  \item {Nun gilt:\\
+  \item
+  Nun gilt:\\
   \begin{minipage}[t]{0.5\textwidth}
   \begin{array}{rccl}
   &$\dfrac{\overline{AT_{i}}}{\overline{T_{i}B}}$ & $=$ & $\lambda$\\
@@ -311,18 +342,17 @@
   $\Leftrightarrow & t_{a} $&$=$&$ \dfrac{\lambda}{\lambda -1}\cdot b$\\
   \end{array}
   \end{minipage}\\
-  \begin{center}
-  \begin{array} {rccccccl}
-  $t_{i} + t_{a} $ & $=$ & $\dfrac {\lambda}{\lambda +1}\cdot b + $\dfrac {\lambda}{\lambda -1}\cdot b  $ &$=$& $(\dfrac{\lambda}{\lambda+1} + \dfrac{\lambda}{\lambda-1})\cdot b$ & $=$ & $\dfrac{\lambda^2}{\lambda^2 -1}\cdot 2b$ \qquad \textcolor{red}{(1)}\\
-  \end{array}
-  \\
-  \begin{array} {rcccccl}
-  $t_{i} \cdot t_{a} $ & $=$ & $\dfrac {\lambda}{\lambda +1}\cdot b \cdot $\dfrac {\lambda}{\lambda +1}\cdot b $ & $=$ & $\dfrac{\lambda^2}{\lambda^2 -1}\cdot b^2$ \qquad \textcolor{red}{(2)}\\ \\
-  \end{array}
-  \end{center}
-  }
+  \begin{itemize}
+    \item
+    $t_{i} + t_{a} = \dfrac {\lambda}{\lambda +1}\cdot b + \dfrac {\lambda}{\lambda -1}\cdot b  =(\dfrac{\lambda}{\lambda+1} + \dfrac{\lambda}{\lambda-1})\cdot b=\dfrac{\lambda^2}{\lambda^2 -1}\cdot 2b $\qquad \textcolor{red}{(1)}
+    \item
+    $t_{i} \cdot t_{a} =\dfrac {\lambda}{\lambda +1}\cdot b \cdot \dfrac {\lambda}{\lambda +1}\cdot b =\dfrac{\lambda^2}{\lambda^2 -1}\cdot b^2$ \qquad \textcolor{red}{(2)}
+  \end{itemize}\\
+  Diese Zusammenänge werden gleich benötigt.
 
-  \item{$T_{i}$ und $T_{a}$ in Abhängigkeit von $b$ und $\lambda$ jetzt auch noch $X$:
+
+  \item
+  Jetzt wo wir $T_{i}$ und $T_{a}$ in Abh"angigkeit von $b$ und $\lambda$ bestimmt haben, kann man die Vorraussetzung auch noch auf den Punkt $X$ anwenden.\\
   \begin{array}{rccll}
                     &$ \dfrac{\overline{AX}}{\overline{XB}}$        & $=$ & $\lambda$ \\
   $\Leftrightarrow $&$ \dfrac{(\overline{AX})^2}{(\overline{XB})^2}$& $=$ & $\lambda^2$ \\
@@ -333,21 +363,20 @@
   \end{array}
   }
 
-  \item{$\vv{T_{i}X} = \left(\begin{array}{c} x-t_{i} \\ y \end{array}\right); \vv{T_{a}X} = \left(\begin{array}{c} x-t_{a} \\ y \end{array}\right)$
+  \item
+  Jetzt prüft man auf Orthogonalität zwischen $\vv{T_{i}X} = \left(\begin{array}{c} x-t_{i} \\ y \end{array}\right); \vv{T_{a}X} = \left(\begin{array}{c} x-t_{a} \\ y \end{array}\right)$.\\
   \begin{center}
   \begin{array}{rccl}
-  $\vv{T_{i}X} \cdot \vv{T_{a}X}$ &$=$& $(x-t_{i})\cdot (x-t_{a}) +y^2$\\
-  & $=$ & $x^2 -(t_{i} +t_{a})x + t_{i}\cdot t_{a} + y^2$ & $Benutze (1) und (2) \\
-  & $=$ & $x^2 - \dfrac{\lambda^2}{\lambda^2 - 1} \cdot 2bx + \dfrac{\lambda^2}{\lambda^2 - 1} \cdot b^2 +y^2$\\
-  & $=$ & $\dfrac{x^2 \cdot (\lambda^2 -1) - 2bx\cdot \lambda^2 + b^2\cdot \lambda^2 + y^2 \cdot (\lambda^2 -1)}{\lambda^2 -1}$\\
-  & $=$ & $\dfrac{x^2 \cdot \lambda^2 - 2bx\cdot \lambda^2 b^2\cdot \lambda^2 +y^2\cdot \lambda^2 -x^2 -y^2} {\lambda^2 -1}$ &  $Benutze (3) \\
-  & $=$ & $0$\\
-  \\
+    \vv{T_{i}X} \cdot \vv{T_{a}X} & = & (x-t_{i})\cdot (x-t_{a}) +y^2                                                                                       & \\
+                                  & = & x^2 -(t_{i} +t_{a})x + t_{i}\cdot t_{a} + y^2                                                                       & \text{Benutze (1) und (2)} \\
+                                  & = & x^2 - \dfrac{\lambda^2}{\lambda^2 - 1} \cdot 2bx + \dfrac{\lambda^2}{\lambda^2 - 1} \cdot b^2 +y^2                  & \\
+                                  & = & \dfrac{x^2 \cdot (\lambda^2 -1) - 2bx\cdot \lambda^2 + b^2\cdot \lambda^2 + y^2 \cdot (\lambda^2 -1)}{\lambda^2 -1} & \\
+                                  & = & \dfrac{x^2 \cdot \lambda^2 - 2bx\cdot \lambda^2 b^2\cdot \lambda^2 +y^2\cdot \lambda^2 -x^2 -y^2} {\lambda^2 -1}    & \text{Benutze (3)} \\
+                                  & = & 0                                                                                                                   & \\
   \end{array}
-  \end{center}
-  }
-
-  $\Rightarrow \vv{T_{i}X} \bot \vv{T_{a}X} \forall X \Rightarrow \vv{T_{i}X},\vv{T_{a}X}\in$ Thaleskreis über $T_{i}$ und $T_{a}$.
+  \end{center}\\
+  $\Rightarrow$ Man hat bewiesen, dass für alle Punkte X die Vektoren T i X und T a X orthogonal zueinan-
+der sind, weshalb sie auf dem Thaleskreis über T i und T a liegen müssen.
   \end{enumerate}
 \end{Beweis}
 \begin{Bemerkung}
