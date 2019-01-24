@@ -1,3 +1,5 @@
+\documentclass[../MAIN/main.tex]{subfiles}
+\begin{document}
 \chapter{Algebra oder Zahlentheorie}
 \chapterauthor{Bruno}
 
@@ -351,7 +353,7 @@ $$
 $a & \equiv & r_{1} \mod p$\\
 $2a & \equiv & r_{2} \mod p$ \\
 $3a & \equiv & r_{3} \mod p $\\
-&& \vdots & 
+&& \vdots &
 $(p - 2)a & \equiv & r_{p-2} \mod p$ \\
 $(p - 1)a & \equiv & r_{p-1} \mod p$ \\
 \end{array}
@@ -399,7 +401,7 @@ $b = 33320 &=& 2^3 \cdot 5 \cdot 7^2 \cdot17 &=& 2^{\textcolor{red}{3}} \cdot 3^
 Daraus ergeben sich\\
 ggT($a;b$) $= 2^1 \cdot 7^1 \quad = \quad 14$\\
 kgV($a;b$) $= 2^{\textcolor{red}{3}} \cdot 3^{\textcolor{red}{4}} \cdot 5^{\textcolor{red}{1}} \cdot 7^{\textcolor{red}{2}} \cdot 11^{\textcolor{red}{1}} \cdot 17^{\textcolor{red}{1}} \quad = \quad 29688120 $
- 
+
 \end{Beispiel}
 
 
@@ -408,7 +410,7 @@ kgV($a;b$) $= 2^{\textcolor{red}{3}} \cdot 3^{\textcolor{red}{4}} \cdot 5^{\text
 
 
 \begin{Definition}
-Der \textbf{Fundamentalsatz des ggT} besagt, dass für $a,b \, \in \N$ ganze Zahlen $u$ und $v$ exisitieren, sodass gilt: 
+Der \textbf{Fundamentalsatz des ggT} besagt, dass für $a,b \, \in \N$ ganze Zahlen $u$ und $v$ exisitieren, sodass gilt:
 $$a\cdot u + b\cdot v \,=\, \text{ggT(a; b)} $$
 Wenn $a$ und $b$ teilerfremd sind, dann gilt im Sonderfall: $\exists u, v \, \in \Z$:
 $$a\cdot u + b\cdot v \,=\, \text{ggT(a; b)} \,=\, 1 $$
@@ -475,7 +477,7 @@ Jetzt wird eingesetzt\\
 \Leftrightarrow & a = 1271k - 135 \\
 \end{array}\\\\
 
-Die Lösungsmenge Für die Geichung (1) lautet 
+Die Lösungsmenge Für die Geichung (1) lautet
 $$\mathbb{L} = \{ (1271k -135 ; 4199k - 446) ; \quad k \in \Z  \}$$
 \\
 Jetzt kann man jede ganze Zahl $F$ durch unendlich viele Linearkombinationen von 1271 und 4199 darstellen. Sei die Aufgabe
@@ -513,7 +515,7 @@ Sei $T$ der Klartext, also der unverschlüsselte Text und $G$ der geheime, versc
 \item[$\bullet$] Verschlüsselung: $\quad G = T^{e} \mod N $\\
 \item[$\bullet$] Entschlüsselung: $\quad T = G^{d} \mod N $\\
 \end{description}
-Damit diese Rechnung funktioniert, muss $(T^{e})^{d} \equiv T \mod N$ gelten. Um dies zu prüfen, schauen wir uns die Ausgangsgleichheiten an: 
+Damit diese Rechnung funktioniert, muss $(T^{e})^{d} \equiv T \mod N$ gelten. Um dies zu prüfen, schauen wir uns die Ausgangsgleichheiten an:
 $$e \cdot d \equiv 1 \mod (p-1)(q-1) \qquad \Leftrightarrow \qquad e \cdot d = r \cdot (p-1)(q-1) +1 \qquad r \in \Z$$
 Und es sei die (Eulersche) Formel gegeben (Vorraussetzung: ggT($a;pq$) $= 1$):
 $$a^{(p-1)(q-1)} \equiv 1 \mod pq$$
@@ -663,3 +665,4 @@ $\forall n\in \N,\quad n\geq 4 : \quad n! >n^2 $\\\\
 \end{array}
 
 \end{Beweis}
+\end{document}

@@ -1,3 +1,5 @@
+\documentclass[../MAIN/main.tex]{subfiles}
+\begin{document}
 \chapter{Folgen}
 \chapterauthor{Clara}
 
@@ -40,11 +42,11 @@ Wenn ein beliebiges Glied der Folge direkt berechenbar ist, ist ihre Darstellung
 \end{Definition}
 
 \begin{Beispiel}
-\begin{enumerate}
-\item  $a_{n}=3^n \Rightarrow a_{4}=3^4=81$
-\item Die Folge der $n-ten$ positiven, ungeraden Zahl:\\
-$a_{n}=1+2\cdot(n-1) \Rightarrow$ Die 8. positive, ungerade Zahl ist $ a_{8}=1+2\cdot(8-1)=15$
-\end{enumerate}
+	\begin{enumerate}
+		\item $a_{n}=3^n \Rightarrow a_{4}=3^4=81$
+		\item Die Folge der $n-ten$ positiven, ungeraden Zahl:\\
+		$a_{n}=1+2\cdot(n-1) \Rightarrow$ Die 8. positive, ungerade Zahl ist $ a_{8}=1+2\cdot(8-1)=15$
+	\end{enumerate}
 \end{Beispiel}
 
 
@@ -391,9 +393,9 @@ Gelten dabei sagar \textbf{strikte} Ordnungsrelationen ($>$ oder $<$), dann ist 
 
 \end{Definition}
 
-\underline{Strategie:} 
+\underline{Strategie:}
 \begin{itemize}
-\item Das \textcolor{blue}{Vorzeichen von $a_{n+1}-a_n$ bestimmen}, ist es $\leq0$ dann ist die Folge fallend, ist es $\geq0$, dann ist die Folge wachsend. 
+\item Das \textcolor{blue}{Vorzeichen von $a_{n+1}-a_n$ bestimmen}, ist es $\leq0$ dann ist die Folge fallend, ist es $\geq0$, dann ist die Folge wachsend.
 \item \textcolor{blue}{$\dfrac{a_{n+1}}{a_n}$ mit 1 vergleichen}, ist es $\leq1$, dann ist die Folge fallend, ist es $\geq1$, dann ist die Folge wachsend.
 \end{itemize}
 
@@ -488,7 +490,7 @@ Die abgebildete Folge $a_n=0,8^n$ besitzt als mögliche obere Schranke die Gerad
 \begin{Beispiel}
 Unbeschränktheit mit Abschätzungen zeigen:\\
 $a_n=\dfrac{n^2}{n+2}\geq\dfrac{n^2}{n+2n}=\dfrac{n^2}{3n}=\dfrac{1}{3}n\qquad\forall n\geq1$\\\\
-\\$u_n=\dfrac{1}{3}n$ ist eine unbeschränkte Folge, $a_n$ ist ab einem bestimmten Glied ($a_1$) immer darüber: 
+\\$u_n=\dfrac{1}{3}n$ ist eine unbeschränkte Folge, $a_n$ ist ab einem bestimmten Glied ($a_1$) immer darüber:
 \\$a_n$ ist ebenfalls unbeschränkt, sie divergiert nach $+\infty$
 \end{Beispiel}
 
@@ -623,7 +625,7 @@ ytick={-3,-2,...,3},]
 \end{tikzpicture}
 \begin{itemize}
 \item \underline{Beschränktheit:}\\\\$\forall n\in\N\quad a_n\geq0, \text{ für } n=0,\quad a_n=0\Rightarrow$ die untere Schranke \textcolor{red}{$s=0$ ist das Infimum}.
-\item\underline{Monotonie:} 
+\item\underline{Monotonie:}
 \begin{align*}
 \textcolor{blue}{\dfrac{u_{n+1}}{u_n}}&=\dfrac {(n+1)^2}{2^{n+1}}\cdot\dfrac{2^n}{n^2}\\
 &=\dfrac{(n+1)^2}{2n^2}\\
@@ -871,33 +873,4 @@ Seien $u_n$ und $v_n$ sind konvergente Folgen mit Grenzwerten U und V.
 $a_n=\dfrac{4\sqrt{n}-n}{\sqrt{n}-2n}=\dfrac{\not n\left(\frac{4}{\sqrt{n}}-1\right)}{\not n\left(\frac{1}{\sqrt{n}}-2\right)}=\dfrac{\frac{4}{\sqrt{n}}-1}{\frac{1}{\sqrt{n}}-2}$\\\\
 $g=\lim\limits_{n\to\infty}a_n=\lim\limits_{n\to\infty}\dfrac{\frac{4}{\sqrt{n}}-1}{\frac{1}{\sqrt{n}}-2}=\dfrac{\lim\limits_{n\to\infty}\frac{4}{\sqrt{n}}-\lim\limits_{n\to\infty}1}{\lim\limits_{n\to\infty}\frac{1}{\sqrt{n}}-\lim\limits_{n\to\infty}2}=\dfrac{0-1}{0-2}=\dfrac{1}{2}$
 \end{Beispiel}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\end{document}
