@@ -170,14 +170,35 @@ $E$ bezeichnet das Erfolgs-Ereignis, $\overline{E}$ bezeichnet somit den Miserfo
   \end{itemize}
 \end{Definition}\\
 \underline{Darstellung:}\\
-\begin{tikzpicture}
 
-\end{tikzpicture}
+\begin{center}
+  \begin{tikzpicture}
+    \begin{axis}[
+      ybar interval, ymax=1,ymin=0, minor y tick num = 3,
+      ylabel=Wahrscheinlichkeit,]
+    \addplot coordinates {(0,0.3) (1, 0.1) (2, 0.2) (3, 0.05) (4, 0.01) (5, 0.04) (6, 0.1) (7, 0.1) (8,0)};
+    \end{axis}
+  \end{tikzpicture}
+\end{center}
 \begin{Bemerkung}
-
+  Dieses Balkendiagramm wird als Histogramm bezeichnet und ist in vielen Fällen eine gute Darstellungsmöglichkeit.
 \end{Bemerkung}
 \begin{GTR-Tipp}
-
+  \begin{enumerate}
+    \item Mit \texttt{seq()} (in \texttt{LIST > OPS}) wird die Liste mit allen X-Werten generiert:\\
+    \texttt{seq(X,X,0,<Anzahl an Versuchen>,1)}$\rightarrow$\texttt{<Variable>}. \\
+    ($\rightarrow$ wird durch die Taste \texttt{STO>} aufgerufen)
+    \item Mit \texttt{<gewünschte Verteilung>()} (in \texttt{DISTR > DISTR}) wird die Liste mit allen Y-Werten generiert:\\
+    \texttt{<Verteilung>(<Anzahl an Versuchen>,<Erfolgswahrscheinlichkeit>)}$\rightarrow$\texttt{<Variable>}.
+    \item Im Menü \texttt{STAT PLOT > Plot 1} kann der gewünschte Anzeigemodus gewählt werden, für die \texttt{Xlist} wird die erste Liste gewählt, für \texttt{Freq} die zweite. Beim Anzeige achte man auf die richtigen Maßstäbe: Die Anzahl an Versuchen für \texttt{Xmax}, 1 für \texttt{Ymax}.
+  \end{enumerate}\\
+  \begin{Bemerkung}
+    Der GTR ist ab einer Anzahl von über 48 überfordert, dann können die Balken wegen der niedrigen Auflösung nicht alle angezeigt werden. In einem solchen Fall kann nur ein Ausschnitt des Histogramms angezeigt werden, sonst erscheint eine Fehlermeldung.
+  \end{Bemerkung}\\
+  \begin{Bemerkung}
+    Alternativ kann eine Funktion definiert werden über \texttt{<Verteilung>(<Anzahl an Versuchen>,<Erfolgswahrscheinlichkeit>,round(X,0))} und anschließend angezeigt werden.\\
+    Dies funktionniert nur für ganze $x$, weshalb $X$ durch \texttt{round(X,0)} (zu finden in... (KP, catalog durchsuchen)) auf den nächsten ganzen Wert gerundet wird.
+  \end{Bemerkung}
 \end{GTR-Tipp}
 
 
@@ -335,6 +356,26 @@ Bekannt aus der Mittelstufe. Es ergibt sich, wenn man die Summe von zwei Werten 
   \end{itemize}\\
   Beide Befehle befinden sich im \texttt{DISTR}-Menü (\texttt{2ND}+\texttt{VARS})
 \end{GTR-Tipp}
+\underline{Darstellung:}\\
+\begin{minipage}{0.5\textwidth}
+  \begin{tikzpicture}
+    \begin{axis}[
+      ybar interval, ymax=1,ymin=0, minor y tick num = 3,
+      ylabel=Wahrscheinlichkeit,]
+    \addplot coordinates {(0,0) (1, 0.009765) (2, 0.04396) (3, 0.1172) (4, 0.205) (5, 0.2461) (6, 0.205) (7, 0.1172) (8, 0.04396) (9, 0.009765) (10,0) (11,0)};
+    \end{axis}
+  \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+  \begin{tikzpicture}
+    \begin{axis}[
+      ybar interval, ymax=1,ymin=0, minor y tick num = 3,
+      ylabel=kumulierte Wahrscheinlichkeit,]
+    \addplot coordinates {(0,0) (1, 0.0107) (2, 0.0547) (3, 0.1719) (4, 0.3770) (5, 0.623) (6, 0.8281) (7, 0.9453) (8, 0.9893) (9, 1) (10,0) (11,0)};
+    \end{axis}
+  \end{tikzpicture}
+\end{minipage}
+
 
 \subsection{Bedingte Wahrscheinlichkeiten}
 \begin{Definition}
