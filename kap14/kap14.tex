@@ -117,10 +117,10 @@ Le modele standard de la physique dans sa beauté incontestée.\\\\
     \draw [brace] (4.5,.8)  -- (5.5,.8) node[toplabel]       {bosons\\Goldstone};
     \draw [brace] (5.5,.8)  -- (7,.8)   node[toplabel] {en dehors\\du modèle standard};
 
-    \node at (0,1.2)   [generation] {1\tiny st};
-    \node at (1,1.2)   [generation] {2\tiny nd};
-    \node at (2,1.2)   [generation] {3\tiny rd};
-    \node at (2.8,1.2) [generation] {\tiny generation};
+    \node at (0,1.3)   [génération] {1\tiny ère};
+    \node at (1,1.3)   [génération] {2\tiny ème};
+    \node at (2,1.3)   [génération] {3\tiny ème};
+    \node at (2.8,1.3) [génération] {\tiny génération};
   \end{tikzpicture}
 \end{center}
 
@@ -157,7 +157,7 @@ L'interaction éléctromagn�tique est une force \textcolor{red}{attractive} ou
 
 \begin{Definition}
 La loi de Coulomb\\
-Dans le vide, 2 corps ponctuels A et B de charges $q_{a}$ et $q_{b}$ exercent l'un sur l'autre des forces: \\
+Dans le vide, 2 corps ponctuels A et B de charges $q_{a}$ et $q_{b}$ exercent l'un sur l'autre des forces : \\
 $$ \vv{F}_{A/B} = K \cdot \dfrac{q_{a}\cdot q_{b}}{r^2} \cdot \vv{U}_{A/B} $$
 avec\\
 $$K=\dfrac{1}{4\pi\varepsilon_{0}}= 9,0\cdot 10^9(S.I.)$$
@@ -261,7 +261,7 @@ $$f(\text{Hz}) = \dfrac{1}{T(\text{s})} = \dfrac{\omega\, (\text{rad/s})}{2\pi(\
 \subsection{$1^{ere}$ loi}
 
 \begin{Definition}
-Dans un référentiel galiléen, le centre d'inertie d'un solide isolé ou pseudo-isolé est animé d'un mouvement \textbf{rectiligne uniforme} (et réciproquement):
+Dans un référentiel galiléen, le centre d'inertie d'un solide isolé ou pseudo-isolé est animé d'un mouvement \textbf{rectiligne uniforme} (et réciproquement) :
 $$\sum \vv{F}_{ext} = \vv{0} \qquad \Leftrightarrow \qquad \text{Mvt rect. uniforme}$$
 \end{Definition}
 
@@ -275,7 +275,7 @@ $$\sum \vv{F}_{ext} = m\cdot \vv{a} $$
 \subsection{$3^{eme}$ loi}
 
 \begin{Definition}
-C'est le principe de l'action et de la réaction. Soient $A$ et $B$ deux centres d'inertie de deux objets dans un référentiel galiléen:
+C'est le principe de l'action et de la réaction. Soient $A$ et $B$ deux centres d'inertie de deux objets dans un référentiel galiléen :
 $$\vv{F}_{A\rightarrow B} = - \vv{F}_{B\rightarrow A}$$
 
 \end{Definition}
@@ -284,12 +284,14 @@ $$\vv{F}_{A\rightarrow B} = - \vv{F}_{B\rightarrow A}$$
 \section{Énergies et TEC}
 
 \begin{Definition}
-L'énergie fait bouger des choses... Il existe plusieures formes d'énergie:
+L'énergie fait bouger des choses... Il existe plusieures formes d'énergie :
 \begin{itemize}
 \item $E_{c}$ L'énergie cinétique, Vitesse $v$ : $E_{c} = 1/2 \cdot m \cdot v^2 $
 \item $E_{pp}$ L'énergie potentielle de pesanteur, Altitude $z$ : $E_{pp} = m \cdot g \cdot z$
 \item $E_{pe}$ L'énergie potentielle élastique, Longueur déformée $x$ : $E_{pe} = 1/2 \cdot k \cdot x$
-\item $E_{th}$ L'énergie thermique, Température $T$
+\item $E_{th}$ L'énergie thermique, Température $T$ 
+\item $E_{c}$ L'énergie potentielle électrique : $E_{c} = 1/2 \cdot C \cdot U_{c}^2$
+\item $E_{m}$ L'énergie potentielle magnétique : $E_{m} = 1/2 \cdot L \cdot i^2$
 \item Les énergies physique, chimique et nucléaire, Masse des corps $m$\\\\
 \end{itemize}
 
@@ -307,7 +309,7 @@ $$W_{AB}(\vv{f}) = - f \cdot \widetilde{AB} $$
 $$W_{AB}(\vv{R}_{n}) = 0$$
 $$W_{AB}(\vv{F}_{R}) = 1/2 \cdot k \cdot ({x_{B}}^2 -{x_{A}}^2)$$\\\\
 
-La \textbf{puissance moyenne} mesure la quantité d'énergie transférée par seconde:
+La \textbf{puissance moyenne} mesure la quantité d'énergie transférée par seconde :
 
 \begin{tikzpicture}
     \draw (0,0) node {};
@@ -319,7 +321,7 @@ La \textbf{puissance moyenne} mesure la quantité d'énergie transférée par se
 La \textbf{puissance instantanée}:
 $$P(\vv{F}) = \vv{F}\cdot \vv{v} = F\cdot v \cdot \cos{\alpha}$$\\
 
-Le \textbf{TEC}:
+Le \textbf{TEC} :
 $$\Delta {E_{c}}_{A\rightarrow B} = \sum W_{AB}(\vv{F}_{ext})$$
 
 \end{Definition}
@@ -328,7 +330,7 @@ $$\Delta {E_{c}}_{A\rightarrow B} = \sum W_{AB}(\vv{F}_{ext})$$
 
 \begin{Definition}
 
-Les différentes dimensions sont:
+Les différentes dimensions sont :
 \begin{itemize}
 \item Longueur $L$
 \item Masse $M$
@@ -376,11 +378,11 @@ $$V=\dfrac{d}{t}=\dfrac{2\pi r}{T} \Leftrightarrow T = \dfrac{2\pi r}{v} = \dfra
 \subsection{Les 3 lois de Kepler}
 
 \begin{Definition}
-\textbf{$1^{\text{ère}}$ loi:}\\
+\textbf{$1^{\text{ère}}$ loi :}\\
 La trajectoire d'un astre (solaire) est une éllipse dont le soleil est un des foyers\\\\
-\textbf{$2^{\text{ème}}$ loi:}\\
+\textbf{$2^{\text{ème}}$ lo :}\\
 Si la planète met la mème durée pour aller de $A\rightarrow B$ que de $C\rightarrow D$, alors $\Big{\mathcal{A}}_{AMB}=\Big{\mathcal{A}}_{CMD}$\\\\
-\textbf{$3^{\text{ème}}$ loi:}\\
+\textbf{$3^{\text{ème}}$ loi :}\\
 $$\dfrac{T^2}{a^3}=cste$$
 \end{Definition}
 
@@ -398,7 +400,7 @@ Bien que $T_{0}$ est aussi proportionnel à l'amplitude $\theta$, ce facteur peu
 La période propre d'un pendule élastique horizontal non amorti est :
 $$T_{0}=2\pi\sqrt{\dfrac{m}{k}}$$
 
-On remarque que la \textbf{pulsation propre} $\omega_{0}$ d'un pendule élastique horizontal non amorti est un peu comme la vitesse angulaire pour un oscillateur:
+On remarque que la \textbf{pulsation propre} $\omega_{0}$ d'un pendule élastique horizontal non amorti est un peu comme la vitesse angulaire pour un oscillateur :
 $$\omega_{0}=\dfrac{2\pi}{T_{0}}=\sqrt{\dfrac{k}{m}}$$
 
 Dans le cas d'un système oscillant amorti, on distingue entre un régime \textbf{pseudo-périodique} et un régime \textbf{apériodique} (aucune oscillation)
@@ -411,7 +413,7 @@ Dans le cas d'un système oscillant amorti, on distingue entre un régime \textb
 
 \begin{Definition}
 
-La bande passante est l'intervalle des fréquences pour lesquelles le résonnateur donne une réponse importante en amplitude. Elle est déterminable sur le graphique de l'amplitude en fonction de la fréquence. On fait $\dfrac{X_{mres}}{\sqrt{2}}$ et on retrouve la largeur de la bande passante $\Delta f = f_{2} - f_{1}$. Il en résulte le facteur de qualité $Q$:
+La bande passante est l'intervalle des fréquences pour lesquelles le résonnateur donne une réponse importante en amplitude. Elle est déterminable sur le graphique de l'amplitude en fonction de la fréquence. On fait $\dfrac{X_{mres}}{\sqrt{2}}$ et on retrouve la largeur de la bande passante $\Delta f = f_{2} - f_{1}$. Il en résulte le facteur de qualité $Q$ :
 $$Q=\dfrac{f_{res}}{\Delta f} \approx \dfrac{f_{0}}{f_{2}-f_{1}} $$
 
 \end{Definition}
@@ -440,7 +442,7 @@ $$v_{\Phi} = \dfrac{c}{n}$$
 \begin{Definition}
 
 Il y a seulement diffraction si l'obstacle de l'onde a une dimension du même ordre de grandeur que celle-ci.\\
-L'écart angulaire pour la diffraction par une fente est, avec $a$ largeur de la fente, $\theta$, mesuré entre le milieu de la tache centrale et la première extinction:
+L'écart angulaire pour la diffraction par une fente est, avec $a$ largeur de la fente, $\theta$, mesuré entre le milieu de la tache centrale et la première extinction :
 $$\theta=\dfrac{\lambda}{a}$$
 
 \end{Definition}
@@ -465,6 +467,97 @@ La trajectoire d'une particule chargée dans un champ magnétique est circulaire
 
 
 \begin{Definition}
-Faites moi de Laplace!
+L'intensité instantanée dans un circuit électrique est définie par :
+$$i = \diff{Q}{t}$$
+Un conducteur rectiligne de longueur $l$, parcouru par un courant continu d'intensité $I$ et placé dans un champ magnétique uniforme $\vv{B} \quad$  ($\vv{l}: \text{pouce}, \vv{B}: \text{index}, \vv{F_{l}}: \text{majeur} $) :
+$$\vv{F_{l}} = I \cdot (\vv{l} \times \vv{B})$$
+
+Le flux magnétique dans une bobine a l'unité Weber (\textcolor{blue}{Wb}) : 
+$$ \Phi = N \cdot \vv{B} \cdot \vv{S} = N \cdot B \cdot S \cdot \cos{\alpha}$$
+
+La fem d'induction suite a une variation du flux :
+$$e=-\diff{\Phi}{t}$$
+$$\Rightarrow i = \dfrac{e}{R} = - \dfrac{1}{R} \cdot \diff{\Phi}{t}$$
 \end{Definition}
+
+
+
+
+\section{Dipôles dans un circuit}
+
+\subsection{Lois générales de dipôles}
+\begin{Definition}
+La loi d'Ohm généralisée, avec $e$, force électromotrice éventuelle
+$$U_{AB} = R_{AB} \cdot I_{AB} - e_{AB}$$
+
+La puissance électrique instantanée aux bornes d'un dipôle AB est exprimée en Watt (\textcolor{blue}{W}) :
+$$\mathcal{P} = U_{AB} \cdot i_{AB} $$
+
+La puissance électrique instantanée (la bobine reçoit un travail électrique W) :
+$$P = \diff{W}{t}$$
+
+\end{Definition}
+
+\subsection{Le dipôle (R,L)}
+\begin{Definition}
+La Loi de Faraday-Lenz, avec $L$, inductance de la Bobine (Henri \textcolor{blue}{H})
+$$e = - L \cdot \diff{i}{t}$$
+
+Le flux propre appelé flux d'autoinduction de la bobine (\textcolor{blue}{WB})
+$$\Phi = L \cdot i$$
+
+La constante de temps $\tau$ : 
+$$\tau = \dfrac{L}{R} $$
+
+La tension aux bornes d'une Bobine avec une résistance propre $r$ si $i_{A\rightarrow B}$
+$$u_{AB} = r \cdot i + L \cdot \diff{i}{t}$$
+
+L'équation différentielle à établir aura toujours des $+$
+$$U_{G} = R_{T} \cdot i + L \cdot \diff{i}{t}$$
+
+L'énergie (potentielle) magnétique emmagasinée par une bobine est :
+$$E_{m} = \dfrac{1}{2} \cdot L \cdot i^2$$
+\end{Definition}
+
+
+
+\subsection{Le dipôle (R,C)}
+\begin{Definition}
+La capacité du condensateur $C$ (Farad \textcolor{blue}{F}) est sa capacité á acquérir une certaine charge :
+$$q = C \cdot U_{c}$$
+
+La capacité $C$ en fonction de l'aire de la surface des armatures $A$, de la distance entre les armatures $d$ et la permittivité absolue de l'isolant $\varepsilon$. $\varepsilon_{0}$ est la permittivité du vide et $\varepsilon_{r}$ la permittivité relative ou constante diéléctrique du matériau utilisé :
+$$C = \dfrac{\varepsilon_{0} \cdot \varepsilon_{r} \cdot A}{d}$$
+
+Lors de l'association en série, l'inverse des capacités est additionné :
+$$\dfrac{1}{C_{eq}} = \dfrac{1}{C_{1}} + \dfrac{1}{C_{2}} + ... + \dfrac{1}{C_{n}}$$
+
+Branchés en parallèle, les capacités des condensateurs sont additionnées.\\\\
+
+La constante de temps $\tau$ : \qquad $\tau = R \cdot C$\\
+
+L'intensité aux bornes du condensateur lors de la charge et de la décharge : 
+$$i = C \cdot \diff{U_{C}}{t} = C \cdot \diff{U_{AB}}{t}$$
+
+L'équation différentielle à établir aura toujours des $+$ 
+$$U_{G}  = \diff{q}{t} + \dfrac{q}{RC} $$
+
+L'énergie (potentielle) électrique emmagasinée par le condensateur initialement déchargé est :
+$$E_{c} = \dfrac{1}{2} \cdot C \cdot U_{c}^2$$
+
+\end{Definition}
+
+
+\subsection{Le dipôle (R,L,C) et les oscillations électriques}
+\begin{Definition}
+On rappelle la pulsation propre $\omega_{0} = \dfrac{2\pi}{T_{0}} $\\\\
+
+La période propre $T_{0}$ des oscillations électriques est :
+$$T_{0} = 2 \pi \sqrt{LC}$$
+$$\Rightarrow \omega_{0} = \dfrac{1}{\sqrt{LC}}$$
+
+\end{Definition}
+
+
+
 \end{document}
