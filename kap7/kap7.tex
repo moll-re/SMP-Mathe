@@ -150,56 +150,16 @@ $E$ bezeichnet das Erfolgs-Ereignis, $\overline{E}$ bezeichnet somit den Miserfo
   Besonders beim Urnenmodell eines Zufallsexperiments muss beachtet werden, ob nach dem Ziehen zurückgelegt wird, oder nicht, weil sich die Wahrscheinlichkeiten der Äste sonst entsprechend verändern.
 \end{Bemerkung}
 
-\subsubsection{Wahrscheinlichkeitsverteilung}
+\subsubsection{Empirisches Gesetz der großen Zahlen}
 \begin{Definition}[- Häufigkeiten]
   Nach der $n$-fachen Durchführung eines Zufallsexperiments betrachtet man, wie oft Ereignisse eingetreten sind.\\
   Ist das Ereignis $A$ $H$-mal eingetreten, so nennt man $H$ die \textbf{absolute Häufigkeit} und $\dfrac{H}{n}$ die \textbf{relative Häufigkeit} von $A$.
 \end{Definition}
-\begin{Theorem}[- Empirisches Gesetz der großen Zahlen]
+\begin{Theorem}
   Wird ein Zufallsexperiment sehr häufig durchgeführt, so stabilisieren sich die relativen Häufigkeiten der Ereignisse. Es gilt:
   $$\lim_{n\to \infty} \left(\dfrac{H_n(E)}{n}\right) = P(E)$$mit $E$ einem Ereignis, und $H_n$ seiner Häufigkeit nach $n$ Wiederholungen.
 \end{Theorem}
-\begin{Definition}
-  Man nennt $P(e_i)$ \textbf{Wahrscheinlichkeit} und die Zuordnung $e_i \longmapsto P(e_i)$ \textbf{Wahrscheinlichkeitsverteilung}, wenn gilt:
-  \begin{itemize}
-    \item $e_i \in S=\{ e_1,e_2,...,e_n\} \land P(e_i)\in \R$
-    \item $!\exists P(e_i) \forall e_i \in S$
-    \item $0 \leq P(e_i)\leq 1 \forall i \leq n$
-    \item $P(e_1)+P(e_2)+...+P(e_n)=1$
-    \item ?
-  \end{itemize}
-\end{Definition}\\
-\underline{Darstellung:}\\
 
-\begin{center}
-  \begin{tikzpicture}
-    \begin{axis}[
-      ybar interval, ymax=1,ymin=0, minor y tick num = 3,
-      ylabel=Wahrscheinlichkeit,]
-    \addplot coordinates {(0,0.3) (1, 0.1) (2, 0.2) (3, 0.05) (4, 0.01) (5, 0.04) (6, 0.1) (7, 0.1) (8,0)};
-    \end{axis}
-  \end{tikzpicture}
-\end{center}
-\begin{Bemerkung}
-  Dieses Balkendiagramm wird als Histogramm bezeichnet und ist in vielen Fällen eine gute Darstellungsmöglichkeit.
-\end{Bemerkung}
-\begin{GTR-Tipp}
-  \begin{enumerate}
-    \item Mit \texttt{seq()} (in \texttt{LIST > OPS}) wird die Liste mit allen X-Werten generiert:\\
-    \texttt{seq(X,X,0,<Anzahl an Versuchen>,1)}$\rightarrow$\texttt{<Variable>}. \\
-    ($\rightarrow$ wird durch die Taste \texttt{STO>} aufgerufen)
-    \item Mit \texttt{<gewünschte Verteilung>()} (in \texttt{DISTR > DISTR}) wird die Liste mit allen Y-Werten generiert:\\
-    \texttt{<Verteilung>(<Anzahl an Versuchen>,<Erfolgswahrscheinlichkeit>)}$\rightarrow$\texttt{<Variable>}.
-    \item Im Menü \texttt{STAT PLOT > Plot 1} kann der gewünschte Anzeigemodus gewählt werden, für die \texttt{Xlist} wird die erste Liste gewählt, für \texttt{Freq} die zweite. Beim Anzeige achte man auf die richtigen Maßstäbe: Die Anzahl an Versuchen für \texttt{Xmax}, 1 für \texttt{Ymax}.
-  \end{enumerate}\\
-  \begin{Bemerkung}
-    Der GTR ist ab einer Anzahl von über 48 überfordert, dann können die Balken wegen der niedrigen Auflösung nicht alle angezeigt werden. In einem solchen Fall kann nur ein Ausschnitt des Histogramms angezeigt werden, sonst erscheint eine Fehlermeldung.
-  \end{Bemerkung}\\
-  \begin{Bemerkung}
-    Alternativ kann eine Funktion definiert werden über \texttt{<Verteilung>(<Anzahl an Versuchen>,<Erfolgswahrscheinlichkeit>,round(X,0))} und anschließend angezeigt werden.\\
-    Dies funktionniert nur für ganze $x$, weshalb $X$ durch \texttt{round(X,0)} (zu finden in... (KP, catalog durchsuchen)) auf den nächsten ganzen Wert gerundet wird.
-  \end{Bemerkung}
-\end{GTR-Tipp}
 
 
 \subsection{Zufallsvariable}
@@ -336,48 +296,10 @@ Bekannt aus der Mittelstufe. Es ergibt sich, wenn man die Summe von zwei Werten 
   $$P(E) = \dfrac{{6 \choose 4}{43 \choose 2}}{{49 \choose 6}}$$
   Zunächst nimmt man die Anzahl an Möglichkeiten, 4 richtige Kugeln von 6 zu ziehen, man multipliziert diese durch die Anzahl an Möglichkeiten, 2 Kugeln aus den 43 ``unerwünschten'' zu ziehen. Um die Wahrscheinlichkeit zu erhalten teilt man durch die Gesamtanzahl an Möglichkeite, 6 Kugeln aus 49 zu ziehen.
 \end{Beispiel}
-\begin{Theorem}
-  Für eine Bernoulli-Kette der Länge $l \in \N$ und der Trefferwahrscheinlichkeit $P$ (Wahrscheinlichkeit für einen Pfad) gilt:
-  $$P(X=k) = {l \choose k} p^k (1-p) ^{l-k}$$
-  mit $k$ der gerwünschten Anzahl an Erfolgen.\\
-  Außerdem gilt:
-  $$P(X\leq k) = \sum_{i=0}^{k}{l \choose i} p^i (1-p) ^{l-i}$$
-\end{Theorem}
-\begin{Bemerkung}
-  \begin{Definition}
-    $X$ heißt in diesem Fall \textbf{binomialverteilte Zufallsvariable}. Die entsprechende Wahrscheinlichkeitsverteilung heißt Binomialverteilung $B_{l,p}(k)$. $l$ ist die Länge der Bernoulli-Kette, $p$ die Erfolgswahrscheinlichkeit und $k$ ist die gewünschte Anzahl an Erfolgen.
-  \end{Definition}
-\end{Bemerkung}
-\begin{GTR-Tipp}
-  Beide Berechnungen werden durch einen GTR-Befehl automatisiert:\\
-  \begin{itemize}
-    \item $\displaystyle{{l \choose k}} p^k (1-p) ^{l-k}$ wird duch den Befehl \texttt{binomPDF(l,p,k)} berechnet.
-    \item $\displaystyle{\sum_{i=0}^{k}{l \choose i}} p^i (1-p) ^{l-i}$ wird duch den Befehl \texttt{binomCDF(l,p,k)} berechnet.
-  \end{itemize}\\
-  Beide Befehle befinden sich im \texttt{DISTR}-Menü (\texttt{2ND}+\texttt{VARS})
-\end{GTR-Tipp}
-\underline{Darstellung:}\\
-\begin{minipage}{0.5\textwidth}
-  \begin{tikzpicture}
-    \begin{axis}[
-      ybar interval, ymax=1,ymin=0, minor y tick num = 3,
-      ylabel=Wahrscheinlichkeit,]
-    \addplot coordinates {(0,0) (1, 0.009765) (2, 0.04396) (3, 0.1172) (4, 0.205) (5, 0.2461) (6, 0.205) (7, 0.1172) (8, 0.04396) (9, 0.009765) (10,0) (11,0)};
-    \end{axis}
-  \end{tikzpicture}
-\end{minipage}
-\begin{minipage}{0.5\textwidth}
-  \begin{tikzpicture}
-    \begin{axis}[
-      ybar interval, ymax=1,ymin=0, minor y tick num = 3,
-      ylabel=kumulierte Wahrscheinlichkeit,]
-    \addplot coordinates {(0,0) (1, 0.0107) (2, 0.0547) (3, 0.1719) (4, 0.3770) (5, 0.623) (6, 0.8281) (7, 0.9453) (8, 0.9893) (9, 1) (10,0) (11,0)};
-    \end{axis}
-  \end{tikzpicture}
-\end{minipage}
 
 
-\subsection{Bedingte Wahrscheinlichkeiten}
+
+\section{Bedingte Wahrscheinlichkeiten}
 \begin{Definition}
   Sind $A$ und $B$ beliebige Ereignisse mit $P(A)\neq 0$, so bezeichnet man $P_A(B)$ oder $P(B|A)$ die \textbf{durch $A$ bedingte Wahrscheinlichkeit von $B$}. Es gilt:
   $$P_A(B) = \dfrac{P(A \cap B)}{P(A)}$$
@@ -434,3 +356,145 @@ Daraus ergibt sich die korrekte Darstellung als Baumdiagramm:\\
   $$P_A(B)=P(B)$$
 \end{Definition}
 \end{document}
+
+
+
+\section{Wahrscheinlichkeitsverteilung}
+\begin{Definition}
+  Man nennt $P(e_i)$ \textbf{Wahrscheinlichkeit} und die Zuordnung $e_i \longmapsto P(e_i)$ \textbf{Wahrscheinlichkeitsverteilung}, wenn gilt:
+  \begin{itemize}
+    \item $e_i \in S=\{ e_1,e_2,...,e_n\} \land P(e_i)\in \R$
+    \item $!\exists P(e_i) \forall e_i \in S$
+    \item $0 \leq P(e_i)\leq 1 \forall i \leq n$
+    \item $P(e_1)+P(e_2)+...+P(e_n)=1$
+    \item ?
+  \end{itemize}
+\end{Definition}\\
+\underline{Darstellung:}\\
+
+\begin{center}
+  \begin{tikzpicture}
+    \begin{axis}[
+      ybar interval, ymax=1,ymin=0, minor y tick num = 3,
+      ylabel=Wahrscheinlichkeit,]
+    \addplot coordinates {(0,0.3) (1, 0.1) (2, 0.2) (3, 0.05) (4, 0.01) (5, 0.04) (6, 0.1) (7, 0.1) (8,0)};
+    \end{axis}
+  \end{tikzpicture}
+\end{center}
+\begin{Bemerkung}
+  Dieses Balkendiagramm wird als Histogramm bezeichnet und ist in vielen Fällen eine gute Darstellungsmöglichkeit.
+\end{Bemerkung}
+\begin{GTR-Tipp}
+  \begin{enumerate}
+    \item Mit \texttt{seq()} (in \texttt{LIST > OPS}) wird die Liste mit allen X-Werten generiert:\\
+    \texttt{seq(X,X,0,<Anzahl an Versuchen>,1)}$\rightarrow$\texttt{<Variable>}. \\
+    ($\rightarrow$ wird durch die Taste \texttt{STO>} aufgerufen)
+    \item Mit \texttt{<gewünschte Verteilung>()} (in \texttt{DISTR > DISTR}) wird die Liste mit allen Y-Werten generiert:\\
+    \texttt{<Verteilung>(<Anzahl an Versuchen>,<Erfolgswahrscheinlichkeit>)}$\rightarrow$\texttt{<Variable>}.
+    \item Im Menü \texttt{STAT PLOT > Plot 1} kann der gewünschte Anzeigemodus gewählt werden, für die \texttt{Xlist} wird die erste Liste gewählt, für \texttt{Freq} die zweite. Beim Anzeige achte man auf die richtigen Maßstäbe: Die Anzahl an Versuchen für \texttt{Xmax}, 1 für \texttt{Ymax}.
+  \end{enumerate}\\
+  \begin{Bemerkung}
+    Der GTR ist ab einer Anzahl von über 48 überfordert, dann können die Balken wegen der niedrigen Auflösung nicht alle angezeigt werden. In einem solchen Fall kann nur ein Ausschnitt des Histogramms angezeigt werden, sonst erscheint eine Fehlermeldung.
+  \end{Bemerkung}\\
+  \begin{Bemerkung}
+    Alternativ kann eine Funktion definiert werden über \\\texttt{<Verteilung>(<Anzahl an Versuchen>,<Erfolgswahrscheinlichkeit>,round(X,0))} und anschließend angezeigt werden.\\
+    Dies funktionniert nur für ganze $x$, weshalb $X$ durch \texttt{round(X,0)} (zu finden in... (KP, catalog durchsuchen)) auf den nächsten ganzen Wert gerundet wird.
+  \end{Bemerkung}
+\end{GTR-Tipp}
+
+\begin{Definition}[- Erwartungswert]
+  Es sei eine Zuffalsvariable $X$ mit Werten $x_1,x_2,...,x_n$ und die zugehörige Wahrscheinlichkeitsverteilung $P(X)$. Als Erwartungswert $\mu$ wird das arithmetische Mittel der Werte von $P(X)$ bezeichnet:
+  $$E(X)=\mu=\sum_{i=1}^{n}x_i P(X=x_i)$$
+\end{Definition}
+\begin{Definition}[- Median einer Wahrscheinlichkeitsverteilung]
+  Als Median einer Wahrscheinlichkeitsverteilung bezeichnenn wir den den Wert $X_n$, ab dem die kumulierte Wahrscheinlichkeit von $P(X=x_i)$ den Wert von $50\%$ überschreitet.
+\end{Definition}
+\begin{Bemerkung}
+  Anschaulich bezeichnet der Erwartungswert den durchschnittlichen Wert, den eine Zufallsgröße annimt, wenn ein Zufallsexperiment unendlich oft durchgeführt wird.
+\end{Bemerkung}
+\subsection{Binomialverteilung}
+\begin{Theorem}
+  Für eine Bernoulli-Kette der Länge $l \in \N$ und der Trefferwahrscheinlichkeit $P$ (Wahrscheinlichkeit für einen Pfad) gilt:
+  $$P(X=k) = {l \choose k} p^k (1-p) ^{l-k}$$
+  mit $k$ der gerwünschten Anzahl an Erfolgen.\\
+  Außerdem gilt:
+  $$P(X\leq k) = \sum_{i=0}^{k}{l \choose i} p^i (1-p) ^{l-i}$$
+\end{Theorem}
+\begin{Bemerkung}
+  \begin{Definition}
+    $X$ heißt in diesem Fall \textbf{binomialverteilte Zufallsvariable}. Die entsprechende Wahrscheinlichkeitsverteilung heißt Binomialverteilung $B_{l,p}(k)$. $l$ ist die Länge der Bernoulli-Kette, $p$ die Erfolgswahrscheinlichkeit und $k$ ist die gewünschte Anzahl an Erfolgen.
+  \end{Definition}
+\end{Bemerkung}
+\begin{GTR-Tipp}
+  Beide Berechnungen werden durch einen GTR-Befehl automatisiert:\\
+  \begin{itemize}
+    \item $\displaystyle{{l \choose k}} p^k (1-p) ^{l-k}$ wird duch den Befehl \texttt{binomPDF(l,p,k)} berechnet.
+    \item $\displaystyle{\sum_{i=0}^{k}{l \choose i}} p^i (1-p) ^{l-i}$ wird duch den Befehl \texttt{binomCDF(l,p,k)} berechnet.
+  \end{itemize}\\
+  Beide Befehle befinden sich im \texttt{DISTR}-Menü (\texttt{2ND}+\texttt{VARS})
+\end{GTR-Tipp}
+\underline{Darstellung:}\\
+\begin{minipage}{0.5\textwidth}
+  \begin{tikzpicture}
+    \begin{axis}[
+      ybar interval, ymax=1,ymin=0, minor y tick num = 3,
+      ylabel=Wahrscheinlichkeit,]
+    \addplot coordinates {(0,0) (1, 0.009765) (2, 0.04396) (3, 0.1172) (4, 0.205) (5, 0.2461) (6, 0.205) (7, 0.1172) (8, 0.04396) (9, 0.009765) (10,0) (11,0)};
+    \end{axis}
+  \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+  \begin{tikzpicture}
+    \begin{axis}[
+      ybar interval, ymax=1,ymin=0, minor y tick num = 3,
+      ylabel=kumulierte Wahrscheinlichkeit,]
+    \addplot coordinates {(0,0) (1, 0.0107) (2, 0.0547) (3, 0.1719) (4, 0.3770) (5, 0.623) (6, 0.8281) (7, 0.9453) (8, 0.9893) (9, 1) (10,0) (11,0)};
+    \end{axis}
+  \end{tikzpicture}
+\end{minipage}
+\subsubsection{Erwartungswert}
+\begin{Theorem}[- Erwartungswert einer Binomialverteilung]
+  Für eine binomialverteilte Zufallsvariable $X$ gilt:
+  $$E(x)=n\cdot p$$
+  mit $n$ der Anzahl an Versuchen, und $p$ der Erfolgswahrscheinlichkeit eines Versuchs.
+\end{Theorem}
+\begin{Beweis}
+  \begin{center}
+    \begin{align*}
+      E(x)  &= \sum_{k=0}^{n} x_k \cdot P(X=x_k)\\
+            &= \sum_{k=0}^{n} k  {n \choose k} p^k (1-p)^{n-k}\\
+            &= \sum_{k=0}^{n} \cdot k \dfrac{n!}{n-k)!k!} \cdot p^k (1-p)^{n-k}\\
+            &= n\cdot p\cdot \sum_{k=0}^{n} k \dfrac{(n-1)!}{n-k-1)!k!}  p^{k-1} (1-p)^{n-k}\\
+            &= n\cdot p\cdot \sum_{k=0}^{n} k  {n-1 \choose k-1} p^k (1-p)^{n-k}\\
+            &= n\cdot p\cdot \sum_{k=1}^{n} k  {n-1 \choose k-1} p^k (1-p)^{n-k}\\
+            &= n\cdot p
+    \end{align*}
+  \end{center}
+  \begin{Bemerkung}
+    Der Startindex der Summe kann verändert werden, da die kumulierte Wahrscheinlichkeite sich nicht verändert. Für $k=0$ ist ${n-1\choose k-1}=0$.
+  \end{Bemerkung}
+\end{Beweis}
+
+\subsection{Sigmaumgebungen}
+\subsubsection{Einschub: Normalverteilung}
+\begin{Definition}
+Eine stetige Zufallsvariable $X$ hat eine (Gauß- oder) Normalverteilung mit Erwartungswert $\mu$ und Varianz $\sigma ^{2}$, oft geschrieben als $X\sim \N\left(\mu ,\sigma ^{2}\right)$, wenn $X$ die folgende Wahrscheinlichkeitsdichte hat:
+$$f(x\mid \mu ,\sigma ^2) = \dfrac {1}{\sqrt {2\pi \sigma^2}}}e^{-\frac{(x-\mu )^2}{2\sigma ^2}} ; \qquad -\infty <x<\infty$$
+\end{Definition}
+Warum interessiert uns das? Weil die Binomialverteilung diese symmetrische Kurve für $n\rightarrow\infty$ Versuche annähert. Nicht überzeugt? Über die Varianz können wir interessante Aussagen über die Verteilung der Wahrscheinlichkeiten machen.
+\begin{Theorem}
+  Für eine binomialverteilte Zufallsvariable $X$ mit den Parametern $n,p$ und der Varianz $\sigma = \sqrt{np(1-p)}$ erhält man folgende Näherungen:
+  \begin{itemize}
+    \item $P(\mu - \sigma \leq X \leq \mu + \sigma) \approx 68,3\%$
+    \item $P(\mu - 2\sigma \leq X \leq \mu + 2\sigma) \approx 95,4\%$
+    \item $P(\mu - 3\sigma \leq X \leq \mu + 3\sigma) \approx 99,7\%$
+  \end{itemize}
+\end{Theorem}
+\begin{Beweis}
+  \begin{align*}
+    f(\mu - \sigma \mid \mu ,\sigma ^2) &=& \dfrac {1}{\sqrt {2\pi \sigma^2}}}e^{-\frac{(\mu - \sigma-\mu )^2}{2\sigma ^2}}\\
+    &=& \dfrac {1}{\sqrt {2\pi \sigma^2}}}e^{\frac{1}{2}}\\
+    &=& \dfrac {1}{\sqrt {2\pi (\sqrt{np(1-p)})^2}}}e^{\frac{1}{2}}\\
+    &=& \dfrac {1}{\sqrt {2\pi np(1-p)}}e^{\frac{1}{2}}\\
+  \end{align*}
+\end{Beweis}
