@@ -479,11 +479,24 @@ Daraus ergibt sich die korrekte Darstellung als Baumdiagramm:\\
 \subsubsection{Einschub: Normalverteilung}
 \begin{Definition}
 Eine stetige Zufallsvariable $X$ hat eine (Gauß- oder) Normalverteilung mit Erwartungswert $\mu$ und Varianz $\sigma ^{2}$, oft geschrieben als $X\sim \N\left(\mu ,\sigma ^{2}\right)$, wenn $X$ die folgende Wahrscheinlichkeitsdichte hat:
-$$f(x\mid \mu ,\sigma ^2) = \dfrac {1}{\sqrt {2\pi \sigma^2}}}e^{-\frac{(x-\mu )^2}{2\sigma ^2}} ; \qquad -\infty <x<\infty$$
+$$\varphi(x)=f(x\mid \mu ,\sigma ^2) = \dfrac {1}{\sqrt {2\pi \sigma^2}}} \cdot e^{- \dfrac{1}{2} {\left(\dfrac{x-\mu}{\sigma}\right)}^2} \qquad ; -\infty <x<\infty$$
+$\varphi(x)$ ist die Dichtefunktion der Normalverteilung.
 \end{Definition}
-Warum interessiert uns das? Weil die Binomialverteilung diese symmetrische Kurve für $n\rightarrow\infty$ Versuche annähert. Nicht überzeugt? Über die Varianz können wir interessante Aussagen über die Verteilung der Wahrscheinlichkeiten machen.
+\begin{Definition}
+  Die Verteilungsfunktion der Normalverteilung ist gegeben durch:
+  $$\Phi (x) = \int_{-\infty}^{x} \varphi (x) dx$$
+  Durch Substitution erhält man:
+  $$\Phi(x) = \dfrac{1}{\sqrt{2\pi}}\int_{-\infty}^{x} e^{-\frac{1}{2}t^2} dt$$
+\end{Definition}
+\begin{Bemerkung}
+  Diese Definition ist somit analog zur Definition der Verteilungsfunktion der Binomialverteilung (Summe der Flächen).\\
+  Außerdem bedeutet das, dass $\Phi(x)  \xrightarrow{\scriptscriptstyle x\rightarrow \infty} 1$.
+\end{Bemerkung}
+\begin{GTR-Tipp}
+  INHALT
+\end{GTR-Tipp}
 \begin{Theorem}
-  Für eine binomialverteilte Zufallsvariable $X$ mit den Parametern $n,p$ und der Varianz $\sigma = \sqrt{np(1-p)}$ erhält man folgende Näherungen:
+  Für eine normalverteilte Zufallsvariable $X$ mit den Parametern $n,p$ und der Standardabweichung $\sigma = \sqrt{\text{Var}(X)} = \sqrt{\sigma^2}$ erhält man folgende Näherungen:
   \begin{itemize}
     \item $P(\mu - \sigma \leq X \leq \mu + \sigma) \approx 68,3\%$
     \item $P(\mu - 2\sigma \leq X \leq \mu + 2\sigma) \approx 95,4\%$
@@ -492,9 +505,32 @@ Warum interessiert uns das? Weil die Binomialverteilung diese symmetrische Kurve
 \end{Theorem}
 \begin{Beweis}
   \begin{align*}
-    f(\mu - \sigma \mid \mu ,\sigma ^2) &=& \dfrac {1}{\sqrt {2\pi \sigma^2}}}e^{-\frac{(\mu - \sigma-\mu )^2}{2\sigma ^2}}\\
+    f(\mu - \sigma \mid \mu ,\sigma ^2) & = & \dfrac{1}{\sqrt{2\pi \sigma^2}} \cdot e^{- \dfrac{1}{2} {\left(\dfrac{x-\mu}{\sigma}\right)}^2}\\
     &=& \dfrac {1}{\sqrt {2\pi \sigma^2}}}e^{\frac{1}{2}}\\
     &=& \dfrac {1}{\sqrt {2\pi (\sqrt{np(1-p)})^2}}}e^{\frac{1}{2}}\\
     &=& \dfrac {1}{\sqrt {2\pi np(1-p)}}e^{\frac{1}{2}}\\
-  \end{align*}
+  \end{align*}?????
 \end{Beweis}
+
+Warum interessiert uns das? Weil die Binomialverteilung diese symmetrische Kurve für $n\rightarrow\infty$ Versuche annähert. Noch nicht überzeugt? Über die Varianz können wir interessante Aussagen über die Verteilung der Wahrscheinlichkeiten machen.
+
+\subsubsection{Anwendung: Binomialverteilung}
+\begin{Theorem}[- Laplace-Bedingung]
+  Für eine Binomialverteilung mit $\sigma = \sqrt{np(1-p)}$ und $\mu = np$ gilt:\\
+  Wenn $\sigma>3$, dann kann diese Binomialverteilung durch die Normalverteilung angenähert werden.
+  $$B_{l,p}(k) = P(X=k) = {l \choose k} p^k (1-p) ^{l-k} \equiv \varphi(k) = \dfrac {1}{\sqrt {2\pi \sigma^2}}} \cdot e^{- \dfrac{1}{2} {\left(\dfrac{x-\mu}{\sigma}\right)}^2}$$
+\end{Theorem}
+\begin{Beweis}
+  Die Abweichung wird so gering, dass sie vernachlässigbar wird.
+\end{Beweis}
+\begin{Theorem}
+  Für eine binomialverteilte Zufallsvariable $X$ mit den Parametern $n,p$ und der Varianz $\sigma = \sqrt{np(1-p)}$ erhält man folgende Näherungen:
+  \begin{itemize}
+    \item $P(\mu - \sigma \leq X \leq \mu + \sigma) \approx 68,3\%$
+    \item $P(\mu - 2\sigma \leq X \leq \mu + 2\sigma) \approx 95,4\%$
+    \item $P(\mu - 3\sigma \leq X \leq \mu + 3\sigma) \approx 99,7\%$
+  \end{itemize}
+\end{Theorem}
+\begin{GTR-Tipp}
+  SAME
+\end{GTR-Tipp}
