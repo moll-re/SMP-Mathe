@@ -236,23 +236,9 @@
 {\addvspace{40pt}
 \begin{tikzpicture}[remember picture, overlay]%
 \draw[fill=titlepagecolor,draw=titlepagecolor, rounded corners] (-4,-.1) rectangle (.5,.5);
-\pgftext[left,x=-1.9cm,y=0.2cm]{\color{white}\Large \chaptertitlename\ \thecontentslabel};
+\pgftext[left,x=-1.9cm,y=0.2cm]{\color{white}\Large \chaptertitlename \thecontentslabel};
 \end{tikzpicture}\hspace{1cm}\color{titlepagecolor}\large\bfseries}
 {}
 {}
 {\hspace*{20pt}\hrulefill\hspace*{20pt}\large\bfseries \thecontentspage}%\hspace*{20pt}\rule{1cm}{0.3pt}}%
 [\addvspace{5pt}]
-
-
-
-
-
-
-
-
-\makeatletter
-\renewcommand{\tableofcontents}{
-    \chapter*{}
-    \@starttoc{toc}
-    }
-\makeatother

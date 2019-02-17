@@ -2,6 +2,7 @@
 \begin{document}
 \chapter{Wahrscheinlichkeitstheorie}
 \chapterauthor{Rémy}
+
 \begin{Bemerkung}
   Der Oberbegriff \textbf{Stochastik} wird hier nicht verwendet, da wir uns SMP nicht mit der überflüssigen \textbf{Statistik} beschäftigen.
 \end{Bemerkung}
@@ -355,7 +356,6 @@ Daraus ergibt sich die korrekte Darstellung als Baumdiagramm:\\
   Die Ergebnisse $A$ und $B$ werden stochastisch unabhängig genannt, wenn das Eintreten $A$s die Wahrscheinlichkeit $B$s nicht verändert. Es gilt dann:
   $$P_A(B)=P(B)$$
 \end{Definition}
-\end{document}
 
 
 
@@ -475,18 +475,62 @@ Daraus ergibt sich die korrekte Darstellung als Baumdiagramm:\\
   \end{Bemerkung}
 \end{Beweis}
 
-\subsection{Sigmaumgebungen}
-\subsubsection{Einschub: Normalverteilung}
+
+\section{Kontinuierliche Wahrscheinlichkeiten}
+Manche Ereignisse lassen sich nicht als ganze Zahl modellieren oder können nicht einzeln abgezählt werden, weshalb man ihre Wahrscheinlichkeitsverteilung nur durch kontinuierliche Funktionen darstellen kann. Man kann dies als Erweiterung der diskreten Wahrscheinlichkeit auf die reellen Zahlen sehen, analog zum Übergang von den Folgen zu den Funktionen.
+\begin{Definition}[- Dichtefunktion]
+  Eine auf $I = [a;b]$ stetige Funktion $f$ heißt Dichtefunktion einer Wahrscheinlichkeit, wenn gilt:
+  $$\int_{a}^{b} f(x)dx =1$$
+\end{Definition}
 \begin{Definition}
-Eine stetige Zufallsvariable $X$ hat eine (Gauß- oder) Normalverteilung mit Erwartungswert $\mu$ und Varianz $\sigma ^{2}$, oft geschrieben als $X\sim \N\left(\mu ,\sigma ^{2}\right)$, wenn $X$ die folgende Wahrscheinlichkeitsdichte hat:
-$$\varphi(x)=f(x\mid \mu ,\sigma ^2) = \dfrac {1}{\sqrt {2\pi \sigma^2}}} \cdot e^{- \dfrac{1}{2} {\left(\dfrac{x-\mu}{\sigma}\right)}^2} \qquad ; -\infty <x<\infty$$
+  Die Wahrscheinlichkeitsverteilung $P$, die jedem Intervall $[c;d] \subset I$ den Wert $P([c;d]) = \displaystyle \int_c^d f(x)dx$ zuordnet, heißt Wahrscheinlichkeitsverteilung über $I$.
+\end{Definition}
+\begin{Bemerkung}
+  Durch die Definition des Integrals lassen sich folgende Eigenschaften direkt ableiten:
+  \begin{itemize}
+    \item $P(I)=1$
+    \item $[c;d] \subset I \Rightarrow P([c;d])\in [0;1]$
+    \item mit $I = [a;b]$ gilt: $P([a;c]) = 1- P([c;b])$
+    \item Die Wahrscheinlichkeit eines ``Singleton'', einer ein-elementigen Menge, also eines einzelnen Ergebnisses ist:
+    $P({c})=P([c;c])=\displaystyle\int_c^c f(x)dx =0$.
+    \item Das bedeutet, dass $P(A \cap B)$ null sein kann, ohnen dass $A$ und $B$ disjunkt sind. (Zum Beispiel, wenn der Schnitt genau ein Element enthält.)
+    \item Es folgt außerdem, dass $P([c;d])=P(]c;d])=P([c;d[)=P(]c;d[)=\displaystyle\int_c^d f(t)dt$
+  \end{itemize}
+\end{Bemerkung}
+\begin{Definition}[- Stetige Zufallsvariable]
+  Sei $P$ eine Wahrscheinlichkeitsverteilung über $I$ mit Dichtefunktion $f$.\\
+  \begin{itemize}
+    \item Eine Zufallsvariable $X$ mit Werten in $I$ folgt der Wahrscheinlichkeitsverteilung $P$, wenn gilt: $$P(c\leq X \leq d)=\displaystyle \int_c^d f(t)dt$$
+    \item Die Verteilungsfunktion $F$ ist definiert durch $F(X)=P(X\leq x)=P(a\leqX\leq x)=\displaystyle\int_a^x f(t)dt$
+  \end{itemize}
+\end{Definition}
+\begin{Bemerkung}
+  $F$ besitzt per Definition folgende Eigenschaften:
+  \begin{itemize}
+    \item $F$ ist differenzierbar und $F'=f$
+    \item $F$ ist monoton steigend auf $I$
+    \item Für $h>0$ und $x+h\in I$ gilt: $P(x\leqX\leqx+h) = F(x+h)-F(x)$.(Gleichbedeutend mit der Aussage $P(c\leq X\leq d)=F(d)-F(c)$)
+  \end{itemize}
+\end{Bemerkung}
+\begin{Definition}[- Erwartungswert]
+  Sei $X$ eine Zufallsvariable mit Werten aus $I= [a;b]$. Der Erwartungswert ist gegeben durch:
+  $$E(X)=\mu=\int_a^b t\cdot f(t)dt$$
+\end{Definition}
+\subsection{Uniformverteilung}
+
+\subsection{Exponentialverteilung}
+
+\subsection{Normalverteilung}
+\begin{Definition}
+Eine stetige Zufallsvariable $X$ hat eine (Gauß- oder) Normalverteilung mit Erwartungswert $\mu$ und Varianz $\sigma ^{2}$ wenn $X$ die folgende Wahrscheinlichkeitsdichte hat:
+$$\varphi_{\mu,\sigma^2}(x)=f(x\mid \mu ,\sigma ^2) = \dfrac {1}{\sqrt {2\pi \sigma^2}}} \cdot e^{- \dfrac{1}{2} {\left(\dfrac{x-\mu}{\sigma}\right)}^2} \qquad ; -\infty <x<\infty$$
 $\varphi(x)$ ist die Dichtefunktion der Normalverteilung.
 \end{Definition}
 \begin{Definition}
   Die Verteilungsfunktion der Normalverteilung ist gegeben durch:
-  $$\Phi (x) = \int_{-\infty}^{x} \varphi (x) dx$$
+  $$\Phi_{\mu,\sigma^2}(x) = \int_{-\infty}^{x} \varphi_{\mu,\sigma^2}(x) dx$$
   Durch Substitution erhält man:
-  $$\Phi(x) = \dfrac{1}{\sqrt{2\pi}}\int_{-\infty}^{x} e^{-\frac{1}{2}t^2} dt$$
+  $$\Phi_{\mu,\sigma^2}(x) = \dfrac{1}{\sqrt{2\pi}}\int_{-\infty}^{x} e^{-\frac{1}{2}t^2} dt$$
 \end{Definition}
 \begin{Bemerkung}
   Diese Definition ist somit analog zur Definition der Verteilungsfunktion der Binomialverteilung (Summe der Flächen).\\
@@ -512,6 +556,12 @@ $\varphi(x)$ ist die Dichtefunktion der Normalverteilung.
   \end{align*}?????
 \end{Beweis}
 
+
+
+
+
+
+\subsubsection{Rückführung: Binomialverteilung}
 Warum interessiert uns das? Weil die Binomialverteilung diese symmetrische Kurve für $n\rightarrow\infty$ Versuche annähert. Noch nicht überzeugt? Über die Varianz können wir interessante Aussagen über die Verteilung der Wahrscheinlichkeiten machen.
 
 \subsubsection{Anwendung: Binomialverteilung}
@@ -534,3 +584,4 @@ Warum interessiert uns das? Weil die Binomialverteilung diese symmetrische Kurve
 \begin{GTR-Tipp}
   SAME
 \end{GTR-Tipp}
+\end{document}

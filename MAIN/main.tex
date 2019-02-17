@@ -12,7 +12,6 @@
 \usepackage[most]{tcolorbox}
 \usepackage{tikz,pgf,pgfplots}                    %Grafiken zeichnen
 \usepackage{epstopdf}
-\usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage{mdframed}	                            %Box			%\begin{mdframed} 		und			%\end{mdframed}
 \usepackage{fancyhdr}	                            %Header
@@ -43,11 +42,12 @@
 \begin{document}
   \include{title}
   \blankpage
+  \setcounter{tocdepth}{1}
   \tableofcontents
   \include{pagenumbering}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %Kapitel bitte hier einbinden:
-  %\subfile{../../kap1/kap1}
+  \subfile{../kap1/kap1}
   \subfile{../kap2/kap2}
   \subfile{../kap3/kap3}
   \subfile{../kap4/kap4}
@@ -62,6 +62,7 @@
   \subfile{../kap10/kap10}
   %ANHANG: Physik
   \subfile{../kap14/kap14}
+
   %und so weiter
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
