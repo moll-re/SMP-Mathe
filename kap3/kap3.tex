@@ -191,13 +191,13 @@ $\lim\limits_{x \rightarrow x_{0}}f(x) = g $\quad $\Leftrightarrow$ \quad $\fora
 \end{center}
 \end{Definition}
 
-\begin{Definition}
+\begin{Theorem}
 	Regel von l'Hospital: für Grenzwerte des Typs $0/0$ und $\infty/\infty$\\
 	Seien zwei differenzierbare Funktionen $f$ und $g$ und gelte entweder\\
 	$$\lim\limits_{x \rightarrow x_{0}}g(x) = \lim\limits_{x \rightarrow x_{0}}f(x) = \infty \qquad \text{ODER} \qquad  \lim\limits_{x \rightarrow x_{0}}g(x) = \lim\limits_{x \rightarrow x_{0}}f(x) = 0$$\\
 	(sie sind also entweder konvergent gegen $0$ oder bestimmt divergent) dann gilt:\\
 	$$\lim\limits_{x \rightarrow x_{0}} \dfrac{f(x)}{g(x)} = \lim\limits_{x \rightarrow x_{0}}\dfrac{f'(x)}{g'(x)}$$
-\end{Definition}
+\end{Theorem}
 
 \begin{Bemerkung}
 	\begin{enumerate}
@@ -366,13 +366,10 @@ Es gibt viele Funktionen (surjektive Funktionen) die nicht in ihrer vollst"andig
 Die Funktion $f(x)=x^2$ mit $D_{f}=\R$ und $W_{f}=\R_{0}^{+}$ hat f"ur $y=4$ zwei Urbilder: $-2$ und $2$. Beschr"ankt man die Funktion auf $D_{f}=\R_{0}^{+}$, ist sie umkehrbar und die Umkehrfunktion lautet $\overline{f}(x)=\sqrt{x}$\\
 \end{Bemerkung}\\ \\ \\
 
-\begin{Definition}
-Umkehrregel oder Inversenregel\\
-
-Sei $f$ eine bijektive (also umkehrbare), differenzierbare, reelle Funktion bei der gilt: $f'(x)\neq 0$, dann ist die Umkehrfunktion auch differenzierbar mit der Ableitung \\\\
-$\overline{f}'(y) = \dfrac{1}{f'(\overline{f}(y))} = \dfrac{1}{f'(x)}$
-
-\end{Definition}
+\begin{Theorem}[- Umkehr- / Inversenregel]
+	Sei $f$ eine bijektive (also umkehrbare), differenzierbare, reelle Funktion bei der gilt: $f'(x)\neq 0$, dann ist die Umkehrfunktion auch differenzierbar mit der Ableitung \\\\
+	$\overline{f}'(y) = \dfrac{1}{f'(\overline{f}(y))} = \dfrac{1}{f'(x)}$
+\end{Theorem}
 
 \begin{Beweis}
 \begin{array}{rcccl}
@@ -596,7 +593,7 @@ Hier ist die Kurvenschar der Funktion\\ $f(x)=ax^3$. Sie verlaufen alle durch da
 \end{minipage}
 \hfill
 \begin{minipage}[b]{0.4\linewidth}
-\includegraphics[height=12\baselineskip]{kap3/BundelFunktionenscharen.eps}
+\includegraphics[height=12\baselineskip]{../kap3/BundelFunktionenscharen.eps}
 \end{minipage}
 
 \subsection{Beispiel}

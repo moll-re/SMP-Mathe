@@ -351,6 +351,19 @@ Daraus ergibt sich die korrekte Darstellung als Baumdiagramm:\\
   };
 \end{tikzpicture}
 \end{center}\\
+\begin{Theorem}[- Satz von Bayes]
+  $$P_B(A)=\dfrac{P_A(B)\cdot P(A)}{P(B)}$$
+\end{Theorem}
+\begin{Bemerkung}
+  Folgende Aussagen sind zu dieser Formulierung äquivalent:
+  \begin{itemize}
+    \item $P_A(B)\cdot P(B) = P_B(A)\cdot P(A)$
+    \item $P(A) = P_A(B) \cdot P(B) + P_A(\overline B) \cdot P(\overline B)$ (totale Wahrscheinlichkeit von $A$)
+  \end{itemize}
+\end{Bemerkung}
+\begin{Beweis}
+  $$P_B(A) = \dfrac{P(A\cap B)}{P(B)} = \dfrac{\dfrac{P(A\cap B)}{P(A)}\cdot P(A)}{P(B)} = \dfrac{P_A(B)\cdot P(A)}{P(B)}$$
+\end{Beweis}
 \subsection{Stochastische Unabhängigkeit}
 \begin{Definition}
   Die Ergebnisse $A$ und $B$ werden stochastisch unabhängig genannt, wenn das Eintreten $A$s die Wahrscheinlichkeit $B$s nicht verändert. Es gilt dann:
@@ -523,7 +536,7 @@ Manche Ereignisse lassen sich nicht als ganze Zahl modellieren oder können nich
 \subsection{Normalverteilung}
 \begin{Definition}
 Eine stetige Zufallsvariable $X$ hat eine (Gauß- oder) Normalverteilung mit Erwartungswert $\mu$ und Varianz $\sigma ^{2}$ wenn $X$ die folgende Wahrscheinlichkeitsdichte hat:
-$$\varphi_{\mu,\sigma^2}(x)=f(x\mid \mu ,\sigma ^2) = \dfrac {1}{\sqrt {2\pi \sigma^2}}} \cdot e^{- \dfrac{1}{2} {\left(\dfrac{x-\mu}{\sigma}\right)}^2} \qquad ; -\infty <x<\infty$$
+$$\varphi_{\mu,\sigma^2}(x) = f(x) = \dfrac {1}{\sqrt {2\pi \sigma^2}}} \cdot e^{- \dfrac{1}{2} {\left(\dfrac{x-\mu}{\sigma}\right)}^2} \qquad$$
 $\varphi(x)$ ist die Dichtefunktion der Normalverteilung.
 \end{Definition}
 \begin{Definition}
@@ -537,7 +550,7 @@ $\varphi(x)$ ist die Dichtefunktion der Normalverteilung.
   Außerdem bedeutet das, dass $\Phi(x)  \xrightarrow{\scriptscriptstyle x\rightarrow \infty} 1$.
 \end{Bemerkung}
 \begin{GTR-Tipp}
-  INHALT
+  Zur Berechnung geht man, wie üblich, ins Menü \texttt{DISTR} und wählt für $\varphi$  \texttt{normalpdf}, und für $\Phi$  \texttt{normalcdf} aus.
 \end{GTR-Tipp}
 \begin{Theorem}
   Für eine normalverteilte Zufallsvariable $X$ mit den Parametern $n,p$ und der Standardabweichung $\sigma = \sqrt{\text{Var}(X)} = \sqrt{\sigma^2}$ erhält man folgende Näherungen:
@@ -548,14 +561,16 @@ $\varphi(x)$ ist die Dichtefunktion der Normalverteilung.
   \end{itemize}
 \end{Theorem}
 \begin{Beweis}
+  Die Wahrscheinlichkeit für ein bestimmtes Streuintervall $I=[\mu - z\sigma;\mu + z\sigma]$ kann berechnet werden als:
   \begin{align*}
-    f(\mu - \sigma \mid \mu ,\sigma ^2) & = & \dfrac{1}{\sqrt{2\pi \sigma^2}} \cdot e^{- \dfrac{1}{2} {\left(\dfrac{x-\mu}{\sigma}\right)}^2}\\
-    &=& \dfrac {1}{\sqrt {2\pi \sigma^2}}}e^{\frac{1}{2}}\\
-    &=& \dfrac {1}{\sqrt {2\pi (\sqrt{np(1-p)})^2}}}e^{\frac{1}{2}}\\
-    &=& \dfrac {1}{\sqrt {2\pi np(1-p)}}e^{\frac{1}{2}}\\
-  \end{align*}?????
+    P(I) &= 2 \Phi(z)-1 \\
+    &= 2 \dfrac{1}{\sqrt{2\pi}}\int_{-\infty}^{x} e^{-\frac{1}{2}t^2} dt -1
+  \end{align*}
 \end{Beweis}
-
+\begin{Bemerkung}
+  Andersherum kann die Größe von $I$ berechnet werden über:
+  $$ z= \Phi^{-1} \left(\dfrac{P+1}{2}\right)$$
+\end{Bemerkung}
 
 
 
@@ -564,11 +579,12 @@ $\varphi(x)$ ist die Dichtefunktion der Normalverteilung.
 \subsubsection{Rückführung: Binomialverteilung}
 Warum interessiert uns das? Weil die Binomialverteilung diese symmetrische Kurve für $n\rightarrow\infty$ Versuche annähert. Noch nicht überzeugt? Über die Varianz können wir interessante Aussagen über die Verteilung der Wahrscheinlichkeiten machen.
 
-\subsubsection{Anwendung: Binomialverteilung}
 \begin{Theorem}[- Laplace-Bedingung]
   Für eine Binomialverteilung mit $\sigma = \sqrt{np(1-p)}$ und $\mu = np$ gilt:\\
   Wenn $\sigma>3$, dann kann diese Binomialverteilung durch die Normalverteilung angenähert werden.
-  $$B_{l,p}(k) = P(X=k) = {l \choose k} p^k (1-p) ^{l-k} \equiv \varphi(k) = \dfrac {1}{\sqrt {2\pi \sigma^2}}} \cdot e^{- \dfrac{1}{2} {\left(\dfrac{x-\mu}{\sigma}\right)}^2}$$
+  $$B_{l,p}(k) = P(X=k) = {l \choose k} p^k (1-p) ^{l-k} \approx \varphi_{\mu,\sigma^2}(k) = \dfrac {1}{\sqrt {2\pi \sigma^2}}} \cdot e^{- \dfrac{1}{2} {\left(\dfrac{k-\mu}{\sigma}\right)}^2};k\in \Z$$
+  Daraus folgt, dass die Verteilungsfunktion ebenfalls angenähert werden kann:
+  $$P(a \leq X \leq b) \approx \int_{a-0,5}^{b+a,5}\varphi_{\mu,\sigma^2}(x)dx = \Phi_{\mu,\sigma^2}(b+0,5)-\Phi_{\mu,\sigma^2}(a-0,5)$$
 \end{Theorem}
 \begin{Beweis}
   Die Abweichung wird so gering, dass sie vernachlässigbar wird.

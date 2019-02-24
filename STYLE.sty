@@ -22,7 +22,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\nouppercase{\leftmark}}
-\fancyhead[R]{Mathematik - SMP}
+\fancyhead[R]{\nouppercase{\rightmark}}
 %\fancyfoot[C]{\thepage}
 
 
@@ -33,17 +33,39 @@
 %Eigene Environments
 %Beweis:
 \newenvironment{Beweis}[1][]
-  {\begin{tcolorbox}[colback=gray!5!white,colframe=gray!70!black,opacityframe=0.5, opacitybacktitle=0.5,sharpish corners,boxrule=0pt,frame hidden,title=Beweis \,#1,breakable,break at=23cm,pad at break=1mm,]}
+  {\begin{tcolorbox}[ colback=gray!5!white,
+                      colframe=gray!70!black,
+                      opacityframe=0.5,
+                      opacitybacktitle=0.5,
+                      sharpish corners,
+                      boxrule=0pt,
+                      frame hidden,
+                      title=Beweis \,#1,
+                      breakable,
+                      ]}
   {\hfill\ensuremath{\square} \end{tcolorbox}}
 
 %Definition:
 \newenvironment{Definition}[1][]
-  {\begin{tcolorbox}[colback=red!7!white,colframe=red!70!black,sharpish corners,boxrule=0pt,frame hidden,title=Definition \,#1]}
+  {\begin{tcolorbox}[ colback=red!7!white,
+                      colframe=red!70!black,
+                      sharpish corners,
+                      boxrule=0pt,
+                      frame hidden,
+                      title=Definition \,#1,
+                      breakable,
+                      ]}
   {\end{tcolorbox}}
 
 %Theorem:
 \newenvironment{Theorem}[1][]
-  {\begin{tcolorbox}[colback=titlepagecolor!5!white,colframe=titlepagecolor,sharpish corners,boxrule=0pt,frame hidden,title=Theorem \,#1]}
+  {\begin{tcolorbox}[ colback=titlepagecolor!5!white,
+                      colframe=titlepagecolor,
+                      sharpish corners,
+                      boxrule=0pt,
+                      frame hidden,
+                      title=Theorem \,#1,
+                      breakable,]}
   {\end{tcolorbox}}
 
 %Beispiel
@@ -132,9 +154,9 @@
 \newcommand{\definedBy}{\ratio=}
 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Kapitel-Titelblatt
-\makeatletter
+%Kapitel-Titel
 \def\thickhrulefill{\leavevmode \leaders \hrule height 1.2ex \hfill \kern \z@}
 \def\@makechapterhead#1{
   \vspace*{9\p@}%
@@ -152,12 +174,10 @@
         \vspace*{10\p@}%
         \hrule
   }
-  %%HIER NAME DES AUTORS (KP WIE THO)
   \vskip 50\p@}
 
 \setlength{\mathindent}{0pt}
-\makeatother
-\makeatletter
+
 \newcommand{\chapterauthor}[1]{%
   {\parindent0pt\vspace*{-45pt}%
   \begin{flushright}
@@ -166,7 +186,7 @@
   \par\nobreak\vspace*{35pt}}
   \@afterheading%
 }
-\makeatother
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Für den Titel:
