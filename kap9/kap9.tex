@@ -6,46 +6,66 @@
 	\section{Überblick und Grundrechenarten}
 
 
-\subsection{Arten von Matritzen}
+\subsection{Definition und Einordnung}
 
 \begin{Definition}
-Matritzen sind ........ und bilden einen abgeschlossenen Körper. Sie wird durch ihre Koeffizienten und ihr Dimension definiert: Eine Matrix der Dimension $m \times n$ besitzt $m$ Zeilen und $n$ Spalten.\\
+Eine Matrix ist eine rechteckige Anordnung von Elementen. Sie tauchen in fast allen Gebieten der Mathematik und der Mechanik auf und erleichtern Rechen- und Gedankenvorgänge. Eine Matrix ist eindeutig durch ihre \textbf{Komponenten} und ihr \textbf{Typ} definiert: Eine Matrix mit $m$ Zeilen und $n$ Spalten wird $m \times n$-Matrix genannt. Stammen ihre Komponenten aus einem Körper $K$, spricht man von einer \textit{Matrix über K}.\\
 
-$$A= \left( \begin{array}{rccccl}
+$$A= \begin{pmatrix}
 a_{1,1}&a_{1,2}&...&a_{1,j}&...&a_{1,n}\\
 a_{2,1}&a_{2,2}&...&a_{2,j}&...&a_{2,n}\\
 &&\vdots&&&\\
 a_{i,1}&a_{i,2}&...&a_{i,j}&...&a_{,n}\\
 &&\vdots&&&\\
 a_{m,1}&a_{m,2}&...&a_{m,j}&...&a_{m,n}\\
-\end{array}\right)$$\\
+\end{pmatrix}$$\\
 Sie wird quadratische Matrix genannt wenn $m=n$.
 \end{Definition}
+
+\begin{Bemerkung}
+Eine Matrix, die aus nur einer Spalte oder nur einer Zeile besteht, wird auch Vektor genannt.\\\\
+Ganz formal gesehen ist eine Matrix eine Funktion, die jedem Funktionswert $(i;j)$ einen Eintrag zuordnet. Matrizen bilden mit der Matrizenaddition und der Skalarmultiplikation einen abgeschlossenen Körper.
+\end{Bemerkung}
+
 
 \begin{GTR-Tipp}
 Im Matrix Menü: $[\text{matrix}] + [\text{MATH}]$ kann man mit dem Befehl...\\
 \begin{enumerate}
-\item ... rref$[B]$ die \textbf{Dreiecksform} einer Matrix $B$ ausrechnen lassen:\\\\
-$$B= \left( \begin{array}{rccl}
+\item ... ref$[B]$ die \textbf{Dreiecksform} einer Matrix $B$ ausrechnen lassen:\\\\
+$$B= \begin{pmatrix}
 b_{1,1}&b_{1,2}&b_{1,3}&b_{1,4}\\
 0&b_{2,2}&b_{2,3}&b_{2,4}\\
 0&0&b_{3,3}&b_{3,4}\\
 0&0&0&b_{4,3}\\
-\end{array}\right)$$\\
-\item ... rref$[C]$ die \textbf{Diagonalform} einer Matrix $C$ ausrechnen lassen:\\\\
-$$C= \left( \begin{array}{rccl}
+\end{pmatrix}$$\\
+\item ... rref$[C]$ die \textbf{Diagonalform} einer Matrix $C$ ausrechnen lassen. Die einzigen Nicht-NullEinträge sind auf der Hauptdiagonalen.:\\\\
+$$C= \begin{pmatrix}
 c_{1,1}&0&0&0\\
 0&c_{2,2}&0&0\\
 0&0&c_{3,3}&0\\
 0&0&0&c_{4,4}\\
-\end{array}\right)$$\\
+\end{pmatrix}$$\\
 \end{enumerate}
 \end{GTR-Tipp}
 
 
 \subsection{Addition und Multiplikation}
-ADDITION MATRIX
-MULTIPLIKATION MATRIXXXXX
+
+\subsubsection{Matritzenaddition}
+
+Matrizen können addiert werden, wenn sie vom gleichen Typ sind. Eine $m\times n$ Matrix $A$ kann nur mit einer $m\times n$ Matrix $B$ addiert werden. Hierfür wird jede Komponente $a_{i,j}$ mit ihrem zugehörigen Komponenten $b_{i,j}$ addiert:
+$$A+B = \begin{pmatrix} a_{1,1} & a_{1,2} & a_{1,3} \\ a_{2,1} & a_{2,2} & a_{2,3} \end{pmatrix} + \begin{pmatrix} b_{1,1} & b_{1,2} & b_{1,3} \\ b_{2,1} & b_{2,2} & b_{2,3} \end{pmatrix}  =  \begin{pmatrix} a_{1,1} + b_{1,1} & a_{1,2} + b_{1,2} & a_{1,3} + b_{1,3} \\ a_{2,1} + b_{2,1} & a_{2,2} + b_{2,2} & a_{2,3} + b_{2,3} \end{pmatrix}$$
+Das Neutrale Element der Addition ist logischerweise eine leere Matrix, das inverse findet man mit der Skalierung $\cdot (-1)$
+
+\subsubsection{Skalarmultiplikation}
+
+Die Skalarmultiplikation, die man aus Vektoren kennt, kann auf Matrizen erweitert werden: 
+$$k \cdot A = k \cdot \begin{pmatrix} a_{1,1} & a_{1,2} & a_{1,3} \\ a_{2,1} & a_{2,2} & a_{2,3} \end{pmatrix} = \begin{pmatrix} k \cdot a_{1,1} & k \cdot a_{1,2} & k \cdot a_{1,3} \\ k \cdot a_{2,1} & k \cdot a_{2,2} & k \cdot a_{2,3} \end{pmatrix} $$
+
+\subsubsection{Matrizenmultiplikation}
+
+BLABLABLA kommt noch $$c_{i,j} = \sum_{k=1}^{m} a_{i,k} \cdot b_{k,j}$$
+
 
 
 	\section{Lineare Gleichungssysteme und Gaußalgorithmus}
