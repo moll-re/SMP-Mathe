@@ -9,7 +9,7 @@
 \subsection{Definition und Einordnung}
 
 \begin{Definition}
-Eine Matrix ist eine rechteckige Anordnung von Elementen. Sie tauchen in fast allen Gebieten der Mathematik und der Mechanik auf und erleichtern Rechen- und Gedankenvorgänge. Eine Matrix ist eindeutig durch ihre \textbf{Komponenten} und ihr \textbf{Typ} definiert: Eine Matrix mit $m$ Zeilen und $n$ Spalten wird $m \times n$-Matrix genannt. Stammen ihre Komponenten aus einem Körper $K$, spricht man von einer \textit{Matrix über K}.\\
+Eine Matrix ist eine rechteckige Anordnung von Elementen. Sie tauchen in fast allen Gebieten der Mathematik und der Mechanik auf und erleichtern Rechen- und Gedankenvorgänge. Eine Matrix ist eindeutig durch ihre \textbf{Komponenten} und ihr \textbf{Typ} definiert: Eine Matrix mit $m$ Zeilen und $n$ Spalten wird $m \times n$ - Matrix genannt. Stammen ihre Komponenten aus einem Körper $K$, spricht man von einer \textit{Matrix über K}.\\
 
 \tikzset{
         round/.style = { rounded corners=2mm },
@@ -42,6 +42,7 @@ a_{m,1}&a_{m,2}&...&a_{m,j}&...&a_{m,n}\\
 
 
 \begin{Bemerkung}
+Die Eselsbrücke \textit{\textbf{Z}eile \textbf{Z}uerst, \textbf{S}palte \textbf{S}päter} ist für die Benennung einer Matrix hilfreich!\\\\
 Eine Matrix, die aus nur einer Spalte oder nur einer Zeile besteht, wird auch Vektor genannt.\\\\
 Ganz formal gesehen ist eine Matrix eine Funktion, die jedem Funktionswert $(i;j)$ einen Eintrag zuordnet. Matrizen bilden mit der Matrizenaddition und der Skalarmultiplikation einen abgeschlossenen Körper.
 \end{Bemerkung}
@@ -70,20 +71,82 @@ c_{1,1}&0&0&0\\
 
 \subsection{Addition und Multiplikation}
 
-\subsubsection{Matritzenaddition}
+\begin{itemize}
+
+\item{\textbf{Matritzenaddition}}
 
 Matrizen können addiert werden, wenn sie vom gleichen Typ sind. Eine $m\times n$ Matrix $A$ kann nur mit einer $m\times n$ Matrix $B$ addiert werden. Hierfür wird jede Komponente $a_{i,j}$ mit ihrem zugehörigen Komponenten $b_{i,j}$ addiert:
-$$A+B = \begin{pmatrix} a_{1,1} & a_{1,2} & a_{1,3} \\ a_{2,1} & a_{2,2} & a_{2,3} \end{pmatrix} + \begin{pmatrix} b_{1,1} & b_{1,2} & b_{1,3} \\ b_{2,1} & b_{2,2} & b_{2,3} \end{pmatrix}  =  \begin{pmatrix} a_{1,1} + b_{1,1} & a_{1,2} + b_{1,2} & a_{1,3} + b_{1,3} \\ a_{2,1} + b_{2,1} & a_{2,2} + b_{2,2} & a_{2,3} + b_{2,3} \end{pmatrix}$$
-Das Neutrale Element der Addition ist logischerweise eine leere Matrix, das inverse findet man mit der Skalierung $\cdot (-1)$
+$$A + B \ = \  \left(
+    \begin{array}{cccc}
+        a_{11}+ b_{11} & a_{12}+ b_{12} &
+            \cdots & a_{1n}+ b_{1n} \\
+        a_{21}+ b_{21} & a_{22}+ b_{22} &
+            \cdots & a_{2n}+ b_{2n} \\
+        \vdots & \vdots &  & \vdots \\
+        a_{m1}+ b_{m1} & a_{m2}+ b_{m2} &
+            \cdots & a_{mn}+ b_{mn}
+    \end{array}
+    \right)$$
+Das Neutrale Element der Addition ist logischerweise eine leere Matrix, das inverse findet man mit der Skalierung $\cdot (-1)$.\\
 
-\subsubsection{Skalarmultiplikation}
+\item{\textbf{Skalarmultiplikation}}
 
-Die Skalarmultiplikation, die man aus Vektoren kennt, kann auf Matrizen erweitert werden:
-$$k \cdot A = k \cdot \begin{pmatrix} a_{1,1} & a_{1,2} & a_{1,3} \\ a_{2,1} & a_{2,2} & a_{2,3} \end{pmatrix} = \begin{pmatrix} k \cdot a_{1,1} & k \cdot a_{1,2} & k \cdot a_{1,3} \\ k \cdot a_{2,1} & k \cdot a_{2,2} & k \cdot a_{2,3} \end{pmatrix} $$
+Die Skalarmultiplikation mit einer reellen Zahl $k$, die man aus Vektoren kennt, kann auf Matrizen erweitert werden:
+$$k\cdot A \ = \ \left(
+    \begin{array}{cccc}
+        k a_{11} & k a_{12} & \cdots & k a_{1n} \\
+        k a_{21} & k a_{22} & \cdots & k a_{2n} \\
+        \vdots & \vdots &  & \vdots \\
+        k a_{m1} & k a_{m2} & \cdots & k a_{mn}
+    \end{array}
+    \right) $$\\
 
-\subsubsection{Matrizenmultiplikation}
+\item{\textbf{Matrizenmultiplikation}}
 
-BLABLABLA kommt noch $$c_{i,j} = \sum_{k=1}^{m} a_{i,k} \cdot b_{k,j}$$
+Die Matrizenmultiplikation ist eine weder kommutative, noch nullteilerfreie Verknüpfung. Ist $A$ eine $m\times p$ - Matrix und $B$ eine $p\times n$ - Matrix, dann sind die Matrizen multiplizierbar (d.h., die Anzahl der \textit{Spalten}
+von $\Mat{A}$ muss mit der Anzahl der \textit{Zeilen} von$\Mat{B}$ übereinstimmen).\\
+Die einzelnen Komponenten der Produktmatrix $C = A \times B$ werden so ausgerechnet:
+  $$c_{i,j} = \sum_{k=1}^{m} a_{i,k} \cdot b_{k,j}$$
+Die Komponenten $c_{i,j}$ ergeben sich also aus dem Skalarprodukt der $i$-ten Zeile von $A$ mit der $j$-ten Spalte von $B$. Die Durchführung per Hand wird mit der Falk'schen Anordnung erleichtert:
+
+\begin{equation*}
+\begin{array}{rl}
+    $B$ \ = \
+    \left(
+    \begin{array}{c} b_{11} \\ \vdots \\ b_{p1}
+          \end{array}
+    \begin{array}{c} \cdots \\   \\ \cdots \end{array}
+\fbox{$\begin{array}{c} b_{1k} \\ \vdots \\ b_{pk}
+    \end{array}$}
+    \begin{array}{c} \cdots \\   \\ \cdots \end{array}
+    \begin{array}{c} b_{1n} \\ \vdots \\ b_{pn}
+          \end{array}
+    \right) \, &
+\\
+    $A$ \ = \
+    \left(
+    \begin{array}{c}
+        a_{11} \quad \cdots \quad a_{1p} \\
+        \ \vdots \hfill \vdots \quad  \\
+        \fbox{$a_{i1} \quad \cdots \quad a_{ip}$} \\
+        \ \vdots \hfill \vdots \quad \\
+        a_{m1} \quad \cdots \quad a_{mp}
+    \end{array} \right) \
+    \left(
+    \begin{array}{c} c_{11} \\ \vdots \\ c_{i1} \\
+        \vdots \\ c_{m1}          \end{array}
+    \begin{array}{c} \cdots \\   \\ \cdots \\ \\ \cdots \end{array}
+        \begin{array}{c} c_{1k} \\ \vdots \\ \fbox{$c_{ik}$} \\
+            \vdots \\ c_{mk}
+    \end{array}
+    \begin{array}{c} \cdots \\   \\ \cdots \\ \\ \cdots \end{array}
+    \begin{array}{c} c_{1n} \\ \vdots \\ c_{in} \\
+        \vdots \\ c_{mn}          \end{array}
+    \right) &  = \ $C$
+\end{array}
+\end{equation*}\\
+\end{itemize}
+
 
 
 
