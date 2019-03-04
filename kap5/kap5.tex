@@ -2,11 +2,14 @@
 \begin{document}
 \chapter{Vektorielle Geometrie}
 \chapterauthor{Pascal}
+
 \section{Vektoren}
 
     \begin{Definition}
         Ein Vektor ist Element eines Vektorraums.
-    \end{Definition}\\
+    \end{Definition}
+    \\
+
     \paragraph{} Vektorräume, wir erinnern uns zurück. Verknüpfungen, inverse Elemente und die dazugehörenden Gesetze, konsequente Definitionen und
     mathematische Korrektheit, die guten alten Zeiten...\\
     Tatsächlich kann ein Vektor in den meisten Fällen als Verschiebung bezeichnet werden, \textbf{nicht aber als Pfeil oder Strich!}\\
@@ -14,7 +17,8 @@
 
     \subsection{Besondere Vektoren}
       \begin{Definition}[- Der Ortsvektor]
-        Der Vektor von $O$ auf den Punkt $P$, geschrieben als $\vv{OP}$ oder $\vv{p}$.\\
+        Der Vektor von $O$ auf den Punkt $P$, geschrieben als $\vv{OP}$ oder $\vv{p}$.
+        \\
         Hat $P$ die Koordinaten $(P_1|P_2|...|P_n)$, so besitzt $\vv{p}$ die Darstellung $\left(\begin{array}{c} P_1 \\ P_2 \\ ...\\P_n\end{array}\right)$.
       \end{Definition}
 
@@ -26,7 +30,7 @@
       \end{Bemerkung}
 
       \begin{Definition}[- Der Verbindingsvektor]
-        Der Vektor $\vv{AB}$ ist der Vektor, der den Punkt $A$ auf den Punkt $B$ abbildet. Er ist definiert als:\\ $\vv{AB}=\vv{OB}-\vv{OA}$,
+        Der Vektor $\vv{AB}$ ist der Vektor, der den Punkt $A$ auf den Punkt $B$ abbildet. Er ist definiert als:\\ $\vv{AB}=\vv{b}-\vv{a}$,
         woraus folgt, dass: \begin{center} $\vv{AB} = \left(\begin{array}{c} b_1 - a_1 \\ b_2 - a_2 \\ ... \\ b_n - a_n \end{array}\right)$. \end{center}
       \end{Definition}
 
@@ -45,7 +49,7 @@
          Vektors $\vv{v}$ ist folgendermaßen definiert: $\text{|}\vv{v}\text{|} = \sqrt{\displaystyle\sum_{i=1}^{n}v_{i}^2} ; \vv{v}\in\R^n$.
         \end{Definition}
         \begin{minipage}{0.5\textwidth}
-          \begin{tikzpicture}
+          \begin{tikzpicture}[>= trianle 45]
             \draw[dashed, ->] (0,0,0) -- (0,0,3);
             \draw[dashed, ->] (0,0,0) -- (5,0,0);
             \draw[dashed, ->] (0,0,0) -- (0,3,0);
@@ -103,11 +107,13 @@
 
     \subsection{Basistransformation}
 
-        \paragraph{} Bilden die Vektoren $\vv{a_1},\vv{a_2},...,\vv{a_n}$ eine Basis des $n$-dimensionalen Vektorraums $V$ und sei der Vektor
-         $\vv{v}=\left(\begin{array}{c}{v_1\\v_2\\...\\v_n}\end{array}\right);\vv{v}\in V$. Dann gilt wie üblich:
-         $\vv{v}=v_1\cdot\vv{a_1}+v_2\cdot\vv{a_2}+...+v_n\cdot\vv{a_n}$. Sei eine weitere Basis $\vv{b_1},\vv{b_2},...,\vv{b_n}$ des selben Vektorraumes,
-          so besitzt der Vektor $\vv{v}$ andere Koordinaten: $\vv{v}=\left(\begin{array}{c}{v'_1\\v'_2\\...\\v'_n}\end{array}\right)$.
-          Dabei muss gelten: $\vv{v}=v_1\cdot\vv{a_1}+v_2\cdot\vv{a_2}+...+v_n\cdot\vv{a_n}=v'_1\cdot\vv{b_1}+v'_2\cdot\vv{b_2}+...+v'_n\cdot\vv{b_n}$.
+        \begin{Theorem}[- Basistransformation]
+            \paragraph{} Bilden die Vektoren $\vv{a_1},\vv{a_2},...,\vv{a_n}$ eine Basis des $n$-dimensionalen Vektorraums $V$ und sei der Vektor
+             $\vv{v}=\left(\begin{array}{c}{v_1\\v_2\\...\\v_n}\end{array}\right);\vv{v}\in V$. Dann gilt wie üblich:
+             $\vv{v}=v_1\cdot\vv{a_1}+v_2\cdot\vv{a_2}+...+v_n\cdot\vv{a_n}$. Sei eine weitere Basis $\vv{b_1},\vv{b_2},...,\vv{b_n}$ des selben Vektorraumes,
+              so besitzt der Vektor $\vv{v}$ andere Koordinaten: $\vv{v}=\left(\begin{array}{c}{v'_1\\v'_2\\...\\v'_n}\end{array}\right)$.
+              Dabei muss gelten: $\vv{v}=v_1\cdot\vv{a_1}+v_2\cdot\vv{a_2}+...+v_n\cdot\vv{a_n}=v'_1\cdot\vv{b_1}+v'_2\cdot\vv{b_2}+...+v'_n\cdot\vv{b_n}$.
+        \end{Theorem}
         \\
         \begin{Bemerkung}
             \\
@@ -120,6 +126,8 @@
             \vv{b_3}=\left(\begin{array}{c}{1\\3\\1}\end{array}\right)$, Vektor $\vv{v}=\left(\begin{array}{c}{-5\\3\\2}\end{array}\right)$ (in der Standardbasis des $\R^3$)
             \\
             $\vv{v}=-5\cdot\vv{a_1}+3\cdot\vv{a_2}+2\cdot\vv{a_3}=r\cdot\vv{b_1}+s\cdot\vv{b_2}+t\cdot\vv{b_3}$
+            \\
+            \\
             $\Leftrightarrow \begin{vmatrix}4r & -2s & t & = & -5 \\
                                             9r & -2s & 3t & = & 3 \\
                                             -r & 8s & t & = & 2
@@ -144,7 +152,7 @@
                              \end{vmatrix}
             \\
             \\
-            \mathbb{L}=\{ -15.2|-6.9|42 \}$
+            \Rightarrow \mathbb{L}=\{ -15.2|-6.9|42 \}$
             \\
             Daraus lässt sich folgern: $\vv{v}=-15.2\cdot\vv{b_1}-6.9\cdot\vv{b_2}+42\cdot\vv{b_3}=\left(\begin{array}{c}{-15.2\\-6.9\\42}\end{array}\right)$
              (in der anderen Basis).
@@ -156,16 +164,18 @@
 
 \section{Winkel zwischen Vektoren}
 
-    \begin{Definition}
-        \paragraph{} Unter einem Winkel zwischen zwei Vektoren versteht man den Winkel, der ensteht, wenn man beide Vektoren an einen \textbf{gemeinsamen Startpunkt}
-        verschiebt ohne dabei ihre Ausrichtung zu verändern.
+    \begin{Definition}[- Winkel zwischen zwei Vektoren]
+        Unter einem Winkel zwischen zwei Vektoren versteht man den Winkel, der ensteht, wenn man beide Vektoren an einen \textbf{gemeinsamen Startpunkt} verschiebt ohne dabei ihre Ausrichtung zu verändern.
     \end{Definition}
 
 
     \subsection{Orientierte Winkel}
-        Wenn man in der Mathematik mit Winkeln arbeitet, werden sie immer im \textbf{mathematisch positiven} Sinn angegeben.
-        Dies bedeutet, dass man von einem Vektor oder Schenkel, der an den Winkel grenzt, ausgeht und über Rotation um den Schnittpunkt \glqq gegen
-        den Uhrzeigersinn\grqq \,zum anderen gelangt, bis beide übereinanderliegen (wenn man davon ausgeht, dass sich beide schneiden).\\
+
+        \begin{Definition}[- Mathematisch positiver Sinn]
+            Winkel werden in der Mathematik zumeist im \textbf{mathematisch positiven Sinn} angegeben, welcher dem Uhrzeigersinn entgegengesetzt verläuft.
+        \end{Definition}
+        \\
+
         \begin{minipage}{0.5\textwidth}
           \definecolor{qqwuqq}{rgb}{0,0.4,0}
           \definecolor{ududff}{rgb}{0.3,0.3,1}
@@ -185,6 +195,7 @@
               \draw[color=black] (2.6,1.7) node {$a$};
           \end{tikzpicture}
         \end{minipage}
+
         \begin{minipage}{0.5\textwidth}
           \definecolor{ududff}{rgb}{0.3,0.3,1}
           \definecolor{adadff}{rgb}{0.8,0.8,0}
@@ -205,9 +216,7 @@
           \end{tikzpicture}
         \end{minipage}
 
-        So ergibt sich $\alpha = \angle ABC = \angle ac = (\vv{BA},\vv{BC}) = \frac{\pi}{3}$. Ein Winkel $\alpha$ wird zudem immer so angegeben, dass $\alpha\in I; I = [-\pi,\pi]$ gilt.
-        Dies bedeutet, dass man nur Winkel zwischen $0°$ und $180°$ erhält, und das in beide \glqq Richtungen\grqq, als im mathematisch positiven und negativen Sinn.
-        Diese Einschränkung kennzeichnet man mit dem Ausdruck \glqq \textbf{modulo $2\pi$}\grqq.
+         \paragraph{} So ergibt sich $\alpha = \angle ABC = \angle ac = (\vv{BA},\vv{BC}) = \frac{\pi}{3}$. Ein Winkel $\alpha$ wird zudem meist derart angegeben, dass $\alpha \in [-\pi,\pi]$ oder $\alpha \in [0, 2\pi]$ gilt. Dies bedeutet, dass man nur Winkel zwischen $0°$ und $180°$ erhält, im mathematisch positiven und negativen Sinn. Diese Einschränkung kennzeichnet man mit dem Ausdruck \glqq \textbf{modulo $2\pi$}\grqq.
 
 
     \subsection{Rechnungen mit Winkeln}
