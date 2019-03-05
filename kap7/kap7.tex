@@ -529,11 +529,85 @@ Manche Ereignisse lassen sich nicht als ganze Zahl modellieren oder können nich
   Sei $X$ eine Zufallsvariable mit Werten aus $I= [a;b]$. Der Erwartungswert ist gegeben durch:
   $$E(X)=\mu=\int_a^b t\cdot f(t)dt$$
 \end{Definition}
-\subsection{Uniformverteilung}
+\begin{Definition}[- Varianz]
+  Sei $X$ eine Zufallsvariable mit Werten aus $I= [a;b]$. Die Varianz ist gegeben durch:
+  $$\sigma^2=\int_a^b (t-\mu)^2 \cdot f(t)dt$$
+\end{Definition}
 
-\subsection{Exponentialverteilung}
+\subsection{Exponentialverteilung: $X \sim \mathcal{E}(\lambda)$}
+\begin{Definition}
+  Eine stetige Zufallsvariable $X$ hat eine Exponentialverteilung wenn $X$ die folgende Wahrscheinlichkeitsdichte hat:
+  $$f_\lambda (x) = \lambda e^{-\lambda x}$$
+  $f_\lambda(x)$ heißt Dichtefunktion der Exponentialverteilung.
+\end{Definition}
+\begin{Bemerkung}
+  Diese Funktion erfüllt die Bedingungen der Wahrscheinlichkeitsverteilung, denn sie ist auf $\R_{+}$ definiert und stetig. Außerdem gilt: $\displaystyle \int_0^\infty f_\lambda dt = 1$.
+\end{Bemerkung}
+\begin{Definition}
+  Die Verteilungsfunktion der Exponentialverteilung ist gegeben durch:
+  $$P(X \leq x) = F_\lambda(x) = \int_{0}^{x} f_\lambda(t) dx = 1 - e^{-\lambda x}$$
+\end{Definition}
+\begin{Bemerkung}
+  Solche Funktionen werden verwendet, um Halbwärtszeiten oder Lebensdauern zu modellieren.
+\end{Bemerkung}
+\begin{Theorem}[- Gedächtnislosigkeit]
+  Für eine exponentialverteilte Zufallsvariable $X$ gilt folgende Eigenschaft:
+  $$P_{(X \geq x)}(X \geq x+t) = P(X \geq t)\qquad \forall t,x \geq 0$$
+\end{Theorem}
+\begin{Bemerkung}
+  Das bedeutet beispielsweise für die Zersetzung, dass die Wahrscheinlichkeit bei $x+t$ unter der Voraussetzung, noch nicht bei $x$ stattgefunden hat, nicht von $x$ abhängt.\\
+  Solche Lebensdauern werden als ``alterungslos'' bezeichnet.
+\end{Bemerkung}
+\begin{Bemerkung}
+  Die Gedächtnislosigkeit ist definierte Eigenschaft der Exponentialverteilung. (Es handelt sich somit um eine notwendige und hinreichende Bedingung)
+\end{Bemerkung}
+\begin{Beweis}
+  \begin{align*}
+    P_{(X \geq x)}(X \geq x+t) &= \dfrac{P((X \geq x)\cap(X \geq x+t))}{P(X \geq x)}\\
+    &= \dfrac{P(X \geq x+t)}{P(X \geq x)}\\
+    &= \dfrac{1-(1-e^{-\lambda(x+t)})}{1-(1-e^{-\lambda x})}\\
+    &= \dfrac{e^{-\lambda(x+t)}}{e^{-\lambda x}}\\
+    &= e^{-\lambda t}\\
+    &= 1-(1-e^{-\lambda(t)})\\
+    &= P(X \geq t)
+  \end{align*}
+\end{Beweis}
+\begin{Theorem}[- Erwartungswert]
+  Für die Exponentialverteilung gilt:
+  $$ \mu = \dfrac{1}{\lambda}$$
+\end{Theorem}
+\begin{Beweis}
+  \begin{align*}
+    \mu &= \int_0^{\infty} t \cdot f_\lambda (t)dt\\
+    &= \int_0^{\infty} t \cdot \lambda e^{-\lambda t} dt\\
+    &= \left[-t \cdot e^{-\lambda t}\right]_0^\infty - \int_0^{\infty} -1 \cdot e^{-\lambda t} dt\\
+    &= \left[-t \cdot \lambda e^{-\lambda t}\right]_0^\infty - \left[\dfrac{1}{\lambda} e^{-\lambda t}\right]_0^\infty\\
+    &= 0-0-\left(0-\dfrac{1}{\lambda})\right\\
+    &= \dfrac{1}{\lambda}
+  \end{align*}
+\end{Beweis}
+\begin{Theorem}[- Varianz]
+  Für die Exponentialverteilung gilt:
+  $$ \sigma^2 = \dfrac{1}{\lambda^2}$$
+\end{Theorem}
+\begin{Beweis}
+  \begin{align*}
+    \sigma^2 &= \int_0^{\infty} (t-\mu)^2 \cdot f_\lambda (t)dt\\
+    &= \int_0^{\infty} (t-\mu)^2 \cdot \lambda e^{-\lambda t} dt\\
+    &= \int_0^{\infty} t^2 \cdot \lambda e^{-\lambda t} dt - \int_0^{\infty} 2\mu t \cdot \lambda e^{-\lambda t} dt + \int_0^{\infty} \mu^2 \cdot \lambda e^{-\lambda t} dt\\
+    &= \left[-t^2 \cdot e^{-\lambda t}\right]_0^\infty - \int_0^{\infty} -2t \cdot e^{-\lambda t} dt - \left(\left[-2\mu t \cdot e^{-\lambda t}\right]_0^\infty - \int_0^{\infty} -2\mu \cdot e^{-\lambda t} dt \right) + \left[-\mu^2 \cdot e^{-\lambda t}\right]_0^\infty \\
+    &= \left[-t^2 \cdot e^{-\lambda t}\right]_0^\infty - \left(\left[ \dfrac{2t}{\lambda} e^{-\lambda t}\right]_0^\infty - \int_0^{\infty} \dfrac{1}{\lambda} \cdot e^{-\lambda t} dt\right) - \left(\left[-2\mu t \cdot e^{-\lambda t}\right]_0^\infty - \left[\dfrac{2\mu}{\lambda} \cdot e^{-\lambda t}\right]_0^\infty \right) + \left[-\mu^2 \cdot e^{-\lambda t}\right]_0^\infty \\
+    &= \left[-t^2 \cdot e^{-\lambda t}\right]_0^\infty - \left[\dfrac{2t}{\lambda} e^{-\lambda t}\right]_0^\infty + \left[-\dfrac{2}{\lambda^2} e^{-\lambda t}\right]_0^\infty - \left[-2\mu t \cdot e^{-\lambda t}\right]_0^\infty + \left[\dfrac{2\mu}{\lambda} \cdot e^{-\lambda t}\right]_0^\infty + \left[-\mu^2 \cdot e^{-\lambda t}\right]_0^\infty \\
+    &= 0 - 0 -(0 - 0) + 0 + \dfrac{2}{\lambda^2} - (0-0) + 0 - \dfrac{2\mu}{\lambda} + 0 + \mu^2 \qquad\qquad\qquad \left|\mu = \dfrac{1}{\lambda}\\
+    &= \dfrac{2}{\lambda^2} - \dfrac{2}{\lambda^2} + \dfrac{1}{\lambda^2}\\
+    &= \dfrac{1}{\lambda^2}
+  \end{align*}
+\end{Beweis}
+\begin{Bemerkung}
+  $\Rightarrow \sigma = \sqrt{\dfrac{1}{\lambda^2}} = \dfrac{1}{\lambda} = \mu$
+\end{Bemerkung}
 
-\subsection{Normalverteilung}
+\subsection{Normalverteilung: $X \sim \mathcal{N}(\mu,\sigma^2)$}
 \begin{Definition}
 Eine stetige Zufallsvariable $X$ hat eine (Gauß- oder) Normalverteilung mit Erwartungswert $\mu$ und Varianz $\sigma ^{2}$ wenn $X$ die folgende Wahrscheinlichkeitsdichte hat:
 $$\varphi_{\mu,\sigma^2}(x) = f(x) = \dfrac {1}{\sqrt {2\pi \sigma^2}}} \cdot e^{- \dfrac{1}{2} {\left(\dfrac{x-\mu}{\sigma}\right)}^2} \qquad$$
@@ -541,12 +615,12 @@ $\varphi(x)$ ist die Dichtefunktion der Normalverteilung.
 \end{Definition}
 \begin{Definition}
   Die Verteilungsfunktion der Normalverteilung ist gegeben durch:
-  $$\Phi_{\mu,\sigma^2}(x) = \int_{-\infty}^{x} \varphi_{\mu,\sigma^2}(x) dx$$
+  $$P(X\leq x) = \Phi_{\mu,\sigma^2}(x) = \int_{-\infty}^{x} \varphi_{\mu,\sigma^2}(t) dt$$
   Durch Substitution erhält man:
   $$\Phi_{\mu,\sigma^2}(x) = \dfrac{1}{\sqrt{2\pi}}\int_{-\infty}^{x} e^{-\frac{1}{2}t^2} dt$$
 \end{Definition}
 \begin{Bemerkung}
-  Diese Definition ist somit analog zur Definition der Verteilungsfunktion der Binomialverteilung (Summe der Flächen).\\
+  Diese Definition ist somit analog zur Definition der Verteilungsfunktion der Binomialverteilung (Integral als Summe der Flächen).\\
   Außerdem bedeutet das, dass $\Phi(x)  \xrightarrow{\scriptscriptstyle x\rightarrow \infty} 1$.
 \end{Bemerkung}
 \begin{GTR-Tipp}
@@ -571,8 +645,9 @@ $\varphi(x)$ ist die Dichtefunktion der Normalverteilung.
   Andersherum kann die Größe von $I$ berechnet werden über:
   $$ z= \Phi^{-1} \left(\dfrac{P+1}{2}\right)$$
 \end{Bemerkung}
-
-
+\begin{GTR-Tipp}
+  Diese Berechnung kann auch vom GTR getätigt werden: Im Menü \textt{DISTR} wählt man \texttt{invNorm()} aus, und gibt in der Eingabe die Fläche (also die Wahrscheinlichkeit), $\mu$ und $\sigma$ an. Man erhält somit die Breite des Intervalls, und kann dies wieder in Abhängigkeit von $\sigma$ angeben.
+\end{GTR-Tipp}
 
 
 
