@@ -400,7 +400,6 @@ Daraus ergibt sich die korrekte Darstellung als Baumdiagramm:\\
     \item $!\exists P(e_i) \forall e_i \in S$
     \item $0 \leq P(e_i)\leq 1 \forall i \leq n$
     \item $P(e_1)+P(e_2)+...+P(e_n)=1$
-    \item ?
   \end{itemize}
 \end{Definition}\\
 \underline{Darstellung:}\\
@@ -455,7 +454,10 @@ Daraus ergibt sich die korrekte Darstellung als Baumdiagramm:\\
 \end{Theorem}
 \begin{Bemerkung}
   \begin{Definition}
-    $X$ heißt in diesem Fall \textbf{binomialverteilte Zufallsvariable}. Die entsprechende Wahrscheinlichkeitsverteilung heißt Binomialverteilung $B_{l,p}(k)$. $l$ ist die Länge der Bernoulli-Kette, $p$ die Erfolgswahrscheinlichkeit und $k$ ist die gewünschte Anzahl an Erfolgen.
+    $X$ heißt in diesem Fall \textbf{binomialverteilte Zufallsvariable}. Die entsprechende Wahrscheinlichkeitsverteilung heißt Binomialverteilung. Es gilt $P(X=k) =  B_{l,p}(k)$.\\
+    Die kumulierte Binomialverteilung wird durch ist gegeben durch: $P(X \leq k) = F_{l,p}(k)$.\\
+     $l$ ist die Länge der Bernoulli-Kette, $p$ die Erfolgswahrscheinlichkeit und $k$ ist die gewünschte Anzahl an Erfolgen.
+
   \end{Definition}
 \end{Bemerkung}
 \begin{GTR-Tipp}
@@ -496,15 +498,16 @@ Daraus ergibt sich die korrekte Darstellung als Baumdiagramm:\\
     \begin{align*}
       E(x)  &= \sum_{k=0}^{n} x_k \cdot P(X=x_k)\\
             &= \sum_{k=0}^{n} k  {n \choose k} p^k (1-p)^{n-k}\\
-            &= \sum_{k=0}^{n} \cdot k \dfrac{n!}{n-k)!k!} \cdot p^k (1-p)^{n-k}\\
-            &= n\cdot p\cdot \sum_{k=0}^{n} k \dfrac{(n-1)!}{n-k-1)!k!}  p^{k-1} (1-p)^{n-k}\\
+            &= \sum_{k=0}^{n} \cdot k \dfrac{n!}{(n-k)!k!} \cdot p^k (1-p)^{n-k}\\
+            &= n\cdot p\cdot \sum_{k=0}^{n} k \dfrac{(n-1)!}{(n-k-1)!k!}  p^{k-1} (1-p)^{n-k}\\
             &= n\cdot p\cdot \sum_{k=0}^{n} k  {n-1 \choose k-1} p^k (1-p)^{n-k}\\
             &= n\cdot p\cdot \sum_{k=1}^{n} k  {n-1 \choose k-1} p^k (1-p)^{n-k}\\
+            &= n\cdot p \cdot 1\\
             &= n\cdot p
     \end{align*}
   \end{center}
   \begin{Bemerkung}
-    Der Startindex der Summe kann verändert werden, da die kumulierte Wahrscheinlichkeite sich nicht verändert. Für $k=0$ ist ${n-1\choose k-1}=0$.
+    Der Startindex der Summe kann verändert werden, da die kumulierte Wahrscheinlichkeit sich nicht verändert. Für $k=0$ ist ${n-1\choose k-1}=0$.
   \end{Bemerkung}
 \end{Beweis}
 
@@ -533,7 +536,7 @@ Manche Ereignisse lassen sich nicht als ganze Zahl modellieren oder können nich
 \begin{Definition}[- Stetige Zufallsvariable]
   Sei $P$ eine Wahrscheinlichkeitsverteilung über $I$ mit Dichtefunktion $f$.\\
   \begin{itemize}
-    \item Eine Zufallsvariable $X$ mit Werten in $I$ folgt der Wahrscheinlichkeitsverteilung $P$, wenn gilt: $$P(c\leq X \leq d)=\displaystyle \int_c^d f(t)dt$$
+    \item Eine Zufallsvariable $X$ mit Werten Auswahl $I$ folgt der Wahrscheinlichkeitsverteilung $P$, wenn gilt: $$P(c\leq X \leq d)=\displaystyle \int_c^d f(t)dt$$
     \item Die Verteilungsfunktion $F$ ist definiert durch $F(X)=P(X\leq x)=P(a\leqX\leq x)=\displaystyle\int_a^x f(t)dt$
   \end{itemize}
 \end{Definition}
@@ -542,7 +545,7 @@ Manche Ereignisse lassen sich nicht als ganze Zahl modellieren oder können nich
   \begin{itemize}
     \item $F$ ist differenzierbar und $F'=f$
     \item $F$ ist monoton steigend auf $I$
-    \item Für $h>0$ und $x+h\in I$ gilt: $P(x\leqX\leqx+h) = F(x+h)-F(x)$.(Gleichbedeutend mit der Aussage $P(c\leq X\leq d)=F(d)-F(c)$)
+    \item Für $h>0$ und $x+h\in I$ gilt: $P(x\leqX\leqx+h) = F(x+h)-F(x)$.\\(Gleichbedeutend mit der Aussage $P(c\leq X\leq d)=F(d)-F(c)$)
   \end{itemize}
 \end{Bemerkung}
 \begin{Definition}[- Erwartungswert]
@@ -565,7 +568,7 @@ Manche Ereignisse lassen sich nicht als ganze Zahl modellieren oder können nich
 \end{Bemerkung}
 \begin{Definition}
   Die Verteilungsfunktion der Exponentialverteilung ist gegeben durch:
-  $$P(X \leq x) = F_\lambda(x) = \int_{0}^{x} f_\lambda(t) dx = 1 - e^{-\lambda x}$$
+  $$P(X \leq x) = F_\lambda(x) = \int_{0}^{x} f_\lambda(t) dt = 1 - e^{-\lambda x}$$
 \end{Definition}
 \begin{Bemerkung}
   Solche Funktionen werden verwendet, um Halbwärtszeiten oder Lebensdauern zu modellieren.
@@ -575,7 +578,7 @@ Manche Ereignisse lassen sich nicht als ganze Zahl modellieren oder können nich
   $$P_{(X \geq x)}(X \geq x+t) = P(X \geq t)\qquad \forall t,x \geq 0$$
 \end{Theorem}
 \begin{Bemerkung}
-  Das bedeutet beispielsweise für die Zersetzung, dass die Wahrscheinlichkeit bei $x+t$ unter der Voraussetzung, noch nicht bei $x$ stattgefunden hat, nicht von $x$ abhängt.\\
+  Das bedeutet beispielsweise für die Zersetzung eines radioaktiven Atoms, dass die Wahrscheinlichkeit sich bei $x+t$ zu zersetzen unter der Voraussetzung, dass diese noch nicht bei $x$ stattgefunden hat, nicht von $x$ abhängt.\\
   Solche Lebensdauern werden als ``alterungslos'' bezeichnet.
 \end{Bemerkung}
 \begin{Bemerkung}
@@ -692,7 +695,13 @@ Warum interessiert uns das? Weil die Binomialverteilung diese symmetrische Kurve
     \item $P(\mu - 3\sigma \leq X \leq \mu + 3\sigma) \approx 99,7\%$
   \end{itemize}
 \end{Theorem}
-\begin{GTR-Tipp}
-  SAME
-\end{GTR-Tipp}
+
+\section{Hypothesen}
+\subsection{Signifikanztests}
+\subsubsection{Einseitiger Test}
+\subsubsection{Zweiseitiger Test}
+\subsection{Hypothesentests}
+\subsubsection{Fehler 1. Art}
+\subsubsection{Fehler 2. Art}
+
 \end{document}

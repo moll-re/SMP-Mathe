@@ -12,20 +12,20 @@
       \clearpage}
 
 
-\newlength{\lmargin}
-\setlength{\lmargin}{1in + \hoffset + \oddsidemargin}
-\newdynamicframe[odd]{2cm}{2cm}{-\lmargin}{6cm}[frameD-1a]
-\newdynamicframe[even]{2cm}{2cm}{\textwidth+\lmargin-1cm}{6cm}[frameD-1b]
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Für Kopf- und Fußzeilen:
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\nouppercase{\leftmark}}
-\fancyhead[R]{\nouppercase{\rightmark}}
-%\fancyfoot[C]{\thepage}
+\fancyhead[LE]{\nouppercase{\leftmark}}
+\fancyhead[RO]{\nouppercase{\rightmark}}
+\fancyfoot[C]{\thepage}
+\let\origdoublepage\cleardoublepage
+\newcommand{\clearemptydoublepage}{%
+  \clearpage
+  {\pagestyle{empty}\origdoublepage}%
+}
 
-
+\let\cleardoublepage\clearemptydoublepage
 
 
 

@@ -3,7 +3,6 @@
 
 \usepackage[scale=.9]{helvet} % or tgheros        %Schriftart
 \renewcommand{\familydefault}{\sfdefault}
-
 \usepackage{subfiles}                              %Kapitel einbinden
 \usepackage{amsmath}		                          %Matheschreibweise...
 \usepackage{amssymb}                              %...Und Symbole
@@ -20,7 +19,7 @@
 \usepackage{tabu}                                 %Bessere Tabellen
 \usepackage{esvect}                               %Schönere Vektoren
 \usepackage{listings}                             %Für Pseudocode/Code...
-\usepackage{esdiff}				%Dérivées french style
+\usepackage{esdiff}				                         %Dérivées french style
 \usepackage{color}                                %...Und dessen Einfärbung
 \usepackage{enumitem}                             %Angepasstes enumerieren
 \usepackage{enumerate}                            %Zeichen der Enumerierung beliebig wählbar
@@ -31,8 +30,6 @@
 \usepackage{stackengine}                          %Zeichen übereinander "stapeln"
 \usepackage{epigraph}                             %Fürs Titelblatt
 \usepackage{tocloft,titletoc,titlesec}            %Fürs Inhaltsverzeichnis
-\usepackage{flowfram}                              %Für die Seitenangabe
-\usepackage{nopageno}                             %Same
 \pgfplotsset{compat=1.14}
 \usetikzlibrary{arrows}
 %\usetikzlibrary{fit}
@@ -45,7 +42,7 @@
   \blankpage
   \setcounter{tocdepth}{1}
   \tableofcontents
-  \include{pagenumbering}
+
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %Kapitel bitte hier einbinden:
   \subfile{../kap1/kap1}
