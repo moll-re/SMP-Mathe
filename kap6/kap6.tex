@@ -20,26 +20,34 @@
 	\paragraph{} Um dieser und anderen Gleichungen eine Lösung zuzuteilen ist es nicht nur notwendig die Zahlenmenge zu erweitern, sondern
 	auch, neue Symbole und Zeichen einzuführen um die neuen Zahlen zu kennzeichnen. Für die $\Z$ ist es das Symbol \dq-\dq, für $\Q$
 	\dq,\dq und $\dfrac{a}{b}$, für $\R$ $\sqrt{a}$ und die Zeichen $\pi$ und $e$ zum Beispiel (auch wenn beide sich anders darstellen lassen). (Ein) gewisse(r) Mathematiker (Leibniz glaube ich) hat entschieden, dass das einzige benötigte Zeichen $i$ sein sollte, da er sie imaginäre Zahl nannte (Für den Fall, dass ich hier ein bisschen was durcheinander bringe, sind Direktverbesserungen kommentarlos erlaubt und erwünscht).
- 	Und dem war so, weshalb nun gilt:
-											$$i \in \C : i^2 = -1; \C \definedBy \R \cup \left\{i\right\}$$
 
-	\begin{Definition}
-		Komplexe Zahlen werden standartmäßig mit dem Buchstaben $z$ dargestellt. Die allgemeine Formel einer solchen Zahl lautet:
+	\begin{Definition}[- Imaginäre Einheit]
+		Die Ikone $i$ der komplexen Zahl trägt den Namen \textbf{imaginäre Einheit} und wird folglich definiert:
+						$$i \in \C : i^2 = -1; \C \definedBy \R \cup \left\{i\right\}$$
+
+	\end{Definition}
+
+	\subsubsection{Algebraische Form}
+
+	\begin{Definition}[- Algebraische Formel]
+		Komplexe Zahlen werden im Allgemeinen mit dem Buchstaben $z$ dargestellt oder aber auch $z_I$, wobei $I$ ein Punkt der Gauß'schen Zahlenebene ist (Weiteres hierzu folgt). Die sogenannte \textbf{algebraische / arithmetische Form} einer solchen Zahl wird wie folgt definiert:
 		\\
 		\begin{tikzpicture}
 			\draw (0,0) node {" "};
 			\draw (7.9, 0) node {$z = x + y \cdot i; x,y \in \R; i \in \C$};
-			\draw[line width=0.8pt][decorate,decoration={brace,amplitude=3pt},rotate around={180:(7.6,-0.25)}] (7.6,-0.25) -- (8.1,-0.25);
+			\draw[line width=0.8pt][decorate,decoration={brace,amplitude=2pt},rotate around={180:(7.3,-0.25)}] (7.3,-0.25) -- (7.6,-0.25);
 			\draw[line width=0.8pt][decorate,decoration={brace,amplitude=2pt},rotate around={180:(6.7,-0.25)}] (6.7,-0.25) -- (7,-0.25);
 		    \draw[line width=0.4pt] (6.55,-0.5) -- (5.1,-1.4) node[color=blue,left] {$Re(z)$};
-		    \draw[line width=0.4pt] (7.35,-0.5) -- (9.2,-1.4) node[color=blue,right] {$Im(z)$};
+		    \draw[line width=0.4pt] (7.15,-0.5) -- (9.2,-1.4) node[color=blue,right] {$Im(z)$};
 		\end{tikzpicture}
 		\\
-		Hierbei wird $x = Re(z)$ Realteil und $y = Im(z)$ und zwar \textbf{nur $y$} Imaginärteil genannt.
+		Hierbei wird $x = Re(z)$ \textbf{Realteil} und $y = Im(z)$ und zwar \textbf{nur $y$ Imaginärteil} genannt.
 	\end{Definition}
 
 	\begin{Bemerkung}
-		Eine Zahl $z = x + yi \in \C$ heißt rein imaginäre Zahl für $x = 0$. Analog dazu wird sie für $y = 0$ als reell bezeichnet.
+		Eine Zahl $z = x + yi \in \C$ heißt \textbf{rein imaginär} für $x = 0$.
+		\\
+		Analog dazu wird sie für $y = 0$ als reell bezeichnet.
 	\end{Bemerkung}
 
 
@@ -138,22 +146,34 @@
 						\Rightarrow \forall z_1, z_2 \in \C: z_1 \otimes z_2 = z_2 \otimes z_1 \quad \text{(Kom}&\text{mutativität)}
 				  \end{align*}
 		\end{enumerate}
+		\newpage
+		\underline{\textbf{Auch Verknüpfungen sind Gesellschaftswesen, gemeinsam glänzen sie}}:
+		\paragraph{} Zu guter Letzt muss das Distributivgesetz gelten: (Bidde schön Frau Rämie mol)
+			\begin{align*}
+				(z_1 \oplus z_2) \otimes z_3 &= ((x_1 + y_1i) \oplus (x_2 + y_2i)) \otimes (x_3 + y_3i) \\
+											 &= ((x_1 + x_2) +  (y_1 + y_2)i) \otimes (x_3 + y_3i) \\
+											 &= ((x_1x_3 + x_2x_3 - y_1y_3 - y_2y_3) + (x_1y_3 + x_2y_3 + y_1x_3 + y_2x_3)i) \\
+											 &= ((x_1x_3 - y_1y_3) + (x_1y_3 + x_3y_1)i) + ((x_2x_3 - y_2y_3) + (x_2y_3 + x_3y_2)i) \\
+											 &= (x_1 + y_1i) \otimes (x_3 + y_3i) \oplus (x_2 + y_2i) \otimes (x_3 + y_3i) \\
+											 &= z_1 \otimes z_3 \oplus z_2 \otimes z_3 \\
+			\Rightarrow \forall z_1, z_2, z_3 \in \C: (z_1 &\oplus z_2) \otimes z_3 = z_1 \otimes z_3 \oplus z_2 \otimes z_3 \quad \text{(Distributivität)}
+			\end{align*}
 	\end{Beweis}
 
-	\newpage
 
 \section{Die Gauß'sche Zahlenebene}
 
+	\subsection{Einleitung}
 
-	\subsection{Hinführung}
+		\subsubsection{Hinführung}
 
-		\paragraph{} Da jetzt der Körper der komplexe Zahlen definiert wurde, gilt es ihn nun in unser bekanntes Zahlensystem zu integrieren.
-		Hierfür kann man zum Beispiel beobachten, wie sich komplexe Zahlen auf der \textbf{reellen Zahlengerade} (welche eine Veranschaulichung des euklidischen Vektorraums $\R^1$ ist) verhalten. Nun sollte erstmal der Begriff des \textbf{Zeiger}s eingeführt werden.
+		\paragraph{} Der Körper der komplexen Zahlen wurde nun definiert, wohingegen der Platz dieser auf unserem allbekannten Zahlensystem schleierhaft bleibt.
+		Um einen Ansatz für eine Integration zu finden, bietet sich an zu beobachten, wie sich komplexe Zahlen auf der \textbf{reellen Zahlengerade} (welche eine Veranschaulichung des euklidischen Vektorraums $\R^1$ ist) verhalten.
 		\\
 		\begin{Definition}
-			Als Zeiger definieren wir ein visuelles Hilfsmittel, welches dem Darstellungsmodul eines Vektors, einem Pfeil, sehr ähnlich ist, jedoch sich durch eine kleine Nuance von Letzterem zu unterscheiden ist.
+			Als \textbf{Zeiger} wird ein visuelles Hilfsmittel definiert, welches in der Gauß'schen Zahlenebene das Analoge zu dem Pfeil eines Ortsvektors eines Vektorraumes ist.
 		\end{Definition}
-		\\
+
 		\begin{center}
 			\begin{tikzpicture}[>=triangle 45]
 				\draw[->,line width=0.8pt] (-5.5,0) -- (6,0) node[above] {$Re(z)$};
@@ -162,9 +182,9 @@
 				\draw[->,line width=0.8pt,color=red] (0,0) -- (3,0);
 			\end{tikzpicture}
 		\end{center}
-		\\
-		\paragraph{} Zunächst muss verstanden werden, welche Transformation jeweils Addition und Multiplikation im $\R^1$ auf reelle Zahlen ausführt. Das lässt sich am einfachsten anhand einer Graphik erklären:
-		\\
+
+		\paragraph{} Addition und Multiplikation mit einem positiven Faktor im $\R^1$ sind nicht von Interesse, wohingegen die Multiplikation mit einem negativen Faktor uns reichlich mehr mitteilt:
+
 		\begin{center}
 			\begin{tikzpicture}[>=triangle 45]
 				\draw[->,line width=0.8pt] (-5.5,0) -- (6,0) node[above] {$Re(z)$};
@@ -184,7 +204,7 @@
 			\end{tikzpicture}
 		\end{center}
 
-		\paragraph{} Da gilt, dass: $i^2 = -1$ ist die Multiplikation einer reellen Zahl mit $i^2$ äquivalent zu einer $180$ - Grad Drehung. Daraus lässt sich schließen, dass die Multiplikation mit $i$ einer $90$ - Grad Drehung entspricht, da: $a \cdot i^2 = a \cdot i \cdot i; a\in\R$ und man davon ausgeht, dass $\cdot(i)$ beides mal dieselbe Transformation anwendet. Somit entsteht eine wunderschöne Ebene, in der alle Zahlen zusammen spielen und sich amüsieren können:
+		\paragraph{} Da gilt, dass: $i^2 = -1$ ist die Multiplikation einer reellen Zahl mit $i^2$ äquivalent zu einer $180$ - Grad Drehung. Daraus lässt sich schließen, dass die Multiplikation mit $i$ einer \textbf{$90$ - Grad Drehung} entspricht, da: $a \cdot i^2 = a \cdot i \cdot i; a\in\R$ und man davon ausgeht, dass $\cdot(i)$ bei jeder Instanz dieselbe Transformation anwendet. Somit entsteht eine wunderschöne Ebene, in der alle Zahlen zusammen spielen und sich amüsieren können:
 		\\
 		\begin{center}
 			\begin{tikzpicture}[>=triangle 45]
@@ -214,29 +234,97 @@
 			\end{tikzpicture}
 		\end{center}
 
-		\paragraph{} Eine komplexe zahl $z = x + yi$ kann somit über einen Zeiger in der Gauß'schen Zahlenebene dargestellt werden. Für $z = 2 + 3i$
-		gilt beispielsweise:
+		\begin{Definition}[- Gauß'sche Zahlenebene]
+			Seien eine reelle Achse mit Einheit 1 und eine imaginäre Achse mit Einheit $i$. Dann nennt sich \textbf{Gauß'sche Zahlenebene} gerade die Ebene, welche als Achsen die zueinander orthogonalen genannten Achsen hat. Konvention ist es, die imaginäre Achse vertikal zu platzieren.
+			\begin{center}
+				\begin{tikzpicture}[>=triangle 45]
+					\draw [step=1cm,lightgray,very thin] (-4.9,-4.9) grid (4.9,4.9);
+					\draw[->,line width=0.8pt] (-5.5,0) -- (5.7,0) node[above] {$Re(z)$};
+					\draw[->,line width=0.8pt] (0,-5.5) -- (0,5.7) node[right] {$Im(z)$};
+					\foreach  \x in {-5,...,-1,1,2,...,5}
+		                \draw [line width=0.8pt] (\x,0.1) -- (\x,-0.1) node[below] {$\x$};
+		            \foreach  \x in {-5,...,-2,2,3,...,5}
+		                \draw [line width=0.8pt] (-0.1,\x) -- (0.1,\x) node[right] {$\x i$};
+					\draw[line width=0.8pt] (-0.1,1) -- (0.1,1) node[right] {$i$};
+					\draw[line width=0.8pt] (-0.1,-1) -- (0.1,-1) node[right] {$-i$};
+					\draw[line width=0.8pt] (-0.2,-0.2) node {$O$};
+					\draw[->,line width=1.5pt,color=red,dashed] (0,0) -- (2,0);
+					\draw[->,line width=1.5pt,color=red,dashed] (2,0) -- (2,3);
+					\draw[->,line width=1.5pt,color=red] (0,0) -- (2,3);
+					\draw[line width=1.3pt,color=red] (1,0.3) node {$2$};
+					\draw[line width=1.3pt,color=red] (1.65,0.9) node {$+$};
+					\draw[line width=1.3pt,color=red] (2.3,1.5) node {$3i$};
+					\draw[line width=1.3pt,color=red] (0.85,2.35) node {$2 + 3i$};
+					\draw[line width=0.8pt] (2.25,3.25) node {$A$};
+					\draw[line width=0.8pt,fill=black] (2,3) circle (1.5pt);
+				\end{tikzpicture}
+			\end{center}
+		\end{Definition}
 
-		\begin{center}
-			\begin{tikzpicture}[>=triangle 45]
-				\draw[->,line width=0.8pt] (-5.5,0) -- (5.7,0) node[above] {$Re(z)$};
-				\draw[->,line width=0.8pt] (0,-5.5) -- (0,5.7) node[right] {$Im(z)$};
-				\foreach  \x in {-5,...,-1,1,2,...,5}
-	                \draw [line width=0.8pt] (\x,0.1) -- (\x,-0.1) node[below] {$\x$};
-	            \foreach  \x in {-5,...,-1,1,2,...,5}
-	                \draw [line width=0.8pt] (-0.1,\x) -- (0.1,\x) node[right] {$\x i$};
-				\draw[line width=0.8pt] (-0.2,-0.2) node {$O$};
-				\draw[->,line width=1.5pt,color=red,dashed] (0,0) -- (2,0);
-				\draw[->,line width=1.5pt,color=red,dashed] (2,0) -- (2,3);
-				\draw[->,line width=1.5pt,color=red] (0,0) -- (2,3);
-				\draw[line width=1.3pt,color=red] (1,0.3) node {$2$};
-				\draw[line width=1.3pt,color=red] (1.65,0.9) node {$+$};
-				\draw[line width=1.3pt,color=red] (2.3,1.5) node {$3i$};
-				\draw[line width=1.3pt,color=red] (0.85,2.35) node {$2 + 3i$};
-			\end{tikzpicture}
-		\end{center}
+		\begin{Bemerkung}
+			Da jede komplexe Zahl eine Darstellung in der Gauß'schen Zahlenebene besitzt, lassen sie sich ebenfalls über einen Winkel und den Abstand zum Origo beschreiben.
+		\end{Bemerkung}
 
-	\subsection{Rechenoperationen}
+		\begin{Definition}[- Betrag einer komplexen Zahl]
+			Der \textbf{Betrag} einer komplexen Zahl ist gleichbedeutend mit dem \textbf{Abstand der Zahl zum Origo} oder der Länge des Zeigers. Pythagoras liefert uns eine Formel:
+													$$|z| \defeq \sqrt{x^2 + y^2} ; z = x + yi$$
+		\end{Definition}
+
+		\begin{Definition}[- Argument einer komplexen Zahl]
+			Das \textbf{Argument} einer komplexen Zahl ist gleichbedeutend mit dem \textbf{Winkel der Zahl}, welcher der Zeiger mit der \glqq rechten Hälfte\grqq der reellen Achse einschließt (im mathematischen Sinn und modulo $2\pi$). Pythagoras liefert uns weitere Formeln:
+
+			\begin{enumerate}[1)]
+				\item 1. und 3. Quadrant: $$arg(z) \definedBy \tan^{-1}\left(\dfrac{y}{x}\right) + \dfrac{\pi}{2} \cdot (\text{Quadrant} - 1) ; z = x + yi$$
+				\item 2. und 4. Quadrant: $$arg(z) = \tan^{-1}\left(\dfrac{x}{y}\right) + \dfrac{\pi}{2} \cdot (\text{Quadrant} - 1) ; z = x + yi$$
+			\end{enumerate}}
+
+		\end{Definition}
+
+		\begin{Definition}[- Betrag-Winkel Form]
+			Als \textbf{Betrag-Winkel Form} wird eine Darstellungsform einer komplexen Zahl definiert, welche diese explizit über deren Argument und Betrag definiert. Sie ist keine offizielle Darstellungsweise einer komplexen Zahl, jedoch bringt sie uns der nächsten wichtigen näher und fasst die zwei vorangehenden Definitionen zusammen.
+													$$z = |z|_{arg(z)}; z \in \C$$
+		\end{Definition}
+
+	\subsection{Polarform}
+
+		\begin{Definition}[- Polarform]
+			Die \textbf{Polarform} einer komplexen Zahl definiert diese Zahl (wie auch die Betrag-Winkel Form) über deren \textbf{Argument und Betrag}.
+													$$z = |z| \cdot (\cos(arg(z)) + \sin(arg(z))i)$$
+		\end{Definition}
+
+		\begin{Beweis}
+			Nach dem Satz von Pythagoras gilt $\forall z = x + yi ; z \in \C$:
+			\\\\
+			\begin{minipage}{0.29\textwidth}
+				\text{ }
+			\end{minipage}
+			\begin{minipage}{0.71\textwidth}
+				\Rightarrow		\begin{vmatrix}
+							  	  	\dfrac{x}{|z|} &= \cos(arg(z)) 	   \\
+							  	  	\dfrac{y}{|z|} &= \sin(arg(z)) 	   \\
+							  	  			   |z| &= \sqrt{x^2 + y^2} \\
+							  	\end{vmatrix}
+				\\\\
+				\Leftrightarrow \begin{vmatrix}
+									  x &= \cos(arg(z)) \cdot |z| \\
+									  y &= \sin(arg(z)) \cdot |z| \\
+						   			|z| &= \sqrt{x^2 + y^2} 	  \\
+					  			\end{vmatrix}
+			\end{minipage}
+			\\\\
+			\abovedisplayskip=-\baselineskip
+			\belowdisplayskip=0pt
+			\abovedisplayshortskip=-\baselineskip
+			\belowdisplayshortskip=0pt
+			\begin{align*}
+				\Rightarrow z &= x + yi \\
+							  &= \cos(arg(z)) \cdot |z| + (\sin(arg(z)) \cdot |z|)i \\
+							  &= |z| \cdot (\cos(arg(z)) + \sin(arg(z))i)
+			\end{align*}
+
+		\end{Beweis}
+
+	\subsection{Rechenoperationen in der Gauß'schen Zahlenebene}
 
 		\paragraph{} Die bereits angesprochenen basischen Rechenoperationen lassen sich in der Gauß'schen Zahlenebene als Transformation darstellen. Weshalb dies interessant ist, wird im Verlauf dieses Abschniits hoffentlich noch deutlich.
 		\paragraph{} Die Addition ist die einfachste Transformation, weil sie equivalent zur Linearkombination bei Vektoren ist, da gilt: $$(z_1 + z_2) = ((x_1 + x_2) + (y_1 + y_2)i)$$ Bildlich bedeutet das:

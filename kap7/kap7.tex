@@ -174,24 +174,44 @@ $E$ bezeichnet das Erfolgs-Ereignis, $\overline{E}$ bezeichnet somit den Miserfo
 
 
 \subsection{Das Pascal'sche Dreieck}
+
 \begin{center}
-  \begin{array}{c}
-    (1)
-    \\\\
-    (1) \qquad (1)
-    \\\\
-    (1) \qquad (2) \qquad (1)
-    \\\\
-    (1) \qquad (3) \qquad (3) \qquad (1)
-    \\\\
-    (1) \qquad (4) \qquad (6) \qquad (4) \qquad (1)
-    \\\\
-    (1) \qquad (5) \qquad (10) \qquad (10) \qquad (5) \qquad (1)
-    \\\\
-    (1) \qquad (6) \qquad (15) \qquad (21) \qquad (15) \qquad (6) \qquad (1)
-    \\\\
-    (1) \qquad (7) \qquad (21) \qquad (35) \qquad (35) \qquad (21) \qquad (7) \qquad (1)
-  \end{array} % Und immer so weiter ...
+  \definecolor{honeyComb}{rgb}{1,0.85,0}
+  \definecolor{honeyComb2}{rgb}{0.9,0.7,0}
+  \definecolor{honey}{rgb}{0.9,0.55,0}
+  \begin{tikzpicture}
+
+    \foreach \x/\y in {0/0,   0.916/-1.58, -0.916/-1.58,   1.832/-3.16, 0/-3.16, -1.832/-3.16,   2.748/-4.74, -0.916/-4.74, 0.916/-4.74, -2.748/-4.74,   3.664/-6.32, 1.832/-6.32, 0/-6.32, -1.832/-6.32, -3.664/-6.32,   4.58/-7.9, 2.748/-7.9, 0.916/-7.9, -0.916/-7.9, -2.748/-7.9, -4.58/-7.9}
+      \draw[line width=0.8pt,color=honeyComb,fill=honeyComb] (\x,\y) -- (\x + 0.866,\y - 0.5) -- (\x + 0.866,\y - 1.5) -- (\x,\y - 2) -- (\x - 0.866,\y - 1.5) -- (\x - 0.866,\y - 0.5) -- (\x,\y) -- cycle;
+
+    \foreach \x/\y in {0/0,   0.916/-1.58, -0.916/-1.58,   1.832/-3.16, 0/-3.16, -1.832/-3.16,   2.748/-4.74, -0.916/-4.74, 0.916/-4.74, -2.748/-4.74,   3.664/-6.32, 1.832/-6.32, 0/-6.32, -1.832/-6.32, -3.664/-6.32,   4.58/-7.9, 2.748/-7.9, 0.916/-7.9, -0.916/-7.9, -2.748/-7.9, -4.58/-7.9}
+      \draw[line width=0.8pt,color=honeyComb2,fill=honeyComb2] (\x,\y - 0.3) -- (\x + 0.606,\y - 0.65) -- (\x + 0.606,\y - 1.35) -- (\x,\y - 1.7) -- (\x - 0.606,\y - 1.35) -- (\x - 0.606,\y - 0.65) -- (\x,\y - 0.3) -- cycle;
+
+    \foreach \x/\y/\z in {0/0/1,   0.916/-1.58/1, -0.916/-1.58/1,   1.832/-3.16/1, 0/-3.16/3, -1.832/-3.16/1,   2.748/-4.74/1, -0.916/-4.74/2, 0.916/-4.74/3, -2.748/-4.74/1,   3.664/-6.32/1, 1.832/-6.32/4, 0/-6.32/6, -1.832/-6.32/4, -3.664/-6.32/1,   4.58/-7.9/1, 2.748/-7.9/5, 0.916/-7.9/10, -0.916/-7.9/10, -2.748/-7.9/5, -4.58/-7.9/1}
+      \draw[line width=0.8pt,color=white] (\x,\y-1) node[thick, font=\fontsize{18}{0}\selectfont, thick] {\z};
+
+    \draw[line width=3.5pt,color=honey] (0,1) -- (0,0) -- (0.916,-0.5) -- (0.916,-1.5) -- (0,-2) -- (-0.916,-1.5) -- (-0.916,-0.5) -- (0,0);
+    \draw[line width=3.5pt,color=honey] (0,-2) -- (0,-3.08) -- (0.916,-3.62) -- (0.916,-4.66) -- (0,-5.22) -- (0,-6.26) -- (-0.916,-6.82) -- (-0.916,-7.86) -- (-1.832,-8.4) -- (-1.832,-9.44) -- (-0.916,-9.98) -- (-0.916,-10.3);
+    \draw[line width=3.5pt,color=honey,fill=honey] (-0.916,-10.3) -- (-0.77,-10.6) -- (-1.062,-10.6) -- cycle;
+    \draw[line width=3.5pt,color=honey,fill=honey] (-0.77,-10.6) arc (40:-220:0.2);
+  \end{tikzpicture}
+  %\begin{array}{c}
+    %(1)
+    %\\\\
+    %(1) \qquad (1)
+    %\\\\
+    %(1) \qquad (2) \qquad (1)
+    %\\\\
+    %(1) \qquad (3) \qquad (3) \qquad (1)
+    %\\\\
+    %(1) \qquad (4) \qquad (6) \qquad (4) \qquad (1)
+    %\\\\
+    %(1) \qquad (5) \qquad (10) \qquad (10) \qquad (5) \qquad (1)
+    %\\\\
+    %(1) \qquad (6) \qquad (15) \qquad (21) \qquad (15) \qquad (6) \qquad (1)
+    %\\\\
+    %(1) \qquad (7) \qquad (21) \qquad (35) \qquad (35) \qquad (21) \qquad (7) \qquad (1)
+  %\end{array} % Und immer so weiter ...
 \end{center}\\
 Bekannt aus der Mittelstufe. Es ergibt sich, wenn man die Summe von zwei Werten eine Stufe tiefer, zwischen die beiden Werte schreibt. Es wird vor Allem für Binomialkoeffizienten verwendet, findet aber auch in der Wahrscheinlichkeitsrechnung Verwendung.
 
@@ -380,7 +400,6 @@ Daraus ergibt sich die korrekte Darstellung als Baumdiagramm:\\
     \item $!\exists P(e_i) \forall e_i \in S$
     \item $0 \leq P(e_i)\leq 1 \forall i \leq n$
     \item $P(e_1)+P(e_2)+...+P(e_n)=1$
-    \item ?
   \end{itemize}
 \end{Definition}\\
 \underline{Darstellung:}\\
@@ -435,7 +454,10 @@ Daraus ergibt sich die korrekte Darstellung als Baumdiagramm:\\
 \end{Theorem}
 \begin{Bemerkung}
   \begin{Definition}
-    $X$ heißt in diesem Fall \textbf{binomialverteilte Zufallsvariable}. Die entsprechende Wahrscheinlichkeitsverteilung heißt Binomialverteilung $B_{l,p}(k)$. $l$ ist die Länge der Bernoulli-Kette, $p$ die Erfolgswahrscheinlichkeit und $k$ ist die gewünschte Anzahl an Erfolgen.
+    $X$ heißt in diesem Fall \textbf{binomialverteilte Zufallsvariable}. Die entsprechende Wahrscheinlichkeitsverteilung heißt Binomialverteilung. Es gilt $P(X=k) =  B_{l,p}(k)$.\\
+    Die kumulierte Binomialverteilung wird durch ist gegeben durch: $P(X \leq k) = F_{l,p}(k)$.\\
+     $l$ ist die Länge der Bernoulli-Kette, $p$ die Erfolgswahrscheinlichkeit und $k$ ist die gewünschte Anzahl an Erfolgen.
+
   \end{Definition}
 \end{Bemerkung}
 \begin{GTR-Tipp}
@@ -476,15 +498,16 @@ Daraus ergibt sich die korrekte Darstellung als Baumdiagramm:\\
     \begin{align*}
       E(x)  &= \sum_{k=0}^{n} x_k \cdot P(X=x_k)\\
             &= \sum_{k=0}^{n} k  {n \choose k} p^k (1-p)^{n-k}\\
-            &= \sum_{k=0}^{n} \cdot k \dfrac{n!}{n-k)!k!} \cdot p^k (1-p)^{n-k}\\
-            &= n\cdot p\cdot \sum_{k=0}^{n} k \dfrac{(n-1)!}{n-k-1)!k!}  p^{k-1} (1-p)^{n-k}\\
+            &= \sum_{k=0}^{n} \cdot k \dfrac{n!}{(n-k)!k!} \cdot p^k (1-p)^{n-k}\\
+            &= n\cdot p\cdot \sum_{k=0}^{n} k \dfrac{(n-1)!}{(n-k-1)!k!}  p^{k-1} (1-p)^{n-k}\\
             &= n\cdot p\cdot \sum_{k=0}^{n} k  {n-1 \choose k-1} p^k (1-p)^{n-k}\\
             &= n\cdot p\cdot \sum_{k=1}^{n} k  {n-1 \choose k-1} p^k (1-p)^{n-k}\\
+            &= n\cdot p \cdot 1\\
             &= n\cdot p
     \end{align*}
   \end{center}
   \begin{Bemerkung}
-    Der Startindex der Summe kann verändert werden, da die kumulierte Wahrscheinlichkeite sich nicht verändert. Für $k=0$ ist ${n-1\choose k-1}=0$.
+    Der Startindex der Summe kann verändert werden, da die kumulierte Wahrscheinlichkeit sich nicht verändert. Für $k=0$ ist ${n-1\choose k-1}=0$.
   \end{Bemerkung}
 \end{Beweis}
 
@@ -513,7 +536,7 @@ Manche Ereignisse lassen sich nicht als ganze Zahl modellieren oder können nich
 \begin{Definition}[- Stetige Zufallsvariable]
   Sei $P$ eine Wahrscheinlichkeitsverteilung über $I$ mit Dichtefunktion $f$.\\
   \begin{itemize}
-    \item Eine Zufallsvariable $X$ mit Werten in $I$ folgt der Wahrscheinlichkeitsverteilung $P$, wenn gilt: $$P(c\leq X \leq d)=\displaystyle \int_c^d f(t)dt$$
+    \item Eine Zufallsvariable $X$ mit Werten Auswahl $I$ folgt der Wahrscheinlichkeitsverteilung $P$, wenn gilt: $$P(c\leq X \leq d)=\displaystyle \int_c^d f(t)dt$$
     \item Die Verteilungsfunktion $F$ ist definiert durch $F(X)=P(X\leq x)=P(a\leqX\leq x)=\displaystyle\int_a^x f(t)dt$
   \end{itemize}
 \end{Definition}
@@ -522,18 +545,92 @@ Manche Ereignisse lassen sich nicht als ganze Zahl modellieren oder können nich
   \begin{itemize}
     \item $F$ ist differenzierbar und $F'=f$
     \item $F$ ist monoton steigend auf $I$
-    \item Für $h>0$ und $x+h\in I$ gilt: $P(x\leqX\leqx+h) = F(x+h)-F(x)$.(Gleichbedeutend mit der Aussage $P(c\leq X\leq d)=F(d)-F(c)$)
+    \item Für $h>0$ und $x+h\in I$ gilt: $P(x\leqX\leqx+h) = F(x+h)-F(x)$.\\(Gleichbedeutend mit der Aussage $P(c\leq X\leq d)=F(d)-F(c)$)
   \end{itemize}
 \end{Bemerkung}
 \begin{Definition}[- Erwartungswert]
   Sei $X$ eine Zufallsvariable mit Werten aus $I= [a;b]$. Der Erwartungswert ist gegeben durch:
   $$E(X)=\mu=\int_a^b t\cdot f(t)dt$$
 \end{Definition}
-\subsection{Uniformverteilung}
+\begin{Definition}[- Varianz]
+  Sei $X$ eine Zufallsvariable mit Werten aus $I= [a;b]$. Die Varianz ist gegeben durch:
+  $$\sigma^2=\int_a^b (t-\mu)^2 \cdot f(t)dt$$
+\end{Definition}
 
-\subsection{Exponentialverteilung}
+\subsection{Exponentialverteilung: $X \sim \mathcal{E}(\lambda)$}
+\begin{Definition}
+  Eine stetige Zufallsvariable $X$ hat eine Exponentialverteilung wenn $X$ die folgende Wahrscheinlichkeitsdichte hat:
+  $$f_\lambda (x) = \lambda e^{-\lambda x}$$
+  $f_\lambda(x)$ heißt Dichtefunktion der Exponentialverteilung.
+\end{Definition}
+\begin{Bemerkung}
+  Diese Funktion erfüllt die Bedingungen der Wahrscheinlichkeitsverteilung, denn sie ist auf $\R_{+}$ definiert und stetig. Außerdem gilt: $\displaystyle \int_0^\infty f_\lambda dt = 1$.
+\end{Bemerkung}
+\begin{Definition}
+  Die Verteilungsfunktion der Exponentialverteilung ist gegeben durch:
+  $$P(X \leq x) = F_\lambda(x) = \int_{0}^{x} f_\lambda(t) dt = 1 - e^{-\lambda x}$$
+\end{Definition}
+\begin{Bemerkung}
+  Solche Funktionen werden verwendet, um Halbwärtszeiten oder Lebensdauern zu modellieren.
+\end{Bemerkung}
+\begin{Theorem}[- Gedächtnislosigkeit]
+  Für eine exponentialverteilte Zufallsvariable $X$ gilt folgende Eigenschaft:
+  $$P_{(X \geq x)}(X \geq x+t) = P(X \geq t)\qquad \forall t,x \geq 0$$
+\end{Theorem}
+\begin{Bemerkung}
+  Das bedeutet beispielsweise für die Zersetzung eines radioaktiven Atoms, dass die Wahrscheinlichkeit sich bei $x+t$ zu zersetzen unter der Voraussetzung, dass diese noch nicht bei $x$ stattgefunden hat, nicht von $x$ abhängt.\\
+  Solche Lebensdauern werden als ``alterungslos'' bezeichnet.
+\end{Bemerkung}
+\begin{Bemerkung}
+  Die Gedächtnislosigkeit ist definierte Eigenschaft der Exponentialverteilung. (Es handelt sich somit um eine notwendige und hinreichende Bedingung)
+\end{Bemerkung}
+\begin{Beweis}
+  \begin{align*}
+    P_{(X \geq x)}(X \geq x+t) &= \dfrac{P((X \geq x)\cap(X \geq x+t))}{P(X \geq x)}\\
+    &= \dfrac{P(X \geq x+t)}{P(X \geq x)}\\
+    &= \dfrac{1-(1-e^{-\lambda(x+t)})}{1-(1-e^{-\lambda x})}\\
+    &= \dfrac{e^{-\lambda(x+t)}}{e^{-\lambda x}}\\
+    &= e^{-\lambda t}\\
+    &= 1-(1-e^{-\lambda(t)})\\
+    &= P(X \geq t)
+  \end{align*}
+\end{Beweis}
+\begin{Theorem}[- Erwartungswert]
+  Für die Exponentialverteilung gilt:
+  $$ \mu = \dfrac{1}{\lambda}$$
+\end{Theorem}
+\begin{Beweis}
+  \begin{align*}
+    \mu &= \int_0^{\infty} t \cdot f_\lambda (t)dt\\
+    &= \int_0^{\infty} t \cdot \lambda e^{-\lambda t} dt\\
+    &= \left[-t \cdot e^{-\lambda t}\right]_0^\infty - \int_0^{\infty} -1 \cdot e^{-\lambda t} dt\\
+    &= \left[-t \cdot \lambda e^{-\lambda t}\right]_0^\infty - \left[\dfrac{1}{\lambda} e^{-\lambda t}\right]_0^\infty\\
+    &= 0-0-\left(0-\dfrac{1}{\lambda})\right\\
+    &= \dfrac{1}{\lambda}
+  \end{align*}
+\end{Beweis}
+\begin{Theorem}[- Varianz]
+  Für die Exponentialverteilung gilt:
+  $$ \sigma^2 = \dfrac{1}{\lambda^2}$$
+\end{Theorem}
+\begin{Beweis}
+  \begin{align*}
+    \sigma^2 &= \int_0^{\infty} (t-\mu)^2 \cdot f_\lambda (t)dt\\
+    &= \int_0^{\infty} (t-\mu)^2 \cdot \lambda e^{-\lambda t} dt\\
+    &= \int_0^{\infty} t^2 \cdot \lambda e^{-\lambda t} dt - \int_0^{\infty} 2\mu t \cdot \lambda e^{-\lambda t} dt + \int_0^{\infty} \mu^2 \cdot \lambda e^{-\lambda t} dt\\
+    &= \left[-t^2 \cdot e^{-\lambda t}\right]_0^\infty - \int_0^{\infty} -2t \cdot e^{-\lambda t} dt - \left(\left[-2\mu t \cdot e^{-\lambda t}\right]_0^\infty - \int_0^{\infty} -2\mu \cdot e^{-\lambda t} dt \right) + \left[-\mu^2 \cdot e^{-\lambda t}\right]_0^\infty \\
+    &= \left[-t^2 \cdot e^{-\lambda t}\right]_0^\infty - \left(\left[ \dfrac{2t}{\lambda} e^{-\lambda t}\right]_0^\infty - \int_0^{\infty} \dfrac{1}{\lambda} \cdot e^{-\lambda t} dt\right) - \left(\left[-2\mu t \cdot e^{-\lambda t}\right]_0^\infty - \left[\dfrac{2\mu}{\lambda} \cdot e^{-\lambda t}\right]_0^\infty \right) + \left[-\mu^2 \cdot e^{-\lambda t}\right]_0^\infty \\
+    &= \left[-t^2 \cdot e^{-\lambda t}\right]_0^\infty - \left[\dfrac{2t}{\lambda} e^{-\lambda t}\right]_0^\infty + \left[-\dfrac{2}{\lambda^2} e^{-\lambda t}\right]_0^\infty - \left[-2\mu t \cdot e^{-\lambda t}\right]_0^\infty + \left[\dfrac{2\mu}{\lambda} \cdot e^{-\lambda t}\right]_0^\infty + \left[-\mu^2 \cdot e^{-\lambda t}\right]_0^\infty \\
+    &= 0 - 0 -(0 - 0) + 0 + \dfrac{2}{\lambda^2} - (0-0) + 0 - \dfrac{2\mu}{\lambda} + 0 + \mu^2 \qquad\qquad\qquad \left|\mu = \dfrac{1}{\lambda}\\
+    &= \dfrac{2}{\lambda^2} - \dfrac{2}{\lambda^2} + \dfrac{1}{\lambda^2}\\
+    &= \dfrac{1}{\lambda^2}
+  \end{align*}
+\end{Beweis}
+\begin{Bemerkung}
+  $\Rightarrow \sigma = \sqrt{\dfrac{1}{\lambda^2}} = \dfrac{1}{\lambda} = \mu$
+\end{Bemerkung}
 
-\subsection{Normalverteilung}
+\subsection{Normalverteilung: $X \sim \mathcal{N}(\mu,\sigma^2)$}
 \begin{Definition}
 Eine stetige Zufallsvariable $X$ hat eine (Gauß- oder) Normalverteilung mit Erwartungswert $\mu$ und Varianz $\sigma ^{2}$ wenn $X$ die folgende Wahrscheinlichkeitsdichte hat:
 $$\varphi_{\mu,\sigma^2}(x) = f(x) = \dfrac {1}{\sqrt {2\pi \sigma^2}}} \cdot e^{- \dfrac{1}{2} {\left(\dfrac{x-\mu}{\sigma}\right)}^2} \qquad$$
@@ -541,12 +638,12 @@ $\varphi(x)$ ist die Dichtefunktion der Normalverteilung.
 \end{Definition}
 \begin{Definition}
   Die Verteilungsfunktion der Normalverteilung ist gegeben durch:
-  $$\Phi_{\mu,\sigma^2}(x) = \int_{-\infty}^{x} \varphi_{\mu,\sigma^2}(x) dx$$
+  $$P(X\leq x) = \Phi_{\mu,\sigma^2}(x) = \int_{-\infty}^{x} \varphi_{\mu,\sigma^2}(t) dt$$
   Durch Substitution erhält man:
   $$\Phi_{\mu,\sigma^2}(x) = \dfrac{1}{\sqrt{2\pi}}\int_{-\infty}^{x} e^{-\frac{1}{2}t^2} dt$$
 \end{Definition}
 \begin{Bemerkung}
-  Diese Definition ist somit analog zur Definition der Verteilungsfunktion der Binomialverteilung (Summe der Flächen).\\
+  Diese Definition ist somit analog zur Definition der Verteilungsfunktion der Binomialverteilung (Integral als Summe der Flächen).\\
   Außerdem bedeutet das, dass $\Phi(x)  \xrightarrow{\scriptscriptstyle x\rightarrow \infty} 1$.
 \end{Bemerkung}
 \begin{GTR-Tipp}
@@ -571,8 +668,9 @@ $\varphi(x)$ ist die Dichtefunktion der Normalverteilung.
   Andersherum kann die Größe von $I$ berechnet werden über:
   $$ z= \Phi^{-1} \left(\dfrac{P+1}{2}\right)$$
 \end{Bemerkung}
-
-
+\begin{GTR-Tipp}
+  Diese Berechnung kann auch vom GTR getätigt werden: Im Menü \textt{DISTR} wählt man \texttt{invNorm()} aus, und gibt in der Eingabe die Fläche (also die Wahrscheinlichkeit), $\mu$ und $\sigma$ an. Man erhält somit die Breite des Intervalls, und kann dies wieder in Abhängigkeit von $\sigma$ angeben.
+\end{GTR-Tipp}
 
 
 
@@ -597,7 +695,13 @@ Warum interessiert uns das? Weil die Binomialverteilung diese symmetrische Kurve
     \item $P(\mu - 3\sigma \leq X \leq \mu + 3\sigma) \approx 99,7\%$
   \end{itemize}
 \end{Theorem}
-\begin{GTR-Tipp}
-  SAME
-\end{GTR-Tipp}
+
+\section{Hypothesen}
+\subsection{Signifikanztests}
+\subsubsection{Einseitiger Test}
+\subsubsection{Zweiseitiger Test}
+\subsection{Hypothesentests}
+\subsubsection{Fehler 1. Art}
+\subsubsection{Fehler 2. Art}
+
 \end{document}
