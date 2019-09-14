@@ -11,11 +11,6 @@ Folgen können auch nur für Teilbereiche von $\N$ definiert sein.\\
 $(a_{n})_{n\in\N}$ bezeichnet die Folge, wobei $a:\N\rightarrow\R$
 \end{Definition}
 
-\begin{Bemerkung}
-In einem Ausdruck muss das $n$ immer dasselbe bleiben!
-\end{Bemerkung}
-
-
 \begin{GTR-Tipp}
 \\
 Um statt Funktionen Folgen zu behandeln:
@@ -45,7 +40,7 @@ Wenn ein beliebiges Glied der Folge direkt berechenbar ist, ist ihre Darstellung
 	\begin{enumerate}
 		\item $a_{n}=3^n \Rightarrow a_{4}=3^4=81$
 		\item Die Folge der $n-ten$ positiven, ungeraden Zahl:\\
-		$a_{n}=1+2\cdot(n-1) \Rightarrow$ Die 8. positive, ungerade Zahl ist $ a_{8}=1+2\cdot(8-1)=15$
+		$a_{n}=2\cdot(n-1)+1 \Rightarrow$ Die 8. positive, ungerade Zahl ist $ a_{8}=2\cdot(8-1)+1=15$
 	\end{enumerate}
 \end{Beispiel}
 
@@ -59,13 +54,13 @@ In diesen Fällen braucht man immer ein Startglied, oft $a_{0}$ oder $ a_{1}$.
 
 \begin{Beispiel}
 \begin{enumerate}
-\item  $a_{n}=3\cdot a_{n-1}+2;a_{0}=5$\\
+\item  $a_{n}=3\cdot a_{n-1}+2;\;a_{0}=5$\\
 \indent$a_{1}=3\cdot a_{1-1}+2=3\cdot a_{0}+2=3\cdot5+2=17$\\
 \indent$a_{2}=3\cdot a_{2-1}+2=3\cdot a_{1}+2=3\cdot17+2=53$\\
 \indent$a_{3}=3\cdot a_{3-1}+2=3\cdot a_{2}+2=3\cdot53+2=159$\\
 \indent und so weiter...
 \item Die Folge der $n-ten$ positiven, ungeraden Zahl:\\
-$a_{n}=a_{n-1}+2;a_{1}=1$
+$a_{n}=a_{n-1}+2;\;a_{1}=1$
 \end{enumerate}
 \end{Beispiel}
 
@@ -144,7 +139,7 @@ ytick={-2,-1,...,10},]
 \end{tikzpicture}
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
-Dann trägt man den Wert des ersten Folgegliedes auf die Abzissenachse ein und verbindet ihn mit der entsprechenden Funktion anhand eines vertikalen Striches. Der Ordinatenwert, der so erhalten wird (Punkt \textcolor{blue}{A}), entspricht dem Wert von $a_1$. Um den Vorgang erneuern zu können, muss der gefundene Wert wieder auf die Abzissenachse, dazu benutzt man die Hauptdiagonale als \"Spiegel". Ein horizontaler Strich bis zur Hauptdiagonale (zum Punkt \textcolor{blue}{B})  und ein vertikaler bis zur Abzissenachse lösen das Problem. So ist der Wert von $a_1$ aud der Abzissenachse, dort wird er für den nächsten Schritt benötigt.
+Dann trägt man den Wert des ersten Folgegliedes auf die Abzissenachse ein und verbindet ihn mit der entsprechenden Funktion anhand eines vertikalen Striches. Der Ordinatenwert, der so erhalten wird (Punkt \textcolor{blue}{A}), entspricht dem Wert von $a_1$. Um den Vorgang erneuern zu können, muss der gefundene Wert wieder auf die Abzissenachse, dazu benutzt man die Hauptdiagonale als \" Spiegel". Ein horizontaler Strich bis zur Hauptdiagonale (zum Punkt \textcolor{blue}{B})  und ein vertikaler bis zur Abzissenachse lösen das Problem. So ist der Wert von $a_1$ aud der Abzissenachse, dort wird er für den nächsten Schritt benötigt.
 \end{minipage}
 \\\\\\
 Dasselbe muss mehrmals wiederholt werden, so wird jeweils das nächste Folgeglied auf die Abzissenachse abgebildet (\textcolor{red}{rote} Punkte). Daraus kann man dann eine \textcolor{blue}{Tendenz} erkennen\textcolor{blue}{, die die Entwicklung der Folgeglieder beschreibt}. Je nach dem, was für eine Tendenz zu erkennen ist, kann man verschiedene Schlüsse bezüglich der Entwicklung der Folge schließen. In diesem Falle wird deutlich, dass die Folge konvergiert, der Grenzwert ist die Schnittstelle zwischen der Hilfsfunktion und der Hauptdiagonalen, es fehlt nur noch diesen zu berechnen.
@@ -207,7 +202,8 @@ $$g=x_1$$
 \\\\\\
 Es gibt andere mögliche Tendenzen, hier ein paar Beispiele:\\\\
 \begin{minipage}{0.5\textwidth}
-Die divergierende Treppe, es gibt also keinen Grenzwert, man kann den uneigendlichen Grenzwert aber ablesen, hier ist der Grenzwert der Folge $a_n$ mit $a_{n+1}=-\dfrac{3}{2}a_n-4$ und $a_0=5$: $-\infty$
+Die divergierende Treppe, es gibt also keinen Grenzwert, man kann den uneigendlichen Grenzwert aber ablesen, hier ist der Grenzwert der Folge $a_n$\\
+ (mit $a_{n+1}=-\dfrac{3}{2}a_n-4$ und $a_0=5$) $-\infty$
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
 \definecolor{rvwvcq}{rgb}{0.08235294117647059,0.396078431372549,0.7529411764705882}
@@ -344,11 +340,11 @@ Eine Folge wird arithmetisch genannt, wenn die Differenz zweier aufeinander folg
 \end{Definition}
 
 \begin{Bemerkung}
-Letzteres gilt auch für beliebige Folgeglieder, also ist $a_{n}=a_{p}+(n-p)\cdot d;n,p\in\N$
+Letzteres gilt auch für beliebige Folgeglieder, also ist $a_{n}=a_{p}+(n-p)\cdot d;\;n,p\in\N$
 \end{Bemerkung}
 
 \begin{Beispiel}
-$a_{n}=a_{n-1}+3;a_{0}=0\Leftrightarrow a_{n}=0+n\cdot3$
+$a_{n}=a_{n-1}+3;\;a_{0}=0\Leftrightarrow a_{n}=0+n\cdot3=3n$
 \end{Beispiel}
 
 \begin{Bemerkung}
@@ -388,8 +384,8 @@ Jedes Folgeglied einer solchen Folge ist das geometrische Mittel seines Vorgäng
 	\subsection{Monotonie}
 
 \begin{Definition}
-Eine Folge $(a_n)_n\in\N$ heißt monoton \begin{cases} \text{\textcolor{red}{steigend/wachsend}}\\\text{\textcolor{orange}{fallend/abnehmend}}\end{cases} wenn \begin{cases} \textcolor{red}{a_{n+1}\geq a_n}\\\textcolor{orange}{a_{n+1}\leq a_n}\end{cases}.\\\\
-Gelten dabei sagar \textbf{strikte} Ordnungsrelationen ($>$ oder $<$), dann ist $(a_n)$ \textbf{streng} monoton wachsend beziehungsweise abnehmend.
+Eine Folge $(a_n)_{n\in\N}$ heißt monoton \begin{cases} \text{\textcolor{red}{steigend/wachsend}}\\\text{\textcolor{orange}{fallend/abnehmend}}\end{cases} wenn \begin{cases} \textcolor{red}{a_{n+1}\geq a_n}\\\textcolor{orange}{a_{n+1}\leq a_n}\end{cases}.\\\\
+Gelten dabei sagar \textbf{strikte} Ordnungsrelationen ($>$ oder $<$), dann ist $(a_n)$ \textbf{streng} monoton wachsend bzw. abnehmend.
 
 \end{Definition}
 
@@ -526,12 +522,12 @@ Eine monotone Folge ist genau dann konvergent, wenn sie beschränkt ist.
 \begin{Beweis}
 Ohne Beschränkung der Allgemeinheit nehmen wir an, dass die Folge monoton wachsend sei und sei $a$ die kleinste obere Schranke (Supremum).
 \begin{itemize}
-\item Sei $\varepsilon\geq0$ dann ist $a-\varepsilon$ keine obere Schranke der Folgeglieder $\{a_n;\in\N\}$.
+\item Sei $\varepsilon\geq0$ dann ist $a-\varepsilon$ keine obere Schranke der Folgeglieder $\{a_n;n\in\N\}$.
 \item $(a_n)$ ist wachsend
 \item $\exists n_0\in\N$ mit $a_{n_{0}} \geq a-\varepsilon$
-\item $\forall n>n_0$ gilt $a-\varepsilon<a_{n_{0}}\leq a_n<a+\varepsilon$\qquad|-a\\
-$\Leftrightarrow -\varepsilon < a_{n_{0}}-a\leq a_n-a<\varepsilon$
-\item $\Rightarrow \lim\limits_{n\to\infty}a_n=0$
+\item $\forall n>n_0$ gilt $a-\varepsilon<a_{n_{0}}\leq a_n<a+\varepsilon$\qquad|$-a$\\
+$\qquad\qquad\Leftrightarrow -\varepsilon < a_{n_{0}}-a\leq a_n-a<\varepsilon$
+\item $\Rightarrow \lim\limits_{n\to\infty}a_n=a$
 \end{itemize}
 Analog kann man mit einer nach unten beschränkten monoton fallenden Folge argumentieren.
 \end{Beweis}
@@ -635,7 +631,7 @@ ytick={-3,-2,...,3},]
 \begin{align*}\text{N.R.:}\qquad1+\dfrac{1}{n}&\leq\dfrac{4}{3}\qquad \forall n\geq3\\
 \Rightarrow \quad \left(1+\dfrac{1}{n}\right)^2&\leq \dfrac{16}{9}
 \end{align*}
-Somit ist $u_n$ ab dem 3. Folgeglied \textcolor{blue}{streng monoton fallend} $\Rightarrow S=\dfrac{9}{8}$
+Somit ist $u_n$ ab dem 3. Folgeglied \textcolor{blue}{streng monoton fallend} $\Rightarrow S=u_3=\dfrac{9}{8}$
 \end{itemize}
 $\Rightarrow a_n$ konvergiert gegen den Grenzwert $g=0$
 \end{Beispiel}
@@ -751,7 +747,7 @@ Wenn ein bestimmtes $\varepsilon$ angegeben ist, dann verwendet man, um das \tex
 $$\forall a \in \R \;\exists \varepsilon >0\; \forall n_0 \in\N \;\exists n\geq n_0\,:\, |a_n-a|\geq \varepsilon$$
 \end{Bemerkung}
 
-
+\newpage
 \begin{Beispiel}
 Die Folge $a_n= \dfrac{1-2n}{5+3n}$ wird untersucht, es wird geschätzt, dass $(a_n)$ gegen $-\dfrac{2}{3}$ konvergiert.
 
@@ -764,23 +760,23 @@ Die Folge $a_n= \dfrac{1-2n}{5+3n}$ wird untersucht, es wird geschätzt, dass $(
 \definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.9]
 \begin{axis}[
-x=1cm,y=1cm,
+x=1cm,y=5cm,
 axis lines=middle,
 ymajorgrids=true,
 xmajorgrids=true,
 xmin=-1.3380762576126726,
 xmax=14.36327999137987,
-ymin=-4.1973484399012415,
-ymax=4.2646038591741595,
+ymin=-1.3,
+ymax=1.1,
 xtick={-1,0,...,14},
 ytick={-4,-3,...,4},]
 \clip(-1.3380762576126726,-4.1973484399012415) rectangle (14.36327999137987,4.2646038591741595);
 \draw [line width=0.8pt,color=ffqqqq,domain=-1.3380762576126726:14.36327999137987] plot(\x,{(-0.6666666666666666-0*\x)/1});
 \draw [line width=2pt,color=rvwvcq,domain=-1.3380762576126726:14.36327999137987] plot(\x,{(-0.5666666666666667-0*\x)/1});
 \draw [line width=2pt,color=ttzzqq,domain=-1.3380762576126726:14.36327999137987] plot(\x,{(-0.7666666666666666-0*\x)/1});
-\draw [color=ffqqqq](1.0710631363167173,-0.6016180012006462) node[anchor=north west] {$g=-\dfrac{2}{3}$};
-\draw [color=qqttcc](6.764302997592639,0.7288022611185742) node[anchor=north west] {$a:y=g+\varepsilon$};
-\draw [color=qqzzqq](6.8961464470116605,-0.9971483494577117) node[anchor=north west] {$b:y=g-\varepsilon$};
+\draw [color=ffqqqq](1.0710631363167173,-0.35) node[anchor=north west] {$g=-\dfrac{2}{3}$};
+\draw [color=qqttcc](6.764302997592639,-0.3) node[anchor=north west] {$a:y=g+\varepsilon$};
+\draw [color=qqzzqq](6.8961464470116605,-0.85) node[anchor=north west] {$b:y=g-\varepsilon$};
 \begin{scriptsize}
 \draw [fill=qqwuqq] (0,0.2) circle (2.5pt);
 \draw [fill=qqwuqq] (1,-0.125) circle (2.5pt);
@@ -856,6 +852,7 @@ ytick={-4,-3,...,4},]
 \end{itemize}
 
 \end{Beispiel}
+\newpage
 \subsubsection{Grenzwertsätze}
 
 
