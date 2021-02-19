@@ -1,111 +1,236 @@
 \ProvidesPackage{STYLE}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{tabu}
+\usepackage{tikz,pgf,pgfplots}
+\usetikzlibrary{arrows}
+
+\usepackage[ngerman]{babel}
+\usepackage[mathletters]{ucs}
+\usepackage[utf8x]{inputenc}
+\PrerenderUnicode{ä}
+\usepackage{fontawesome}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage{fancyhdr}
+\usepackage[margin=2cm]{geometry}
+\usepackage{listings}                             %Für Pseudocode/Code...
+
+\usepackage{epigraph}
+\usepackage{tocloft,titletoc,titlesec}
+% Für inkscape grafiken
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\pgfplotsset{compat=1.16}
 
 
-\definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}   %Blau
-\setlength{\parindent}{0em}
-\setlength{\parskip}{0em}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=false,
+    frenchlinks=true,
+}
 
-\def\blankpage{%
-      \clearpage%
-      \thispagestyle{empty}%
-      \null%
-      \clearpage}
+\usepackage{emptypage}
 
+\linespread{1.1}
+\setlength{\parindent}{0pt}
+\definecolor{bblue}{RGB}{32,64,123}   %Blau
+\definecolor{ggreen}{rgb}{0.09, 0.45, 0.27}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Für Kopf- und Fußzeilen:
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LE]{\nouppercase{\leftmark}}
-\fancyhead[RO]{\nouppercase{\rightmark}}
+\fancyhead[LO]{\nouppercase{\leftmark}}
+\fancyhead[RE]{\nouppercase{\rightmark}}
 \fancyfoot[C]{\thepage}
-\let\origdoublepage\cleardoublepage
-\newcommand{\clearemptydoublepage}{%
-  \clearpage
-  {\pagestyle{empty}\origdoublepage}%
-}
-
-\let\cleardoublepage\clearemptydoublepage
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Eigene Environments
-%Beweis:
-\newenvironment{Beweis}[1][]
-  {\begin{tcolorbox}[ colback=gray!5!white,
-                      colframe=gray!70!black,
-                      opacityframe=0.5,
-                      opacitybacktitle=0.5,
-                      sharpish corners,
-                      boxrule=0pt,
-                      frame hidden,
-                      title=Beweis \,#1,
-                      breakable,
-                      ]}
-  {\hfill\ensuremath{\square} \end{tcolorbox}}
+%Zähler für die nachfolgenden Environments
+\newcounter{theorem_counter}[section]
+\newcommand{\thetheorem}{\arabic{chapter}.\arabic{section}.\arabic{theorem_counter}}
+\newcounter{Korollar_counter}
 
-%Definition:
-\newenvironment{Definition}[1][]
-  {\begin{tcolorbox}[ colback=red!7!white,
-                      colframe=red!70!black,
-                      sharpish corners,
-                      boxrule=0pt,
-                      frame hidden,
-                      title=Definition \,#1,
-                      breakable,
-                      ]}
-  {\end{tcolorbox}}
+\newcounter{definition_counter}[section]%\setcounter{definition_counter}{0}
+\newcommand{\thedefinition}{\arabic{chapter}.\arabic{section}.\arabic{definition_counter}}
 
-%Theorem:
-\newenvironment{Theorem}[1][]
-  {\begin{tcolorbox}[ colback=titlepagecolor!5!white,
-                      colframe=titlepagecolor,
-                      sharpish corners,
-                      boxrule=0pt,
-                      frame hidden,
-                      title=Theorem \,#1,
-                      breakable,]}
-  {\end{tcolorbox}}
 
-%Beispiel
-\newenvironment{Beispiel}
-  {\par\noindent\normalfont\par\nopagebreak%
-  \begin{mdframed}[
-     linewidth=2pt,
-     linecolor=green,
-     bottomline=false,topline=false,rightline=false,
-     innerrightmargin=0pt,innertopmargin=0pt,innerbottommargin=0pt,
-     innerleftmargin=1em,% Distanz zwischen vertikaler Strich & Inhalt
-     skipabove=.5\baselineskip
-   ]\underline{Beispiel:}\vspace{0.1cm}\\}
-{\end{mdframed}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Eigene Environments:
+\mdfdefinestyle{envstyle}{
+  skipabove=.4\baselineskip,
+  hidealllines = true,
+  nobreak=false,
+  shadow = true,
+  shadowsize = 1pt,
+  shadowcolor = black!10
+  }
 
-%Bemerkung
-\newenvironment{Bemerkung}
-  {\par\noindent\normalfont\par\nopagebreak%
-  \begin{mdframed}[
-     linewidth=2pt,
-     linecolor=yellow,
-     bottomline=false,topline=false,rightline=false,
-     innerrightmargin=0pt,innertopmargin=0pt,innerbottommargin=0pt,
-     innerleftmargin=1em,% Distanz zwischen vertikaler Strich & Inhalt
-     skipabove=.5\baselineskip
-   ]\underline{Bemerkung:}\vspace{0.1cm}\\}
-{\end{mdframed}}
 
-%GTR-Tipp
-\newenvironment{GTR-Tipp}
-  {\par\noindent\normalfont\par\nopagebreak%
-  \begin{mdframed}[
-     linewidth=2pt,
-     linecolor=gray,
-     bottomline=false,topline=false,rightline=false,
-     innerrightmargin=0pt,innertopmargin=0pt,innerbottommargin=0pt,
-     innerleftmargin=1em,% Distanz zwischen vertikaler Strich & Inhalt
-     skipabove=.5\baselineskip
-   ]\underline{GTR-Tipp:}\vspace{0.1cm}\\}
-{\end{mdframed}}
+
+
+
+
+\newenvironment{Theorem}[1][]{
+  %if no title:
+  \ifstrempty{#1}{
+    \mdfsetup{frametitle={\textcolor{white}{Theorem \thetheorem}}}
+  }{%else
+    \mdfsetup{frametitle={\textcolor{white}{Theorem \thetheorem: ~#1}}}
+    \index{~#1}
+  }
+  \stepcounter{theorem_counter}
+  \setcounter{Korollar_counter}{0}
+  \mdfsetup{
+    style = envstyle,
+    backgroundcolor=bblue!5!white,
+    frametitlebackgroundcolor = bblue,
+  }
+  \begin{mdframed}[]\relax
+}%content
+{
+  \end{mdframed}
+}
+
+
+\newenvironment{Korollar}[1][]{
+  %if no title:
+  \ifstrempty{#1}{
+    \mdfsetup{frametitle={\textcolor{white}{Korollar \thetheorem \, (\arabic{Korollar_counter})}}}
+  }{%else
+    \mdfsetup{frametitle={\textcolor{white}{Korollar \thetheorem \, (\arabic{Korollar_counter}): ~#1}}}
+    \index{~#1}
+  }
+  \stepcounter{Korollar_counter}
+  \mdfsetup{
+    style = envstyle,
+    backgroundcolor=bblue!5!white,
+    frametitlebackgroundcolor = bblue,
+  }
+  \begin{mdframed}[]\relax
+}%content
+{
+  \end{mdframed}
+}
+
+
+\newenvironment{GTR-Tipp}[1][]{
+  %if no title:
+  \ifstrempty{#1}{
+    \mdfsetup{frametitle={\textcolor{white}{GTR-Tipp}}}
+  }{%else
+    \mdfsetup{frametitle={\textcolor{white}{GTR-Tipp: ~#1}}}
+    \index{~#1}
+  }
+  \mdfsetup{
+    style = envstyle,
+    backgroundcolor=ggreen!5!white,
+    frametitlebackgroundcolor = ggreen,
+  }
+  \begin{mdframed}[]\relax
+}%content
+{
+  \end{mdframed}
+}
+
+
+\newenvironment{Definition}[1][]{
+  %if no title:
+  \ifstrempty{#1}{
+    \mdfsetup{frametitle={\textcolor{white}{Definition \thedefinition}}}
+  }{%else
+    \mdfsetup{frametitle={\textcolor{white}{Definition \thedefinition: ~#1}}}
+    \index{~#1}
+  }
+  \stepcounter{definition_counter}
+  \mdfsetup{
+    style = envstyle,
+    backgroundcolor=red!5!white,
+    frametitlebackgroundcolor = red,
+  }
+  \begin{mdframed}[]\relax
+}%content
+{
+  \end{mdframed}
+}
+
+
+\newenvironment{Beweis}[1][]{
+  \ifstrempty{#1}{
+    \mdfsetup{frametitle={Beweis:}}
+  }{%else
+    \mdfsetup{frametitle={Beweis - ~#1:}}
+  }
+  \mdfsetup{
+    style = envstyle,
+    linewidth = 14 pt,
+    linecolor = bblue,
+    frametitlebackgroundcolor = bblue!5!white,
+    backgroundcolor = bblue!5!white,
+    leftline = true,
+    innerleftmargin = 1 em,% Distanz zwischen vertikaler Strich & Inhalt
+  }
+  \begin{mdframed}[]\relax
+}%content
+{
+  \qed
+  \end{mdframed}
+}
+
+
+\newenvironment{Beispiel}[1][]{
+  %if no title:
+  \ifstrempty{#1}{
+    \mdfsetup{frametitle={Beispiel:}}
+  }{%else
+    \mdfsetup{frametitle={Beispiel - ~#1:}}
+  }
+  \mdfsetup{
+  style = envstyle,
+  linewidth = 14 pt,
+  linecolor = gray,
+  frametitlebackgroundcolor = gray!5!white,
+  backgroundcolor = gray!5!white,
+  leftline = true,
+  innerleftmargin = 1 em,% Distanz zwischen vertikaler Strich & Inhalt
+  }
+  \begin{mdframed}[]\relax
+}%content
+{
+  \end{mdframed}
+}
+
+
+\newenvironment{Bemerkung}[1][]{
+  %if no title:
+  \ifstrempty{#1}{
+    \mdfsetup{frametitle={Bemerkung:}}
+  }{%else
+    \mdfsetup{frametitle={Bemerkung - ~#1:}}
+  }
+  \mdfsetup{
+  style = envstyle,
+  linewidth = 14 pt,
+  linecolor = gray!50!white,
+  frametitlebackgroundcolor = gray!5!white,
+  backgroundcolor = gray!5!white,
+  leftline = true,
+  innerleftmargin = 1 em,% Distanz zwischen vertikaler Strich & Inhalt
+  }
+  \begin{mdframed}[]\relax
+}%content
+{
+  \end{mdframed}
+}
+
 
 %Codebox, aufrufbar mit \begin{lstlisting}[Name_der_Sprache]
 \definecolor{dkgreen}{rgb}{0,0.6,0}
@@ -119,41 +244,43 @@
   showstringspaces=false,
   columns=flexible,
   basicstyle={\small\ttfamily},
-  numbers=false,
+  %numbers=false,
   numberstyle=\tiny\color{gray},
   keywordstyle=\color{blue},
   commentstyle=\color{dkgreen},
   stringstyle=\color{mauve},
   breaklines=true,
   breakatwhitespace=true,
-  tabsize=3
+  tabsize=3,
 }
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Eigene Shortcuts
 %Zahlenmengen-darstellung:
 \newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\P}{\mathbb{P}}
-\newcommand{\A}{\mathbb{A}}
-% "zu zeigen"-Zeichen mit \zz Quelle: http://www.matheboard.de/archive/155832/thread.html
-\newcommand{\zz}{\mathrm{Z\kern-.3em\raise-0.5ex\hbox{Z}}}
-% Achtung Zeichen mit \danger
-\newcommand\danger[1]{
-  \renewcommand\stacktype{L}
-  \scaleto{\stackon[1.3pt]{\color{red}$\triangle$}{\tiny !}}{#1}
+
+\newcommand{\incfig}[1]{%
+    %\def\svgwidth{\columnwidth}
+    \begin{center}
+      \import{./Grafiken/}{#1.pdf_tex}
+    \end{center}
 }
-%Logarithmus dualis als "operator" angesehen mit \ld
-\DeclareMathOperator{\ld}{ld}
-%(Linke Seite)"Per definitionem äquivalent zu" (Ist halt die Frage, ob ich das richtig nutze)
-\newcommand{\logEqL}{\ratio\Leftrightarrow}
-%(Rechte Seite)"Per definitionem äquivalent zu"
-\newcommand{\logEqR}{\Leftrightarrow\ratio}
-%Linke Seite wird definiert zu / durch rechte Seite
-\newcommand{\definedBy}{\ratio=}
+\newcommand{\adabs}{A\hspace{-1em}A}
+\newcommand{\A}{\;\forall}
+\newcommand{\E}{\;\exists}
+\def\checkmark{\tikz\fill[scale=0.4,color=olive](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+\def\lightning{\,\text{\faBolt}}
+\newcommand{\limn}{\lim \limits_{n \to \infty}}
+\newcommand{\limx}{\lim \limits_{x \to x_0}}
+\newcommand{\limh}{\lim \limits_{h \to 0}}
 
-
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Kapitel-Titel
@@ -176,7 +303,6 @@
   }
   \vskip 50\p@}
 
-\setlength{\mathindent}{0pt}
 
 \newcommand{\chapterauthor}[1]{%
   {\parindent0pt\vspace*{-45pt}%
@@ -186,6 +312,8 @@
   \par\nobreak\vspace*{35pt}}
   \@afterheading%
 }
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -199,21 +327,18 @@
     {\large \@author}}
 \makeatother
 \author{%
-    Clara Schaefer \\
-    Bruno Gelfort \\
-    Pascal Borel \\
-    Rémy Moll \\
-    [0,5cm]
-    \textbf{1$^{\text{ère}}$ \& Te SMP}
+    Clara Schaefer, Pascal Borel, Bruno Gelfort, Rémy Moll \\
+    [0,3cm]
+    \textbf{DFG - LFA}
     }
-% The following code is borrowed from: https://tex.stackexchange.com/a/86310/10898
+
 \newcommand\titlepagedecoration{%
 \begin{tikzpicture}[remember picture,overlay,shorten >= -10pt]
 \coordinate (aux1) at ([yshift=-15pt]current page.north east);
 \coordinate (aux2) at ([yshift=-410pt]current page.north east);
 \coordinate (aux3) at ([xshift=-4.5cm]current page.north east);
 \coordinate (aux4) at ([yshift=-150pt]current page.north east);
-\begin{scope}[titlepagecolor!40,line width=12pt,rounded corners=12pt]
+\begin{scope}[bblue!50,line width=12pt,rounded corners=12pt]
 \draw
   (aux1) -- coordinate (a)
   ++(225:5) --
@@ -222,16 +347,16 @@
   (aux3) --
   (a) --
   (aux1);
-\draw[opacity=0.6,titlepagecolor,shorten <= -10pt]
+\draw[opacity=0.6,bblue,shorten <= -10pt]
   (b) --
   ++(225:2.2) --
   ++(-45:2.2);
 \end{scope}
-\draw[titlepagecolor,line width=8pt,rounded corners=8pt,shorten <= -10pt]
+\draw[bblue,line width=8pt,rounded corners=8pt,shorten <= -10pt]
   (aux4) --
   ++(225:0.8) --
   ++(-45:0.8);
-\begin{scope}[titlepagecolor!70,line width=6pt,rounded corners=8pt]
+\begin{scope}[bblue!70,line width=6pt,rounded corners=8pt]
 \draw[shorten <= -10pt]
   (aux2) --
   ++(225:3) coordinate[pos=0.45] (c) --
@@ -248,17 +373,64 @@
 \end{tikzpicture}%
 }
 
+\newenvironment{Titelseite}
+{
+  \begin{titlepage}
+  	\begin{center}
+  		\hfill  \\
+  		[3,5cm]
+}
+{
+  \end{center}
+  \epigraph{Mach' dir keine Sorgen wegen deiner Schwierigkeiten mit der Mathematik. Ich kann dir versichern, daß meine noch größer sind.}
+  {\textit{Brief an ein Schulmädchen, 1943}\\ \textsc{Albert Einstein}}
+  \null\vfill
+  \vspace*{1cm}
+  \noindent
+  \hfill
+  \begin{minipage}{0.35\linewidth}
+      \begin{flushright}
+          \printauthor
+      \end{flushright}
+  \end{minipage}
+  %
+  \begin{minipage}{0.02\linewidth}
+      \rule{1pt}{50pt}
+  \end{minipage}
+  \titlepagedecoration
+  \begin{center}
+    \small{\today}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %\textcolor{bblue}{\includegraphics{../../ETHL}}
+
+  \end{center}
+  \end{titlepage}
+}
+
+
+%%===========================================================================%%%
 %Fürs Inhaltsverzeichnis:
 %\contentsmargin{0cm}
 \titlecontents{chapter}[0pc]
 {\addvspace{40pt}
 \begin{tikzpicture}[remember picture, overlay]%
-\draw[fill=titlepagecolor,draw=titlepagecolor, rounded corners] (-4,-.1) rectangle (.5,.5);
-\pgftext[left,x=-1.9cm,y=0.2cm]{\color{white}\Large \chaptertitlename \thecontentslabel};
-\end{tikzpicture}\hspace{1cm}\color{titlepagecolor}\large\bfseries}
+\draw[fill=bblue,draw=bblue, rounded corners] (-4,-.1) rectangle (.5,.5);
+\pgftext[left,x=-1.8cm,y=0.2cm]{\color{white}\Large \chaptertitlename \,\thecontentslabel};
+\end{tikzpicture}\hspace{1cm}\color{bblue}\large\bfseries}
 {}
 {}
 {\hspace*{20pt}\hrulefill\hspace*{20pt}\large\bfseries \thecontentspage}%\hspace*{20pt}\rule{1cm}{0.3pt}}%
 [\addvspace{5pt}]
+
+
+%%============================================================================%%
+% Begriffsverzeichnis
+\newcommand{\begriffsverzeichnis}{
+  \cleardoublepage
+  \phantomsection
+  \addcontentsline{toc}{chapter}{Begriffsverzeichnis}
+  \renewcommand{\indexname}{Begriffsverzeichnis}
+  \begin{small}
+    \printindex
+  \end{small}
+}

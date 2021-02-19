@@ -1,4 +1,4 @@
-\documentclass[../MAIN/main.tex]{subfiles}
+\documentclass[main.tex]{subfiles}
 \begin{document}
 \chapter{Folgen}
 \chapterauthor{Clara}
@@ -12,15 +12,14 @@ $(a_{n})_{n\in\N}$ bezeichnet die Folge, wobei $a:\N\rightarrow\R$
 \end{Definition}
 
 \begin{GTR-Tipp}
-\\
-Um statt Funktionen Folgen zu behandeln:
-\begin{itemize}
-\item\textcolor{gray}{ON} $\rightarrow \textcolor{red}{\text{MODE}} \rightarrow \text{Zeile 4: statt \textcolor{gray}{FUNC} \textcolor{red}{SEQ} auswählen}$
-\item in \textcolor{gray}{Y=}
-\item Mit $nMin$ den Startindex angeben
-\item Mit $u(n)$ die Folgenvorschrift angeben
-\item Falls die Folge rekursiv anzugeben ist, muss mit $u(nMin)$ das Startglied angegeben werden
-\end{itemize}
+	Um statt Funktionen Folgen zu behandeln:
+	\begin{itemize}
+		\item\textcolor{gray}{ON} $\rightarrow \textcolor{red}{\text{MODE}} \rightarrow \text{Zeile 4: statt \textcolor{gray}{FUNC} \textcolor{red}{SEQ} auswählen}$
+		\item in \textcolor{gray}{Y=}
+		\item Mit $nMin$ den Startindex angeben
+		\item Mit $u(n)$ die Folgenvorschrift angeben
+		\item Falls die Folge rekursiv anzugeben ist, muss mit $u(nMin)$ das Startglied angegeben werden
+	\end{itemize}
 \end{GTR-Tipp}
 
 \begin{Bemerkung}
@@ -309,16 +308,14 @@ Dieses Verfahren kann ausschließlich bei rekusiven Folgen angewendet werden, be
 \end{Bemerkung}
 
 \begin{GTR-Tipp}
-\\
-Mit den GTR ist dieses Verfahren auch möglich, die Arbeit der Fertigstellung der Striche wird vom Rechner übernommen. Das Bild ist vom Benutzer nur noch zu deuten, gegebenenfalls ist die Schnittstelle auszurechnen.
-\begin{itemize}
-\item Der Rechner muss auf \textcolor{red}{SEQ} stehen
-\item in \textcolor{gray}{Y=} die rekursive Folge angeben
-\item In \textcolor{gray}{2nd }\textcolor{red}{FORMAT} von \textcolor{gray}{Time} auf \textcolor{red}{Web} stellen
-\item \textcolor{red}{TRACE} verwenden
-\item Sooft auf \textcolor{gray}{ENTER} drücken, bis ausreichend Striche zu sehen sind.
-\end{itemize}
-
+	Mit den GTR ist dieses Verfahren auch möglich, die Arbeit der Fertigstellung der Striche wird vom Rechner übernommen. Das Bild ist vom Benutzer nur noch zu deuten, gegebenenfalls ist die Schnittstelle auszurechnen.
+	\begin{itemize}
+		\item Der Rechner muss auf \textcolor{red}{SEQ} stehen
+		\item in \textcolor{gray}{Y=} die rekursive Folge angeben
+		\item In \textcolor{gray}{2nd }\textcolor{red}{FORMAT} von \textcolor{gray}{Time} auf \textcolor{red}{Web} stellen
+		\item \textcolor{red}{TRACE} verwenden
+		\item Sooft auf \textcolor{gray}{ENTER} drücken, bis ausreichend Striche zu sehen sind.
+	\end{itemize}
 \end{GTR-Tipp}
 
 
@@ -384,9 +381,8 @@ Jedes Folgeglied einer solchen Folge ist das geometrische Mittel seines Vorgäng
 	\subsection{Monotonie}
 
 \begin{Definition}
-Eine Folge $(a_n)_{n\in\N}$ heißt monoton \begin{cases} \text{\textcolor{red}{steigend/wachsend}}\\\text{\textcolor{orange}{fallend/abnehmend}}\end{cases} wenn \begin{cases} \textcolor{red}{a_{n+1}\geq a_n}\\\textcolor{orange}{a_{n+1}\leq a_n}\end{cases}.\\\\
-Gelten dabei sagar \textbf{strikte} Ordnungsrelationen ($>$ oder $<$), dann ist $(a_n)$ \textbf{streng} monoton wachsend bzw. abnehmend.
-
+	Eine Folge $(a_n)_{n\in\N}$ heißt monoton \begin{cases} \text{\textcolor{red}{steigend/wachsend}}\\\text{\textcolor{orange}{fallend/abnehmend}}\end{cases} wenn \begin{cases} \textcolor{red}{a_{n+1}\geq a_n}\\\textcolor{orange}{a_{n+1}\leq a_n}\end{cases}.\\\\
+	Gelten dabei sagar \textbf{strikte} Ordnungsrelationen ($>$ oder $<$), dann ist $(a_n)$ \textbf{streng} monoton wachsend bzw. abnehmend.
 \end{Definition}
 
 \underline{Strategie:}
@@ -396,20 +392,18 @@ Gelten dabei sagar \textbf{strikte} Ordnungsrelationen ($>$ oder $<$), dann ist 
 \end{itemize}
 
 \begin{Beispiel}
-Untersucht wird die Monotonie der Folge $a_n=\dfrac{8n}{n^2+1}$.
-\begin{align*}
-a_{n+1}-a_n&=\dfrac{8(n+1)}{(n+1)^2+1}-\dfrac{8n}{n^2+1}\\
-&=\dfrac{8n+8}{n^2+2n+1+1}-\dfrac{8n}{n^2+1}\\
-&=\dfrac{8n^3+8n^2+8n+8-(8n^3+16n^2+16n)}{(n^2+2n+2)(n^2+1)}\\
-&=\dfrac{-8n^2-8n+8}{(n^2+2n+2)(n^2+1)}\\
-&=-\underbrace{\dfrac{8(n^2+n-1)}{(n^2+2n+2)(n^2+1)}}_{\geq2\forall n\in \N}<0\text{ für } (n^2+n+1)>0\Leftrightarrow \text{ für } $(n\geq 1)$ (weil $n\in\N$)
-\end{align*}
+	Untersucht wird die Monotonie der Folge $a_n=\dfrac{8n}{n^2+1}$.
+	\begin{align*}
+		a_{n+1}-a_n&=\dfrac{8(n+1)}{(n+1)^2+1}-\dfrac{8n}{n^2+1}\\
+		&=\dfrac{8n+8}{n^2+2n+1+1}-\dfrac{8n}{n^2+1}\\
+		&=\dfrac{8n^3+8n^2+8n+8-(8n^3+16n^2+16n)}{(n^2+2n+2)(n^2+1)}\\
+		&=\dfrac{-8n^2-8n+8}{(n^2+2n+2)(n^2+1)}\\
+		&=-\underbrace{\dfrac{8(n^2+n-1)}{(n^2+2n+2)(n^2+1)}}_{\geq2\forall n\in \N}<0\text{ für } (n^2+n+1)>0\Leftrightarrow \text{ für } $(n\geq 1)$ (weil $n\in\N$)
+	\end{align*}
 
-\Rightarrow \indent$a_n$ ist für $n\in\N$ weder steigend noch fallend.\\
-\indent $a_n$ ist für $n\in\N^*$ streng monoton fallend.
-
-
-%%%%%PLOUUUUs GRaphehen net vergessen
+	$\Rightarrow \, a_n$ ist für $n\in\N$ weder steigend noch fallend.
+	
+	\indent $a_n$ ist für $n\in\N^*$ streng monoton fallend.
 \end{Beispiel}
 
 	\subsection{Beschränktheit}
