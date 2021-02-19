@@ -4,29 +4,29 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
+
 \usepackage{mathrsfs}
 \usepackage{tabu}
+\usepackage[makeroom]{cancel}
+
 \usepackage{tikz,pgf,pgfplots}
 \usetikzlibrary{arrows}
 
 \usepackage[ngerman]{babel}
 \usepackage[mathletters]{ucs}
 \usepackage[utf8x]{inputenc}
-\PrerenderUnicode{ä}
 \usepackage{fontawesome}
+
 \usepackage{xcolor}
 \usepackage{mdframed}
 \usepackage{fancyhdr}
 \usepackage[margin=2cm]{geometry}
 \usepackage{listings}                             %Für Pseudocode/Code...
+\usepackage{esvect}
 
 \usepackage{epigraph}
 \usepackage{tocloft,titletoc,titlesec}
-% Für inkscape grafiken
-\usepackage{import}
 \usepackage{xifthen}
-\usepackage{pdfpages}
-\usepackage{transparent}
 \pgfplotsset{compat=1.16}
 
 
@@ -264,12 +264,6 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
 
-\newcommand{\incfig}[1]{%
-    %\def\svgwidth{\columnwidth}
-    \begin{center}
-      \import{./Grafiken/}{#1.pdf_tex}
-    \end{center}
-}
 \newcommand{\adabs}{A\hspace{-1em}A}
 \newcommand{\A}{\;\forall}
 \newcommand{\E}{\;\exists}
@@ -281,6 +275,13 @@
 
 \renewcommand{\leq}{\leqslant}
 \renewcommand{\geq}{\geqslant}
+
+\newcommand\danger{
+  {\color{red}ACHTUNG: }
+}
+
+\newcommand{\zz}{\mathrm{Z\kern-.3em\raise-0.5ex\hbox{Z}}}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Kapitel-Titel
@@ -327,9 +328,12 @@
     {\large \@author}}
 \makeatother
 \author{%
-    Clara Schaefer, Pascal Borel, Bruno Gelfort, Rémy Moll \\
+    Clara Schaefer\\
+    Pascal Borel\\
+    Bruno Gelfort\\
+    Rémy Moll
     [0,3cm]
-    \textbf{DFG - LFA}
+    \textbf{1e und Te (2017-2019)}
     }
 
 \newcommand\titlepagedecoration{%
@@ -422,15 +426,3 @@
 {\hspace*{20pt}\hrulefill\hspace*{20pt}\large\bfseries \thecontentspage}%\hspace*{20pt}\rule{1cm}{0.3pt}}%
 [\addvspace{5pt}]
 
-
-%%============================================================================%%
-% Begriffsverzeichnis
-\newcommand{\begriffsverzeichnis}{
-  \cleardoublepage
-  \phantomsection
-  \addcontentsline{toc}{chapter}{Begriffsverzeichnis}
-  \renewcommand{\indexname}{Begriffsverzeichnis}
-  \begin{small}
-    \printindex
-  \end{small}
-}

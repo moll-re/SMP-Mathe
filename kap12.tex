@@ -400,28 +400,29 @@ Sei $f$ eine Funktion mit $f(x)=a^x,a\in\R^+\backslash1$. dann ist ihre Ableitun
 $$f'(x)=\ln (a)\cdot a^x$$
 \end{Theorem}
 \begin{Beweis}
-\begin{center}
-\begin{array}{ccll}
-\dfrac{\text{d}}{\text{d}x}(a^x) &=&\dfrac{\text{d}}{\text{d}x}(e^{x\cdot\ln (a)})&\text{Basiswechsel und Kettenregel anwenden}\\
-&=&(x\cdot\ln (a))'\cdot e^{x\cdot\ln (a)}\qquad\qquad&\text{Ableiten (}\ln a\text{ ist eine Konstante)}\\
-&=&\ln (a) \cdot e^{x\cdot \ln a}&\text{Auf ursprüngliche Basis bringen}\\
-&=&\ln (a)\cdot a^x&
-\end{array}
-\end{center}
+	\begin{center}
+		\begin{array}{ccll}
+		\dfrac{\text{d}}{\text{d}x}(a^x) &=&\dfrac{\text{d}}{\text{d}x}(e^{x\cdot\ln (a)})&\text{Basiswechsel und Kettenregel anwenden}\\
+		&=&(x\cdot\ln (a))'\cdot e^{x\cdot\ln (a)}\qquad\qquad&\text{Ableiten (}\ln a\text{ ist eine Konstante)}\\
+		&=&\ln (a) \cdot e^{x\cdot \ln a}&\text{Auf ursprüngliche Basis bringen}\\
+		&=&\ln (a)\cdot a^x&
+		\end{array}
+	\end{center}
 \end{Beweis}
-\\
+
+
 Dasselbe Prinzip kann auch für verkettete Funktionen angewendet werden.
 \begin{Theorem}
-Die Funktion $f$ mit $f(x)=a^{v(x)},a\in\R^+\backslash1$ ist eine Verkettung der Funktion $v:x\rightarrow v(x)$ mit der Exponentialfunktion $u: v \rightarrow a^v$. Exisitiert die Ableitung $v'$, so gilt nach der Kettenregel\\
-$$f'(x)=v'(x)\cdot\ln (a)\cdot a^{v(x)}$$
+	Die Funktion $f$ mit $f(x)=a^{v(x)},a\in\R^+\backslash1$ ist eine Verkettung der Funktion $v:x\rightarrow v(x)$ mit der Exponentialfunktion $u: v \rightarrow a^v$. Exisitiert die Ableitung $v'$, so gilt nach der Kettenregel\\
+	$$f'(x)=v'(x)\cdot\ln (a)\cdot a^{v(x)}$$
 \end{Theorem}
 \begin{Beweis}
-$\begin{array}{ccll}
-\dfrac{\text{d}}{\text{d}x}(a^{v(x)}) &=&\dfrac{\text{d}}{\text{d}x}(e^{v(x)\cdot\ln (a)})&\text{Basiswechsel und Kettenregel anwenden}\\
-&=&(v(x)\cdot\ln (a)})'\cdot e^{v(x)\cdot\ln (a)}\qquad\qquad&\text{Ableiten (}\ln a\text{ ist eine Konstante)}\\
-&=&v'(x)\cdot\ln (a) \cdot e^{v(x)\cdot \ln a}&\text{Auf ursprüngliche Basis bringen}\\
-&=&v'(x)\cdot\ln (a)\cdot a^{v(x)}&
-\end{array}$
+	$\begin{array}{ccll}
+	\dfrac{\text{d}}{\text{d}x}(a^{v(x)}) &=&\dfrac{\text{d}}{\text{d}x}(e^{v(x)\cdot\ln (a)})&\text{Basiswechsel und Kettenregel anwenden}\\
+	&=&(v(x)\cdot\ln (a)})'\cdot e^{v(x)\cdot\ln (a)}\qquad\qquad&\text{Ableiten (}\ln a\text{ ist eine Konstante)}\\
+	&=&v'(x)\cdot\ln (a) \cdot e^{v(x)\cdot \ln a}&\text{Auf ursprüngliche Basis bringen}\\
+	&=&v'(x)\cdot\ln (a)\cdot a^{v(x)}&
+	\end{array}$
 \end{Beweis}
 	\subsection{Aktivität}
 

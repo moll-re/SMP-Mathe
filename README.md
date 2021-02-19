@@ -33,7 +33,7 @@ Jede Kapitel-Datei hat die folgende Strukur:
 ```
 
 ## Hauptdokument:
-Das Gesamtergebnis wird in ```main.tex``` kompiliert. Dieses PDF enthält alle Kapitel, sowie ein Inhaltsverzeichnis (und ein lexikograhisches Verzeichnis, falls jemand Bock hat das zu implementieren). 
+Das Gesamtergebnis wird in ```main.tex``` kompiliert. Dieses PDF enthält alle Kapitel, sowie ein Inhaltsverzeichnis (Begriffsverzeichnis, falls jemand Bock hat das zu implementieren). 
 
 
 ## Export
