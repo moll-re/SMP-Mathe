@@ -1,33 +1,36 @@
 \documentclass[main.tex]{subfiles}
 \begin{document}
+
 \chapter{Reihen}
 \chapterauthor{Clara}
+
 \begin{Definition}
-Eine Reihe ist eine Folge, deren Glieder die Partialsummen einer anderen Folge ist. Das bedeutet, dass das $n-te$ Glied der Reihe, die Summe der ersten $n$ Glieder einer anderen Folge ist. \\
-Man hat also:
+	Eine Reihe ist eine Folge, deren Glieder die Partialsummen einer anderen Folge ist. Das bedeutet, dass das $n-te$ Glied der Reihe, die Summe der ersten $n$ Glieder einer anderen Folge ist. \\
+	Man hat also:
 
-\begin{itemize}
-\item Mit Startglied $a_{0}$: $s_{n}=\sum\limits_{i=0}^{n-1}a_{i}$
-\item Mit Startglied $a_{1}$: $s_{n}=\sum\limits_{i=1}^{n}a_{i}$
-\item Mit Startglied $a_{x}$: $s_{n}=\sum\limits_{i=x}^{x+n-1}a_{i}$
-\end{itemize}
-
+	\begin{itemize}
+		\item Mit Startglied $a_{0}$: $s_{n}=\sum\limits_{i=0}^{n-1}a_{i}$
+		\item Mit Startglied $a_{1}$: $s_{n}=\sum\limits_{i=1}^{n}a_{i}$
+		\item Mit Startglied $a_{x}$: $s_{n}=\sum\limits_{i=x}^{x+n-1}a_{i}$
+	\end{itemize}
 \end{Definition}
 
 \begin{Bemerkung}
-In manchen Fällen steht $s_{n}$ für die Partialsumme einer anderen Folge bis zum $n-ten$ Glied.
-Dann gilt für ein beliebiges Startglied $a_{x}$ der Folge: $s_{n}=\sum\limits_{i=x}^{n}a_{i}$
+	In manchen Fällen steht $s_{n}$ für die Partialsumme einer anderen Folge bis zum $n-ten$ Glied.
+	Dann gilt für ein beliebiges Startglied $a_{x}$ der Folge: $s_{n}=\sum\limits_{i=x}^{n}a_{i}$
 \end{Bemerkung}
 
-		\section{Artithmetische Reihen}
+\section{Artithmetische Reihen}
+\subsection{Gauß'sche Summenformel}
 
-	\subsection{Gauß'sche Summenformel}
+Die Gauß'sche Summenformel bezeichnet die Summe der $n$ ersten natürlichen Zahlen, also:
 
-Die Gauß'sche Summenformel bezeichnet die Summe der $n$ ersten natürlichen Zahlen, also:\\
-$1+2+3+...+n=\sum\limits_{k=1}^{n}k=\frac{n(n+1)}{2}$\\\\
+$1+2+3+...+n=\sum\limits_{k=1}^{n}k=\frac{n(n+1)}{2}$
+
 
 \begin{minipage}[c]{0.5\textwidth}
-	\underline{Begründung:}\\
+	\underline{Begründung:}
+
 	\begin{tabular}{c∣c∣c∣c∣c∣c∣c}
 		&$1$&$2$&$3$&$4$&$...$&$n$\\\hline
 		&$n$&$n-1$&$n-2$&$n-3$&$...$&$1$\\\hline
@@ -35,101 +38,106 @@ $1+2+3+...+n=\sum\limits_{k=1}^{n}k=\frac{n(n+1)}{2}$\\\\
 	\end{tabular}
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
-So sieht man also, dass wenn man die vorher bestimmte Reihe mit sich selbst addiert (ein Mal davon "falschrum"), man $n$ Mal $n+1$ bekommt. Um dann den Wert einer einzelnen Reihe zu bekommen teilt man durch zwei.
+	So sieht man also, dass wenn man die vorher bestimmte Reihe mit sich selbst addiert (ein Mal davon "falschrum"), man $n$ Mal $n+1$ bekommt. Um dann den Wert einer einzelnen Reihe zu bekommen teilt man durch zwei.
 \end{minipage}
 
 \begin{Bemerkung}
-Die Gauß'sche Summenformel ist ein Spezialfall der arithmetischen Reihe, ihre Glieder werden \textbf{Dreieckszahlen} genannt.
+	 Gauß'sche Summenformel ist ein Spezialfall der arithmetischen Reihe, ihre Glieder werden \textbf{Dreieckszahlen} genannt.
 \end{Bemerkung}
 
 \begin{Beweis}
-Um zu beweisen, dass für alle $n\in\N$\\
-$\sum\limits_{k=1}^{n}f(k)=g(n)$\\
- gilt, reicht es aus, \\
-$g(n)-g(n-1)=f(n)$\\
- für alle positiven $n$ und\\
- $g(0)=0$\\
- zu zeigen. In der Tat trifft dies hier zu: \\
-$g(n)-g(n-1)=\dfrac{n(n+1)}{2}-\dfrac{(n-1)n}{2}=\dfrac{n(n+1-n+1)}{2}=\dfrac{n\cdot 2}{2}=n=f(n)$ \\
-für alle $n$ \\
-und $g(0)=\dfrac{0\cdot 1}{2}=0$\\
-\\
-\underline{Quelle:} Wikipedia (Gaußsche Summenformel)\\
+	Um zu beweisen, dass für alle $n\in\N$
+	$$\sum\limits_{k=1}^{n}f(k)=g(n)$$
+	gilt, reicht es aus,
+	$$g(n)-g(n-1)=f(n)$$
+	für alle positiven $n$ und
+	$$g(0)=0$$
+	zu zeigen. In der Tat trifft dies hier zu:
+	$$g(n)-g(n-1)=\dfrac{n(n+1)}{2}-\dfrac{(n-1)n}{2}=\dfrac{n(n+1-n+1)}{2}=\dfrac{n\cdot 2}{2}=n=f(n)$$
+	für alle $n$ und $g(0)=\dfrac{0\cdot 1}{2}=0$
+
+	\underline{Quelle:} Wikipedia (Gaußsche Summenformel)
 \end{Beweis}
+
 \begin{Bemerkung}
-Auch ein Beweis durch vollständige Induktion ist möglich, dieser wäre sogar empfehlenswert, da er einfacher durchzuführen ist (Siehe Kapitel 10)
+	Auch ein Beweis durch vollständige Induktion ist möglich, dieser wäre sogar empfehlenswert, da er einfacher durchzuführen ist (Siehe Kapitel 10)
 \end{Bemerkung}
 
 
-	\subsection{Allgemein}
+\subsection{Allgemein}
 
 \begin{Definition}
-Wenn $s_{n}$ die Summe der ersten $n$ Folgeglieder einer arithmetische Folge ist, heißt sie arithmetische Reihe.\\
-Sei eine arithmetische Folge $a$ mit Startglied $a_{x}$ und $s$, die entsprechende Reihe, dann gilt\\
-$s_{n}=\dfrac{n\cdot(a_{x}+a_{x+n-1})}{2}$
+	Wenn $s_{n}$ die Summe der ersten $n$ Folgeglieder einer arithmetische Folge ist, heißt sie arithmetische Reihe.
+
+	Sei eine arithmetische Folge $a$ mit Startglied $a_{x}$ und $s$, die entsprechende Reihe, dann gilt
+	$$s_{n}=\dfrac{n\cdot(a_{x}+a_{x+n-1})}{2}$$
 \end{Definition}
 
 \begin{Bemerkung}
-\begin{enumerate}
-\item Am häufigsten wird verwendet:
-\begin{itemize}
-\item Mit Startglied $a_{0}$ : $s_{n}=\dfrac{n\cdot(a_{0}+a_{n-1})}{2}$
-\item Mit Startglied $a_{1}$ : $s_{n}=\dfrac{n\cdot(a_{1}+a_{n})}{2}$
-\end{itemize}
-\item Alternativ kann auch folgende Darstellung verwendet werden:\\
-$s_{n}=\dfrac{n\cdot(2a_{x}+(n-1)\cdot d)}{2}$
-\end{enumerate}
+	\begin{enumerate}
+		\item Am häufigsten wird verwendet:
+			\begin{itemize}
+				\item Mit Startglied $a_{0}$ : $s_{n}=\dfrac{n\cdot(a_{0}+a_{n-1})}{2}$
+				\item Mit Startglied $a_{1}$ : $s_{n}=\dfrac{n\cdot(a_{1}+a_{n})}{2}$
+			\end{itemize}
+		\item Alternativ kann auch folgende Darstellung verwendet werden:\\
+		$s_{n}=\dfrac{n\cdot(2a_{x}+(n-1)\cdot d)}{2}$
+	\end{enumerate}
 \end{Bemerkung}
 
 \begin{Beweis}
-Sei eine arithmetische Folge $a$, mit Startglied $a_{x}$ und Differenz $d$, und $s$, die entsprechende Reihe, dann gilt\\
-\begin{align*}
-s_n&=a_x+a_{x+1}+a_{x+2}+...a_{x+n-1}\\
-&=a_x+(a_x+d)+(a_{x}+2d)+...+(a_{x}+(n-1)\cdot d)\\
-&=n\cdot a_{x}+d+2d+...+(n-1)\cdot d\\
-&=n\cdot a_{x}+(1+2+...+(n-1))\cdot d\qquad	\text{(Gauß)}\\
-&=n\cdot a_{x}+\dfrac{(n-1)\cdot n}{2}\cdot d\\
-&=n\cdot \dfrac{2a_{x}+(n-1)\cdot d}{2}\\
-&=n\cdot \dfrac{a_{x}+\overbrace{a_{x}+(n-1)\cdot d}^{a_{x+n-1}}}{2}\\
-&=n\cdot \dfrac{a_{x}+a_{x+n-1}}{2}
-\end{align*}
+	Sei eine arithmetische Folge $a$, mit Startglied $a_{x}$ und Differenz $d$, und $s$, die entsprechende Reihe, dann gilt\\
+	\begin{align*}
+		s_n&=a_x+a_{x+1}+a_{x+2}+...a_{x+n-1}\\
+		&=a_x+(a_x+d)+(a_{x}+2d)+...+(a_{x}+(n-1)\cdot d)\\
+		&=n\cdot a_{x}+d+2d+...+(n-1)\cdot d\\
+		&=n\cdot a_{x}+(1+2+...+(n-1))\cdot d\qquad	\text{(Gauß)}\\
+		&=n\cdot a_{x}+\dfrac{(n-1)\cdot n}{2}\cdot d\\
+		&=n\cdot \dfrac{2a_{x}+(n-1)\cdot d}{2}\\
+		&=n\cdot \dfrac{a_{x}+\overbrace{a_{x}+(n-1)\cdot d}^{a_{x+n-1}}}{2}\\
+		&=n\cdot \dfrac{a_{x}+a_{x+n-1}}{2}
+	\end{align*}
 \end{Beweis}
 
-		\section{Geometrische Reihen}
+
+\section{Geometrische Reihen}
 
 \begin{Definition}
-Wenn $s_{n}$ die Summe der ersten $n$ Folgeglieder einer geometrischen Folge ist, heißt sie geometrischen Reihe.\\
-Sei eine geometrische Folge $a$ mit Startglied $a_{x}$ und $s$, die entsprechende Reihe, dann gilt\\
-$s_{n}=\sum\limits_{i=x}^{n+x-1}a_{i}=a_{x}\cdot \dfrac{1-q^n}{1-q}$
+	Wenn $s_{n}$ die Summe der ersten $n$ Folgeglieder einer geometrischen Folge ist, heißt sie geometrischen Reihe.\\
+	Sei eine geometrische Folge $a$ mit Startglied $a_{x}$ und $s$, die entsprechende Reihe, dann gilt\\
+	$s_{n}=\sum\limits_{i=x}^{n+x-1}a_{i}=a_{x}\cdot \dfrac{1-q^n}{1-q}$
 \end{Definition}
 
 \begin{Bemerkung}
-\item Am häufigsten wird verwendet:
-\begin{itemize}
-\item Mit Startglied $a_{0}$ : $s_{n}=a_{0}\cdot \dfrac{1-q^n}{1-q}$
-\item Mit Startglied $a_{1}$ : $s_{n}=a_{1}\cdot \dfrac{1-q^n}{1-q}$
-\end{itemize}
+	Am häufigsten wird verwendet:
+	\begin{itemize}
+		\item Mit Startglied $a_{0}$ : $s_{n}=a_{0}\cdot \dfrac{1-q^n}{1-q}$
+		\item Mit Startglied $a_{1}$ : $s_{n}=a_{1}\cdot \dfrac{1-q^n}{1-q}$
+	\end{itemize}
 \end{Bemerkung}
 
 \begin{Beweis}
-\underline{Allgemein:}
-\begin{align*}
-(1-q)(1+q+q^2+q^3+...+q^n)&=(1\textcolor{red}{-q)+(q}\textcolor{orange}{-q^2)+(q^2}\textcolor{green}{-q^3)+(q^3}\textcolor{brown}{-q^4)+.}.\textcolor{blue}{.+(q^n}-q^{n+1})\\
-&=1+(\textcolor{red}{-q+q})+(\textcolor{orange}{-q^2+q^2})+(\textcolor{green}{-q^3+q^3})+...+(\textcolor{blue}{-q^n+q^n})-q^{n+1}\\
-&=1-q^{n+1}\\
-\end{align*}
+	\underline{Allgemein:}
 
-Man hat also $\sum\limits_{k=0}^nq^k=1+q+q^2+q^3+...+q^n=\dfrac{1-q^{n+1}}{1-q}$\\
-Entsprechend ergibt sich $\sum\limits_{k=0}^{n-1}q^k=\underbrace{1+q+q^2+q^3+...+q^{n-1}}_{n\quad Summanden}=\dfrac{1-q^n}{1-q}$\\
-\\
-Somit gilt für eine Reihe $s$, die die Partialsumme einer geometrischen Folge $a$, mit Quotient $q$ und Anfangsglied $a_{x}$, ist, folgendes:\\
-\begin{align*}
-s_{n}&=\sum\limits_{i=x}^{x+n-1}a_{i}\\
-&=a_{x}+a_{x+1}+a_{x+2}+...+a_{x+n-1}\\
-&=a_{x}+a_{x}\cdot q+a_{x}\cdot q^{2}+...+a_{x}\cdot q^{n-1}\\
-&=a_{x}\cdot(1+q+q^2+...+q^{n-1})\\
-&=a_{x}\cdot \sum\limits_{k=0}^{n-1}q^k\\
-&=a_{x}\cdot \dfrac{1-q^{n}}{1-q}
-\end{align*}
-\end{Beweis}
+	\begin{align*}
+		(1-q)(1+q+q^2+q^3+...+q^n)&=(1\textcolor{red}{-q)+(q}\textcolor{orange}{-q^2)+(q^2}\textcolor{green}{-q^3)+(q^3}\textcolor{brown}{-q^4)+.}.\textcolor{blue}{.+(q^n}-q^{n+1})\\
+		&=1+(\textcolor{red}{-q+q})+(\textcolor{orange}{-q^2+q^2})+(\textcolor{green}{-q^3+q^3})+...+(\textcolor{blue}{-q^n+q^n})-q^{n+1}\\
+		&=1-q^{n+1}
+	\end{align*}
+
+	Man hat also $\sum\limits_{k=0}^nq^k=1+q+q^2+q^3+...+q^n=\dfrac{1-q^{n+1}}{1-q}$
+
+	Entsprechend ergibt sich $\sum\limits_{k=0}^{n-1}q^k=\underbrace{1+q+q^2+q^3+...+q^{n-1}}_{n\quad Summanden}=\dfrac{1-q^n}{1-q}$
+	
+	Somit gilt für eine Reihe $s$, die die Partialsumme einer geometrischen Folge $a$, mit Quotient $q$ und Anfangsglied $a_{x}$, ist, folgendes:
+	
+	\begin{align*}
+		s_{n}&=\sum\limits_{i=x}^{x+n-1}a_{i}\\
+		&=a_{x}+a_{x+1}+a_{x+2}+...+a_{x+n-1}\\
+		&=a_{x}+a_{x}\cdot q+a_{x}\cdot q^{2}+...+a_{x}\cdot q^{n-1}\\
+		&=a_{x}\cdot(1+q+q^2+...+q^{n-1})\\
+		&=a_{x}\cdot \sum\limits_{k=0}^{n-1}q^k\\
+		&=a_{x}\cdot \dfrac{1-q^{n}}{1-q}
+		\end{align*}
+	\end{Beweis}
 \end{document}
