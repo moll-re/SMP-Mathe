@@ -198,7 +198,7 @@ Die Funktion nennt man \textbf{ungerade}.
 	Das Symbol $\lim\limits_{x \rightarrow x_{0}}f(x)$ mit $x_{0} \in \overline{\R}$ ($\pm \infty$ eingeschlossen) bezeichnet den Limes der reellen Funktion $f:D\rightarrow \R$ für den Grenzübergang von $x$ gegen eine Stelle $x_{0}$, wobei $x_{0}$ nicht umbedingt in der Definitionsmenge von $f$ enthalten sein muss.
 
 	Eine Zahl $g \in \overline{\R}$ ist der Grenzwert einer Funktion $f:D\rightarrow \R$ für $x\rightarrow x_{0}$, falls für jede Folge $(a_{n})_{n\in \N}$ mit Folgegliedern aus $D$ und Grenzwert $x_{0}$ die Folge $(f(a_{n}))_{n\in \N}$ den Grenzwert $g$ hat.
-	$$lim\limits_{x \rightarrow x_{0}}f(x) = g $\quad $\Leftrightarrow$ \quad $\forall (a_{n})_{n\in \N}$ mit $\lim\limits_{n \rightarrow \infty}a_{n}=x_{0} : \lim\limits_{n \rightarrow \infty}f(a_{n})=g$$
+	$$\lim\limits_{x \rightarrow x_{0}}f(x) = g \quad \Leftrightarrow \quad \forall (a_{n})_{n\in \N} \text{ mit } \lim\limits_{n \rightarrow \infty}a_{n}=x_{0} : \lim\limits_{n \rightarrow \infty}f(a_{n})=g$$
 \end{Definition}
 
 \begin{Theorem}[Règle de l'Hôpital (Für Grenzwerte des Typs $0/0$ und $\infty/\infty$)]
@@ -218,9 +218,10 @@ Die Funktion nennt man \textbf{ungerade}.
 \begin{Beispiel}
 	$f(x) = \dfrac{\sin(x)}{x} \qquad x_{0} = 0\qquad \qquad D=\R\backslash\{0\}$
 
-	$\Rightarrow \lim\limits_{x \rightarrow x_{0}}f(x) = \lim\limits_{x \rightarrow x_{0}}\dfrac{\sin(x)}{x} = \lim\limits_{x \rightarrow x_{0}} \dfrac{\cos(x)}{1} = 1 $\\\\ \\
+	$\Rightarrow \lim\limits_{x \rightarrow x_{0}}f(x) = \lim\limits_{x \rightarrow x_{0}}\dfrac{\sin(x)}{x} = \lim\limits_{x \rightarrow x_{0}} \dfrac{\cos(x)}{1} = 1 $
 
-	$g(x) = x\cdot \log \left( \dfrac{x+1}{x-1} \right) \qquad $für $ x\to \infty \qquad \qquad D=\R\backslash\{1\}$ \\\\
+	$g(x) = x\cdot \log \left( \dfrac{x+1}{x-1} \right) \qquad $für $ x\to \infty \qquad \qquad D=\R\backslash\{1\}$
+
 	$\begin{array}{rcl}
 		\Rightarrow \lim\limits_{x \to \infty} g(x) & = & \lim\limits_{x \to \infty} x\cdot \log \left( \dfrac{x+1}{x-1} \right) \\
 		&=& \lim\limits_{x \to \infty} \dfrac{\log \left( \dfrac{x+1}{x-1} \right) }{\dfrac{1}{x}}\\
@@ -233,7 +234,8 @@ Die Funktion nennt man \textbf{ungerade}.
 
 \subsection{Asymptoten}
 
-Eine Asymptote ist eine Gerade oder Kurve, die sich dem Graphen einer Funktion immer weiter annähert. Dabei unterscheidet man verschiedene Fälle:\\
+Eine Asymptote ist eine Gerade oder Kurve, die sich dem Graphen einer Funktion immer weiter annähert. Dabei unterscheidet man verschiedene Fälle:
+
 \begin{Definition}
 	\begin{enumerate}
 		\item \textbf{Senkrechte Asymptote:}
@@ -312,7 +314,7 @@ Für die Bestimmung von Extremstellen gilt es zwei Bedingungen zu überprüfen:
 Hat an einer Stelle $x_{0}$ die erste Ableitung von $f$ eine Nullstelle, also $f'(x_{0}) = 0$, dann handelt es sich um eine Extremstelle \textbf{oder} um einen Sattelpunkt. Diese Bedingung ist die notwendige Bedingung für eine Extremstelle. Mit ihr ist eine grobe Kategorisierung gemacht, eine Extremstelle ist noch nicht bewiesen.
 
 Hat $f'$ an der Stelle $x_{0}$ einen Vorzeichenwechsel oder ist $f''(x_{0})\neq 0$, dann ist der Sonderfall des Wendepunktes ausgeschlossen und es handelt sich um deine Extremstelle. Es gilt also:
-$$\exists! $ $ x_{0} \in I \subseteq D_{f} : f(x_{0}) \geq oder \leq f(x)$$
+$$\exists! x_{0} \in I \subseteq D_{f} : f(x_{0}) \geq ode\text{ oder } \leq f(x)$$
 Der Punkt $P(x_{0}|f(x_{0}))$ heißt Hochpunkt oder Tiefpunkt. Diese Bedingung ist die hinreichende Bedingung für eine Extremstelle.
 
 \subsection{Wendestellen}
@@ -488,7 +490,7 @@ $\Rightarrow f(0) = \frac{4}{-1} = -4$
 
 \underline{Symmetrie:}
 
-Man kann anhand des GTR vermuten dass $f$ punktsymmetrisch ist. Dieser Symmetriepunkt $P_{0}$ lässt sich entweder dort ablesen oder ist (häufig) den Schnittpunkt der Asymptoten. $P_{o}(\frac{1}{2}|-2)$\\
+Man kann anhand des GTR vermuten dass $f$ punktsymmetrisch ist. Dieser Symmetriepunkt $P_{0}$ lässt sich entweder dort ablesen oder ist (häufig) den Schnittpunkt der Asymptoten. $P_{o}(\frac{1}{2}|-2)$
 
 $\begin{array}{rccl}
 	\Rightarrow & f(x_{0}+h)-y_{0} & = & f(\frac{1}{2} + h) +2 \\
@@ -508,9 +510,9 @@ Hiermit hat man die Punktsymmetrie von $f$ zu $P_{0}$ bewiesen.
 
 \underline{Bestimmung der Grenzwerte der Funktion:}
 
-$\Rightarrow \lim\limits_{x \rightarrow +\infty} {f(x)} = \lim\limits_{x \rightarrow +\infty} {\dfrac{4x^2-8x+4}{2x-1}} = \dfrac{\lim\limits_{x \rightarrow +\infty} {(4-\frac{8}{x} + \frac{4}{x^2}) }}{{\lim\limits_{x \rightarrow +\infty}}{ \frac{2}{x} - \frac{1}{x^2} }} = \dfrac{4-0+0}{0-0} = +\infty $\\ \\
+$\Rightarrow \lim\limits_{x \rightarrow +\infty} {f(x)} = \lim\limits_{x \rightarrow +\infty} {\dfrac{4x^2-8x+4}{2x-1}} = \dfrac{\lim\limits_{x \rightarrow +\infty} {(4-\frac{8}{x} + \frac{4}{x^2}) }}{{\lim\limits_{x \rightarrow +\infty}}{ \frac{2}{x} - \frac{1}{x^2} }} = \dfrac{4-0+0}{0-0} = +\infty $
 
-$\Rightarrow \lim\limits_{x \rightarrow -\infty} {f(x)} = \lim\limits_{x \rightarrow -\infty} {\dfrac{4x^2-8x+4}{2x-1}} = \dfrac{\lim\limits_{x \rightarrow +\infty} {(-4+\frac{8}{x} + \frac{4}{x^2}) }}{{\lim\limits_{x \rightarrow +\infty}}{ -\frac{2}{x} - \frac{1}{x^2} }} = \dfrac{-4+0+0}{-0-0} = -\infty $\\ \\
+$\Rightarrow \lim\limits_{x \rightarrow -\infty} {f(x)} = \lim\limits_{x \rightarrow -\infty} {\dfrac{4x^2-8x+4}{2x-1}} = \dfrac{\lim\limits_{x \rightarrow +\infty} {(-4+\frac{8}{x} + \frac{4}{x^2}) }}{{\lim\limits_{x \rightarrow +\infty}}{ -\frac{2}{x} - \frac{1}{x^2} }} = \dfrac{-4+0+0}{-0-0} = -\infty $
 
 \begin{Bemerkung}
 Da die Punktsymmetrie vorher bewiesen wurde hätte der $\lim\limits_{x \rightarrow -\infty} {f(x)}$ gar nicht errechnet werden müssen!
@@ -562,7 +564,7 @@ Untersuchung auf Extremstellen:
 	\tikzset{arrow style/.style = {blue,->,> = latex',
 	shorten > = 6pt,
 	shorten < = 6pt}}
-	\tkzTabInit{$x$ /1, $ x $ /1.2, $(8x-8) $ /1.2, $(2x-1)^2$ /1.2, $f'(x)$ /1.2, $f(x)$ /3,}   {$-\infty$ ,$0$ , $\frac{1}{2}$, $1$ ,$+\infty$}
+	\tkzTabInit{$x$ /1, $ x $ /1.2, $(8x-8) $ /1.2, $(2x-1)^2$ /1.2, $f'(x)$ /1.2, $f(x)$ /3}   {$-\infty$ ,$0$ , $\frac{1}{2}$, $1$ ,$+\infty$}
 	\tkzTabLine{{},-,z,+,t,+,t,+,}
 	\tkzTabLine{{},-,t,-,t,-,z,+,}
 	\tkzTabLine{{},+,t,+,d,+,t,+}
@@ -630,7 +632,7 @@ Erklärung:
 \end{minipage}
 \hfill
 \begin{minipage}[b]{0.4\linewidth}
-	\s[height=12\baselineskip]{kap3/BundelFunktionenscharen.eps}
+	\includegraphics[height=12\baselineskip]{kap3/BundelFunktionenscharen.eps}
 \end{minipage}
 
 \subsection{Beispiel}
@@ -678,15 +680,13 @@ $\begin{array}{rcl}
 	&=& \dfrac{8a^2}{(x+a)^3}
 \end{array}$
 
-\subsubsection{Weisen Sie nach, dass $K_{a}$ genau einen Hochpunkt und genau einen Tiefpunkt besitzt.
-
-Geben Sie die Koordinaten dieser Punkte in Abhängigkeit von $a$ an und erstellen Sie eine Monotonietabelle der Funktionen $f_{a}$}
+\subsubsection{Weisen Sie nach, dass $K_{a}$ genau einen Hochpunkt und genau einen Tiefpunkt besitzt. Geben Sie die Koordinaten dieser Punkte in Abhängigkeit von $a$ an und erstellen Sie eine Monotonietabelle der Funktionen $f_{a}$}
 
 Notwendige Bedingung für Extremstellen: $\Rightarrow f'(x)=0$
 
 $\Leftrightarrow x^2+2ax-3a^2 = 0 \qquad \qquad D= \R \backslash\{ -a \}$
 
-$\Rightarrow $\Delta$ = 4a^2 +12a^2 = 16a^2$
+$\Rightarrow \Delta = 4a^2 +12a^2 = 16a^2$
 
 $\Leftrightarrow x_{1}=a \quad \lor \quad x_{2}=-3a \qquad \qquad L=\{a;-3a\}$
 
@@ -704,7 +704,7 @@ Jetzt kann die Monotonietabelle erstellt werden:
 	\tikzset{arrow style/.style = {blue,->,> = latex',
 	shorten > = 6pt,
 	shorten < = 6pt}}
-	\tkzTabInit{$x$ /1, $ x^2-2ax-3a $ /1.2, $(x+a)^2 $ /1.2, $f_{a}'(x)$ /1.2, $f_{a}(x)$ /3,}   {$-\infty$ ,$-3a$ , $-a$, $a$ ,$+\infty$}
+	\tkzTabInit{$x$ /1, $ x^2-2ax-3a $ /1.2, $(x+a)^2 $ /1.2, $f_{a}'(x)$ /1.2, $f_{a}(x)$ /3}{$-\infty$ ,$-3a$ , $-a$, $a$ ,$+\infty$}
 	\tkzTabLine{{},+,z,-,t,-,z,+,}
 	\tkzTabLine{{},+,t,+,d,+,t,+,}
 	\tkzTabLine{{},+,z,-,d,-,z,+,}
@@ -713,13 +713,13 @@ Jetzt kann die Monotonietabelle erstellt werden:
 
 \subsubsection{Zeigen Sie, dass es genau einen Punkt gibt, durch den alle Graphen $Ka$ gehen.}
 
-Diesen Punkt haben wir schon per ''Zufall'' herausgefunden, da wir eine Nullstelle gefunden haben, die nicht von $a$ abhängt. Wenn man diesen aber nicht gefunden hat, geht man diesen Lösungsweg:\\\\
+Diesen Punkt haben wir schon per "Zufall" herausgefunden, da wir eine Nullstelle gefunden haben, die nicht von $a$ abhängt. Wenn man diesen aber nicht gefunden hat, geht man diesen Lösungsweg:\\\\
 
 $\begin{array}{rcccccl}
 	\Rightarrow & f_{1}=f_{2} & \Leftrightarrow & \dfrac{x^2-3x}{x+1} & = & \dfrac{x^2-6x}{x+2} & \qquad \qquad D=\R \backslash \{-1;-2\} \\ \\
 	&&\Leftrightarrow& \dfrac{x-3}{x+1} &=& \dfrac{x-6}{x+2}&  \\\\
 	&&\Leftrightarrow& -x & = & -5x &\\ \\
-	&&\Leftrightarrow& x &=& 0 &�\qquad \qquad L=\{ 0 \} \\
+	&&\Leftrightarrow& x &=& 0 & \qquad \qquad L=\{ 0 \} \\
 \end{array}$
 
 \subsubsection{Bestimmen Sie $a\in \R^+$ so, dass der Graph $K_{a}$ durch den Punkt $P(5|\frac{5}{3})$ verläuft}

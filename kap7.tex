@@ -85,8 +85,9 @@
 \subsubsection{Baumdiagramme}
 \begin{Definition}[Bernoulli-Experiment]
   Bei Bernoulli-Experimenten gibt es nur $2$ mögliche Ausgänge: Erfolg / Miserfolg ($= \overline{\text{Erfolg}}$). Mehrfaches Ausführen ($l$ Mal) von Bernoulli-Experimenten ergibt eine \textbf{Bernoulli-Kette} der Länge $l$.
-\end{Definition}\\
-Eine Bernoulli-Kette kann als \textbf{Baumdiagramm} dargestellt werden:\\
+\end{Definition}
+
+Eine Bernoulli-Kette kann als \textbf{Baumdiagramm} dargestellt werden:
 
 \tikzstyle{level 1}=[level distance=3.5cm, sibling distance=3.5cm]
 \tikzstyle{level 2}=[level distance=3.5cm, sibling distance=2cm]
@@ -137,7 +138,8 @@ Eine Bernoulli-Kette kann als \textbf{Baumdiagramm} dargestellt werden:\\
     node[below]  {$\frac{1}{2}$}
   };
 \end{tikzpicture}
-\end{center}\\
+\end{center}
+
 $E$ bezeichnet das Erfolgs-Ereignis, $\overline{E}$ bezeichnet somit den Miserfolg. Jeder Pfad trägt 2 Informationen: das jeweilige Ereignis und seine Wahrscheinlichkeit.
 
 \begin{Definition}[Pfadregeln]
@@ -212,7 +214,8 @@ $E$ bezeichnet das Erfolgs-Ereignis, $\overline{E}$ bezeichnet somit den Miserfo
     %\\\\
     %(1) \qquad (7) \qquad (21) \qquad (35) \qquad (35) \qquad (21) \qquad (7) \qquad (1)
   %\end{array} % Und immer so weiter ...
-\end{center}\\
+\end{center}
+
 Bekannt aus der Mittelstufe. Es ergibt sich, wenn man die Summe von zwei Werten eine Stufe tiefer, zwischen die beiden Werte schreibt. Es wird vor Allem für Binomialkoeffizienten verwendet, findet aber auch in der Wahrscheinlichkeitsrechnung Verwendung.
 
 
@@ -324,8 +327,10 @@ Bekannt aus der Mittelstufe. Es ergibt sich, wenn man die Summe von zwei Werten 
 \begin{Definition}
   Sind $A$ und $B$ beliebige Ereignisse mit $P(A)\neq 0$, so bezeichnet man $P_A(B)$ oder $P(B|A)$ die \textbf{durch $A$ bedingte Wahrscheinlichkeit von $B$}. Es gilt:
   $$P_A(B) = \dfrac{P(A \cap B)}{P(A)}$$
-\end{Definition}\\
-Daraus ergibt sich die korrekte Darstellung als Baumdiagramm:\\
+\end{Definition}
+
+Daraus ergibt sich die korrekte Darstellung als Baumdiagramm:
+
 \begin{center}
 \begin{tikzpicture}[grow=right, ]%sloped]
 \node[optionen] {\small{1. Durchführung} $A, \overline{A}$}
@@ -370,10 +375,12 @@ Daraus ergibt sich die korrekte Darstellung als Baumdiagramm:\\
     node[below]  {$P(A)$}
   };
 \end{tikzpicture}
-\end{center}\\
+\end{center}
+
 \begin{Theorem}[Satz von Bayes]
   $$P_B(A)=\dfrac{P_A(B)\cdot P(A)}{P(B)}$$
 \end{Theorem}
+
 \begin{Bemerkung}
   Folgende Aussagen sind zu dieser Formulierung äquivalent:
   \begin{itemize}
@@ -381,9 +388,11 @@ Daraus ergibt sich die korrekte Darstellung als Baumdiagramm:\\
     \item $P(A) = P_A(B) \cdot P(B) + P_A(\overline B) \cdot P(\overline B)$ (totale Wahrscheinlichkeit von $A$)
   \end{itemize}
 \end{Bemerkung}
+
 \begin{Beweis}
   $$P_B(A) = \dfrac{P(A\cap B)}{P(B)} = \dfrac{\dfrac{P(A\cap B)}{P(A)}\cdot P(A)}{P(B)} = \dfrac{P_A(B)\cdot P(A)}{P(B)}$$
 \end{Beweis}
+
 \subsection{Stochastische Unabhängigkeit}
 \begin{Definition}
   Die Ergebnisse $A$ und $B$ werden stochastisch unabhängig genannt, wenn das Eintreten $A$s die Wahrscheinlichkeit $B$s nicht verändert. Es gilt dann:
@@ -401,8 +410,9 @@ Daraus ergibt sich die korrekte Darstellung als Baumdiagramm:\\
     \item $0 \leq P(e_i)\leq 1 \forall i \leq n$
     \item $P(e_1)+P(e_2)+...+P(e_n)=1$
   \end{itemize}
-\end{Definition}\\
-\underline{Darstellung:}\\
+\end{Definition}
+
+\underline{Darstellung:}
 
 \begin{center}
   \begin{tikzpicture}
@@ -413,23 +423,33 @@ Daraus ergibt sich die korrekte Darstellung als Baumdiagramm:\\
     \end{axis}
   \end{tikzpicture}
 \end{center}
+
 \begin{Bemerkung}
   Dieses Balkendiagramm wird als Histogramm bezeichnet und ist in vielen Fällen eine gute Darstellungsmöglichkeit.
 \end{Bemerkung}
+
 \begin{GTR-Tipp}
   \begin{enumerate}
-    \item Mit \texttt{seq()} (in \texttt{LIST > OPS}) wird die Liste mit allen X-Werten generiert:\\
-    \texttt{seq(X,X,0,<Anzahl an Versuchen>,1)}$\rightarrow$\texttt{<Variable>}. \\
+    \item Mit \texttt{seq()} (in \texttt{LIST > OPS}) wird die Liste mit allen X-Werten generiert:
+    
+    \texttt{seq(X,X,0,<Anzahl an Versuchen>,1)}$\rightarrow$\texttt{<Variable>}.
+
     ($\rightarrow$ wird durch die Taste \texttt{STO>} aufgerufen)
-    \item Mit \texttt{<gewünschte Verteilung>()} (in \texttt{DISTR > DISTR}) wird die Liste mit allen Y-Werten generiert:\\
+    \item Mit \texttt{<gewünschte Verteilung>()} (in \texttt{DISTR > DISTR}) wird die Liste mit allen Y-Werten generiert:
+    
     \texttt{<Verteilung>(<Anzahl an Versuchen>,<Erfolgswahrscheinlichkeit>)}$\rightarrow$\texttt{<Variable>}.
     \item Im Menü \texttt{STAT PLOT > Plot 1} kann der gewünschte Anzeigemodus gewählt werden, für die \texttt{Xlist} wird die erste Liste gewählt, für \texttt{Freq} die zweite. Beim Anzeige achte man auf die richtigen Maßstäbe: Die Anzahl an Versuchen für \texttt{Xmax}, 1 für \texttt{Ymax}.
-  \end{enumerate}\\
+  \end{enumerate}
+
   \begin{Bemerkung}
     Der GTR ist ab einer Anzahl von über 48 überfordert, dann können die Balken wegen der niedrigen Auflösung nicht alle angezeigt werden. In einem solchen Fall kann nur ein Ausschnitt des Histogramms angezeigt werden, sonst erscheint eine Fehlermeldung.
-  \end{Bemerkung}\\
+  \end{Bemerkung}
+
   \begin{Bemerkung}
-    Alternativ kann eine Funktion definiert werden über \\\texttt{<Verteilung>(<Anzahl an Versuchen>,<Erfolgswahrscheinlichkeit>,round(X,0))} und anschließend angezeigt werden.\\
+    Alternativ kann eine Funktion definiert werden über
+    
+    \texttt{<Verteilung>(<Anzahl an Versuchen>,<Erfolgswahrscheinlichkeit>,round(X,0))} und anschließend angezeigt werden.
+
     Dies funktionniert nur für ganze $x$, weshalb $X$ durch \texttt{round(X,0)} (zu finden in... (KP, catalog durchsuchen)) auf den nächsten ganzen Wert gerundet wird.
   \end{Bemerkung}
 \end{GTR-Tipp}
@@ -438,37 +458,49 @@ Daraus ergibt sich die korrekte Darstellung als Baumdiagramm:\\
   Es sei eine Zuffalsvariable $X$ mit Werten $x_1,x_2,...,x_n$ und die zugehörige Wahrscheinlichkeitsverteilung $P(X)$. Als Erwartungswert $\mu$ wird das arithmetische Mittel der Werte von $P(X)$ bezeichnet:
   $$E(X)=\mu=\sum_{i=1}^{n}x_i P(X=x_i)$$
 \end{Definition}
+
 \begin{Definition}[Median einer Wahrscheinlichkeitsverteilung]
   Als Median einer Wahrscheinlichkeitsverteilung bezeichnenn wir den den Wert $X_n$, ab dem die kumulierte Wahrscheinlichkeit von $P(X=x_i)$ den Wert von $50\%$ überschreitet.
 \end{Definition}
+
 \begin{Bemerkung}
   Anschaulich bezeichnet der Erwartungswert den durchschnittlichen Wert, den eine Zufallsgröße annimt, wenn ein Zufallsexperiment unendlich oft durchgeführt wird.
 \end{Bemerkung}
+
 \subsection{Binomialverteilung}
 \begin{Theorem}
   Für eine Bernoulli-Kette der Länge $l \in \N$ und der Trefferwahrscheinlichkeit $P$ (Wahrscheinlichkeit für einen Pfad) gilt:
   $$P(X=k) = {l \choose k} p^k (1-p) ^{l-k}$$
-  mit $k$ der gerwünschten Anzahl an Erfolgen.\\
+  mit $k$ der gerwünschten Anzahl an Erfolgen.
+
   Außerdem gilt:
   $$P(X\leq k) = \sum_{i=0}^{k}{l \choose i} p^i (1-p) ^{l-i}$$
 \end{Theorem}
+
 \begin{Bemerkung}
   \begin{Definition}
-    $X$ heißt in diesem Fall \textbf{binomialverteilte Zufallsvariable}. Die entsprechende Wahrscheinlichkeitsverteilung heißt Binomialverteilung. Es gilt $P(X=k) =  B_{l,p}(k)$.\\
-    Die kumulierte Binomialverteilung wird durch ist gegeben durch: $P(X \leq k) = F_{l,p}(k)$.\\
-     $l$ ist die Länge der Bernoulli-Kette, $p$ die Erfolgswahrscheinlichkeit und $k$ ist die gewünschte Anzahl an Erfolgen.
+    $X$ heißt in diesem Fall \textbf{binomialverteilte Zufallsvariable}. Die entsprechende Wahrscheinlichkeitsverteilung heißt Binomialverteilung. Es gilt $P(X=k) =  B_{l,p}(k)$.
+
+    Die kumulierte Binomialverteilung wird durch ist gegeben durch: $P(X \leq k) = F_{l,p}(k)$.
+
+    $l$ ist die Länge der Bernoulli-Kette, $p$ die Erfolgswahrscheinlichkeit und $k$ ist die gewünschte Anzahl an Erfolgen.
 
   \end{Definition}
 \end{Bemerkung}
+
 \begin{GTR-Tipp}
-  Beide Berechnungen werden durch einen GTR-Befehl automatisiert:\\
+  Beide Berechnungen werden durch einen GTR-Befehl automatisiert:
+
   \begin{itemize}
     \item $\displaystyle{{l \choose k}} p^k (1-p) ^{l-k}$ wird duch den Befehl \texttt{binomPDF(l,p,k)} berechnet.
     \item $\displaystyle{\sum_{i=0}^{k}{l \choose i}} p^i (1-p) ^{l-i}$ wird duch den Befehl \texttt{binomCDF(l,p,k)} berechnet.
-  \end{itemize}\\
+  \end{itemize}
+
   Beide Befehle befinden sich im \texttt{DISTR}-Menü (\texttt{2ND}+\texttt{VARS})
 \end{GTR-Tipp}
-\underline{Darstellung:}\\
+
+\underline{Darstellung:}
+
 \begin{minipage}{0.5\textwidth}
   \begin{tikzpicture}
     \begin{axis}[
@@ -534,56 +566,71 @@ Manche Ereignisse lassen sich nicht als ganze Zahl modellieren oder können nich
   \end{itemize}
 \end{Bemerkung}
 \begin{Definition}[Stetige Zufallsvariable]
-  Sei $P$ eine Wahrscheinlichkeitsverteilung über $I$ mit Dichtefunktion $f$.\\
+  Sei $P$ eine Wahrscheinlichkeitsverteilung über $I$ mit Dichtefunktion $f$.
+
   \begin{itemize}
     \item Eine Zufallsvariable $X$ mit Werten Auswahl $I$ folgt der Wahrscheinlichkeitsverteilung $P$, wenn gilt: $$P(c\leq X \leq d)=\displaystyle \int_c^d f(t)dt$$
-    \item Die Verteilungsfunktion $F$ ist definiert durch $F(X)=P(X\leq x)=P(a\leqX\leq x)=\displaystyle\int_a^x f(t)dt$
+    \item Die Verteilungsfunktion $F$ ist definiert durch $F(X)=P(X \leq x)=P(a \leq X \leq x)=\int_a^x f(t)dt$
   \end{itemize}
 \end{Definition}
+
 \begin{Bemerkung}
   $F$ besitzt per Definition folgende Eigenschaften:
   \begin{itemize}
     \item $F$ ist differenzierbar und $F'=f$
     \item $F$ ist monoton steigend auf $I$
-    \item Für $h>0$ und $x+h\in I$ gilt: $P(x\leqX\leqx+h) = F(x+h)-F(x)$.\\(Gleichbedeutend mit der Aussage $P(c\leq X\leq d)=F(d)-F(c)$)
+    \item Für $h>0$ und $x+h\in I$ gilt: $P(x \leq X \leq x+h) = F(x+h)-F(x)$.
+    
+    (Gleichbedeutend mit der Aussage $P(c\leq X\leq d)=F(d)-F(c)$)
   \end{itemize}
 \end{Bemerkung}
+
 \begin{Definition}[Erwartungswert]
   Sei $X$ eine Zufallsvariable mit Werten aus $I= [a;b]$. Der Erwartungswert ist gegeben durch:
   $$E(X)=\mu=\int_a^b t\cdot f(t)dt$$
 \end{Definition}
+
 \begin{Definition}[Varianz]
   Sei $X$ eine Zufallsvariable mit Werten aus $I= [a;b]$. Die Varianz ist gegeben durch:
   $$\sigma^2=\int_a^b (t-\mu)^2 \cdot f(t)dt$$
 \end{Definition}
 
+
 \subsection{Exponentialverteilung: $X \sim \mathcal{E}(\lambda)$}
+
 \begin{Definition}
   Eine stetige Zufallsvariable $X$ hat eine Exponentialverteilung wenn $X$ die folgende Wahrscheinlichkeitsdichte hat:
   $$f_\lambda (x) = \lambda e^{-\lambda x}$$
   $f_\lambda(x)$ heißt Dichtefunktion der Exponentialverteilung.
 \end{Definition}
+
 \begin{Bemerkung}
   Diese Funktion erfüllt die Bedingungen der Wahrscheinlichkeitsverteilung, denn sie ist auf $\R_{+}$ definiert und stetig. Außerdem gilt: $\displaystyle \int_0^\infty f_\lambda dt = 1$.
 \end{Bemerkung}
+
 \begin{Definition}
   Die Verteilungsfunktion der Exponentialverteilung ist gegeben durch:
   $$P(X \leq x) = F_\lambda(x) = \int_{0}^{x} f_\lambda(t) dt = 1 - e^{-\lambda x}$$
 \end{Definition}
+
 \begin{Bemerkung}
   Solche Funktionen werden verwendet, um Halbwärtszeiten oder Lebensdauern zu modellieren.
 \end{Bemerkung}
+
 \begin{Theorem}[Gedächtnislosigkeit]
   Für eine exponentialverteilte Zufallsvariable $X$ gilt folgende Eigenschaft:
   $$P_{(X \geq x)}(X \geq x+t) = P(X \geq t)\qquad \forall t,x \geq 0$$
 \end{Theorem}
+
 \begin{Bemerkung}
   Das bedeutet beispielsweise für die Zersetzung eines radioaktiven Atoms, dass die Wahrscheinlichkeit sich bei $x+t$ zu zersetzen unter der Voraussetzung, dass diese noch nicht bei $x$ stattgefunden hat, nicht von $x$ abhängt.\\
   Solche Lebensdauern werden als ``alterungslos'' bezeichnet.
 \end{Bemerkung}
+
 \begin{Bemerkung}
   Die Gedächtnislosigkeit ist definierte Eigenschaft der Exponentialverteilung. (Es handelt sich somit um eine notwendige und hinreichende Bedingung)
 \end{Bemerkung}
+
 \begin{Beweis}
   \begin{align*}
     P_{(X \geq x)}(X \geq x+t) &= \dfrac{P((X \geq x)\cap(X \geq x+t))}{P(X \geq x)}\\
@@ -595,6 +642,7 @@ Manche Ereignisse lassen sich nicht als ganze Zahl modellieren oder können nich
     &= P(X \geq t)
   \end{align*}
 \end{Beweis}
+
 \begin{Theorem}[Erwartungswert]
   Für die Exponentialverteilung gilt:
   $$ \mu = \dfrac{1}{\lambda}$$
@@ -605,50 +653,62 @@ Manche Ereignisse lassen sich nicht als ganze Zahl modellieren oder können nich
     &= \int_0^{\infty} t \cdot \lambda e^{-\lambda t} dt\\
     &= \left[-t \cdot e^{-\lambda t}\right]_0^\infty - \int_0^{\infty} -1 \cdot e^{-\lambda t} dt\\
     &= \left[-t \cdot \lambda e^{-\lambda t}\right]_0^\infty - \left[\dfrac{1}{\lambda} e^{-\lambda t}\right]_0^\infty\\
-    &= 0-0-\left(0-\dfrac{1}{\lambda})\right\\
+    &= 0-0-\left(0-\dfrac{1}{\lambda}\right)\\
     &= \dfrac{1}{\lambda}
   \end{align*}
 \end{Beweis}
+
 \begin{Theorem}[Varianz]
   Für die Exponentialverteilung gilt:
   $$ \sigma^2 = \dfrac{1}{\lambda^2}$$
 \end{Theorem}
+
 \begin{Beweis}
   \begin{align*}
-    \sigma^2 &= \int_0^{\infty} (t-\mu)^2 \cdot f_\lambda (t)dt\\
-    &= \int_0^{\infty} (t-\mu)^2 \cdot \lambda e^{-\lambda t} dt\\
-    &= \int_0^{\infty} t^2 \cdot \lambda e^{-\lambda t} dt - \int_0^{\infty} 2\mu t \cdot \lambda e^{-\lambda t} dt + \int_0^{\infty} \mu^2 \cdot \lambda e^{-\lambda t} dt\\
-    &= \left[-t^2 \cdot e^{-\lambda t}\right]_0^\infty - \int_0^{\infty} -2t \cdot e^{-\lambda t} dt - \left(\left[-2\mu t \cdot e^{-\lambda t}\right]_0^\infty - \int_0^{\infty} -2\mu \cdot e^{-\lambda t} dt \right) + \left[-\mu^2 \cdot e^{-\lambda t}\right]_0^\infty \\
-    &= \left[-t^2 \cdot e^{-\lambda t}\right]_0^\infty - \left(\left[ \dfrac{2t}{\lambda} e^{-\lambda t}\right]_0^\infty - \int_0^{\infty} \dfrac{1}{\lambda} \cdot e^{-\lambda t} dt\right) - \left(\left[-2\mu t \cdot e^{-\lambda t}\right]_0^\infty - \left[\dfrac{2\mu}{\lambda} \cdot e^{-\lambda t}\right]_0^\infty \right) + \left[-\mu^2 \cdot e^{-\lambda t}\right]_0^\infty \\
-    &= \left[-t^2 \cdot e^{-\lambda t}\right]_0^\infty - \left[\dfrac{2t}{\lambda} e^{-\lambda t}\right]_0^\infty + \left[-\dfrac{2}{\lambda^2} e^{-\lambda t}\right]_0^\infty - \left[-2\mu t \cdot e^{-\lambda t}\right]_0^\infty + \left[\dfrac{2\mu}{\lambda} \cdot e^{-\lambda t}\right]_0^\infty + \left[-\mu^2 \cdot e^{-\lambda t}\right]_0^\infty \\
-    &= 0 - 0 -(0 - 0) + 0 + \dfrac{2}{\lambda^2} - (0-0) + 0 - \dfrac{2\mu}{\lambda} + 0 + \mu^2 \qquad\qquad\qquad \left|\mu = \dfrac{1}{\lambda}\\
-    &= \dfrac{2}{\lambda^2} - \dfrac{2}{\lambda^2} + \dfrac{1}{\lambda^2}\\
-    &= \dfrac{1}{\lambda^2}
+    \sigma^2 
+    & = \int_0^{\infty} (t-\mu)^2 \cdot f_\lambda (t)dt \\
+    & = \int_0^{\infty} (t-\mu)^2 \cdot \lambda e^{-\lambda t} dt \\
+    & = \int_0^{\infty} t^2 \cdot \lambda e^{-\lambda t} dt - \int_0^{\infty} 2\mu t \cdot \lambda e^{-\lambda t} dt + \int_0^{\infty} \mu^2 \cdot \lambda e^{-\lambda t} dt \\
+    & = \left[ -t^2 \cdot e^{-\lambda t} \right]_0^\infty - \int_0^{\infty} -2t \cdot e^{-\lambda t} dt - \left(\left[-2\mu t \cdot e^{-\lambda t}\right]_0^\infty - \int_0^{\infty} -2\mu \cdot e^{-\lambda t} dt \right) + \left[-\mu^2 \cdot e^{-\lambda t}\right]_0^\infty \\
+    & = \left[-t^2 \cdot e^{-\lambda t}\right]_0^\infty - \left(\left[ \dfrac{2t}{\lambda} e^{-\lambda t}\right]_0^\infty - \int_0^{\infty} \dfrac{1}{\lambda} \cdot e^{-\lambda t} dt\right) - \left(\left[-2\mu t \cdot e^{-\lambda t}\right]_0^\infty - \left[\dfrac{2\mu}{\lambda} \cdot e^{-\lambda t}\right]_0^\infty \right) \\
+    & \quad + \left[-\mu^2 \cdot e^{-\lambda t}\right]_0^\infty \\
+    & = \left[-t^2 \cdot e^{-\lambda t}\right]_0^\infty - \left[\dfrac{2t}{\lambda} e^{-\lambda t}\right]_0^\infty + \left[-\dfrac{2}{\lambda^2} e^{-\lambda t}\right]_0^\infty - \left[-2\mu t \cdot e^{-\lambda t}\right]_0^\infty + \left[\dfrac{2\mu}{\lambda} \cdot e^{-\lambda t}\right]_0^\infty + \left[-\mu^2 \cdot e^{-\lambda t}\right]_0^\infty \\
+    & = 0 - 0 -(0 - 0) + 0 + \dfrac{2}{\lambda^2} - (0-0) + 0 - \dfrac{2\mu}{\lambda} + 0 + \mu^2 \qquad\qquad\qquad \\
+    & \quad \mu = \dfrac{1}{\lambda} \\
+    & = \dfrac{2}{\lambda^2} - \dfrac{2}{\lambda^2} + \dfrac{1}{\lambda^2} \\
+    & = \dfrac{1}{\lambda^2}
   \end{align*}
 \end{Beweis}
+
 \begin{Bemerkung}
   $\Rightarrow \sigma = \sqrt{\dfrac{1}{\lambda^2}} = \dfrac{1}{\lambda} = \mu$
 \end{Bemerkung}
 
+
 \subsection{Normalverteilung: $X \sim \mathcal{N}(\mu,\sigma^2)$}
+
 \begin{Definition}
 Eine stetige Zufallsvariable $X$ hat eine (Gauß- oder) Normalverteilung mit Erwartungswert $\mu$ und Varianz $\sigma ^{2}$ wenn $X$ die folgende Wahrscheinlichkeitsdichte hat:
-$$\varphi_{\mu,\sigma^2}(x) = f(x) = \dfrac {1}{\sqrt {2\pi \sigma^2}}} \cdot e^{- \dfrac{1}{2} {\left(\dfrac{x-\mu}{\sigma}\right)}^2} \qquad$$
+$$\varphi_{\mu,\sigma^2} (x) = f(x) = \dfrac {1}{\sqrt {2\pi \sigma^2}} \cdot e^{- \dfrac{1}{2} \left( \dfrac{x-\mu}{\sigma} \right) ^2}$$
 $\varphi(x)$ ist die Dichtefunktion der Normalverteilung.
 \end{Definition}
+
 \begin{Definition}
   Die Verteilungsfunktion der Normalverteilung ist gegeben durch:
   $$P(X\leq x) = \Phi_{\mu,\sigma^2}(x) = \int_{-\infty}^{x} \varphi_{\mu,\sigma^2}(t) dt$$
   Durch Substitution erhält man:
   $$\Phi_{\mu,\sigma^2}(x) = \dfrac{1}{\sqrt{2\pi}}\int_{-\infty}^{x} e^{-\frac{1}{2}t^2} dt$$
 \end{Definition}
+
 \begin{Bemerkung}
   Diese Definition ist somit analog zur Definition der Verteilungsfunktion der Binomialverteilung (Integral als Summe der Flächen).\\
   Außerdem bedeutet das, dass $\Phi(x)  \xrightarrow{\scriptscriptstyle x\rightarrow \infty} 1$.
 \end{Bemerkung}
+
 \begin{GTR-Tipp}
   Zur Berechnung geht man, wie üblich, ins Menü \texttt{DISTR} und wählt für $\varphi$  \texttt{normalpdf}, und für $\Phi$  \texttt{normalcdf} aus.
 \end{GTR-Tipp}
+
 \begin{Theorem}
   Für eine normalverteilte Zufallsvariable $X$ mit den Parametern $n,p$ und der Standardabweichung $\sigma = \sqrt{\text{Var}(X)} = \sqrt{\sigma^2}$ erhält man folgende Näherungen:
   \begin{itemize}
@@ -657,6 +717,7 @@ $\varphi(x)$ ist die Dichtefunktion der Normalverteilung.
     \item $P(\mu - 3\sigma \leq X \leq \mu + 3\sigma) \approx 99,7\%$
   \end{itemize}
 \end{Theorem}
+
 \begin{Beweis}
   Die Wahrscheinlichkeit für ein bestimmtes Streuintervall $I=[\mu - z\sigma;\mu + z\sigma]$ kann berechnet werden als:
   \begin{align*}
@@ -664,23 +725,26 @@ $\varphi(x)$ ist die Dichtefunktion der Normalverteilung.
     &= 2 \dfrac{1}{\sqrt{2\pi}}\int_{-\infty}^{x} e^{-\frac{1}{2}t^2} dt -1
   \end{align*}
 \end{Beweis}
+
 \begin{Bemerkung}
   Andersherum kann die Größe von $I$ berechnet werden über:
   $$ z= \Phi^{-1} \left(\dfrac{P+1}{2}\right)$$
 \end{Bemerkung}
+
 \begin{GTR-Tipp}
-  Diese Berechnung kann auch vom GTR getätigt werden: Im Menü \textt{DISTR} wählt man \texttt{invNorm()} aus, und gibt in der Eingabe die Fläche (also die Wahrscheinlichkeit), $\mu$ und $\sigma$ an. Man erhält somit die Breite des Intervalls, und kann dies wieder in Abhängigkeit von $\sigma$ angeben.
+  Diese Berechnung kann auch vom GTR getätigt werden: Im Menü \texttt{DISTR} wählt man \texttt{invNorm()} aus, und gibt in der Eingabe die Fläche (also die Wahrscheinlichkeit), $\mu$ und $\sigma$ an. Man erhält somit die Breite des Intervalls, und kann dies wieder in Abhängigkeit von $\sigma$ angeben.
 \end{GTR-Tipp}
 
 
 
 \subsubsection{Rückführung: Binomialverteilung}
+
 Warum interessiert uns das? Weil die Binomialverteilung diese symmetrische Kurve für $n\rightarrow\infty$ Versuche annähert. Noch nicht überzeugt? Über die Varianz können wir interessante Aussagen über die Verteilung der Wahrscheinlichkeiten machen.
 
 \begin{Theorem}[Laplace-Bedingung]
   Für eine Binomialverteilung mit $\sigma = \sqrt{np(1-p)}$ und $\mu = np$ gilt:\\
   Wenn $\sigma>3$, dann kann diese Binomialverteilung durch die Normalverteilung angenähert werden.
-  $$B_{l,p}(k) = P(X=k) = {l \choose k} p^k (1-p) ^{l-k} \approx \varphi_{\mu,\sigma^2}(k) = \dfrac {1}{\sqrt {2\pi \sigma^2}}} \cdot e^{- \dfrac{1}{2} {\left(\dfrac{k-\mu}{\sigma}\right)}^2};k\in \Z$$
+  $$B_{l,p}(k) = P(X=k) = {l \choose k} p^k (1-p) ^{l-k} \approx \varphi_{\mu,\sigma^2}(k) = \dfrac {1}{\sqrt {2\pi \sigma^2}} \cdot e^{- \dfrac{1}{2} \left(\dfrac{k-\mu}{\sigma}\right)^2};k\in \Z$$
   Daraus folgt, dass die Verteilungsfunktion ebenfalls angenähert werden kann:
   $$P(a \leq X \leq b) \approx \int_{a-0,5}^{b+a,5}\varphi_{\mu,\sigma^2}(x)dx = \Phi_{\mu,\sigma^2}(b+0,5)-\Phi_{\mu,\sigma^2}(a-0,5)$$
 \end{Theorem}
@@ -696,6 +760,7 @@ Warum interessiert uns das? Weil die Binomialverteilung diese symmetrische Kurve
   \end{itemize}
 \end{Theorem}
 
+TODO:
 \section{Hypothesen}
 \subsection{Signifikanztests}
 \subsubsection{Einseitiger Test}

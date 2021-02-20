@@ -1,65 +1,71 @@
 \documentclass[main.tex]{subfiles}
 \begin{document}
+
 \chapter{Exponentialfunktionen}
 \chapterauthor{Clara}
 
+
 \begin{Definition}
-Man bezeichnet als Exponentialfunktion eine Funktion der Form $x\rightarrow a^x$ mit $a\in \R^+\backslash 1$\\
-$x$ ist die Variable und wird \textit{Exponent} oder \textit{Hochzahl} genannt.\\
-$a$ nennt man \textit{Basis} oder \textit{Grundzahl}, sie ist für jede Funktion fest forgegeben.\\\\
-Allgemeiner gilt jede Funktion, bei der die Variable im Exponenten steht als Exponentialfunktion.
+	Man bezeichnet als Exponentialfunktion eine Funktion der Form $x\rightarrow a^x$ mit $a\in \R^+\backslash 1$.
+
+	$x$ ist die Variable und wird \textit{Exponent} oder \textit{Hochzahl} genannt.
+
+	$a$ nennt man \textit{Basis} oder \textit{Grundzahl}, sie ist für jede Funktion fest forgegeben.
+
+	Allgemeiner gilt jede Funktion, bei der die Variable im Exponenten steht als Exponentialfunktion.
 \end{Definition}
 
 
 
 
-		\section{Wiederholung: Potenzgesetze}
+\section{Wiederholung: Potenzgesetze}
+
 \begin{Theorem}
 	Seien $a$, $b\in\R$, sowie $n$, $m\in\N$, dann gilt:
 	\begin{enumerate}
-	\begin{minipage}{0.5\textwidth}
-	\item$a^0=1$ (für $a\neq 0$)
-	\item$a^1=a$
-	\item$a^n=\underbrace{a\cdot a\cdot ... \cdot a}_{n Mal}$
-	\item$a^m\cdot a^n=a^{m+n}$
-	\item$(a^n)^m=a^{n\cdot m}$
-	\end {minipage}
-	\begin{minipage}{0.5\textwidth}
-	\item$a^{-n}=\dfrac{1}{a^n}$
-	\item$\dfrac{a^n}{a^m}=a^{n-m}$
-	\item$\left(\dfrac{a}{b}\right)^n=\dfrac{a^n}{b^n}$
-	\item $a^{\frac{1}{n}}=\sqrt[n]{a}$
-	\item$a^{\frac{m}{n}}=\sqrt[n]{a^m}$
-	\end {minipage}
+		\begin{minipage}{0.5\textwidth}
+			\item$a^0=1$ (für $a\neq 0$)
+			\item$a^1=a$
+			\item$a^n=\underbrace{a\cdot a\cdot ... \cdot a}_{n Mal}$
+			\item$a^m\cdot a^n=a^{m+n}$
+			\item$(a^n)^m=a^{n\cdot m}$
+		\end {minipage}
+		\begin{minipage}{0.5\textwidth}
+			\item$a^{-n}=\dfrac{1}{a^n}$
+			\item$\dfrac{a^n}{a^m}=a^{n-m}$
+			\item$\left(\dfrac{a}{b}\right)^n=\dfrac{a^n}{b^n}$
+			\item $a^{\frac{1}{n}}=\sqrt[n]{a}$
+			\item$a^{\frac{m}{n}}=\sqrt[n]{a^m}$
+		\end {minipage}
 	\end{enumerate}
 \end{Theorem}
 
 
-		\section{Die Eulersche Zahl ($e$)}
+\section{Die Eulersche Zahl ($e$)}
 
-\begin{Definition}
-	$e = 2,71828182845904523536028747135266249775724709369995...$\\
-	\\
-	Die \textbf{Eulersche Zahl} ($e$) ist eine irrationale, transzendente und reelle Zahl, die die Basis des (natürlichen) 			Logarithmus und der (natürlichen) Exponentialfunktion ist.\\
+\begin{Definition}[$e = 2,71828182845904523536028747135266249775724709369995...$]
+	Die \textbf{Eulersche Zahl} ($e$) ist eine irrationale, transzendente und reelle Zahl, die die Basis des (natürlichen) 			Logarithmus und der (natürlichen) Exponentialfunktion ist.
+
 	Die Darstellung, der man am Häufigsten begegnet ist diese:
-	$e=\lim\limits_{t\to \infty}\left(1+\dfrac{1}{t}\right)^t;t\in\R$
+	$$e=\lim\limits_{t\to \infty}\left(1+\dfrac{1}{t}\right)^t;t\in\R$$
 \end{Definition}
-\\\\
+
 Benannt nach dem bekannten Mathematiker Leonhard Euler ist diese Zahl eine der wichtigsten Konstanten der Mathematik.
-Sie ist die Basis des natürlichen Logarithmus und der natürlichen Exponentialfunktion. Diese besondere Exponentialfunktion wird aufgrund dieser Beziehung zur Zahl $e$ häufig kurz $e$-Funktion genannt, sie eignet sich zur Modellierung von Wachstums- und Zufallsprozessen.\\
+Sie ist die Basis des natürlichen Logarithmus und der natürlichen Exponentialfunktion. Diese besondere Exponentialfunktion wird aufgrund dieser Beziehung zur Zahl $e$ häufig kurz $e$-Funktion genannt, sie eignet sich zur Modellierung von Wachstums- und Zufallsprozessen.
 
 \begin{Bemerkung}
 	Eine alternative Definition wäre folgende:
 	Die positive Zahl $a$, für die die Exponentialfunktion $f$ mit $f(x)=a^x$  mit ihrer Ableitungsfunktion $f'$ übereinstimmt, 		heißt Eulersche Zahl. (siehe 12.5)
 \end{Bemerkung}
-\\
+
 \begin{Definition}
   Eine reelle Zahl heißt (oder allgemeiner eine komplexe Zahl) transzendent,
   wenn sie nicht Nullstelle eines Polynoms mit ganzzahligen Koeffizienten ist.
   Andernfalls handelt es sich um eine algebraische Zahl. Jede reelle transzendente Zahl ist überdies irrational.
 \end{Definition}
 
-	\subsection{Verschiedene Darstellungen}
+
+\subsection{Verschiedene Darstellungen}
 
 $e$ ist darstellbar bzw. ergibt sich durch:
 \begin{itemize}
@@ -68,346 +74,376 @@ $e$ ist darstellbar bzw. ergibt sich durch:
 \item $\lim\limits_{n\to \infty}\left(1+\dfrac{1}{n}\right)^n;n\in\N$
 \end{itemize}
 
-	\subsection{Herleitung zur Zahl $e$}
+
+\subsection{Herleitung zur Zahl $e$}
 
 Wir definieren eine Folge $(e_{n})n\in\N$ durch $e_{n}=\left(1+\dfrac{1}{n}\right)^n$ und beweisen ihre Konvergenz.
 
 \begin{itemize}
+	\item \begin{align*}
+		\dfrac{e_{n+1}}{e_{n}}&=\dfrac{{\left(1+\dfrac{1}{n+1}\right)}^{n+1}}{{\left(1+\dfrac{1}{n}\right)}^{n}} \\
+		& = \left(\dfrac{n(n+2)}{(n+1)^2}\right)^{n+1}\cdot\left(1+\dfrac{1}{n}\right) \\
+		& = \textcolor{blue}{\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}}\cdot\textcolor{red}{\dfrac{n+1}{n}}
+	\end{align*}
 
-\item\begin{align*}\dfrac{e_{n+1}}{e_{n}}&=\dfrac{{\left(1+\dfrac{1}{n+1}\right)}^{n+1}}{{\left(1+\dfrac{1}{n}\right)}^{n}}\\
-&=\left(\dfrac{n(n+2)}{(n+1)^2}\right)^{n+1}\cdot\left(1+\dfrac{1}{n}\right)\\
-&=\textcolor{blue}{\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}}\cdot\textcolor{red}{\dfrac{n+1}{n}}
-\end{align*}
+	\item Die Umformung ermöglicht uns auf den Term $\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}$ die Ungleichung von Bernoulli anzuwenden. Diese besagt Folgendes: $(1+x)^n>1+nx$ für $n\geq2$ und $x> -1$
+	\item \begin{align*}
+			\Rightarrow\textcolor{blue}{\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}}&\textcolor{blue}{>} 1+(n+1)\cdot\left(-\dfrac{1}{(n+1)^2}\right) \\
+			& = 1-\dfrac{1}{n+1} \\
+			& = \textcolor{blue}{\dfrac{n}{n+1}}
+		\end{align*}
 
-\item Die Umformung ermöglicht uns auf den Term $\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}$ die Ungleichung von Bernoulli anzuwenden. Diese besagt Folgendes: $(1+x)^n>1+nx$ für $n\geq2$ und $x>-1$\\
-\begin{align*}\Rightarrow\textcolor{blue}{\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}}&\textcolor{blue}{>} 1+(n+1)\cdot\left(-\dfrac{1}{(n+1)^2}\right)\\
-&=1-\dfrac{1}{n+1}\\
-&=\textcolor{blue}{\dfrac{n}{n+1}}
-\end{align*}
-
-\item Dies kann man für den ersten Ausdruck verwenden:\\
-\begin{align*}
-\Rightarrow\dfrac{e_{n+1}}{e_{n}}&=\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}\cdot\dfrac{n+1}{n}\\
-&\textcolor{blue}{>\dfrac{n}{n+1}}\cdot\textcolor{red}{\dfrac{n+1}{n}}\\
-&=1
-\end{align*}
-\textbf{$\Leftrightarrow e_{n}$ ist streng monoton steigend}
+	\item Dies kann man für den ersten Ausdruck verwenden:
+	
+	\begin{align*}
+		\Rightarrow\dfrac{e_{n+1}}{e_{n}}&=\left(1-\dfrac{1}{(n+1)^2}\right)^{n+1}\cdot\dfrac{n+1}{n} \\
+		& \textcolor{blue}{>\dfrac{n}{n+1}}\cdot\textcolor{red}{\dfrac{n+1}{n}} \\
+		& = 1
+	\end{align*}
+	\textbf{$\Leftrightarrow e_{n}$ ist streng monoton steigend}
 \end{itemize}
 
-Sei eine Folge $f_{n}$ mit $f_{n}=\left(1+\dfrac{1}{n}\right)^{n+2}$, deren Monotonieverhalten wir untersuchen wollen.\\
+Sei eine Folge $f_{n}$ mit $f_{n}=\left(1+\dfrac{1}{n}\right)^{n+2}$, deren Monotonieverhalten wir untersuchen wollen.
+
 Dazu formen wir den Term so um, dass die Bernoulli-Ungleichung angewandt werden kann.
 
 \begin{itemize}
-\item\begin{align*}\dfrac{f_{n}}{f_{n+1}}&=\dfrac{\left(1+\dfrac{1}{n}\right)^{n+1}}{\left(1+\dfrac{1}{n}\right)^{n+2}}\\
-&=\left(\dfrac{1+\dfrac{1}{n}}{1+\dfrac{1}{n+1}}\right)^{n+2}\cdot\dfrac{1}{1+\dfrac{1}{n}}\\
-&=\left(\dfrac{\dfrac{n+1}{n}}{\dfrac{n+2}{n+1}}\right)\cdot\dfrac{n}{n+1}\\
-&=\left(\dfrac{(n+1)^2}{n(n+2)}\right)^{n+2}\cdot\dfrac{n}{n+1}\\
-&=\left(\dfrac{n^2+2n+1}{n^2+2n}\right)^{n+2}\cdot\dfrac{n}{n+1}\\
-&=\textcolor{blue}{\left(1+\dfrac{1}{n(n+2)}\right)^{n+2}}\cdot\textcolor{red}{\dfrac{n}{n+1}}
-\end{align*}
+	\item \begin{align*}
+		\dfrac{f_{n}}{f_{n+1}}&=\dfrac{\left(1+\dfrac{1}{n}\right)^{n+1}}{\left(1+\dfrac{1}{n}\right)^{n+2}} \\
+		& = \left(\dfrac{1+\dfrac{1}{n}}{1+\dfrac{1}{n+1}}\right)^{n+2}\cdot\dfrac{1}{1+\dfrac{1}{n}} \\
+		& = \left(\dfrac{\dfrac{n+1}{n}}{\dfrac{n+2}{n+1}}\right)\cdot\dfrac{n}{n+1} \\
+		& = \left(\dfrac{(n+1)^2}{n(n+2)}\right)^{n+2}\cdot\dfrac{n}{n+1} \\
+		& = \left(\dfrac{n^2+2n+1}{n^2+2n}\right)^{n+2}\cdot\dfrac{n}{n+1} \\
+		& = \textcolor{blue}{\left(1+\dfrac{1}{n(n+2)}\right)^{n+2}}\cdot\textcolor{red}{\dfrac{n}{n+1}}
+	\end{align*}
 
-\item Bernoulli: $(1+x)^n>1+nx$ für $n\geq2$ und $x>-1$\\
-\begin{align*}\Rightarrow\left(1+\dfrac{1}{n(n+2)}\right)^{n+2}&\textcolor{blue}{>}1+(n+2)\cdot\dfrac{1}{n(n+2)}\\
-&=\textcolor{blue}{\dfrac{n+1}{n}}
-\end{align*}
+	\item Bernoulli: $(1+x)^n>1+nx$ für $n\geq2$ und $x>-1$
+	
+		\begin{align*}
+			\Rightarrow\left(1+\dfrac{1}{n(n+2)}\right)^{n+2}&\textcolor{blue}{>}1+(n+2)\cdot\dfrac{1}{n(n+2)} \\
+			& = \textcolor{blue}{\dfrac{n+1}{n}}
+		\end{align*}
 
-\item$\Rightarrow\dfrac{f_n}{f_{n+1}}=\left(1+\dfrac{1}{n(n+2)}\right)^{n+2}\cdot\dfrac{n}{n+1}>\textcolor{blue}{\dfrac{n+1}{n}}\cdot\textcolor{red}{\dfrac{n}{n+1}}=1$
-\\\\
-\item $\dfrac{f_n}{f_{n+1}}>1\Leftrightarrow\dfrac{f_{n+1}}{f_{n}}<1$\textbf{$\Leftrightarrow f_n$ ist streng monoton fallend}
-\\\\
+	\item $\Rightarrow\dfrac{f_n}{f_{n+1}}=\left(1+\dfrac{1}{n(n+2)}\right)^{n+2}\cdot\dfrac{n}{n+1}>\textcolor{blue}{\dfrac{n+1}{n}}\cdot\textcolor{red}{\dfrac{n}{n+1}}=1$
+	\item $\dfrac{f_n}{f_{n+1}}>1\Leftrightarrow\dfrac{f_{n+1}}{f_{n}}<1$\textbf{$\Leftrightarrow f_n$ ist streng monoton fallend}
 \end{itemize}
-Als Letztes zeigt man, dass $f_n$ zu $e_n$ eine obere Schranke ist:\\\\
+
+Als Letztes zeigt man, dass $f_n$ zu $e_n$ eine obere Schranke ist:
+
 $\begin{array}{rccc}
-&\left(1+\dfrac{1}{n}\right)^{n+1}&>&\left(1+\dfrac{1}{n}\right)^n}\\
-\Leftrightarrow&f_n&>&e_n
+	& \left(1+\dfrac{1}{n}\right)^{n+1} & > & \left(1+\dfrac{1}{n}\right)^n \\
+	\Leftrightarrow & f_n & > & e_n
 \end{array}$
-\\\\\\
+
 Eine streng monoton steigende Folge, die eine monoton fallende Folge, als ober Schranke hat, konvergiert. Es gilt also, dass $e_n$ konvergent ist. $e_n$ besitzt einen besonderen Grenzwert, der \textbf{Eulersche Zahl} genannt wird.
 \newpage
 
-	\subsection{$e$ ist irrational}
 
-Wie schon erwähnt, handelt es sich bei der Eulerschen Zahl um eine transzendente Zahl, daraus ergibt sich schon, dass sie irrational ist. Trotzdem ist es interessant, dies zu beweisen.\\
+\subsection{$e$ ist irrational}
+
+Wie schon erwähnt, handelt es sich bei der Eulerschen Zahl um eine transzendente Zahl, daraus ergibt sich schon, dass sie irrational ist. Trotzdem ist es interessant, dies zu beweisen.
 
 \begin{Beweis}
-\underline{Teil A:} unnötig\\\\
-Sei $f$ eine Funktion mit $f(x)=xe^{1-x}$ mit Schaubild $\mathcal{C}$\\
-\begin{enumerate}
-\item Monotonieverhalten:\\
-\begin{align*}
-f'(x)&=e^{1-x}-xe^{1-x}\\
-&=(1-x)\cdot e^{1-x}
-\end{align*}
-\\
-\begin{tabular}{rlcl}
-$\forall x<1$: &$f'(x)>0&&\Leftrightarrow f \nearrow$\\
-für $x=1$: &$f'(x)=0$&und VZW $+\rightarrow-&\Leftrightarrow$ Hochpunkt\\
-$\forall x>1$: &$f'(x)<0 &&\Leftrightarrow f \searrow$\\
-\end{tabular}
-\\\\
+	\underline{Teil A:} unnötig
 
-Grenzwerte:
-\begin{itemize}
-\item$\lim\limits_{x\to +\infty}\underbrace{x}_{\rightarrow+\infty}\underbrace{e^{1-x}}_{\rightarrow0}=0$ (Croissance comparée)\\\\
-\item$\lim\limits_{x\to -\infty}\underbrace{x}_{\rightarrow-\infty}\underbrace{e^{1-x}}_{\rightarrow+\infty}=-\infty$\\
-\end{itemize}
-\item Graph von f:\\
-	\definecolor{qqqqcc}{rgb}{0,0,0.8}
-	\definecolor{cqcqcq}{rgb}{0.75,0.75,0.75}
-	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=2.0cm,y=2.0cm]
-	\draw [color=cqcqcq,dash pattern=on 1pt off 1pt, xstep=0.5cm,ystep=0.5cm] (-0.5,-2) grid (6,2);
-	\draw[->,color=black] (-0.5,0) -- (6,0);
-	\foreach \x in {-0.5,0.5,1,1.5,2,2.5,3,3.5,4,4.5,5,5.5}
-	\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
-	\draw[->,color=black] (0,-2) -- (0,2);
-	\foreach \y in {-2,-1.5,-1,-0.5,0.5,1,1.5}
-	\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
-	\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
-	\clip(-0.5,-2) rectangle (6,2);
-	\draw[line width=1.6pt,color=qqqqcc, smooth,samples=100,domain=-0.5:6.0] plot(\x,{(\x)*2.718281828^(1-(\x))});
-	\end{tikzpicture}
+	Sei $f$ eine Funktion mit $f(x)=xe^{1-x}$ mit Schaubild $\mathcal{C}$
 
+	\begin{enumerate}
+		\item Monotonieverhalten:
+		
+			\begin{align*}
+				f'(x) & = e^{1-x}-xe^{1-x} \\
+				& = (1-x)\cdot e^{1-x}
+			\end{align*}
+		
+			\begin{tabular}{rlcl}
+				$\A x<1$: & $f'(x)>0$ & & $\Leftrightarrow f \nearrow$\\
+				für $x=1$: & $f'(x)=0$ & und VZW $+\rightarrow-$ & $\Leftrightarrow$ Hochpunkt\\
+				$\A x>1$: & $f'(x)<0$ & & $\Leftrightarrow f \searrow$\\
+			\end{tabular}
 
+			Grenzwerte:
+			\begin{itemize}
+				\item$\lim\limits_{x\to +\infty}\underbrace{x}_{\rightarrow+\infty}\underbrace{e^{1-x}}_{\rightarrow0}=0$ (Croissance comparée)\\\\
+				\item$\lim\limits_{x\to -\infty}\underbrace{x}_{\rightarrow-\infty}\underbrace{e^{1-x}}_{\rightarrow+\infty}=-\infty$\\
+			\end{itemize}
+		
+		\item Graph von f:
+		
+			\definecolor{qqqqcc}{rgb}{0,0,0.8}
+			\definecolor{cqcqcq}{rgb}{0.75,0.75,0.75}
+			\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=2.0cm,y=2.0cm]
+			\draw [color=cqcqcq,dash pattern=on 1pt off 1pt, xstep=0.5cm,ystep=0.5cm] (-0.5,-2) grid (6,2);
+			\draw[->,color=black] (-0.5,0) -- (6,0);
+			\foreach \x in {-0.5,0.5,1,1.5,2,2.5,3,3.5,4,4.5,5,5.5}
+			\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+			\draw[->,color=black] (0,-2) -- (0,2);
+			\foreach \y in {-2,-1.5,-1,-0.5,0.5,1,1.5}
+			\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+			\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+			\clip(-0.5,-2) rectangle (6,2);
+			\draw[line width=1.6pt,color=qqqqcc, smooth,samples=100,domain=-0.5:6.0] plot(\x,{(\x)*2.718281828^(1-(\x))});
+			\end{tikzpicture}
 
+		\item Man hat $I_1$,  das Integral mit $I_1=\int_0^1f(x)\mbox{d}x$\\
+			\begin{minipage}{0.5\textwidth}
+				\begin{align*}
+					I_1&=\int_0^1xe^{1-x}\text{d}x \\
+					&=\left[ -xe^{1-x} \right]_0^1-\int_0^1-e^{1-x}\text{d}x \\
+					&=-1e^{1-1}-0\cdot e^1-\left[ e^{1-x} \right]_0^1 \\
+					&=-1-1+e \\
+					&=e-2
+				\end{align*}
+			\end{minipage}
+			\begin{minipage}{0.5\textwidth}
+				\begin{alignat*}{2}
+					u(x)&=x \quad& u\prime(x)&=1\\
+					v'(x)&=e^{1-x}\quad & v(x)&=-e^{1-x}
+				\end{alignat*}
+			\end{minipage}
+	\end{enumerate}
 
+	\underline{Teil B:} $n\in\N$
 
-\item Man hat $I_1$,  das Integral mit $I_1=\int_0^1f(x)\mbox{d}x$\\
-\begin{minipage}{0.5\textwidth}
-\begin{align*}
-I_1&=\int_0^1xe^{1-x}\mbox{d}x\\
-&=\left[-xe^{1-x}\right]_0^1-\int_0^1-e^{1-x}\mbox{d}x\\
-&=-1e^{1-1}-0\cdote^1-\left[e^{1-x}\right]_0^1\\
-&=-1-1+e\\
-&=e-2
-\end{align*}
-\end{minipage}
-\begin{minipage}{0.5\textwidth}
-\begin{alignat*}{2}
-u(x)&=x \quad& u\prime(x)&=1\\
-v'(x)&=e^{1-x}\quad & v(x)&=-e^{1-x}
-\end{alignat*}
-\end{minipage}
-\end{enumerate}
-\underline{Teil B:} $n\in\N$\\\\
-Sei $I_n$ das Integral mit $I_n=\int_0^1x^ne^{1-x}\mbox{d}x$, $n\geq 1$\\
-\begin{enumerate}
-\item %1
-\begin{enumerate}
-\item $\zz$: $\forall x\in[0;1]$ gilt $x^n\leq x^ne^{1-x} \leq ex^n$\\
-\begin{center}
-$\begin{array}{cccccc}
-x^n &\stackrel{?}{\leq}& x^ne^{1-x} &\stackrel{?}{\leq}& ex^n&\qquad|:x^n\\
-1        &\stackrel{!}{\leq}&e^{1-x}         &\stackrel{!}{\leq}&e        &
-\end{array}$
-\end{center}
-N.R.: für $x\in[0;1]$ ist $(1-x)\in[0;1]$ und entsprechen $e^{1-x}\in[e^{0};e^{1}]=[1;e]$
-\item Sei $J_n$ das Integral mit $J_n=\int_0^1x^n\mbox{d}x$
-\begin{align*}
-J_n&=\int_0^1x^n\mbox{d}x\\
-&=\left[\dfrac{1}{n+1}\cdot x^{n+1}\right]_0^1\\
-&=\dfrac{1^{n+1}}{n+1}-\dfrac{0^{n+1}}{n+1}\\
-&=\dfrac{1}{n+1}
-\end{align*}
-\\
-\item $\zz$: $\forall n\geq1$ gilt $\dfrac{1}{n+1}\leq I_n \leq \dfrac{e}{n+1}$\\\\
-\begin{center}
-$\begin{array}{ccccccl}
-$&x^n&\leq& f(x)=x^ne^{1-x}&\leq& ex^n& \qquad\qquad|\int_0^1()\mbox{d}x\\\\
-\Leftrightarrow&\int_0^1 x^n\mbox{d}x &\leq& I_n &\leq& \int_0^1 ex^n\mbox{d}x&\\\\
-\Leftrightarrow&J_n &\leq& I_n &\leq& e\cdot\int_0^1x^n\mbox{d}x=e\cdot J_n&\\\\
-\Leftrightarrow&\dfrac{1}{n+1}&\leq& I_n &\leq&  \dfrac{e}{n+1}&$
-\\\\\\
-\end{array}$
-\end{center}
-\end{enumerate}
-\item $\zz$: $\forall n\geq 1$ gilt $I_{n+1}=(n+1)I_n-1$\\
-\begin{minipage}{0.55\textwidth}
-\begin{align*}
-I_{n+1}&=\int_0^1x^{n+1}\cdot e^{1-x}\mbox{d}x\\
-&=\left[-e^{1-x}\cdot x^{n+1}\right]_0^1-\int_0^1-(n+1)x^ne{x-1}\mbox{d}x\\
-&=-e^{1-1}\cdot 1^{n+1}-0+(n+1)\cdot I_n\\
-&=(n+1)I_n-1
-\end{align*}
-\end{minipage}
-\begin{minipage}{0.45\textwidth}
-\begin{alignat*}{2}
-u(x)&=x^{n+1}\quad& u\prime(x)&=(n+1)x^n\\
-v'(x)&=e^{1-x}\quad & v(x)&=-e^{1-x}
-\end{alignat*}
-\end{minipage}
-\newpage
-\item Sei $k_n=n!e-I_n$, $n\geq1$
-\begin{enumerate}
-\item
-\begin{align*}
-k_{n+1}&=(n+1)!e-I_{n+1}\\
-&=(n+1)n!e-(n+1)I_n+1\qquad\qquad\mbox{siehe 2.}\\
-&=(n+1)(n!e-I_n)+1\\
-&=(n+1)k_n+1
-\end{align*}
-\item $\zz$: $\forall n\geq1$ gilt $k_n\in\Z$:\\\\
-$\begin{array}{rl}
-\mbox{\textbf{IA}:} & \mbox{für }n=1:\quad k_1=1!e-I_1=e-(e-2)=2 \mbox{ (wahr)} \\\\
-\mbox{\textbf{IV}:} & \mbox{für ein beliebiges aber festes }n\in\N \mbox{ gelte:}\quad k_n\in\Z\\\\
-\mbox{\textbf{IB}:} & \mbox{dann gelte für }(n+1):\quad k_{n+1}\in\Z\\\\
-\mbox{\textbf{IS}:} & k_{n+1}=\underbrace{(n+1)}_{\in\Z\text{ da }n\in\N}\underbrace{k_n}_{\in\Z\text{(IB)}}+\underbrace{1}_{\in\Z}\in\Z\\\\
-\end{array}$
-\\\\
-\item $\zz$: $\forall n\geq 2$ gilt $n!e=k_n+I_n\not\in\Z$\\\\
-Wir haben: $\dfrac{1}{n+1}\leq I_n \leq  \dfrac{e}{n+1}$\quad(1.(c))\\\\
-Und es gilt: \begin{itemize}\item$k_n\in\Z$
-				\item $\forall n\geq0:\dfrac{1}{n+1}\geq 0$
-				\item $\forall n\geq2:n+1\geq3\Rightarrow \dfrac{1}{n+1}\leq \dfrac{1}{3}$\\
-					und $e\leq3 \Rightarrow \dfrac{e}{n+1}\leq 1$\\
-		\end{itemize}
-$\Rightarrow\forall n\geq2:0<I_n<1\Rightarrow I_n\not\in\N\Rightarrow k_n+I_n\not\in\N\Rightarrow n!e\not\in\N$\\\\\end{enumerate}
-\item Seien $p, q \in\N$\\
-Dann gilt für $n\geq q:\dfrac{n!p}{q}\in\N$\\\\
-Das stimmt weil $n!=n\cdot(n-1)\cdot...\cdot(q+1)\cdot q\cdot(q-1)\cdot...\cdot2\cdot1\Rightarrow q \text{ teilt }n!$
-$\Rightarrow \dfrac{n!}{q}\in\N\Rightarrow\dfrac{n!p}{q}\in\N\text{ da }p\in\N$\\\\
-Hypothese: $e\in\Q$\\\\
-$\Rightarrow \exists p,q \in\N$, sodass $e=\dfrac{p}{q}\\
-\Rightarrow n!e=\dfrac{n!p}{q}\in\N$\\\\
-Im Voraus wurde aber gezeigt, dass $n!e\not\in\N$: \textbf{Widerspruch}\\\\
-$\Leftrightarrow \boxed{e\not\in\Q}$\\
-\end{enumerate}
-\underline{Herkunft der Aufgabenstellung:} Buch? S.199 Nr. 78, d'après le bac
+	Sei $I_n$ das Integral mit $I_n=\int_0^1x^ne^{1-x}\mbox{d}x$, $n\geq 1$
+
+	\begin{enumerate}
+		\item
+			\begin{enumerate}
+				\item $\zz$: $\forall x\in[0;1]$ gilt $x^n\leq x^ne^{1-x} \leq ex^n$
+				
+					\begin{center}
+						$\begin{array}{cccccc}
+							x^n &\stackrel{?}{\leq}& x^ne^{1-x} &\stackrel{?}{\leq}& ex^n&\qquad|:x^n \\
+							1        &\stackrel{!}{\leq}&e^{1-x}         &\stackrel{!}{\leq}&e        &
+						\end{array}$
+					\end{center}
+					N.R.: für $x\in[0;1]$ ist $(1-x)\in[0;1]$ und entsprechen $e^{1-x}\in[e^{0};e^{1}]=[1;e]$
+				\item Sei $J_n$ das Integral mit $J_n=\int_0^1x^n\mbox{d}x$
+					\begin{align*}
+						J_n&=\int_0^1x^n\mbox{d}x\\
+						&=\left[\dfrac{1}{n+1}\cdot x^{n+1}\right]_0^1\\
+						&=\dfrac{1^{n+1}}{n+1}-\dfrac{0^{n+1}}{n+1}\\
+						&=\dfrac{1}{n+1}
+					\end{align*}
+
+				\item $\zz$: $\forall n\geq1$ gilt $\dfrac{1}{n+1}\leq I_n \leq \dfrac{e}{n+1}$
+					$$\begin{array}{ccccccl}
+						&x^n&\leq& f(x)=x^ne^{1-x}&\leq& ex^n& \qquad\qquad|\int_0^1()\text{d}x\\\\
+						\Leftrightarrow&\int_0^1 x^n\text{d}x &\leq& I_n &\leq& \int_0^1 ex^n\text{d}x&\\\\
+						\Leftrightarrow&J_n &\leq& I_n &\leq& e\cdot\int_0^1x^n\text{d}x=e\cdot J_n&\\\\
+						\Leftrightarrow&\dfrac{1}{n+1}&\leq& I_n &\leq&  \dfrac{e}{n+1}&
+					\end{array}$$
+			\end{enumerate}
+		\item $\zz$: $\forall n\geq 1$ gilt $I_{n+1}=(n+1)I_n-1$
+		
+			\begin{minipage}{0.55\textwidth}
+			\begin{align*}
+			I_{n+1}&=\int_0^1x^{n+1}\cdot e^{1-x}\mbox{d}x\\
+			&=\left[-e^{1-x}\cdot x^{n+1}\right]_0^1-\int_0^1-(n+1)x^ne{x-1}\mbox{d}x\\
+			&=-e^{1-1}\cdot 1^{n+1}-0+(n+1)\cdot I_n\\
+			&=(n+1)I_n-1
+			\end{align*}
+			\end{minipage}
+			\begin{minipage}{0.45\textwidth}
+			\begin{alignat*}{2}
+			u(x)&=x^{n+1}\quad& u\prime(x)&=(n+1)x^n\\
+			v'(x)&=e^{1-x}\quad & v(x)&=-e^{1-x}
+			\end{alignat*}
+			\end{minipage}
+		\item Sei $k_n=n!e-I_n$, $n\geq1$
+			\begin{enumerate}
+				\item
+					\begin{align*}
+					k_{n+1}&=(n+1)!e-I_{n+1}\\
+					&=(n+1)n!e-(n+1)I_n+1\qquad\qquad\mbox{siehe 2.}\\
+					&=(n+1)(n!e-I_n)+1\\
+					&=(n+1)k_n+1
+					\end{align*}
+				\item $\zz$: $\forall n\geq1$ gilt $k_n\in\Z$:
+				
+					$\begin{array}{rl}
+						\mbox{\textbf{IA}:} & \mbox{für }n=1:\quad k_1=1!e-I_1=e-(e-2)=2 \mbox{ (wahr)} \\\\
+						\mbox{\textbf{IV}:} & \mbox{für ein beliebiges aber festes }n\in\N \mbox{ gelte:}\quad k_n\in\Z\\\\
+						\mbox{\textbf{IB}:} & \mbox{dann gelte für }(n+1):\quad k_{n+1}\in\Z\\\\
+						\mbox{\textbf{IS}:} & k_{n+1}=\underbrace{(n+1)}_{\in\Z\text{ da }n\in\N}\underbrace{k_n}_{\in\Z\text{(IB)}}+\underbrace{1}_{\in\Z}\in\Z
+					\end{array}$
+				\item $\zz$: $\forall n\geq 2$ gilt $n!e=k_n+I_n\not\in\Z$
+
+					Wir haben: $\dfrac{1}{n+1}\leq I_n \leq  \dfrac{e}{n+1}$\quad(1.(c))
+
+					Und es gilt:
+					\begin{itemize}
+						\item$k_n\in\Z$
+						\item $\forall n\geq0:\dfrac{1}{n+1}\geq 0$
+						\item $\forall n\geq2:n+1\geq3\Rightarrow \dfrac{1}{n+1}\leq \dfrac{1}{3}$ und $e\leq3 \Rightarrow \dfrac{e}{n+1}\leq 1$
+					\end{itemize}
+					$\Rightarrow\forall n\geq2:0<I_n<1\Rightarrow I_n\not\in\N\Rightarrow k_n+I_n\not\in\N\Rightarrow n!e\not\in\N$
+			\end{enumerate}
+		\item Seien $p, q \in\N$
+		
+			Dann gilt für $n\geq q:\dfrac{n!p}{q}\in\N$
+			
+			Das stimmt weil $n! = n\cdot(n-1)\cdot...\cdot(q+1)\cdot q\cdot(q-1)\cdot...\cdot2\cdot1\Rightarrow q \text{ teilt }n!$
+			$\Rightarrow \dfrac{n!}{q}\in\N\Rightarrow\dfrac{n!p}{q}\in\N\text{ da }p\in\N$
+			
+			Hypothese: $e\in\Q$
+			
+			$\Rightarrow \exists p,q \in\N$, sodass $e=\dfrac{p}{q}$
+
+			$\Rightarrow n! e = \dfrac{n!p}{q}\in\N$
+			
+			Im Voraus wurde aber gezeigt, dass $n!e\not\in\N$: \textbf{Widerspruch}
+			
+			$\Leftrightarrow \boxed{e\not\in\Q}$
+	\end{enumerate}
+	\underline{Herkunft der Aufgabenstellung:} Buch? S.199 Nr. 78, d'après le bac
 \end{Beweis}
-\newpage
+
+
 \section{Eigenschaften}
 
 \begin{itemize}
-\item$f(x)=a^x$
-\item$a\in\R^+\backslash 1$
-\item$D_f=\R$
-\item$W_f=\R^+$
-\item für $0>a>1$: $f$ ist streng monoton fallend\\
-für $a>1$: $f$ ist streng monoton wachsend
-\item für $0>a>1$: $\lim\limits_{x\to +\infty}f(x)=-\infty$\\
-			$\lim\limits_{x\to -\infty}f(x)=0$\\
-für $a>1$: $\lim\limits_{x\to +\infty}f(x)=0$\\
-	        $\lim\limits_{x\to -\infty}f(x)=+\infty$
-\item $f(0)=1$
-\item x-Achse ist waagerechte Asmyptote
-
+	\item$f(x)=a^x$
+	\item$a\in\R^+\backslash 1$
+	\item$D_f=\R$
+	\item$W_f=\R^+$
+	\item für $0>a>1$: $f$ ist streng monoton fallend\\
+	für $a>1$: $f$ ist streng monoton wachsend
+	\item für $0>a>1$: $\lim\limits_{x\to +\infty}f(x)=-\infty$\\
+				$\lim\limits_{x\to -\infty}f(x)=0$\\
+	für $a>1$: $\lim\limits_{x\to +\infty}f(x)=0$\\
+				$\lim\limits_{x\to -\infty}f(x)=+\infty$
+	\item $f(0)=1$
+	\item x-Achse ist waagerechte Asmyptote
 \end{itemize}
 
 \subsubsection{Zusammengesetzte Funktionen}
 
-Sei $f(x)= a^x$ mit $a>1$ und $g(x)=x^n$ mit n $\in \R$:\\
+Sei $f(x)= a^x$ mit $a>1$ und $g(x)=x^n$ mit n $\in \R$:
 
-\left.\parbox{0.5\textwidth}{
-\begin{itemize}
-\item $\lim\limits_{x\to +\infty} f(x)\cdot g(x) = \lim\limits_{x\to +\infty} = a^x \cdot x^n= +\infty $
-\item $\lim\limits_{x\to -\infty} f(x)\cdot g(x) = \lim\limits_{x\to -\infty}a^x \cdot x^n= 0$ \\\\
-\item $\lim\limits_{x\to +\infty} \dfrac{f(x)}{g(x)} = \lim\limits_{x\to +\infty}\dfrac{a^x}{x^n} = +\infty $
-\item $\lim\limits_{x\to -\infty} \dfrac{f(x)}{g(x)} = \lim\limits_{x\to -\infty}\dfrac{a^x}{x^n} = 0$ \\\\
-\item $\lim\limits_{x\to +\infty} \dfrac{g(x)}{f(x)} = \lim\limits_{x\to +\infty}\dfrac{x^n}{a^x} =  0$
-\item $\lim\limits_{x\to -\infty} \dfrac{g(x)}{f(x)} = \lim\limits_{x\to -\infty}\dfrac{x^n}{a^x} = \pm\infty$
-\end{itemize}
+$\left.\parbox{0.5\textwidth}{
+	\begin{itemize}
+		\item $\lim\limits_{x\to +\infty} f(x)\cdot g(x) = \lim\limits_{x\to +\infty} = a^x \cdot x^n= +\infty $
+		\item $\lim\limits_{x\to -\infty} f(x)\cdot g(x) = \lim\limits_{x\to -\infty}a^x \cdot x^n= 0$ \\\\
+		\item $\lim\limits_{x\to +\infty} \dfrac{f(x)}{g(x)} = \lim\limits_{x\to +\infty}\dfrac{a^x}{x^n} = +\infty $
+		\item $\lim\limits_{x\to -\infty} \dfrac{f(x)}{g(x)} = \lim\limits_{x\to -\infty}\dfrac{a^x}{x^n} = 0$ \\\\
+		\item $\lim\limits_{x\to +\infty} \dfrac{g(x)}{f(x)} = \lim\limits_{x\to +\infty}\dfrac{x^n}{a^x} =  0$
+		\item $\lim\limits_{x\to -\infty} \dfrac{g(x)}{f(x)} = \lim\limits_{x\to -\infty}\dfrac{x^n}{a^x} = \pm\infty$
+	\end{itemize}
 } \right\}$ \quad \textbf{Croissances comparées}
 
+
 \begin{Bemerkung}
-Diese Grenzwerte gelten auch wenn g ein Polynom beliebig hohen Grades ist.\\
-Allgemein kann man also sagen, dass eine Exponentialfunktion ihr Wachstum bezüglich dem jedes Polynoms immer durchsetzt.
+	Diese Grenzwerte gelten auch wenn g ein Polynom beliebig hohen Grades ist.\\
+	Allgemein kann man also sagen, dass eine Exponentialfunktion ihr Wachstum bezüglich dem jedes Polynoms immer durchsetzt.
 \end{Bemerkung}
 
 \begin{Bemerkung}
-\danger Das Vorzeichen der anderen Funktion(en) muss natürlich immer beachtet werden.\\
-Da die Wertemenge einer Exponentialfunktion immer $\R^+$ ist, hängt das Vorzeichen ausschließlich von der(den) anderen Funktion(en) ab. Wenn der (höchste) Exponent also eine gerade Zahl ist, dann bleiben die Grenzwerte dieselben ($0$ oder $+\infty$). Im Falle eines höchsten Exponenten, der ungerade ist, ändert sich dementsprechend das Vorzeichen ($0$ oder $-\infty$) des Grenzwertes für $x\to -\infty$. Der Grenzwert für $x\to+\infty$ bleibt derselbe, selbst wenn der höchste Exponent eine negative Zahl ist.
+	\danger Das Vorzeichen der anderen Funktion(en) muss natürlich immer beachtet werden.\\
+	Da die Wertemenge einer Exponentialfunktion immer $\R^+$ ist, hängt das Vorzeichen ausschließlich von der(den) anderen Funktion(en) ab. Wenn der (höchste) Exponent also eine gerade Zahl ist, dann bleiben die Grenzwerte dieselben ($0$ oder $+\infty$). Im Falle eines höchsten Exponenten, der ungerade ist, ändert sich dementsprechend das Vorzeichen ($0$ oder $-\infty$) des Grenzwertes für $x\to -\infty$. Der Grenzwert für $x\to+\infty$ bleibt derselbe, selbst wenn der höchste Exponent eine negative Zahl ist.
 \end{Bemerkung}
 
 Für $f(x)= a^x$ mit $0<a<1$ und $g(x)=x^n$ mit n $\in \R$:\\
 Es gilt weiterhin, dass sich das Wachstum der Exponentialfunktion durchsetzt, anhand dieser Aussage können die Grenzwerte von Funktionen, die Exponentialfunktionen mit Basis $<1$ beinhalten, leicht bestimmt werden.\\
 \danger Auch hier gilt es, auf das Vorzeichen der anderen Funktion(en) zu achten.
 
-		\section{Basiswechsel}
 
-Seien, $a,b\in\R^+\backslash1:$
+
+\section{Basiswechsel}
+
+Seien, $a,b\in\R^+\backslash1$.
+
 \begin{Theorem}
-$$a^x=b^{ x\cdot\log_b a}$$
+	$$a^x=b^{ x\cdot\log_b a}$$
 \end{Theorem}
+
 \begin{Beweis}
-\begin{align*}
-a^x&=(b^{\log_b a})^x\\
-&=b^{x\cdot\log_b a }
-\end{align*}
+	\begin{align*}
+		a^x&=(b^{\log_b a})^x \\
+		&=b^{x\cdot\log_b a }
+	\end{align*}
 \end{Beweis}
 
-		\section{Ableitungsregeln}
+
+
+\section{Ableitungsregeln}
 
 Anhand der Definition des Differenzialquotienten kann man ermitteln, wie man Exponentialfunktionen ableitet.
 
 \begin{Beweis}
-\begin{align*}
-\dfrac{\text{d}}{\text{d}x}(a^x) &=\lim\limits_{h\to0}\dfrac{a^{{x_0}+h}-a^{x_0}}{h}\\
-&=\lim\limits_{h\to0}\dfrac{a^{x_0}\cdot a^h-a^{x_0}}{h}\\
-&=\lim\limits_{h\to0}a^x\cdot\dfrac{a^h-1}{h}\\
-&=a^x\cdot\underbrace{\lim\limits_{h\to0}\dfrac{a^h-1}{h}}_{\text{eine Konstante }\lambda}
-\end{align*}
+	\begin{align*}
+		\dfrac{\text{d}}{\text{d}x}(a^x) &=\lim\limits_{h\to0}\dfrac{a^{{x_0}+h}-a^{x_0}}{h}\\
+		&=\lim\limits_{h\to0}\dfrac{a^{x_0}\cdot a^h-a^{x_0}}{h}\\
+		&=\lim\limits_{h\to0}a^x\cdot\dfrac{a^h-1}{h}\\
+		&=a^x\cdot\underbrace{\lim\limits_{h\to0}\dfrac{a^h-1}{h}}_{\text{eine Konstante }\lambda}
+	\end{align*}
 \end{Beweis}
 
-So erkennen wir, dass die Ableitung einer Funktion $f$ der Form $a^x$ diese selbe Funktion mal einem konstanten Vorfaktor $\lambda$ ist: $(a^x)'=a^x\cdot\lambda$\\
-Nun versucht man, Weiteres über $\lambda$ zu erfahren: $\lambda=\lim\limits_{h\to0}\dfrac{a^h-1}{h}$ ist ein Grenzwert, der sich ausschließlich in Abhängigkeit von $a$ verändert,  ist also für jede definierte Funktion eine Konstante.\\
-Wenn man mehrere Graphen der Funktionenschar $g_a(h)=\dfrac{a^h-1}{h}$ zeichnet, erkennt man, dass es sich um stetige Funktionen handelt. Somit kann man behaupten, dass $\lim\limits_{h\to0}g_a(h)=g_a(0)$ ist, dies entspricht auch $\lambda$.\\\\
-GRAPEHN VERSCHIEDEN A AUCH E UND LAMBDA SAGEN\\\\
+So erkennen wir, dass die Ableitung einer Funktion $f$ der Form $a^x$ diese selbe Funktion mal einem konstanten Vorfaktor $\lambda$ ist: $(a^x)'=a^x\cdot\lambda$
+
+Nun versucht man, Weiteres über $\lambda$ zu erfahren: $\lambda=\lim\limits_{h\to0}\dfrac{a^h-1}{h}$ ist ein Grenzwert, der sich ausschließlich in Abhängigkeit von $a$ verändert,  ist also für jede definierte Funktion eine Konstante.
+
+Wenn man mehrere Graphen der Funktionenschar $g_a(h)=\dfrac{a^h-1}{h}$ zeichnet, erkennt man, dass es sich um stetige Funktionen handelt. Somit kann man behaupten, dass $\lim\limits_{h\to0}g_a(h)=g_a(0)$ ist, dies entspricht auch $\lambda$.
+
 Hier ist auffällig, dass wenn man $a$ so verändert, dass der y-Achsenschnittpunkt (0|1) wird, man sich immer mehr der Zahl $e$ nähert. Wenn man für $a$ genau $e$ einsetzt hat man $ g_e(0)=1$. $\lambda$ ist also $1$ für die Funktion $e^x$, was gut zeigt, dass die natürliche Exponentialfunktion ihre eigene Ableitung darstellt:
-\begin{center}$\dfrac{\text{d}}{\text{d}x}e^x=(\lim\limits_{h\to0}\dfrac{e^h-1}{h})\cdot e^x=1\cdot e^x=e^x$\end{center}\\\\
-Eine wichtige Eigenschaft ist auch, dass $f'(0)=\lambda$ ist. Dies kann man auf zwei verschiedene aber gleichermaßen einfache Arten herausfinden, beide verwenden die vorher angewendete Definition des Differenzialquotienten.\\\\
+$$\dfrac{\text{d}}{\text{d}x}e^x=(\lim\limits_{h\to0}\dfrac{e^h-1}{h})\cdot e^x=1\cdot e^x=e^x$$
+Eine wichtige Eigenschaft ist auch, dass $f'(0)=\lambda$ ist. Dies kann man auf zwei verschiedene aber gleichermaßen einfache Arten herausfinden, beide verwenden die vorher angewendete Definition des Differenzialquotienten.
+
 $\begin{array}{rl}
-\text{Differentialquotient neu angewendet:}& f'(0)=\lim\limits_{h\to0}\dfrac{a^{0+h}-a^0}{h}=\lim\limits_{h\to0}\dfrac{a^h-1}{h}=\textcolor{red}{\lambda}\\
-\text{Vorheriges Ergebnis genutzt:}&f'(x)=a^x\cdot\lim\limits_{h\to0}\dfrac{a^h-1}{h}\Rightarrow f'(0)=a^0\cdot\lim\limits_{h\to0}\dfrac{a^h-1}{h}=1\cdot\lim\limits_{h\to0}\dfrac{a^h-1}{h}=\textcolor{red}{\lambda}
+	\text{Differentialquotient neu angewendet:}& f'(0)=\lim\limits_{h\to0}\dfrac{a^{0+h}-a^0}{h}=\lim\limits_{h\to0}\dfrac{a^h-1}{h}=\textcolor{red}{\lambda}\\
+	\text{Vorheriges Ergebnis genutzt:}&f'(x)=a^x\cdot\lim\limits_{h\to0}\dfrac{a^h-1}{h}\Rightarrow f'(0)=a^0\cdot\lim\limits_{h\to0}\dfrac{a^h-1}{h}=1\cdot\lim\limits_{h\to0}\dfrac{a^h-1}{h}=\textcolor{red}{\lambda}
 \end{array}$
-\\\\\\
+
 $\lambda$ entspricht also auch der Steigung der Tangenten der Ausgangsfunktion an der y-Achse.
 
 
 \subsubsection{Exponentialfonktionen mit natürlicher Basis}
 
 \begin{Theorem}
-Die natürliche Exponentialfunktion überstimmt mit ihrer Ableitungsfunktion.
-$$f(x)=e^x\Rightarrow f'=e^x$$
+	Die natürliche Exponentialfunktion überstimmt mit ihrer Ableitungsfunktion.
+	$$f(x)=e^x\Rightarrow f'=e^x$$
 \end{Theorem}
 \begin{Theorem}
-Die Funktion $f$ mit $f(x)=e^{v(x)}$ ist eine Verkettung der Funktion $v:x\rightarrow v(x)$ mit der Exponentialfunktion $u: v \rightarrow e^v$. Exisitiert die Ableitung $v'$, so gilt nach der Kettenregel\\
-$$f'(x)=v'(x)\cdot e^{v(x)}$$
+	Die Funktion $f$ mit $f(x)=e^{v(x)}$ ist eine Verkettung der Funktion $v:x\rightarrow v(x)$ mit der Exponentialfunktion $u: v \rightarrow e^v$. Exisitiert die Ableitung $v'$, so gilt nach der Kettenregel\\
+	$$f'(x)=v'(x)\cdot e^{v(x)}$$
 \end{Theorem}
-\begin{Bemerkung}
-Letzteres kann natürlich auch verwendet werden, um eine Stammfunktion zu ermitteln.\\
-Die Funktion $f$ mit $f(x)=e^{v(x)}$ mit $v$ differenzierbar hat als mögliche Stammfunktion $F$ mit
-$$F(x)=\dfrac{1}{v'(x)}\cdot e^{v(x)}+C$$
-\end{Bemerkung}
-\begin{Beispiel}
 
-\begin{enumerate}
-\item$f(x)=\dfrac{2}{3} \cdot e^{-\frac{1}{2}x^2+1}\\
-\Rightarrow f'(x)= \dfrac{2}{3}\cdot(-x)\cdot e^{\frac{1}{2}x^2+1}= -\dfrac{2}{3}x\cdot e^{-\frac{1}{2}x^2+1}\\
-\Rightarrow F(x)=\dfrac{2}{3}:(-x)\cdot e^{\frac{1}{2}x^2+1}+C=-\dfrac{2}{3x}\cdot e^{\frac{1}{2}x^2+1}+C$\\
-\item$f(t)=\dfrac{\sin(tx)}{e^{tx}}\\
-\Rightarrow f'(x)=\dfrac{t\cdot\cos(tx)\cdot e^{tx}-\sin(tx)\cdot t\cdot e^{tx}}{(e^{tx})^2}=\dfrac{t\cdot e^{tx}\cdot(\cos(tx)-\sin(tx))}{(e^{tx})^2}=\dfrac{t\cdot(\cos(tx)-\sin(tx))}{e^{tx}}\\$
-\item$f(x)=x\cdot e^{t\sqrt{x}+0,5}\\
-\Rightarrow f'(x)=e^{t\sqrt{x}+0,5}+x\cdot (-\dfrac{t}{\sqrt{x}})\cdot e^{t\sqrt{x}+0,5}=(1-t\sqrt{x})\cdot e^{t\sqrt{x}+0,5}$
-\end{enumerate}
+\begin{Bemerkung}
+	Letzteres kann natürlich auch verwendet werden, um eine Stammfunktion zu ermitteln.\\
+	Die Funktion $f$ mit $f(x)=e^{v(x)}$ mit $v$ differenzierbar hat als mögliche Stammfunktion $F$ mit
+	$$F(x)=\dfrac{1}{v'(x)}\cdot e^{v(x)}+C$$
+\end{Bemerkung}
+
+\begin{Beispiel}
+	\begin{enumerate}
+		\item$f(x)=\dfrac{2}{3} \cdot e^{-\frac{1}{2}x^2+1}\\
+		\Rightarrow f'(x)= \dfrac{2}{3}\cdot(-x)\cdot e^{\frac{1}{2}x^2+1}= -\dfrac{2}{3}x\cdot e^{-\frac{1}{2}x^2+1}\\
+		\Rightarrow F(x)=\dfrac{2}{3}:(-x)\cdot e^{\frac{1}{2}x^2+1}+C=-\dfrac{2}{3x}\cdot e^{\frac{1}{2}x^2+1}+C$\\
+		\item$f(t)=\dfrac{\sin(tx)}{e^{tx}}\\
+		\Rightarrow f'(x)=\dfrac{t\cdot\cos(tx)\cdot e^{tx}-\sin(tx)\cdot t\cdot e^{tx}}{(e^{tx})^2}=\dfrac{t\cdot e^{tx}\cdot(\cos(tx)-\sin(tx))}{(e^{tx})^2}=\dfrac{t\cdot(\cos(tx)-\sin(tx))}{e^{tx}}\\$
+		\item$f(x)=x\cdot e^{t\sqrt{x}+0,5}\\
+		\Rightarrow f'(x)=e^{t\sqrt{x}+0,5}+x\cdot (-\dfrac{t}{\sqrt{x}})\cdot e^{t\sqrt{x}+0,5}=(1-t\sqrt{x})\cdot e^{t\sqrt{x}+0,5}$
+	\end{enumerate}
 \end{Beispiel}
+
 
 \subsubsection{Exponentialfunktionen mit beliebiger Basis}
 
 Der vorher erwähnte Wert $\lambda$ ist für beliebige Basen schwierig festzulegen. Viel einfacher geht es nach einem Basiswechsel. Wenn man nämlich $e$ als Grundzahl wählt, kann wiederum die Ableitungsregel für Funktionen mit natürlicher Basis angewendet werden, so wurde das Problem umgangen.\\
 
-
 \begin{Theorem}
-Sei $f$ eine Funktion mit $f(x)=a^x,a\in\R^+\backslash1$. dann ist ihre Ableitungsfunktion $f'$, für die gilt:
-$$f'(x)=\ln (a)\cdot a^x$$
+	Sei $f$ eine Funktion mit $f(x)=a^x,a\in\R^+\backslash1$. dann ist ihre Ableitungsfunktion $f'$, für die gilt:
+	$$f'(x)=\ln (a)\cdot a^x$$
 \end{Theorem}
+
 \begin{Beweis}
-	\begin{center}
-		\begin{array}{ccll}
+	$$\begin{array}{ccll}
 		\dfrac{\text{d}}{\text{d}x}(a^x) &=&\dfrac{\text{d}}{\text{d}x}(e^{x\cdot\ln (a)})&\text{Basiswechsel und Kettenregel anwenden}\\
 		&=&(x\cdot\ln (a))'\cdot e^{x\cdot\ln (a)}\qquad\qquad&\text{Ableiten (}\ln a\text{ ist eine Konstante)}\\
 		&=&\ln (a) \cdot e^{x\cdot \ln a}&\text{Auf ursprüngliche Basis bringen}\\
 		&=&\ln (a)\cdot a^x&
-		\end{array}$
-	\end{center}
+	\end{array}$$
 \end{Beweis}
 
 
@@ -416,13 +452,14 @@ Dasselbe Prinzip kann auch für verkettete Funktionen angewendet werden.
 	Die Funktion $f$ mit $f(x)=a^{v(x)},a\in\R^+\backslash1$ ist eine Verkettung der Funktion $v:x\rightarrow v(x)$ mit der Exponentialfunktion $u: v \rightarrow a^v$. Exisitiert die Ableitung $v'$, so gilt nach der Kettenregel\\
 	$$f'(x)=v'(x)\cdot\ln (a)\cdot a^{v(x)}$$
 \end{Theorem}
+
 \begin{Beweis}
-	$\begin{array}{ccll}
-	\dfrac{\text{d}}{\text{d}x}(a^{v(x)}) &=&\dfrac{\text{d}}{\text{d}x}(e^{v(x)\cdot\ln (a)})&\text{Basiswechsel und Kettenregel anwenden}\\
-	&=&(v(x)\cdot\ln (a)})'\cdot e^{v(x)\cdot\ln (a)}\qquad\qquad&\text{Ableiten (}\ln a\text{ ist eine Konstante)}\\
-	&=&v'(x)\cdot\ln (a) \cdot e^{v(x)\cdot \ln a}&\text{Auf ursprüngliche Basis bringen}\\
-	&=&v'(x)\cdot\ln (a)\cdot a^{v(x)}&
-	\end{array}$
+	$$\begin{array}{ccll}
+		\dfrac{\text{d}}{\text{d}x}(a^{v(x)}) &=&\dfrac{\text{d}}{\text{d}x}(e^{v(x)\cdot\ln (a)})&\text{Basiswechsel und Kettenregel anwenden} \\
+		& = & (v(x) \cdot \ln (a))' \cdot e^{v(x) \cdot \ln (a)} \qquad \qquad & \text{Ableiten ($\ln a$ ist eine Konstante)} \\
+		& = & v'(x) \cdot \ln (a) \cdot e^{v(x) \cdot \ln a} & \text{Auf ursprüngliche Basis bringen} \\
+		& = & v'(x) \cdot \ln (a) \cdot a^{v(x)}&
+	\end{array}$$
 \end{Beweis}
 	\subsection{Aktivität}
 

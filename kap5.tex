@@ -106,7 +106,8 @@
           \end{array} \right ),\vv{e_3}= \left ( \begin{array}{c}
             0\\0\\1
           \end{array} \right )$.
-          Sie wird als \textbf{Standardbasis} des $\R^3$ bezeichnet. Vektoren wie $\vv{v}=\left (\begin{array}{c}{2\\3\\8}\end{array} \right )$ lassen sich als eine Linearkombination der drei Vektoren der Standardbasis darstellen: $\vv{v}=2\cdot\vv{e_1}+3\cdot\vv{e_2}+8\cdot\vv{e_3}$.
+          Sie wird als \textbf{Standardbasis} des $\R^3$ bezeichnet.
+          Vektoren wie $\vv{v}=\left (\begin{array}{c}2\\3\\8\end{array} \right )$ lassen sich als eine Linearkombination der drei Vektoren der Standardbasis darstellen: $\vv{v}=2\cdot\vv{e_1}+3\cdot\vv{e_2}+8\cdot\vv{e_3}$.
         \end{Definition}
 
 
@@ -126,8 +127,8 @@
 
         \begin{Beispiel}
             Basis 1: Standardbasis des $\R^3$, Basis 2:
-            $\vv{b_1}=\left (\begin{array}{c}{4\\9\\-1}\end{array}\right ), \vv{b_2}=\left (\begin{array}{c}{-2\\-2\\8}\end{array}\right ),
-            \vv{b_3}=\left (\begin{array}{c}{1\\3\\1}\end{array}\right )$, Vektor $\vv{v}=\left (\begin{array}{c}{-5\\3\\2}\end{array}\right )$ (in der Standardbasis des $\R^3$)
+            $\vv{b_1}=\left (\begin{array}{c}4\\9\\-1\end{array}\right ), \vv{b_2}=\left (\begin{array}{c}-2\\-2\\8\end{array}\right ),
+            \vv{b_3}=\left (\begin{array}{c}1\\3\\1\end{array}\right )$, Vektor $\vv{v}=\left (\begin{array}{c}-5\\3\\2\end{array}\right )$ (in der Standardbasis des $\R^3$)
 
             $\vv{v}=-5\cdot\vv{a_1}+3\cdot\vv{a_2}+2\cdot\vv{a_3}=r\cdot\vv{b_1}+s\cdot\vv{b_2}+t\cdot\vv{b_3}$
 
@@ -153,7 +154,7 @@
             \\
             \Rightarrow \mathbb{L}=\{ -15.2|-6.9|42 \}$
 
-            Daraus lässt sich folgern: $\vv{v}=-15.2\cdot\vv{b_1}-6.9\cdot\vv{b_2}+42\cdot\vv{b_3}=\left (\begin{array}{c}{-15.2\\-6.9\\42}\end{array}\right )$ (in der anderen Basis).
+            Daraus lässt sich folgern: $\vv{v}=-15.2\cdot\vv{b_1}-6.9\cdot\vv{b_2}+42\cdot\vv{b_3}=\left (\begin{array}{c}-15.2\\-6.9\\42\end{array}\right )$ (in der anderen Basis).
         \end{Beispiel}
 
 
@@ -224,13 +225,12 @@
         \begin{Theorem}[Relation de Chasles]
             $(\vv{u},\vv{w})+(\vv{w},\vv{v})=(\vv{u},\vv{v});\quad modulo\quad 2\pi$ \\\\
             \underline{Umformungen}: \\
-            \begin{enumerate}[(1)]
-                \item $(\vv{u},\vv{v})=-(\vv{v},\vv{u})\quad$
-                \item $(-\vv{u},-\vv{v})=(\vv{u},\vv{v})\quad$
-                \item $(\vv{u},\vv{v})=\pi+(-\vv{u},\vv{v})\quad$
-            \end{enumerate}
+            \begin{enumerate}
+                \item $(\vv{u},\vv{v})=-(\vv{v},\vv{u})$
+                \item $(-\vv{u},-\vv{v})=(\vv{u},\vv{v})$
+                \item $(\vv{u},\vv{v})=\pi+(-\vv{u},\vv{v})$
+                
                 Aus der ersten und letzten dieser Relationen lässt sich analog dazu bestimmen:
-            \begin{enumerate}[(4)]
                 \item $(\vv{u},\vv{v})=-(\vv{v},\vv{u})=\pi-(-\vv{v},\vv{u})\quad$
             \end{enumerate}
         \end{Theorem}
@@ -336,7 +336,7 @@
 
     Vektoren lassen sich allgemein mit der additiven Verknüpfung des Vektorraums verknüpfen.
     Diese Verknüpfung zwischen zwei beliebigen Vektoren $\vv{v}$ und $\vv{u}$ erfolgt, wie auch schon im Teil Verbindungsvektor gezeigt wird, wie
-    folgt: $\vv{v}+\vv{u}=\left(\begin{array}{c}{v_1+u_1 \\ v_2+u_2 \\ ... \\ v_n+u_n}\end{array}\right)$. Anschaulich wird $\vv{u}$ an $\vv{v}$
+    folgt: $\vv{v}+\vv{u}=\left(\begin{array}{c}v_1+u_1 \\ v_2+u_2 \\ ... \\ v_n+u_n\end{array}\right)$. Anschaulich wird $\vv{u}$ an $\vv{v}$
     angehängt und der Schaft von $\vv{v}$ mit der Spitze von $\vv{u}$ verbunden, um den neuen Vektor zu bilden.
     
     \begin{Definition}
@@ -386,16 +386,16 @@
     von $\vv{v}$ der auf der Geraden liegt, entlang welcher $\vv{u}$ liegt, mit der Norm von $\vv{u}$ definiert. Im Klartext bedeutet das:
     \begin{Definition}
       \begin{align*}
-          \qquad \qquad \vv{u} \odot \vv{v} &\definedBy |\vv{u}| \cdot |\vv{v'}| \\
+          \qquad \qquad \vv{u} \cdot \vv{v} & := |\vv{u}| \cdot |\vv{v'}| \\
                               &= |\vv{u}| \cdot |\vv{v}| \cdot \cos(\alpha) \\
       \end{align*}
-    \end{Definition}\\
+    \end{Definition}
 
     Daraus lässt sich ableiten, dass:
     \begin{itemize}
-        \item $0 <= \alpha < 90 \text{ (spitzer Winkel)} \logEqR \cos{\alpha} > 0 \Leftrightarrow \vv{u} \odot \vv{v} > 0$
-        \item $90 < \alpha <= 180 \text{ (stumpfer Winkel)} \logEqR \cos{\alpha} < 0 \Leftrightarrow \vv{u} \odot \vv{v} < 0 $
-        \item $\alpha = 90 \text{ (rechter Winkel)} \logEqR \cos{\alpha} = 0 \Leftrightarrow \vv{u} \odot \vv{v} = 0$
+        \item $0 \leq \alpha < 90 \text{ (spitzer Winkel)} \Rightarrow \cos{\alpha} > 0 \Leftrightarrow \vv{u} \cdot \vv{v} > 0$
+        \item $90 < \alpha \leq 180 \text{ (stumpfer Winkel)} \Rightarrow \cos{\alpha} < 0 \Leftrightarrow \vv{u} \cdot \vv{v} < 0 $
+        \item $\alpha = 90 \text{ (rechter Winkel)} \Rightarrow \cos{\alpha} = 0 \Leftrightarrow \vv{u} \cdot \vv{v} = 0$
     \end{itemize}
     Da wir nun aber selten Zugriff auf den Winkel haben, und dieser in den meisten Fällen die gesuchte Variable ist, benötigen wir eine
     praktikablere Berechnung, welche dasselbe Ergebnis liefert. Als Ansatz kann man auf eine im Abschnitt \dq Orthonormalbasis\dq\ bereits
@@ -405,14 +405,12 @@
                       \vv{v} &= v_1 \cdot \vv{e_1} + v_2 \cdot \vv{e_2} + v_3 \cdot \vv{e_3} \\
     \end{align*}
     Somit erreicht man folgendes Ergebnis:
-    $\vv{u} \odot \vv{v} = (u_1 \cdot \vv{e_1} + u_2 \cdot \vv{e_2} + u_3 \cdot \vv{e_3}) \odot \vv{v} &= v_1 \cdot \vv{e_1} + v_2 \cdot \vv{e_2} + v_3 \cdot \vv{e_3}$
+    $\vv{u} \cdot \vv{v} = (u_1 \cdot \vv{e_1} + u_2 \cdot \vv{e_2} + u_3 \cdot \vv{e_3}) \cdot \vv{v} = v_1 \cdot \vv{e_1} + v_2 \cdot \vv{e_2} + v_3 \cdot \vv{e_3}$
     Um hiermt allerdings weiterrechnen zu können, müssen einige Rechenregeln bezüglich des Skalarprodukts aufgestellt werden. Zunächst gilt,
-    dass das Skalarprodukt symmetrisch ist: $\vv{u} \odot \vv{v} = \vv{v} \odot \vv{u}$, da
+    dass das Skalarprodukt symmetrisch ist: $\vv{u} \cdot \vv{v} = \vv{v} \cdot \vv{u}$, da
 
-
-    \\
     \begin{Bemerkung}
-        Aus dieser Gleichung folgt: $\cos(\alpha) = \dfrac{\vv{u} \odot \vv{v}}{|\vv{u}| \cdot |\vv{v}|}$.
+        Aus dieser Gleichung folgt: $\cos(\alpha) = \dfrac{\vv{u} \cdot \vv{v}}{|\vv{u}| \cdot |\vv{v}|}$.
     \end{Bemerkung}
 
 
@@ -420,15 +418,17 @@
 \section{Kreuzprodukt}
 
     Das Kreuzprodukt ist das zweite nützliche Werkzeug, welches in der Vektorgeometrie genutzt wird. Es dient hauptsächlich zur einfachen Berechnung
-    eines zu zwei \textbf{nicht kollinearen} Vektoren $\vv{u}$ und $\vv{v}$ orthogonalen Vektors $\vv{i}$. \\
+    eines zu zwei \textbf{nicht kollinearen} Vektoren $\vv{u}$ und $\vv{v}$ orthogonalen Vektors $\vv{i}$.
+
     \begin{Definition}
-      $$\vv{i} = \vv{u} \times \vv{v} \definedBy \left(\begin{array}{c} u_{\textcolor{red}{2}} \cdot v_{\textcolor{orange}{3}} - u_{\textcolor{red}{3}} \cdot v_{\textcolor{orange}{2}} \\ u_{\textcolor{red}{3}} \cdot v_{\textcolor{orange}{1}} - u_{\textcolor{red}{1}} \cdot v_{\textcolor{orange}{3}} \\ u_{\textcolor{red}{1}} \cdot v_{\textcolor{orange}{2}} - u_{\textcolor{red}{2}} \cdot v_{\textcolor{orange}{1}} \end{array}\right)$$
+      $$\vv{i} = \vv{u} \times \vv{v} := \left( \begin{array}{c} u_{\textcolor{red}{2}} \cdot v_{\textcolor{orange}{3}} - u_{\textcolor{red}{3}} \cdot v_{\textcolor{orange}{2}} \\ u_{\textcolor{red}{3}} \cdot v_{\textcolor{orange}{1}} - u_{\textcolor{red}{1}} \cdot v_{\textcolor{orange}{3}} \\ u_{\textcolor{red}{1}} \cdot v_{\textcolor{orange}{2}} - u_{\textcolor{red}{2}} \cdot v_{\textcolor{orange}{1}} \end{array} \right)$$
     \end{Definition}
 
     \begin{Beweis}
-        Seien $\vv{u}$ und $\vv{v}$ beliebige zueinander nicht kollineare Vektoren des $\R^3$. Ein zu beiden Vektoren orthogonaler Vektor ergibt sich durch: \\
+        Seien $\vv{u}$ und $\vv{v}$ beliebige zueinander nicht kollineare Vektoren des $\R^3$. Ein zu beiden Vektoren orthogonaler Vektor ergibt sich durch:
+
         \begin{align*}
-            \qquad &\left\{\begin{array}{rccl} \vv{u} \odot \vv{i} & = & 0 & (1) \\ \vv{v} \odot \vv{i} & = & 0 & (2)\end{array}\right. \\\\
+            \qquad &\left\{\begin{array}{rccl} \vv{u} \cdot \vv{i} & = & 0 & (1) \\ \vv{v} \cdot \vv{i} & = & 0 & (2)\end{array}\right. \\\\
             \Leftrightarrow &\left\{\begin{array}{rccl} u_1i_1 + u_2i_2 + u_3i_3 & = & 0 & (1) \qquad | \cdot v_1 \\ v_1i_1 + v_2i_2 + v_3i_3 & = & 0 & (2) \qquad | \cdot (-u_1) \end{array}\right. \\\\
             \Leftrightarrow &\left\{\begin{array}{rccl} u_1v_1i_1 + u_2v_1i_2 + u_3v_1i_3 & = & 0 & (1) \\ -u_1v_1i_1 - u_1v_2i_2 - u_1v_3i_3 & = & 0 & (2) \qquad | (1) + (2) \end{array}\right. \\\\
             \Leftrightarrow &\left\{\begin{array}{rccl} u_1v_1i_1 + u_2v_1i_2 + u_3v_1i_3 & = & 0 & (1) \\ u_2v_1i_2 + u_3v_1i_3 - u_1v_2i_2 - u_1v_3i_3 & = & 0 & (2) \end{array}\right. \\\\
@@ -448,11 +448,12 @@
     \begin{Bemerkung}
         $\vv{u} \times \vv{v} = 0 \Leftrightarrow \vv{u} \parallel \vv{v} (\vv{u} = r \cdot \vv{v};r\in\R)$
     \end{Bemerkung}
-    \\\\
+
     Zudem gilt:
+
     \begin{align*}
         \qquad \qquad \qquad |\vv{i}| &= |\vv{u}| \cdot (\sin(\alpha) \cdot |\vv{v}|) \\
-                                      &= |\vv{u}| \cdot \left(\sin\left(\cos^{-1}\left(\dfrac{\vv{u} \odot \vv{v}}{|\vv{u}| \cdot |\vv{v}|}\right)\right) \cdot |\vv{v}|\right) \\
+                                      &= |\vv{u}| \cdot \left(\sin\left(\cos^{-1}\left(\dfrac{\vv{u} \cdot \vv{v}}{|\vv{u}| \cdot |\vv{v}|}\right)\right) \cdot |\vv{v}|\right) \\
     \end{align*}
     Einfacher gesagt ist der Betrag des Vektors $\vv{i}$ gleich der Fläche des Parallelogramms, welches die zwei Vektoren $\vv{u}$ und $\vv{v}$
     aufspannen. Um diese doch recht verwirrende Erklärung etwas zu verdeutlichen folgt eine visuelle Darstellung:
@@ -486,9 +487,9 @@
                                                         &= \sqrt{(|\vv{u}|)^2 \cdot (|\vv{v}|)^2 \cdot \textcolor{red}{(1 - \cos^2(\alpha))}} \\
                                                         &= \sqrt{(\vv{u})^2 \cdot (\vv{v})^2 \cdot (1 - \cos^2(\alpha))} \\
                                                         &= \sqrt{(\vv{u})^2 \cdot (\vv{v})^2 - (\vv{u})^2 \cdot (\vv{v})^2 \cdot \cos^2(\alpha)} \\
-                                                        &= \sqrt{\vv{u} \odot \vv{u} \cdot \vv{v} \odot \vv{v} - (|\vv{u}|)^2 \cdot (|\vv{v}|)^2 \cdot \cos^2(\alpha)} \\
-                                                        &= \sqrt{\vv{u} \odot \vv{u} \cdot \vv{v} \odot \vv{v} - |\vv{u}| \cdot |\vv{v}| \cdot \cos(\alpha) \cdot |\vv{u}| \cdot |\vv{v}| \cdot \cos(\alpha)} \\
-                                                        &= \sqrt{\vv{u} \odot \vv{u} \cdot \vv{v} \odot \vv{v} - \vv{u} \odot \vv{v} \cdot \vv{u} \odot \vv{v}} \\
+                                                        &= \sqrt{\vv{u} \cdot \vv{u} \cdot \vv{v} \cdot \vv{v} - (|\vv{u}|)^2 \cdot (|\vv{v}|)^2 \cdot \cos^2(\alpha)} \\
+                                                        &= \sqrt{\vv{u} \cdot \vv{u} \cdot \vv{v} \cdot \vv{v} - |\vv{u}| \cdot |\vv{v}| \cdot \cos(\alpha) \cdot |\vv{u}| \cdot |\vv{v}| \cdot \cos(\alpha)} \\
+                                                        &= \sqrt{\vv{u} \cdot \vv{u} \cdot \vv{v} \cdot \vv{v} - \vv{u} \cdot \vv{v} \cdot \vv{u} \cdot \vv{v}} \\
                                                         &= \sqrt{(u_1^2 + u_2^2 + u_3^2) \cdot (v_1^2 + v_2^2 + v_3^2) - (u_1v_1 + u_2v_2 + u_3v_3)^2} \\
                                                         &= \sqrt{(\cancel{u_1^2v_1^2} + u_1^2v_2^2 + u_1^2v_3^2 + u_2^2v_1^2 + \cancel{u_2^2v_2^2} + u_2^2v_3^2 + u_3^2v_1^2 + u_3^2v_2^2} \\
                                                         & \quad \overline{+\text{ }\cancel{u_3^2v_3^2}) - (\cancel{u_1^2v_1^2} + u_1v_1u_2v_2 + u_1v_1u_3v_3 + u_2v_2u_1v_1 + \cancel{u_2^2v_2^2}} \\
@@ -545,12 +546,11 @@
 
     \subsection{Lagebeziehungen zwischen Geraden}
 
-        Es gibt bezüglich Geraden vier verschiedene Beziehungen, vorausgesetzt diese befinden sich im $\R^3$. Zwei Geraden $g$ und $h$ können...\\
+        Es gibt bezüglich Geraden vier verschiedene Beziehungen, vorausgesetzt diese befinden sich im $\R^3$. Zwei Geraden $g$ und $h$ können...
 
         \begin{minipage}[t]{0.5\textwidth}
-        \begin{left}
-            \quad 1)\text{...\textbf{parallel} sein...}
-        \end{left}
+        $1)$ ...\textbf{parallel} sein...
+
         \begin{center}
             \begin{tikzpicture}[>=triangle 45,scale=0.6]
                 \draw [line width=0.8pt] (-0.25,0.25) node {O};
@@ -572,9 +572,7 @@
         \end{center}
         \end{minipage}
         \begin{minipage}[t]{0.5\textwidth}
-        \begin{left}
-            \quad 2)\text{...\textbf{identisch} sein...}
-        \end{left}
+        $2)$ ...\textbf{identisch} sein...
         \begin{center}
             \begin{tikzpicture}[>=triangle 45,scale=0.6]
                 \draw [line width=0.8pt] (-0.25,0.25) node {O};
@@ -594,9 +592,7 @@
         \end{center}
         \end{minipage}\\\\
         \begin{minipage}[t]{0.5\textwidth}
-        \begin{left}
-            \quad 3)\text{...\textbf{windschief zueinander} sein...}
-        \end{left}
+        $3)$ ...\textbf{windschief zueinander} sein...
         \begin{center}
             \begin{tikzpicture}[>=triangle 45,scale=0.6]
                 \draw [line width=0.8pt] (-0.25,0.25) node {O};
@@ -619,9 +615,7 @@
         \end{center}
         \end{minipage}
         \begin{minipage}[t]{0.5\textwidth}
-        \begin{left}
-            \quad 4)\text{...\textbf{sich schneiden}}
-        \end{left}
+        $4)$ ...\textbf{sich schneiden}
         \begin{center}
             \begin{tikzpicture}[>=triangle 45,scale=0.6]
                 \draw [line width=0.8pt] (-0.25,0.25) node {O};
@@ -646,7 +640,7 @@
         \end{minipage}
 
         Die Lagebeziehung zwischen zwei Geraden $g$ und $h$ lässt sich wie folgt ermitteln:
-
+        \begin{center}
             \begin{tikzpicture}[>=triangle 45]
                 \draw (0,0) node{$\exists t\in\R\quad\textcolor{red}{\vv{u_1}} = t\cdot\textcolor{red}{\vv{u_2}}?$};
                 \draw [line width=0.8pt,color=gray] (-5,-0.3) -- (-4,-0.3);
@@ -682,54 +676,58 @@
 
         \begin{Definition}
             Der \textbf{Lotfußpunkt} $L$ einer Geraden $g:\vv{x}=\vv{q}+t\cdot\vv{u};t\in\R$ zu einem Punkt $P\notin g$
-            ist definiert durch: $\vv{LP}\odot\vv{u}=0$. Er ist somit der dem Punkt $P$ am nähesten gelegenen Punkt der Gerade $g$ und wird
+            ist definiert durch: $\vv{LP}\cdot\vv{u}=0$. Er ist somit der dem Punkt $P$ am nähesten gelegenen Punkt der Gerade $g$ und wird
             folglich hauptsächlich zur Abstandsberechnung genutzt.
         \end{Definition}
 
         Der Abstand von einer Geraden $g$ zu einem Punkt $P$ ist äquivalent zur \textbf{Norm des Verbindungsvektors $\vv{LP}$}, wobei $L$
         der Lotfußpunkt der Geraden $g$ zu $P$ ist. Für die Berechnung des Abstands gibt es drei verschiedene Lösungsansätze (OHG) von denen zwei
         gebräuchlicher sind als der dritte.
-        \\
-        \\
+
         \underline{\textbf{Orthogonalität}}:
             Da die Norm des Verbindungsvektors gesucht wird, gilt es nun diesen eindeutig zu bestimmen. Folgender Ablauf führt
             zum Ziel:
                 \begin{enumerate}
                     \item \label{a} Punkt L auf der Geraden $g$ in Abhängigkeit des Faktors des Richtungsvektors bestimmen:
                     \begin{center}
-                        $\vv{l} = \left(\begin{array}{c}{\textcolor{blue}{q_1}+t\cdot \textcolor{red}{u_1}\\\textcolor{blue}{q_2}+t\cdot \textcolor{red}{u_2}\\\textcolor{blue}{q_3}+t\cdot \textcolor{red}{u_3}}\end{array}\right)$
+                        $\vv{l} = \left(\begin{array}{c}\textcolor{blue}{q_1}+t\cdot \textcolor{red}{u_1}\\\textcolor{blue}{q_2}+t\cdot \textcolor{red}{u_2}\\\textcolor{blue}{q_3}+t\cdot \textcolor{red}{u_3}\end{array}\right)$
                     \end{center}
                     \item \label{b} Verbindungsvektor bestimmen:
                     \begin{center}
-                        $\vv{LP} = \left(\begin{array}{c}{p_1-(\textcolor{blue}{q_1}+t\cdot \textcolor{red}{u_1})\\p_2-(\textcolor{blue}{q_2}+t\cdot \textcolor{red}{u_2})\\p_3-(\textcolor{blue}{q_3}+t\cdot \textcolor{red}{u_3})}\end{array}\right)$
+                        $\vv{LP} = \left(\begin{array}{c}p_1-(\textcolor{blue}{q_1}+t\cdot \textcolor{red}{u_1})\\p_2-(\textcolor{blue}{q_2}+t\cdot \textcolor{red}{u_2})\\p_3-(\textcolor{blue}{q_3}+t\cdot \textcolor{red}{u_3})\end{array}\right)$
                     \end{center}
-                    \item \label{c} $\vv{LP}\odot\vv{u} = 0$ und Gleichung lösen (nach t auflösen):
+                    \item \label{c} $\vv{LP}\cdot\vv{u} = 0$ und Gleichung lösen (nach t auflösen):
                     \begin{align*}
                         \qquad \qquad \qquad \qquad 0 &= \textcolor{red}{u_1} \cdot (p_1 - (\textcolor{blue}{q_1} + t\cdot \textcolor{red}{u_1})) + \textcolor{red}{u_2} \cdot (p_2 - (\textcolor{blue}{q_2} + t \cdot \textcolor{red}{u_2})) + \textcolor{red}{u_3} \cdot (p_3 - (\textcolor{blue}{q_3} + t \cdot \textcolor{red}{u_3})) \\
                              \Leftrightarrow t &= \dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}
                     \end{align*}
                     \item \label{d} Verbindungsvektor berechnen:
                     \begin{center}
-                        $\vv{LP} = \left(\begin{array}{c}{p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1})\\p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2})\\p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3})}\end{array}\right)$
+                        $\vv{LP} = \left(\begin{array}{c}p_1-(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1})\\p_2-(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2})\\p_3-(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3})\end{array}\right)$
                     \end{center}
                     \item \label{e} Norm des Verbindungsvektors berechnen:
                     \begin{align*}
                         d(g,P) & =|\vv{LP}| \\
-                               & = \left|\left(\begin{array}{c}{p_1-\left(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1}\right)\\p_2-\left(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2}\right)\\p_3-\left(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3}\right)}\end{array}\right)\right| \\
-                               & = \sqrt{\left(p_1-\left(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1}\right)\right)^2 \\
-                               & \quad \overline{+ \left(p_2-\left(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2}\right)\right)^2} \\
-                               & \quad \overline{+ \left(p_3-\left(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3}\right)\right)^2}}
+                               & = \left| \left(\begin{array}{c}
+                                    p_1 - \left( \textcolor{blue}{q_1} + \dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1} \right) \\
+                                    p_2 - \left( \textcolor{blue}{q_2} + \dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2} \cdot \textcolor{red}{u_2} \right) \\
+                                    p_3 - \left( \textcolor{blue}{q_3} + \dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3} \right)
+                                \end{array} \right)\right| \\
+                               & = \sqrt{\begin{array}{c}
+                                    \left(p_1-\left(\textcolor{blue}{q_1}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_1} \right) \right)^2 \\
+                                    + \left(p_2-\left(\textcolor{blue}{q_2}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_2} \right) \right)^2 \\
+                                    + \left(p_3-\left(\textcolor{blue}{q_3}+\dfrac{\textcolor{red}{u_1} \cdot (p_1 - \textcolor{blue}{q_1}) + \textcolor{red}{u_2} \cdot (p_2 - \textcolor{blue}{q_2}) + \textcolor{red}{u_3} \cdot (p_3 - \textcolor{blue}{q_3})}{\textcolor{red}{u_1}^2 + \textcolor{red}{u_2}^2 + \textcolor{red}{u_3}^2}\cdot \textcolor{red}{u_3} \right) \right)^2
+                               \end{array}}
                     \end{align*}
                 \end{enumerate}
-        \\
-        \\
+
         \underline{\textbf{Hilfsebene}}:
             Diese Methode hat sich Platz zwei erkämpft:
                 \begin{enumerate}
                     \item Hilfsebene $E$ bestimmen ($\vv{n}\equiv\textcolor{red}{\vv{u}}\quad P\in E$, da die Gerade $g$ die Ebene im rechten Winkel durchstößt und
                     der Verbindungsvektor somit orthogonal zur Geraden ist):
                     \begin{align*}
-                        \qquad \qquad \qquad \qquad E:\textcolor{red}{\vv{u}} \odot [\vv{x} - \vv{p}] &= 0 \\
+                        \qquad \qquad \qquad \qquad E:\textcolor{red}{\vv{u}} \cdot [\vv{x} - \vv{p}] &= 0 \\
                                                     \Leftrightarrow \textcolor{red}{u_1}x_1 + \textcolor{red}{u_2}x_2 + \textcolor{red}{u_3}x_3 &= \textcolor{red}{u_1}p_1 + \textcolor{red}{u_2}p_2 + \textcolor{red}{u_3}p_3
                     \end{align*}
                     \item $g = E$ und Gleichung lösen (nach t auflösen):
@@ -741,8 +739,6 @@
                     \item Siehe Schritt \ref{e} Orthogonalität
                 \end{enumerate}
 
-        \\
-        \\
         \underline{\textbf{Grenzwertberechnung}}:
             Zu guter Letzt wollen wir die Analysis Fanatiker befriedigen:
                 \begin{enumerate}
@@ -778,12 +774,12 @@
                     \item Siehe Schritt \ref{d} Orthogonalität
                     \item Siehe Schritt \ref{e} Orthogonalität
                 \end{enumerate}
-        \\
+        
         \begin{Bemerkung}
             Wie sich unschwer erkennen lässt, sind die Formeln für die Berechnung von t bei allen drei Lösungsansätzen identisch. Die Methoden
             unterscheiden sich somit nur am Anfang voneiander.
         \end{Bemerkung}
-        \\
+        
         \begin{Bemerkung}
             Zur Abstandsberechnung gibt es eine allgemeine Formel, welche die oben aufgelisteten Vorgehensweisen überflüssig macht. Da sie
             für das Abitur allerdings nicht zugelassen ist, wird sie hier nicht bewiesen beziehungsweise graphisch ergänzt:
@@ -795,13 +791,11 @@
 
         Zwei nicht sich schneidende oder identische Geraden haben einen \textbf{eindeutig definierten Minimalabstand}. Bei zwei parallelen
         Geraden ist dies einfach zu visualisieren, der Abstand zweier windschiefer Geraden jedoch weniger. Im Folgenden sollen beide Fälle untersucht werden.
-        \\
-        \\
+        
         \underline{\textbf{Parallele Geraden}}:
             Der Abstand zweier paralleler Geraden $g$ und $h$ entspricht genau dem Abstand eines Punktes $P \in g \lor P\in h$ zur jeweiligen
             gegenüberliegenden Geraden. Somit genügt es den Abstand zwischen zwischen dem Stützpunkt einer Geraden und der anderen zu berechnen.
-        \\
-        \\
+ 
         \underline{\textbf{Windschiefe Geraden}}:
             Der minimale Abstand zweier windschiefer Geraden lässt sich mithilfe einer \textbf{Hilsebene} verbildlichen und bestimmen. Gegeben
             seien zwei Geraden
@@ -811,7 +805,7 @@
             Ebene, welche entweder die Gerade $g$ oder $h$ enthält und parallel zur anderen ist. Der Minimalabstand ist äquivalent zum Abstand zwischen
             einem Punkt der Geraden, die nicht in der Ebene enthalten ist, und der Ebene. Für die genaue Vorgehensweise von diesem Punkt aus empfiehlt es
             sich sich den Teil \glqq Abstand zu einem Punkt\grqq \text{ }unter Ebenen zuzuwenden.
-        \\
+        
         \begin{Bemerkung}
             Zur Berechnung des Abstands zweier windschiefer Geraden gibt es zudem eine Formel, welche zugleich das
             \textbf{Ergebnis des Skalarprodukts} veranschaulicht. Aus zwei Geraden
@@ -821,7 +815,7 @@
             lässt sich mit dem Kreuzprodukt ein normierter Normalenvektor $n_0$ zu beiden Richtungsvektoren $\vv{u}$ und $\vv{v}$ errechnen, den man mit dem
             Verbindungsvektor der beiden Ortsvektoren ($\vv{q}-\vv{p}$) zur Minimalabstandsberechnung der beiden Geraden skaliert:
             \begin{center}
-                \qquad $d(g,h)= |n_0 \odot (\vv{q}-\vv{p})| =  |\dfrac{\vv{u} \times \vv{v}}{|\vv{u} \times \vv{v}|} \odot (\vv{q}-\vv{p})|$
+                \qquad $d(g,h)= |n_0 \cdot (\vv{q}-\vv{p})| =  |\dfrac{\vv{u} \times \vv{v}}{|\vv{u} \times \vv{v}|} \cdot (\vv{q}-\vv{p})|$
             \end{center}
         \end{Bemerkung}
 
@@ -833,12 +827,13 @@
     \subsection{Darstellungen}
 
         Die Darstellung einer Ebene beinhaltet immer die gleichen Informationen: Ihre \textcolor{blue}{Position} im Raum und ihre
-        \textcolor{red}{Ausrichtung}:\\
+        \textcolor{red}{Ausrichtung}:
+
         \begin{center}
             \begin{tabular}{@{} *2l @{}}
-                \emph{Name} & \emph{Darstellung}   \\\midrule
+                \emph{Name} & \emph{Darstellung} \\
                 Parameterform \qquad \qquad \qquad \qquad \qquad & $E:\vv{x}=\textcolor{blue}{\vv{p}} + s\cdot \textcolor{red}{\vv{u}} + t\cdot \textcolor{red}{\vv{v}} ; \qquad s,t \in \R $    \\
-                Normalenform \qquad \qquad \qquad \qquad \qquad & $E:(\vv{x} - \textcolor{blue}{\vv{q}}) \odot \textcolor{red}{\vv{n}} = 0 $\\
+                Normalenform \qquad \qquad \qquad \qquad \qquad & $E:(\vv{x} - \textcolor{blue}{\vv{q}}) \cdot \textcolor{red}{\vv{n}} = 0 $\\
                 Koordinatenform \qquad \qquad \qquad \qquad \qquad & $E:\textcolor{red}{n_1} \cdot x_1 + \textcolor{red}{n_2} \cdot x_2 + \textcolor{red}{n_3} \cdot x_3 = \textcolor{purple}{d} ; \quad \textcolor{purple}{d} = \textcolor{red}{n_1} \cdot \textcolor{blue}{q_1} + \textcolor{red}{n_2} \cdot \textcolor{blue}{q_2} + \textcolor{red}{n_3} \cdot \textcolor{blue}{q_3} $ \\
             \end{tabular}
         \end{center}
@@ -921,8 +916,8 @@
         Aus der Normalenform lässt sich die Koordinatenform ableiten. Man macht häufiger Gebrauch von letzterer, da sich leichter
         mit ihr rechnen lässt. Man bildet sie wie folgt:
         \begin{align*}
-                                  &E:(\vv{x} - \textcolor{blue}{\vv{q}}) \odot \textcolor{red}{\vv{n}} = 0 \\
-            \Leftrightarrow \quad &E:\vv{x} \odot \textcolor{red}{\vv{n}} = \textcolor{blue}{\vv{q}} \odot \textcolor{red}{\vv{n}} \\
+                                  &E:(\vv{x} - \textcolor{blue}{\vv{q}}) \cdot \textcolor{red}{\vv{n}} = 0 \\
+            \Leftrightarrow \quad &E:\vv{x} \cdot \textcolor{red}{\vv{n}} = \textcolor{blue}{\vv{q}} \cdot \textcolor{red}{\vv{n}} \\
             \Leftrightarrow \quad &E:\textcolor{red}{n_1} \cdot x_1 + \textcolor{red}{n_2} \cdot x_2 + \textcolor{red}{n_3} \cdot x_3 = \textcolor{purple}{d} ; \quad \textcolor{purple}{d} = \textcolor{red}{n_1} \cdot \textcolor{blue}{q_1} + \textcolor{red}{n_2} \cdot \textcolor{blue}{q_2} + \textcolor{red}{n_3} \cdot \textcolor{blue}{q_3}
         \end{align*}
 
@@ -936,7 +931,7 @@
                 \item $\text{1 Spurpunkt } \Rightarrow E \parallel E_{x_{1}x_2} \lor E \parallel E_{x_{2}x_3} \lor E \parallel E_{x_{1}x_3}$
                 \item Ausnahme des vorherigen Falls: $P \equiv O \Rightarrow \text{Ausrichtung von $E$ lässt sich nicht bestimmen}$
                 \item $\infty \text{ Punkte} \Rightarrow \text{Eine der Achsen des Koordinatensystems $\in E$, Ausrichtung von $E$ lässt sich nicht bestimmen}$
-                \item $\infty \glqq \cdot 2 \grqq \text{ Punkte} \Rightarrow E \equiv E_{x_{1}x_2} \lor E \equiv E_{x_{2}x_3} \lor E \equiv E_{x_{1}x_3}$
+                \item $\infty  "\cdot 2" \text{ Punkte} \Rightarrow E \equiv E_{x_{1}x_2} \lor E \equiv E_{x_{2}x_3} \lor E \equiv E_{x_{1}x_3}$
             \end{enumerate}
         \end{Bemerkung}
 
@@ -959,7 +954,7 @@
                 \draw [line width=0.8pt,color=black,fill=black,fill opacity=0.3] (-2.75,-1.9) circle (10pt) node {4};
                 \draw [line width=0.8pt,color=black,fill=black,fill opacity=0.3] (4.85,-2.9) circle (10pt) node {5};
                 \draw [line width=0.8pt,color=black,fill=black,fill opacity=0.3] (3.85,-1.9) circle (10pt) node {6};
-                \draw [line width=0.8pt](-5.5,0) node {$E:(\vv{x} - \textcolor{blue}{\vv{q}}) \odot \textcolor{red}{\vv{n}} = 0$};
+                \draw [line width=0.8pt](-5.5,0) node {$E:(\vv{x} - \textcolor{blue}{\vv{q}}) \cdot \textcolor{red}{\vv{n}} = 0$};
                 \draw [line width=0.8pt](6.5,0.2) node {$E:\textcolor{red}{n_1} \cdot x_1 + \textcolor{red}{n_2} \cdot x_2 + \textcolor{red}{n_3} \cdot x_3 = \textcolor{purple}{d};$};
                 \draw [line width=0.8pt](6.5,-0.2) node {$\quad \textcolor{purple}{d} = \textcolor{red}{n_1} \cdot \textcolor{blue}{q_1} + \textcolor{red}{n_2} \cdot \textcolor{blue}{q_2} + \textcolor{red}{n_3} \cdot \textcolor{blue}{q_3}$};
                 \draw [line width=0.8pt](0.5,-5) node {$E:\vv{x}=\textcolor{blue}{\vv{p}} + s\cdot \textcolor{red}{\vv{u}} + t\cdot \textcolor{red}{\vv{v}}$};
@@ -986,9 +981,7 @@
         zueinander haben. Eine Ebene $E$ und eine Gerade $g$ können...\\
 
         \begin{minipage}[t]{0.5\textwidth}
-        \begin{left}
-            \quad 1)\text{...\textbf{parallel} sein ...}
-        \end{left}
+        $1)$ ...\textbf{parallel} sein ...
         \begin{center}
             \begin{tikzpicture}[>=triangle 45,scale=0.6]
                 \draw[->,line width=0.8,color=blue] (1,-2,0) -- (-2,4,0);
@@ -1011,9 +1004,7 @@
         \end{center}
         \end{minipage}
         \begin{minipage}[t]{0.5\textwidth}
-        \begin{left}
-            \quad 2)\text{...\textbf{sich schneiden}}
-        \end{left}
+        $2)$ ...\textbf{sich schneiden}
         \begin{center}
             \begin{tikzpicture}[>=triangle 45,scale=0.6]
                 \draw[->,line width=0.8,color=blue] (1,-2,0) -- (-1,4,0);
@@ -1036,9 +1027,7 @@
 
         \begin{center}
         \begin{minipage}[t]{0.5\textwidth}
-        \begin{left}
-            \quad 3)\text{ Zudem kann g \textbf{in E liegen}}
-        \end{left}
+        $3)$ Zudem kann g \textbf{in E liegen}
         \begin{center}
             \begin{tikzpicture}[>=triangle 45,scale=0.6]
                 \draw[->,line width=0.8,color=blue] (1,-2,0) -- (-2,0,0);
@@ -1061,11 +1050,12 @@
         \end{center}
         \end{minipage}
         \end{center}
+
         Die Lagebeziehung zwischen einer Ebene $E$ und einer Geraden $g$ lässt sich wie folgt ermitteln:
 
         \begin{center}
             \begin{tikzpicture}[>=triangle 45,scale=0.6]
-                \draw (0,0) node{$\textcolor{red}{\vv{n}} \odot \textcolor{red}{\vv{u}} = 0?$};
+                \draw (0,0) node{$\textcolor{red}{\vv{n}} \cdot \textcolor{red}{\vv{u}} = 0?$};
                 \draw [line width=0.8pt,color=gray] (-5,-0.3) -- (-4,-0.3);
                 \draw [line width=0.8pt,color=gray] (-3.1,-0.3) -- (3.1,-0.3);
                 \draw [line width=0.8pt,color=gray] (4,-0.3) -- (5,-0.3);
@@ -1091,9 +1081,7 @@
         Ebenen teilen bezüglich ihrer Lage zueinander eine Eigenschaft mit einer Ebene und einer Geraden.
         Zwei Ebenen $E_1$ und $E_2$ können ebenfalls:\\
         \begin{minipage}[t]{0.5\textwidth}
-        \begin{left}
-            \quad \text{1. ...\textbf{parallel} sein...}
-        \end{left}
+        $1)$ ...\textbf{parallel} sein...
         \begin{center}
             \begin{tikzpicture}[>=triangle 45,scale=0.6]
                 \draw[color=red,fill=red,opacity=0.5]  (-4,0,4) -- (4,0,4) -- (4,0,-4) -- (-4,0,-4) -- cycle;
@@ -1109,9 +1097,7 @@
         \end{center}
         \end{minipage}
         \begin{minipage}[t]{0.5\textwidth}
-        \begin{left}
-            \quad \text{2. ...\textbf{identisch} sein}
-        \end{left}
+        $2)$ ...\textbf{identisch} sein
         \begin{center}
             \begin{tikzpicture}[>=triangle 45,scale=0.5]
                 \draw[color=red,fill=red,opacity=0.5]  (1,0,-1) -- (1,0,7) -- (-7,0,7) -- (-7,0,-1) -- cycle;
@@ -1129,9 +1115,7 @@
 
         \begin{center}
         \begin{minipage}[t]{0.5\textwidth}
-        \begin{left}
-            \quad \text{3.  ...\textbf{sich schneiden}}
-        \end{left}
+        $3)$  ...\textbf{sich schneiden}
         \begin{center}
             \begin{tikzpicture}[>=triangle 45,scale=0.6]
                 \draw[color=red,fill=red,opacity=0.5]  (-4,0,4) -- (4,0,4) -- (4,0,-4) -- (-4,0,-4) -- cycle;
@@ -1164,7 +1148,7 @@
                 \draw (3.55,-0.3) node {$\nexists t$};
                 \draw [->,line width=0.8pt,color=gray](-5,-0.3) -- (-5,-2) node[below]{$E_1\parallel E_2$};
                 \draw [->,line width=0.8pt,color=gray](5,-0.3) -- (5,-2) node[below]{$E_1\cap E_2 = g;g:\vv{x}=\vv{q} + r \cdot \vv{u};r\in\R$};
-                \draw (-5,-2.8) node{$\textcolor{blue}{Q_E_2}\in E_1 \lor \textcolor{blue}{Q_{E_1}}\in E_2?$};
+                \draw (-5,-2.8) node{$\textcolor{blue}{Q_{E_2}}\in E_1 \lor \textcolor{blue}{Q_{E_1}}\in E_2?$};
                 \draw [line width=0.8pt,color=gray] (-5,-3) -- (-5,-4);
                 \draw [line width=0.8pt,color=gray] (-8,-4) -- (-7.6,-4);
                 \draw [line width=0.8pt,color=gray] (-6.9,-4) -- (-3.1,-4);
@@ -1190,13 +1174,13 @@
 
         Die einzige bisher angesprochene Möglichkeit den Winkel zwischen zwei geometrischen Formen zu
         ermitteln macht sich der Definition des Skalarprodukts zunutze. Wie bereits erläutert gilt:
-        $\cos(\alpha)=\dfrac{\vv{v}\odot\vv{u}}{|\vv{v}|\cdot|\vv{u}|}$. Hierbei soll erneut hervorgehoben werden, dass
+        $\cos(\alpha)=\dfrac{\vv{v}\cdot\vv{u}}{|\vv{v}|\cdot|\vv{u}|}$. Hierbei soll erneut hervorgehoben werden, dass
         der Winkel der "kleinere"  der beiden möglichen ist. Den anderen erhält man in Abhängigkeit des ersten.
         Daraus lässt sich ableiten wie zwei Geraden oder Ebenen oder auch eine Gerade und eine Ebene zueinander stehen:
         \begin{enumerate}
-            \item Geraden: $\cos(\alpha) = \dfrac{\textcolor{red}{\vv{u_1}} \odot \textcolor{red}{\vv{u_2}}} {|\textcolor{red}{\vv{u_1}}| \cdot |\textcolor{red}{\vv{u_2}}|}$
-            \item Ebenen: $\cos(\alpha) = \dfrac{\textcolor{orange}{\vv{n_1}} \odot \textcolor{orange}{\vv{n_2}}} {|\textcolor{orange}{\vv{n_1}}| \cdot |\textcolor{orange}{\vv{n_2}}|}$
-            \item Gerade / Ebene: $\sin(\alpha) = \dfrac{\textcolor{red}{\vv{u}} \odot \textcolor{orange}{\vv{n}}} {|\textcolor{red}{\vv{u}}| \cdot |\textcolor{orange}{\vv{n}}|}$
+            \item Geraden: $\cos(\alpha) = \dfrac{\textcolor{red}{\vv{u_1}} \cdot \textcolor{red}{\vv{u_2}}} {|\textcolor{red}{\vv{u_1}}| \cdot |\textcolor{red}{\vv{u_2}}|}$
+            \item Ebenen: $\cos(\alpha) = \dfrac{\textcolor{orange}{\vv{n_1}} \cdot \textcolor{orange}{\vv{n_2}}} {|\textcolor{orange}{\vv{n_1}}| \cdot |\textcolor{orange}{\vv{n_2}}|}$
+            \item Gerade / Ebene: $\sin(\alpha) = \dfrac{\textcolor{red}{\vv{u}} \cdot \textcolor{orange}{\vv{n}}} {|\textcolor{red}{\vv{u}}| \cdot |\textcolor{orange}{\vv{n}}|}$
         \end{enumerate}
         \begin{center}
             \definecolor{qqwuqq}{rgb}{0,0.4,0}
@@ -1287,80 +1271,80 @@
         \begin{Definition}[Hess'sche Normalenform]
             Die Hess'sche Normalenform ist eine besondere Normalenform einer Ebene, dadurch besonders, dass der Normalenvektor
             normiert ist. Sie lässt sich wie folgt ableiten:
-            $E_h: \dfrac{\textcolor{red}{\vv{n}} \odot [\vv{x} - \textcolor{blue}{\vv{q}}]}{|\textcolor{red}{\vv{n}}|} = 0$
+            $E_h: \dfrac{\textcolor{red}{\vv{n}} \cdot [\vv{x} - \textcolor{blue}{\vv{q}}]}{|\textcolor{red}{\vv{n}}|} = 0$
         \end{Definition}
 
         \begin{center}
             \definecolor{gree}{rgb}{0,0.4,0}
             \definecolor{blu}{rgb}{0,0,0.4}
             \begin{tikzpicture}[>=triangle 45]
-                \draw[->,linewidth=0.8pt,color=red] (-2,0,2) -- (-2,-2.5,2);
-                \draw[linewidth=0.1pt,color=red,fill=red,fill opacity=0.2] (-4,0,-4) -- (-4,0,4) -- (4,0,4) -- (4,0,-4) -- cycle;
+                \draw[->,line width=0.8pt,color=red] (-2,0,2) -- (-2,-2.5,2);
+                \draw[line width=0.1pt,color=red,fill=red,fill opacity=0.2] (-4,0,-4) -- (-4,0,4) -- (4,0,4) -- (4,0,-4) -- cycle;
 
-                \draw[linewidth=0.1pt,color=blu,fill=blu,fill opacity=0.2] (-2,0,2) -- (-1,0.65,2) arc (20:85:1.15) -- cycle;
-                \draw[linewidth=0.1pt,color=blu,fill=blu,fill opacity=0.2] (2,2,-2) -- (1,1.35,-2) arc (205:268:1.15) -- cycle;
+                \draw[line width=0.1pt,color=blu,fill=blu,fill opacity=0.2] (-2,0,2) -- (-1,0.65,2) arc (20:85:1.15) -- cycle;
+                \draw[line width=0.1pt,color=blu,fill=blu,fill opacity=0.2] (2,2,-2) -- (1,1.35,-2) arc (205:268:1.15) -- cycle;
 
-                \draw[linewidth=0.8pt,color=gree] (2,0,-2) -- (2,2,-2);
-                \draw[->,linewidth=0.8pt,color=black] (-2,0,2) -- (2,2,-2);
-                \draw[->,linewidth=0.8pt,color=red] (-2,0,2) -- (-2,2.5,2);
-                \draw[linewidth=0.8pt,color=black,dashed] (-2,0,2) -- (2,0,-2);
+                \draw[line width=0.8pt,color=gree] (2,0,-2) -- (2,2,-2);
+                \draw[->,line width=0.8pt,color=black] (-2,0,2) -- (2,2,-2);
+                \draw[->,line width=0.8pt,color=red] (-2,0,2) -- (-2,2.5,2);
+                \draw[line width=0.8pt,color=black,dashed] (-2,0,2) -- (2,0,-2);
 
-                \draw[linewidth=0.8pt,color=gree] (2,0,-2) -- (2,-2,-2);
-                \draw[->,linewidth=0.8pt,color=black] (-2,0,2) -- (2,-2,-2);
+                \draw[line width=0.8pt,color=gree] (2,0,-2) -- (2,-2,-2);
+                \draw[->,line width=0.8pt,color=black] (-2,0,2) -- (2,-2,-2);
 
-                \draw[linewidth=1pt] (-2,0.5,2) arc (90:180:0.5);
-                \draw[linewidth=1pt] (2,0.5,-2) arc (90:180:0.5);
-                \draw[linewidth=1pt] (-2.2,0.2,2) circle (0.5pt);
-                \draw[linewidth=1pt] (1.8,0.2,-2) circle (0.5pt);
+                \draw[line width=1pt] (-2,0.5,2) arc (90:180:0.5);
+                \draw[line width=1pt] (2,0.5,-2) arc (90:180:0.5);
+                \draw[line width=1pt] (-2.2,0.2,2) circle (0.5pt);
+                \draw[line width=1pt] (1.8,0.2,-2) circle (0.5pt);
 
-                \draw[linewidth=0.8pt,color=black,fill=black,fill opacity=0.4] (2,0,-2) circle (2pt);
-                \draw[linewidth=0.8pt,color=black,fill=black,fill opacity=0.4] (2,2,-2) circle (2pt);
-                \draw[linewidth=0.8pt,color=black,fill=black,fill opacity=0.4] (-2,0,2) circle (2pt);
+                \draw[line width=0.8pt,color=black,fill=black,fill opacity=0.4] (2,0,-2) circle (2pt);
+                \draw[line width=0.8pt,color=black,fill=black,fill opacity=0.4] (2,2,-2) circle (2pt);
+                \draw[line width=0.8pt,color=black,fill=black,fill opacity=0.4] (-2,0,2) circle (2pt);
 
-                \draw[linewidth=0.8pt,color=black,fill=black,fill opacity=0.4] (2,-2,-2) circle (2pt);
+                \draw[line width=0.8pt,color=black,fill=black,fill opacity=0.4] (2,-2,-2) circle (2pt);
 
-                \draw[linewidth=0.8pt,color=blue] (-2.1,0.1,2.7) node {$Q$};
-                \draw[linewidth=0.8pt,color=red] (-2.25,1.25,2) node {$\vv{n}$};
-                \draw[linewidth=0.8pt,color=red] (-2.35,-1.25,2) node {$-\vv{n}$};
-                \draw[linewidth=0.8pt,color=gree] (2.2,1,-2) node {$d$};
-                \draw[linewidth=0.8pt,color=gree] (2.2,-1,-2) node {$d$};
-                \draw[linewidth=0.8pt,color=red] (2.6,0.2,-1.2) node {$F$};
-                \draw[linewidth=0.8pt,color=red] (2.3,2.15,-2) node {$P$};
-                \draw[linewidth=0.8pt,color=red] (2.3,-2.15,-2) node {$P$};
-                \draw[linewidth=0.8pt,color=red] (3.7,0,-4.5) node {$E$};
-                \draw[linewidth=0.8pt,color=blu] (-1.6,0.8,2) node {$\alpha$};
-                \draw[linewidth=0.8pt,color=blu] (1.6,1.25,-2) node {$\alpha$};
+                \draw[line width=0.8pt,color=blue] (-2.1,0.1,2.7) node {$Q$};
+                \draw[line width=0.8pt,color=red] (-2.25,1.25,2) node {$\vv{n}$};
+                \draw[line width=0.8pt,color=red] (-2.35,-1.25,2) node {$-\vv{n}$};
+                \draw[line width=0.8pt,color=gree] (2.2,1,-2) node {$d$};
+                \draw[line width=0.8pt,color=gree] (2.2,-1,-2) node {$d$};
+                \draw[line width=0.8pt,color=red] (2.6,0.2,-1.2) node {$F$};
+                \draw[line width=0.8pt,color=red] (2.3,2.15,-2) node {$P$};
+                \draw[line width=0.8pt,color=red] (2.3,-2.15,-2) node {$P$};
+                \draw[line width=0.8pt,color=red] (3.7,0,-4.5) node {$E$};
+                \draw[line width=0.8pt,color=blu] (-1.6,0.8,2) node {$\alpha$};
+                \draw[line width=0.8pt,color=blu] (1.6,1.25,-2) node {$\alpha$};
             \end{tikzpicture}
         \end{center}
 
         \definecolor{gree}{rgb}{0,0.4,0}
         Anhand dieser Graphik lässt sich die Formel zur Berechnung des Abstands eines Punktes zu einer Ebene ablesen:
-        $\textcolor{gree}{d} = \dfrac{|\textcolor{red}{\vv{n}} \odot (\vv{p} - \textcolor{blue}{\vv{q}})|}{|\textcolor{red}{\vv{n}}|}$
+        $\textcolor{gree}{d} = \dfrac{|\textcolor{red}{\vv{n}} \cdot (\vv{p} - \textcolor{blue}{\vv{q}})|}{|\textcolor{red}{\vv{n}}|}$
 
         \begin{Beweis}
             \definecolor{gree}{rgb}{0,0.4,0}
             \underline{$\vv{FP} = r \cdot \textcolor{red}{\vv{n}} ; r \in \R^{+}$}:
-            \\
+            
             Nach Theoremen der Trigonometrie und der Definition des Skalarprodukts gilt:
             \begin{align*}
                 \qquad \qquad cos(\alpha) &= \dfrac{\textcolor{green}{d}}{|\vv{\textcolor{blue}{Q}P}|} \\
-                              cos(\alpha) &= \dfrac{\textcolor{red}{\vv{n}} \odot \vv{\textcolor{blue}{Q}P}}{|\textcolor{red}{\vv{n}}| \cdot |\vv{\textcolor{blue}{Q}P}|} \\
+                              cos(\alpha) &= \dfrac{\textcolor{red}{\vv{n}} \cdot \vv{\textcolor{blue}{Q}P}}{|\textcolor{red}{\vv{n}}| \cdot |\vv{\textcolor{blue}{Q}P}|} \\
             \end{align*}
             Daraus folgt:
             \begin{align*}
-                \qquad \qquad \dfrac{\textcolor{green}{d}}{|\vv{\textcolor{blue}{Q}P}|} &= \dfrac{\textcolor{red}{\vv{n}} \odot \vv{\textcolor{blue}{Q}P}}{|\textcolor{red}{\vv{n}}| \cdot |\vv{\textcolor{blue}{Q}P}|} \\
-                                                                                     d &= \dfrac{\textcolor{red}{\vv{n}} \odot \vv{\textcolor{blue}{Q}P}}{|\textcolor{red}{\vv{n}}|} \\
-                                                                                     d &= \dfrac{\textcolor{red}{\vv{n}} \odot (\vv{p} - \vv{\textcolor{blue}{q}})}{|\textcolor{red}{\vv{n}}|} \\
+                \qquad \qquad \dfrac{\textcolor{green}{d}}{|\vv{\textcolor{blue}{Q}P}|} &= \dfrac{\textcolor{red}{\vv{n}} \cdot \vv{\textcolor{blue}{Q}P}}{|\textcolor{red}{\vv{n}}| \cdot |\vv{\textcolor{blue}{Q}P}|} \\
+                                                                                     d &= \dfrac{\textcolor{red}{\vv{n}} \cdot \vv{\textcolor{blue}{Q}P}}{|\textcolor{red}{\vv{n}}|} \\
+                                                                                     d &= \dfrac{\textcolor{red}{\vv{n}} \cdot (\vv{p} - \vv{\textcolor{blue}{q}})}{|\textcolor{red}{\vv{n}}|} \\
             \end{align*}
-            \\
+            
             \underline{$\vv{FP} = r \cdot \textcolor{red}{\vv{n}} ; r \in \R^{-}$}:
             \begin{align*}
-                \qquad \qquad \dfrac{\textcolor{green}{d}}{|\vv{\textcolor{blue}{Q}P}|} &= \dfrac{-\textcolor{red}{\vv{n}} \odot \vv{\textcolor{blue}{Q}P}}{|-\textcolor{red}{\vv{n}}| \cdot |\vv{\textcolor{blue}{Q}P}|} \\
-                                                                                     d &= -\dfrac{\textcolor{red}{\vv{n}} \odot \vv{\textcolor{blue}{Q}P}}{|\textcolor{red}{\vv{n}}|} \\
-                                                                                     d &= -\dfrac{\textcolor{red}{\vv{n}} \odot (\vv{p} - \vv{\textcolor{blue}{q}})}{|\textcolor{red}{\vv{n}}|} \\
+                \qquad \qquad \dfrac{\textcolor{green}{d}}{|\vv{\textcolor{blue}{Q}P}|} &= \dfrac{-\textcolor{red}{\vv{n}} \cdot \vv{\textcolor{blue}{Q}P}}{|-\textcolor{red}{\vv{n}}| \cdot |\vv{\textcolor{blue}{Q}P}|} \\
+                                                                                     d &= -\dfrac{\textcolor{red}{\vv{n}} \cdot \vv{\textcolor{blue}{Q}P}}{|\textcolor{red}{\vv{n}}|} \\
+                                                                                     d &= -\dfrac{\textcolor{red}{\vv{n}} \cdot (\vv{p} - \vv{\textcolor{blue}{q}})}{|\textcolor{red}{\vv{n}}|} \\
             \end{align*}
             \\
-            Somit lautet die gesuchte Formel: $\textcolor{gree}{d} = \dfrac{|\textcolor{red}{\vv{n}} \odot (\vv{p} - \textcolor{blue}{\vv{q}})|}{|\textcolor{red}{\vv{n}}|}$
+            Somit lautet die gesuchte Formel: $\textcolor{gree}{d} = \dfrac{|\textcolor{red}{\vv{n}} \cdot (\vv{p} - \textcolor{blue}{\vv{q}})|}{|\textcolor{red}{\vv{n}}|}$
         \end{Beweis}
 
 
@@ -1391,7 +1375,7 @@
                 \draw[->,line width=0.8pt,color=purp] (2,2) -- (3.06,3.06);
                 \draw[line width=0.8pt,color=purp] (2.33,2.63) node {$r$};
                 \draw[line width=0.8pt,color=lightblue,fill=lightblue,fill opacity=0.3] (-1,-3) arc (0:360:2);
-                \draw[line width=0.8p] (-3,-3) circle (1pt);
+                \draw[line width=0.8pt] (-3,-3) circle (1pt);
                 \draw[line width=0.8pt,color=purp] (-2.8,-3.3) node {$M_2 (-3,-3)$};
                 \draw[->,line width=0.8pt,color=purp] (-3,-3) -- (-4.05,-1.30);
                 \draw[line width=0.8pt,color=purp] (-3.33,-2.05) node {$r$};
@@ -1466,11 +1450,11 @@
             Erneut liefert uns die Graphik eine generelle Formel:
             
             \begin{align*}
-                \qquad \qquad \qquad &\vv{MP} \odot \vv{PX} = 0 ; P \in M_K, X \in M_T \text{ mit $M_K$ und $M_T$ Kreis- und Tangentenmenge} \\
-                     \Leftrightarrow &(\vv{p} - \vv{m}) \odot (\vv{x} - \vv{p}) = 0 \quad | + (\vv{p} - \vv{m})^2 \\
-                     \Leftrightarrow &(\vv{p} - \vv{m}) \odot (\vv{x} - \vv{p}) + (\vv{p} - \vv{m})^2 = (\vv{p} - \vv{m})^2 \\
-                     \Leftrightarrow &(\vv{p} - \vv{m}) \odot ((\vv{x} \cancel{- \vv{p}}) + (\cancel{\vv{p}} - \vv{m})) = (\vv{p} - \vv{m})^2 \\
-                     \Leftrightarrow &(\vv{p} - \vv{m}) \odot (\vv{x} - \vv{m}) = r^2 \\
+                \qquad \qquad \qquad &\vv{MP} \cdot \vv{PX} = 0 ; P \in M_K, X \in M_T \text{ mit $M_K$ und $M_T$ Kreis- und Tangentenmenge} \\
+                     \Leftrightarrow &(\vv{p} - \vv{m}) \cdot (\vv{x} - \vv{p}) = 0 \quad | + (\vv{p} - \vv{m})^2 \\
+                     \Leftrightarrow &(\vv{p} - \vv{m}) \cdot (\vv{x} - \vv{p}) + (\vv{p} - \vv{m})^2 = (\vv{p} - \vv{m})^2 \\
+                     \Leftrightarrow &(\vv{p} - \vv{m}) \cdot ((\vv{x} \cancel{- \vv{p}}) + (\cancel{\vv{p}} - \vv{m})) = (\vv{p} - \vv{m})^2 \\
+                     \Leftrightarrow &(\vv{p} - \vv{m}) \cdot (\vv{x} - \vv{m}) = r^2 \\
             \end{align*}
 
         \subsubsection{Polare an einen Kreis}
@@ -1507,7 +1491,7 @@
                     \draw[line width=0.8pt,color=purp] (5.2,0.4) node {$P$};
                     \draw[line width=0.8pt,fill=black] (-1.85,2.75) circle (2pt);
                     \draw[line width=0.8pt,color=purp] (-1.5,2.9) node {$B$};
-                    \draw[line width=0.8pt,color=purple,fill color=purple] (5,0) circle (2pt);
+                    \draw[line width=0.8pt,color=purp,fill=purp] (5,0) circle (2pt);
                     \draw[line width=0.8pt,color=purp] (-2.225,1.175) node {$r$};
                     \draw[line width=0.8pt] (-0.625,1.175) node {$r_T$};
                     \draw[line width=0.8pt,color=blue] (-1.65,-4.5) node {$p$};
@@ -1524,9 +1508,9 @@
             Wenn auch ein wenig um mehr Ecken gedacht als üblich:
             
             \begin{align*}
-                \qquad \qquad \qquad &\left|\begin{array}{c} \vv{MB} \odot \vv{PB} = 0 \\ \vv{MP} \odot \vv{BX} = 0 \end{array}\right| \\
-                     \Leftrightarrow &\left|\begin{array}{c} (\vv{b} - \vv{m}) \odot (\vv{b} - \vv{p}) = 0 \\ (\vv{p} - \vv{m}) \odot (\vv{x} - \vv{b}) = 0 \end{array}\right| \qquad \text{Nach der bereits aufgestellten Formel für Tangenten} \\
-                     \Leftrightarrow &\left|\begin{array}{c} (\vv{b} - \vv{m}) \odot (\vv{p} - \vv{m}) = r^2 \\ (\vv{p} - \vv{m}) \odot (\vv{x} - \vv{b}) = 0 \end{array}\right| \qquad (1) + (2) \\
+                \qquad \qquad \qquad &\left|\begin{array}{c} \vv{MB} \cdot \vv{PB} = 0 \\ \vv{MP} \cdot \vv{BX} = 0 \end{array}\right| \\
+                     \Leftrightarrow &\left|\begin{array}{c} (\vv{b} - \vv{m}) \cdot (\vv{b} - \vv{p}) = 0 \\ (\vv{p} - \vv{m}) \cdot (\vv{x} - \vv{b}) = 0 \end{array}\right| \qquad \text{Nach der bereits aufgestellten Formel für Tangenten} \\
+                     \Leftrightarrow &\left|\begin{array}{c} (\vv{b} - \vv{m}) \cdot (\vv{p} - \vv{m}) = r^2 \\ (\vv{p} - \vv{m}) \cdot (\vv{x} - \vv{b}) = 0 \end{array}\right| \qquad (1) + (2) \\
                      \Leftrightarrow &(\vv{p} - \vv{m})((\vv{x} - \cancel{\vv{b}}) + (\cancel{\vv{b}} - \vv{m})) = r^2 \\
                      \Leftrightarrow &(\vv{p} - \vv{m})(\vv{x} - \vv{m}) = r^2 \\
             \end{align*}

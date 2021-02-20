@@ -6,7 +6,7 @@
 
 \section{Einführung}
 
-	\paragraph{} Die Ursache für die Einführung der komplexen Zahlen ist vergleichbar mit der jeglicher anderer Zahlenmengen (abgesehen
+	Die Ursache für die Einführung der komplexen Zahlen ist vergleichbar mit der jeglicher anderer Zahlenmengen (abgesehen
 	von $\N$). Alles basiert auf einer Rechnung oder einer Menge an Rechnungen, welche für die vorhandenen Zahlenmengen \textbf{keine Lösung besitzen} oder aber diese Zahlenmengen einem nicht erlauben eine Lösung zu finden. Ein Beispiel hierfür ist die Einführung der
 	negativen Zahlen. Gleichungen der Form $2 + x = 1$ waren eine Zeit lang nicht lösbar. Ebenso galt einmal, dass $x^2 - 2 = 0$ keine
 	Lösung besitzt, da hierfür die reellen Zahlen benötigt werden. Analog dazu wird die Erweiterung auf die komplexen Zahlen begründet.
@@ -17,23 +17,22 @@
 			\Leftrightarrow x &= \sqrt{-1} \quad \text{\lightning}
 	\end{align*}
 
-	\paragraph{} Um dieser und anderen Gleichungen eine Lösung zuzuteilen ist es nicht nur notwendig die Zahlenmenge zu erweitern, sondern
+	Um dieser und anderen Gleichungen eine Lösung zuzuteilen ist es nicht nur notwendig die Zahlenmenge zu erweitern, sondern
 	auch, neue Symbole und Zeichen einzuführen um die neuen Zahlen zu kennzeichnen. Für die $\Z$ ist es das Symbol \dq-\dq, für $\Q$
 	\dq,\dq und $\dfrac{a}{b}$, für $\R$ $\sqrt{a}$ und die Zeichen $\pi$ und $e$ zum Beispiel (auch wenn beide sich anders darstellen lassen). (Ein) gewisse(r) Mathematiker (Leibniz glaube ich) hat entschieden, dass das einzige benötigte Zeichen $i$ sein sollte, da er sie imaginäre Zahl nannte (Für den Fall, dass ich hier ein bisschen was durcheinander bringe, sind Direktverbesserungen kommentarlos erlaubt und erwünscht).
 
 	\begin{Definition}[Imaginäre Einheit]
 		Die Ikone $i$ der komplexen Zahl trägt den Namen \textbf{imaginäre Einheit} und wird folglich definiert:
-						$$i \in \C : i^2 = -1; \C \definedBy \R \cup \left\{i\right\}$$
-
+		$$i \in \C : i^2 = -1; \C \:= \R \cup \left \{ i \right \}$$
 	\end{Definition}
 
 	\subsubsection{Algebraische Form}
 
 	\begin{Definition}[Algebraische Formel]
 		Komplexe Zahlen werden im Allgemeinen mit dem Buchstaben $z$ dargestellt oder aber auch $z_I$, wobei $I$ ein Punkt der Gauß'schen Zahlenebene ist (Weiteres hierzu folgt). Die sogenannte \textbf{algebraische / arithmetische Form} einer solchen Zahl wird wie folgt definiert:
-		\\
+		
 		\begin{tikzpicture}
-			\draw (0,0) node {" "};
+			%\draw (0,0) node {" "};
 			\draw (7.9, 0) node {$z = x + y \cdot i; x,y \in \R; i \in \C$};
 			\draw[line width=0.8pt][decorate,decoration={brace,amplitude=2pt},rotate around={180:(7.3,-0.25)}] (7.3,-0.25) -- (7.6,-0.25);
 			\draw[line width=0.8pt][decorate,decoration={brace,amplitude=2pt},rotate around={180:(6.7,-0.25)}] (6.7,-0.25) -- (7,-0.25);
@@ -53,16 +52,16 @@
 
 \section{Der Körper der komplexen Zahlen}
 
-	\paragraph{} Da wir nun wissen (oder halt auch nicht), weshalb wir die komplexen Zahlen benötigen, gilt es nun die verschiedenen Verknüpfungen, mit welchen wir zwei komplexe Zahlen verbinden, zu definieren. Wie alle anderen bekannten Mengen (außer $\N$), ist $\C$ teil eines \textbf{Körpers} welcher die zwei Verknüpfungen, denen wir allgemein die Namen \textbf{Addition} und \textbf{Multiplikation} geben. Das 3-Tupel (oder auch Tripel) ($\C$, +, *) ist somit der Körper, mit welchem wir arbeiten werden (jemals gefragt warum keine weiteren Verknüpfungen eingeführt wurden?). Jedoch muss auch erstmal bewiesen werden, dass dieses Tripel ein Körper ist:
+	Da wir nun wissen (oder halt auch nicht), weshalb wir die komplexen Zahlen benötigen, gilt es nun die verschiedenen Verknüpfungen, mit welchen wir zwei komplexe Zahlen verbinden, zu definieren. Wie alle anderen bekannten Mengen (außer $\N$), ist $\C$ teil eines \textbf{Körpers} welcher die zwei Verknüpfungen, denen wir allgemein die Namen \textbf{Addition} und \textbf{Multiplikation} geben. Das 3-Tupel (oder auch Tripel) ($\C$, +, *) ist somit der Körper, mit welchem wir arbeiten werden (jemals gefragt warum keine weiteren Verknüpfungen eingeführt wurden?). Jedoch muss auch erstmal bewiesen werden, dass dieses Tripel ein Körper ist:
 
 	\begin{Beweis}
 		\underline{\textbf{Die Addition}}:
 
-		\paragraph{} Für die Addition gilt bekanntlich zu beweisen, dass ($\C$, $\oplus$) eine abelsche oder auch kommutative Gruppe ist:
+		Für die Addition gilt bekanntlich zu beweisen, dass ($\C$, $\oplus$) eine abelsche oder auch kommutative Gruppe ist:
 
-		\begin{enumerate}[1)]
+		\begin{enumerate}
 			\item \begin{align*}
-						\forall z_1, z_2 \in \C: z_1 \oplus z_2 &\definedBy (x_1 + y_1i) \oplus (x_2 + y_2i) \\
+						\forall z_1, z_2 \in \C: z_1 \oplus z_2 &\:= (x_1 + y_1i) \oplus (x_2 + y_2i) \\
 														   		&= ((x_1 + x_2) + (y_1 + y_2)i) \\
 														   		&\in \C \\
 						\Rightarrow \forall z_1, z_2 \in \C: \oplus : \C \times \C \rightarrow \C & \quad \text{(Abgeschlossenheit)}
@@ -103,11 +102,11 @@
 		\newpage
 		\underline{\textbf{Die Multiplikation}}:
 
-		\paragraph{} Für die Multiplikation gilt ebenfalls zu beweisen, dass ($\C$, $\otimes$) eine kommutative Gruppe ist:
+		Für die Multiplikation gilt ebenfalls zu beweisen, dass ($\C$, $\otimes$) eine kommutative Gruppe ist:
 
-		\begin{enumerate}[1)]
+		\begin{enumerate}
 			\item \begin{align*}
-						\forall z_1, z_2 \in \C: z_1 \otimes z_2 &\definedBy (x_1 + y_1i) \otimes (x_2 + y_2i) \\
+						\forall z_1, z_2 \in \C: z_1 \otimes z_2 &\:= (x_1 + y_1i) \otimes (x_2 + y_2i) \\
 														   		 &= ((x_1x_2 - y_1y_2) + (x_1y_2 + x_2y_1)i) \\
 														   		 &\in \C \\
 						\Rightarrow \forall z_1, z_2 \in \C: \otimes : \C \times \C \rightarrow \C & \quad \text{(Abgeschlossenheit)}
@@ -148,7 +147,7 @@
 		\end{enumerate}
 		\newpage
 		\underline{\textbf{Auch Verknüpfungen sind Gesellschaftswesen, gemeinsam glänzen sie}}:
-		\paragraph{} Zu guter Letzt muss das Distributivgesetz gelten: (Bidde schön Frau Rämie mol)
+		Zu guter Letzt muss das Distributivgesetz gelten: (Bidde schön Frau Rämie mol)
 			\begin{align*}
 				(z_1 \oplus z_2) \otimes z_3 &= ((x_1 + y_1i) \oplus (x_2 + y_2i)) \otimes (x_3 + y_3i) \\
 											 &= ((x_1 + x_2) +  (y_1 + y_2)i) \otimes (x_3 + y_3i) \\
@@ -167,7 +166,7 @@
 
 		\subsubsection{Hinführung}
 
-		\paragraph{} Der Körper der komplexen Zahlen wurde nun definiert, wohingegen der Platz dieser auf unserem allbekannten Zahlensystem schleierhaft bleibt.
+		Der Körper der komplexen Zahlen wurde nun definiert, wohingegen der Platz dieser auf unserem allbekannten Zahlensystem schleierhaft bleibt.
 		Um einen Ansatz für eine Integration zu finden, bietet sich an zu beobachten, wie sich komplexe Zahlen auf der \textbf{reellen Zahlengerade} (welche eine Veranschaulichung des euklidischen Vektorraums $\R^1$ ist) verhalten.
 		\\
 		\begin{Definition}
@@ -183,7 +182,7 @@
 			\end{tikzpicture}
 		\end{center}
 
-		\paragraph{} Addition und Multiplikation mit einem positiven Faktor im $\R^1$ sind nicht von Interesse, wohingegen die Multiplikation mit einem negativen Faktor uns reichlich mehr mitteilt:
+		Addition und Multiplikation mit einem positiven Faktor im $\R^1$ sind nicht von Interesse, wohingegen die Multiplikation mit einem negativen Faktor uns reichlich mehr mitteilt:
 
 		\begin{center}
 			\begin{tikzpicture}[>=triangle 45]
@@ -200,12 +199,12 @@
 				\draw[line width=2pt,color=white] (1.84,1.54) arc (40:55:2.4);
 				\draw[->,color=orange] (0.3,0) arc (180:0:1.5);
 				\draw[line width=0.8pt,color=orange] (1.8,1.8) node {$\cdot(2) = $ Skalierung mit Faktor $2$};
-				\draw[line width=0.8pt,color=red] (0,2.7) node {$\cdot (-1) = 180 \degree$ Drehung};
+				\draw[line width=0.8pt,color=red] (0,2.7) node {$\cdot (-1) = 180°$ Drehung};
 			\end{tikzpicture}
 		\end{center}
 
-		\paragraph{} Da gilt, dass: $i^2 = -1$ ist die Multiplikation einer reellen Zahl mit $i^2$ äquivalent zu einer $180$ - Grad Drehung. Daraus lässt sich schließen, dass die Multiplikation mit $i$ einer \textbf{$90$ - Grad Drehung} entspricht, da: $a \cdot i^2 = a \cdot i \cdot i; a\in\R$ und man davon ausgeht, dass $\cdot(i)$ bei jeder Instanz dieselbe Transformation anwendet. Somit entsteht eine wunderschöne Ebene, in der alle Zahlen zusammen spielen und sich amüsieren können:
-		\\
+		Da gilt, dass: $i^2 = -1$ ist die Multiplikation einer reellen Zahl mit $i^2$ äquivalent zu einer $180$ - Grad Drehung. Daraus lässt sich schließen, dass die Multiplikation mit $i$ einer \textbf{$90$ - Grad Drehung} entspricht, da: $a \cdot i^2 = a \cdot i \cdot i; a\in\R$ und man davon ausgeht, dass $\cdot(i)$ bei jeder Instanz dieselbe Transformation anwendet. Somit entsteht eine wunderschöne Ebene, in der alle Zahlen zusammen spielen und sich amüsieren können:
+		
 		\begin{center}
 			\begin{tikzpicture}[>=triangle 45]
 				\draw[->,line width=0.8pt] (-5.5,0) -- (5.7,0) node[above] {$Re(z)$};
@@ -267,16 +266,16 @@
 
 		\begin{Definition}[Betrag einer komplexen Zahl]
 			Der \textbf{Betrag} einer komplexen Zahl ist gleichbedeutend mit dem \textbf{Abstand der Zahl zum Origo} oder der Länge des Zeigers. Pythagoras liefert uns eine Formel:
-													$$|z| \defeq \sqrt{x^2 + y^2} ; z = x + yi$$
+			$$|z| := \sqrt{x^2 + y^2} ; z = x + yi$$
 		\end{Definition}
 
 		\begin{Definition}[Argument einer komplexen Zahl]
 			Das \textbf{Argument} einer komplexen Zahl ist gleichbedeutend mit dem \textbf{Winkel der Zahl}, welcher der Zeiger mit der \glqq rechten Hälfte\grqq der reellen Achse einschließt (im mathematischen Sinn und modulo $2\pi$). Pythagoras liefert uns weitere Formeln:
 
-			\begin{enumerate}[1)]
-				\item 1. und 3. Quadrant: $$arg(z) \definedBy \tan^{-1}\left(\dfrac{y}{x}\right) + \dfrac{\pi}{2} \cdot (\text{Quadrant} - 1) ; z = x + yi$$
+			\begin{enumerate}
+				\item 1. und 3. Quadrant: $$arg(z) \:= \tan^{-1}\left(\dfrac{y}{x}\right) + \dfrac{\pi}{2} \cdot (\text{Quadrant} - 1) ; z = x + yi$$
 				\item 2. und 4. Quadrant: $$arg(z) = \tan^{-1}\left(\dfrac{x}{y}\right) + \dfrac{\pi}{2} \cdot (\text{Quadrant} - 1) ; z = x + yi$$
-			\end{enumerate}}
+			\end{enumerate}
 
 		\end{Definition}
 
@@ -299,17 +298,16 @@
 				\text{ }
 			\end{minipage}
 			\begin{minipage}{0.71\textwidth}
-				\Rightarrow		\begin{vmatrix}
-							  	  	\dfrac{x}{|z|} &= \cos(arg(z)) 	   \\
-							  	  	\dfrac{y}{|z|} &= \sin(arg(z)) 	   \\
-							  	  			   |z| &= \sqrt{x^2 + y^2} \\
-							  	\end{vmatrix}
-				\\\\
-				\Leftrightarrow \begin{vmatrix}
-									  x &= \cos(arg(z)) \cdot |z| \\
-									  y &= \sin(arg(z)) \cdot |z| \\
-						   			|z| &= \sqrt{x^2 + y^2} 	  \\
-					  			\end{vmatrix}
+				$$\Rightarrow	 \begin{vmatrix}
+					\dfrac{x}{|z|} &= \cos(arg(z)) 	   \\
+					\dfrac{y}{|z|} &= \sin(arg(z)) 	   \\
+								|z| &= \sqrt{x^2 + y^2} \\
+				\end{vmatrix}$$
+				$$\Leftrightarrow \begin{vmatrix}
+						x &= \cos(arg(z)) \cdot |z| \\
+						y &= \sin(arg(z)) \cdot |z| \\
+					|z| &= \sqrt{x^2 + y^2} 	  \\
+				\end{vmatrix}$$
 			\end{minipage}
 			\\\\
 			\abovedisplayskip=-\baselineskip
@@ -326,8 +324,8 @@
 
 	\subsection{Rechenoperationen in der Gauß'schen Zahlenebene}
 
-		\paragraph{} Die bereits angesprochenen basischen Rechenoperationen lassen sich in der Gauß'schen Zahlenebene als Transformation darstellen. Weshalb dies interessant ist, wird im Verlauf dieses Abschniits hoffentlich noch deutlich.
-		\paragraph{} Die Addition ist die einfachste Transformation, weil sie equivalent zur Linearkombination bei Vektoren ist, da gilt: $$(z_1 + z_2) = ((x_1 + x_2) + (y_1 + y_2)i)$$ Bildlich bedeutet das:
+		Die bereits angesprochenen basischen Rechenoperationen lassen sich in der Gauß'schen Zahlenebene als Transformation darstellen. Weshalb dies interessant ist, wird im Verlauf dieses Abschniits hoffentlich noch deutlich.
+		Die Addition ist die einfachste Transformation, weil sie equivalent zur Linearkombination bei Vektoren ist, da gilt: $$(z_1 + z_2) = ((x_1 + x_2) + (y_1 + y_2)i)$$ Bildlich bedeutet das:
 
 		\begin{center}
 			\begin{tikzpicture}[>=triangle 45]
@@ -361,7 +359,8 @@
 			\end{tikzpicture}
 		\end{center}
 
-		\paragraph{} Im Gegensatz dazu ist die Multiplikation weniger intuitiv. Aus logistischen Gründen wird sie trotz allem in diesem Abschnitt besprochen. Bildlich stellt sie eine Drehstreckung dar (auch dies wird gegen Ende des Kapitels genauer beschrieben), da gilt: $$(z_1 \cdot z_2) = r_1_{\alpha} \cdot r_2_{\beta} = (r_1 \cdot r_2)_{\alpha + \beta}$$
+		Im Gegensatz dazu ist die Multiplikation weniger intuitiv. Aus logistischen Gründen wird sie trotz allem in diesem Abschnitt besprochen. Bildlich stellt sie eine Drehstreckung dar (auch dies wird gegen Ende des Kapitels genauer beschrieben), da gilt:
+		$$(z_1 \cdot z_2) = r_{1_{\alpha}} \cdot r_{2_{\beta}} = (r_1 \cdot r_2)_{\alpha + \beta}$$
 
 		\begin{center}
 			\begin{tikzpicture}[>=triangle 45]

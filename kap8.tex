@@ -110,12 +110,12 @@ Dies erfüllen $\Q$, $\R$, $\R^{n}$ (Vektorräume), $\C$, Matritzen, prime Restk
 	
 	Sei $a,b,c,t\in\Z$ und $t\neq0$:
 	\begin{enumerate}
-		\item $a\mid b$ \quad und \quad&a\mid c& \quad dann \quad $a \mid b\pm c $
-		\item $a\mid b$ \quad und \quad$b \mid c$ \quad dann \quad $a \mid c$
-		\item $a\mid b$ \quad dann \quad $a \mid bc$
-		\item $at\mid bt\quad\Leftrightarrow\quad a \mid b$
-		\item $a\mid b$\quad dann \quad $b=0$ \quad oder\quad $|a| \leq |b|$
-		\item $a\mid b$\quad und\quad $b\mid a$ \quad dann\quad $a=\pm b$
+		\item $a \mid b$ $\quad$ und $\quad$ $a \mid c$ $\quad$ dann $\quad$ $a \mid b \pm c$
+		\item $a \mid b$ $\quad$ und $\quad$ $b \mid c$ $\quad$ dann $\quad$ $a \mid c$
+		\item $a \mid b$ $\quad$ dann $\quad$ $a \mid bc$
+		\item $at \mid bt$ $\quad$ $\Leftrightarrow$ $\quad$ $a \mid b$
+		\item $a \mid b$ $\quad$ dann $\quad$ $b=0$ $\quad$ oder $\quad$ $|a| \leq |b|$
+		\item $a \mid b$ $\quad$ und $\quad$ $b\mid a$ $\quad$ dann $\quad$ $a=\pm b$
 	\end{enumerate}
 \end{Theorem}
 
@@ -166,10 +166,10 @@ Hier die Liste der Primzahlen bis 100:
 	Dann ist $$N=p_{1}\cdot p_{2}\cdot ... \cdot p_{r-1} \cdot p_{r} +1 = \left (\prod_{r=1}^{r}P_{r}\right ) + 1 $$ eine ganze Zahl $>1$ und hat daher mindestens einen Primteiler $p_{l} \in\mathbb{P}$ und $l\in\{1,2,...,r-1,r\}$
 	Dann hat man:
 
-	$\Rightarrow \left \{ \begin{array}{rccl}
-		p_{l} & \mid  & p_{1}\cdot p_{2}\cdot...\cdot p_{r-1}\cdot p_{r}
-		p_{l} & \mid  & p_{1}\cdot p_{2}\cdot...\cdot p_{r-1}\cdot p_{r} +1
-	\end{array} \right .$.
+	$\Rightarrow \left\{ \begin{array}{rcl}
+		p_{l} & \mid & p_{1} \cdot p_{2} \cdot...\cdot p_{r-1} \cdot p_{r} \\
+		p_{l} & \mid & p_{1} \cdot p_{2} \cdot...\cdot p_{r-1} \cdot p_{r} +1
+	\end{array} \right.$.
 
 	$\Leftrightarrow p_{l} \mid  \, p_{1}\cdot p_{2} \cdot...\cdot p_{r-1} \cdot p_{r} - \left (  p_{1}\cdot p_{2} \cdot...\cdot p_{r-1} \cdot p_{r} +1 \right )$
 	
@@ -254,7 +254,7 @@ Hier die Liste der Primzahlen bis 100:
 		\item $ [1] \mod 4 = \{ ... , -7, -3, 1, 5, 9, ... \} $
 		\item $ [2] \mod 4 = \{ ... , -6, -2, 2, 6, 10, ... \} $
 		\item $ [3] \mod 4 = \{ ... , -5, -1, 3, 7, 11, ... \} $
-		\item $ [4] \mod 4 = [0] \mod 4 = \{ ... , -8, -4, 0, 4, 8, 12, ... \} $\\
+		\item $ [4] \mod 4 = [0] \mod 4 = \{ ... , -8, -4, 0, 4, 8, 12, ... \} $
 	\end{itemize}
 \end{Beispiel}
 
@@ -291,7 +291,7 @@ Hier die Liste der Primzahlen bis 100:
 \end{Definition}
 
 \begin{Beispiel}
-	$\mathrm{Z\kern-.3em\raise-0.5ex\hbox{Z}}$ : $35^{228} + 84^{501} \equiv 0 \mod 17$
+	$\zz$ : $35^{228} + 84^{501} \equiv 0 \mod 17$
 
 	\begin{minipage}[b]{0.3\linewidth}
 		$\begin{array}{rccl}
@@ -326,13 +326,13 @@ Hier die Liste der Primzahlen bis 100:
 	$\begin{array}{rcl}
 		n | a \quad \land \quad n | b \, \Rightarrow \, n | q \cdot b & \Rightarrow & n | a - q\cdot b \\
 		& \Rightarrow & n | r \\
-	\end{array}
+	\end{array}$
 	
 	Alle Teiler $n$ haben die Eigeschaften: $n | a$, $n | b$ und $n | r$. $n$ ist also Teiler von $a$, $b$ und $r$.
 	
 	Umgekehrt gilt: wenn $n | b$ und $n | r$:
 	
-	$\Rightarrow \quad $n | q \cdot b + r$
+	$\Rightarrow \quad n | q \cdot b + r$
 
 	$\Rightarrow \quad $$n | a$
 \end{Beweis}
@@ -416,17 +416,18 @@ Der Euklidische Algorithmus ist eine effiziente Methode um den ggT (größter ge
 		\Rightarrow & k \cdot a & \not\equiv & k' \cdot a \mod p  &
 	\end{array}$
 	
-	Die Reste von beliebigen Zahlen $x \in M$ durch $p \in \mathbb{P}$ ergeben genau die Zahlen $y \in N$, da in beiden Mengen genau $(p-1)$ verschiedene Elemente sind und da gerade gezeigt wurde dass jedes Element aus $M$ bei der Division durch p einen unterschiedlichen Rest hat. Die Reihenfolge der zu $x \in M$ zugehörigen Reste $y \in N$  ist natürlich nicht klar (ganz normal bei Mengen). \\\\
+	Die Reste von beliebigen Zahlen $x \in M$ durch $p \in \mathbb{P}$ ergeben genau die Zahlen $y \in N$, da in beiden Mengen genau $(p-1)$ verschiedene Elemente sind und da gerade gezeigt wurde dass jedes Element aus $M$ bei der Division durch p einen unterschiedlichen Rest hat. Die Reihenfolge der zu $x \in M$ zugehörigen Reste $y \in N$  ist natürlich nicht klar (ganz normal bei Mengen).
+	s
 	Wir benennen um, damit es klarer wird:
 
-	$$\left.\begin{array}{rcl}
+	$$\left.\begin{array}{r c l}
 		a & \equiv & r_{1} \mod p\\
 		2a & \equiv & r_{2} \mod p \\
 		3a & \equiv & r_{3} \mod p \\
-		&& \vdots &
+		& & \vdots \\
 		(p - 2)a & \equiv & r_{p-2} \mod p \\
 		(p - 1)a & \equiv & r_{p-1} \mod p
-	\end{array} \right \}$$
+	\end{array} \right\}$$
 
 	$r_{1}, r_{2}, ..., r_{p-1}$ sind alle voneinander verschieden ($\widehat{=}$ paarweise verschieden) und sind genau alle Elemente aus der Menge $N$
 	
@@ -644,33 +645,33 @@ Die vollständige Induktion ist eine mathematische Beweismethode, nach der eine 
 Daher wird der Beweis in zwei Etappen durchgeführt; mit dem \textbf{Induktionsanfang} beweist man die Aussage für die kleinste Zahl, mit dem \textbf{Induktionsschritt} für die nächste Zahl, also logischerweise für alle darauffolgenden Zahlen.\\\\
 
 \begin{Beweis}[Gaußsche Summenformel]
-	\mathrm{Z\kern-.3em\raise-0.5ex\hbox{Z}} : $S(n) = \sum\limits_{i=1}^n i  = \dfrac{n(n+1)}{2}$
+	$\zz$ : $S(n) = \sum\limits_{i=1}^n i  = \dfrac{n(n+1)}{2}$
 
 	$\begin{array}{rl}
 		\textbf{Induktionsanfang}: & 1=\dfrac{1(1+1)}{2} = 1  \\\\
-		\textbf{Induktionsvorraussetzung}: & für ein beliebiges, aber festes k\in\N gilt: \sum\limits_{i=1}^k  = \dfrac{k(k+1)}{2}\\\\
-		\textbf{Induktionsbehauptung}: & man behauptet, dass \forall n \in \N gilt: \sum\limits_{i=1}^{n+1}  = \dfrac{(n+1)((n+1)+1)}{2}\\\\
+		\textbf{Induktionsvorraussetzung}: & \text{für ein beliebiges, aber festes } k \in \N \text{gilt: } \sum\limits_{i=1}^k  = \dfrac{k(k+1)}{2}\\\\
+		\textbf{Induktionsbehauptung}: & \text{man behauptet, dass } \forall n \in \N \text{gilt: } \sum\limits_{i=1}^{n+1}  = \dfrac{(n+1)((n+1)+1)}{2}\\\\
 		\textbf{Induktionsschluss}: &  \sum\limits_{i=1}^n + (n+1) = \dfrac{n(n+1)}{2} + \dfrac{2(n+1)}{2} = \dfrac{(n+1)((n+1)+1)}{2}\\\\
 	\end{array}$
 \end{Beweis}
 
 \begin{Beweis}[Summe ungerader Zahlen]
-	\mathrm{Z\kern-.3em\raise-0.5ex\hbox{Z}} $\forall n \in \N  :  \sum\limits_{k=1}^n (2k-1) = n^2$
+	$\zz$ $\forall n \in \N  :  \sum\limits_{k=1}^n (2k-1) = n^2$
 
 	$\begin{array}{rl}
 		\textbf{Induktionsanfang}: & \sum\limits_{k=1}^1 (2k-1) = 2\cdot 1 -1 = 1 = 1^2  \\\\
-		\textbf{Induktionsvorraussetzung}:&für ein beliebiges, aber festes i \in \N gilt:  \sum\limits_{k=1}^i (2k-1) = i^2 \\\\
-		\textbf{Induktionsbehauptung}: &man behauptet, dass \forall n \in \N :  \sum\limits_{k=1}^{n+1} (2k-1) = (n+1)^2 \\\\
+		\textbf{Induktionsvorraussetzung}: & \text{für ein beliebiges, aber festes } i \in \N \text{gilt: } \sum\limits_{k=1}^i (2k-1) = i^2 \\\\
+		\textbf{Induktionsbehauptung}: & \text{man behauptet, dass } \forall n \in \N :  \sum\limits_{k=1}^{n+1} (2k-1) = (n+1)^2 \\\\
 		\textbf{Induktionsschluss}: & \sum\limits_{k=1}^{n+1} (2k-1) = \sum\limits_{k=1}^{n} (2k-1) + 2(n+1)-1 = n^2 +2n+1 = (n+1)^2 
 	\end{array}$
 \end{Beweis}
 
 \begin{Beweis}[Bernoullische Ungleichung]
-	$\mathrm{Z\kern-.3em\raise-0.5ex\hbox{Z}}$ : $ \forall n \in \N \quad n>0 :  \qquad (1+x)^n \geq 1+nx  \qquad;  x\geq -1$
+	$\zz$ : $ \forall n \in \N \quad n>0 :  \qquad (1+x)^n \geq 1+nx  \qquad;  x\geq -1$
 
 	$\begin{array}{rl}
 		\textbf{Induktionsanfang}: & (1+x)^0 = 1 \geq 1 = 1+0x \\\\
-		\textbf{Induktionsvorraussetzung}: & Es gelte nun: (1+x)^n \geq 1+nx ; n\in \N_{0} \\\\
+		\textbf{Induktionsvorraussetzung}: & \text{Es gelte nun: } (1+x)^n \geq 1+nx ; n\in \N_{0} \\\\
 		\textbf{Induktionsbehauptung}: &  (1+x)^{n+1} \geq 1+(n+1)x \\\\
 		\textbf{Induktionsschluss}: &  (1+x)^{n+1} = (1+x)^n \cdot (1+x) {\overset{\text{I.V.}} \geq} (1+nx)\cdot(1+x) = nx^2+nx+x+1\\\\
 		&\geq 1+x+nx = 1+(n+1)x
@@ -681,7 +682,7 @@ Daher wird der Beweis in zwei Etappen durchgeführt; mit dem \textbf{Induktionsa
 \begin{Beweis}[Summe der Quadratzahlen]
 	Mittels Induktion lässt sich ''nur''  eine vorhandene Formel beweisen.
 
-	$\mathrm{Z\kern-.3em\raise-0.5ex\hbox{Z}}$ : $S(n) = \sum\limits_{i=1}^n i^2 = \dfrac{n(n+1)(2n+1)}{6}$
+	$\zz$ : $S(n) = \sum\limits_{i=1}^n i^2 = \dfrac{n(n+1)(2n+1)}{6}$
 
 	$\begin{array}{rl}
 		\textbf{Induktionsanfang}: &  S(1) = \sum\limits_{i=1}^1 i^2 = 1^2 = 1 = \dfrac{1(1+1)(2+1)}{6}\\\\
@@ -693,13 +694,13 @@ Daher wird der Beweis in zwei Etappen durchgeführt; mit dem \textbf{Induktionsa
 \end{Beweis}
 
 \begin{Beweis}[Summe der Quadratzahlen (Abschätzung)]
-	$\mathrm{Z\kern-.3em\raise-0.5ex\hbox{Z}}$ : $\sum\limits_{i=1}^n i^2 > \dfrac{n^3}{3}$
+	$\zz$ : $\sum\limits_{i=1}^n i^2 > \dfrac{n^3}{3}$
 
 	$\begin{array}{rl}
 		\textbf{Induktionsanfang}: &  1^2 > \dfrac{1^3}{3}  \\\\
-		\textbf{Induktionsvorraussetzung}: & für ein beliebiges, aber festes k\in\N gilt: \sum\limits_{i=1}^k i^2  > \dfrac{k^3}{3}\\\\
-		\textbf{Induktionsbehauptung}: & man behauptet, dass \forall n \in \N gilt: \sum\limits_{i=1}^{n+1} i^2  > \dfrac{(n+1)^3}{3}\\\\
-		 \textbf{Induktionsschluss}: &  \sum\limits_{i=1}^{n+1} i^2 = \overbrace{\sum\limits_{i=1}^{n} i^2}^{>\textcolor{red}{\dfrac{n^3}{3}}} + (n+1)^2 > \textcolor{red}{\dfrac{n^3}{3}} +(n+1)^2 \\\\
+		\textbf{Induktionsvorraussetzung}: & \text{für ein beliebiges, aber festes } k \in \N \text{ gilt: } \sum \limits_{i=1}^k i^2  > \dfrac{k^3}{3} \\\\
+		\textbf{Induktionsbehauptung}: & \text{man behauptet, dass } \forall n \in \N \text{ gilt: } \sum\limits_{i=1}^{n+1} i^2  > \dfrac{(n+1)^3}{3} \\\\
+		\textbf{Induktionsschluss}: &  \sum\limits_{i=1}^{n+1} i^2 = \overbrace{\sum\limits_{i=1}^{n} i^2}^{>\textcolor{red}{\dfrac{n^3}{3}}} + (n+1)^2 > \textcolor{red}{\dfrac{n^3}{3}} +(n+1)^2 \\\\
 		&= \dfrac{n^3+3n^2+6n+3}{3} \\\\
 		&= \dfrac{n^3+3n^2+3n+1+3n+2}{3}  \\\\
 		& = \dfrac{(n+1)^3}{3} + \dfrac{3n+2}{3} \overbrace{>}^{\textcolor{red}{n\geq0}} \dfrac{(n+1)^3}{3} 

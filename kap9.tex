@@ -18,9 +18,9 @@
     \begin{tikzpicture}
         \tikzset{BarreStyle/.style =   {opacity=.3,line width=5 mm,line cap=round,color=#1}}
             \draw (0,0) node {};
-            \draw[round] (6.4,1.7) rectangle (5.65,-1.72) [color=titlepagecolor];
-            \draw[round] (10.75,1.7) rectangle (5.65,1.2) [color=titlepagecolor];
-            \draw [BarreStyle=titlepagecolor]  (5.9,1.45) -- (10.5,-1.65) ;
+            \draw[round] (6.4,1.7) rectangle (5.65,-1.72) [color=bblue];
+            \draw[round] (10.75,1.7) rectangle (5.65,1.2) [color=bblue];
+            \draw [BarreStyle=bblue]  (5.9,1.45) -- (10.5,-1.65) ;
 
             \draw (7.85,0) node {$A= \begin{pmatrix}
                 a_{1,1}&a_{1,2}&...&a_{1,j}&...&a_{1,n}\\\\
@@ -30,10 +30,10 @@
                 &&\vdots&&&\\
                 a_{m,1}&a_{m,2}&...&a_{m,j}&...&a_{m,n}\\
                 \end{pmatrix}$};
-            \draw[<-] (5.1,1.5) -- (4,1.5) node[color=titlepagecolor,left] {Zeile};
+            \draw[<-] (5.1,1.5) -- (4,1.5) node[color=bblue,left] {Zeile};
             \draw[<-] (6,1.9) -- (6,2.5);
-            \draw (6,2.7) node[color=titlepagecolor] {Spalte};
-            \draw[<-] (5.4,1.7) -- (5.1,1.9) -- (4,1.9) node[color=titlepagecolor,left] {Hauptdiagonale};
+            \draw (6,2.7) node[color=bblue] {Spalte};
+            \draw[<-] (5.4,1.7) -- (5.1,1.9) -- (4,1.9) node[color=bblue,left] {Hauptdiagonale};
     \end{tikzpicture}
 \end{Definition}
 
@@ -78,28 +78,29 @@
 \end{Definition}
 
 \begin{Beispiel}
-    $$\tikzset{
+    \tikzset{
             round/.style = { rounded corners=2mm },
             node style ge/.style={circle},}
     \tikzset{BarreStyle/.style =   {opacity=.3,line width=2.5 mm,line cap=round,color=#1}}
     \begin{tikzpicture}
-        \draw [BarreStyle=titlepagecolor]  (5.65,0.5) -- (5.65,-0.5) ;
-        \draw [BarreStyle=titlepagecolor]  (6.71,0.5) -- (6.71,-0.5) ;
-        \node  at (6.16,1.35) {\textcolor{titlepagecolor}{$\cdot 2$}};
-        \draw [->, thick, titlepagecolor] (5.65,0.8) to [bend left=90]  (6.71,0.8);
+        \draw [BarreStyle=bblue]  (5.6,0.5) -- (5.6,-0.5) ;
+        \draw [BarreStyle=bblue]  (6.66,0.5) -- (6.66,-0.5) ;
+        \node  at (6.16,1.35) {\textcolor{bblue}{$\cdot 2$}};
+        \draw [->, thick, bblue] (5.65,0.8) to [bend left=90]  (6.71,0.8);
         \draw (7.85,0) node {$A = \begin{pmatrix}
-            1&3&2\\
-            2&4&4\\
-            3&5&6
+            1 & 3 & 2 \\
+            2 & 4 & 4 \\
+            3 & 5 & 6
         \end{pmatrix} \qquad \qquad 
         B = \begin{pmatrix}
-            1&3&2\\
-            2&4&4\\
-            3&5&\textcolor{red}{7}
-        \end{pmatrix}$}
-    \end{tikzpicture}$$
+            1 & 3 & 2 \\
+            2 & 4 & 4 \\
+            3 & 5 & \textcolor{red}{7}
+        \end{pmatrix}$};
+    \end{tikzpicture}
 
-    Die Matrix $A$ ist vom Rang 2, da die erste und die dritte Spalte vielfache voneinander sind. Die dritte Spalte stellt einen Zusammenhang dar, den die erste schon gegeben hat. Die Spalten 1 und 3 sind redundant. Anhand des GTR kann man den Rang einer Matrix auch bestimmen: mit dem $rref$-Befehl kann man die ''Reduced row echelon form'' einer Matrix ausrechnen lassen:\\\\
+    Die Matrix $A$ ist vom Rang 2, da die erste und die dritte Spalte vielfache voneinander sind. Die dritte Spalte stellt einen Zusammenhang dar, den die erste schon gegeben hat. Die Spalten 1 und 3 sind redundant. Anhand des GTR kann man den Rang einer Matrix auch bestimmen: mit dem \texttt{rref}-Befehl kann man die ''Reduced row echelon form'' einer Matrix ausrechnen lassen:
+
     $$rref(A) = 
     \begin{pmatrix} 
     1&0&2\\ 
@@ -145,7 +146,7 @@
 
     \item{\textbf{Matrizenmultiplikation}}
 
-        Die Matrizenmultiplikation ist eine weder kommutative, noch nullteilerfreie Verknüpfung. Ist $A$ eine $m\times p$ - Matrix und $B$ eine $p\times n$ - Matrix, dann sind die Matrizen multiplizierbar (d.h., die Anzahl der \textit{Spalten} von $\Mat{A}$ muss mit der Anzahl der \textit{Zeilen} von$\Mat{B}$ übereinstimmen).
+        Die Matrizenmultiplikation ist eine weder kommutative, noch nullteilerfreie Verknüpfung. Ist $A$ eine $m\times p$ - Matrix und $B$ eine $p\times n$ - Matrix, dann sind die Matrizen multiplizierbar (d.h., die Anzahl der \textit{Spalten} von $A$ muss mit der Anzahl der \textit{Zeilen} von$B$ übereinstimmen).
         Die einzelnen Komponenten der Produktmatrix $C = A \times B$ werden so ausgerechnet:
         $$c_{i,j} = \sum_{k=1}^{m} a_{i,k} \cdot b_{k,j}$$
         Die Komponenten $c_{i,j}$ ergeben sich also aus dem Skalarprodukt der $i$-ten Zeile von $A$ mit der $j$-ten Spalte von $B$. Die Durchführung per Hand wird mit der Falk'schen Anordnung erleichtert:
@@ -160,7 +161,7 @@
             \end{array}
             \fbox{$\begin{array}{c}
                 b_{1k} \\ \vdots \\ b_{pk}
-            \end{array}}
+            \end{array}$}
             \begin{array}{c}
                 \cdots \\   \\ \cdots
             \end{array}
@@ -176,7 +177,7 @@
                 \vdots \hfill \vdots \quad \\
                 a_{m1} \quad \cdots \quad a_{mp}
             \end{array} \right )
-            \left( \begin{array}{c}
+            \left ( \begin{array}{c}
                 c_{11} \\ \vdots \\ c_{i1} \\
                 \vdots \\ c_{m1}
             \end{array}
