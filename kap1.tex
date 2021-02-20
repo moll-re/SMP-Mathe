@@ -859,21 +859,23 @@ ytick={-4,-3,...,4},]
 \end{tikzpicture}
 \end{center}
 \begin{itemize}
-\item \begin{align*}|a_n-g|&=\left|\dfrac{1-2n}{5+3n}+\dfrac{2}{3}\right|\\
-&=\left|\dfrac{3(1-2n)+2(5+3n)}{3(5+3n)}\right|\\
-&=\left|\dfrac{3-6n+10+6n}{15+9n\right}|\\
-&=\left|\dfrac{13}{15+9n}\right|\\
-&=\dfrac{13}{15+9n}
-\end{align*}
-\item
-\begin{array}{cccc}
-&\dfrac{13}{15+9n}&<&\varepsilon\\
-\Leftrightarrow&13&<&\varepsilon(15+9n)\\
-\Leftrightarrow&13-15\epsilon&<&9n\varepsilon\\
-\Leftrightarrow&n&>&\dfrac{13-15\varepsilon}{9\varepsilon}\\
-\end{array}
-\item $n_0=\left\lceil \dfrac{13-15\varepsilon}{9\varepsilon}\right\rceil$
-\item Sei $\varepsilon$ beliebig und $n\geq n_0$, dann gilt $|a_n-g|=\left|\dfrac{1-2n}{5+3n}+\dfrac{2}{3}\right|=\dfrac{13}{15+9n}<\epsilon$
+	\item
+		\begin{align*}
+			|a_{n}-g|&=\left|\dfrac{1-2n}{5+3n}+\dfrac{2}{3}\right|\\
+			&=\left|\dfrac{3(1-2n)+2(5+3n)}{3(5+3n)}\right|\\
+			&=\left|\dfrac{3-6n+10+6n}{15+9n}\right|\\
+			&=\left|\dfrac{13}{15+9n}\right|\\
+			&=\dfrac{13}{15+9n}
+		\end{align*}
+	\item
+		\begin{array}{cccc}
+		&\dfrac{13}{15+9n}&<&\varepsilon\\
+		\Leftrightarrow&13&<&\varepsilon(15+9n)\\
+		\Leftrightarrow&13-15\epsilon&<&9n\varepsilon\\
+		\Leftrightarrow&n&>&\dfrac{13-15\varepsilon}{9\varepsilon}\\
+		\end{array}
+	\item $n_0=\left\lceil \dfrac{13-15\varepsilon}{9\varepsilon}\right\rceil$
+	\item Sei $\varepsilon$ beliebig und $n\geq n_0$, dann gilt $|a_n-g|=\left|\dfrac{1-2n}{5+3n}+\dfrac{2}{3}\right|=\dfrac{13}{15+9n}<\epsilon$
 \end{itemize}
 
 \end{Beispiel}
