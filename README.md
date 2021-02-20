@@ -39,4 +39,4 @@ Das Gesamtergebnis wird in ```main.tex``` kompiliert. Dieses PDF enthält alle K
 ## Export
 Das Hauptdokument wird per GitHub-action bei jedem push kompiliert. Aktueller Status:
 
-[![Compile main document](https://github.com/L0rd0fB0red0m/SMP-Mathe/actions/workflows/main.yml/badge.svg)](https://github.com/L0rd0fB0red0m/SMP-Mathe/actions/workflows/main.yml)
+[![Compile main document](https://github.com/L0rd0fB0red0m/SMP-Mathe/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/L0rd0fB0red0m/SMP-Mathe/actions/workflows/main.yml)
