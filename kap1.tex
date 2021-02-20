@@ -868,12 +868,12 @@ ytick={-4,-3,...,4},]
 			&=\dfrac{13}{15+9n}
 		\end{align*}
 	\item
-		\begin{array}{cccc}
+		$\begin{array}{cccc}
 		&\dfrac{13}{15+9n}&<&\varepsilon\\
 		\Leftrightarrow&13&<&\varepsilon(15+9n)\\
 		\Leftrightarrow&13-15\epsilon&<&9n\varepsilon\\
 		\Leftrightarrow&n&>&\dfrac{13-15\varepsilon}{9\varepsilon}\\
-		\end{array}
+		\end{array}$
 	\item $n_0=\left\lceil \dfrac{13-15\varepsilon}{9\varepsilon}\right\rceil$
 	\item Sei $\varepsilon$ beliebig und $n\geq n_0$, dann gilt $|a_n-g|=\left|\dfrac{1-2n}{5+3n}+\dfrac{2}{3}\right|=\dfrac{13}{15+9n}<\epsilon$
 \end{itemize}
@@ -885,16 +885,17 @@ ytick={-4,-3,...,4},]
 
 Die Grenzwertsätze führen die Grenzwerte komplizierter Folgen auf einfachere Grenzwertbetrachtungen bekannter Folgen zurück.\\
 \begin{Theorem}
-Seien $u_n$ und $v_n$ sind konvergente Folgen mit Grenzwerten U und V.
+Seien $u_{n}$ und $v_{n}$ sind konvergente Folgen mit Grenzwerten U und V.
 \begin{itemize}
-\item Die Folge $u_n\pm v_n$ ist konvergent und besitzt den Grenzwert $U\pm V$.
-\item Die Folge $u_n\cdot v_n$ ist konvergent und besitzt den Grenzwert $U\cdot V$.
-\item Die Folge $\dfrac{u_n}{v_n}$ ist konvergent und besitzt für $V\not=0$ den Grenzwert $\dfrac{U}{V}$.
+\item Die Folge $u_{n}\pm v_{n}$ ist konvergent und besitzt den Grenzwert $U\pm V$.
+\item Die Folge $u_{n}\cdot v_{n}$ ist konvergent und besitzt den Grenzwert $U\cdot V$.
+\item Die Folge $\dfrac{u_{n}}{v_{n}}$ ist konvergent und besitzt für $V\not=0$ den Grenzwert $\dfrac{U}{V}$.
 \end{itemize}
 \end{Theorem}
 
 \begin{Beispiel}
-$a_n=\dfrac{4\sqrt{n}-n}{\sqrt{n}-2n}=\dfrac{\not n\left(\frac{4}{\sqrt{n}}-1\right)}{\not n\left(\frac{1}{\sqrt{n}}-2\right)}=\dfrac{\frac{4}{\sqrt{n}}-1}{\frac{1}{\sqrt{n}}-2}$\\\\
-$g=\lim\limits_{n\to\infty}a_n=\lim\limits_{n\to\infty}\dfrac{\frac{4}{\sqrt{n}}-1}{\frac{1}{\sqrt{n}}-2}=\dfrac{\lim\limits_{n\to\infty}\frac{4}{\sqrt{n}}-\lim\limits_{n\to\infty}1}{\lim\limits_{n\to\infty}\frac{1}{\sqrt{n}}-\lim\limits_{n\to\infty}2}=\dfrac{0-1}{0-2}=\dfrac{1}{2}$
+	$a_{n} = \dfrac{4 \sqrt{n} - n}{\sqrt{n} - 2n} = \dfrac{\not n \left(\frac{4}{\sqrt{n}} - 1 \right) }{\not n \left( \frac{1}{\sqrt{n}}-2 \right) }=\dfrac{\frac{4}{\sqrt{n}}-1}{\frac{1}{\sqrt{n}}-2}$\\\\
+	$g=\lim\limits_{n\to\infty}a_{n}=\lim\limits_{n\to\infty}\dfrac{\frac{4}{\sqrt{n}}-1}{\frac{1}{\sqrt{n}}-2}=\dfrac{\lim\limits_{n\to\infty}\frac{4}{\sqrt{n}}-\lim\limits_{n\to\infty}1}{\lim\limits_{n\to\infty}\frac{1}{\sqrt{n}}-\lim\limits_{n\to\infty}2}=\dfrac{0-1}{0-2}=\dfrac{1}{2}$
 \end{Beispiel}
+
 \end{document}
