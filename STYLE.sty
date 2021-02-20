@@ -9,8 +9,9 @@
 \usepackage{tabu}
 \usepackage[makeroom]{cancel}
 
-\usepackage{tikz,pgf,pgfplots}
+\usepackage{tikz,pgf,pgfplots, tkz-tab}
 \usetikzlibrary{arrows}
+\usepackage{wrapfig}
 
 \usepackage[ngerman]{babel}
 \usepackage[mathletters]{ucs}
@@ -85,7 +86,6 @@
     \mdfsetup{frametitle={\textcolor{white}{Theorem \thetheorem}}}
   }{%else
     \mdfsetup{frametitle={\textcolor{white}{Theorem \thetheorem: ~#1}}}
-    \index{~#1}
   }
   \stepcounter{theorem_counter}
   \setcounter{Korollar_counter}{0}
@@ -107,7 +107,6 @@
     \mdfsetup{frametitle={\textcolor{white}{Korollar \thetheorem \, (\arabic{Korollar_counter})}}}
   }{%else
     \mdfsetup{frametitle={\textcolor{white}{Korollar \thetheorem \, (\arabic{Korollar_counter}): ~#1}}}
-    \index{~#1}
   }
   \stepcounter{Korollar_counter}
   \mdfsetup{
@@ -128,7 +127,6 @@
     \mdfsetup{frametitle={\textcolor{white}{GTR-Tipp}}}
   }{%else
     \mdfsetup{frametitle={\textcolor{white}{GTR-Tipp: ~#1}}}
-    \index{~#1}
   }
   \mdfsetup{
     style = envstyle,
@@ -148,7 +146,6 @@
     \mdfsetup{frametitle={\textcolor{white}{Definition \thedefinition}}}
   }{%else
     \mdfsetup{frametitle={\textcolor{white}{Definition \thedefinition: ~#1}}}
-    \index{~#1}
   }
   \stepcounter{definition_counter}
   \mdfsetup{
@@ -331,7 +328,7 @@
     Clara Schaefer\\
     Pascal Borel\\
     Bruno Gelfort\\
-    Rémy Moll
+    Rémy Moll \\
     [0,3cm]
     \textbf{1e und Te (2017-2019)}
     }

@@ -3,311 +3,311 @@
 \chapter{Matrizen}
 \chapterauthor{Bruno}
 
-	\section{Überblick und Grundrechenarten}
 
+\section{Überblick und Grundrechenarten}
 
 \subsection{Definition und Einordnung}
 
 \begin{Definition}
-Eine Matrix ist eine rechteckige Anordnung von Elementen. Sie tauchen in fast allen Gebieten der Mathematik und der Mechanik auf und erleichtern Rechen- und Gedankenvorgänge. Eine Matrix ist eindeutig durch ihre \textbf{Komponenten} und ihr \textbf{Typ} definiert: Eine Matrix mit $m$ Zeilen und $n$ Spalten wird $m \times n$ - Matrix genannt. Stammen ihre Komponenten aus einem Körper $K$, spricht man von einer \textit{Matrix über K}.\\
+    Eine Matrix ist eine rechteckige Anordnung von Elementen. Sie tauchen in fast allen Gebieten der Mathematik und der Mechanik auf und erleichtern Rechen- und Gedankenvorgänge. Eine Matrix ist eindeutig durch ihre \textbf{Komponenten} und ihr \textbf{Typ} definiert: Eine Matrix mit $m$ Zeilen und $n$ Spalten wird $m \times n$ - Matrix genannt. Stammen ihre Komponenten aus einem Körper $K$, spricht man von einer \textit{Matrix über K}.
 
-\tikzset{
-        round/.style = { rounded corners=2mm },
-        node style ge/.style={circle},
-}
-\begin{tikzpicture}
-\tikzset{BarreStyle/.style =   {opacity=.3,line width=5 mm,line cap=round,color=#1}}
+    \tikzset{
+            round/.style = { rounded corners=2mm },
+            node style ge/.style={circle},
+    }
+    \begin{tikzpicture}
+        \tikzset{BarreStyle/.style =   {opacity=.3,line width=5 mm,line cap=round,color=#1}}
+            \draw (0,0) node {};
+            \draw[round] (6.4,1.7) rectangle (5.65,-1.72) [color=titlepagecolor];
+            \draw[round] (10.75,1.7) rectangle (5.65,1.2) [color=titlepagecolor];
+            \draw [BarreStyle=titlepagecolor]  (5.9,1.45) -- (10.5,-1.65) ;
 
-    \draw (0,0) node {};
-    \draw[round] (6.4,1.7) rectangle (5.65,-1.72) [color=titlepagecolor];
-    \draw[round] (10.75,1.7) rectangle (5.65,1.2) [color=titlepagecolor];
-     \draw [BarreStyle=titlepagecolor]  (5.9,1.45) -- (10.5,-1.65) ;
-
-    \draw (7.85,0) node {$A= \begin{pmatrix}
-a_{1,1}&a_{1,2}&...&a_{1,j}&...&a_{1,n}\\\\
-a_{2,1}&a_{2,2}&...&a_{2,j}&...&a_{2,n}\\
-&&\vdots&&&\\
-a_{i,1}&a_{i,2}&...&a_{i,j}&...&a_{3,n}\\
-&&\vdots&&&\\
-a_{m,1}&a_{m,2}&...&a_{m,j}&...&a_{m,n}\\
-\end{pmatrix}$};
-    \draw[<-] (5.1,1.5) -- (4,1.5) node[color=titlepagecolor,left] {Zeile};
-    \draw[<-] (6,1.9) -- (6,2.5);
-	\draw (6,2.7) node[color=titlepagecolor] {Spalte};
-    \draw[<-] (5.4,1.7) -- (5.1,1.9) -- (4,1.9) node[color=titlepagecolor,left] {Hauptdiagonale};
-\end{tikzpicture}\\\\
+            \draw (7.85,0) node {$A= \begin{pmatrix}
+                a_{1,1}&a_{1,2}&...&a_{1,j}&...&a_{1,n}\\\\
+                a_{2,1}&a_{2,2}&...&a_{2,j}&...&a_{2,n}\\
+                &&\vdots&&&\\
+                a_{i,1}&a_{i,2}&...&a_{i,j}&...&a_{3,n}\\
+                &&\vdots&&&\\
+                a_{m,1}&a_{m,2}&...&a_{m,j}&...&a_{m,n}\\
+                \end{pmatrix}$};
+            \draw[<-] (5.1,1.5) -- (4,1.5) node[color=titlepagecolor,left] {Zeile};
+            \draw[<-] (6,1.9) -- (6,2.5);
+            \draw (6,2.7) node[color=titlepagecolor] {Spalte};
+            \draw[<-] (5.4,1.7) -- (5.1,1.9) -- (4,1.9) node[color=titlepagecolor,left] {Hauptdiagonale};
+    \end{tikzpicture}
 \end{Definition}
 
 
 
 
 \begin{Bemerkung}
-Die Eselsbrücke \textit{\textbf{Z}eile \textbf{Z}uerst, \textbf{S}palte \textbf{S}päter} ist für die Benennung einer Matrix hilfreich!\\\\
-Eine Matrix, die aus nur einer Spalte oder nur einer Zeile besteht, wird auch Vektor genannt.\\\\
-Ganz formal gesehen ist eine Matrix eine Funktion, die jedem Funktionswert $(i;j)$ einen Eintrag zuordnet. Quadratische Matrizen vollen Rangs bilden mit der Matrizenaddition und der Skalarmultiplikation einen abgeschlossenen Körper.
+    Die Eselsbrücke \textit{\textbf{Z}eile \textbf{Z}uerst, \textbf{S}palte \textbf{S}päter} ist für die Benennung einer Matrix hilfreich!\\\\
+    Eine Matrix, die aus nur einer Spalte oder nur einer Zeile besteht, wird auch Vektor genannt.\\\\
+    Ganz formal gesehen ist eine Matrix eine Funktion, die jedem Funktionswert $(i;j)$ einen Eintrag zuordnet. Quadratische Matrizen vollen Rangs bilden mit der Matrizenaddition und der Skalarmultiplikation einen abgeschlossenen Körper.
 \end{Bemerkung}
 
 
 \begin{GTR-Tipp}
-Im Matrix Menü: $[\text{matrix}] + [\text{MATH}]$ kann man mit dem Befehl...\\
-\begin{enumerate}
-\item ... ref$[B]$ (''Row echelon form'') die \textbf{Dreiecksform} einer Matrix $B$ ausrechnen lassen:\\\\
-$$B= \begin{pmatrix}
-b_{1,1}&b_{1,2}&b_{1,3}&b_{1,4}\\
-0&b_{2,2}&b_{2,3}&b_{2,4}\\
-0&0&b_{3,3}&b_{3,4}\\
-0&0&0&b_{4,3}\\
-\end{pmatrix}$$\\
-\item ... rref$[C]$ (''Reduced row echelon form'') die \textbf{Diagonalform} einer Matrix $C$ ausrechnen lassen. Die einzigen Nicht-Null Einträge sind auf der Hauptdiagonalen:\\\\
-$$C= \begin{pmatrix}
-c_{1,1}&0&0&0\\
-0&c_{2,2}&0&0\\
-0&0&c_{3,3}&0\\
-0&0&0&c_{4,4}\\
-\end{pmatrix}$$\\
-\end{enumerate}
-\end{GTR-Tipp}\\
-\\
+    Im Matrix Menü: $[\text{matrix}] + [\text{MATH}]$ kann man mit dem Befehl...\\
+    \begin{enumerate}
+        \item ... ref$[B]$ (''Row echelon form'') die \textbf{Dreiecksform} einer Matrix $B$ ausrechnen lassen:
+        
+            $$B= \begin{pmatrix}
+                b_{1,1}&b_{1,2}&b_{1,3}&b_{1,4}\\
+                0&b_{2,2}&b_{2,3}&b_{2,4}\\
+                0&0&b_{3,3}&b_{3,4}\\
+                0&0&0&b_{4,3}
+            \end{pmatrix}$$
+        \item ... rref$[C]$ (''Reduced row echelon form'') die \textbf{Diagonalform} einer Matrix $C$ ausrechnen lassen. Die einzigen Nicht-Null Einträge sind auf der Hauptdiagonalen:\\\\
+            $$C= \begin{pmatrix}
+                c_{1,1}&0&0&0\\
+                0&c_{2,2}&0&0\\
+                0&0&c_{3,3}&0\\
+                0&0&0&c_{4,4}
+            \end{pmatrix}$$
+    \end{enumerate}
+\end{GTR-Tipp}
+
 
 \subsection{Rang einer Matrix}
 
 \begin{Definition}
-Der \textbf{Rang} einer Matrix ist die maximale Anzahl linear unabhängiger Zeilen- bzw. Spaltenvektoren. \\Auf Deutsch und an Matrizen angewandt: Stammt eine Matrix vollen Rangs aus einem Gleichungssystem, dann ist dieses System nicht redundant. Jede Zeile bzw. Spalte beschreibt demnach Zusammenhänge, die die anderen Spalten nicht geben. 
+    Der \textbf{Rang} einer Matrix ist die maximale Anzahl linear unabhängiger Zeilen- bzw. Spaltenvektoren. 
+    
+    Auf Deutsch und an Matrizen angewandt: Stammt eine Matrix vollen Rangs aus einem Gleichungssystem, dann ist dieses System nicht redundant. Jede Zeile bzw. Spalte beschreibt demnach Zusammenhänge, die die anderen Spalten nicht geben. 
 \end{Definition}
 
 \begin{Beispiel}
-$$
-\tikzset{
-        round/.style = { rounded corners=2mm },
-        node style ge/.style={circle},}
-\tikzset{BarreStyle/.style =   {opacity=.3,line width=2.5 mm,line cap=round,color=#1}}
-\begin{tikzpicture}
-     \draw [BarreStyle=titlepagecolor]  (5.65,0.5) -- (5.65,-0.5) ;
-     \draw [BarreStyle=titlepagecolor]  (6.71,0.5) -- (6.71,-0.5) ;
-\node  at (6.16,1.35) {\textcolor{titlepagecolor}{$\cdot 2$}};
-\draw [->, thick, titlepagecolor] (5.65,0.8) to [bend left=90]  (6.71,0.8);
-\draw (7.85,0) node {$A = \begin{pmatrix}
-1&3&2\\
-2&4&4\\
-3&5&6\\
-\end{pmatrix} \qquad \qquad 
-B = \begin{pmatrix}
-1&3&2\\
-2&4&4\\
-3&5&\textcolor{red}{7}\\
-\end{pmatrix}$}
-\end{tikzpicture}
-$$
+    $$\tikzset{
+            round/.style = { rounded corners=2mm },
+            node style ge/.style={circle},}
+    \tikzset{BarreStyle/.style =   {opacity=.3,line width=2.5 mm,line cap=round,color=#1}}
+    \begin{tikzpicture}
+        \draw [BarreStyle=titlepagecolor]  (5.65,0.5) -- (5.65,-0.5) ;
+        \draw [BarreStyle=titlepagecolor]  (6.71,0.5) -- (6.71,-0.5) ;
+        \node  at (6.16,1.35) {\textcolor{titlepagecolor}{$\cdot 2$}};
+        \draw [->, thick, titlepagecolor] (5.65,0.8) to [bend left=90]  (6.71,0.8);
+        \draw (7.85,0) node {$A = \begin{pmatrix}
+            1&3&2\\
+            2&4&4\\
+            3&5&6
+        \end{pmatrix} \qquad \qquad 
+        B = \begin{pmatrix}
+            1&3&2\\
+            2&4&4\\
+            3&5&\textcolor{red}{7}
+        \end{pmatrix}$}
+    \end{tikzpicture}$$
 
-Die Matrix $A$ ist vom Rang 2, da die erste und die dritte Spalte vielfache voneinander sind. Die dritte Spalte stellt einen Zusammenhang dar, den die erste schon gegeben hat. Die Spalten 1 und 3 sind redundant. Anhand des GTR kann man den Rang einer Matrix auch bestimmen: mit dem $rref$-Befehl kann man die ''Reduced row echelon form'' einer Matrix ausrechnen lassen:\\\\
-$$rref(A) = 
-\begin{pmatrix} 
-1&0&2\\ 
-0&1&0\\ 
-0&0&0\\  
-\end{pmatrix} \qquad \qquad
-rref(B) = 
-\begin{pmatrix} 
-1&0&0\\ 
-0&1&0\\ 
-0&0&1\\  
-\end{pmatrix}$$\\
-Die Anzahl an Nicht-Null-Zeilen der reduzierten Form verrät den Rang der Matrix: $\text{Rang}(A) = 2$  und $\text{Rang}(B) = 3$
-\end{Beispiel}\\
+    Die Matrix $A$ ist vom Rang 2, da die erste und die dritte Spalte vielfache voneinander sind. Die dritte Spalte stellt einen Zusammenhang dar, den die erste schon gegeben hat. Die Spalten 1 und 3 sind redundant. Anhand des GTR kann man den Rang einer Matrix auch bestimmen: mit dem $rref$-Befehl kann man die ''Reduced row echelon form'' einer Matrix ausrechnen lassen:\\\\
+    $$rref(A) = 
+    \begin{pmatrix} 
+    1&0&2\\ 
+    0&1&0\\ 
+    0&0&0\\  
+    \end{pmatrix} \qquad \qquad
+    rref(B) = 
+    \begin{pmatrix} 
+    1&0&0\\ 
+    0&1&0\\ 
+    0&0&1\\  
+    \end{pmatrix}$$
+    Die Anzahl an Nicht-Null-Zeilen der reduzierten Form verrät den Rang der Matrix: $\text{Rang}(A) = 2$  und $\text{Rang}(B) = 3$
+\end{Beispiel}
 
 
 
 \subsection{Addition und Multiplikation}
 
 \begin{itemize}
+    \item{\textbf{Matritzenaddition}}
+        Matrizen können addiert werden, wenn sie vom gleichen Typ sind. Eine $m\times n$ Matrix $A$ kann nur mit einer $m\times n$ Matrix $B$ addiert werden. Hierfür wird jede Komponente $a_{i,j}$ mit ihrem zugehörigen Komponenten $b_{i,j}$ addiert:
+        $$A + B \ = \  \left (
+            \begin{array}{cccc}
+                a_{11}+ b_{11} & a_{12}+ b_{12} & \cdots & a_{1n}+ b_{1n} \\
+                a_{21}+ b_{21} & a_{22}+ b_{22} & \cdots & a_{2n}+ b_{2n} \\
+                \vdots & \vdots &  & \vdots \\
+                a_{m1}+ b_{m1} & a_{m2}+ b_{m2} & \cdots & a_{mn}+ b_{mn}
+            \end{array} \right )$$
+        Das Neutrale Element der Addition ist logischerweise eine leere Matrix, das inverse findet man mit der Skalierung $\cdot (-1)$.
 
-\item{\textbf{Matritzenaddition}}
+    \item{\textbf{Skalarmultiplikation}}
 
-Matrizen können addiert werden, wenn sie vom gleichen Typ sind. Eine $m\times n$ Matrix $A$ kann nur mit einer $m\times n$ Matrix $B$ addiert werden. Hierfür wird jede Komponente $a_{i,j}$ mit ihrem zugehörigen Komponenten $b_{i,j}$ addiert:
-$$A + B \ = \  \left(
-    \begin{array}{cccc}
-        a_{11}+ b_{11} & a_{12}+ b_{12} &
-            \cdots & a_{1n}+ b_{1n} \\
-        a_{21}+ b_{21} & a_{22}+ b_{22} &
-            \cdots & a_{2n}+ b_{2n} \\
-        \vdots & \vdots &  & \vdots \\
-        a_{m1}+ b_{m1} & a_{m2}+ b_{m2} &
-            \cdots & a_{mn}+ b_{mn}
-    \end{array}
-    \right)$$
-Das Neutrale Element der Addition ist logischerweise eine leere Matrix, das inverse findet man mit der Skalierung $\cdot (-1)$.\\
+        Die Skalarmultiplikation mit einer reellen Zahl $k$, die man aus Vektoren kennt, kann auf Matrizen erweitert werden:
+        $$k\cdot A \ = \ \left (
+            \begin{array}{cccc}
+                k a_{11} & k a_{12} & \cdots & k a_{1n} \\
+                k a_{21} & k a_{22} & \cdots & k a_{2n} \\
+                \vdots & \vdots &  & \vdots \\
+                k a_{m1} & k a_{m2} & \cdots & k a_{mn}
+            \end{array}
+            \right ) $$\\
 
-\item{\textbf{Skalarmultiplikation}}
+    \item{\textbf{Matrizenmultiplikation}}
 
-Die Skalarmultiplikation mit einer reellen Zahl $k$, die man aus Vektoren kennt, kann auf Matrizen erweitert werden:
-$$k\cdot A \ = \ \left(
-    \begin{array}{cccc}
-        k a_{11} & k a_{12} & \cdots & k a_{1n} \\
-        k a_{21} & k a_{22} & \cdots & k a_{2n} \\
-        \vdots & \vdots &  & \vdots \\
-        k a_{m1} & k a_{m2} & \cdots & k a_{mn}
-    \end{array}
-    \right) $$\\
+        Die Matrizenmultiplikation ist eine weder kommutative, noch nullteilerfreie Verknüpfung. Ist $A$ eine $m\times p$ - Matrix und $B$ eine $p\times n$ - Matrix, dann sind die Matrizen multiplizierbar (d.h., die Anzahl der \textit{Spalten} von $\Mat{A}$ muss mit der Anzahl der \textit{Zeilen} von$\Mat{B}$ übereinstimmen).
+        Die einzelnen Komponenten der Produktmatrix $C = A \times B$ werden so ausgerechnet:
+        $$c_{i,j} = \sum_{k=1}^{m} a_{i,k} \cdot b_{k,j}$$
+        Die Komponenten $c_{i,j}$ ergeben sich also aus dem Skalarprodukt der $i$-ten Zeile von $A$ mit der $j$-ten Spalte von $B$. Die Durchführung per Hand wird mit der Falk'schen Anordnung erleichtert:
 
-\item{\textbf{Matrizenmultiplikation}}
+        $$\begin{array}{rl}
+            B = \left (
+            \begin{array}{c}
+                b_{11} \\ \vdots \\ b_{p1}
+            \end{array}
+            \begin{array}{c}
+                \cdots \\ \\ \cdots
+            \end{array}
+            \fbox{$\begin{array}{c}
+                b_{1k} \\ \vdots \\ b_{pk}
+            \end{array}}
+            \begin{array}{c}
+                \cdots \\   \\ \cdots
+            \end{array}
+            \begin{array}{c}
+                b_{1n} \\ \vdots \\ b_{pn}
+            \end{array}
+            \right ) \, &
+            \\
+            A = \left (\begin{array}{c}
+                a_{11} \quad \cdots \quad a_{1p} \\
+                \vdots \hfill \vdots \quad  \\
+                \fbox{$a_{i1} \quad \cdots \quad a_{ip}$} \\
+                \vdots \hfill \vdots \quad \\
+                a_{m1} \quad \cdots \quad a_{mp}
+            \end{array} \right )
+            \left( \begin{array}{c}
+                c_{11} \\ \vdots \\ c_{i1} \\
+                \vdots \\ c_{m1}
+            \end{array}
+            \begin{array}{c}
+                \cdots \\   \\ \cdots \\ \\ \cdots
+            \end{array}
+            \begin{array}{c}
+                c_{1k} \\ \vdots \\ \fbox{$c_{ik}$} \\
+                \vdots \\ c_{mk}
+            \end{array}
+            \begin{array}{c}
+                \cdots \\   \\ \cdots \\ \\ \cdots
+            \end{array}
+            \begin{array}{c}
+                c_{1n} \\ \vdots \\ c_{in} \\
+                \vdots \\ c_{mn}
+            \end{array} \right )
+            &  = C
+        \end{array}$$
 
-Die Matrizenmultiplikation ist eine weder kommutative, noch nullteilerfreie Verknüpfung. Ist $A$ eine $m\times p$ - Matrix und $B$ eine $p\times n$ - Matrix, dann sind die Matrizen multiplizierbar (d.h., die Anzahl der \textit{Spalten}
-von $\Mat{A}$ muss mit der Anzahl der \textit{Zeilen} von$\Mat{B}$ übereinstimmen).\\
-Die einzelnen Komponenten der Produktmatrix $C = A \times B$ werden so ausgerechnet:
-  $$c_{i,j} = \sum_{k=1}^{m} a_{i,k} \cdot b_{k,j}$$
-Die Komponenten $c_{i,j}$ ergeben sich also aus dem Skalarprodukt der $i$-ten Zeile von $A$ mit der $j$-ten Spalte von $B$. Die Durchführung per Hand wird mit der Falk'schen Anordnung erleichtert:
-
-$$\begin{array}{rl}
-    $B$ \ = \
-    \left(
-    \begin{array}{c} b_{11} \\ \vdots \\ b_{p1}
-          \end{array}
-    \begin{array}{c} \cdots \\   \\ \cdots \end{array}
-\fbox{$\begin{array}{c} b_{1k} \\ \vdots \\ b_{pk}
-    \end{array}$}
-    \begin{array}{c} \cdots \\   \\ \cdots \end{array}
-    \begin{array}{c} b_{1n} \\ \vdots \\ b_{pn}
-          \end{array}
-    \right) \, &
-\\
-    $A$ \ = \
-    \left(
-    \begin{array}{c}
-        a_{11} \quad \cdots \quad a_{1p} \\
-        \ \vdots \hfill \vdots \quad  \\
-        \fbox{$a_{i1} \quad \cdots \quad a_{ip}$} \\
-        \ \vdots \hfill \vdots \quad \\
-        a_{m1} \quad \cdots \quad a_{mp}
-    \end{array} \right) \
-    \left(
-    \begin{array}{c} c_{11} \\ \vdots \\ c_{i1} \\
-        \vdots \\ c_{m1}          \end{array}
-    \begin{array}{c} \cdots \\   \\ \cdots \\ \\ \cdots \end{array}
-        \begin{array}{c} c_{1k} \\ \vdots \\ \fbox{$c_{ik}$} \\
-            \vdots \\ c_{mk}
-    \end{array}
-    \begin{array}{c} \cdots \\   \\ \cdots \\ \\ \cdots \end{array}
-    \begin{array}{c} c_{1n} \\ \vdots \\ c_{in} \\
-        \vdots \\ c_{mn}          \end{array}
-    \right) &  = \ $C$
-\end{array}$$\\
-Bei der Matrizenmultiplikation ist Vorsicht geboten! Generell werden Matrizen immer von links multipliziert, das heißt:
-$$A^3=A \cdot A^2$$\\
-\end{itemize}\\
+        Bei der Matrizenmultiplikation ist Vorsicht geboten! Generell werden Matrizen immer von links multipliziert, das heißt:
+        $$A^3=A \cdot A^2$$
+\end{itemize}
 
 \subsection{Potenz und Invertierbarkeit einer quadratischen Matrix}
 
-Potenzgesetze, v.a. bei n times n Matrizen.....Invertierbarkeit 2 times 2 Matrizen ''AlphaA Lenvers''.....Determinante
+Potenzgesetze, v.a. bei $n \times n$ Matrizen.....Invertierbarkeit $2 \times 2$ Matrizen ''AlphaA Lenvers''.....Determinante
 
 
 
-
-
-
-	\section{Anwendungen von Matrizen}
+\section{Anwendungen von Matrizen}
 
 Fürs ABI
 
-	\section{Lineare Gleichungssysteme und Gaußalgorithmus}
+\section{Lineare Gleichungssysteme und Gaußalgorithmus}
 
-Lineare Gleichungssysteme lassen sich aufwendig mit Einsetzungsverfahren oder Additionsverfahren l"osen, Carl Friedrich Gauß (1777-1855) hat ein Algorithmus erfunden, mit dem sie sich ohne Taschenrechner leicht und relativ schnell l"osen lassen.\\
-Am Besten wird dieser mit einem Beispiel Erl"autert:\\
-\\
-$\Rightarrow$ $\left\{ \begin{array}{rccl}
-4x+3y+z&=&13& (1)\\
-2x-5y+3z& =& 1 &(2)\\
-7x-y-2z&=&-1&(3)\\
-\end{array}\right.$ \qquad \{ $1\cdot (1) -2\cdot (2)$ \}  und \{ $7\cdot (1) -4\cdot (3)$ \}  \qquad \qquad $D=\R^3$\\
-\\
-\\
-Hier versucht man in Zeile (2) und (3) die erste Variabel zu eliminieren\\
-\\
-$\Leftrightarrow$ $\left\{ \begin{array}{rcl}
-4x+3y+z&=&13\\
-0x +13y -5z&=& 11\\
-0x +25y +15z&=& 95\\
-\end{array}\right.$ \qquad \{ $25\cdot(2) -13\cdot(3)$ \}  \\
-\\
-\\
-Jetzt versucht man die zweite Variabel in der dritten Gleichung zu eliminieren\\
-\\
-$\Leftrightarrow$ $\left\{ \begin{array}{rcl}
-4x+3y+z&=&13\\
-0x +13y -5z&=& 11\\
-0x+0y-320z&=&-960 $\qquad$ \Leftrightarrow z=3 \\
-\end{array}\right.$\\
-\\
-\\
-Jetzt wird eingesetzt\\
-\\
-$\Leftrightarrow$ $\left\{ \begin{array}{rcl}
-4x+3y+z&=&13\\
-0x+13y-5\cdot3&=&11 $\qquad$ \Leftrightarrow y=2\\
-0x+0y+z&=&3\\
-\end{array}\right.$\\
-\\
-\\
-$\Leftrightarrow$ $\left\{ \begin{array}{rcl}
-x+0y+0z&=&1\\
-0x+y+0z&=&2\\
-0x+0y+z&=&3\\
-\end{array}\right.$\\
-\\
-\\
+Lineare Gleichungssysteme lassen sich aufwendig mit Einsetzungsverfahren oder Additionsverfahren lösen, Carl Friedrich Gauß (1777-1855) hat ein Algorithmus erfunden, mit dem sie sich ohne Taschenrechner leicht und relativ schnell lösen lassen.\\
+Am Besten wird dieser mit einem Beispiel Erläutert:
+
+$\Rightarrow \left \{ \begin{array}{rccl}
+    4x+3y+z&=&13& (1)\\
+    2x-5y+3z& =& 1 &(2)\\
+    7x-y-2z&=&-1&(3)
+\end{array}\right .$ \qquad \{ $1\cdot (1) -2\cdot (2)$ \}  und \{ $7\cdot (1) -4\cdot (3)$ \}  \qquad \qquad $D=\R^3$
+
+Hier versucht man in Zeile (2) und (3) die erste Variabel zu eliminieren
+
+$\Leftrightarrow \left \{ \begin{array}{rcl}
+    4x+3y+z &=& 13\\
+    0x +13y - 5z &=& 11\\
+    0x +25y + 15z &=& 95\\
+\end{array}\right . \qquad \{ 25\cdot(2) - 13 \cdot(3) \}$
+
+Jetzt versucht man die zweite Variabel in der dritten Gleichung zu eliminieren
+
+$\Leftrightarrow \left\{ \begin{array}{rcl}
+    4x+3y+z&=&13\\
+    0x +13y -5z&=& 11\\
+    0x+0y-320z&=&-960 $\qquad$ \Leftrightarrow z=3 \\
+\end{array}\right.$
+
+Jetzt wird eingesetzt
+
+    $\Leftrightarrow \left\{ \begin{array}{rcl}
+    4x+3y+z&=&13\\
+    0x+13y-5\cdot3&=&11 $\qquad$ \Leftrightarrow y=2\\
+    0x+0y+z&=&3\\
+\end{array}\right.$
+
+$\Leftrightarrow \left\{ \begin{array}{rcl}
+    x+0y+0z&=&1\\
+    0x+y+0z&=&2\\
+    0x+0y+z&=&3\\
+\end{array}\right.$
+
 $\mathbb{L}=\{(1;2;3) \}$ Die Lösungsmenge wird als n-Tupel (geordente Objekte) alphabetisch sortiert.
 
-	\section{LGS mit dem Taschenrechner l"osen}
 
-	\subsection{Eindeutig l"osbare lineare Gleichungssysteme}
 
-Ein lineares Gleichungssystem l"asst sich sehr viel schneller mit dem Taschgenrechner l"osen:\\
+\section{LGS mit dem Taschenrechner lösen}
+\subsection{Eindeutig lösbare lineare Gleichungssysteme}
 
-$\Rightarrow$ $\left\{ \begin{array}{rcl}
-4x+3y+z&=&13\\
-2x-5y+3z& =& 1\\
-7x-y-2z&=&-1\\
-\end{array}\right.$\\
-\\
-Hierf"ur geht man beim Taschenrechner auf [matrix] und auf [edit]. Dann gibt man seine Matrix (hier als Beispiel) ein:\\
-\\
-$\Rightarrow$ $\left\vert \begin{array}{rccl}
-4&3&1&13\\
-2&-5&3& 1 \\
-7&-1&-2&-1\\
-\end{array}\right\vert$\\
-\\
-Dann geht man wieder in den rechnen-Modus und gibt ein:  [matrix], dann geht man auf [math], [rref]. dann geht man nochmal auf [matrix], [A] (die gerade bearbeitete Matrix):\\
-\\
-$\Leftrightarrow$ $\left\vert \begin{array}{rccl}
-1&0&0&1\\
-0&1&0&2 \\
-0&0&1&3\\
-\end{array}\right\vert$ \qquad $\Rightarrow \mathbb{L}=\{(1;2;3) \}$ \\
+Ein lineares Gleichungssystem lässt sich sehr viel schneller mit dem Taschgenrechner lösen:
 
-Die L"osungsmenge wird als n-Tupel angegeben.\\
-Wenn sich Werte mit Kommazahlen ergeben, ist es n"utzlich, im Taschenrechner [Math] $+$ [1](Frac) einzugeben, um sich die Werte in Br"uchen anzeigen zu lassen.\\
+$\Rightarrow \left\{ \begin{array}{rcl}
+    4x+3y+z&=&13\\
+    2x-5y+3z& =& 1\\
+    7x-y-2z&=&-1\\
+\end{array}\right.$
 
-	\subsection{Nicht eindeutig l"osbare lineare Gleichungssysteme}
+Hierfür geht man beim Taschenrechner auf [matrix] und auf [edit]. Dann gibt man seine Matrix (hier als Beispiel) ein:
 
-Oft begegnen einem auch unterbestimmte LGS, sei es in der Geometrie (Zwei Ebenengleichungen, die in einem Gleichungssystem als L"osung die Schnittgerade ergeben) oder in anderen Teilbereichen. Sie sind auch recht aufwendig von Hand zu l"osen, deshalb hier den schnelleren GTR-L"osungsweg:\\
+$\Rightarrow \left\vert \begin{array}{rccl}
+    4&3&1&13\\
+    2&-5&3& 1 \\
+    7&-1&-2&-1\\
+\end{array}\right\vert$
 
-$\Rightarrow$ $\left\{ \begin{array}{rcl}
+Dann geht man wieder in den rechnen-Modus und gibt ein:  [matrix], dann geht man auf [math], [rref]. dann geht man nochmal auf [matrix], [A] (die gerade bearbeitete Matrix):
+
+$\Leftrightarrow \left\vert \begin{array}{rccl}
+    1&0&0&1\\
+    0&1&0&2 \\
+    0&0&1&3\\
+\end{array} \right \vert \qquad \Rightarrow \mathbb{L}=\{(1;2;3) \}$
+
+Die Lösungsmenge wird als n-Tupel angegeben.\\
+Wenn sich Werte mit Kommazahlen ergeben, ist es nützlich, im Taschenrechner [Math] $+$ [1](Frac) einzugeben, um sich die Werte in Brüchen anzeigen zu lassen.\\
+
+
+\subsection{Nicht eindeutig lösbare lineare Gleichungssysteme}
+
+Oft begegnen einem auch unterbestimmte LGS, sei es in der Geometrie (Zwei Ebenengleichungen, die in einem Gleichungssystem als Lösung die Schnittgerade ergeben) oder in anderen Teilbereichen. Sie sind auch recht aufwendig von Hand zu lösen, deshalb hier den schnelleren GTR-Lösungsweg:\\
+
+$\Rightarrow \left \{ \begin{array}{rcl}
 x_{1}-2x_{2}+0x_{3}&=&10\\
 x_{1}-x_{2}-x_{3}& =& 5\\
-\end{array}\right.$\\
-\\
+\end{array} \right .$
+
 Unterbestimmte LGS erkennt man daran, dass es mehr unbekannte als Gleichungen gibt:\\
 
-$\Rightarrow$ $\left\vert \begin{array}{rccl}
-1&-2&0&10\\
-1&-1&-1& 5 \\
-\end{array}\right\vert$\\
-\\
-\\
-$\Leftrightarrow$ $\left\vert \begin{array}{rccl}
+$\Rightarrow \left \vert \begin{array}{rccl}
+    1&-2&0&10\\
+    1&-1&-1& 5 \\
+\end{array}\right\vert$
+
+$\Leftrightarrow \left\vert \begin{array}{rccl}
 1&-2&0&10\\
 0&0&1&5 \\
-\end{array}\right\vert$  \qquad $\Rightarrow \mathbb{L}=\{(2t+10;t;t+5|t\in\R) \}$ \\
+\end{array}\right\vert \qquad \Rightarrow \mathbb{L} = \{ (2t+10;t;t+5|t \in \R ) \}$
 
-Auch hier wird die L"osungsmenge als n-Tupel angegeben, in Abh"angigkeit eines Faktors, dessen Wertebereich in der L"osungsmenge ebenfalls angegeben werden muss.\\\\
+Auch hier wird die Lösungsmenge als n-Tupel angegeben, in Abhängigkeit eines Faktors, dessen Wertebereich in der Lösungsmenge ebenfalls angegeben werden muss.
+
 \end{document}

@@ -48,7 +48,7 @@
 \begin{Bemerkung}
   Dieser Beweis ist weitaus intuitiver und einfacher, wenn er in der klassischen Geometrie vollführt wird, aber das Ziel ist der Beweis über Vektoren, und somit analytisch.
 \end{Bemerkung}
-\begin{Theorem}[- Umkehrung]
+\begin{Theorem}[Umkehrung]
   \begin{minipage}{0.5\textwidth}
     Falls für ein Dreieck $\Delta ABC$ gilt:\\
     $$a^2+b^2=c^2$$
@@ -82,7 +82,7 @@
 \end{Beweis}
 
 \subsection{Euklids Sätze}
-\begin{Theorem}[- Kathetensatz]
+\begin{Theorem}[Kathetensatz]
   \begin{minipage}{0.5\textwidth}
   In einem in $C$ rechtwinkligen Dreieck $\Delta ABC$ mit $h$ der Höhe zu $C$ gilt:\\
     \begin{itemize}
@@ -139,7 +139,7 @@
     \end{align*}
   \end{itemize}
 \end{Beweis}
-\begin{Theorem}[- Höhensatz]
+\begin{Theorem}[Höhensatz]
   \begin{minipage}{0.5\textwidth}
     In einem in $C$ rechtwinkligen Dreieck $\Delta ABC$ mit $h$ der Höhe zu $C$ gilt:
     $$h^2=p\cdot q$$
@@ -218,6 +218,7 @@
     \end{center}
   \end{minipage}
 \end{Theorem}
+
 \begin{Beweis}
   \begin{center}
     \begin{align*}
@@ -230,20 +231,20 @@
         |\vv{BA}| &= k\cdot |\vv{MA}|\\
         |\vv{AC}| &= k\cdot |\vv{AN}|\\
         |\vv{BC}| &= k\cdot |\vv{MN}|
-    \end{array}
+    \end{array}$
     \Leftrightarrow
     \left\{\begin{array}{rcl}
         \dfrac{|\vv{BA}|}{|\vv{MA}|} &= k\\
         \dfrac{|\vv{AC}|}{|\vv{AN}|} &= k\\
         \dfrac{|\vv{BC}|}{|\vv{MN}|} &= k
-    \end{array}
+    \end{array}$
   \end{center}
   \Leftrightarrow \dfrac{|\vv{BA}|}{|\vv{MA}|} = \dfrac{|\vv{AC}|}{|\vv{AN}|} = \dfrac{|\vv{BC}|}{|\vv{MN}|}
   \Leftrightarrow \dfrac{|\vv{MA}|}{|\vv{BA}|} = \dfrac{|\vv{AN}|}{|\vv{AC}|} = \dfrac{|\vv{MN}|}{|\vv{BC}|}
   $
 \end{Beweis}
 
-\begin{Theorem}[- Umkehrung]
+\begin{Theorem}[Umkehrung]
   \begin{minipage}{0.5\textwidth}
   Sei ein Dreieck $\Delta ABC$ mit M einem Punkt der Geraden $(AB)$ und N einem Punkt der Geraden $(AC)$. Wenn gilt:\\
   $$\dfrac{AB}{AC}=\dfrac{AM}{AN}$$
@@ -309,76 +310,80 @@
 \begin{\small}
 \begin{Beweis}
 \begin{small}
-  Anfangen kann man den den Beweis damit, dass man zwei Punkte sucht, die die Bedingung erf"ullen \textbf{und} auf der Geraden $AB$ liegen. Logisch ist, dass einer dieser Punkte zwischen $A$ und $B$ sein wird, dieser wird \textbf{innerer Teilungspunkt} $T_{i}$ genannt. Der andere Punkt liegt au"serhalb der Strecke $[AB]$ und wird \textbf{"au"serer Teilungspunkt} $T_{a}$ genannt. \\
-  Im letzten Schritt des Beweises wird man anhand des Skalarprodukts zeigen, dass f"ur alle Punkte $X$, die ebenfalls die Verh"altnisgleichung erf"ullen, die Vektoren $\vv{T_{i}X}$ und $\vv{T_{a}X}$ orthogonal zueinander sind. Somit liegen diese Punkte auf dem Thaleskreis (frz.: Theoreme du triangle rectangle) "uber $T_{i}$ und $T_{a}$, der dann \textbf{Apolliniuskreis} genannt wird.\\
+  Anfangen kann man den den Beweis damit, dass man zwei Punkte sucht, die die Bedingung erfüllen \textbf{und} auf der Geraden $AB$ liegen. Logisch ist, dass einer dieser Punkte zwischen $A$ und $B$ sein wird, dieser wird \textbf{innerer Teilungspunkt} $T_{i}$ genannt. Der andere Punkt liegt au"serhalb der Strecke $[AB]$ und wird \textbf{"au"serer Teilungspunkt} $T_{a}$ genannt. \\
+  Im letzten Schritt des Beweises wird man anhand des Skalarprodukts zeigen, dass für alle Punkte $X$, die ebenfalls die Verh"altnisgleichung erfüllen, die Vektoren $\vv{T_{i}X}$ und $\vv{T_{a}X}$ orthogonal zueinander sind. Somit liegen diese Punkte auf dem Thaleskreis (frz.: Theoreme du triangle rectangle) über $T_{i}$ und $T_{a}$, der dann \textbf{Apolliniuskreis} genannt wird.\\
 \end{small}
 \begin{enumerate}
   \item
-  Für möglichst einfache Koordinaten platziert man $A$ auf den Origo, $[AB]$ entlang der $x$-Achse, und kürzt $\overline{AB}$ mit $b$ ab. Gleicherma"sen verf"ahrt man mit den L"angen $\overline{AT_{i}}=t_{i}$ und $\overline{AT_{a}}= t_{a}$, und man f"uhrt den Punkt $X(x|y)$ ein.\\
-  Hier nochmal ein "Uberblick:
+  Für möglichst einfache Koordinaten platziert man $A$ auf den Origo, $[AB]$ entlang der $x$-Achse, und kürzt $\overline{AB}$ mit $b$ ab. Gleicherma"sen verf"ahrt man mit den L"angen $\overline{AT_{i}}=t_{i}$ und $\overline{AT_{a}}= t_{a}$, und man führt den Punkt $X(x|y)$ ein.\\
+  Hier nochmal ein überblick:
   \begin{center}
     \vartriangleright $A(0|0)$ \qquad \vartriangleright $B(b|0)$ \qquad \vartriangleright $T_{i}(t_{i}|0)$ \qquad \vartriangleright $T_{a}(t_{a}|0)$ \qquad \vartriangleright $X(x|y)$
   \end{center}
 
   \item
-  Nun gilt:\\
-  \begin{minipage}[t]{0.5\textwidth}
-  \begin{array}{rccl}
-  &$\dfrac{\overline{AT_{i}}}{\overline{T_{i}B}}$ & $=$ & $\lambda$\\
-  $\Leftrightarrow & \dfrac{t_{i}}{b-t_{i}} $& $= $& $\lambda$\\
-  $\Leftrightarrow & $t_{i}$&$=$&$\lambda \cdot b - \lambda \cdot t_{i}$\\
-  $\Leftrightarrow & \lambda \cdot t_{i} + t_{i}$ &$=$& \lambda \cdot b$\\
-  $\Leftrightarrow & (\lambda + 1)\cdot t_{i}$&$=$& $\lambda \cdot b$\\
-  $\Leftrightarrow & t_{i} $&$=$& $ \dfrac {\lambda}{\lambda +1}\cdot b$
-  \end{array}
-  \end{minipage}
-  \begin{minipage}[t]{0.5\textwidth}
-  \begin{array}{rccl}
-  &$\dfrac{\overline{AT_{a}}}{\overline{T_{a}B}} $&$ = $&$ \lambda$\\
-  $\Leftrightarrow $&$ \dfrac{t_{a}}{t_{a}-b} $&$ = $& $\lambda$\\
-  $\Leftrightarrow $&$ t_{a}$&$=$&$\lambda \cdot t_{a} - \lambda \cdot b$\\
-  $\Leftrightarrow & \lambda \cdot t_{a} - t_{a} $&$=$&$\lambda \cdot b$\\
-  $\Leftrightarrow & (\lambda -1 \cdot )t_{a} $&$=$&$\lambda \cdot b$\\
-  $\Leftrightarrow & t_{a} $&$=$&$ \dfrac{\lambda}{\lambda -1}\cdot b$\\
-  \end{array}
-  \end{minipage}\\
-  \begin{itemize}
-    \item
-    $t_{i} + t_{a} = \dfrac {\lambda}{\lambda +1}\cdot b + \dfrac {\lambda}{\lambda -1}\cdot b  =(\dfrac{\lambda}{\lambda+1} + \dfrac{\lambda}{\lambda-1})\cdot b=\dfrac{\lambda^2}{\lambda^2 -1}\cdot 2b $\qquad \textcolor{red}{(1)}
-    \item
-    $t_{i} \cdot t_{a} =\dfrac {\lambda}{\lambda +1}\cdot b \cdot \dfrac {\lambda}{\lambda +1}\cdot b =\dfrac{\lambda^2}{\lambda^2 -1}\cdot b^2$ \qquad \textcolor{red}{(2)}
-  \end{itemize}\\
-  Diese Zusammenänge werden gleich benötigt.
+    Nun gilt:
+    
+    \begin{minipage}[t]{0.5\textwidth}
+      $\begin{array}{rccl}
+        & \dfrac{\overline{AT_{i}}}{\overline{T_{i}B}} & = & \lambda \\
+         \Leftrightarrow & \dfrac{t_{i}}{b-t_{i}} & = & \lambda \\
+         \Leftrightarrow & t_{i} & = & \lambda \cdot b - \lambda \cdot t_{i} \\
+         \Leftrightarrow & \lambda \cdot t_{i} + t_{i} & = & \lambda \cdot b \\
+         \Leftrightarrow & (\lambda + 1)\cdot t_{i} & = & \lambda \cdot b \\
+         \Leftrightarrow & t_{i} & = & \dfrac {\lambda}{\lambda +1}\cdot b 
+      \end{array}$
+      \end{minipage}
+      \begin{minipage}[t]{0.5\textwidth}
+      $\begin{array}{rccl}
+        & \dfrac{\overline{AT_{a}}}{\overline{T_{a}B}} & = & \lambda \\
+        \Leftrightarrow & \dfrac{t_{a}}{t_{a}-b} & = & \lambda \\
+        \Leftrightarrow & t_{a} & = & \lambda \cdot t_{a} - \lambda \cdot b \\
+        \Leftrightarrow & \lambda \cdot t_{a} - t_{a} & = & \lambda \cdot b \\
+        \Leftrightarrow & (\lambda -1 \cdot )t_{a} & = & \lambda \cdot b \\
+        \Leftrightarrow & t_{a} & = & \dfrac{\lambda}{\lambda -1}\cdot b \\
+      \end{array}$
+    \end{minipage}
+
+    \begin{itemize}
+      \item
+      $t_{i} + t_{a} = \dfrac {\lambda}{\lambda +1}\cdot b + \dfrac {\lambda}{\lambda -1}\cdot b  =(\dfrac{\lambda}{\lambda+1} + \dfrac{\lambda}{\lambda-1})\cdot b=\dfrac{\lambda^2}{\lambda^2 -1}\cdot 2b $\qquad \textcolor{red}{(1)}
+      \item
+      $t_{i} \cdot t_{a} =\dfrac {\lambda}{\lambda +1}\cdot b \cdot \dfrac {\lambda}{\lambda +1}\cdot b =\dfrac{\lambda^2}{\lambda^2 -1}\cdot b^2$ \qquad \textcolor{red}{(2)}
+    \end{itemize}
+
+    Diese Zusammenänge werden gleich benötigt.
 
 
   \item
   Jetzt wo wir $T_{i}$ und $T_{a}$ in Abh"angigkeit von $b$ und $\lambda$ bestimmt haben, kann man die Vorraussetzung auch noch auf den Punkt $X$ anwenden.\\
-  \begin{array}{rccll}
-                    &$ \dfrac{\overline{AX}}{\overline{XB}}$        & $=$ & $\lambda$ \\
-  $\Leftrightarrow $&$ \dfrac{(\overline{AX})^2}{(\overline{XB})^2}$& $=$ & $\lambda^2$ \\
-  $\Leftrightarrow $&$ \dfrac{x^2+y^2}{(x-b)^2+y^2} $               & $=$ & $\lambda^2$ \\
-  $\Leftrightarrow $&$ x^2+y^2 $                                    & $=$ & $\lambda^2 \cdtot [(x-b)^2+y^2]$ \\
-  $\Leftrightarrow $&$ 0 $                                          & $=$ & $\lambda^2 \cdot (x-b)^2 +\lambda^2 y^2 -x^2 -y^2$\\
-                    &                                               & $=$ & $ x^2\cdot \lambda^2 - 2bx\cdot \lambda^2 +b^2\cdot \lambda^2 +y^2\cdot \lambda^2 -x^2-y^2 $ \textcolor{red}{(3)}
-  \end{array}
-  }
+  $\begin{array}{rccll}
+                      & \dfrac{\overline{AX}}{\overline{XB}}        & = & \lambda \\
+    \Leftrightarrow & \dfrac{(\overline{AX})^2}{(\overline{XB})^2}& = & \lambda^2 \\
+    \Leftrightarrow & \dfrac{x^2+y^2}{(x-b)^2+y^2}                & = & \lambda^2 \\
+    \Leftrightarrow & x^2+y^2                                     & = & \lambda^2 \cdtot [(x-b)^2+y^2] \\
+    \Leftrightarrow & 0                                           & = & \lambda^2 \cdot (x-b)^2 +\lambda^2 y^2 -x^2 -y^2 \\
+                      &                                               & = & x^2\cdot \lambda^2 - 2bx\cdot \lambda^2 +b^2\cdot \lambda^2 +y^2\cdot \lambda^2 -x^2-y^2  \textcolor{red}{(3)}
+  \end{array}$
+
 
   \item
   Jetzt prüft man auf Orthogonalität zwischen $\vv{T_{i}X} = \left(\begin{array}{c} x-t_{i} \\ y \end{array}\right); \vv{T_{a}X} = \left(\begin{array}{c} x-t_{a} \\ y \end{array}\right)$.\\
   \begin{center}
-  \begin{array}{rccl}
+  $\begin{array}{rccl}
     \vv{T_{i}X} \cdot \vv{T_{a}X} & = & (x-t_{i})\cdot (x-t_{a}) +y^2                                                                                       & \\
                                   & = & x^2 -(t_{i} +t_{a})x + t_{i}\cdot t_{a} + y^2                                                                       & \text{Benutze (1) und (2)} \\
                                   & = & x^2 - \dfrac{\lambda^2}{\lambda^2 - 1} \cdot 2bx + \dfrac{\lambda^2}{\lambda^2 - 1} \cdot b^2 +y^2                  & \\
                                   & = & \dfrac{x^2 \cdot (\lambda^2 -1) - 2bx\cdot \lambda^2 + b^2\cdot \lambda^2 + y^2 \cdot (\lambda^2 -1)}{\lambda^2 -1} & \\
                                   & = & \dfrac{x^2 \cdot \lambda^2 - 2bx\cdot \lambda^2 b^2\cdot \lambda^2 +y^2\cdot \lambda^2 -x^2 -y^2} {\lambda^2 -1}    & \text{Benutze (3)} \\
                                   & = & 0                                                                                                                   & \\
-  \end{array}
-  \end{center}\\
-  $\Rightarrow$ Man hat bewiesen, dass für alle Punkte X die Vektoren T i X und T a X orthogonal zueinan-
-der sind, weshalb sie auf dem Thaleskreis über T i und T a liegen müssen.
+  \end{array}$
+  \end{center}
+
+  $\Rightarrow$ Man hat bewiesen, dass für alle Punkte X die Vektoren T i X und T a X orthogonal zueinander sind, weshalb sie auf dem Thaleskreis über T i und T a liegen müssen.
   \end{enumerate}
 \end{Beweis}
+
 \begin{Bemerkung}
   \begin{minipage}{0.5\textwidth}
     \includegraphics[width=8cm]{kap5/Apollinius_Winkel}
@@ -387,11 +392,12 @@ der sind, weshalb sie auf dem Thaleskreis über T i und T a liegen müssen.
     Die Figur und die Zusammenh"ange, die man durch den Satz des Apollonios erhalten hat, kann man benutzen, um ein wenig mit Winkeln zu spielen:
   \end{minipage}\\
   Über diese 10 Winkel lassen sich einige Beziehungen aufstellen:\\
-  \begin{array}{rcccl}
-  $\vartriangleright \alpha + \beta + \gamma = 180 $ & $\vartriangleright \beta + \gamma_{2} + \delta_{2} = \ang{180} $ & $\vartriangleright \delta_{1} + \delta_{2} = \ang{180} $ & $\vartriangleright \alpha + \gamma + \epsilon + \zeta = \ang{180} $ &$\vartriangleright \epsilon + \zeta + \eta = \ang{180}$\\
-  $\vartriangleright \aplha + \gamma_{1} + \delta_{1} = \ang{180} $ & $\vartriangleright \gamma_{1} + \gamma_{2} = \gamma $ & $\vartriangleright \gamma_{2} + \epsilon = \ang{90} $ & $\vartriangleright \beta + \eta = \ang{180} $ &$\vartriangleright \gamma_{2} + \delta_{2} + \epsilon + \zeta = \ang{180}$
-  \end{array}
-  \\
-  Löst man dieses Gleichungssystem, erhält man $\gamma_{1} = \gamma_{2}$, was bedeutet, dass die Gerade $T_{i}X$ Winkelhalbierende des Winkels $\gamma = \angle AXB$ ist:
+  $\begin{array}{rcccl}
+    \vartriangleright \alpha + \beta + \gamma = 180  & \vartriangleright \beta + \gamma_{2} + \delta_{2} = \ang{180}  & \vartriangleright \delta_{1} + \delta_{2} = \ang{180}  & \vartriangleright \alpha + \gamma + \epsilon + \zeta = \ang{180}  &\vartriangleright \epsilon + \zeta + \eta = \ang{180}\\
+    \vartriangleright \aplha + \gamma_{1} + \delta_{1} = \ang{180}  & \vartriangleright \gamma_{1} + \gamma_{2} = \gamma  & \vartriangleright \gamma_{2} + \epsilon = \ang{90}  & \vartriangleright \beta + \eta = \ang{180}  &\vartriangleright \gamma_{2} + \delta_{2} + \epsilon + \zeta = \ang{180}
+  \end{array}$
+  
+  Löst man dieses Gleichungssystem, erhält man $\gamma_{1} = \gamma_{2}$, was bedeutet, dass die Gerade $T_{i}X$ Winkelhalbierende des Winkels $\gamma = \angle AXB$ ist.
 \end{Bemerkung}
+
 \end{small}

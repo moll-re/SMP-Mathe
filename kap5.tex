@@ -16,25 +16,25 @@
 
 
     \subsection{Besondere Vektoren}
-      \begin{Definition}[- Der Ortsvektor]
+      \begin{Definition}[Der Ortsvektor]
         Der Vektor von $O$ auf den Punkt $P$, geschrieben als $\vv{OP}$ oder $\vv{p}$.
         
         Hat $P$ die Koordinaten $(P_1|P_2|...|P_n)$, so besitzt $\vv{p}$ die Darstellung $\left(\begin{array}{c} P_1 \\ P_2 \\ ...\\P_n\end{array}\right)$.
       \end{Definition}
 
-      \begin{Definition}[- Der Nullvektor]
+      \begin{Definition}[Der Nullvektor]
         Der Vektor mit Wert $\left(\begin{array}{c} 0 \\ 0 \\ ...\\0\end{array}\right)$, er hat keine und alle Richtungen zugleich.
       \end{Definition}
       \begin{Bemerkung}
         Er ist somit das neutrale Element der Vektoraddition.
       \end{Bemerkung}
 
-      \begin{Definition}[- Der Verbindingsvektor]
+      \begin{Definition}[Der Verbindingsvektor]
         Der Vektor $\vv{AB}$ ist der Vektor, der den Punkt $A$ auf den Punkt $B$ abbildet. Er ist definiert als:\\ $\vv{AB}=\vv{b}-\vv{a}$,
         woraus folgt, dass: \begin{center} $\vv{AB} = \left(\begin{array}{c} b_1 - a_1 \\ b_2 - a_2 \\ ... \\ b_n - a_n \end{array}\right)$. \end{center}
       \end{Definition}
 
-      \begin{Definition}[- Der Gegenvektor]
+      \begin{Definition}[Der Gegenvektor]
         Der Gegenvektor zu $\vv{AB}$ ist $\vv{BA}$, definiert als  $-\vv{AB}$.\\
 
       \end{Definition}
@@ -44,12 +44,12 @@
       \end{Bemerkung}
 
       \begin{Bemerkung}
-        \begin{Definition}[- Norm eines Vektors]
+        \begin{Definition}[Norm eines Vektors]
         Die Norm eines Vektors ist anschaulich als seine Länge zu interpretieren. Der Betrag, wie sie ebenfalls genannt wird, eines
          Vektors $\vv{v}$ ist folgendermaßen definiert: $\text{|}\vv{v}\text{|} = \sqrt{\displaystyle\sum_{i=1}^{n}v_{i}^2} ; \vv{v}\in\R^n$.
         \end{Definition}
         \begin{minipage}{0.5\textwidth}
-          \begin{tikzpicture}[>= trianle 45]
+          \begin{tikzpicture}[>= triangle 45]
             \draw[dashed, ->] (0,0,0) -- (0,0,3);
             \draw[dashed, ->] (0,0,0) -- (5,0,0);
             \draw[dashed, ->] (0,0,0) -- (0,3,0);
@@ -73,7 +73,7 @@
         \end{minipage}
       \end{Bemerkung}
 
-      \begin{Definition}[- Der Einheitsvektor]
+      \begin{Definition}[Der Einheitsvektor]
         Ein Vektor, dessen Norm 1 beträgt wird als normiert oder Einheitsvektor bezeichnet. Für jeden Vektor $\vv{v}\in\R^{3}$ existiert ein Einheitsvektor $\vv{v^{*}}$ , der folgendermaßen definiert wird: $\vv{v^{*}}=\dfrac{1}{\text{|}\vv{v}\text{|}}*\vv{v}$.
       \end{Definition}
 
@@ -83,98 +83,93 @@
 \section{Basen und Erzeugendensystem}
 
     \begin{Definition}
-      Eine endliche Anzahl von Vektoren $\vv{a_1},\vv{a_2},...,\vv{a_n}\in V$ heißt Erzeugendensystem, wenn sich \texbf{jeder} Vektor $\vv{v}\in V$
+      Eine endliche Anzahl von Vektoren $\vv{a_1},\vv{a_2},...,\vv{a_n}\in V$ heißt Erzeugendensystem, wenn sich \textbf{jeder} Vektor $\vv{v}\in V$
       als Linearkombination dieser Vektoren schreiben lässt. Um ein Erzeugendensystem zu bilden benötigt man mindestens die Anzahl Vektoren, die der Anzahl von Dimensionen von $\vv{v}$ entspricht. Wenn man \textbf{genau} diese Anzahl besitzt, spricht man von einer Basis.
     \end{Definition}
 
     \subsection{Besondere Basen}
 
 
-        \begin{Definition}[- Orthogonalbasis]
+        \begin{Definition}[Orthogonalbasis]
           Sind die Vektoren der Basis paarweise orthogonal zueinander, so spricht man von einer \textbf{Orthogonalbasis}.
         \end{Definition}
 
 
 
-        \begin{Definition}[- Orthonormalbasis]
+        \begin{Definition}[Orthonormalbasis]
           Sind die Vektoren zusätzlich zu dieser Bedingung normiert, wird sie als \textbf{Orthonormalbasis} bezeichnet.
-          Die einfachste und meist benutzte Basis des $\R^3$ besteht aus den drei Vektoren $\vv{e_1}=\left(\begin{array}{c}{1\\0\\0}\end{array}\right),
-          \vv{e_2}=\left(\begin{array}{c}{0\\1\\0}\end{array}\right),\vv{e_3}=\left(\begin{array}{c}{0\\0\\1}\end{array}\right)$. Sie wird als \textbf{Standardbasis}
-          des $\R^3$ bezeichnet. Vektoren wie $\vv{v}=\left(\begin{array}{c}{2\\3\\8}\end{array}\right)$ lassen sich als eine Linearkombination der drei
-          Vektoren der Standardbasis darstellen: $\vv{v}=2\cdot\vv{e_1}+3\cdot\vv{e_2}+8\cdot\vv{e_3}$.
+          Die einfachste und meist benutzte Basis des $\R^3$ besteht aus den drei Vektoren
+          $\vv{e_1}=\left (\begin{array}{c}
+            1\\0\\0
+          \end{array} \right ), \vv{e_2} = \left ( \begin{array}{c}
+            0\\1\\0
+          \end{array} \right ),\vv{e_3}= \left ( \begin{array}{c}
+            0\\0\\1
+          \end{array} \right )$.
+          Sie wird als \textbf{Standardbasis} des $\R^3$ bezeichnet. Vektoren wie $\vv{v}=\left (\begin{array}{c}{2\\3\\8}\end{array} \right )$ lassen sich als eine Linearkombination der drei Vektoren der Standardbasis darstellen: $\vv{v}=2\cdot\vv{e_1}+3\cdot\vv{e_2}+8\cdot\vv{e_3}$.
         \end{Definition}
 
 
     \subsection{Basistransformation}
 
-        \begin{Theorem}[- Basistransformation]
+        \begin{Theorem}[Basistransformation]
             Bilden die Vektoren $\vv{a_1},\vv{a_2},...,\vv{a_n}$ eine Basis des $n$-dimensionalen Vektorraums $V$ und sei der Vektor
-             $\vv{v}=\left(\begin{array}{c}{v_1\\v_2\\...\\v_n}\end{array}\right);\vv{v}\in V$. Dann gilt wie üblich:
+             $\vv{v}=\left (\begin{array}{c}v_1\\v_2\\...\\v_n\end{array}\right );\vv{v}\in V$. Dann gilt wie üblich:
              $\vv{v}=v_1\cdot\vv{a_1}+v_2\cdot\vv{a_2}+...+v_n\cdot\vv{a_n}$. Sei eine weitere Basis $\vv{b_1},\vv{b_2},...,\vv{b_n}$ des selben Vektorraumes,
-              so besitzt der Vektor $\vv{v}$ andere Koordinaten: $\vv{v}=\left(\begin{array}{c}{v'_1\\v'_2\\...\\v'_n}\end{array}\right)$.
+              so besitzt der Vektor $\vv{v}$ andere Koordinaten: $\vv{v}=\left(\begin{array}{c}v'_1\\v'_2\\...\\v'_n\end{array}\right)$.
               Dabei muss gelten: $\vv{v}=v_1\cdot\vv{a_1}+v_2\cdot\vv{a_2}+...+v_n\cdot\vv{a_n}=v'_1\cdot\vv{b_1}+v'_2\cdot\vv{b_2}+...+v'_n\cdot\vv{b_n}$.
         \end{Theorem}
-        \\
+
         \begin{Bemerkung}
-            \\
             Um die Koordinaten eines Vektors in einer anderen Basis als der Aktuellen zu bestimmen, löst man diese Gleichung, die sich ergibt.
         \end{Bemerkung}
 
         \begin{Beispiel}
             Basis 1: Standardbasis des $\R^3$, Basis 2:
-            $\vv{b_1}=\left(\begin{array}{c}{4\\9\\-1}\end{array}\right), \vv{b_2}=\left(\begin{array}{c}{-2\\-2\\8}\end{array}\right),
-            \vv{b_3}=\left(\begin{array}{c}{1\\3\\1}\end{array}\right)$, Vektor $\vv{v}=\left(\begin{array}{c}{-5\\3\\2}\end{array}\right)$ (in der Standardbasis des $\R^3$)
-            \\
+            $\vv{b_1}=\left (\begin{array}{c}{4\\9\\-1}\end{array}\right ), \vv{b_2}=\left (\begin{array}{c}{-2\\-2\\8}\end{array}\right ),
+            \vv{b_3}=\left (\begin{array}{c}{1\\3\\1}\end{array}\right )$, Vektor $\vv{v}=\left (\begin{array}{c}{-5\\3\\2}\end{array}\right )$ (in der Standardbasis des $\R^3$)
+
             $\vv{v}=-5\cdot\vv{a_1}+3\cdot\vv{a_2}+2\cdot\vv{a_3}=r\cdot\vv{b_1}+s\cdot\vv{b_2}+t\cdot\vv{b_3}$
-            \\
-            \\
+
             $\Leftrightarrow \begin{vmatrix}4r & -2s & t & = & -5 \\
                                             9r & -2s & 3t & = & 3 \\
                                             -r & 8s & t & = & 2
                             \end{vmatrix}
-             \\
              \\
              \Leftrightarrow \begin{vmatrix}-r & 8s & t & = & 2 \\
                                             0 & 30s & 5t & = & 3 \\
                                             0 & 70s & 12t & = & 21
                              \end{vmatrix}
              \\
-             \\
              \Leftrightarrow \begin{vmatrix}-r & 8s & t & = & 2 \\
                                             0 & 30s & 5t & = & 3 \\
                                             0 & 0 & \frac{1}{3}\cdot t & = & 14
                              \end{vmatrix}
-             \\
              \\
              \Leftrightarrow \begin{vmatrix}r & = & -15.2 \\
                                             s & = & -6.9 \\
                                             t & = & 42
                              \end{vmatrix}
             \\
-            \\
             \Rightarrow \mathbb{L}=\{ -15.2|-6.9|42 \}$
-            \\
-            Daraus lässt sich folgern: $\vv{v}=-15.2\cdot\vv{b_1}-6.9\cdot\vv{b_2}+42\cdot\vv{b_3}=\left(\begin{array}{c}{-15.2\\-6.9\\42}\end{array}\right)$
-             (in der anderen Basis).
-            \\
 
+            Daraus lässt sich folgern: $\vv{v}=-15.2\cdot\vv{b_1}-6.9\cdot\vv{b_2}+42\cdot\vv{b_3}=\left (\begin{array}{c}{-15.2\\-6.9\\42}\end{array}\right )$ (in der anderen Basis).
         \end{Beispiel}
 
 
 
 \section{Winkel zwischen Vektoren}
 
-    \begin{Definition}[- Winkel zwischen zwei Vektoren]
+    \begin{Definition}[Winkel zwischen zwei Vektoren]
         Unter einem Winkel zwischen zwei Vektoren versteht man den Winkel, der ensteht, wenn man beide Vektoren an einen \textbf{gemeinsamen Startpunkt} verschiebt ohne dabei ihre Ausrichtung zu verändern.
     \end{Definition}
 
 
     \subsection{Orientierte Winkel}
 
-        \begin{Definition}[- Mathematisch positiver Sinn]
+        \begin{Definition}[Mathematisch positiver Sinn]
             Winkel werden in der Mathematik zumeist im \textbf{mathematisch positiven Sinn} angegeben, welcher dem Uhrzeigersinn entgegengesetzt verläuft.
         \end{Definition}
-        \\
 
         \begin{minipage}{0.5\textwidth}
           \definecolor{qqwuqq}{rgb}{0,0.4,0}
@@ -198,6 +193,7 @@
 
         \begin{minipage}{0.5\textwidth}
           \definecolor{ududff}{rgb}{0.3,0.3,1}
+          \definecolor{qqwuqq}{rgb}{0,0.4,0}
           \definecolor{adadff}{rgb}{0.8,0.8,0}
           \begin{tikzpicture}[>=triangle 45]
               \draw [line width=0.8pt,color=adadff,fill=adadff,fill opacity=0.1] (0,0) -- (1.3,-0.75) arc (-30:30:1.5) -- cycle;
@@ -219,13 +215,13 @@
          So ergibt sich $\alpha = \angle ABC = \angle ac = (\vv{BA},\vv{BC}) = \frac{\pi}{3}$. Ein Winkel $\alpha$ wird zudem meist derart angegeben, dass $\alpha \in [-\pi,\pi]$ oder $\alpha \in [0, 2\pi]$ gilt. Dies bedeutet, dass man nur Winkel zwischen $0°$ und $180°$ erhält, im mathematisch positiven und negativen Sinn. Diese Einschränkung kennzeichnet man mit dem Ausdruck \glqq \textbf{modulo $2\pi$}\grqq.
 
 
-    \subsection{Rechnungen mit Winkeln}
+\subsection{Rechnungen mit Winkeln}
 
         Bei Berechnungen von Winkeln zwischen Vektoren geht man genau wie in der elementaren Geometrie vor.
          So wird die Differenz zwischen zwei Winkeln $\theta_{1}$ und $\theta_{2}$ wie gehabt berechnet: $\Delta\theta = \theta_{1} - \theta_{2}$.
          Jedoch benötigt man weitere Rechenregeln, um mit Winkeln rechnen zu können.
         \\
-        \begin{Theorem}[- Relation de Chasles]
+        \begin{Theorem}[Relation de Chasles]
             $(\vv{u},\vv{w})+(\vv{w},\vv{v})=(\vv{u},\vv{v});\quad modulo\quad 2\pi$ \\\\
             \underline{Umformungen}: \\
             \begin{enumerate}[(1)]
@@ -342,19 +338,20 @@
     Diese Verknüpfung zwischen zwei beliebigen Vektoren $\vv{v}$ und $\vv{u}$ erfolgt, wie auch schon im Teil Verbindungsvektor gezeigt wird, wie
     folgt: $\vv{v}+\vv{u}=\left(\begin{array}{c}{v_1+u_1 \\ v_2+u_2 \\ ... \\ v_n+u_n}\end{array}\right)$. Anschaulich wird $\vv{u}$ an $\vv{v}$
     angehängt und der Schaft von $\vv{v}$ mit der Spitze von $\vv{u}$ verbunden, um den neuen Vektor zu bilden.
-    \\
+    
     \begin{Definition}
         Eine Familie von Vektoren $\vv{a_1},\vv{a_2},...,\vv{a_n}\in V$ wird als linear abhängig bezeichnet, wenn die Gleichung:
-         \\$r_1\cdot\vv{a_1}+r_2\cdot\vv{a_2}+...+r_n\cdot\vv{a_n}=\vv{0};r_i\in\R$ nicht nur die triviale Lösung $r_1=r_2=...=r_n=0$ besitzt.
-         Existiert nur diese Lösung, ist die Familie linear unabhägig.
+         
+        $r_1\cdot\vv{a_1}+r_2\cdot\vv{a_2}+...+r_n\cdot\vv{a_n}=\vv{0};r_i\in\R$ nicht nur die triviale Lösung $r_1=r_2=...=r_n=0$ besitzt.
+        Existiert nur diese Lösung, ist die Familie linear unabhägig.
     \end{Definition}
+
     Anders gesagt, ist eine Familie von Vektoren linear abhängig, wenn sich einzelne Vektoren dieser Familie als Linearkombination von
     einer beliebigen Anzahl anderer Vektoren der Familie darstellen lassen.
-    \\
+    
     \begin{Bemerkung}
-        \\
         Eine linear abhängige Familie \textbf{aus genau zwei} Vektoren wird als kollinear bezeichnet.
-        \\
+        
         Eine linear abhängige Familie \textbf{aus genau drei} Vektoren dagegen nennt man komplanar.
     \end{Bemerkung}
 
@@ -652,31 +649,31 @@
 
             \begin{tikzpicture}[>=triangle 45]
                 \draw (0,0) node{$\exists t\in\R\quad\textcolor{red}{\vv{u_1}} = t\cdot\textcolor{red}{\vv{u_2}}?$};
-                \draw [line width=0.8pt,color=grey] (-5,-0.3) -- (-4,-0.3);
-                \draw [line width=0.8pt,color=grey] (-3.1,-0.3) -- (3.1,-0.3);
-                \draw [line width=0.8pt,color=grey] (4,-0.3) -- (5,-0.3);
+                \draw [line width=0.8pt,color=gray] (-5,-0.3) -- (-4,-0.3);
+                \draw [line width=0.8pt,color=gray] (-3.1,-0.3) -- (3.1,-0.3);
+                \draw [line width=0.8pt,color=gray] (4,-0.3) -- (5,-0.3);
                 \draw (-3.55,-0.3) node {$\exists t$};
                 \draw (3.55,-0.3) node {$\nexists t$};
-                \draw [->,line width=0.8pt,color=grey](-5,-0.3) -- (-5,-2) node[below]{$g\parallel h$};
-                \draw [->,line width=0.8pt,color=grey](5,-0.3) -- (5,-2) node[below]{$g\nparallel h$};
+                \draw [->,line width=0.8pt,color=gray](-5,-0.3) -- (-5,-2) node[below]{$g\parallel h$};
+                \draw [->,line width=0.8pt,color=gray](5,-0.3) -- (5,-2) node[below]{$g\nparallel h$};
                 \draw (-5,-2.8) node{$\textcolor{blue}{Q_1}\in h \lor \textcolor{blue}{Q_2}\in g?$};
                 \draw (5,-2.8) node{$\exists r,s\in\R \quad g = h\quad\Leftrightarrow\quad\textcolor{blue}{\vv{q_1}} + s\cdot\textcolor{red}{\vv{u_1}} = \textcolor{blue}{\vv{q_2}} + r\cdot\textcolor{red}{\vv{u_2}}?$};
-                \draw [line width=0.8pt,color=grey] (-5,-3) -- (-5,-4);
-                \draw [line width=0.8pt,color=grey] (5,-3) -- (5,-4);
-                \draw [line width=0.8pt,color=grey] (-8,-4) -- (-7.6,-4);
-                \draw [line width=0.8pt,color=grey] (-6.9,-4) -- (-3.1,-4);
-                \draw [line width=0.8pt,color=grey] (-2.4,-4) -- (-2,-4);
-                \draw [line width=0.8pt,color=grey] (8,-4) -- (7.75,-4);
-                \draw [line width=0.8pt,color=grey] (6.75,-4) -- (3.25,-4);
-                \draw [line width=0.8pt,color=grey] (2.25,-4) -- (2,-4);
+                \draw [line width=0.8pt,color=gray] (-5,-3) -- (-5,-4);
+                \draw [line width=0.8pt,color=gray] (5,-3) -- (5,-4);
+                \draw [line width=0.8pt,color=gray] (-8,-4) -- (-7.6,-4);
+                \draw [line width=0.8pt,color=gray] (-6.9,-4) -- (-3.1,-4);
+                \draw [line width=0.8pt,color=gray] (-2.4,-4) -- (-2,-4);
+                \draw [line width=0.8pt,color=gray] (8,-4) -- (7.75,-4);
+                \draw [line width=0.8pt,color=gray] (6.75,-4) -- (3.25,-4);
+                \draw [line width=0.8pt,color=gray] (2.25,-4) -- (2,-4);
                 \draw (-7.25,-4) node{$\in$};
                 \draw (-2.75,-4) node{$\notin$};
                 \draw (7.25,-4) node{$\nexists r,s$};
                 \draw (2.75,-4) node{$\exists r,s$};
-                \draw [->,line width=0.8pt,color=grey] (-8,-4) -- (-8,-5) node[below]{$g\equiv h$};
-                \draw [->,line width=0.8pt,color=grey] (-2,-4) -- (-2,-5) node[below]{$g\parallel h$};
-                \draw [->,line width=0.8pt,color=grey] (2,-4) -- (2,-5) node[below]{$g\cap h = I$};
-                \draw [->,line width=0.8pt,color=grey] (8,-4) -- (8,-5) node[below]{$g\cap h = \varnothing$};
+                \draw [->,line width=0.8pt,color=gray] (-8,-4) -- (-8,-5) node[below]{$g\equiv h$};
+                \draw [->,line width=0.8pt,color=gray] (-2,-4) -- (-2,-5) node[below]{$g\parallel h$};
+                \draw [->,line width=0.8pt,color=gray] (2,-4) -- (2,-5) node[below]{$g\cap h = I$};
+                \draw [->,line width=0.8pt,color=gray] (8,-4) -- (8,-5) node[below]{$g\cap h = \varnothing$};
             \end{tikzpicture}
         \end{center}
 
@@ -697,7 +694,7 @@
         \underline{\textbf{Orthogonalität}}:
             Da die Norm des Verbindungsvektors gesucht wird, gilt es nun diesen eindeutig zu bestimmen. Folgender Ablauf führt
             zum Ziel:
-                \begin{enumerate}[1)]
+                \begin{enumerate}
                     \item \label{a} Punkt L auf der Geraden $g$ in Abhängigkeit des Faktors des Richtungsvektors bestimmen:
                     \begin{center}
                         $\vv{l} = \left(\begin{array}{c}{\textcolor{blue}{q_1}+t\cdot \textcolor{red}{u_1}\\\textcolor{blue}{q_2}+t\cdot \textcolor{red}{u_2}\\\textcolor{blue}{q_3}+t\cdot \textcolor{red}{u_3}}\end{array}\right)$
@@ -728,7 +725,7 @@
         \\
         \underline{\textbf{Hilfsebene}}:
             Diese Methode hat sich Platz zwei erkämpft:
-                \begin{enumerate}[1)]
+                \begin{enumerate}
                     \item Hilfsebene $E$ bestimmen ($\vv{n}\equiv\textcolor{red}{\vv{u}}\quad P\in E$, da die Gerade $g$ die Ebene im rechten Winkel durchstößt und
                     der Verbindungsvektor somit orthogonal zur Geraden ist):
                     \begin{align*}
@@ -748,7 +745,7 @@
         \\
         \underline{\textbf{Grenzwertberechnung}}:
             Zu guter Letzt wollen wir die Analysis Fanatiker befriedigen:
-                \begin{enumerate}[1)]
+                \begin{enumerate}
                     \item Siehe Schritt \ref{a} Orthogonalität
                     \item Siehe Schritt \ref{b} Orthogonalität
                     \item Norm des Vektors in Abhängigkeit von t bestimmen:
@@ -933,7 +930,7 @@
             Ebenen lassen sich auch mittels \textbf{Spurpunkten} und \textbf{Spurgeraden} lokalisieren. Spurpunkte sind die
             der Achsen des Koordinatensystems, welche in der Ebene enthalten sind. Aus diesen lassen sich anschließend die Spurgeraden bilden
             (durch Verbinden der Punkte). Folgende Möglichkeiten bieten sich an:
-            \begin{enumerate}[1)]
+            \begin{enumerate}
                 \item 3 Spurpunkte
                 \item $\text{2 Spurpunkte } \Rightarrow E \parallel \vv{x_1} \lor E \parallel \vv{x_2} \lor E \parallel \vv{x_3}$
                 \item $\text{1 Spurpunkt } \Rightarrow E \parallel E_{x_{1}x_2} \lor E \parallel E_{x_{2}x_3} \lor E \parallel E_{x_{1}x_3}$
@@ -969,7 +966,7 @@
             \end{tikzpicture}
         \end{center}
 
-        \begin{enumerate}[1)]
+        \begin{enumerate}
             \item Siehe oben
             \item $\textcolor{red}{\vv{n}}$ aus den einzelnen Faktoren herausarbeiten $\land \text{ Per Punktprobe (Koordinaten
             einsetzen)} \\ \text{einen Punkt $\textcolor{blue}{Q}$ von $E$ ermitteln}$
@@ -1069,22 +1066,22 @@
         \begin{center}
             \begin{tikzpicture}[>=triangle 45,scale=0.6]
                 \draw (0,0) node{$\textcolor{red}{\vv{n}} \odot \textcolor{red}{\vv{u}} = 0?$};
-                \draw [line width=0.8pt,color=grey] (-5,-0.3) -- (-4,-0.3);
-                \draw [line width=0.8pt,color=grey] (-3.1,-0.3) -- (3.1,-0.3);
-                \draw [line width=0.8pt,color=grey] (4,-0.3) -- (5,-0.3);
+                \draw [line width=0.8pt,color=gray] (-5,-0.3) -- (-4,-0.3);
+                \draw [line width=0.8pt,color=gray] (-3.1,-0.3) -- (3.1,-0.3);
+                \draw [line width=0.8pt,color=gray] (4,-0.3) -- (5,-0.3);
                 \draw (-3.55,-0.3) node {$=$};
                 \draw (3.55,-0.3) node {$\neq$};
-                \draw [->,line width=0.8pt,color=grey](-5,-0.3) -- (-5,-2) node[below]{$E\parallel g$};
-                \draw [->,line width=0.8pt,color=grey](5,-0.3) -- (5,-2) node[below]{$E\cap g = I$};
+                \draw [->,line width=0.8pt,color=gray](-5,-0.3) -- (-5,-2) node[below]{$E\parallel g$};
+                \draw [->,line width=0.8pt,color=gray](5,-0.3) -- (5,-2) node[below]{$E\cap g = I$};
                 \draw (-5,-2.8) node{$\textcolor{blue}{Q_g}\in E \lor \textcolor{blue}{Q_E}\in g?$};
-                \draw [line width=0.8pt,color=grey] (-5,-3) -- (-5,-4);
-                \draw [line width=0.8pt,color=grey] (-8,-4) -- (-7.6,-4);
-                \draw [line width=0.8pt,color=grey] (-6.9,-4) -- (-3.1,-4);
-                \draw [line width=0.8pt,color=grey] (-2.4,-4) -- (-2,-4);
+                \draw [line width=0.8pt,color=gray] (-5,-3) -- (-5,-4);
+                \draw [line width=0.8pt,color=gray] (-8,-4) -- (-7.6,-4);
+                \draw [line width=0.8pt,color=gray] (-6.9,-4) -- (-3.1,-4);
+                \draw [line width=0.8pt,color=gray] (-2.4,-4) -- (-2,-4);
                 \draw (-7.25,-4) node{$\in$};
                 \draw (-2.75,-4) node{$\notin$};
-                \draw [->,line width=0.8pt,color=grey] (-8,-4) -- (-8,-5) node[below]{$g\in E$};
-                \draw [->,line width=0.8pt,color=grey] (-2,-4) -- (-2,-5) node[below]{$E\parallel g$};
+                \draw [->,line width=0.8pt,color=gray] (-8,-4) -- (-8,-5) node[below]{$g\in E$};
+                \draw [->,line width=0.8pt,color=gray] (-2,-4) -- (-2,-5) node[below]{$E\parallel g$};
             \end{tikzpicture}
         \end{center}
 
@@ -1095,7 +1092,7 @@
         Zwei Ebenen $E_1$ und $E_2$ können ebenfalls:\\
         \begin{minipage}[t]{0.5\textwidth}
         \begin{left}
-            \quad 1)\text{...\textbf{parallel} sein...}
+            \quad \text{1. ...\textbf{parallel} sein...}
         \end{left}
         \begin{center}
             \begin{tikzpicture}[>=triangle 45,scale=0.6]
@@ -1113,7 +1110,7 @@
         \end{minipage}
         \begin{minipage}[t]{0.5\textwidth}
         \begin{left}
-            \quad 2)\text{...\textbf{identisch} sein}
+            \quad \text{2. ...\textbf{identisch} sein}
         \end{left}
         \begin{center}
             \begin{tikzpicture}[>=triangle 45,scale=0.5]
@@ -1133,7 +1130,7 @@
         \begin{center}
         \begin{minipage}[t]{0.5\textwidth}
         \begin{left}
-            \quad 3)\text{ } ...\textbf{sich schneiden}
+            \quad \text{3.  ...\textbf{sich schneiden}}
         \end{left}
         \begin{center}
             \begin{tikzpicture}[>=triangle 45,scale=0.6]
@@ -1160,30 +1157,29 @@
         \begin{center}
             \begin{tikzpicture}[>=triangle 45]
                 \draw (0,0) node{$\exists t\in\R\quad\textcolor{red}{\vv{n_1}} = t\cdot\textcolor{red}{\vv{n_2}}?$};
-                \draw [line width=0.8pt,color=grey] (-5,-0.3) -- (-4,-0.3);
-                \draw [line width=0.8pt,color=grey] (-3.1,-0.3) -- (3.1,-0.3);
-                \draw [line width=0.8pt,color=grey] (4,-0.3) -- (5,-0.3);
+                \draw [line width=0.8pt,color=gray] (-5,-0.3) -- (-4,-0.3);
+                \draw [line width=0.8pt,color=gray] (-3.1,-0.3) -- (3.1,-0.3);
+                \draw [line width=0.8pt,color=gray] (4,-0.3) -- (5,-0.3);
                 \draw (-3.55,-0.3) node {$\exists t$};
                 \draw (3.55,-0.3) node {$\nexists t$};
-                \draw [->,line width=0.8pt,color=grey](-5,-0.3) -- (-5,-2) node[below]{$E_1\parallel E_2$};
-                \draw [->,line width=0.8pt,color=grey](5,-0.3) -- (5,-2) node[below]{$E_1\cap E_2 = g;g:\vv{x}=\vv{q} + r \cdot \vv{u};r\in\R$};
-                \draw (-5,-2.8) node{$\textcolor{blue}{Q_E_2}\in E_1 \lor \textcolor{blue}{Q_E_1}\in E_2?$};
-                \draw [line width=0.8pt,color=grey] (-5,-3) -- (-5,-4);
-                \draw [line width=0.8pt,color=grey] (-8,-4) -- (-7.6,-4);
-                \draw [line width=0.8pt,color=grey] (-6.9,-4) -- (-3.1,-4);
-                \draw [line width=0.8pt,color=grey] (-2.4,-4) -- (-2,-4);
+                \draw [->,line width=0.8pt,color=gray](-5,-0.3) -- (-5,-2) node[below]{$E_1\parallel E_2$};
+                \draw [->,line width=0.8pt,color=gray](5,-0.3) -- (5,-2) node[below]{$E_1\cap E_2 = g;g:\vv{x}=\vv{q} + r \cdot \vv{u};r\in\R$};
+                \draw (-5,-2.8) node{$\textcolor{blue}{Q_E_2}\in E_1 \lor \textcolor{blue}{Q_{E_1}}\in E_2?$};
+                \draw [line width=0.8pt,color=gray] (-5,-3) -- (-5,-4);
+                \draw [line width=0.8pt,color=gray] (-8,-4) -- (-7.6,-4);
+                \draw [line width=0.8pt,color=gray] (-6.9,-4) -- (-3.1,-4);
+                \draw [line width=0.8pt,color=gray] (-2.4,-4) -- (-2,-4);
                 \draw (-7.25,-4) node{$\in$};
                 \draw (-2.75,-4) node{$\notin$};
-                \draw [->,line width=0.8pt,color=grey] (-8,-4) -- (-8,-5) node[below]{$E_1\equiv E_2$};
-                \draw [->,line width=0.8pt,color=grey] (-2,-4) -- (-2,-5) node[below]{$E_1\parallel E_2$};
+                \draw [->,line width=0.8pt,color=gray] (-8,-4) -- (-8,-5) node[below]{$E_1\equiv E_2$};
+                \draw [->,line width=0.8pt,color=gray] (-2,-4) -- (-2,-5) node[below]{$E_1\parallel E_2$};
             \end{tikzpicture}
         \end{center}
-        \\
-        \\
+
         Für die Berechnung der Schnittgeraden gibt es unterschiedliche Ansätze abhängig von der
         Ausgangssituation, welche durch die zwei möglichen Darstellungsweisen von Ebenen bedingt sind. Drei mögliche
         Fälle können auftreten:
-        \begin{enumerate}[1)]
+        \begin{enumerate}
             \item $E_1:\textcolor{red}{n_1} \cdot x_1 + \textcolor{red}{n_2} \cdot x_2 + \textcolor{red}{n_3} \cdot x_3 = \textcolor{purple}{d} ; \quad \textcolor{purple}{d} = \textcolor{red}{n_1} \cdot \textcolor{blue}{q_1} + \textcolor{red}{n_2} \cdot \textcolor{blue}{q_2} + \textcolor{red}{n_3} \cdot \textcolor{blue}{q_3} \text{ } \land \text{ } E_2:\textcolor{red}{n_1} \cdot x_1 + \textcolor{red}{n_2} \cdot x_2 + \textcolor{red}{n_3} \cdot x_3 = \textcolor{purple}{d} ; \quad \textcolor{purple}{d} = \textcolor{red}{n_1} \cdot \textcolor{blue}{q_1} + \textcolor{red}{n_2} \cdot \textcolor{blue}{q_2} + \textcolor{red}{n_3} \cdot \textcolor{blue}{q_3}$
             \item $E_1:\textcolor{red}{n_1} \cdot x_1 + \textcolor{red}{n_2} \cdot x_2 + \textcolor{red}{n_3} \cdot x_3 = \textcolor{purple}{d} ; \quad \textcolor{purple}{d} = \textcolor{red}{n_1} \cdot \textcolor{blue}{q_1} + \textcolor{red}{n_2} \cdot \textcolor{blue}{q_2} + \textcolor{red}{n_3} \cdot \textcolor{blue}{q_3} \text{ } \land \text{ } E_2:\vv{x}=\textcolor{blue}{\vv{p}} + s\cdot \textcolor{red}{\vv{u}} + t\cdot \textcolor{red}{\vv{v}};\quad s,t\in\R$
             \item $E_1:\vv{x}=\textcolor{blue}{\vv{p}} + s\cdot \textcolor{red}{\vv{u}} + t\cdot \textcolor{red}{\vv{v}};\quad s,t\in\R \text{ } \land \text{ } E_2:\vv{x}=\textcolor{blue}{\vv{p}} + s\cdot \textcolor{red}{\vv{u}} + t\cdot \textcolor{red}{\vv{v}};\quad s,t\in\R$
@@ -1197,7 +1193,7 @@
         $\cos(\alpha)=\dfrac{\vv{v}\odot\vv{u}}{|\vv{v}|\cdot|\vv{u}|}$. Hierbei soll erneut hervorgehoben werden, dass
         der Winkel der "kleinere"  der beiden möglichen ist. Den anderen erhält man in Abhängigkeit des ersten.
         Daraus lässt sich ableiten wie zwei Geraden oder Ebenen oder auch eine Gerade und eine Ebene zueinander stehen:
-        \begin{enumerate}[1)]
+        \begin{enumerate}
             \item Geraden: $\cos(\alpha) = \dfrac{\textcolor{red}{\vv{u_1}} \odot \textcolor{red}{\vv{u_2}}} {|\textcolor{red}{\vv{u_1}}| \cdot |\textcolor{red}{\vv{u_2}}|}$
             \item Ebenen: $\cos(\alpha) = \dfrac{\textcolor{orange}{\vv{n_1}} \odot \textcolor{orange}{\vv{n_2}}} {|\textcolor{orange}{\vv{n_1}}| \cdot |\textcolor{orange}{\vv{n_2}}|}$
             \item Gerade / Ebene: $\sin(\alpha) = \dfrac{\textcolor{red}{\vv{u}} \odot \textcolor{orange}{\vv{n}}} {|\textcolor{red}{\vv{u}}| \cdot |\textcolor{orange}{\vv{n}}|}$
@@ -1225,7 +1221,7 @@
                 \draw [line width=0.8pt] (4.2,6,0) node {$h$};
             \end{tikzpicture}
         \end{center}
-        \\
+        
         \begin{center}
             \definecolor{qqwuqq}{rgb}{0,0.4,0}
             \begin{tikzpicture}[>=triangle 45]
@@ -1249,7 +1245,7 @@
                 \draw (0.6,-0.2) node {$\alpha$};
             \end{tikzpicture}
         \end{center}
-        \\
+        
         \begin{center}
             \definecolor{qqwuqq}{rgb}{0,0.4,0}
             \definecolor{qqwuuq}{rgb}{0,0,0.4}
@@ -1287,14 +1283,13 @@
         darstellt. Anschließend müsste man den Schnittpunkt der Geraden und $E$ und die Norm des somit erhaltenen Vektors berechnen.
         Es sticht einem schnell ins Auge, dass dies ein großer Aufwand ist. Tatsächlich gibt es einen für das Abitur zugelassenen
         schnelleren Lösungsweg: die \textbf{Hess'sche Normalenform}.
-        \\
-        \begin{Definition}[- Hess'sche Normalenform]
+        
+        \begin{Definition}[Hess'sche Normalenform]
             Die Hess'sche Normalenform ist eine besondere Normalenform einer Ebene, dadurch besonders, dass der Normalenvektor
             normiert ist. Sie lässt sich wie folgt ableiten:
             $E_h: \dfrac{\textcolor{red}{\vv{n}} \odot [\vv{x} - \textcolor{blue}{\vv{q}}]}{|\textcolor{red}{\vv{n}}|} = 0$
         \end{Definition}
-        \\
-        \\
+
         \begin{center}
             \definecolor{gree}{rgb}{0,0.4,0}
             \definecolor{blu}{rgb}{0,0,0.4}
@@ -1348,19 +1343,19 @@
             \\
             Nach Theoremen der Trigonometrie und der Definition des Skalarprodukts gilt:
             \begin{align*}
-                \qquad \qquad cos(\alpha) &= \dfrac{\textcolor{gre}{d}}{|\vv{\textcolor{blue}{Q}P}|} \\
+                \qquad \qquad cos(\alpha) &= \dfrac{\textcolor{green}{d}}{|\vv{\textcolor{blue}{Q}P}|} \\
                               cos(\alpha) &= \dfrac{\textcolor{red}{\vv{n}} \odot \vv{\textcolor{blue}{Q}P}}{|\textcolor{red}{\vv{n}}| \cdot |\vv{\textcolor{blue}{Q}P}|} \\
             \end{align*}
             Daraus folgt:
             \begin{align*}
-                \qquad \qquad \dfrac{\textcolor{gree}{d}}{|\vv{\textcolor{blue}{Q}P}|} &= \dfrac{\textcolor{red}{\vv{n}} \odot \vv{\textcolor{blue}{Q}P}}{|\textcolor{red}{\vv{n}}| \cdot |\vv{\textcolor{blue}{Q}P}|} \\
+                \qquad \qquad \dfrac{\textcolor{green}{d}}{|\vv{\textcolor{blue}{Q}P}|} &= \dfrac{\textcolor{red}{\vv{n}} \odot \vv{\textcolor{blue}{Q}P}}{|\textcolor{red}{\vv{n}}| \cdot |\vv{\textcolor{blue}{Q}P}|} \\
                                                                                      d &= \dfrac{\textcolor{red}{\vv{n}} \odot \vv{\textcolor{blue}{Q}P}}{|\textcolor{red}{\vv{n}}|} \\
                                                                                      d &= \dfrac{\textcolor{red}{\vv{n}} \odot (\vv{p} - \vv{\textcolor{blue}{q}})}{|\textcolor{red}{\vv{n}}|} \\
             \end{align*}
             \\
             \underline{$\vv{FP} = r \cdot \textcolor{red}{\vv{n}} ; r \in \R^{-}$}:
             \begin{align*}
-                \qquad \qquad \dfrac{\textcolor{gree}{d}}{|\vv{\textcolor{blue}{Q}P}|} &= \dfrac{-\textcolor{red}{\vv{n}} \odot \vv{\textcolor{blue}{Q}P}}{|-\textcolor{red}{\vv{n}}| \cdot |\vv{\textcolor{blue}{Q}P}|} \\
+                \qquad \qquad \dfrac{\textcolor{green}{d}}{|\vv{\textcolor{blue}{Q}P}|} &= \dfrac{-\textcolor{red}{\vv{n}} \odot \vv{\textcolor{blue}{Q}P}}{|-\textcolor{red}{\vv{n}}| \cdot |\vv{\textcolor{blue}{Q}P}|} \\
                                                                                      d &= -\dfrac{\textcolor{red}{\vv{n}} \odot \vv{\textcolor{blue}{Q}P}}{|\textcolor{red}{\vv{n}}|} \\
                                                                                      d &= -\dfrac{\textcolor{red}{\vv{n}} \odot (\vv{p} - \vv{\textcolor{blue}{q}})}{|\textcolor{red}{\vv{n}}|} \\
             \end{align*}
@@ -1391,20 +1386,20 @@
                     \draw[line width=0.8pt] (-0.1,\x,0) -- (0.1,\x,0) node[right] {\x};
                 \draw[line width=0.8pt] (-0.25,-0.25) node {$O$};
                 \draw[line width=0.8pt,color=blue,fill=blue,fill opacity=0.3] (3.5,2) arc (0:360:1.5);
-                \draw[line width=0.8p] (2,2) circle (1pt);
-                \draw[line width=0.8p,color=purp] (2.2,1.7) node {$M_1 (2,2)$};
-                \draw[->,line width=0.8p,color=purp] (2,2) -- (3.06,3.06);
-                \draw[line width=0.8p,color=purp] (2.33,2.63) node {$r$};
+                \draw[line width=0.8pt] (2,2) circle (1pt);
+                \draw[line width=0.8pt,color=purp] (2.2,1.7) node {$M_1 (2,2)$};
+                \draw[->,line width=0.8pt,color=purp] (2,2) -- (3.06,3.06);
+                \draw[line width=0.8pt,color=purp] (2.33,2.63) node {$r$};
                 \draw[line width=0.8pt,color=lightblue,fill=lightblue,fill opacity=0.3] (-1,-3) arc (0:360:2);
                 \draw[line width=0.8p] (-3,-3) circle (1pt);
-                \draw[line width=0.8p,color=purp] (-2.8,-3.3) node {$M_2 (-3,-3)$};
-                \draw[->,line width=0.8p,color=purp] (-3,-3) -- (-4.05,-1.30);
-                \draw[line width=0.8p,color=purp] (-3.33,-2.05) node {$r$};
+                \draw[line width=0.8pt,color=purp] (-2.8,-3.3) node {$M_2 (-3,-3)$};
+                \draw[->,line width=0.8pt,color=purp] (-3,-3) -- (-4.05,-1.30);
+                \draw[line width=0.8pt,color=purp] (-3.33,-2.05) node {$r$};
             \end{tikzpicture}
         \end{center}
 
         Hieraus ergibt sich eine einfache Formel, um einen Kreis zu definieren, aus welcher auch die allgemeine Kreisgleichung folgt:
-        \\
+        
         \begin{align*}
             \qquad \qquad \qquad &|\vv{MP}| = r ; P \in M_K \text{ mit $M_k$ Kreismenge} \\
                  \Leftrightarrow &|\vv{MP}|^2 = r^2 \\
@@ -1421,13 +1416,14 @@
             Anhand dessen lässt sich bereits eine Eigenschaft eines Kreises im Vektorraum erkennen: \textbf{er ist lediglich im $\R^2$ definierbar}. Überträgt man diese Formel in einen Raum mit mehr Dimensionen erhält man eine Sphäre oder gar eine Hypersphäre.
         \end{Bemerkung}
 
-        \\
-        \subsubsection{Tangenten an einen Kreis}
+        
+\subsubsection{Tangenten an einen Kreis}
 
-            \\
+
             \begin{Definition}
                 Eine Tangente an einen Punkt eines Kreises ist vergleichbar mit der an einen Punkt einer Kurve. Sie ist gerade zu der Geraden equivalent, die \textbf{den Kreis in diesem Punkt berührt}. Dies impliziert auch, dass es nur eine Menge identischer Geraden gibt, welche erfolgreich als Tangente kandidieren können.
             \end{Definition}
+
             \begin{center}
                 \definecolor{purp}{rgb}{0.5,0,0.5}
                 \definecolor{lightblue}{rgb}{0,0.7,0.7}
@@ -1445,12 +1441,12 @@
                     \draw[->,line width=0.8pt,color=purp] (2,2) -- (3.06,3.06);
                     \draw[line width=0.8pt,color=purp] (3.26,3.26) node {$P$};
                     \draw[line width=0.8pt,color=purp] (2.33,2.63) node {$r_1$};
-                    \draw[line width=1.5pt,color=grey] (0,6.12) -- (6.12,0);
+                    \draw[line width=1.5pt,color=gray] (0,6.12) -- (6.12,0);
                     \draw[->,line width=1.5pt,color=red] (3.06, 3.06) -- (4.56,1.56);
                     \draw[line width=0.8pt] (2.7,2.7) arc (-140:-45:0.5);
                     \draw[line width=0.8pt] (3.1,2.8) circle (0.5pt);
-                    \draw[line width=0.8pt,color=grey] (5.3,1.2) node {$t_1$};
-                    \draw[line width=0.8pt,color=grey] (-2.8,-0.8) node {$X$};
+                    \draw[line width=0.8pt,color=gray] (5.3,1.2) node {$t_1$};
+                    \draw[line width=0.8pt,color=gray] (-2.8,-0.8) node {$X$};
 
                     \draw[line width=0.8pt,color=lightblue,fill=lightblue,fill opacity=0.3] (-1,-3) arc (0:360:2);
                     \draw[line width=0.8pt] (-3,-3) circle (1pt);
@@ -1458,17 +1454,17 @@
                     \draw[->,line width=0.8pt,color=purp] (-3,-3) -- (-4.05,-1.30);
                     \draw[line width=0.8pt,color=purp] (-4.25,-1.1) node {$P$};
                     \draw[line width=0.8pt,color=purp] (-3.33,-2.05) node {$r_2$};
-                    \draw[line width=1.5pt,color=grey] (-7.05,-3.4) -- (-1.75,0.3);
+                    \draw[line width=1.5pt,color=gray] (-7.05,-3.4) -- (-1.75,0.3);
                     \draw[->,line width=1.5pt,color=red] (-4.05,-1.3) -- (-2.9,-0.5);
                     \draw[line width=0.8pt] (-3.8,-1.7) arc (-60:30:0.5);
                     \draw[line width=0.8pt] (-3.75,-1.35) circle (0.5pt);
-                    \draw[line width=0.8pt,color=grey] (-6.5,-2.7) node {$t_2$};
-                    \draw[line width=0.8pt,color=grey] (4.4,1.3) node {$X$};
+                    \draw[line width=0.8pt,color=gray] (-6.5,-2.7) node {$t_2$};
+                    \draw[line width=0.8pt,color=gray] (4.4,1.3) node {$X$};
                 \end{tikzpicture}
             \end{center}
 
             Erneut liefert uns die Graphik eine generelle Formel:
-            \\
+            
             \begin{align*}
                 \qquad \qquad \qquad &\vv{MP} \odot \vv{PX} = 0 ; P \in M_K, X \in M_T \text{ mit $M_K$ und $M_T$ Kreis- und Tangentenmenge} \\
                      \Leftrightarrow &(\vv{p} - \vv{m}) \odot (\vv{x} - \vv{p}) = 0 \quad | + (\vv{p} - \vv{m})^2 \\
@@ -1511,7 +1507,7 @@
                     \draw[line width=0.8pt,color=purp] (5.2,0.4) node {$P$};
                     \draw[line width=0.8pt,fill=black] (-1.85,2.75) circle (2pt);
                     \draw[line width=0.8pt,color=purp] (-1.5,2.9) node {$B$};
-                    \draw[line width=0.8pt,color=purp,fill color=purp] (5,0) circle (2pt);
+                    \draw[line width=0.8pt,color=purple,fill color=purple] (5,0) circle (2pt);
                     \draw[line width=0.8pt,color=purp] (-2.225,1.175) node {$r$};
                     \draw[line width=0.8pt] (-0.625,1.175) node {$r_T$};
                     \draw[line width=0.8pt,color=blue] (-1.65,-4.5) node {$p$};
@@ -1526,7 +1522,7 @@
             \end{center}
 
             Wenn auch ein wenig um mehr Ecken gedacht als üblich:
-            \\
+            
             \begin{align*}
                 \qquad \qquad \qquad &\left|\begin{array}{c} \vv{MB} \odot \vv{PB} = 0 \\ \vv{MP} \odot \vv{BX} = 0 \end{array}\right| \\
                      \Leftrightarrow &\left|\begin{array}{c} (\vv{b} - \vv{m}) \odot (\vv{b} - \vv{p}) = 0 \\ (\vv{p} - \vv{m}) \odot (\vv{x} - \vv{b}) = 0 \end{array}\right| \qquad \text{Nach der bereits aufgestellten Formel für Tangenten} \\
@@ -1562,7 +1558,7 @@
             \end{tikzpicture}
         \end{center}
 
-        \begin{Theorem}[- Sphärengleichung]
+        \begin{Theorem}[Sphärengleichung]
             Eine Sphäre im $\R^n ; n \geq 3$ mit Mittelpunkt $M$ und Radius $r$ ist eindeutig über die folgende Gleichung definiert:
                                     $$|\vv{MP}| = r ; P \in M_{\mathscr{C}}$$
             Die allgebraische Formel lautet somit wie folgt:
@@ -1613,7 +1609,7 @@
                 \end{tikzpicture}
             \end{center}
 
-            \begin{Theorem}[- Tangentialebene]
+            \begin{Theorem}[Tangentialebene]
                 Für die Tangentialebene an eine Sphäre $\mathscr{C}$, mit Mittelpunkt $M$ und Radius $r$, in einem Punkt $P$ gilt:
                                                     $$|\vv{MP}| = r$$
             \end{Theorem}
@@ -1642,11 +1638,11 @@
                     \draw[line width=0.8pt] (0,5,0) arc (90:270:2.5cm and 5cm);
                     \draw[line width=0.8pt] (0,0,0) circle (5cm);
                     \draw[line width=0.8pt] (4,4,0) node {$\mathscr{C}$};
-                    \draw[line width=0.8pt,color=purp] (-0.3,0.3,0) node {$M$};
-                    \draw[line width=0.8pt,color=purp,fill=purp] (0,0,0) circle (2pt);
-                    \draw[line width=0.8pt,color=purp] (1.3,1.6,1.4435) node {$r$};
-                    \draw[->,line width=0.8pt,color=purp] (0,0,0) -- (2.887,2.887,2.887);
-                    %\draw[line width=0.8pt,color=purp] (3.2,3.2,3.2) node {$P$};
+                    \draw[line width=0.8pt,color=purple] (-0.3,0.3,0) node {$M$};
+                    \draw[line width=0.8pt,color=purple,fill=purple] (0,0,0) circle (2pt);
+                    \draw[line width=0.8pt,color=purple] (1.3,1.6,1.4435) node {$r$};
+                    \draw[->,line width=0.8pt,color=purple] (0,0,0) -- (2.887,2.887,2.887);
+                    %\draw[line width=0.8pt,color=purple] (3.2,3.2,3.2) node {$P$};
                     \draw[line width=0.8pt,color=blue] (0,5,0) arc (90:-90:1.9cm and 5cm);
                     \draw[line width=0.8pt,color=blue,dashed] (0,5,0) arc (90:270:1.9cm and 5cm);
                     \draw[line width=0.8pt] (7.271,0.2,-7.071) node {$P$};
@@ -1662,4 +1658,5 @@
 
 \section{Sätze}
 \input{kap5/saetze}
+
 \end{document}

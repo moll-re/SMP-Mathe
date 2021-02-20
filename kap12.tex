@@ -117,10 +117,10 @@ Dazu formen wir den Term so um, dass die Bernoulli-Ungleichung angewandt werden 
 \\\\
 \end{itemize}
 Als Letztes zeigt man, dass $f_n$ zu $e_n$ eine obere Schranke ist:\\\\
-\begin{array}{rccc}
+$\begin{array}{rccc}
 &\left(1+\dfrac{1}{n}\right)^{n+1}&>&\left(1+\dfrac{1}{n}\right)^n}\\
 \Leftrightarrow&f_n&>&e_n
-\end{array}
+\end{array}$
 \\\\\\
 Eine streng monoton steigende Folge, die eine monoton fallende Folge, als ober Schranke hat, konvergiert. Es gilt also, dass $e_n$ konvergent ist. $e_n$ besitzt einen besonderen Grenzwert, der \textbf{Eulersche Zahl} genannt wird.
 \newpage
@@ -211,13 +211,13 @@ J_n&=\int_0^1x^n\mbox{d}x\\
 \\
 \item $\zz$: $\forall n\geq1$ gilt $\dfrac{1}{n+1}\leq I_n \leq \dfrac{e}{n+1}$\\\\
 \begin{center}
-\begin{array}{ccccccl}
+$\begin{array}{ccccccl}
 $&x^n&\leq& f(x)=x^ne^{1-x}&\leq& ex^n& \qquad\qquad|\int_0^1()\mbox{d}x\\\\
 \Leftrightarrow&\int_0^1 x^n\mbox{d}x &\leq& I_n &\leq& \int_0^1 ex^n\mbox{d}x&\\\\
 \Leftrightarrow&J_n &\leq& I_n &\leq& e\cdot\int_0^1x^n\mbox{d}x=e\cdot J_n&\\\\
 \Leftrightarrow&\dfrac{1}{n+1}&\leq& I_n &\leq&  \dfrac{e}{n+1}&$
 \\\\\\
-\end{array}
+\end{array}$
 \end{center}
 \end{enumerate}
 \item $\zz$: $\forall n\geq 1$ gilt $I_{n+1}=(n+1)I_n-1$\\
@@ -354,10 +354,10 @@ GRAPEHN VERSCHIEDEN A AUCH E UND LAMBDA SAGEN\\\\
 Hier ist auffällig, dass wenn man $a$ so verändert, dass der y-Achsenschnittpunkt (0|1) wird, man sich immer mehr der Zahl $e$ nähert. Wenn man für $a$ genau $e$ einsetzt hat man $ g_e(0)=1$. $\lambda$ ist also $1$ für die Funktion $e^x$, was gut zeigt, dass die natürliche Exponentialfunktion ihre eigene Ableitung darstellt:
 \begin{center}$\dfrac{\text{d}}{\text{d}x}e^x=(\lim\limits_{h\to0}\dfrac{e^h-1}{h})\cdot e^x=1\cdot e^x=e^x$\end{center}\\\\
 Eine wichtige Eigenschaft ist auch, dass $f'(0)=\lambda$ ist. Dies kann man auf zwei verschiedene aber gleichermaßen einfache Arten herausfinden, beide verwenden die vorher angewendete Definition des Differenzialquotienten.\\\\
-\begin{array}{rl}
+$\begin{array}{rl}
 \text{Differentialquotient neu angewendet:}& f'(0)=\lim\limits_{h\to0}\dfrac{a^{0+h}-a^0}{h}=\lim\limits_{h\to0}\dfrac{a^h-1}{h}=\textcolor{red}{\lambda}\\
 \text{Vorheriges Ergebnis genutzt:}&f'(x)=a^x\cdot\lim\limits_{h\to0}\dfrac{a^h-1}{h}\Rightarrow f'(0)=a^0\cdot\lim\limits_{h\to0}\dfrac{a^h-1}{h}=1\cdot\lim\limits_{h\to0}\dfrac{a^h-1}{h}=\textcolor{red}{\lambda}
-\end{array}
+\end{array}$
 \\\\\\
 $\lambda$ entspricht also auch der Steigung der Tangenten der Ausgangsfunktion an der y-Achse.
 
@@ -406,7 +406,7 @@ $$f'(x)=\ln (a)\cdot a^x$$
 		&=&(x\cdot\ln (a))'\cdot e^{x\cdot\ln (a)}\qquad\qquad&\text{Ableiten (}\ln a\text{ ist eine Konstante)}\\
 		&=&\ln (a) \cdot e^{x\cdot \ln a}&\text{Auf ursprüngliche Basis bringen}\\
 		&=&\ln (a)\cdot a^x&
-		\end{array}
+		\end{array}$
 	\end{center}
 \end{Beweis}
 

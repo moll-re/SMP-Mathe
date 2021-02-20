@@ -28,7 +28,7 @@
     \item ...
   \end{itemize}
 \end{Beispiel}
-\begin{Definition}[- Laplace-Experiment]
+\begin{Definition}[Laplace-Experiment]
   Laplace-Experimente sind Experimente, deren Ergebnisse jeweils gleichwahrscheinlich sind.
 \end{Definition}
 \begin{Beispiel}
@@ -49,7 +49,7 @@
   Alternativ kann man $S$ als einfache Menge definieren. Bei zweifachem Münzwurf wäre eine mögliche Darstellung $S = \{ 0,1,2\}$ mit der Anzahl an Kopf-Würfen als Ergebnis möglich.
 \end{Bemerkung}
 \subsubsection{Ereignisse}
-\begin{Definition}[- Ereignisse]
+\begin{Definition}[Ereignisse]
   Jede Teilmenge $A$ von der Ergebnismenge $S$ nennt man ein Ereignis. Endet das Zufallsexperiment mit einem Ergebnis aus $A$, sagt man: $A$ ist eingetreten.
 \end{Definition}
 \begin{Beispiel}
@@ -83,7 +83,7 @@
 \end{Bemerkung}
 
 \subsubsection{Baumdiagramme}
-\begin{Definition}[- Bernoulli-Experiment]
+\begin{Definition}[Bernoulli-Experiment]
   Bei Bernoulli-Experimenten gibt es nur $2$ mögliche Ausgänge: Erfolg / Miserfolg ($= \overline{\text{Erfolg}}$). Mehrfaches Ausführen ($l$ Mal) von Bernoulli-Experimenten ergibt eine \textbf{Bernoulli-Kette} der Länge $l$.
 \end{Definition}\\
 Eine Bernoulli-Kette kann als \textbf{Baumdiagramm} dargestellt werden:\\
@@ -140,7 +140,7 @@ Eine Bernoulli-Kette kann als \textbf{Baumdiagramm} dargestellt werden:\\
 \end{center}\\
 $E$ bezeichnet das Erfolgs-Ereignis, $\overline{E}$ bezeichnet somit den Miserfolg. Jeder Pfad trägt 2 Informationen: das jeweilige Ereignis und seine Wahrscheinlichkeit.
 
-\begin{Definition}[- Pfadregeln]
+\begin{Definition}[Pfadregeln]
   \begin{itemize}
     \item Die Summe der Wahrscheinlichkeiten auf den Ästen, die von einem Knoten (Ort der Verzweigung), ist $=1$.
     \item Die Wahrscheinlichkeit eines Pfades (also eines Elementarereignisses) ist gleich dem \textbf{Produkt} der Wahrscheinlichkeiten aller Äste des Pfades.
@@ -152,7 +152,7 @@ $E$ bezeichnet das Erfolgs-Ereignis, $\overline{E}$ bezeichnet somit den Miserfo
 \end{Bemerkung}
 
 \subsubsection{Empirisches Gesetz der großen Zahlen}
-\begin{Definition}[- Häufigkeiten]
+\begin{Definition}[Häufigkeiten]
   Nach der $n$-fachen Durchführung eines Zufallsexperiments betrachtet man, wie oft Ereignisse eingetreten sind.\\
   Ist das Ereignis $A$ $H$-mal eingetreten, so nennt man $H$ die \textbf{absolute Häufigkeit} und $\dfrac{H}{n}$ die \textbf{relative Häufigkeit} von $A$.
 \end{Definition}
@@ -371,7 +371,7 @@ Daraus ergibt sich die korrekte Darstellung als Baumdiagramm:\\
   };
 \end{tikzpicture}
 \end{center}\\
-\begin{Theorem}[- Satz von Bayes]
+\begin{Theorem}[Satz von Bayes]
   $$P_B(A)=\dfrac{P_A(B)\cdot P(A)}{P(B)}$$
 \end{Theorem}
 \begin{Bemerkung}
@@ -434,11 +434,11 @@ Daraus ergibt sich die korrekte Darstellung als Baumdiagramm:\\
   \end{Bemerkung}
 \end{GTR-Tipp}
 
-\begin{Definition}[- Erwartungswert]
+\begin{Definition}[Erwartungswert]
   Es sei eine Zuffalsvariable $X$ mit Werten $x_1,x_2,...,x_n$ und die zugehörige Wahrscheinlichkeitsverteilung $P(X)$. Als Erwartungswert $\mu$ wird das arithmetische Mittel der Werte von $P(X)$ bezeichnet:
   $$E(X)=\mu=\sum_{i=1}^{n}x_i P(X=x_i)$$
 \end{Definition}
-\begin{Definition}[- Median einer Wahrscheinlichkeitsverteilung]
+\begin{Definition}[Median einer Wahrscheinlichkeitsverteilung]
   Als Median einer Wahrscheinlichkeitsverteilung bezeichnenn wir den den Wert $X_n$, ab dem die kumulierte Wahrscheinlichkeit von $P(X=x_i)$ den Wert von $50\%$ überschreitet.
 \end{Definition}
 \begin{Bemerkung}
@@ -488,7 +488,7 @@ Daraus ergibt sich die korrekte Darstellung als Baumdiagramm:\\
   \end{tikzpicture}
 \end{minipage}
 \subsubsection{Erwartungswert}
-\begin{Theorem}[- Erwartungswert einer Binomialverteilung]
+\begin{Theorem}[Erwartungswert einer Binomialverteilung]
   Für eine binomialverteilte Zufallsvariable $X$ gilt:
   $$E(x)=n\cdot p$$
   mit $n$ der Anzahl an Versuchen, und $p$ der Erfolgswahrscheinlichkeit eines Versuchs.
@@ -514,7 +514,7 @@ Daraus ergibt sich die korrekte Darstellung als Baumdiagramm:\\
 
 \section{Kontinuierliche Wahrscheinlichkeiten}
 Manche Ereignisse lassen sich nicht als ganze Zahl modellieren oder können nicht einzeln abgezählt werden, weshalb man ihre Wahrscheinlichkeitsverteilung nur durch kontinuierliche Funktionen darstellen kann. Man kann dies als Erweiterung der diskreten Wahrscheinlichkeit auf die reellen Zahlen sehen, analog zum Übergang von den Folgen zu den Funktionen.
-\begin{Definition}[- Dichtefunktion]
+\begin{Definition}[Dichtefunktion]
   Eine auf $I = [a;b]$ stetige Funktion $f$ heißt Dichtefunktion einer Wahrscheinlichkeit, wenn gilt:
   $$\int_{a}^{b} f(x)dx =1$$
 \end{Definition}
@@ -533,7 +533,7 @@ Manche Ereignisse lassen sich nicht als ganze Zahl modellieren oder können nich
     \item Es folgt außerdem, dass $P([c;d])=P(]c;d])=P([c;d[)=P(]c;d[)=\displaystyle\int_c^d f(t)dt$
   \end{itemize}
 \end{Bemerkung}
-\begin{Definition}[- Stetige Zufallsvariable]
+\begin{Definition}[Stetige Zufallsvariable]
   Sei $P$ eine Wahrscheinlichkeitsverteilung über $I$ mit Dichtefunktion $f$.\\
   \begin{itemize}
     \item Eine Zufallsvariable $X$ mit Werten Auswahl $I$ folgt der Wahrscheinlichkeitsverteilung $P$, wenn gilt: $$P(c\leq X \leq d)=\displaystyle \int_c^d f(t)dt$$
@@ -548,11 +548,11 @@ Manche Ereignisse lassen sich nicht als ganze Zahl modellieren oder können nich
     \item Für $h>0$ und $x+h\in I$ gilt: $P(x\leqX\leqx+h) = F(x+h)-F(x)$.\\(Gleichbedeutend mit der Aussage $P(c\leq X\leq d)=F(d)-F(c)$)
   \end{itemize}
 \end{Bemerkung}
-\begin{Definition}[- Erwartungswert]
+\begin{Definition}[Erwartungswert]
   Sei $X$ eine Zufallsvariable mit Werten aus $I= [a;b]$. Der Erwartungswert ist gegeben durch:
   $$E(X)=\mu=\int_a^b t\cdot f(t)dt$$
 \end{Definition}
-\begin{Definition}[- Varianz]
+\begin{Definition}[Varianz]
   Sei $X$ eine Zufallsvariable mit Werten aus $I= [a;b]$. Die Varianz ist gegeben durch:
   $$\sigma^2=\int_a^b (t-\mu)^2 \cdot f(t)dt$$
 \end{Definition}
@@ -573,7 +573,7 @@ Manche Ereignisse lassen sich nicht als ganze Zahl modellieren oder können nich
 \begin{Bemerkung}
   Solche Funktionen werden verwendet, um Halbwärtszeiten oder Lebensdauern zu modellieren.
 \end{Bemerkung}
-\begin{Theorem}[- Gedächtnislosigkeit]
+\begin{Theorem}[Gedächtnislosigkeit]
   Für eine exponentialverteilte Zufallsvariable $X$ gilt folgende Eigenschaft:
   $$P_{(X \geq x)}(X \geq x+t) = P(X \geq t)\qquad \forall t,x \geq 0$$
 \end{Theorem}
@@ -595,7 +595,7 @@ Manche Ereignisse lassen sich nicht als ganze Zahl modellieren oder können nich
     &= P(X \geq t)
   \end{align*}
 \end{Beweis}
-\begin{Theorem}[- Erwartungswert]
+\begin{Theorem}[Erwartungswert]
   Für die Exponentialverteilung gilt:
   $$ \mu = \dfrac{1}{\lambda}$$
 \end{Theorem}
@@ -609,7 +609,7 @@ Manche Ereignisse lassen sich nicht als ganze Zahl modellieren oder können nich
     &= \dfrac{1}{\lambda}
   \end{align*}
 \end{Beweis}
-\begin{Theorem}[- Varianz]
+\begin{Theorem}[Varianz]
   Für die Exponentialverteilung gilt:
   $$ \sigma^2 = \dfrac{1}{\lambda^2}$$
 \end{Theorem}
@@ -677,7 +677,7 @@ $\varphi(x)$ ist die Dichtefunktion der Normalverteilung.
 \subsubsection{Rückführung: Binomialverteilung}
 Warum interessiert uns das? Weil die Binomialverteilung diese symmetrische Kurve für $n\rightarrow\infty$ Versuche annähert. Noch nicht überzeugt? Über die Varianz können wir interessante Aussagen über die Verteilung der Wahrscheinlichkeiten machen.
 
-\begin{Theorem}[- Laplace-Bedingung]
+\begin{Theorem}[Laplace-Bedingung]
   Für eine Binomialverteilung mit $\sigma = \sqrt{np(1-p)}$ und $\mu = np$ gilt:\\
   Wenn $\sigma>3$, dann kann diese Binomialverteilung durch die Normalverteilung angenähert werden.
   $$B_{l,p}(k) = P(X=k) = {l \choose k} p^k (1-p) ^{l-k} \approx \varphi_{\mu,\sigma^2}(k) = \dfrac {1}{\sqrt {2\pi \sigma^2}}} \cdot e^{- \dfrac{1}{2} {\left(\dfrac{k-\mu}{\sigma}\right)}^2};k\in \Z$$
