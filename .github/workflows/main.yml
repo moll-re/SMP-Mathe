@@ -12,8 +12,8 @@ jobs:
           root_file: main.tex
       - name: Push to release
         uses: actions/upload-release-asset@v1
-        #env:
-        #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: "https://github.com/L0rd0fB0red0m/SMP-Mathe/releases/tag/v1.0"
           asset_path: main.pdf
