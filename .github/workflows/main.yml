@@ -7,6 +7,15 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v2
       - name: Compile LaTeX document
-        uses: xu-cheng/texlive-action/full@v1
+        uses: xu-cheng/latex-action@v2
         with:
-          run: latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf main.tex
+          root_file: main.tex
+      - name: Push to release
+        uses: actions/upload-release-asset@v1
+        #env:
+        #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: "https://github.com/L0rd0fB0red0m/SMP-Mathe/releases/tag/v1.0"
+          asset_path: main.pdf
+          asset_name: SMP-Mathe.pdf
+          asset_content_type: application/pdf
