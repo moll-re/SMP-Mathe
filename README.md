@@ -4,7 +4,7 @@ Der Matheunterricht der 1ere & Te SMP live und in Farbe, ähh auf Deutsch und in
 ## TLDR
 ### Wo ist mein Dokument?
 Hier, duh:
-[SMP-Mathe](./blob/master/main.pdf)
+[SMP-Mathe](./main.pdf)
 
 ## Bearbeitung:
 Das Dokument besteht aus der ```main.tex``` Datei, und einer weiteren ```kap*.tex``` Datei pro Kapitel. Dort befindet sich der tatsächliche Inhalt.
@@ -45,4 +45,4 @@ Das Hauptdokument wird per GitHub-action bei jedem push kompiliert. Aktueller St
 
 [![Compile main document](https://github.com/L0rd0fB0red0m/SMP-Mathe/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/L0rd0fB0red0m/SMP-Mathe/actions/workflows/main.yml)
 
-Und wo ist das Dokument? Wie gesagt, hier: [SMP-Mathe](./blob/master/main.pdf). Oder einfach den Code-Ordner öffnen, da ist die Datei auch.
+Und wo ist das Dokument? Wie gesagt, hier: [SMP-Mathe](./main.pdf). Oder einfach den Code-Ordner öffnen, da ist die Datei auch.
