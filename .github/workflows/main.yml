@@ -17,6 +17,7 @@ jobs:
         with:
           file: "main.pdf"
           overwrite: true
+          tag_name: "v1.0"
           verbose: true # for debugging
           draft: false
           update_latest_release: true
